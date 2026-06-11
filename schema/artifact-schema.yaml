@@ -1,0 +1,120 @@
+# Machine-readable artifact metadata schema (JSON Schema, YAML format).
+# Documentation: schema/artifact-schema.md
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://blue-life-commons.org/schema/artifact-schema.yaml"
+title: Blue Life Commons Artifact Metadata
+type: object
+required:
+  - id
+  - type
+  - title
+  - status
+  - sources
+  - review
+  - outputs
+  - contributors
+  - license
+additionalProperties: true
+properties:
+  id:
+    type: string
+    pattern: "^[a-z0-9]+(-[a-z0-9]+)*$"
+  type:
+    type: string
+    enum:
+      - species-page
+      - region-briefing
+      - field-mission
+      - research-summary
+      - dataset-card
+      - mcp-connector
+      - notebook
+      - map-layer
+      - partner-profile
+      - translation
+      - film-script
+      - lesson
+      - event-report
+      - observation-guide
+      - funding-proposal
+  title:
+    type: string
+    minLength: 3
+  region:
+    type: array
+    items:
+      type: string
+  species_group:
+    type: array
+    items:
+      type: string
+      enum: [cetaceans, pinnipeds, turtles, sharks-rays, reefs]
+  species:
+    type: array
+    items:
+      type: string
+  difficulty:
+    type: string
+    enum: [beginner, intermediate, advanced]
+  audience:
+    type: array
+    items:
+      type: string
+  status:
+    type: string
+    enum: [draft, needs-sources, needs-expert-review, approved, published]
+  translates:
+    type: string
+  sources:
+    type: array
+    items:
+      type: object
+      required: [url]
+      properties:
+        url:
+          type: string
+        title:
+          type: string
+        accessed:
+          type: string
+  review:
+    type: object
+    required: [science, ethics, editor]
+    properties:
+      science:
+        type: string
+        enum: [pending, required, approved, not-applicable]
+      ethics:
+        type: string
+        enum: [pending, required, approved, not-applicable]
+      editor:
+        type: string
+        enum: [pending, required, approved, not-applicable]
+  outputs:
+    type: object
+    required: [website_path, github_path]
+    properties:
+      website_path:
+        type: string
+      github_path:
+        type: string
+      map_layer:
+        type: boolean
+  impact:
+    type: object
+    properties:
+      claim:
+        type: string
+      eligible_for_hypercert:
+        type: boolean
+  contributors:
+    type: array
+    minItems: 1
+    items:
+      type: object
+      required: [github]
+      properties:
+        github:
+          type: string
+  license:
+    type: string

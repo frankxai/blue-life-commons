@@ -1,0 +1,45 @@
+name: "Field mission"
+description: "Propose a citizen-science or travel field mission"
+title: "[Mission] "
+labels: ["mission", "needs-expert-review", "agent-ready"]
+body:
+  - type: input
+    id: region
+    attributes:
+      label: Region
+      placeholder: "e.g. netherlands / north-sea"
+    validations:
+      required: true
+  - type: input
+    id: species
+    attributes:
+      label: Target species or guild
+      placeholder: "e.g. harbor-seal, grey-seal (pinnipeds)"
+    validations:
+      required: true
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty
+      options: [beginner, intermediate, advanced]
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Mission description
+      description: What will participants do, observe, and learn?
+    validations:
+      required: true
+  - type: textarea
+    id: ethics
+    attributes:
+      label: Ethics considerations
+      description: Approach distances, seasonal sensitivities, local regulations. ETHICS.md applies — ethics review is required for all missions.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Known sources
+      description: Regulations, species guidance, local organizations.

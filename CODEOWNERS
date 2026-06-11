@@ -1,0 +1,15 @@
+# Default owner — founder-led commons (Stage 1 governance).
+# As the maintainer council forms (Stage 2), add:
+#   science advisor, engineering maintainer, community steward,
+#   ethics reviewer, regional stewards, funding/admin steward.
+* @frankxai
+
+# Ethics-sensitive content requires ethics review ownership.
+/ETHICS.md @frankxai
+/missions/ @frankxai
+
+# Governance and funding documents.
+/governance/ @frankxai
+
+# Schema changes affect every artifact and surface.
+/schema/ @frankxai

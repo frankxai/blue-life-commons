@@ -1,0 +1,50 @@
+name: "Artifact request"
+description: "Request a new contribution artifact (species page, region briefing, dataset card, lesson, etc.)"
+title: "[Artifact] "
+labels: ["agent-ready"]
+body:
+  - type: dropdown
+    id: artifact-type
+    attributes:
+      label: Artifact type
+      options:
+        - species-page
+        - region-briefing
+        - research-summary
+        - dataset-card
+        - mcp-connector
+        - notebook
+        - map-layer
+        - partner-profile
+        - translation
+        - film-script
+        - lesson
+        - event-report
+        - observation-guide
+        - funding-proposal
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What should be created?
+      description: Describe the artifact, its audience, and where it should live in the repo.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Known sources
+      description: Starting sources (URLs/DOIs). Every factual claim needs a source — see SOURCES.md.
+  - type: textarea
+    id: related
+    attributes:
+      label: Related content
+      description: Existing species pages, regions, or missions this connects to.
+  - type: checkboxes
+    id: standards
+    attributes:
+      label: Standards
+      options:
+        - label: This artifact may involve animal interaction guidance (ethics review will be required)
+        - label: This artifact is suitable for AI-assisted contribution (agent-ready)
