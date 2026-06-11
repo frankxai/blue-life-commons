@@ -1,0 +1,35 @@
+name: "Research request"
+description: "Request research support: paper summary, dataset card, notebook, or researcher workflow"
+title: "[Research] "
+labels: ["research-os", "needs-sources"]
+body:
+  - type: dropdown
+    id: output
+    attributes:
+      label: Desired output
+      options:
+        - research-summary
+        - dataset-card
+        - notebook
+        - mcp-connector
+        - map-layer
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question or material
+      description: What paper, dataset, or question should this address? Include DOIs/URLs.
+    validations:
+      required: true
+  - type: textarea
+    id: audience
+    attributes:
+      label: Audience
+      description: Who is this for (researchers, students, public, partners)?
+  - type: textarea
+    id: review
+    attributes:
+      label: Expert review
+      description: Who could review the scientific accuracy? (optional)

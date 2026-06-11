@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Community discussion
+    url: https://github.com/frankxai/blue-life-commons/discussions
+    about: "Discord discusses. GitHub decides. If a discussion produces a decision or artifact idea, open an issue."
