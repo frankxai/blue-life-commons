@@ -48,6 +48,8 @@ What participants will do, observe, and learn — in two or three sentences. Who
 
 ## Where and when
 
+> The [Ethical observation rules](#ethical-observation-rules-do-no-harm) below override everything in this section.
+
 Regional guidance only — **never publish precise locations of vulnerable populations** (ETHICS.md). Note the best seasons and times of day, and seasonal sensitivities to avoid (breeding, pupping, nesting, molting).
 
 ## Ethical observation rules (do no harm)
