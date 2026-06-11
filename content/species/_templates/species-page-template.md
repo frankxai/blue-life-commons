@@ -42,7 +42,7 @@ Common name (*Scientific name*) — one or two sentences a beginner understands.
 | Field | Value | Source |
 |---|---|---|
 | Scientific name | *Genus species* | WoRMS / authority |
-| Guild | cetacean / pinniped / turtle / shark-ray / reef | — |
+| Guild | cetaceans / pinnipeds / turtles / sharks-rays / reefs | — |
 | IUCN status | e.g. Least Concern / Vulnerable / Endangered | IUCN Red List (cite) |
 | Range | Regional description | cite |
 

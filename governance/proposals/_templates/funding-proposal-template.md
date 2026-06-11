@@ -28,7 +28,7 @@ license: CC-BY-4.0
 
 # Funding Proposal Template
 
-> Copy this file to `governance/proposals/<proposal-slug>.md`, replace every section, and update the frontmatter. A funding proposal is a **fundable impact object**, not a vague donation ask — it names specific, evidenced work. See [governance/funding.md](../funding.md).
+> Copy this file to `governance/proposals/<proposal-slug>.md`, replace every section, and update the frontmatter. A funding proposal is a **fundable impact object**, not a vague donation ask — it names specific, evidenced work. See [governance/funding.md](../../funding.md).
 
 ## What will be done
 
