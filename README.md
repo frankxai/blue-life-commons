@@ -59,6 +59,10 @@ blue-life-commons
 └── .github/              # issue templates, PR template, validation workflows
 ```
 
+## Browse the commons
+
+[`CATALOG.md`](CATALOG.md) is a living, auto-generated index of every published artifact (species pages, region briefings, missions, dataset cards, partner profiles), grouped by type. Regenerate it with `python scripts/build_catalog.py`; CI fails if it is stale.
+
 ## How to contribute
 
 1. Read [CONTRIBUTING.md](CONTRIBUTING.md) and pick an artifact class (species page, region briefing, field mission, dataset card, MCP connector, translation, lesson…).

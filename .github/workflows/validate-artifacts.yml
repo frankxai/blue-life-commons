@@ -25,3 +25,5 @@ jobs:
         run: pip install pyyaml jsonschema
       - name: Validate artifact frontmatter
         run: python scripts/validate_artifacts.py
+      - name: Check catalog is up to date
+        run: python scripts/build_catalog.py --check
