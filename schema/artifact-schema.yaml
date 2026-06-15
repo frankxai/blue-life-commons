@@ -77,6 +77,52 @@ properties:
           type: string
         accessed:
           type: string
+        doi:
+          type: string
+        tier:
+          description: "SOURCES.md tier — 1 primary scientific, 2 institutional, 3 journalistic/educational."
+          type: integer
+          enum: [1, 2, 3]
+        license:
+          description: "License of the cited dataset/source, e.g. CC-BY-4.0, CC-BY-NC-4.0, CC0."
+          type: string
+        commercial_use_ok:
+          description: "Whether the source permits commercial reuse. Guards the impact/hypercert path from building a commercial claim on a non-commercial source."
+          type: boolean
+  # --- Scientific-integrity fields (optional, additive — added 2026-06-15 per expert panel) ---
+  sensitivity:
+    description: "Location-data sensitivity, per the GBIF four-category generalization model. Controls how precisely locations may be published for vulnerable taxa."
+    type: object
+    properties:
+      tier:
+        type: string
+        enum: [public, low, medium, high, extreme]
+      rationale:
+        type: string
+      generalized_to:
+        description: "Coarsening applied, e.g. '0.1deg', 'regional', 'none'."
+        type: string
+  iucn:
+    description: "IUCN Red List status with provenance, so staleness is visible. A category without an assessment date is not current truth."
+    type: object
+    properties:
+      category:
+        type: string
+        enum: [EX, EW, CR, EN, VU, NT, LC, DD, NE]
+      assessment_date:
+        type: string
+      version:
+        type: string
+      population_trend:
+        type: string
+        enum: [increasing, stable, decreasing, unknown]
+      scope:
+        type: string
+        enum: [global, regional]
+  consensus_state:
+    description: "Scientific consensus on the artifact's core claims. Contested/emerging artifacts must represent the disagreement, not pick a winner."
+    type: string
+    enum: [settled, contested, emerging]
   review:
     type: object
     required: [science, ethics, editor]

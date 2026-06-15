@@ -21,8 +21,21 @@ The machine-readable definition lives in [`artifact-schema.yaml`](artifact-schem
 | `review` | yes | object | `science`, `ethics`, `editor` — each `pending` \| `required` \| `approved` \| `not-applicable` |
 | `outputs` | yes | object | `website_path`, `github_path`, `map_layer` (bool) |
 | `impact` | no | object | `claim` (string), `eligible_for_hypercert` (bool) |
+| `sensitivity` | no | object | Location-data sensitivity per the GBIF four-category model — `tier` (`public`\|`low`\|`medium`\|`high`\|`extreme`), `rationale`, `generalized_to` |
+| `iucn` | no | object | Red List provenance — `category`, `assessment_date`, `version`, `population_trend`, `scope` (`global`\|`regional`) |
+| `consensus_state` | no | enum | `settled` \| `contested` \| `emerging` — contested/emerging artifacts must represent the disagreement |
 | `contributors` | yes | list | Objects with `github` handle |
 | `license` | yes | string | Default `CC-BY-4.0` |
+
+### Source object fields
+
+Each entry in `sources` has `url` (required) plus optional `title`, `accessed`, `doi`, `tier` (`1`–`3` per [SOURCES.md](../SOURCES.md)), `license`, and `commercial_use_ok`. **A `commercial_use_ok: false` source must not underpin an artifact whose `impact.eligible_for_hypercert` is true** — you cannot build a commercial impact claim on a non-commercial source.
+
+### Scientific-integrity rules (added 2026-06-15)
+
+- **Location sensitivity.** For vulnerable taxa, set `sensitivity.tier` and publish locations no finer than the tier allows (GBIF generalization: `extreme` → no coordinates / ≥1°; `high` → ~0.1°; `medium` → ~0.01°; `low`/`public` → as cited). Coarsen by **rounding**, never by random jitter. Check the *combination attack*: a coarse coordinate + season + a landmark in attached media must not reconstruct an exact site.
+- **IUCN staleness.** A `species-page` reaching `approved`/`published` should carry `iucn.assessment_date` + `iucn.version` so a years-old assessment is not presented as current truth.
+- **Claim sourcing.** Every factual sentence must trace to a source; `scripts/lint_content.py` fails CI on a science-sensitive artifact with no sources and on anthropomorphic claims presented as fact.
 
 ### Allowed `type` values
 

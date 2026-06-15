@@ -23,5 +23,7 @@ jobs:
           python-version: "3.12"
       - name: Install dependencies
         run: pip install pyyaml jsonschema
-      - name: Validate artifact frontmatter
+      - name: Validate artifact frontmatter (schema)
         run: python scripts/validate_artifacts.py
+      - name: Integrity lint (sources, ethics, review gates)
+        run: python scripts/lint_content.py

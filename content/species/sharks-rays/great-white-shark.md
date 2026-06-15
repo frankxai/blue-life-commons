@@ -9,6 +9,15 @@ species_group:
 species:
   - "Carcharodon carcharias"
 status: needs-expert-review
+iucn:
+  category: VU
+  assessment_date: "2019"
+  scope: global
+consensus_state: settled
+sensitivity:
+  tier: high
+  rationale: "Targeted by fisheries for jaws, teeth, and fins; publish range at regional granularity only — no aggregation sites."
+  generalized_to: regional
 sources:
   - url: "https://www.iucnredlist.org/species/3855/2878607"
     title: "IUCN Red List: Carcharodon carcharias"
