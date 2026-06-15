@@ -1,60 +1,83 @@
 ---
-id: humpback-whale
+id: species-humpback-whale
 type: species-page
-title: Humpback Whale
-region:
-  - Global Oceans
+title: "Humpback Whale (Megaptera novaeangliae)"
 species_group:
   - cetaceans
 species:
-  - "Megaptera novaeangliae"
+  - megaptera-novaeangliae
+difficulty: beginner
+audience:
+  - traveler
+  - student
+  - citizen-scientist
+  - researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/12739/50364006"
-    title: "IUCN Red List: Megaptera novaeangliae"
-    accessed: "2026-06-12"
-  - url: "https://www.fisheries.noaa.gov/species/humpback-whale"
-    title: "NOAA Fisheries: Humpback Whale"
-    accessed: "2026-06-12"
+  - url: "https://iucn.org/content/humpback-whale-road-recovery-reveals-iucn-red-list"
+    title: "IUCN — Humpback whale on road to recovery (Red List update)"
+    accessed: "2026-06-11"
+  - url: "https://www.iucnredlist.org/species/13006/50362794"
+    title: "IUCN Red List — Megaptera novaeangliae (Humpback Whale)"
+    accessed: "2026-06-11"
+  - url: "https://cites.org/eng/app/appendices.php"
+    title: "CITES Appendices (Megaptera novaeangliae listed Appendix I)"
+    accessed: "2026-06-11"
 review:
-  science: pending
-  ethics: approved
+  science: required
+  ethics: required
   editor: pending
 outputs:
   website_path: /species/cetaceans/humpback-whale
   github_path: content/species/cetaceans/humpback-whale.md
+  map_layer: false
+impact:
+  claim: "Published a source-reviewed species intelligence page for the humpback whale."
+  eligible_for_hypercert: true
 contributors:
   - github: frankxai
 license: CC-BY-4.0
 ---
 
-# Humpback Whale (*Megaptera novaeangliae*)
+# Humpback Whale (Megaptera novaeangliae)
 
-The humpback whale is a species of baleen whale known for its complex vocalizations, acrobatic behavior, and long-distance migratory patterns. 
+> Status: needs expert review. Conservation claims cite the IUCN Red List and CITES; a science reviewer should confirm the assessment is current and verify subpopulation details before approval. The humpback whale (*Megaptera novaeangliae*) is a large baleen whale famous for its long pectoral fins, breaching, and complex song.
 
-## Taxonomy and description
+## At a glance
 
-Humpback whales belong to the family Balaenopteridae (rorquals). They are characterized by their robust bodies, prominent humps, extremely long pectoral flippers (up to one-third of their body length), and unique tail fluke patterns that serve as individual identifiers. Adults typically measure between 12 and 16 meters (39 to 52 feet) and weigh approximately 25 to 30 metric tons.
+| Field | Value | Source |
+|---|---|---|
+| Scientific name | *Megaptera novaeangliae* | WoRMS / authority |
+| Guild | cetacean (baleen whale) | — |
+| IUCN status | **Least Concern** (recovered from Vulnerable), but **two subpopulations remain Endangered** | [IUCN](https://iucn.org/content/humpback-whale-road-recovery-reveals-iucn-red-list) |
+| Population trend | Increasing in much of its range | IUCN Red List |
+| International trade | CITES **Appendix I** | CITES |
+| Range | All major ocean basins; long seasonal migrations | IUCN Red List |
 
-## Distribution and migration
+## Identification
 
-Humpback whales are found in all major oceans. They undergo some of the longest migrations of any mammal, traveling up to 8,000 kilometers (5,000 miles) between cold-water high-latitude feeding grounds (such as Alaska or the Antarctic) and warm-water low-latitude breeding and calving grounds (such as Hawaii, Central America, or the Caribbean).
+A large baleen whale with very long pectoral fins (up to roughly a third of body length), a knobbly head (tubercles), and a small dorsal fin on a humped back. Often identified individually by the unique pattern on the underside of the tail fluke — the basis for photo-ID citizen science.
 
-## Vocalizations and song
+## Ecology and behavior
 
-Male humpback whales produce complex, structured songs that can last up to 20 minutes and are repeated for hours. These songs are shared by all males within a breeding population and evolve gradually over time. The exact function of the song is still studied, but it is believed to play a role in sexual selection and male-to-male interactions.
+Humpbacks filter-feed on krill and small fish, often using cooperative bubble-net feeding. They undertake some of the longest migrations of any mammal, between high-latitude feeding grounds and low-latitude breeding grounds. Males produce long, structured songs. Behavioral specifics should be cited to published research and confirmed in review.
 
-## Conservation status
+## Conservation status and threats
 
-The IUCN Red List classifies the humpback whale globally as **Least Concern**, following significant recovery since the international whaling moratorium. However, specific sub-populations (such as the Oceania population) remain threatened or endangered. 
+After severe depletion by commercial whaling, humpback whales have recovered across much of their range and were reassessed by the IUCN as **Least Concern**, with an increasing trend — a notable conservation success attributed largely to protection from commercial hunting. However, **two subpopulations remain Endangered**, and the species is listed on **CITES Appendix I**. Ongoing threats include entanglement in fishing gear, vessel strikes, underwater noise, and habitat change. Report figures as the cited authorities state them; a reviewer should confirm subpopulation specifics.
 
-Current threats include:
-- Entanglement in commercial fishing gear
-- Vessel strikes in busy shipping lanes
-- Anthropogenic ocean noise polluting acoustic communication
-- Climate change altering prey distributions (krill and small schooling fish)
+## How to observe responsibly
+
+Whale watching is widespread and often regulated. **This page does not provide approach guidance** — follow the reviewed observation guide and your region's marine-mammal viewing rules, which set minimum approach distances and disengagement rules. For example, in Western Australia (Ningaloo) humpback interactions are managed by DBCA; see the [Ningaloo region briefing](../../regions/ningaloo-coast.md). If animals change behavior because of your presence, you are too close — withdraw.
+
+## How you can help
+
+- Contribute tail-fluke photos to recognized humpback photo-ID catalogs.
+- Log sightings to a recognized citizen-science platform (see the [iNaturalist dataset card](../../research/dataset-inaturalist.md)).
+- Support entanglement-response and vessel-strike-reduction programs through credible organizations such as [Whale and Dolphin Conservation](../../partners/whale-dolphin-conservation.md).
 
 ## Sources
 
-- NOAA Fisheries. (2026). *Humpback Whale (Megaptera novaeangliae)*. Retrieved from https://www.fisheries.noaa.gov/species/humpback-whale
-- IUCN Red List of Threatened Species. (2018). *Megaptera novaeangliae (Humpback Whale)*. Retrieved from https://www.iucnredlist.org/species/12739/50364006
+- [IUCN — Humpback whale on road to recovery](https://iucn.org/content/humpback-whale-road-recovery-reveals-iucn-red-list) (accessed 2026-06-11)
+- [IUCN Red List — Megaptera novaeangliae](https://www.iucnredlist.org/species/13006/50362794) (accessed 2026-06-11)
+- [CITES Appendices](https://cites.org/eng/app/appendices.php) — *Megaptera novaeangliae* listed Appendix I (accessed 2026-06-11)

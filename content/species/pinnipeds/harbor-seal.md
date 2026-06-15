@@ -1,57 +1,78 @@
 ---
-id: harbor-seal
+id: species-harbor-seal
 type: species-page
-title: Harbor Seal
-region:
-  - North Atlantic
-  - North Pacific
+title: "Harbor Seal (Phoca vitulina)"
 species_group:
   - pinnipeds
 species:
-  - "Phoca vitulina"
+  - phoca-vitulina
+difficulty: beginner
+audience:
+  - traveler
+  - student
+  - citizen-scientist
+  - researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/17020/115243109"
-    title: "IUCN Red List: Phoca vitulina"
-    accessed: "2026-06-12"
-  - url: "https://www.fisheries.noaa.gov/species/harbor-seal"
-    title: "NOAA Fisheries: Harbor Seal"
-    accessed: "2026-06-12"
+  - url: "https://www.iucnredlist.org/species/17013/45229114"
+    title: "IUCN Red List — Phoca vitulina (Harbor Seal)"
+    accessed: "2026-06-11"
+  - url: "https://www.nps.gov/places/harbor-seal.htm"
+    title: "Harbor Seal — U.S. National Park Service"
+    accessed: "2026-06-11"
 review:
-  science: pending
-  ethics: approved
+  science: required
+  ethics: required
   editor: pending
 outputs:
   website_path: /species/pinnipeds/harbor-seal
   github_path: content/species/pinnipeds/harbor-seal.md
+  map_layer: false
+impact:
+  claim: "Published a source-reviewed species intelligence page for the harbor seal."
+  eligible_for_hypercert: true
 contributors:
   - github: frankxai
 license: CC-BY-4.0
 ---
 
-# Harbor Seal (*Phoca vitulina*)
+# Harbor Seal (Phoca vitulina)
 
-The harbor seal, also known as the common seal, is a widespread species of true seal (phocid) found along temperate and arctic marine coastlines of the Northern Hemisphere.
+> Status: needs expert review. Conservation claims cite the IUCN Red List; a reviewer should confirm currency and subspecies detail before approval. The harbor seal (*Phoca vitulina*) is a widespread coastal "true seal" of temperate and Arctic Northern Hemisphere shores.
 
-## Taxonomy and description
+## At a glance
 
-Harbor seals belong to the family Phocidae (earless or true seals). They have spotted coats that vary in color from light brown or grey to dark charcoal. Their bodies are streamlined, with short flippers and no external ear flaps. Adults typically grow to 1.5 to 1.9 meters (5 to 6 feet) in length and weigh up to 140 kilograms (300 pounds), with males being slightly larger than females.
+| Field | Value | Source |
+|---|---|---|
+| Scientific name | *Phoca vitulina* | WoRMS / authority |
+| Guild | pinniped (phocid / true seal) | — |
+| IUCN status | **Least Concern** (species overall) | [IUCN Red List](https://www.iucnredlist.org/species/17013/45229114) |
+| Population trend | Increasing since ~1970s; total ~600,000 | IUCN Red List |
+| Range | Coastal North Atlantic, North Pacific, and adjacent Arctic | IUCN Red List |
 
-## Habitat and behavior
+## Identification
 
-Harbor seals inhabit coastal waters, sandy beaches, rocky shores, mudflats, and ice floes. They are generally solitary in the water but haul out in groups on land or ice to rest, thermoregulate, molt, and give birth (pup). They are opportunistic feeders, preying primarily on fish (such as herring, cod, and salmon), cephalopods, and crustaceans.
+A small-to-medium seal with a rounded head, V-shaped nostrils, and a coat of spots and rings on a grey-to-brown background; no external ear flaps (a "true" / phocid seal). On land it moves by caterpillar-like undulation; it cannot rotate its hind flippers forward like sea lions.
 
-## Conservation status
+## Ecology and behavior
 
-The IUCN Red List classifies the harbor seal as **Least Concern** globally due to its large population and extensive range. However, local populations faces localized threats and protections vary.
+Harbor seals haul out on rocks, sandbars, and beaches to rest, molt, and pup. They forage on fish and invertebrates in coastal waters. Pupping and molting seasons are sensitive periods. Behavioral specifics should be cited to published research and confirmed in review.
 
-Key threats include:
-- Disturbance from coastal recreation and tourism during pupping and molting seasons
-- Entanglement in marine debris and commercial fishing nets
-- Pollutants (heavy metals and organic compounds) bioaccumulating in their tissues
-- Competition with commercial fisheries
+## Conservation status and threats
+
+The harbor seal is assessed **Least Concern** by the IUCN, with a total population around 600,000 and an increasing trend since the 1970s. However, **some subspecies and regional populations face serious challenges** (for example, a freshwater subspecies with very few individuals), and disease die-offs have killed thousands in some years. Report figures as the cited authorities state them; a reviewer should confirm subspecies specifics.
+
+## How to observe responsibly
+
+**This page does not provide approach guidance.** Follow the reviewed observation guide and local marine-mammal viewing rules. **Hauled-out seals — especially mothers and pups — must not be approached or disturbed;** a disturbed seal that flushes into the water can abandon a pup. Keep well back, stay quiet, and leash dogs near haul-outs. Exact haul-out and pupping sites are kept to regional granularity (ETHICS.md).
+
+## How you can help
+
+- Log sightings to a recognized citizen-science platform (see the [iNaturalist dataset card](../../research/dataset-inaturalist.md)) — without approaching haul-outs.
+- Report stranded or entangled seals to the local marine-mammal stranding network rather than intervening yourself.
+- Support coastal haul-out protection and disturbance-reduction programs.
 
 ## Sources
 
-- NOAA Fisheries. (2026). *Harbor Seal (Phoca vitulina)*. Retrieved from https://www.fisheries.noaa.gov/species/harbor-seal
-- IUCN Red List of Threatened Species. (2016). *Phoca vitulina (Harbor Seal)*. Retrieved from https://www.iucnredlist.org/species/17020/115243109
+- [IUCN Red List — Phoca vitulina](https://www.iucnredlist.org/species/17013/45229114) (accessed 2026-06-11)
+- [Harbor Seal — U.S. National Park Service](https://www.nps.gov/places/harbor-seal.htm) (accessed 2026-06-11)

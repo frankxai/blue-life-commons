@@ -27,3 +27,5 @@ jobs:
         run: python scripts/validate_artifacts.py
       - name: Integrity lint (sources, ethics, review gates)
         run: python scripts/lint_content.py
+      - name: Check catalog is up to date
+        run: python scripts/build_catalog.py --check
