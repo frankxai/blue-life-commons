@@ -26,7 +26,7 @@ def extract_frontmatter(text: str):
 
 
 def main(argv):
-    schema = yaml.safe_load(SCHEMA_PATH.read_text())
+    schema = yaml.safe_load(SCHEMA_PATH.read_text(encoding="utf-8"))
     validator = Draft202012Validator(schema)
 
     if argv:
@@ -42,7 +42,7 @@ def main(argv):
         if not f.is_file() or f.suffix not in {".md", ".mdx"}:
             continue
         try:
-            fm = extract_frontmatter(f.read_text())
+            fm = extract_frontmatter(f.read_text(encoding="utf-8"))
         except yaml.YAMLError as e:
             print(f"FAIL {f}: invalid YAML frontmatter: {e}")
             errors += 1

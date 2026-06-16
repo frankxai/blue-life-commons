@@ -56,7 +56,7 @@ def collect() -> dict:
         for f in sorted((ROOT / d).rglob("*.md")):
             if _is_template(f):
                 continue
-            fm = _frontmatter(f.read_text())
+            fm = _frontmatter(f.read_text(encoding="utf-8"))
             if not fm or "type" not in fm:
                 continue
             by_type.setdefault(fm["type"], []).append((fm, f.relative_to(ROOT)))
@@ -109,13 +109,13 @@ def render(by_type: dict) -> str:
 def main(argv) -> int:
     content = render(collect())
     if "--check" in argv:
-        current = OUT.read_text() if OUT.exists() else ""
+        current = OUT.read_text(encoding="utf-8") if OUT.exists() else ""
         if current != content:
             print("CATALOG.md is stale — run: python scripts/build_catalog.py")
             return 1
         print("CATALOG.md is up to date.")
         return 0
-    OUT.write_text(content)
+    OUT.write_text(content, encoding="utf-8")
     print(f"Wrote {OUT.relative_to(ROOT)}")
     return 0
 
