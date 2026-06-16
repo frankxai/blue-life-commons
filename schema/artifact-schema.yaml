@@ -37,6 +37,17 @@ properties:
       - event-report
       - observation-guide
       - funding-proposal
+      # --- Welfare, rehab & sanctuary types (added 2026-06-16 per practitioner panel) ---
+      - welfare-assessment
+      - stranding-protocol
+      - rehab-case-card
+      - release-criteria
+      - sanctuary-profile
+      - husbandry-guide
+      - necropsy-summary
+      # --- Community & knowledge-preservation types ---
+      - local-knowledge
+      - volunteer-program
   title:
     type: string
     minLength: 3
@@ -123,6 +134,49 @@ properties:
     description: "Scientific consensus on the artifact's core claims. Contested/emerging artifacts must represent the disagreement, not pick a winner."
     type: string
     enum: [settled, contested, emerging]
+  # --- Welfare as a first-class state (added 2026-06-16; see WELFARE.md) ---
+  welfare:
+    description: "Animal-welfare state. Frames welfare as an active interest to support, not only a constraint. Affect/mental-state is inferred from validated physiological/behavioural correlates with citation — never narrated. See WELFARE.md."
+    type: object
+    properties:
+      state:
+        description: "Population- or individual-level welfare status."
+        type: string
+        enum: [favourable, pressured, critical, recovering, unknown]
+      dominant_stressor:
+        description: "Primary welfare pressure, e.g. vessel-noise, bycatch, heat-stress, prey-depletion, entanglement, habitat-loss."
+        type: string
+      five_domains:
+        description: "Brief, cited notes per Mellor Five Domains (nutrition, environment, health, behaviour, mental-state)."
+        type: object
+        additionalProperties: true
+      confidence:
+        description: "Epistemic basis for the welfare claim — never assert measured when it is modeled or expert opinion."
+        type: string
+        enum: [measured, modeled, expert-opinion]
+  disturbance_budget:
+    description: "Cumulative human-pressure capacity for a place/season/population (vessels, noise, approaches). Replaces per-actor 'don't harm' with a carrying-capacity model. See WELFARE.md."
+    type: object
+    properties:
+      scope:
+        type: string
+      season:
+        type: string
+      capacity_note:
+        type: string
+      utilization:
+        type: string
+        enum: [low, moderate, high, exceeded, unknown]
+  individual_animal:
+    description: "True for artifacts about a single animal (rehab-case-card, sanctuary residents). Triggers the strictest location/dignity rules in ETHICS.md — no precise locations, ever, including post-release."
+    type: boolean
+  last_verified:
+    description: "ISO date the artifact's factual claims were last checked against current sources. 'approved' is not 'still true'; this surfaces staleness."
+    type: string
+  consent:
+    description: "For local-knowledge artifacts: provenance + consent record for community/Indigenous knowledge (who shared it, permission to publish, attribution preference)."
+    type: object
+    additionalProperties: true
   review:
     type: object
     required: [science, ethics, editor]

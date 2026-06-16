@@ -28,7 +28,28 @@ SCIENCE_SENSITIVE = {
     "dataset-card",
     "observation-guide",
     "field-mission",
+    "welfare-assessment",
+    "stranding-protocol",
+    "release-criteria",
+    "husbandry-guide",
+    "necropsy-summary",
 }
+
+# Artifacts about live or individual animals: NO precise locations, ever (ETHICS.md).
+LIVE_ANIMAL_TYPES = {
+    "rehab-case-card",
+    "stranding-protocol",
+    "release-criteria",
+    "sanctuary-profile",
+    "husbandry-guide",
+    "necropsy-summary",
+}
+
+# A decimal coordinate stated to ~11 m precision (>=4 decimal places) in a geographic context.
+PRECISE_COORD = re.compile(
+    r"(lat|lon|latitude|longitude|coord|°|\bN\b|\bS\b|\bE\b|\bW\b)[^\n]{0,40}?-?\d{1,3}\.\d{4,}",
+    re.IGNORECASE,
+)
 
 # Anthropomorphic-claim-as-fact: an animal subject + a mind verb, NOT hedged by a citation cue.
 ANTHRO = re.compile(
@@ -70,6 +91,14 @@ def lint_file(path: Path):
     for line in body.splitlines():
         if ANTHRO.search(line) and not HEDGE.search(line):
             errors.append(f"possible anthropomorphic claim as fact: {line.strip()[:90]!r}")
+
+    # Location guardrail (ETHICS.md): live/individual-animal artifacts carry NO precise locations.
+    if typ in LIVE_ANIMAL_TYPES or fm.get("individual_animal") is True:
+        for line in body.splitlines():
+            if PRECISE_COORD.search(line):
+                errors.append(
+                    f"precise location in a live/individual-animal artifact (ETHICS.md forbids): {line.strip()[:90]!r}"
+                )
 
     if typ == "species-page" and status in {"approved", "published"}:
         if not (fm.get("iucn") or {}).get("assessment_date"):

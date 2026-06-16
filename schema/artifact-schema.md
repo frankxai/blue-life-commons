@@ -22,6 +22,11 @@ The machine-readable definition lives in [`artifact-schema.yaml`](artifact-schem
 | `outputs` | yes | object | `website_path`, `github_path`, `map_layer` (bool) |
 | `impact` | no | object | `claim` (string), `eligible_for_hypercert` (bool) |
 | `sensitivity` | no | object | Location-data sensitivity per the GBIF four-category model — `tier` (`public`\|`low`\|`medium`\|`high`\|`extreme`), `rationale`, `generalized_to` |
+| `welfare` | no | object | First-class welfare state — `state` (`favourable`\|`pressured`\|`critical`\|`recovering`\|`unknown`), `dominant_stressor`, `five_domains`, `confidence` (`measured`\|`modeled`\|`expert-opinion`). See [WELFARE.md](../WELFARE.md) |
+| `disturbance_budget` | no | object | Cumulative human-pressure capacity for a place/season/population — `scope`, `season`, `capacity_note`, `utilization` |
+| `individual_animal` | no | bool | `true` for single-animal artifacts; triggers the strictest location/dignity rules (no precise locations, ever) |
+| `last_verified` | no | string | ISO date the claims were last checked against current sources. `approved` ≠ `still true` |
+| `consent` | no | object | For `local-knowledge`: who shared it, permission, attribution preference |
 | `iucn` | no | object | Red List provenance — `category`, `assessment_date`, `version`, `population_trend`, `scope` (`global`\|`regional`) |
 | `consensus_state` | no | enum | `settled` \| `contested` \| `emerging` — contested/emerging artifacts must represent the disagreement |
 | `contributors` | yes | list | Objects with `github` handle |
@@ -40,6 +45,8 @@ Each entry in `sources` has `url` (required) plus optional `title`, `accessed`, 
 ### Allowed `type` values
 
 `species-page` · `region-briefing` · `field-mission` · `research-summary` · `dataset-card` · `mcp-connector` · `notebook` · `map-layer` · `partner-profile` · `translation` · `film-script` · `lesson` · `event-report` · `observation-guide` · `funding-proposal`
+
+**Welfare, rehab & sanctuary types** (added 2026-06-16): `welfare-assessment` · `stranding-protocol` · `rehab-case-card` · `release-criteria` · `sanctuary-profile` · `husbandry-guide` · `necropsy-summary`. **Community types:** `local-knowledge` · `volunteer-program`. These carry the rules in [WELFARE.md](../WELFARE.md) and [ETHICS.md](../ETHICS.md) § Rehabilitation, sanctuary & individual animals — chiefly: artifacts about live/individual animals (`individual_animal: true`) may never carry precise locations, and the system assembles clinical evidence but never adjudicates.
 
 ## Canonical example
 

@@ -22,6 +22,21 @@ Every field mission must include:
 - Local regulations and permit requirements
 - A "do no harm" section that overrides all other instructions
 
+## Welfare beyond constraint
+
+The rules above are the floor — what not to do. The animals' positive interest in recovering and flourishing is a first-class concern, represented in [WELFARE.md](WELFARE.md) (the Five Domains, the disturbance budget, welfare-as-state). Harm is **cumulative**: an artifact or guardian must reason about total human pressure on a place/population, not only single-actor compliance.
+
+## Rehabilitation, sanctuary & individual animals
+
+Artifacts about stranding response, rehabilitation, sanctuaries, and individual animals (`rehab-case-card`, `stranding-protocol`, `release-criteria`, `sanctuary-profile`, `husbandry-guide`, `necropsy-summary`, and any artifact with `individual_animal: true`) carry the strictest rules:
+
+1. **No precise locations of live animals — ever.** This extends the vulnerable-taxa location rule to *every* animal in rehab, in transport, and **post-release** (released/tagged animals are harassment targets). Regional granularity only; telemetry tracks are aggregated and delayed, never live-public.
+2. **The system assembles evidence; it never adjudicates.** Dosing, euthanasia, and releasability are decisions for licensed veterinarians and the responsible authority (e.g., the NOAA Regional Administrator). An artifact or guardian may compile evidence against published criteria and must stay silent on the verdict — *grounded or silent extends to evidence, never verdict*.
+3. **Release > lifelong captivity is the default.** Sanctuary residency for non-releasable animals is the justified exception, never framed as a happy outcome. **No glamorizing captivity.**
+4. **Individual-animal dignity.** Case cards are de-identified; "patient story" content never overrides welfare (welfare-over-content holds). Donor storytelling around a named animal must not compromise the animal's interests or location.
+5. **Honesty about invasiveness.** Tagging, sampling, and handling are described plainly with their welfare cost, never euphemized.
+6. **Clinical content is review-gated and credentialed.** Triage, dosing, and medical protocols set `review.ethics: required` and `review.science: required`; reviewers should include relevant veterinary/rehabilitation expertise.
+
 ## Review process
 
 - Artifacts with `review.ethics: required` cannot be published until an ethics reviewer approves.
