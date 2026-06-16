@@ -8,52 +8,52 @@
 
 | Title | Status | Scope | Path |
 |---|---|---|---|
-| Humpback Whale (Megaptera novaeangliae) | needs-expert-review | cetaceans | `content\species\cetaceans\humpback-whale.md` |
-| Harbor Seal (Phoca vitulina) | needs-expert-review | pinnipeds | `content\species\pinnipeds\harbor-seal.md` |
-| Staghorn Coral (Acropora cervicornis) | needs-expert-review | reefs | `content\species\reefs\staghorn-coral.md` |
-| Great White Shark | needs-expert-review | sharks-rays, Global Temperate Oceans | `content\species\sharks-rays\great-white-shark.md` |
-| Whale Shark (Rhincodon typus) | needs-expert-review | sharks-rays | `content\species\sharks-rays\whale-shark.md` |
-| Green Turtle (Chelonia mydas) | needs-expert-review | turtles | `content\species\turtles\green-turtle.md` |
+| Humpback Whale (Megaptera novaeangliae) | needs-expert-review | cetaceans | `content/species/cetaceans/humpback-whale.md` |
+| Harbor Seal (Phoca vitulina) | needs-expert-review | pinnipeds | `content/species/pinnipeds/harbor-seal.md` |
+| Staghorn Coral (Acropora cervicornis) | needs-expert-review | reefs | `content/species/reefs/staghorn-coral.md` |
+| Great White Shark | needs-expert-review | sharks-rays, Global Temperate Oceans | `content/species/sharks-rays/great-white-shark.md` |
+| Whale Shark (Rhincodon typus) | needs-expert-review | sharks-rays | `content/species/sharks-rays/whale-shark.md` |
+| Green Turtle (Chelonia mydas) | needs-expert-review | turtles | `content/species/turtles/green-turtle.md` |
 
 ## Region Briefings (3)
 
 | Title | Status | Scope | Path |
 |---|---|---|---|
-| Monterey Bay Marine Briefing | needs-expert-review | cetaceans, pinnipeds, sharks-rays, reefs, Monterey Bay | `content\regions\monterey-bay.md` |
-| Ningaloo Coast, Western Australia | needs-expert-review | reefs, sharks-rays, ningaloo, western-australia | `content\regions\ningaloo-coast.md` |
-| Wadden Sea (Netherlands · Germany · Denmark) | needs-expert-review | pinnipeds, cetaceans, wadden-sea, north-sea | `content\regions\wadden-sea.md` |
+| Monterey Bay Marine Briefing | needs-expert-review | cetaceans, pinnipeds, sharks-rays, reefs, Monterey Bay | `content/regions/monterey-bay.md` |
+| Ningaloo Coast, Western Australia | needs-expert-review | reefs, sharks-rays, ningaloo, western-australia | `content/regions/ningaloo-coast.md` |
+| Wadden Sea (Netherlands · Germany · Denmark) | needs-expert-review | pinnipeds, cetaceans, wadden-sea, north-sea | `content/regions/wadden-sea.md` |
 
 ## Field Missions (2)
 
 | Title | Status | Scope | Path |
 |---|---|---|---|
-| Harbor Seal Beach Monitoring | needs-expert-review | pinnipeds, California | `missions\california\harbor-seal-monitoring.md` |
-| Ethical Whale Shark Observation at Ningaloo (with a licensed operator) | needs-expert-review | sharks-rays, ningaloo, western-australia | `missions\ningaloo\whale-shark-ethical-observation.md` |
+| Harbor Seal Beach Monitoring | needs-expert-review | pinnipeds, California | `missions/california/harbor-seal-monitoring.md` |
+| Ethical Whale Shark Observation at Ningaloo (with a licensed operator) | needs-expert-review | sharks-rays, ningaloo, western-australia | `missions/ningaloo/whale-shark-ethical-observation.md` |
 
 ## Dataset Cards (6)
 
 | Title | Status | Scope | Path |
 |---|---|---|---|
-| Dataset Card: NOAA Coral Reef Watch — 5km Bleaching Heat-Stress Products | draft | reefs | `content\research\dataset-coral-reef-watch.md` |
-| Dataset Card: GBIF — Global Biodiversity Information Facility | draft | — | `content\research\dataset-gbif.md` |
-| Dataset Card: iNaturalist — Citizen-Science Observations API | draft | — | `content\research\dataset-inaturalist.md` |
-| Dataset Card: OBIS — Ocean Biodiversity Information System | draft | — | `content\research\dataset-obis.md` |
-| Dataset Card: Protected Planet — World Database on Protected Areas (WDPA) | draft | — | `content\research\dataset-protected-planet.md` |
-| Dataset Card: WoRMS — World Register of Marine Species | draft | — | `content\research\dataset-worms.md` |
+| Dataset Card: NOAA Coral Reef Watch — 5km Bleaching Heat-Stress Products | draft | reefs | `content/research/dataset-coral-reef-watch.md` |
+| Dataset Card: GBIF — Global Biodiversity Information Facility | draft | — | `content/research/dataset-gbif.md` |
+| Dataset Card: iNaturalist — Citizen-Science Observations API | draft | — | `content/research/dataset-inaturalist.md` |
+| Dataset Card: OBIS — Ocean Biodiversity Information System | draft | — | `content/research/dataset-obis.md` |
+| Dataset Card: Protected Planet — World Database on Protected Areas (WDPA) | draft | — | `content/research/dataset-protected-planet.md` |
+| Dataset Card: WoRMS — World Register of Marine Species | draft | — | `content/research/dataset-worms.md` |
 
 ## Research Summaries (2)
 
 | Title | Status | Scope | Path |
 |---|---|---|---|
-| Acoustic Monitoring of Cetaceans 2026 | needs-expert-review | cetaceans, North Pacific | `content\research\acoustic-monitoring-2026.md` |
-| Ocean Governance Frameworks in 2026: Ocean Decade, SDG 14, 30x30, and the High Seas Treaty | needs-expert-review | — | `content\research\ocean-governance-frameworks-2026.md` |
+| Acoustic Monitoring of Cetaceans 2026 | needs-expert-review | cetaceans, North Pacific | `content/research/acoustic-monitoring-2026.md` |
+| Ocean Governance Frameworks in 2026: Ocean Decade, SDG 14, 30x30, and the High Seas Treaty | needs-expert-review | — | `content/research/ocean-governance-frameworks-2026.md` |
 
 ## Partner Profiles (5)
 
 | Title | Status | Scope | Path |
 |---|---|---|---|
-| Partner Profile: Mission Blue (Sylvia Earle Alliance) | draft | — | `content\partners\mission-blue.md` |
-| Partner Profile: Olive Ridley Project | draft | turtles | `content\partners\olive-ridley-project.md` |
-| Point Reyes National Seashore Association | needs-expert-review | California | `content\partners\point-reyes-association.md` |
-| Partner Profile: Reef Check Foundation | draft | reefs | `content\partners\reef-check.md` |
-| Partner Profile: Whale and Dolphin Conservation (WDC) | draft | cetaceans | `content\partners\whale-dolphin-conservation.md` |
+| Partner Profile: Mission Blue (Sylvia Earle Alliance) | draft | — | `content/partners/mission-blue.md` |
+| Partner Profile: Olive Ridley Project | draft | turtles | `content/partners/olive-ridley-project.md` |
+| Point Reyes National Seashore Association | needs-expert-review | California | `content/partners/point-reyes-association.md` |
+| Partner Profile: Reef Check Foundation | draft | reefs | `content/partners/reef-check.md` |
+| Partner Profile: Whale and Dolphin Conservation (WDC) | draft | cetaceans | `content/partners/whale-dolphin-conservation.md` |

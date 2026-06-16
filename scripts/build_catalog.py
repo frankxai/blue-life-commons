@@ -83,7 +83,7 @@ def render(by_type: dict) -> str:
         lines.append("")
         lines.append("| Title | Status | Scope | Path |")
         lines.append("|---|---|---|---|")
-        for fm, path in sorted(items, key=lambda x: str(x[1])):
+        for fm, path in sorted(items, key=lambda x: x[1].as_posix()):
             scope_bits = []
             if fm.get("species_group"):
                 scope_bits.extend(fm["species_group"])
@@ -91,7 +91,7 @@ def render(by_type: dict) -> str:
                 scope_bits.extend(fm["region"])
             scope = ", ".join(str(s) for s in scope_bits) or "—"
             title = str(fm.get("title", "")).replace("|", "\\|")
-            lines.append(f"| {title} | {fm.get('status','')} | {scope} | `{path}` |")
+            lines.append(f"| {title} | {fm.get('status','')} | {scope} | `{path.as_posix()}` |")
         lines.append("")
     # Any types not in TYPE_ORDER
     for type_key in sorted(by_type):
@@ -100,8 +100,8 @@ def render(by_type: dict) -> str:
         items = by_type[type_key]
         lines.append(f"## {type_key} ({len(items)})")
         lines.append("")
-        for fm, path in sorted(items, key=lambda x: str(x[1])):
-            lines.append(f"- {fm.get('title','')} — `{path}`")
+        for fm, path in sorted(items, key=lambda x: x[1].as_posix()):
+            lines.append(f"- {fm.get('title','')} — `{path.as_posix()}`")
         lines.append("")
     return "\n".join(lines).rstrip() + "\n"
 
