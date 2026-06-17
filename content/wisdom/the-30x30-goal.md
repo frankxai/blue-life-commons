@@ -1,14 +1,35 @@
 ---
-title: The 30x30 Goal — What It Is, Why It Matters, and How Far We Have to Go
+id: the-30x30-goal
 type: wisdom
-status: published
-description: 196 countries agreed to protect 30% of the ocean by 2030. Here is what that commitment means, what stands in the way, and how Ocean Intelligence System supports the effort.
-tags: [30x30, MPAs, ocean-protection, biodiversity, BBNJ, CBD, Kunming-Montreal]
+title: "The 30x30 Goal — What It Is, Why It Matters, and How Far We Have to Go"
+status: needs-expert-review
 sources:
-  - CBD Global Biodiversity Framework Target 3 (2022)
-  - Protected Planet Annual Report (WDPA)
-  - Marine Conservation Institute
-  - IUCN
+  - url: "https://www.cbd.int/gbf/targets/3"
+    title: "CBD Global Biodiversity Framework Target 3 (30x30)"
+    accessed: "2026-06-17"
+    tier: 2
+  - url: "https://www.protectedplanet.net/en"
+    title: "Protected Planet / WDPA Annual Report"
+    accessed: "2026-06-17"
+    tier: 2
+  - url: "https://www.marineconservation.org/"
+    title: "Marine Conservation Institute"
+    accessed: "2026-06-17"
+    tier: 2
+  - url: "https://www.iucn.org/theme/marine-and-polar/our-work/marine-protected-areas"
+    title: "IUCN Marine Protected Areas"
+    accessed: "2026-06-17"
+    tier: 2
+review:
+  science: required
+  ethics: not-applicable
+  editor: required
+outputs:
+  website_path: /wisdom/the-30x30-goal
+  github_path: content/wisdom/the-30x30-goal.md
+license: CC-BY-4.0
+contributors:
+  - github: frankxai
 ---
 
 # The 30x30 Goal — What It Is, Why It Matters, and How Far We Have to Go

@@ -1,14 +1,39 @@
 ---
-title: Five Ocean Metrics Every Human Should Know
+id: five-metrics-for-every-human
 type: wisdom
-status: published
-description: The five numbers that define the state of the ocean — and what they mean for the planet.
-tags: [ocean-health, climate, coral, acidification, dead-zones, protection]
+title: "Five Ocean Metrics Every Human Should Know"
+status: needs-expert-review
 sources:
-  - IPCC AR6 Ocean Chapter
-  - NOAA Ocean Acidification Program
-  - IUCN Red List of Ecosystems
-  - Protected Planet (WDPA)
+  - url: "https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-9/"
+    title: "IPCC AR6 WG1 Chapter 9 — Ocean, Cryosphere and Sea Level Change"
+    accessed: "2026-06-17"
+    tier: 1
+  - url: "https://oceanacidification.noaa.gov/"
+    title: "NOAA Ocean Acidification Program"
+    accessed: "2026-06-17"
+    tier: 2
+  - url: "https://www.iucnredlist.org/"
+    title: "IUCN Red List of Threatened Species"
+    accessed: "2026-06-17"
+    tier: 1
+  - url: "https://www.protectedplanet.net/en"
+    title: "Protected Planet — UNEP-WCMC"
+    accessed: "2026-06-17"
+    tier: 2
+  - url: "https://www.cbd.int/gbf/targets/3"
+    title: "CBD Global Biodiversity Framework Target 3 (30x30)"
+    accessed: "2026-06-17"
+    tier: 2
+review:
+  science: required
+  ethics: not-applicable
+  editor: required
+outputs:
+  website_path: /wisdom/five-metrics-for-every-human
+  github_path: content/wisdom/five-metrics-for-every-human.md
+license: CC-BY-4.0
+contributors:
+  - github: frankxai
 ---
 
 # Five Ocean Metrics Every Human Should Know

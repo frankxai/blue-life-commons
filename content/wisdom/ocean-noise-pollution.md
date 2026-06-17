@@ -1,13 +1,31 @@
 ---
-title: Ocean Noise Pollution — The Invisible Threat
+id: ocean-noise-pollution
 type: wisdom
-status: published
-description: The ocean is not silent. It is a sound-mediated world — and human-generated noise is increasingly drowning out the signals that marine life depends on to survive.
-tags: [ocean-noise, cetaceans, shipping, sonar, acoustic-pollution, SRKWs, marine-mammals]
+title: "Ocean Noise Pollution — The Invisible Threat"
+status: needs-expert-review
 sources:
-  - NOAA Acoustic Monitoring Program
-  - IFAW Ocean Noise Report
-  - Rolland et al. 2012 (cortisol stress response to shipping noise)
+  - url: "https://www.noaa.gov/education/resource-collections/ocean-coasts/ocean-noise"
+    title: "NOAA Ocean Noise Strategy"
+    accessed: "2026-06-17"
+    tier: 2
+  - url: "https://www.ifaw.org/resources/ocean-noise-turn-it-down"
+    title: "IFAW Ocean Noise: Turn It Down (2021)"
+    accessed: "2026-06-17"
+    tier: 2
+  - url: "https://royalsocietypublishing.org/doi/10.1098/rspb.2011.2429"
+    title: "Rolland et al. (2012) — Evidence that ship noise increases stress in right whales"
+    accessed: "2026-06-17"
+    tier: 1
+review:
+  science: required
+  ethics: not-applicable
+  editor: required
+outputs:
+  website_path: /wisdom/ocean-noise-pollution
+  github_path: content/wisdom/ocean-noise-pollution.md
+license: CC-BY-4.0
+contributors:
+  - github: frankxai
 ---
 
 # Ocean Noise Pollution — The Invisible Threat
