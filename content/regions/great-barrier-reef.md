@@ -1,119 +1,119 @@
 ---
 id: great-barrier-reef
-title: "Great Barrier Reef"
-description: "The world's largest coral reef system off Queensland, Australia (344,400 km²), supporting 9,000+ species across 600 coral species and 1,625 fish species, under existential threat from repeated thermal bleaching driven by climate change."
 type: region-briefing
+title: "Great Barrier Reef, Australia"
+region:
+  - great-barrier-reef
+  - queensland
+  - australia
+species_group:
+  - reefs
+  - turtles
+  - cetaceans
 status: needs-expert-review
-scope:
-  regions:
-    - great-barrier-reef
-  tags:
-    - "coral-reef", "climate-change", "bleaching", "australia", "world-heritage", "crown-of-thorns"
 sources:
-  - url: "https://www.gbrmpa.gov.au/"
-    title: "Great Barrier Reef Marine Park Authority"
-    accessed: "2026-06-17"
-  - url: "https://www.aims.gov.au/reef-monitoring/reef-condition-summary"
-    title: "AIMS Long-Term Monitoring Program — Reef Condition Summary"
-    accessed: "2026-06-17"
-  - url: "https://whc.unesco.org/en/list/154"
+  - url: "https://whc.unesco.org/en/list/154/"
     title: "Great Barrier Reef — UNESCO World Heritage Centre"
-    accessed: "2026-06-17"
+    tier: 1
+    accessed: "2026-06-16"
+  - url: "https://www2.gbrmpa.gov.au/learn/fascinating-facts-about-great-barrier-reef"
+    title: "Fascinating facts about the Great Barrier Reef — Great Barrier Reef Marine Park Authority"
+    tier: 1
+    accessed: "2026-06-16"
+  - url: "https://www.aims.gov.au/monitoring-great-barrier-reef/gbr-condition-summary-2024-25"
+    title: "Annual Summary Report of Coral Reef Condition 2024/25 — Australian Institute of Marine Science"
+    tier: 1
+    accessed: "2026-06-16"
+  - url: "https://www.aims.gov.au/research-topics/environmental-issues/coral-bleaching/coral-bleaching-events"
+    title: "Coral bleaching events — Australian Institute of Marine Science"
+    tier: 1
+    accessed: "2026-06-16"
+  - url: "https://outlookreport.gbrmpa.gov.au/about/executive-summary"
+    title: "Great Barrier Reef Outlook Report 2024 — Executive Summary, GBRMPA"
+    tier: 1
+    accessed: "2026-06-16"
+  - url: "https://www2.gbrmpa.gov.au/access/responsible-reef-practices"
+    title: "Responsible Reef Practices — Great Barrier Reef Marine Park Authority"
+    tier: 1
+    accessed: "2026-06-16"
 review:
   science: required
-  ethics: not-applicable
-  editor: required
+  ethics: approved
+  editor: pending
+welfare:
+  state: critical
+  dominant_stressor: heat-stress
+  confidence: measured
+  five_domains:
+    environment: "Ocean warming has driven repeated mass coral bleaching events, recorded in 1998, 2002, 2016, 2017, 2020, 2022 and 2024 (AIMS)."
+    health: "The 2024/25 AIMS monitoring found hard coral cover declines across all three regions following the 2024 mass bleaching, cyclones and crown-of-thorns starfish (AIMS)."
+disturbance_budget:
+  scope: "Great Barrier Reef Marine Park, coral and reef-associated communities"
+  season: "summer thermal-stress window (austral summer)"
+  capacity_note: "The dominant pressure is cumulative ocean heat stress driving repeated bleaching; GBRMPA identifies climate change as the greatest threat. Local visitor pressure is managed through zoning and responsible-practice rules on top of this overriding thermal budget."
+  utilization: "exceeded"
+consensus_state: settled
+last_verified: "2026-06-16"
 outputs:
   website_path: /regions/great-barrier-reef
   github_path: content/regions/great-barrier-reef.md
-license: CC-BY-4.0
+  map_layer: false
+impact:
+  claim: "Published a source-reviewed region briefing for the Great Barrier Reef, grounding a reef guardian for the world's largest coral reef ecosystem."
+  eligible_for_hypercert: true
 contributors:
   - github: frankxai
-created: "2026-06-17"
-updated: "2026-06-17"
+license: CC-BY-4.0
 ---
 
-# Great Barrier Reef
+# Great Barrier Reef, Australia
+
+> Status: needs expert review. Figures cite GBRMPA, UNESCO, the Australian Institute of Marine Science (AIMS), and the GBRMPA Outlook Report 2024. GBRMPA and UNESCO publish slightly different area and feature counts; each figure below is attributed to its source rather than blended. A reviewer should confirm the latest AIMS condition figures and the current UNESCO World Heritage status before approval.
 
 ## Overview
 
-The Great Barrier Reef Marine Park stretches 2,300 km along the Queensland coast in northeastern Australia and covers approximately 344,400 km² — larger than Italy and the largest coral reef ecosystem on Earth. UNESCO inscribed it as a World Heritage property in 1981 under all four natural criteria, recognising its outstanding universal value. The park encompasses roughly 3,000 individual reefs, 900 islands, fringing and outer-shelf reef structures, seagrass meadows, and mangrove systems.
+The Great Barrier Reef, off the coast of Queensland in northeastern Australia, is the world's largest coral reef ecosystem. The Great Barrier Reef Marine Park stretches about 2,300 km along the coast and covers approximately 344,400 km², encompassing roughly 3,000 individual reefs (GBRMPA). The UNESCO World Heritage property, inscribed in 1981 under all four natural criteria, describes the system in slightly different terms — some 2,500 reefs and over 900 islands across about 348,000 km² (UNESCO World Heritage Centre).
 
-**Key biodiversity figures (GBRMPA):**
-- 600+ hard and soft coral species combined (approximately 450 hard coral species)
-- 1,625 fish species
-- 9,000+ known species total
-- 6 of 7 sea turtle species
-- 30+ cetacean species (whales and dolphins)
-- 215 bird species
-- 133 shark and ray species
+## Key species & habitats
 
-## Current ecological state
+The reef supports exceptional marine biodiversity. GBRMPA records around 450 species of hard coral plus more than 1,000 species of soft coral, about 1,625 species of fish, six of the world's seven marine turtle species, and more than 30 species of marine mammals including whales and dolphins, as well as important dugong habitat (GBRMPA). The system spans fringing reefs, mid-shelf and outer-shelf reefs, seagrass meadows, mangroves, and continental islands, each supporting distinct communities.
 
-The reef's trajectory is defined by a sequence of mass bleaching events. Bleaching occurs when ocean temperatures exceed coral thermal tolerance, causing corals to expel their symbiotic algae. If temperatures remain elevated for weeks, corals die. AIMS records the following mass bleaching events affecting the Great Barrier Reef:
+## Conservation status & threats
 
-| Year | Severity / Notes |
-|------|------------------|
-| 1998 | First major bleaching event |
-| 2002 | Second event; northern reef most affected |
-| 2016 | Severe; killed approximately 50% of corals in the northern sections |
-| 2017 | Back-to-back with 2016; compounded northern reef mortality |
-| 2020 | Third major event |
-| 2022 | Fourth event in seven years |
-| 2024 | Most geographically extensive bleaching ever recorded on the GBR |
+GBRMPA's Outlook Report 2024 identifies climate change as the greatest threat to the reef, with ocean warming driving repeated mass coral bleaching; coastal development, land-based run-off affecting water quality, and direct human use are additional pressures, compounded by crown-of-thorns starfish outbreaks and severe cyclones (GBRMPA Outlook Report 2024).
 
-Six events in 26 years, with the 2016–2017 back-to-back sequence causing the greatest single-episode mortality. The 2024 event was the most widespread in spatial extent. Some southern and central reefs showed recovery in cooler intervening years; northern reefs have had the least time between heat stress episodes.
+Mass bleaching events have been recorded in 1998, 2002, 2016, 2017, 2020, 2022 and 2024, the 2024 event being among the most spatially extensive on record (AIMS). The AIMS Long-Term Monitoring Program's 2024/25 Annual Summary reported declines in hard coral cover across all three regions of the reef following the 2024 bleaching, cyclones, and crown-of-thorns predation — a sharp reversal from the prior peak in coral cover reached in earlier years (AIMS). Reviewers should treat the most recent AIMS report as the current condition rather than the earlier record-high figures.
 
-The AIMS Long-Term Monitoring Program has operated since 1986, providing the most comprehensive long-run dataset for reef condition.
+On the World Heritage front, the Committee at its July 2025 session did not place the reef on the List of World Heritage in Danger, instead recognising Australia's management action while ordering a full management review; the property remains under enhanced monitoring. A reviewer should confirm the operative decision as the status evolves (UNESCO World Heritage Centre).
 
-## Threats (science consensus ranking)
+## Protected-area status & rules
 
-1. **Climate change and thermal bleaching** — existential threat; the primary driver of all six mass bleaching events. Scientific consensus holds that no meaningful adaptation is possible above +1.5°C of global warming. GBRMPA's Outlook Report 2024 identifies climate change as the greatest threat.
-2. **Crown-of-thorns starfish (COTS) outbreaks** — *Acanthaster planci* consumes living coral tissue at high rates during population outbreaks, which are driven by elevated nutrient runoff from the catchment. Cyclical outbreaks have compounded bleaching-driven mortality.
-3. **Water quality** — agricultural runoff (nitrogen, sediment, and pesticides) from the Great Barrier Reef catchment reduces coral resilience and drives COTS recruitment. Land management in the catchment directly affects reef health.
-4. **Coastal development and port expansion** — dredging, shipping channel expansion, and coastal modification degrade near-shore reef habitats.
-5. **Fishing pressure** — managed through zoning, but illegal take occurs in some areas; overfishing of herbivores reduces reef resilience.
+The reef is managed by the Great Barrier Reef Marine Park Authority within a World Heritage property, under a zoning system. Marine National Park (Green) Zones are no-take areas where fishing and collecting are prohibited without a permit. Per GBRMPA's Responsible Reef Practices:
 
-## Management and protection
+- Do not touch, collect, or take coral, including dead coral, without a Marine Parks permit.
+- Anchor in sand and use moorings rather than anchoring on coral; observe no-anchoring areas.
+- Know your zone before fishing or collecting, and follow Green Zone no-take rules.
 
-**Zoning:** The Great Barrier Reef Marine Park Authority (GBRMPA) manages the park under a zoning plan that places approximately 33% of the park into no-take Marine National Park (Green) Zones. Fishing, collecting, and anchoring on coral are prohibited in these zones.
+The Eye on the Reef program lets visitors and operators check zoning and report reef health and incidents, feeding citizen-science data back to managers (GBRMPA).
 
-**Reef 2050 Long-Term Sustainability Plan:** The joint Australian and Queensland government framework for managing the reef through mid-century, updated after UNESCO review.
+## How to visit responsibly
 
-**AIMS Long-Term Monitoring Program (LTMP):** Annual ship-based monitoring of coral cover, fish assemblages, and crown-of-thorns starfish densities across a representative sample of reefs since 1986. The primary scientific instrument for tracking reef-wide condition.
+- Check the marine park zoning for any site before fishing, collecting, or anchoring, and respect no-take Green Zones.
+- Use reef moorings; never anchor on coral. Maintain buoyancy and distance so fins and hands do not contact coral.
+- Choose operators certified in responsible reef practices, and report bleaching or damage through Eye on the Reef rather than handling affected coral.
+- Recognise that the overriding pressure is thermal: minimising local impact matters, but the reef's trajectory is set chiefly by ocean warming.
 
-**Coral Nurture Program:** Large-scale coral restoration involving collection of fragments from healthy colonies, nursery growth, and outplanting to degraded reefs. Operates in partnership between GBRMPA, AIMS, and reef tourism operators.
+## How you can help
 
-**Crown-of-thorns control programs:** GBRMPA research vessels conduct injection campaigns targeting COTS during outbreak periods using single-shot ox bile injection — an approach effective at scale without broad ecosystem impacts.
-
-**Reef Guardian program:** Engages local councils, farmers, graziers, tourism operators, and educators in reducing local pressures on the reef.
-
-## Guardian coverage (OIS)
-
-The GBR Reef Guardian (Ocean Intelligence System instance) monitors:
-- NOAA Coral Reef Watch thermal alert data (bleaching hotspot and Degree Heating Week metrics)
-- OBIS occurrence records for reef-associated species
-- GBIF daily species occurrence updates
-- AIMS LTMP annual condition summaries when published
-
-The guardian generates region-level thermal risk assessments and flags restoration window suitability based on current Degree Heating Week values.
-
-## What NGOs and advocates can do
-
-- **Advocate for stronger land-based runoff controls** in the Great Barrier Reef catchment — reducing nitrogen and sediment reduces COTS outbreaks and improves coral resilience between bleaching events.
-- **Support AIMS monitoring funding** — the LTMP is the scientific backbone of all reef management decisions; its continuity matters.
-- **Push for IMO shipping lane speed limits** inside the marine park to reduce underwater noise and vessel-strike risk to cetaceans.
-- **Campaign for emissions reductions** — the reef's long-term survival depends entirely on limiting global warming to below 1.5°C. Local interventions buy time but cannot substitute for decarbonisation.
-- **Contribute to Reef Guardian programs** and citizen science via Eye on the Reef, which provides real-time ground-truthing data to managers.
-
-## SDG alignment
-
-- **SDG 13** — Climate Action: thermal bleaching is the primary threat; advocacy for emissions reductions is the highest-leverage intervention.
-- **SDG 14.2** — Sustainable management and protection of marine and coastal ecosystems.
-- **SDG 14.5** — Conservation of at least 10% of coastal and marine areas (GBR exceeds this, but quality of protection matters).
+- Reduce your carbon footprint — GBRMPA identifies climate change as the greatest threat, and ocean warming drives the bleaching events degrading the reef.
+- Support catchment and water-quality programs that reduce land-based run-off.
+- Contribute observations through Eye on the Reef and back crown-of-thorns control and reef-restoration efforts.
 
 ## Sources
 
-- [Great Barrier Reef Marine Park Authority (GBRMPA)](https://www.gbrmpa.gov.au/) — management authority for the marine park; zoning, responsible reef practices, Reef 2050 plan.
-- [AIMS Long-Term Monitoring Program — Reef Condition Summary](https://www.aims.gov.au/reef-monitoring/reef-condition-summary) — annual coral cover, bleaching, and COTS data since 1986.
-- [Great Barrier Reef — UNESCO World Heritage Centre](https://whc.unesco.org/en/list/154) — World Heritage inscription (1981), monitoring reports, and Committee decisions on danger-listing status.
+- [Great Barrier Reef — UNESCO World Heritage Centre](https://whc.unesco.org/en/list/154/) (Tier 1, accessed 2026-06-16)
+- [Fascinating facts about the Great Barrier Reef — GBRMPA](https://www2.gbrmpa.gov.au/learn/fascinating-facts-about-great-barrier-reef) (Tier 1, accessed 2026-06-16)
+- [Annual Summary Report of Coral Reef Condition 2024/25 — AIMS](https://www.aims.gov.au/monitoring-great-barrier-reef/gbr-condition-summary-2024-25) (Tier 1, accessed 2026-06-16)
+- [Coral bleaching events — AIMS](https://www.aims.gov.au/research-topics/environmental-issues/coral-bleaching/coral-bleaching-events) (Tier 1, accessed 2026-06-16)
+- [Great Barrier Reef Outlook Report 2024 — Executive Summary, GBRMPA](https://outlookreport.gbrmpa.gov.au/about/executive-summary) (Tier 1, accessed 2026-06-16)
+- [Responsible Reef Practices — GBRMPA](https://www2.gbrmpa.gov.au/access/responsible-reef-practices) (Tier 1, accessed 2026-06-16)
