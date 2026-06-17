@@ -1,32 +1,31 @@
 ---
-title: "Kelp Forest Restoration"
-description: "Ecological restoration of kelp forest ecosystems, primarily through sea urchin removal to reverse urchin barren conditions driven by the loss of urchin predators and compounded by marine heat waves."
+id: kelp-forest-restoration
 type: practice-guide
-status: published
-scope:
-  regions:
-    - northern-california-coast
-    - southern-california-bight
-    - tasmania
-  tags:
-    - "kelp-forest", "urchin-barrens", "sea-urchin", "sunflower-star", "blue-carbon", "california"
+title: "Kelp Forest Restoration"
+status: needs-expert-review
 sources:
   - url: "https://www.nature.org/en-us/what-we-do/our-priorities/protect-water-and-land/land-and-water-stories/restoring-californias-kelp-forests/"
     title: "Restoring California's Kelp Forests — The Nature Conservancy"
     accessed: "2026-06-17"
+    tier: 2
   - url: "https://www.mbari.org/technology/mbari-seafloor-mapping/"
     title: "MBARI Seafloor Mapping — Monterey Bay Aquarium Research Institute"
     accessed: "2026-06-17"
+    tier: 2
   - url: "https://www.reefcheck.org/california-program/"
     title: "Reef Check California — Rocky Reef Monitoring"
     accessed: "2026-06-17"
+    tier: 2
 review:
-  ethics: required
   science: required
+  ethics: not-applicable
+  editor: required
+outputs:
+  website_path: /practices/kelp-forest-restoration
+  github_path: content/practices/kelp-forest-restoration.md
 license: CC-BY-4.0
-contributors: []
-created: "2026-06-17"
-updated: "2026-06-17"
+contributors:
+  - github: frankxai
 ---
 
 # Kelp Forest Restoration

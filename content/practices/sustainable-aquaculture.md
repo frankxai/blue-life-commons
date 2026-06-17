@@ -1,35 +1,35 @@
 ---
-title: "Sustainable Aquaculture"
-description: "Farmed seafood production practices that minimise ecological harm — covering certification standards (ASC), best-practice species selection, and emerging systems like IMTA and RAS that eliminate or dramatically reduce environmental impacts."
+id: sustainable-aquaculture
 type: practice-guide
-status: published
-scope:
-  regions:
-    - global
-    - nordic
-    - southeast-asia
-  tags:
-    - "aquaculture", "seafood", "asc", "msc", "imta", "ras", "shrimp", "salmon", "bivalves", "seaweed"
+title: "Sustainable Aquaculture"
+status: needs-expert-review
 sources:
   - url: "https://www.asc-aqua.org/"
     title: "Aquaculture Stewardship Council (ASC)"
     accessed: "2026-06-17"
+    tier: 2
   - url: "https://www.msc.org/"
     title: "Marine Stewardship Council (MSC)"
     accessed: "2026-06-17"
+    tier: 2
   - url: "https://www.fao.org/fishery/en/aquaculture"
     title: "FAO Aquaculture — Food and Agriculture Organization"
     accessed: "2026-06-17"
+    tier: 2
   - url: "https://www.fisheries.noaa.gov/topic/aquaculture"
     title: "NOAA Aquaculture Program"
     accessed: "2026-06-17"
+    tier: 2
 review:
-  ethics: required
   science: required
+  ethics: not-applicable
+  editor: required
+outputs:
+  website_path: /practices/sustainable-aquaculture
+  github_path: content/practices/sustainable-aquaculture.md
 license: CC-BY-4.0
-contributors: []
-created: "2026-06-17"
-updated: "2026-06-17"
+contributors:
+  - github: frankxai
 ---
 
 # Sustainable Aquaculture

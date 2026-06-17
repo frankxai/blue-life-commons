@@ -1,33 +1,31 @@
 ---
-title: "Coral Gardening"
-description: "A reef restoration technique that fragments healthy corals, grows them in underwater or land-based nurseries, and outplants colonies onto degraded reefs to accelerate ecological recovery."
+id: coral-gardening
 type: practice-guide
-status: published
-scope:
-  regions:
-    - great-barrier-reef
-    - florida-keys
-    - caribbean
-    - bonaire
-  tags:
-    - "coral-restoration", "reef-recovery", "outplanting", "nursery", "bleaching-recovery"
+title: "Coral Gardening: Nursery-to-Reef Restoration"
+status: needs-expert-review
 sources:
   - url: "https://coralrestoration.org/"
     title: "Coral Restoration Foundation"
     accessed: "2026-06-17"
+    tier: 2
   - url: "https://secore.org/"
     title: "SECORE International"
     accessed: "2026-06-17"
+    tier: 2
   - url: "https://www.fisheries.noaa.gov/national/habitat-conservation/restoring-coral-reefs"
     title: "Restoring Coral Reefs — NOAA Fisheries"
     accessed: "2026-06-17"
+    tier: 2
 review:
-  ethics: required
   science: required
+  ethics: not-applicable
+  editor: required
+outputs:
+  website_path: /practices/coral-gardening
+  github_path: content/practices/coral-gardening.md
 license: CC-BY-4.0
-contributors: []
-created: "2026-06-17"
-updated: "2026-06-17"
+contributors:
+  - github: frankxai
 ---
 
 # Coral Gardening

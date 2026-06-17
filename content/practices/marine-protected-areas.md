@@ -1,33 +1,35 @@
 ---
-title: "Marine Protected Areas"
-description: "Designated ocean zones with restrictions on extractive use, ranging from fully no-take reserves to multiple-use areas; currently protecting ~8% of ocean surface against a 30x30 target of 30% by 2030."
+id: marine-protected-areas
 type: practice-guide
-status: published
-scope:
-  regions:
-    - global
-  tags:
-    - "mpa", "no-take-zone", "30x30", "ocean-governance", "conservation-planning", "fisheries"
+title: "Marine Protected Areas"
+status: needs-expert-review
 sources:
   - url: "https://www.protectedplanet.net/en"
     title: "Protected Planet / WDPA — World Database on Protected Areas"
     accessed: "2026-06-17"
+    tier: 2
   - url: "https://missionblue.org/hope-spots/"
     title: "Mission Blue Hope Spots"
     accessed: "2026-06-17"
+    tier: 2
   - url: "https://www.iucn.org/theme/marine-and-polar/our-work/marine-protected-areas"
     title: "Marine Protected Areas — IUCN"
     accessed: "2026-06-17"
+    tier: 2
   - url: "https://www.marineconservation.org/"
     title: "Marine Conservation Institute"
     accessed: "2026-06-17"
+    tier: 2
 review:
-  ethics: required
   science: required
+  ethics: not-applicable
+  editor: required
+outputs:
+  website_path: /practices/marine-protected-areas
+  github_path: content/practices/marine-protected-areas.md
 license: CC-BY-4.0
-contributors: []
-created: "2026-06-17"
-updated: "2026-06-17"
+contributors:
+  - github: frankxai
 ---
 
 # Marine Protected Areas

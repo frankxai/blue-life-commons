@@ -1,32 +1,31 @@
 ---
-title: "Blue Carbon Sequestration"
-description: "The capture and storage of carbon in coastal and ocean ecosystems — primarily mangroves, seagrass beds, and salt marshes — which store carbon at rates up to 50x higher per unit area than tropical forests."
+id: blue-carbon-sequestration
 type: practice-guide
-status: published
-scope:
-  regions:
-    - global
-    - indo-pacific
-    - caribbean
-  tags:
-    - "blue-carbon", "carbon-sequestration", "mangroves", "seagrass", "salt-marsh", "climate-mitigation"
+title: "Blue Carbon Sequestration"
+status: needs-expert-review
 sources:
   - url: "https://iucn.org/resources/issues-brief/blue-carbon"
     title: "Blue Carbon — IUCN Issues Brief"
     accessed: "2026-06-17"
+    tier: 2
   - url: "https://www.thebluecarboninitiative.org/"
     title: "The Blue Carbon Initiative — IUCN, CI, IOC-UNESCO"
     accessed: "2026-06-17"
+    tier: 2
   - url: "https://verra.org/methodologies/vm0033-methodology-for-tidal-wetland-and-seagrass-restoration/"
     title: "VM0033 Methodology for Tidal Wetland and Seagrass Restoration — Verra"
     accessed: "2026-06-17"
+    tier: 2
 review:
-  ethics: required
   science: required
+  ethics: not-applicable
+  editor: required
+outputs:
+  website_path: /practices/blue-carbon-sequestration
+  github_path: content/practices/blue-carbon-sequestration.md
 license: CC-BY-4.0
-contributors: []
-created: "2026-06-17"
-updated: "2026-06-17"
+contributors:
+  - github: frankxai
 ---
 
 # Blue Carbon Sequestration

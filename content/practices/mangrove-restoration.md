@@ -1,33 +1,31 @@
 ---
-title: "Mangrove Restoration"
-description: "Ecological restoration of mangrove forests — coastal habitats that have declined 35% since 1970, serving as nurseries for 90% of commercial fish species, storm surge buffers, and the highest-density blue carbon ecosystem."
+id: mangrove-restoration
 type: practice-guide
-status: published
-scope:
-  regions:
-    - indo-pacific
-    - southeast-asia
-    - caribbean
-    - west-africa
-  tags:
-    - "mangroves", "blue-carbon", "coastal-protection", "nursery-habitat", "tidal-restoration", "community"
+title: "Mangrove Restoration"
+status: needs-expert-review
 sources:
   - url: "https://www.globalmangrovealliance.org/"
     title: "Global Mangrove Alliance"
     accessed: "2026-06-17"
+    tier: 2
   - url: "https://www.iucn.org/resources/issues-brief/mangroves-and-climate-change"
     title: "Mangroves and Climate Change — IUCN Issues Brief"
     accessed: "2026-06-17"
+    tier: 2
   - url: "https://wwf.panda.org/discover/knowledge_hub/endangered_species/cetaceans/mangroves/"
     title: "Mangrove Restoration Guide — WWF"
     accessed: "2026-06-17"
+    tier: 2
 review:
-  ethics: required
   science: required
+  ethics: not-applicable
+  editor: required
+outputs:
+  website_path: /practices/mangrove-restoration
+  github_path: content/practices/mangrove-restoration.md
 license: CC-BY-4.0
-contributors: []
-created: "2026-06-17"
-updated: "2026-06-17"
+contributors:
+  - github: frankxai
 ---
 
 # Mangrove Restoration
