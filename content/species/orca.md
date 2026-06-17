@@ -1,40 +1,4 @@
----
-title: "Orca (Killer Whale) — Southern Resident Population"
-description: "While the species Orcinus orca is globally Data Deficient on the IUCN Red List, the Southern Resident Killer Whale population of the Pacific Northwest is US ESA Endangered with approximately 73 individuals remaining as of 2026."
-type: species-page
-status: published
-scope:
-  species:
-    - "Orcinus orca"
-  regions:
-    - "north-pacific"
-    - "salish-sea"
-    - "puget-sound"
-  tags:
-    - "cetacean"
-    - "toothed-whale"
-    - "apex-predator"
-    - "endangered"
-    - "cultural-specialist"
-    - "salmon-dependency"
-sources:
-  - url: "https://www.whaleresearch.com/"
-    title: "Center for Whale Research — Southern Resident Killer Whale Census"
-    accessed: "2026-06-17"
-  - url: "https://www.fisheries.noaa.gov/species/southern-resident-killer-whale"
-    title: "NOAA Fisheries — Southern Resident Killer Whale Recovery Plan"
-    accessed: "2026-06-17"
-  - url: "https://www.iucnredlist.org/species/15421/50368125"
-    title: "IUCN Red List — Orcinus orca"
-    accessed: "2026-06-17"
-review:
-  ethics: required
-  science: required
-license: CC-BY-4.0
-contributors: []
-created: "2026-06-17"
-updated: "2026-06-17"
----
+> **Canonical page:** [content/species/cetaceans/orca.md](cetaceans/orca.md) — this file contains supplementary research notes.
 
 # Orca / Killer Whale (*Orcinus orca*) — Focus: Southern Resident Population
 

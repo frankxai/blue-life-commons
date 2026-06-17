@@ -1,40 +1,4 @@
----
-title: "Blue Whale"
-description: "The largest animal ever known on Earth, Balaenoptera musculus is listed as Endangered on the IUCN Red List and recovering slowly in some ocean basins after a 97%+ population collapse from commercial whaling."
-type: species-page
-status: published
-scope:
-  species:
-    - "Balaenoptera musculus"
-  regions:
-    - "north-atlantic"
-    - "north-pacific"
-    - "indian-ocean"
-    - "southern-ocean"
-  tags:
-    - "cetacean"
-    - "baleen-whale"
-    - "endangered"
-    - "ship-strike"
-    - "climate-sensitive"
-sources:
-  - url: "https://www.iucnredlist.org/species/2477/156923585"
-    title: "IUCN Red List — Balaenoptera musculus"
-    accessed: "2026-06-17"
-  - url: "https://www.fisheries.noaa.gov/species/blue-whale"
-    title: "NOAA Fisheries — Blue Whale Species Profile"
-    accessed: "2026-06-17"
-  - url: "https://iwc.int/conservation/blue-whale"
-    title: "International Whaling Commission — Blue Whale Conservation"
-    accessed: "2026-06-17"
-review:
-  ethics: required
-  science: required
-license: CC-BY-4.0
-contributors: []
-created: "2026-06-17"
-updated: "2026-06-17"
----
+> **Canonical page:** [content/species/cetaceans/blue-whale.md](cetaceans/blue-whale.md) — this file contains supplementary research notes.
 
 # Blue Whale (*Balaenoptera musculus*)
 

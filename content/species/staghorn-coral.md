@@ -1,41 +1,35 @@
 ---
-title: "Staghorn Coral"
-description: "Acropora cervicornis is Critically Endangered on the IUCN Red List and listed as Threatened under the US ESA, with over 80% population loss in the Caribbean since the 1970s from disease, bleaching, and water quality degradation."
+id: staghorn-coral
 type: species-page
-status: published
-scope:
-  species:
-    - "Acropora cervicornis"
-  regions:
-    - "caribbean"
-    - "florida-reef-tract"
-    - "mesoamerican-reef"
-    - "bahamas"
-    - "greater-antilles"
-  tags:
-    - "coral"
-    - "reef-builder"
-    - "critically-endangered"
-    - "disease-vulnerable"
-    - "climate-sensitive"
-    - "restoration"
+title: "Staghorn Coral"
+species_group:
+  - reefs
+species:
+  - "Acropora cervicornis"
+status: needs-expert-review
 sources:
   - url: "https://www.iucnredlist.org/species/133381/50603120"
     title: "IUCN Red List — Acropora cervicornis"
     accessed: "2026-06-17"
+    tier: 1
   - url: "https://www.coralrestoration.org/"
     title: "Coral Restoration Foundation"
     accessed: "2026-06-17"
+    tier: 2
   - url: "https://coralreefwatch.noaa.gov/"
     title: "NOAA Coral Reef Watch"
     accessed: "2026-06-17"
+    tier: 2
 review:
-  ethics: required
   science: required
+  ethics: required
+  editor: required
+outputs:
+  website_path: /species/reefs/staghorn-coral
+  github_path: content/species/staghorn-coral.md
 license: CC-BY-4.0
-contributors: []
-created: "2026-06-17"
-updated: "2026-06-17"
+contributors:
+  - github: frankxai
 ---
 
 # Staghorn Coral (*Acropora cervicornis*)

@@ -1,43 +1,4 @@
----
-title: "Great White Shark"
-description: "Carcharodon carcharias is listed as Vulnerable on the IUCN Red List with an estimated global population of 3,000–5,000, and plays an irreplaceable role as apex predator in multiple ocean ecosystems."
-type: species-page
-status: published
-scope:
-  species:
-    - "Carcharodon carcharias"
-  regions:
-    - "north-pacific"
-    - "south-pacific"
-    - "north-atlantic"
-    - "south-atlantic"
-    - "indian-ocean"
-    - "mediterranean"
-    - "southern-ocean"
-  tags:
-    - "elasmobranch"
-    - "apex-predator"
-    - "vulnerable"
-    - "bycatch"
-    - "trophic-cascade"
-sources:
-  - url: "https://www.iucnredlist.org/species/3855/2878674"
-    title: "IUCN Red List — Carcharodon carcharias"
-    accessed: "2026-06-17"
-  - url: "https://www.ocearch.org/"
-    title: "OCEARCH Global Shark Tracker"
-    accessed: "2026-06-17"
-  - url: "https://www.fisheries.noaa.gov/species/white-shark"
-    title: "NOAA Fisheries — White Shark Species Profile"
-    accessed: "2026-06-17"
-review:
-  ethics: required
-  science: required
-license: CC-BY-4.0
-contributors: []
-created: "2026-06-17"
-updated: "2026-06-17"
----
+> **Canonical page:** [content/species/sharks-rays/great-white-shark.md](sharks-rays/great-white-shark.md) — this file contains supplementary research notes.
 
 # Great White Shark (*Carcharodon carcharias*)
 

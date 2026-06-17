@@ -1,41 +1,35 @@
 ---
-title: "Hawksbill Sea Turtle"
-description: "Eretmochelys imbricata is Critically Endangered on the IUCN Red List with an estimated 80% population decline since the 1980s, threatened by tortoiseshell trade, egg harvest, bycatch, and reef degradation."
+id: hawksbill-turtle
 type: species-page
-status: published
-scope:
-  species:
-    - "Eretmochelys imbricata"
-  regions:
-    - "caribbean"
-    - "indo-pacific"
-    - "indian-ocean"
-    - "coral-triangle"
-    - "mesoamerican-reef"
-  tags:
-    - "sea-turtle"
-    - "reptile"
-    - "critically-endangered"
-    - "tortoiseshell-trade"
-    - "reef-dependent"
-    - "sponge-specialist"
+title: "Hawksbill Sea Turtle"
+species_group:
+  - turtles
+species:
+  - "Eretmochelys imbricata"
+status: needs-expert-review
 sources:
   - url: "https://www.iucnredlist.org/species/8005/12881238"
     title: "IUCN Red List — Eretmochelys imbricata"
     accessed: "2026-06-17"
+    tier: 1
   - url: "https://www.widecast.org/"
     title: "WIDECAST — Wider Caribbean Sea Turtle Conservation Network"
     accessed: "2026-06-17"
+    tier: 2
   - url: "https://www.seaturtlestatus.org/"
     title: "SWOT — State of the World's Sea Turtles Report"
     accessed: "2026-06-17"
+    tier: 2
 review:
-  ethics: required
   science: required
+  ethics: required
+  editor: required
+outputs:
+  website_path: /species/turtles/hawksbill-turtle
+  github_path: content/species/hawksbill-turtle.md
 license: CC-BY-4.0
-contributors: []
-created: "2026-06-17"
-updated: "2026-06-17"
+contributors:
+  - github: frankxai
 ---
 
 # Hawksbill Sea Turtle (*Eretmochelys imbricata*)
