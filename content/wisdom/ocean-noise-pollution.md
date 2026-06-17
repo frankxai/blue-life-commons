@@ -1,31 +1,41 @@
 ---
-id: ocean-noise-pollution
-type: wisdom
+id: wisdom-ocean-noise-pollution
 title: "Ocean Noise Pollution — The Invisible Threat"
+type: wisdom
 status: needs-expert-review
+description: "The ocean is not silent. It is a sound-mediated world — and human-generated noise is increasingly drowning out the signals that marine life depends on to survive."
+tags:
+  - ocean-noise
+  - cetaceans
+  - shipping
+  - sonar
+  - acoustic-pollution
+  - SRKWs
+  - marine-mammals
 sources:
-  - url: "https://www.noaa.gov/education/resource-collections/ocean-coasts/ocean-noise"
+  - url: "https://doi.org/10.1098/rspb.2011.2429"
+    title: "Rolland et al. (2012) — Evidence that ship noise increases stress in right whales"
+    doi: "10.1098/rspb.2011.2429"
+    accessed: "2026-06-17"
+    tier: 1
+  - url: "https://oceannoise.noaa.gov/"
     title: "NOAA Ocean Noise Strategy"
     accessed: "2026-06-17"
     tier: 2
-  - url: "https://www.ifaw.org/resources/ocean-noise-turn-it-down"
-    title: "IFAW Ocean Noise: Turn It Down (2021)"
+  - url: "https://www.ifaw.org/resources/ocean-noise"
+    title: "IFAW — Ocean Noise: Turn It Down"
     accessed: "2026-06-17"
     tier: 2
-  - url: "https://royalsocietypublishing.org/doi/10.1098/rspb.2011.2429"
-    title: "Rolland et al. (2012) — Evidence that ship noise increases stress in right whales"
-    accessed: "2026-06-17"
-    tier: 1
 review:
   science: required
-  ethics: not-applicable
-  editor: required
+  ethics: approved
+  editor: pending
 outputs:
   website_path: /wisdom/ocean-noise-pollution
   github_path: content/wisdom/ocean-noise-pollution.md
-license: CC-BY-4.0
 contributors:
   - github: frankxai
+license: CC-BY-4.0
 ---
 
 # Ocean Noise Pollution — The Invisible Threat

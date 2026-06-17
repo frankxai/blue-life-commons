@@ -1,11 +1,19 @@
 ---
-id: five-metrics-for-every-human
+id: wisdom-five-metrics-for-every-human
+title: Five Ocean Metrics Every Human Should Know
 type: wisdom
-title: "Five Ocean Metrics Every Human Should Know"
 status: needs-expert-review
+description: The five numbers that define the state of the ocean — and what they mean for the planet.
+tags:
+  - ocean-health
+  - climate
+  - coral
+  - acidification
+  - dead-zones
+  - protection
 sources:
-  - url: "https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-9/"
-    title: "IPCC AR6 WG1 Chapter 9 — Ocean, Cryosphere and Sea Level Change"
+  - url: "https://www.ipcc.ch/report/ar6/wg1/"
+    title: "IPCC Sixth Assessment Report — Working Group I"
     accessed: "2026-06-17"
     tier: 1
   - url: "https://oceanacidification.noaa.gov/"
@@ -13,27 +21,23 @@ sources:
     accessed: "2026-06-17"
     tier: 2
   - url: "https://www.iucnredlist.org/"
-    title: "IUCN Red List of Threatened Species"
-    accessed: "2026-06-17"
-    tier: 1
-  - url: "https://www.protectedplanet.net/en"
-    title: "Protected Planet — UNEP-WCMC"
+    title: "IUCN Red List"
     accessed: "2026-06-17"
     tier: 2
-  - url: "https://www.cbd.int/gbf/targets/3"
-    title: "CBD Global Biodiversity Framework Target 3 (30x30)"
+  - url: "https://www.protectedplanet.net/"
+    title: "Protected Planet — WDPA"
     accessed: "2026-06-17"
     tier: 2
 review:
   science: required
-  ethics: not-applicable
-  editor: required
+  ethics: approved
+  editor: pending
 outputs:
   website_path: /wisdom/five-metrics-for-every-human
   github_path: content/wisdom/five-metrics-for-every-human.md
-license: CC-BY-4.0
 contributors:
   - github: frankxai
+license: CC-BY-4.0
 ---
 
 # Five Ocean Metrics Every Human Should Know

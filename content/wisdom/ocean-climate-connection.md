@@ -1,31 +1,40 @@
 ---
-id: ocean-climate-connection
-type: wisdom
+id: wisdom-ocean-climate-connection
 title: "The Ocean-Climate Connection — Why Ocean Health Is Human Health"
+type: wisdom
 status: needs-expert-review
+description: "The ocean absorbs 90% of excess heat and 25–30% of CO2 emissions. Understanding this connection is essential to understanding climate change itself."
+tags:
+  - ocean-health
+  - climate
+  - AMOC
+  - thermohaline
+  - phytoplankton
+  - marine-heatwaves
+  - feedback-loops
 sources:
   - url: "https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-9/"
-    title: "IPCC AR6 WG1 Chapter 9 — Ocean, Cryosphere and Sea Level Change"
+    title: "IPCC AR6 WGI Chapter 9 — Ocean, Cryosphere and Sea Level Change"
     accessed: "2026-06-17"
     tier: 1
-  - url: "https://www.climate.gov/news-features/understanding-climate/climate-change-ocean"
-    title: "NOAA Climate.gov — Climate Change: Ocean"
+  - url: "https://www.climate.gov/"
+    title: "NOAA Climate.gov"
     accessed: "2026-06-17"
     tier: 2
-  - url: "https://www.rapid.ac.uk/"
-    title: "RAPID-MOCHA Array — Atlantic Overturning Circulation Monitoring"
+  - url: "https://schmidtsciencefellows.org/"
+    title: "Schmidt Science Fellows"
     accessed: "2026-06-17"
     tier: 2
 review:
   science: required
-  ethics: not-applicable
-  editor: required
+  ethics: approved
+  editor: pending
 outputs:
   website_path: /wisdom/ocean-climate-connection
   github_path: content/wisdom/ocean-climate-connection.md
-license: CC-BY-4.0
 contributors:
   - github: frankxai
+license: CC-BY-4.0
 ---
 
 # The Ocean-Climate Connection — Why Ocean Health Is Human Health

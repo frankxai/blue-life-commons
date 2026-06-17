@@ -1,35 +1,44 @@
 ---
-id: the-30x30-goal
-type: wisdom
+id: wisdom-the-30x30-goal
 title: "The 30x30 Goal — What It Is, Why It Matters, and How Far We Have to Go"
+type: wisdom
 status: needs-expert-review
+description: "196 countries agreed to protect 30% of the ocean by 2030. Here is what that commitment means, what stands in the way, and how Ocean Intelligence System supports the effort."
+tags:
+  - 30x30
+  - MPAs
+  - ocean-protection
+  - biodiversity
+  - BBNJ
+  - CBD
+  - Kunming-Montreal
 sources:
-  - url: "https://www.cbd.int/gbf/targets/3"
-    title: "CBD Global Biodiversity Framework Target 3 (30x30)"
+  - url: "https://www.cbd.int/gbf/"
+    title: "CBD Kunming-Montreal Global Biodiversity Framework Target 3"
     accessed: "2026-06-17"
-    tier: 2
-  - url: "https://www.protectedplanet.net/en"
-    title: "Protected Planet / WDPA Annual Report"
+    tier: 1
+  - url: "https://www.protectedplanet.net/"
+    title: "Protected Planet — World Database on Protected Areas (WDPA)"
     accessed: "2026-06-17"
     tier: 2
   - url: "https://www.marineconservation.org/"
-    title: "Marine Conservation Institute"
+    title: "Marine Conservation Institute — MPAtlas"
     accessed: "2026-06-17"
     tier: 2
-  - url: "https://www.iucn.org/theme/marine-and-polar/our-work/marine-protected-areas"
-    title: "IUCN Marine Protected Areas"
+  - url: "https://www.iucn.org/"
+    title: "IUCN — International Union for Conservation of Nature"
     accessed: "2026-06-17"
     tier: 2
 review:
   science: required
-  ethics: not-applicable
-  editor: required
+  ethics: approved
+  editor: pending
 outputs:
   website_path: /wisdom/the-30x30-goal
   github_path: content/wisdom/the-30x30-goal.md
-license: CC-BY-4.0
 contributors:
   - github: frankxai
+license: CC-BY-4.0
 ---
 
 # The 30x30 Goal — What It Is, Why It Matters, and How Far We Have to Go

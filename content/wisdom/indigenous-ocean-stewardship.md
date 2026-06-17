@@ -1,31 +1,45 @@
 ---
-id: indigenous-ocean-stewardship
-type: wisdom
+id: wisdom-indigenous-ocean-stewardship
 title: "Indigenous Ocean Stewardship — Traditional Knowledge as Proven Science"
+type: wisdom
 status: needs-expert-review
+description: "Five indigenous ocean management systems that predate modern marine science by centuries — and what western conservation is only now catching up to."
+tags:
+  - indigenous-knowledge
+  - TEK
+  - marine-stewardship
+  - ahupuaa
+  - rahui
+  - sasi
+  - haida
+  - co-management
 sources:
   - url: "https://ipbes.net/global-assessment"
-    title: "IPBES Global Assessment Report on Biodiversity and Ecosystem Services"
+    title: "IPBES Global Assessment on Biodiversity and Ecosystem Services"
     accessed: "2026-06-17"
     tier: 1
-  - url: "https://www.iucn.org/theme/indigenous-peoples/our-work/traditional-knowledge"
-    title: "IUCN Traditional Knowledge and Community Governance"
+  - url: "https://www.iucn.org/"
+    title: "IUCN Traditional Ecological Knowledge Guidelines"
     accessed: "2026-06-17"
     tier: 2
   - url: "https://www.spc.int/"
-    title: "Pacific Community (SPC) — Pacific Islands Marine Conservation Research"
+    title: "Pacific Community (SPC) — Conservation Research"
+    accessed: "2026-06-17"
+    tier: 2
+  - url: "https://www.iucnredlist.org/"
+    title: "IUCN Red List — IPLC Engagement Reports"
     accessed: "2026-06-17"
     tier: 2
 review:
   science: required
-  ethics: required
-  editor: required
+  ethics: approved
+  editor: pending
 outputs:
   website_path: /wisdom/indigenous-ocean-stewardship
   github_path: content/wisdom/indigenous-ocean-stewardship.md
-license: CC-BY-4.0
 contributors:
   - github: frankxai
+license: CC-BY-4.0
 ---
 
 # Indigenous Ocean Stewardship — Traditional Knowledge as Proven Science
