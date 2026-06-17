@@ -32,7 +32,7 @@ graph LR
     end
 
     subgraph OIS["🤖 Ocean Intelligence System (Intelligence)"]
-        CN[9 Data Connectors]
+        CN[11 Data Connectors]
         GA[Ocean Guardian Agents]
         GW[REST Gateway]
     end
@@ -56,7 +56,7 @@ graph LR
 
 **Layer 1 — Knowledge (this repo):** 58+ peer-reviewed, schema-validated artifacts. The canonical reference layer. CC-BY-4.0. Never paywalled.
 
-**Layer 2 — Intelligence ([Ocean Intelligence System](https://github.com/frankxai/ocean-intelligence-system)):** 9 live data connectors, Guardian agent framework, REST gateway. Turns static knowledge into live situational awareness.
+**Layer 2 — Intelligence ([Ocean Intelligence System](https://github.com/frankxai/ocean-intelligence-system)):** 11 data connectors, Guardian agent framework, REST gateway. Turns static knowledge into live situational awareness.
 
 **Layer 3 — Action (Applications):** NGO dashboards, research exports, developer APIs, community alert subscriptions. Built by the community on top of layers 1 and 2.
 
@@ -67,7 +67,7 @@ graph LR
 > These are not projections. They are current measurements.
 
 | # | Metric | Value | Threshold |
-|---|--------|-------|-----------|
+|---|--------|-------|----------|
 | 1 | Ocean temperature above pre-industrial (2026) | **+1.1 °C** | Reefs effectively gone at +2.0 °C |
 | 2 | Surface ocean pH | **8.08** | Down from 8.18; shell-forming organisms fail below 7.8 |
 | 3 | Oxygen-depleted dead zones | **700,000 km²** | Growing ~2% per year |
@@ -85,7 +85,7 @@ graph LR
 | **Creators & Journalists** | Region briefings, species stories, visual data, shareable metrics | [`content/regions/`](content/regions/) |
 | **App Developers** | Schema documentation, REST API access via OIS | [`docs/personas/developer-guide.md`](docs/personas/developer-guide.md) |
 | **Agentic Developers** | MCP server, Claude Code skills pack | [marine-mcp](https://github.com/frankxai/marine-mcp) · [marine-agent-skills](https://github.com/frankxai/marine-agent-skills) |
-| **Ocean Communities** | Sustainable practices, local wisdom, stranding resources, citizen science | [`content/practices/`](content/practices/) |
+| **Ocean Communities** | Sustainable practices, local wisdom, stranding resources, citizen science | [`docs/personas/community-guide.md`](docs/personas/community-guide.md) |
 
 ---
 
@@ -131,7 +131,7 @@ Curated wisdom from ocean communities, indigenous knowledge holders, and marine 
 Three documents govern every artifact in this commons. They are not subject to community vote:
 
 | Document | What it governs |
-|----------|----------------|
+|----------|-----------------|
 | [`ETHICS.md`](ETHICS.md) | Animal safety, non-exploitation, wildlife interaction rules |
 | [`SOURCES.md`](SOURCES.md) | Tier 1 (peer-reviewed) / Tier 2 (institutional) / Tier 3 (community) sourcing standards |
 | [`schema/artifact-schema.yaml`](schema/artifact-schema.yaml) | Machine-readable schema every artifact must pass |
@@ -143,8 +143,8 @@ Every PR triggers: CI schema validation → ethics review gate → science revie
 ## Connected Repositories
 
 | Repo | Layer | Purpose |
-|------|-------|---------|
-| [**ocean-intelligence-system**](https://github.com/frankxai/ocean-intelligence-system) | Intelligence | 9 live connectors, Guardian agents, REST gateway |
+|------|-------|--------|
+| [**ocean-intelligence-system**](https://github.com/frankxai/ocean-intelligence-system) | Intelligence | 11 data connectors, Guardian agents, REST gateway |
 | [**marine-mcp**](https://github.com/frankxai/marine-mcp) | Agent Interface | TypeScript MCP server — `claude mcp add marine -- npx @frankxai/marine-mcp` |
 | [**marine-agent-skills**](https://github.com/frankxai/marine-agent-skills) | Agent Interface | Claude Code skills pack for contributing and building |
 

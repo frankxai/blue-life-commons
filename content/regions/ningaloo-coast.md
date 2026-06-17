@@ -1,8 +1,9 @@
 ---
+id: ningaloo-coast
 title: "Ningaloo Coast"
 description: "A 260 km fringing reef on Western Australia's remote coast (604,500 ha UNESCO World Heritage property), one of the world's most pristine reef systems, globally significant for whale shark aggregations, manta rays, and six nesting sea turtle species."
 type: region-briefing
-status: published
+status: needs-expert-review
 scope:
   regions:
     - ningaloo-coast
@@ -16,10 +17,15 @@ sources:
     title: "Ningaloo Coast — UNESCO World Heritage Centre"
     accessed: "2026-06-17"
 review:
-  ethics: required
   science: required
+  ethics: not-applicable
+  editor: required
+outputs:
+  website_path: /regions/ningaloo-coast
+  github_path: content/regions/ningaloo-coast.md
 license: CC-BY-4.0
-contributors: []
+contributors:
+  - github: frankxai
 created: "2026-06-17"
 updated: "2026-06-17"
 ---

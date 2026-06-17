@@ -1,8 +1,9 @@
 ---
+id: great-barrier-reef
 title: "Great Barrier Reef"
 description: "The world's largest coral reef system off Queensland, Australia (344,400 km²), supporting 9,000+ species across 600 coral species and 1,625 fish species, under existential threat from repeated thermal bleaching driven by climate change."
 type: region-briefing
-status: published
+status: needs-expert-review
 scope:
   regions:
     - great-barrier-reef
@@ -19,10 +20,15 @@ sources:
     title: "Great Barrier Reef — UNESCO World Heritage Centre"
     accessed: "2026-06-17"
 review:
-  ethics: required
   science: required
+  ethics: not-applicable
+  editor: required
+outputs:
+  website_path: /regions/great-barrier-reef
+  github_path: content/regions/great-barrier-reef.md
 license: CC-BY-4.0
-contributors: []
+contributors:
+  - github: frankxai
 created: "2026-06-17"
 updated: "2026-06-17"
 ---
@@ -47,7 +53,7 @@ The Great Barrier Reef Marine Park stretches 2,300 km along the Queensland coast
 The reef's trajectory is defined by a sequence of mass bleaching events. Bleaching occurs when ocean temperatures exceed coral thermal tolerance, causing corals to expel their symbiotic algae. If temperatures remain elevated for weeks, corals die. AIMS records the following mass bleaching events affecting the Great Barrier Reef:
 
 | Year | Severity / Notes |
-|------|-----------------|
+|------|------------------|
 | 1998 | First major bleaching event |
 | 2002 | Second event; northern reef most affected |
 | 2016 | Severe; killed approximately 50% of corals in the northern sections |

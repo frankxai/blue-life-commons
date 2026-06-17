@@ -22,7 +22,7 @@ This layer stays open and CC-BY-4.0 permanently. It is never paywalled, never co
 **[ocean-intelligence-system](https://github.com/frankxai/ocean-intelligence-system)**
 
 - **License:** MIT (code)
-- **What's here:** 9 real-time data connectors, Guardian agent framework, REST gateway, dashboard
+- **What's here:** 11 real-time data connectors, Guardian agent framework, REST gateway, dashboard
 - **Connectors:**
 
 | Connector | Signal | Source |
@@ -72,7 +72,7 @@ claude mcp add marine -- npx @frankxai/marine-mcp
 **Available skills:**
 
 | Skill | Purpose |
-|-------|---------|
+|-------|--------|
 | `/species-page` | Generate a schema-valid species page |
 | `/field-mission` | Create a field mission protocol |
 | `/ethics-check` | Run ethics review on a draft artifact |
@@ -109,7 +109,7 @@ claude mcp add marine -- npx @frankxai/marine-mcp
 ## Verified API Sources (all open / free tier)
 
 | API | Signal | Rate Limit |
-|-----|--------|-----------|
+|-----|--------|----------|
 | OBIS (api.obis.org) | Species occurrence | None |
 | GBIF (api.gbif.org) | Species occurrence | None |
 | NOAA Coral Reef Watch | Bleaching alerts | None |

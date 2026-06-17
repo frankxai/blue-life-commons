@@ -1,8 +1,9 @@
 ---
+id: salish-sea
 title: "Salish Sea"
 description: "A ~17,000 km² transboundary inland sea spanning Washington State and British Columbia, home to the critically endangered Southern Resident Killer Whale population (~73 individuals), under severe threat from Chinook salmon depletion, vessel noise, and PCB contamination."
 type: region-briefing
-status: published
+status: needs-expert-review
 scope:
   regions:
     - salish-sea
@@ -19,10 +20,15 @@ sources:
     title: "Salish Sea Marine Survival Project"
     accessed: "2026-06-17"
 review:
-  ethics: required
   science: required
+  ethics: required
+  editor: required
+outputs:
+  website_path: /regions/salish-sea
+  github_path: content/regions/salish-sea.md
 license: CC-BY-4.0
-contributors: []
+contributors:
+  - github: frankxai
 created: "2026-06-17"
 updated: "2026-06-17"
 ---
