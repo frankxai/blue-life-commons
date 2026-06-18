@@ -48,6 +48,12 @@ properties:
       # --- Community & knowledge-preservation types ---
       - local-knowledge
       - volunteer-program
+      # --- Wisdom & practice types (added 2026-06-17) ---
+      - wisdom
+      - practice-guide
+      # --- Academy & advocacy types (added 2026-06-18) ---
+      - educational
+      - advocacy
   title:
     type: string
     minLength: 3
