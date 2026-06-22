@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/assets/hero.svg" width="100%" alt="Blue Life Commons hero banner"/></p>
+
 # Blue Life Commons
 
 Blue Life Commons is an open-source **Ocean Intelligence commons** where citizens, researchers, developers, educators, travelers, and conservation organizations turn ocean curiosity into useful artifacts: species guides, field missions, maps, research summaries, datasets, notebooks, MCP tools, films, and local action systems.

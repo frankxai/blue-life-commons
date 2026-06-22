@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300">
+<defs>
+  <radialGradient id="bg" cx="50%" cy="40%" r="75%">
+    <stop offset="0%" stop-color="#091820"/>
+    <stop offset="100%" stop-color="#0a0a0b"/>
+  </radialGradient>
+  <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.4"/>
+    <stop offset="50%" stop-color="#10b981" stop-opacity="0.5"/>
+    <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.4"/>
+  </linearGradient>
+  <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#06b6d4"/>
+    <stop offset="100%" stop-color="#10b981"/>
+  </linearGradient>
+</defs>
+
+<!-- Background -->
+<rect width="1200" height="300" fill="url(#bg)"/>
+
+<!-- Wave layers at bottom -->
+<path d="M0 240 Q150 218 300 240 Q450 262 600 240 Q750 218 900 240 Q1050 262 1200 240 L1200 300 L0 300 Z" fill="#06b6d4" opacity="0.12">
+  <animate attributeName="d" dur="6s" repeatCount="indefinite"
+    values="M0 240 Q150 218 300 240 Q450 262 600 240 Q750 218 900 240 Q1050 262 1200 240 L1200 300 L0 300 Z;
+            M0 248 Q150 226 300 248 Q450 270 600 248 Q750 226 900 248 Q1050 270 1200 248 L1200 300 L0 300 Z;
+            M0 240 Q150 218 300 240 Q450 262 600 240 Q750 218 900 240 Q1050 262 1200 240 L1200 300 L0 300 Z"/>
+</path>
+<path d="M0 255 Q180 233 360 255 Q540 277 720 255 Q900 233 1080 255 Q1140 261 1200 258 L1200 300 L0 300 Z" fill="#10b981" opacity="0.15">
+  <animate attributeName="d" dur="8s" repeatCount="indefinite"
+    values="M0 255 Q180 233 360 255 Q540 277 720 255 Q900 233 1080 255 Q1140 261 1200 258 L1200 300 L0 300 Z;
+            M0 263 Q180 241 360 263 Q540 285 720 263 Q900 241 1080 263 Q1140 269 1200 266 L1200 300 L0 300 Z;
+            M0 255 Q180 233 360 255 Q540 277 720 255 Q900 233 1080 255 Q1140 261 1200 258 L1200 300 L0 300 Z"/>
+</path>
+
+<!-- Constellation dots and lines -->
+<!-- Whale-shape cluster: left side -->
+<line x1="160" y1="80" x2="240" y2="110" stroke="#06b6d4" stroke-width="0.8" opacity="0.35"/>
+<line x1="240" y1="110" x2="310" y2="85" stroke="#06b6d4" stroke-width="0.8" opacity="0.35"/>
+<line x1="310" y1="85" x2="370" y2="120" stroke="#10b981" stroke-width="0.8" opacity="0.3"/>
+<line x1="160" y1="80" x2="200" y2="145" stroke="#06b6d4" stroke-width="0.8" opacity="0.25"/>
+<line x1="200" y1="145" x2="310" y2="85" stroke="#10b981" stroke-width="0.6" opacity="0.2"/>
+
+<!-- Right cluster -->
+<line x1="830" y1="90" x2="920" y2="70" stroke="#10b981" stroke-width="0.8" opacity="0.3"/>
+<line x1="920" y1="70" x2="1000" y2="100" stroke="#06b6d4" stroke-width="0.8" opacity="0.35"/>
+<line x1="1000" y1="100" x2="1040" y2="60" stroke="#10b981" stroke-width="0.8" opacity="0.3"/>
+<line x1="920" y1="70" x2="970" y2="140" stroke="#06b6d4" stroke-width="0.6" opacity="0.2"/>
+<line x1="830" y1="90" x2="880" y2="155" stroke="#10b981" stroke-width="0.6" opacity="0.2"/>
+
+<!-- Constellation star nodes — left -->
+<circle cx="160" cy="80" r="3" fill="#06b6d4">
+  <animate attributeName="opacity" values="1;0.3;1" dur="2.2s" repeatCount="indefinite"/>
+  <animate attributeName="r" values="3;4.5;3" dur="2.2s" repeatCount="indefinite"/>
+</circle>
+<circle cx="240" cy="110" r="2.5" fill="#10b981">
+  <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+  <animate attributeName="r" values="2.5;4;2.5" dur="3s" repeatCount="indefinite"/>
+</circle>
+<circle cx="310" cy="85" r="3.5" fill="#06b6d4">
+  <animate attributeName="opacity" values="1;0.4;1" dur="1.8s" repeatCount="indefinite"/>
+  <animate attributeName="r" values="3.5;5;3.5" dur="1.8s" repeatCount="indefinite"/>
+</circle>
+<circle cx="200" cy="145" r="2" fill="#10b981">
+  <animate attributeName="opacity" values="0.4;1;0.4" dur="2.6s" repeatCount="indefinite"/>
+</circle>
+<circle cx="370" cy="120" r="2.5" fill="#06b6d4">
+  <animate attributeName="opacity" values="1;0.3;1" dur="3.4s" repeatCount="indefinite"/>
+</circle>
+
+<!-- Constellation star nodes — right -->
+<circle cx="830" cy="90" r="3" fill="#10b981">
+  <animate attributeName="opacity" values="0.4;1;0.4" dur="2.4s" repeatCount="indefinite"/>
+  <animate attributeName="r" values="3;4.5;3" dur="2.4s" repeatCount="indefinite"/>
+</circle>
+<circle cx="920" cy="70" r="4" fill="#06b6d4">
+  <animate attributeName="opacity" values="1;0.3;1" dur="1.9s" repeatCount="indefinite"/>
+  <animate attributeName="r" values="4;5.5;4" dur="1.9s" repeatCount="indefinite"/>
+</circle>
+<circle cx="1000" cy="100" r="2.5" fill="#10b981">
+  <animate attributeName="opacity" values="0.5;1;0.5" dur="2.8s" repeatCount="indefinite"/>
+</circle>
+<circle cx="1040" cy="60" r="3" fill="#06b6d4">
+  <animate attributeName="opacity" values="1;0.4;1" dur="3.1s" repeatCount="indefinite"/>
+</circle>
+<circle cx="970" cy="140" r="2" fill="#10b981">
+  <animate attributeName="opacity" values="0.3;1;0.3" dur="2.0s" repeatCount="indefinite"/>
+</circle>
+<circle cx="880" cy="155" r="2" fill="#06b6d4">
+  <animate attributeName="opacity" values="0.5;1;0.5" dur="3.5s" repeatCount="indefinite"/>
+</circle>
+
+<!-- Small scattered background dots -->
+<circle cx="90" cy="55" r="1.5" fill="#06b6d4" opacity="0.4"><animate attributeName="opacity" values="0.4;0.8;0.4" dur="4s" repeatCount="indefinite"/></circle>
+<circle cx="450" cy="50" r="1.5" fill="#10b981" opacity="0.35"><animate attributeName="opacity" values="0.35;0.7;0.35" dur="5s" repeatCount="indefinite"/></circle>
+<circle cx="560" cy="80" r="1" fill="#06b6d4" opacity="0.3"/>
+<circle cx="640" cy="45" r="1.5" fill="#10b981" opacity="0.3"><animate attributeName="opacity" values="0.3;0.65;0.3" dur="3.8s" repeatCount="indefinite"/></circle>
+<circle cx="760" cy="60" r="1" fill="#06b6d4" opacity="0.35"/>
+<circle cx="1100" cy="80" r="1.5" fill="#10b981" opacity="0.3"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="4.5s" repeatCount="indefinite"/></circle>
+<circle cx="1150" cy="130" r="1" fill="#06b6d4" opacity="0.3"/>
+
+<!-- Repository name -->
+<text x="600" y="162"
+  font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace"
+  font-size="30" font-weight="700" text-anchor="middle" letter-spacing="3"
+  fill="url(#titleGrad)">BLUE LIFE COMMONS</text>
+
+<!-- Tagline -->
+<text x="600" y="195"
+  font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace"
+  font-size="14" text-anchor="middle" fill="#94a3b8"
+  letter-spacing="1">Open-source ocean intelligence commons · CC-BY-4.0</text>
+
+<!-- Built on SIP -->
+<text x="24" y="283"
+  font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace"
+  font-size="11" fill="#f59e0b" opacity="0.8">Built on SIP</text>
+</svg>
