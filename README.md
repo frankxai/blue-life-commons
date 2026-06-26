@@ -2,7 +2,33 @@
 
 Blue Life Commons is an open-source **Ocean Intelligence commons** where citizens, researchers, developers, educators, travelers, and conservation organizations turn ocean curiosity into useful artifacts: species guides, field missions, maps, research summaries, datasets, notebooks, MCP tools, films, and local action systems.
 
+[![Catalog](https://img.shields.io/badge/catalog-living%20index-0f766e)](CATALOG.md)
+[![Sources](https://img.shields.io/badge/sources-required-2563eb)](SOURCES.md)
+[![Ethics](https://img.shields.io/badge/ethics-review%20gated-7c3aed)](ETHICS.md)
+[![Agents](https://img.shields.io/badge/agents-PRs%20not%20direct%20commits-f59e0b)](AGENTS.md)
+[![License: CC BY 4.0](https://img.shields.io/badge/content-CC%20BY%204.0-0891b2)](https://creativecommons.org/licenses/by/4.0/)
+
 An initiative by Starlight Intelligence Systems — starting with whales, dolphins, seals, sea lions, turtles, sharks, rays, and reef ecosystems.
+
+## 90-second start
+
+Choose the lane that matches why you are here:
+
+| I want to... | Start with |
+|---|---|
+| Browse published artifacts | [`CATALOG.md`](CATALOG.md) |
+| Contribute a species page, region briefing, mission, or dataset card | [`CONTRIBUTING.md`](CONTRIBUTING.md) |
+| Use a coding agent safely | [`AGENTS.md`](AGENTS.md) |
+| Check source requirements | [`SOURCES.md`](SOURCES.md) |
+| Check wildlife interaction rules | [`ETHICS.md`](ETHICS.md) |
+
+Fast local checks:
+
+```bash
+python scripts/build_catalog.py --check
+python scripts/validate_artifacts.py
+python scripts/lint_content.py
+```
 
 ## The hard rule
 
