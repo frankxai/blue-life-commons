@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/assets/hero.svg" width="100%" alt="Blue Life Commons hero banner"/></p>
+
 # Blue Life Commons
 
 <p align="center">
