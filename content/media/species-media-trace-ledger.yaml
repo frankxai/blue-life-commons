@@ -1,0 +1,1954 @@
+version: '2026-07-03'
+generated_at: '2026-07-03'
+policy:
+  ledger_omits_candidate_direct_urls: true
+  candidate_public_use: false
+  public_render_source: content/media/species-media-render-contract.yaml
+  public_explorer_source: content/media/species-media-public-explorer-manifest.yaml
+  species_page_media_synced_by: scripts/sync_species_page_media.py
+summary:
+  species_records: 31
+  trace_issue_count: 0
+  trace_state_counts:
+    primary_image_ready: 31
+  curation_batch_counts:
+    03_official_public_domain_fast_track: 19
+    04_open_public_domain_review: 1
+    05_open_license_attribution: 10
+    06_partner_grant_or_new_candidate: 1
+  source_domain_counts:
+    commons.wikimedia.org: 31
+  source_route_counts:
+    ethics_note_review: 1
+    official_public_domain_fast_track: 19
+    open_license_attribution_review: 10
+    open_public_domain_review: 1
+  candidate_records_with_flags: []
+  public_visual_ready: 31
+  hero_image_ready: 31
+  candidate_public_use_blocked: 31
+records:
+- artifact_id: species-blue-whale
+  ownership_key: species-blue-whale|content/species/cetaceans/blue-whale.md
+  species_page: content/species/cetaceans/blue-whale.md
+  website_path: /species/cetaceans/blue-whale
+  taxon_group: cetaceans
+  common_name: Blue Whale
+  scientific_name: Balaenoptera musculus
+  species_slugs:
+  - balaenoptera-musculus
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Bluewhale877.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: official_public_domain_fast_track
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 03_official_public_domain_fast_track
+    batch_label: Official/public-domain fast track
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#species-blue-whale
+    render_contract: content/media/species-media-render-contract.yaml#species-blue-whale
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-blue-whale
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: species-bottlenose-dolphin
+  ownership_key: species-bottlenose-dolphin|content/species/cetaceans/bottlenose-dolphin.md
+  species_page: content/species/cetaceans/bottlenose-dolphin.md
+  website_path: /species/cetaceans/bottlenose-dolphin
+  taxon_group: cetaceans
+  common_name: Common Bottlenose Dolphin
+  scientific_name: Tursiops truncatus
+  species_slugs:
+  - tursiops-truncatus
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: ethics_note_review
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 06_partner_grant_or_new_candidate
+    batch_label: Partner grant or replacement candidate
+    workstream: partner_or_replacement
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#species-bottlenose-dolphin
+    render_contract: content/media/species-media-render-contract.yaml#species-bottlenose-dolphin
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-bottlenose-dolphin
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: species-humpback-whale
+  ownership_key: species-humpback-whale|content/species/cetaceans/humpback-whale.md
+  species_page: content/species/cetaceans/humpback-whale.md
+  website_path: /species/cetaceans/humpback-whale
+  taxon_group: cetaceans
+  common_name: Humpback Whale
+  scientific_name: Megaptera novaeangliae
+  species_slugs:
+  - megaptera-novaeangliae
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Humpback_whales_in_singing_position.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: official_public_domain_fast_track
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 03_official_public_domain_fast_track
+    batch_label: Official/public-domain fast track
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#species-humpback-whale
+    render_contract: content/media/species-media-render-contract.yaml#species-humpback-whale
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-humpback-whale
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: species-north-atlantic-right-whale
+  ownership_key: species-north-atlantic-right-whale|content/species/cetaceans/north-atlantic-right-whale.md
+  species_page: content/species/cetaceans/north-atlantic-right-whale.md
+  website_path: /species/cetaceans/north-atlantic-right-whale
+  taxon_group: cetaceans
+  common_name: North Atlantic Right Whale
+  scientific_name: Eubalaena glacialis
+  species_slugs:
+  - eubalaena-glacialis
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:North_Atlantic_right_whale_-_Earth_Is_Blue.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: official_public_domain_fast_track
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 03_official_public_domain_fast_track
+    batch_label: Official/public-domain fast track
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#species-north-atlantic-right-whale
+    render_contract: content/media/species-media-render-contract.yaml#species-north-atlantic-right-whale
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-north-atlantic-right-whale
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: species-orca
+  ownership_key: species-orca|content/species/cetaceans/orca.md
+  species_page: content/species/cetaceans/orca.md
+  website_path: /species/cetaceans/orca
+  taxon_group: cetaceans
+  common_name: Orca
+  scientific_name: Orcinus orca
+  species_slugs:
+  - orcinus-orca
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: official_public_domain_fast_track
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 03_official_public_domain_fast_track
+    batch_label: Official/public-domain fast track
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#species-orca
+    render_contract: content/media/species-media-render-contract.yaml#species-orca
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-orca
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: species-sperm-whale
+  ownership_key: species-sperm-whale|content/species/cetaceans/sperm-whale.md
+  species_page: content/species/cetaceans/sperm-whale.md
+  website_path: /species/cetaceans/sperm-whale
+  taxon_group: cetaceans
+  common_name: Sperm Whale
+  scientific_name: Physeter macrocephalus
+  species_slugs:
+  - physeter-macrocephalus
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:6(18)_Sperm_whale.JPG
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: official_public_domain_fast_track
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 03_official_public_domain_fast_track
+    batch_label: Official/public-domain fast track
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#species-sperm-whale
+    render_contract: content/media/species-media-render-contract.yaml#species-sperm-whale
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-sperm-whale
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: species-california-sea-lion
+  ownership_key: species-california-sea-lion|content/species/pinnipeds/california-sea-lion.md
+  species_page: content/species/pinnipeds/california-sea-lion.md
+  website_path: /species/pinnipeds/california-sea-lion
+  taxon_group: pinnipeds
+  common_name: California Sea Lion
+  scientific_name: Zalophus californianus
+  species_slugs:
+  - zalophus-californianus
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Bigmalesealion.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: open_license_attribution_review
+    priority: P2
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 05_open_license_attribution
+    batch_label: Open-license attribution review
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#species-california-sea-lion
+    render_contract: content/media/species-media-render-contract.yaml#species-california-sea-lion
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-california-sea-lion
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: species-grey-seal
+  ownership_key: species-grey-seal|content/species/pinnipeds/grey-seal.md
+  species_page: content/species/pinnipeds/grey-seal.md
+  website_path: /species/pinnipeds/grey-seal
+  taxon_group: pinnipeds
+  common_name: Grey Seal
+  scientific_name: Halichoerus grypus
+  species_slugs:
+  - halichoerus-grypus
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Szarytka_morska.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: open_license_attribution_review
+    priority: P2
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 05_open_license_attribution
+    batch_label: Open-license attribution review
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#species-grey-seal
+    render_contract: content/media/species-media-render-contract.yaml#species-grey-seal
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-grey-seal
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: species-harbor-seal
+  ownership_key: species-harbor-seal|content/species/pinnipeds/harbor-seal.md
+  species_page: content/species/pinnipeds/harbor-seal.md
+  website_path: /species/pinnipeds/harbor-seal
+  taxon_group: pinnipeds
+  common_name: Harbor Seal
+  scientific_name: Phoca vitulina
+  species_slugs:
+  - phoca-vitulina
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Harbor_Seal,_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: open_license_attribution_review
+    priority: P2
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 05_open_license_attribution
+    batch_label: Open-license attribution review
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#species-harbor-seal
+    render_contract: content/media/species-media-render-contract.yaml#species-harbor-seal
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-harbor-seal
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: species-hawaiian-monk-seal
+  ownership_key: species-hawaiian-monk-seal|content/species/pinnipeds/hawaiian-monk-seal.md
+  species_page: content/species/pinnipeds/hawaiian-monk-seal.md
+  website_path: /species/pinnipeds/hawaiian-monk-seal
+  taxon_group: pinnipeds
+  common_name: Hawaiian Monk Seal
+  scientific_name: Neomonachus schauinslandi
+  species_slugs:
+  - neomonachus-schauinslandi
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Moenchsrobbe_1.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: official_public_domain_fast_track
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 03_official_public_domain_fast_track
+    batch_label: Official/public-domain fast track
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#species-hawaiian-monk-seal
+    render_contract: content/media/species-media-render-contract.yaml#species-hawaiian-monk-seal
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-hawaiian-monk-seal
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: species-walrus
+  ownership_key: species-walrus|content/species/pinnipeds/walrus.md
+  species_page: content/species/pinnipeds/walrus.md
+  website_path: /species/pinnipeds/walrus
+  taxon_group: pinnipeds
+  common_name: Walrus
+  scientific_name: Odobenus rosmarus
+  species_slugs:
+  - odobenus-rosmarus
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Pacific_Walrus_-_Bull_(8247646168).jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: official_public_domain_fast_track
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 03_official_public_domain_fast_track
+    batch_label: Official/public-domain fast track
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#species-walrus
+    render_contract: content/media/species-media-render-contract.yaml#species-walrus
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-walrus
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: species-brain-coral
+  ownership_key: species-brain-coral|content/species/reefs/brain-coral.md
+  species_page: content/species/reefs/brain-coral.md
+  website_path: /species/reefs/brain-coral
+  taxon_group: reefs
+  common_name: Grooved Brain Coral
+  scientific_name: Diploria labyrinthiformis
+  species_slugs:
+  - diploria-labyrinthiformis
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Metal_block_with_coral_Dry_Tortugas_20100629.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: official_public_domain_fast_track
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 03_official_public_domain_fast_track
+    batch_label: Official/public-domain fast track
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#species-brain-coral
+    render_contract: content/media/species-media-render-contract.yaml#species-brain-coral
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-brain-coral
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: species-elkhorn-coral
+  ownership_key: species-elkhorn-coral|content/species/reefs/elkhorn-coral.md
+  species_page: content/species/reefs/elkhorn-coral.md
+  website_path: /species/reefs/elkhorn-coral
+  taxon_group: reefs
+  common_name: Elkhorn Coral
+  scientific_name: Acropora palmata
+  species_slugs:
+  - acropora-palmata
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Gaulin_Reef_San_Salvador.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: official_public_domain_fast_track
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 03_official_public_domain_fast_track
+    batch_label: Official/public-domain fast track
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#species-elkhorn-coral
+    render_contract: content/media/species-media-render-contract.yaml#species-elkhorn-coral
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-elkhorn-coral
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: species-giant-kelp
+  ownership_key: species-giant-kelp|content/species/reefs/giant-kelp.md
+  species_page: content/species/reefs/giant-kelp.md
+  website_path: /species/reefs/giant-kelp
+  taxon_group: reefs
+  common_name: Giant Kelp
+  scientific_name: Macrocystis pyrifera
+  species_slugs:
+  - macrocystis-pyrifera
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Sanc0063_-_Flickr_-_NOAA_Photo_Library.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: official_public_domain_fast_track
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 03_official_public_domain_fast_track
+    batch_label: Official/public-domain fast track
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#species-giant-kelp
+    render_contract: content/media/species-media-render-contract.yaml#species-giant-kelp
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-giant-kelp
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: species-red-mangrove
+  ownership_key: species-red-mangrove|content/species/reefs/red-mangrove.md
+  species_page: content/species/reefs/red-mangrove.md
+  website_path: /species/reefs/red-mangrove
+  taxon_group: reefs
+  common_name: Red Mangrove
+  scientific_name: Rhizophora mangle
+  species_slugs:
+  - rhizophora-mangle
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: official_public_domain_fast_track
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 03_official_public_domain_fast_track
+    batch_label: Official/public-domain fast track
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#species-red-mangrove
+    render_contract: content/media/species-media-render-contract.yaml#species-red-mangrove
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-red-mangrove
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: species-seagrass-posidonia
+  ownership_key: species-seagrass-posidonia|content/species/reefs/seagrass-posidonia.md
+  species_page: content/species/reefs/seagrass-posidonia.md
+  website_path: /species/reefs/seagrass-posidonia
+  taxon_group: reefs
+  common_name: Neptune Grass
+  scientific_name: Posidonia oceanica
+  species_slugs:
+  - posidonia-oceanica
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Posidonia_oceanica.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: official_public_domain_fast_track
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 03_official_public_domain_fast_track
+    batch_label: Official/public-domain fast track
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#species-seagrass-posidonia
+    render_contract: content/media/species-media-render-contract.yaml#species-seagrass-posidonia
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-seagrass-posidonia
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: species-staghorn-coral
+  ownership_key: species-staghorn-coral|content/species/reefs/staghorn-coral.md
+  species_page: content/species/reefs/staghorn-coral.md
+  website_path: /species/reefs/staghorn-coral
+  taxon_group: reefs
+  common_name: Staghorn Coral
+  scientific_name: Acropora cervicornis
+  species_slugs:
+  - acropora-cervicornis
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Staghorn_coral_on_Baker_Island_NWR_(5123996348).jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: official_public_domain_fast_track
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 03_official_public_domain_fast_track
+    batch_label: Official/public-domain fast track
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#species-staghorn-coral
+    render_contract: content/media/species-media-render-contract.yaml#species-staghorn-coral
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-staghorn-coral
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: basking-shark
+  ownership_key: basking-shark|content/species/sharks-rays/basking-shark.md
+  species_page: content/species/sharks-rays/basking-shark.md
+  website_path: /species/sharks-rays/basking-shark
+  taxon_group: sharks-rays
+  common_name: Basking Shark
+  scientific_name: Cetorhinus maximus
+  species_slugs:
+  - cetorhinus-maximus
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Cetorhinus_maximus_by_greg_skomal.JPG
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: official_public_domain_fast_track
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 03_official_public_domain_fast_track
+    batch_label: Official/public-domain fast track
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#basking-shark
+    render_contract: content/media/species-media-render-contract.yaml#basking-shark
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#basking-shark
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: great-white-shark
+  ownership_key: great-white-shark|content/species/sharks-rays/great-white-shark.md
+  species_page: content/species/sharks-rays/great-white-shark.md
+  website_path: /species/sharks-rays/great-white-shark
+  taxon_group: sharks-rays
+  common_name: Great White Shark
+  scientific_name: Carcharodon carcharias
+  species_slugs:
+  - Carcharodon carcharias
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:White_shark.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: open_license_attribution_review
+    priority: P2
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 05_open_license_attribution
+    batch_label: Open-license attribution review
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#great-white-shark
+    render_contract: content/media/species-media-render-contract.yaml#great-white-shark
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#great-white-shark
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: reef-manta-ray
+  ownership_key: reef-manta-ray|content/species/sharks-rays/reef-manta-ray.md
+  species_page: content/species/sharks-rays/reef-manta-ray.md
+  website_path: /species/sharks-rays/reef-manta-ray
+  taxon_group: sharks-rays
+  common_name: Reef Manta Ray
+  scientific_name: Mobula alfredi
+  species_slugs:
+  - mobula-alfredi
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Manta_alfredi_cruising_-_journal.pone.0046170.g002A.png
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: open_license_attribution_review
+    priority: P2
+    partner_refs:
+    - manta_trust
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 05_open_license_attribution
+    batch_label: Open-license attribution review
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#reef-manta-ray
+    render_contract: content/media/species-media-render-contract.yaml#reef-manta-ray
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#reef-manta-ray
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: scalloped-hammerhead
+  ownership_key: scalloped-hammerhead|content/species/sharks-rays/scalloped-hammerhead.md
+  species_page: content/species/sharks-rays/scalloped-hammerhead.md
+  website_path: /species/sharks-rays/scalloped-hammerhead
+  taxon_group: sharks-rays
+  common_name: Scalloped Hammerhead
+  scientific_name: Sphyrna lewini
+  species_slugs:
+  - sphyrna-lewini
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Sphyrna_lewini_(Griffith_%26_Smith,_1834)_2422815227.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: official_public_domain_fast_track
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 03_official_public_domain_fast_track
+    batch_label: Official/public-domain fast track
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#scalloped-hammerhead
+    render_contract: content/media/species-media-render-contract.yaml#scalloped-hammerhead
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#scalloped-hammerhead
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: shortfin-mako
+  ownership_key: shortfin-mako|content/species/sharks-rays/shortfin-mako.md
+  species_page: content/species/sharks-rays/shortfin-mako.md
+  website_path: /species/sharks-rays/shortfin-mako
+  taxon_group: sharks-rays
+  common_name: Shortfin Mako
+  scientific_name: Isurus oxyrinchus
+  species_slugs:
+  - isurus-oxyrinchus
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Isurus_oxyrinchus_by_mark_conlin.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: official_public_domain_fast_track
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 03_official_public_domain_fast_track
+    batch_label: Official/public-domain fast track
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#shortfin-mako
+    render_contract: content/media/species-media-render-contract.yaml#shortfin-mako
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#shortfin-mako
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: tiger-shark
+  ownership_key: tiger-shark|content/species/sharks-rays/tiger-shark.md
+  species_page: content/species/sharks-rays/tiger-shark.md
+  website_path: /species/sharks-rays/tiger-shark
+  taxon_group: sharks-rays
+  common_name: Tiger Shark
+  scientific_name: Galeocerdo cuvier
+  species_slugs:
+  - galeocerdo-cuvier
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Requin_tigre_(Galeocerdo_cuvier)_(Ifremer_00756-86782).jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: open_license_attribution_review
+    priority: P2
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 05_open_license_attribution
+    batch_label: Open-license attribution review
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#tiger-shark
+    render_contract: content/media/species-media-render-contract.yaml#tiger-shark
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#tiger-shark
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: species-whale-shark
+  ownership_key: species-whale-shark|content/species/sharks-rays/whale-shark.md
+  species_page: content/species/sharks-rays/whale-shark.md
+  website_path: /species/sharks-rays/whale-shark
+  taxon_group: sharks-rays
+  common_name: Whale Shark
+  scientific_name: Rhincodon typus
+  species_slugs:
+  - rhincodon-typus
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:OLYMPUS_DIGITAL_CAMERA_(27591269541).jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: open_public_domain_review
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 04_open_public_domain_review
+    batch_label: Open public-domain review
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#species-whale-shark
+    render_contract: content/media/species-media-render-contract.yaml#species-whale-shark
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-whale-shark
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: species-west-indian-manatee
+  ownership_key: species-west-indian-manatee|content/species/sirenians/west-indian-manatee.md
+  species_page: content/species/sirenians/west-indian-manatee.md
+  website_path: /species/sirenians/west-indian-manatee
+  taxon_group: sirenians
+  common_name: West Indian Manatee
+  scientific_name: Trichechus manatus
+  species_slugs:
+  - trichechus-manatus
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Manatee_photo.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: official_public_domain_fast_track
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 03_official_public_domain_fast_track
+    batch_label: Official/public-domain fast track
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#species-west-indian-manatee
+    render_contract: content/media/species-media-render-contract.yaml#species-west-indian-manatee
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-west-indian-manatee
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: species-green-turtle
+  ownership_key: species-green-turtle|content/species/turtles/green-turtle.md
+  species_page: content/species/turtles/green-turtle.md
+  website_path: /species/turtles/green-turtle
+  taxon_group: turtles
+  common_name: Green Turtle
+  scientific_name: Chelonia mydas
+  species_slugs:
+  - chelonia-mydas
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Hawaii_turtle_2.JPG
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: open_license_attribution_review
+    priority: P2
+    partner_refs:
+    - oceanic_society
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 05_open_license_attribution
+    batch_label: Open-license attribution review
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#species-green-turtle
+    render_contract: content/media/species-media-render-contract.yaml#species-green-turtle
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-green-turtle
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: hawksbill-turtle
+  ownership_key: hawksbill-turtle|content/species/turtles/hawksbill-turtle.md
+  species_page: content/species/turtles/hawksbill-turtle.md
+  website_path: /species/turtles/hawksbill-turtle
+  taxon_group: turtles
+  common_name: Hawksbill Turtle
+  scientific_name: Eretmochelys imbricata
+  species_slugs:
+  - eretmochelys-imbricata
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_parque_nacional_Ras_Muhammad,_Egipto,_2022-03-28,_DD_56.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: open_license_attribution_review
+    priority: P2
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 05_open_license_attribution
+    batch_label: Open-license attribution review
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#hawksbill-turtle
+    render_contract: content/media/species-media-render-contract.yaml#hawksbill-turtle
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#hawksbill-turtle
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: kemps-ridley-turtle
+  ownership_key: kemps-ridley-turtle|content/species/turtles/kemps-ridley-turtle.md
+  species_page: content/species/turtles/kemps-ridley-turtle.md
+  website_path: /species/turtles/kemps-ridley-turtle
+  taxon_group: turtles
+  common_name: Kemp's Ridley Turtle
+  scientific_name: Lepidochelys kempii
+  species_slugs:
+  - lepidochelys-kempii
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: official_public_domain_fast_track
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 03_official_public_domain_fast_track
+    batch_label: Official/public-domain fast track
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#kemps-ridley-turtle
+    render_contract: content/media/species-media-render-contract.yaml#kemps-ridley-turtle
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#kemps-ridley-turtle
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: leatherback-turtle
+  ownership_key: leatherback-turtle|content/species/turtles/leatherback-turtle.md
+  species_page: content/species/turtles/leatherback-turtle.md
+  website_path: /species/turtles/leatherback-turtle
+  taxon_group: turtles
+  common_name: Leatherback Turtle
+  scientific_name: Dermochelys coriacea
+  species_slugs:
+  - dermochelys-coriacea
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:LeatherbackTurtle.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: official_public_domain_fast_track
+    priority: P1
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 03_official_public_domain_fast_track
+    batch_label: Official/public-domain fast track
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#leatherback-turtle
+    render_contract: content/media/species-media-render-contract.yaml#leatherback-turtle
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#leatherback-turtle
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: loggerhead-turtle
+  ownership_key: loggerhead-turtle|content/species/turtles/loggerhead-turtle.md
+  species_page: content/species/turtles/loggerhead-turtle.md
+  website_path: /species/turtles/loggerhead-turtle
+  taxon_group: turtles
+  common_name: Loggerhead Turtle
+  scientific_name: Caretta caretta
+  species_slugs:
+  - caretta-caretta
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Loggerhead_Sea_Turtle_(Caretta_caretta)_2.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: open_license_attribution_review
+    priority: P2
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 05_open_license_attribution
+    batch_label: Open-license attribution review
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#loggerhead-turtle
+    render_contract: content/media/species-media-render-contract.yaml#loggerhead-turtle
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#loggerhead-turtle
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []
+- artifact_id: olive-ridley-turtle
+  ownership_key: olive-ridley-turtle|content/species/turtles/olive-ridley-turtle.md
+  species_page: content/species/turtles/olive-ridley-turtle.md
+  website_path: /species/turtles/olive-ridley-turtle
+  taxon_group: turtles
+  common_name: Olive Ridley Turtle
+  scientific_name: Lepidochelys olivacea
+  species_slugs:
+  - lepidochelys-olivacea
+  trace_state: primary_image_ready
+  public_visual:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Olive_ridley_sea_turtle_cropped.jpg
+    domain: commons.wikimedia.org
+    source_type: null
+    render_strategy: approved_primary_image
+    public_use: true
+    hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+  candidate_review:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: null
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  source_route:
+    route: open_license_attribution_review
+    priority: P2
+    partner_refs:
+    - partner_media_grant_needed
+  curation:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    recommended_batch: 05_open_license_attribution
+    batch_label: Open-license attribution review
+    workstream: primary_image_review
+    promotion_allowed_now: true
+  page_media:
+    registry_record: content/media/species-media-registry.yaml#olive-ridley-turtle
+    render_contract: content/media/species-media-render-contract.yaml#olive-ridley-turtle
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#olive-ridley-turtle
+  integrity_checks:
+    has_media_block: true
+    registry_pointer_ok: true
+    render_pointer_ok: true
+    public_explorer_pointer_ok: true
+    embed_url_matches_public_visual: true
+    render_strategy_matches: true
+    candidate_hidden: true
+    species_page_exists: true
+    artifact_id_matches_page: true
+    website_path_matches_page: true
+    public_visual_matches_manifest: true
+    source_card_verified: true
+    candidate_public_use_blocked: true
+    hero_image_rule_matches_status: true
+    no_public_candidate_url_leak: true
+  trace_issues: []

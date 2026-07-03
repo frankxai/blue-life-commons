@@ -1,27 +1,27 @@
 ---
 id: scalloped-hammerhead
 type: species-page
-title: "Scalloped Hammerhead (Sphyrna lewini)"
+title: Scalloped Hammerhead (Sphyrna lewini)
 region:
-  - Global Coastal Warm-Temperate and Tropical Seas
+- Global Coastal Warm-Temperate and Tropical Seas
 species_group:
-  - sharks-rays
+- sharks-rays
 species:
-  - sphyrna-lewini
+- sphyrna-lewini
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/39385/2918526"
-    title: "IUCN Red List: Sphyrna lewini (Scalloped Hammerhead)"
-    tier: 1
-    accessed: "2026-06-16"
-  - url: "https://www.fisheries.noaa.gov/species/scalloped-hammerhead-shark"
-    title: "NOAA Fisheries: Scalloped Hammerhead Shark"
-    tier: 2
-    accessed: "2026-06-16"
+- url: https://www.iucnredlist.org/species/39385/2918526
+  title: 'IUCN Red List: Sphyrna lewini (Scalloped Hammerhead)'
+  tier: 1
+  accessed: '2026-06-16'
+- url: https://www.fisheries.noaa.gov/species/scalloped-hammerhead-shark
+  title: 'NOAA Fisheries: Scalloped Hammerhead Shark'
+  tier: 2
+  accessed: '2026-06-16'
 iucn:
   category: CR
-  assessment_date: "2018"
-  version: "2019-1"
+  assessment_date: '2018'
+  version: 2019-1
   population_trend: decreasing
   scope: global
 welfare:
@@ -29,14 +29,14 @@ welfare:
   dominant_stressor: bycatch
   confidence: expert-opinion
   five_domains:
-    health: "Estimated global decline exceeding 80% over three generation lengths; high at-vessel mortality when caught on fishing gear (IUCN 2018 assessment)."
-    behaviour: "Schooling and coastal use, including nursery habitat, overlaps heavily with fisheries; the fin trade drives targeted and incidental capture (NOAA Fisheries; IUCN)."
+    health: Estimated global decline exceeding 80% over three generation lengths; high at-vessel mortality when caught on fishing gear (IUCN 2018 assessment).
+    behaviour: Schooling and coastal use, including nursery habitat, overlaps heavily with fisheries; the fin trade drives targeted and incidental capture (NOAA Fisheries; IUCN).
 sensitivity:
   tier: high
-  rationale: "Critically Endangered and heavily targeted for the global shark-fin trade, with high sensitivity to capture mortality; schooling sites and coastal nursery areas must be published at regional granularity only — no precise aggregation locations."
+  rationale: "Critically Endangered and heavily targeted for the global shark-fin trade, with high sensitivity to capture mortality; schooling sites and coastal nursery areas must be published at regional granularity only \u2014 no precise aggregation locations."
   generalized_to: regional
 consensus_state: settled
-last_verified: "2026-06-16"
+last_verified: '2026-06-16'
 outputs:
   website_path: /species/sharks-rays/scalloped-hammerhead
   github_path: content/species/sharks-rays/scalloped-hammerhead.md
@@ -46,8 +46,47 @@ review:
   ethics: approved
   editor: pending
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#scalloped-hammerhead
+  render_contract: content/media/species-media-render-contract.yaml#scalloped-hammerhead
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#scalloped-hammerhead
+  primary:
+    asset_id: scalloped-hammerhead-wikimedia-sphyrna-lewini-griffith-smith-1834-2422815227
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:Sphyrna_lewini_(Griffith_%26_Smith,_1834)_2422815227.jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Sphyrna_lewini_%28Griffith_%26_Smith%2C_1834%29_2422815227.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/d/df/Sphyrna_lewini_%28Griffith_%26_Smith%2C_1834%29_2422815227.jpg
+    creator: iNaturalist.org (Simon Tonge) (Simon%20Tonge)
+    credit: https://www.gbif.org/occurrence/2422815227
+    license: CC0
+    license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    rights_status: cc0
+    alt_text: Sphyrna lewini (Griffith & Smith, 1834) 2422815227.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:Sphyrna_lewini_(Griffith_%26_Smith,_1834)_2422815227.jpg
+    rights_status: cc0
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: CC0
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets: []
 ---
 
 # Scalloped Hammerhead (*Sphyrna lewini*)

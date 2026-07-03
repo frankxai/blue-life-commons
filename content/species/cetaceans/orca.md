@@ -1,42 +1,42 @@
 ---
 id: species-orca
 type: species-page
-title: "Orca (Orcinus orca)"
+title: Orca (Orcinus orca)
 species_group:
-  - cetaceans
+- cetaceans
 species:
-  - orcinus-orca
+- orcinus-orca
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/15421/50368125"
-    title: "IUCN Red List — Orcinus orca (Killer Whale)"
-    tier: 1
-    accessed: "2026-06-16"
-  - url: "https://www.fisheries.noaa.gov/species/killer-whale"
-    title: "NOAA Fisheries — Killer Whale"
-    tier: 2
-    accessed: "2026-06-16"
-  - url: "https://www.fisheries.noaa.gov/west-coast/endangered-species-conservation/southern-resident-killer-whale-orcinus-orca"
-    title: "NOAA Fisheries — Southern Resident Killer Whale (ESA-listed DPS)"
-    tier: 2
-    accessed: "2026-06-16"
-  - url: "https://cites.org/eng/app/appendices.php"
-    title: "CITES Appendices (Orcinus orca listed Appendix II)"
-    tier: 2
-    accessed: "2026-06-16"
+- url: https://www.iucnredlist.org/species/15421/50368125
+  title: "IUCN Red List \u2014 Orcinus orca (Killer Whale)"
+  tier: 1
+  accessed: '2026-06-16'
+- url: https://www.fisheries.noaa.gov/species/killer-whale
+  title: "NOAA Fisheries \u2014 Killer Whale"
+  tier: 2
+  accessed: '2026-06-16'
+- url: https://www.fisheries.noaa.gov/west-coast/endangered-species-conservation/southern-resident-killer-whale-orcinus-orca
+  title: "NOAA Fisheries \u2014 Southern Resident Killer Whale (ESA-listed DPS)"
+  tier: 2
+  accessed: '2026-06-16'
+- url: https://cites.org/eng/app/appendices.php
+  title: CITES Appendices (Orcinus orca listed Appendix II)
+  tier: 2
+  accessed: '2026-06-16'
 review:
   science: required
   ethics: approved
   editor: pending
 iucn:
   category: DD
-  assessment_date: "2017"
+  assessment_date: '2017'
   scope: global
   population_trend: unknown
 welfare:
@@ -44,24 +44,68 @@ welfare:
   dominant_stressor: prey-depletion
   confidence: expert-opinion
   five_domains:
-    nutrition: "For the endangered Southern Resident population, limited availability of Chinook salmon prey is a recognised pressure (NOAA Fisheries)."
-    environment: "Vessel disturbance, underwater noise, and bioaccumulated contaminants are listed pressures (NOAA Fisheries)."
+    nutrition: For the endangered Southern Resident population, limited availability of Chinook salmon prey is a recognised pressure (NOAA Fisheries).
+    environment: Vessel disturbance, underwater noise, and bioaccumulated contaminants are listed pressures (NOAA Fisheries).
 sensitivity:
   tier: low
-  rationale: "Globally distributed; some regional populations (e.g. ESA-listed Southern Residents) are sensitive but no precise site is published below regional granularity."
+  rationale: Globally distributed; some regional populations (e.g. ESA-listed Southern Residents) are sensitive but no precise site is published below regional granularity.
   generalized_to: regional
 consensus_state: contested
-last_verified: "2026-06-16"
+last_verified: '2026-06-16'
 outputs:
   website_path: /species/cetaceans/orca
   github_path: content/species/cetaceans/orca.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed species intelligence page for the orca (killer whale)."
+  claim: Published a source-reviewed species intelligence page for the orca (killer whale).
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#species-orca
+  render_contract: content/media/species-media-render-contract.yaml#species-orca
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-orca
+  primary:
+    asset_id: species-orca-wikimedia-killerwhales-jumping
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Killerwhales_jumping.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/3/37/Killerwhales_jumping.jpg
+    creator: Robert Pittman
+    credit: NOAA (http://www.afsc.noaa.gov/Quarterly/amj2005/divrptsNMML3.htm])
+    license: Public domain
+    license_url: null
+    rights_status: public-domain
+    alt_text: Orca (Orcinus orca) in an approved source image used for species identification.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg
+    rights_status: public-domain
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: Public domain
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets:
+  - asset_id: blc-keyart-orca-01
+    path: brand/visuals/blc-keyart-orca-01.jpg
+    role: generated_key_art
+    status: concept_only
+    use_limitations: Supporting visual only; not biological evidence, official identification media, or proof of conservation status.
 ---
 
 # Orca (Orcinus orca)

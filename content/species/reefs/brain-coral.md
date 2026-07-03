@@ -1,43 +1,43 @@
 ---
 id: species-brain-coral
 type: species-page
-title: "Grooved Brain Coral (Diploria labyrinthiformis)"
+title: Grooved Brain Coral (Diploria labyrinthiformis)
 species_group:
-  - reefs
+- reefs
 species:
-  - diploria-labyrinthiformis
+- diploria-labyrinthiformis
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/132882/3479007"
-    title: "IUCN Red List — Diploria labyrinthiformis (Grooved Brain Coral)"
-    tier: 1
-    accessed: "2026-06-16"
-  - url: "https://cdhc.noaa.gov/coral-disease/characterized-diseases/stony-coral-tissue-loss-disease-sctld/"
-    title: "NOAA Coral Disease & Health Consortium — Stony Coral Tissue Loss Disease (SCTLD)"
-    tier: 2
-    accessed: "2026-06-16"
-  - url: "https://iucn.org/press-release/202411/over-40-coral-species-face-extinction-iucn-red-list"
-    title: "IUCN — Over 40% of coral species face extinction (Red List, Nov 2024)"
-    tier: 2
-    accessed: "2026-06-16"
-  - url: "https://cites.org/eng/app/appendices.php"
-    title: "CITES Appendices (Scleractinia / stony corals listed Appendix II)"
-    tier: 2
-    accessed: "2026-06-16"
+- url: https://www.iucnredlist.org/species/132882/3479007
+  title: "IUCN Red List \u2014 Diploria labyrinthiformis (Grooved Brain Coral)"
+  tier: 1
+  accessed: '2026-06-16'
+- url: https://cdhc.noaa.gov/coral-disease/characterized-diseases/stony-coral-tissue-loss-disease-sctld/
+  title: "NOAA Coral Disease & Health Consortium \u2014 Stony Coral Tissue Loss Disease (SCTLD)"
+  tier: 2
+  accessed: '2026-06-16'
+- url: https://iucn.org/press-release/202411/over-40-coral-species-face-extinction-iucn-red-list
+  title: "IUCN \u2014 Over 40% of coral species face extinction (Red List, Nov 2024)"
+  tier: 2
+  accessed: '2026-06-16'
+- url: https://cites.org/eng/app/appendices.php
+  title: CITES Appendices (Scleractinia / stony corals listed Appendix II)
+  tier: 2
+  accessed: '2026-06-16'
 review:
   science: required
   ethics: approved
   editor: pending
 iucn:
   category: LC
-  assessment_date: "2008"
-  version: "3.1"
+  assessment_date: '2008'
+  version: '3.1'
   population_trend: decreasing
   scope: global
 welfare:
@@ -45,20 +45,64 @@ welfare:
   dominant_stressor: heat-stress
   confidence: expert-opinion
   five_domains:
-    environment: "Warming seas and marine heatwaves drive bleaching; NOAA Coral Reef Watch tracks the thermal stress that breaks the coral–zooxanthellae symbiosis (NOAA)."
-    health: "Highly susceptible to stony coral tissue loss disease (SCTLD), an emerging Caribbean-wide outbreak documented from 2014 onward (NOAA Coral Disease & Health Consortium)."
+    environment: "Warming seas and marine heatwaves drive bleaching; NOAA Coral Reef Watch tracks the thermal stress that breaks the coral\u2013zooxanthellae symbiosis (NOAA)."
+    health: Highly susceptible to stony coral tissue loss disease (SCTLD), an emerging Caribbean-wide outbreak documented from 2014 onward (NOAA Coral Disease & Health Consortium).
 consensus_state: contested
-last_verified: "2026-06-16"
+last_verified: '2026-06-16'
 outputs:
   website_path: /species/reefs/brain-coral
   github_path: content/species/reefs/brain-coral.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed species page for grooved brain coral, a habitat-forming Caribbean reef coral."
+  claim: Published a source-reviewed species page for grooved brain coral, a habitat-forming Caribbean reef coral.
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#species-brain-coral
+  render_contract: content/media/species-media-render-contract.yaml#species-brain-coral
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-brain-coral
+  primary:
+    asset_id: species-brain-coral-wikimedia-metal-block-with-coral-dry-tortugas-20100629
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:Metal_block_with_coral_Dry_Tortugas_20100629.jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Metal_block_with_coral_Dry_Tortugas_20100629.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/8/8e/Metal_block_with_coral_Dry_Tortugas_20100629.jpg
+    creator: Jstuby
+    credit: Own work
+    license: CC0
+    license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    rights_status: cc0
+    alt_text: Metal block with corals on it (Diploria labyrinthiformis and Diploria strigosa) in shallow water next to Fort Jefferson, Dry Tortugas National Park, Florida.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:Metal_block_with_coral_Dry_Tortugas_20100629.jpg
+    rights_status: cc0
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: CC0
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets:
+  - asset_id: blc-keyart-brain-coral-01
+    path: brand/visuals/blc-keyart-brain-coral-01.jpg
+    role: generated_key_art
+    status: concept_only
+    use_limitations: Supporting visual only; not biological evidence, official identification media, or proof of conservation status.
 ---
 
 # Grooved Brain Coral (Diploria labyrinthiformis)

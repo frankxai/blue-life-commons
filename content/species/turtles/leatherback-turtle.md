@@ -1,64 +1,103 @@
 ---
 id: leatherback-turtle
 type: species-page
-title: "Leatherback Turtle (Dermochelys coriacea)"
+title: Leatherback Turtle (Dermochelys coriacea)
 species_group:
-  - turtles
+- turtles
 species:
-  - dermochelys-coriacea
+- dermochelys-coriacea
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/6494/43526147"
-    title: "IUCN Red List — Dermochelys coriacea (Leatherback Turtle), global assessment"
-    accessed: "2026-06-16"
-    tier: 1
-  - url: "https://www.fisheries.noaa.gov/species/leatherback-turtle"
-    title: "NOAA Fisheries — Leatherback Turtle"
-    accessed: "2026-06-16"
-    tier: 2
-  - url: "https://cites.org/eng/app/appendices.php"
-    title: "CITES Appendices (Dermochelys coriacea listed Appendix I)"
-    accessed: "2026-06-16"
-    tier: 2
+- url: https://www.iucnredlist.org/species/6494/43526147
+  title: "IUCN Red List \u2014 Dermochelys coriacea (Leatherback Turtle), global assessment"
+  accessed: '2026-06-16'
+  tier: 1
+- url: https://www.fisheries.noaa.gov/species/leatherback-turtle
+  title: "NOAA Fisheries \u2014 Leatherback Turtle"
+  accessed: '2026-06-16'
+  tier: 2
+- url: https://cites.org/eng/app/appendices.php
+  title: CITES Appendices (Dermochelys coriacea listed Appendix I)
+  accessed: '2026-06-16'
+  tier: 2
 review:
   science: required
   ethics: approved
   editor: pending
 iucn:
   category: VU
-  assessment_date: "2013"
+  assessment_date: '2013'
   scope: global
   population_trend: decreasing
 sensitivity:
   tier: high
-  rationale: "Nesting beaches concentrate reproductive females and eggs and are acutely vulnerable to disturbance and egg poaching; precise nesting locations are withheld per ETHICS.md."
+  rationale: Nesting beaches concentrate reproductive females and eggs and are acutely vulnerable to disturbance and egg poaching; precise nesting locations are withheld per ETHICS.md.
   generalized_to: regional
 welfare:
   state: pressured
   dominant_stressor: bycatch
   confidence: expert-opinion
   five_domains:
-    health: "Bycatch in longline, gillnet, and trawl gear is identified by NOAA Fisheries as the primary threat to the species (NOAA Fisheries)."
-    environment: "Nesting-beach loss and marine debris (including plastic mistaken for gelatinous prey) degrade critical habitat (NOAA Fisheries)."
-    behaviour: "Disturbance of nesting females and hatchlings interrupts reproduction; artificial light disorients hatchlings (ETHICS.md / NOAA Fisheries)."
+    health: Bycatch in longline, gillnet, and trawl gear is identified by NOAA Fisheries as the primary threat to the species (NOAA Fisheries).
+    environment: Nesting-beach loss and marine debris (including plastic mistaken for gelatinous prey) degrade critical habitat (NOAA Fisheries).
+    behaviour: Disturbance of nesting females and hatchlings interrupts reproduction; artificial light disorients hatchlings (ETHICS.md / NOAA Fisheries).
 consensus_state: settled
-last_verified: "2026-06-16"
+last_verified: '2026-06-16'
 outputs:
   website_path: /species/turtles/leatherback-turtle
   github_path: content/species/turtles/leatherback-turtle.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed species intelligence page for the leatherback turtle."
+  claim: Published a source-reviewed species intelligence page for the leatherback turtle.
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#leatherback-turtle
+  render_contract: content/media/species-media-render-contract.yaml#leatherback-turtle
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#leatherback-turtle
+  primary:
+    asset_id: leatherback-turtle-wikimedia-leatherbackturtle
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:LeatherbackTurtle.jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/LeatherbackTurtle.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/9/9b/LeatherbackTurtle.jpg
+    creator: National Oceanic and Atmospheric Administration, NOAA
+    credit: National Oceanic and Atmospheric Administration, NOAA
+    license: Public domain
+    license_url: null
+    rights_status: public-domain
+    alt_text: Adult Dermochelys coriacea, Leatherback Sea Turtle. In Las Baulas National Marine Park, Costa Rica.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:LeatherbackTurtle.jpg
+    rights_status: public-domain
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: Public domain
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets: []
 ---
 
 # Leatherback Turtle (Dermochelys coriacea)

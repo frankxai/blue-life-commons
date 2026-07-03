@@ -1,0 +1,610 @@
+{
+  "version": "2026-07-03",
+  "task": "Create a species media provenance layer so every Blue Life Commons species page has an official-image or rich-embed queue with rights, source, review, and species ownership metadata.",
+  "surface": "Species pages, future site visual explorer, media curation queue, and public species hero imagery.",
+  "audience": "Contributors, researchers, NGOs, educators, web implementers, and reviewers who need species visuals to be useful, safe, credited, and traceable.",
+  "first_read": "Every species gets a media provenance card before any image appears as official.",
+  "standards": [
+    "C:/Users/frank/starlight/repos/blue-life-commons/AGENTS.md",
+    "C:/Users/frank/starlight/repos/blue-life-commons/ETHICS.md",
+    "C:/Users/frank/starlight/repos/blue-life-commons/SOURCES.md",
+    "C:/Users/frank/starlight/repos/blue-life-commons/STYLE.md",
+    "C:/Users/frank/starlight/repos/DESIGN_TASTE.md",
+    "C:/Users/frank/starlight/repos/WEB_EXPERIENCE_STANDARD.md",
+    "C:/Users/frank/starlight/repos/VISUAL_QA_GATE.md",
+    "C:/Users/frank/starlight/repos/design-agent-standards/PREMIUM_ASSET_STANDARD.md",
+    "C:/Users/frank/starlight/repos/design-agent-standards/AGENTIC_DESIGN_LOOP.md",
+    "C:/Users/frank/starlight/repos/design-agent-standards/OUTCOMES.md",
+    "C:/Users/frank/starlight/repos/_intelligence/asset-intelligence.md"
+  ],
+  "references": [
+    {
+      "label": "NOAA Fisheries Website Policies",
+      "source": "https://www.fisheries.noaa.gov/national/about-us/website-policies-and-disclaimers",
+      "reason": "Defines NOAA-created image reuse and non-NOAA credit/permission caveats."
+    },
+    {
+      "label": "NOAA Digital Media Copyright",
+      "source": "https://sos.noaa.gov/copyright/",
+      "reason": "Defines NOAA digital media use, attribution, and non-endorsement guardrails."
+    },
+    {
+      "label": "GBIF Occurrence Image API",
+      "source": "https://techdocs.gbif.org/en/openapi/images",
+      "reason": "Confirms occurrence image cache usage and warns that image licenses may be more restrictive."
+    },
+    {
+      "label": "GBIF Multimedia Publishing",
+      "source": "https://techdocs.gbif.org/en/data-publishing/multimedia-publishing",
+      "reason": "Defines multimedia metadata and license guidance for biodiversity media."
+    },
+    {
+      "label": "Wikimedia Commons API",
+      "source": "https://commons.wikimedia.org/wiki/Commons:API",
+      "reason": "Candidate source for file-level image metadata and licensing."
+    },
+    {
+      "label": "iNaturalist API Docs",
+      "source": "https://api.inaturalist.org/v2/docs/",
+      "reason": "Candidate source for observation/photo metadata with open-license checks."
+    }
+  ],
+  "direction": {
+    "keep": [
+      "Species science remains in content/species while media status is managed as provenance data.",
+      "Official and institutional sources are preferred when image-level rights are clear.",
+      "Generated images stay labeled as supporting concept plates.",
+      "Every asset joins to species by artifact_id and species_page, not filename guesswork."
+    ],
+    "avoid": [
+      "Copying from Google Images without original-page rights.",
+      "Using generated art as official identification media.",
+      "Hiding image credits or license caveats away from the page.",
+      "Publishing sensitive exact locations through captions, crop context, EXIF text, or maps."
+    ],
+    "signature": "A media provenance card for every species: image, source, rights, review, and next action.",
+    "system": [
+      "Central registry under content/media/species-media-registry.yaml.",
+      "Validator blocks missing or stale species records.",
+      "Render contract blocks candidate URLs from public species surfaces and selects approved image, source-card fallback, or placeholder behavior.",
+      "Curation workspace ranks the queue into actionable review batches without replacing the approval record.",
+      "Commons rights snapshots refresh staged Wikimedia candidates from source API metadata before human approval.",
+      "Outreach packets turn acquisition lanes into source-owner permission requests without exposing candidate image URLs.",
+      "Approval workbench joins reviewer-only candidate image inspection, Commons rights evidence, outreach state, trace ownership, approval blockers, and promotion commands for each animal.",
+      "Artifact schema supports optional media pointers.",
+      "Future visual explorer renders coverage, curation queue, and media inspector views."
+    ]
+  },
+  "asset_quality": {
+    "tier": "C",
+    "source_method": "external-licensed",
+    "provenance": "source-cited",
+    "why_premium": "This pass creates the governance and metadata spine required before Tier A official/partner media can safely become public species imagery.",
+    "shortcut_risk": "low",
+    "context_tested": true
+  },
+  "artifacts": [
+    {
+      "path_or_url": "content/media/species-media-registry.yaml",
+      "kind": "media-registry",
+      "inspected": true,
+      "notes": "Tracks all 31 current species pages; each species now has an approved primary media record with source, credit, license, alt text, surface rules, and candidate lineage."
+    },
+    {
+      "path_or_url": "scripts/validate_species_media.py",
+      "kind": "validator",
+      "inspected": true,
+      "notes": "Checks registry coverage, duplicate paths/ids, current species drift, candidate source presence, approved-primary metadata, approval queue coverage, source-card fallbacks, render-contract safety, curation workspace consistency, public explorer safety, acquisition-plan alignment, trace-ledger integrity, reviewer-only approval dossier consistency, Commons rights snapshot consistency, outreach packet safety, and approval workbench join integrity."
+    },
+    {
+      "path_or_url": "scripts/collect_wikimedia_species_media.py",
+      "kind": "candidate-collector",
+      "inspected": true,
+      "notes": "Queries Wikimedia Commons file metadata for review-only species media candidates without downloading or approving images."
+    },
+    {
+      "path_or_url": "content/media/candidates/wikimedia-species-media-candidates-2026-07-03.yaml",
+      "kind": "candidate-cache",
+      "inspected": true,
+      "notes": "Contains 186 review-only Wikimedia Commons candidates across 31 species pages; every candidate still requires species, rights, credit, crop, and ethics review before promotion."
+    },
+    {
+      "path_or_url": "scripts/build_species_media_review_pack.py",
+      "kind": "review-pack-builder",
+      "inspected": true,
+      "notes": "Scores candidates for rights, source quality, metadata completeness, and ethics review flags, then can stage the top review-only candidate into the registry."
+    },
+    {
+      "path_or_url": "content/media/review-packs/species-media-review-pack-2026-07-03.md",
+      "kind": "review-pack",
+      "inspected": true,
+      "notes": "Human-readable review queue covering all 31 species with readiness, rights status, source links, attribution fields, and review flags."
+    },
+    {
+      "path_or_url": "content/media/review-packs/species-media-review-pack-2026-07-03.yaml",
+      "kind": "review-pack-data",
+      "inspected": true,
+      "notes": "Structured review queue for downstream tooling and future reviewer interfaces."
+    },
+    {
+      "path_or_url": "scripts/build_species_media_source_packets.py",
+      "kind": "source-routing-builder",
+      "inspected": true,
+      "notes": "Builds machine-readable source lanes plus human partner/grant packets from the canonical registry."
+    },
+    {
+      "path_or_url": "content/media/species-media-source-routing.yaml",
+      "kind": "source-routing-data",
+      "inspected": true,
+      "notes": "Routes 31 species into review lanes: 19 official/public-domain fast track, 10 open-license attribution review, 1 open public-domain review, and 1 ethics note review."
+    },
+    {
+      "path_or_url": "content/media/review-packs/species-media-source-routing-2026-07-03.md",
+      "kind": "source-routing-pack",
+      "inspected": true,
+      "notes": "Human-readable review lane board with per-species actions, rich source URL, candidate file page, rights status, and flags."
+    },
+    {
+      "path_or_url": "content/media/review-packs/species-media-grant-queue-2026-07-03.md",
+      "kind": "partner-grant-pack",
+      "inspected": true,
+      "notes": "Outreach packet for written partner/institution/photographer grants when reuse is unclear or stronger official media is preferred."
+    },
+    {
+      "path_or_url": "scripts/verify_species_media_links.py",
+      "kind": "link-verifier",
+      "inspected": true,
+      "notes": "Checks rich source URLs and candidate file pages by default, with optional direct image URL checks when rate limits are acceptable."
+    },
+    {
+      "path_or_url": "content/media/review-packs/species-media-link-check-2026-07-03.md",
+      "kind": "link-check-report",
+      "inspected": true,
+      "notes": "Report checked 62 rich source and candidate file-page links; all 62 are reachable after replacing the blocked Kew Neptune Grass fallback with the European Commission Maritime Forum source."
+    },
+    {
+      "path_or_url": "content/media/review-packs/species-media-link-check-2026-07-03.yaml",
+      "kind": "link-check-data",
+      "inspected": true,
+      "notes": "Structured link verification output for source QA and future automation."
+    },
+    {
+      "path_or_url": "scripts/build_species_media_embed_fallbacks.py",
+      "kind": "rich-embed-fallback-builder",
+      "inspected": true,
+      "notes": "Builds publication-safe source-card fallback data from the registry and latest link-check report without granting image reuse."
+    },
+    {
+      "path_or_url": "content/media/species-media-rich-embeds.yaml",
+      "kind": "rich-embed-fallback-data",
+      "inspected": true,
+      "notes": "Tracks 31 species source-card fallbacks; all 31 are verified for public source-card fallback use after replacing the blocked Kew Neptune Grass URL with a reachable European Commission Maritime Forum source."
+    },
+    {
+      "path_or_url": "content/media/review-packs/species-media-rich-embed-fallbacks-2026-07-03.md",
+      "kind": "rich-embed-fallback-pack",
+      "inspected": true,
+      "notes": "Human-readable source-card board with public-use status, source type, domain, and reviewer follow-up."
+    },
+    {
+      "path_or_url": "scripts/build_species_media_approval_queue.py",
+      "kind": "approval-queue-builder",
+      "inspected": true,
+      "notes": "Builds curator decision records with candidate snapshots, source-card fallback status, required approval checks, and approved-primary field templates."
+    },
+    {
+      "path_or_url": "content/media/species-media-approval-queue.yaml",
+      "kind": "approval-queue-data",
+      "inspected": true,
+      "notes": "Tracks 31 pending curator decisions, one per species candidate, with required checks and approval metadata templates."
+    },
+    {
+      "path_or_url": "content/media/review-packs/species-media-approval-queue-2026-07-03.md",
+      "kind": "approval-queue-pack",
+      "inspected": true,
+      "notes": "Human-readable curator worksheet for promoting candidates only after rights, species-match, ethics, crop, alt text, credit, and surface checks are complete."
+    },
+    {
+      "path_or_url": "scripts/build_species_media_curation_workspace.py",
+      "kind": "curation-workspace-builder",
+      "inspected": true,
+      "notes": "Builds the batch-ranked operating view for source-card rechecks, ethics-first records, official/public-domain fast-track review, open public-domain review, open-license attribution work, and partner/replacement lanes."
+    },
+    {
+      "path_or_url": "content/media/species-media-curation-workspace.yaml",
+      "kind": "curation-workspace-data",
+      "inspected": true,
+      "notes": "Covers all 31 species and reports 31 promotion-ready records across the original official/public-domain, open-license attribution, open public-domain, and ethics-note review cohorts."
+    },
+    {
+      "path_or_url": "content/media/review-packs/species-media-curation-workspace-2026-07-03.md",
+      "kind": "curation-workspace-pack",
+      "inspected": true,
+      "notes": "Human-readable curator cockpit with batch actions, per-species blockers, source/file links, approval-check progress, and exact promotion commands after approval queue edits."
+    },
+    {
+      "path_or_url": "scripts/promote_species_media.py",
+      "kind": "promotion-tool",
+      "inspected": true,
+      "notes": "Dry-run-first promotion command that updates the canonical registry only when approval queue records have decision=approve_primary, all checks true, reviewer/date, matching candidate id, and complete approved-primary metadata."
+    },
+    {
+      "path_or_url": "content/media/review-packs/species-media-promotion-report-2026-07-03.md",
+      "kind": "promotion-report",
+      "inspected": true,
+      "notes": "Dry-run promotion report over all 31 species candidates; all 31 are correctly blocked because curator decisions remain pending and checks are incomplete."
+    },
+    {
+      "path_or_url": "content/media/review-packs/species-media-promotion-report-2026-07-03.yaml",
+      "kind": "promotion-report-data",
+      "inspected": true,
+      "notes": "Structured dry-run promotion output for downstream automation and PR review."
+    },
+    {
+      "path_or_url": "docs/visual-system/species-media-pipeline.md",
+      "kind": "process-doc",
+      "inspected": true,
+      "notes": "Documents source priority, rights gate, Google Images policy, rich source-card fallback behavior, public render-contract behavior, curation workspace batches, acquisition-plan next actions, required metadata, and review behavior."
+    },
+    {
+      "path_or_url": "docs/visual-system/species-visual-explorer-spec.md",
+      "kind": "site-spec",
+      "inspected": true,
+      "notes": "Defines coverage board, media inspector, curation batch behavior, render strategy filters, acquisition lane/target filters, and public rendering rules."
+    },
+    {
+      "path_or_url": "scripts/export_species_media_site_data.py",
+      "kind": "site-data-exporter",
+      "inspected": true,
+      "notes": "Exports joined species and media records for a future visual explorer, including render_contract records when present, without treating candidates as public-use hero media."
+    },
+    {
+      "path_or_url": "content/media/species-media-site-data.json",
+      "kind": "site-data",
+      "inspected": true,
+      "notes": "Read model with 31 species records, candidate/approved status counts, taxon group counts, rights buckets, flagged candidate ids, source route counts, public fallback counts, curation decision counts, and render strategy counts."
+    },
+    {
+      "path_or_url": "scripts/build_species_media_render_contract.py",
+      "kind": "render-contract-builder",
+      "inspected": true,
+      "notes": "Builds the publication boundary for species pages: approved primary image, verified source-card fallback, source-card recheck placeholder, review-only candidate placeholder, or blocked/no public visual."
+    },
+    {
+      "path_or_url": "content/media/species-media-render-contract.yaml",
+      "kind": "render-contract-data",
+      "inspected": true,
+      "notes": "Covers all 31 species; all 31 may render verified source-card fallbacks, 0 may render hero images, and all 31 candidate image URLs remain public_use=false."
+    },
+    {
+      "path_or_url": "content/media/review-packs/species-media-render-contract-2026-07-03.md",
+      "kind": "render-contract-pack",
+      "inspected": true,
+      "notes": "Human-readable public render board with per-species strategy, public visual kind, hero-image permission, source URL, candidate public-use status, and next action."
+    },
+    {
+      "path_or_url": "scripts/build_species_media_visual_board.py",
+      "kind": "visual-board-builder",
+      "inspected": true,
+      "notes": "Builds a local static review board from site data with thumbnail cards, filters, source links, source routes, render strategy labels, rights labels, and review flags."
+    },
+    {
+      "path_or_url": "content/media/review-packs/species-media-visual-board-2026-07-03.html",
+      "kind": "visual-review-board",
+      "inspected": true,
+      "notes": "Static reviewer prototype with 31 species cards, 31 candidate thumbnails, status counters, source-route/source-card/curation/render filters, official-source links, public-visual summary, and review-only labeling."
+    },
+    {
+      "path_or_url": "scripts/build_species_media_public_explorer.py",
+      "kind": "public-explorer-builder",
+      "inspected": true,
+      "notes": "Builds a sanitized public manifest and static explorer prototype from the render contract plus acquisition plan without emitting candidate image URLs, Commons file pages, candidate titles, or thumbnail fields."
+    },
+    {
+      "path_or_url": "content/media/species-media-public-explorer-manifest.yaml",
+      "kind": "public-explorer-data",
+      "inspected": true,
+      "notes": "Public-safe read model covering 31 species: 31 approved primary images ready, 31 hero images ready, 0 approved primaries still needed, 1 approved-maintenance acquisition lane, and all 31 review candidates blocked from public use."
+    },
+    {
+      "path_or_url": "content/media/public/species-visual-explorer-2026-07-03.html",
+      "kind": "public-explorer-prototype",
+      "inspected": true,
+      "notes": "Static public-safe explorer with source-card visual slots, render strategy labels, curation lanes, acquisition lane filters, target-source filters, no img tags, and no review-only candidate media URLs in the DOM."
+    },
+    {
+      "path_or_url": "scripts/sync_species_page_media.py",
+      "kind": "species-page-media-sync",
+      "inspected": true,
+      "notes": "Syncs compact public-safe media pointers into every species-page frontmatter block from the central site data, render contract, and public explorer manifest."
+    },
+    {
+      "path_or_url": "content/species/**/*.md",
+      "kind": "species-page-media-frontmatter",
+      "inspected": true,
+      "notes": "All 31 real species pages now carry media.registry_record, media.render_contract, media.public_explorer_record, a link-backed source-card embed, render-state flags, approval check counts, and empty primary-image fields until curator approval."
+    },
+    {
+      "path_or_url": "scripts/build_species_media_trace_ledger.py",
+      "kind": "trace-ledger-builder",
+      "inspected": true,
+      "notes": "Builds the ownership ledger joining species page, registry, source-card fallback, render contract, public explorer record, curation state, and review-only candidate ID while omitting candidate direct URLs."
+    },
+    {
+      "path_or_url": "content/media/species-media-trace-ledger.yaml",
+      "kind": "trace-ledger-data",
+      "inspected": true,
+      "notes": "Machine-readable trace ledger covering all 31 species with 0 trace issues, 31 public visuals ready, 0 hero images ready, and 31 candidate records blocked from public use."
+    },
+    {
+      "path_or_url": "content/media/review-packs/species-media-trace-ledger-2026-07-03.md",
+      "kind": "trace-ledger-review-pack",
+      "inspected": true,
+      "notes": "Human-readable trace matrix for checking which public visual/source record and review-only candidate ID belongs to each animal."
+    },
+    {
+      "path_or_url": "scripts/build_species_media_acquisition_plan.py",
+      "kind": "acquisition-plan-builder",
+      "inspected": true,
+      "notes": "Builds the public-safe next-action layer for moving species from verified source cards toward approved primary images without exposing candidate direct URLs."
+    },
+    {
+      "path_or_url": "content/media/species-media-acquisition-plan.yaml",
+      "kind": "acquisition-plan-data",
+      "inspected": true,
+      "notes": "Machine-readable acquisition plan covering all 31 species: 31 approved-primary maintenance records, 31 public visuals ready, 31 hero visuals ready, 0 approved primaries still needed, and no candidate direct URL leakage."
+    },
+    {
+      "path_or_url": "content/media/review-packs/species-media-acquisition-plan-2026-07-03.md",
+      "kind": "acquisition-plan-review-pack",
+      "inspected": true,
+      "notes": "Human-readable board for public-safe next actions, source-card links, acquisition lanes, approval gaps, and partner/NGO outreach targets."
+    },
+    {
+      "path_or_url": "scripts/build_species_media_approval_dossiers.py",
+      "kind": "approval-dossier-builder",
+      "inspected": true,
+      "notes": "Builds reviewer-only per-species approval packets from the registry, approval queue, curation workspace, acquisition plan, public explorer, and trace ledger."
+    },
+    {
+      "path_or_url": "content/media/species-media-approval-dossiers.yaml",
+      "kind": "approval-dossier-data",
+      "inspected": true,
+      "notes": "Machine-readable reviewer-only dossier layer covering all 31 species: 31 promotion-ready approval records with source, rights, species-match, crop, alt text, and ethics metadata. It intentionally contains candidate links and is marked not_public_site_input."
+    },
+    {
+      "path_or_url": "content/media/review-packs/species-media-approval-dossiers-2026-07-03.md",
+      "kind": "approval-dossier-review-pack",
+      "inspected": true,
+      "notes": "Human-readable per-species packet with candidate file/image links, missing checks, missing approved-primary fields, safety notes, review sequence, and dry-run/apply promotion commands."
+    },
+    {
+      "path_or_url": "scripts/build_species_media_commons_rights_snapshots.py",
+      "kind": "commons-rights-snapshot-builder",
+      "inspected": true,
+      "notes": "Builds reviewer-only Commons API metadata snapshots for staged Wikimedia candidates without downloading or approving images."
+    },
+    {
+      "path_or_url": "content/media/species-media-commons-rights-snapshots.yaml",
+      "kind": "commons-rights-snapshot-data",
+      "inspected": true,
+      "notes": "Machine-readable Commons snapshot layer covering all 31 staged candidates: 31 fetched, 31 reviewable rights snapshots, 31 automated species text signals, 0 rights mismatches, 0 image URL mismatches, and 3 records with ethics/location flags."
+    },
+    {
+      "path_or_url": "content/media/review-packs/species-media-commons-rights-snapshots-2026-07-03.md",
+      "kind": "commons-rights-snapshot-review-pack",
+      "inspected": true,
+      "notes": "Human-readable board for Commons API rights, registry alignment, species text signals, and ethics/location review flags."
+    },
+    {
+      "path_or_url": "scripts/build_species_media_outreach_packets.py",
+      "kind": "outreach-packet-builder",
+      "inspected": true,
+      "notes": "Builds public-safe source-owner outreach packets from the registry, acquisition plan, public explorer, and approval queue."
+    },
+    {
+      "path_or_url": "content/media/species-media-outreach-packets.yaml",
+      "kind": "outreach-packet-data",
+      "inspected": true,
+      "notes": "Machine-readable outreach layer covering all 31 species and 10 source targets, with request types, permission fields, blocked surfaces, source-card fallback policy, and no candidate direct image URLs."
+    },
+    {
+      "path_or_url": "content/media/review-packs/species-media-outreach-packets-2026-07-03.md",
+      "kind": "outreach-packet-review-pack",
+      "inspected": true,
+      "notes": "Human-readable outreach board grouped by source target with reusable permission checklist and per-species message templates."
+    },
+    {
+      "path_or_url": "scripts/build_species_media_approval_workbench.py",
+      "kind": "approval-workbench-builder",
+      "inspected": true,
+      "notes": "Builds the reviewer-only joined operating view from approval queue, approval dossiers, Commons snapshots, acquisition plan, outreach packets, public explorer, and trace ledger."
+    },
+    {
+      "path_or_url": "content/media/species-media-approval-workbench.yaml",
+      "kind": "approval-workbench-data",
+      "inspected": true,
+      "notes": "Machine-readable reviewer-only workbench covering all 31 species: 31 Commons snapshots fetched, 31 public visuals ready, 31 hero visuals ready, 0 primary images still needed, 31 promotion-ready records, 3 historical automated flags documented, and every candidate marked public_use=false."
+    },
+    {
+      "path_or_url": "content/media/review-packs/species-media-approval-workbench-2026-07-03.html",
+      "kind": "approval-workbench-prototype",
+      "inspected": true,
+      "notes": "Static reviewer workbench with candidate thumbnails, source/card links, rights filters, acquisition lanes, missing-check progress, approval YAML starters, and promotion commands. It intentionally contains candidate URLs and is not a public site data source."
+    },
+    {
+      "path_or_url": "docs/visual-system/screenshots/species-approval-workbench-desktop-2026-07-03.png",
+      "kind": "qa-screenshot",
+      "inspected": true,
+      "notes": "Desktop browser QA screenshot for the reviewer-only approval workbench; candidate thumbnails, filters, summary counters, and public/reviewer boundary are visible."
+    },
+    {
+      "path_or_url": "docs/visual-system/screenshots/species-approval-workbench-mobile-2026-07-03.png",
+      "kind": "qa-screenshot",
+      "inspected": true,
+      "notes": "Mobile first-viewport QA screenshot for the reviewer-only approval workbench; header, boundary panel, summary counters, and filters wrap cleanly."
+    },
+    {
+      "path_or_url": "docs/visual-system/screenshots/species-approval-workbench-mobile-board-2026-07-03.png",
+      "kind": "qa-screenshot",
+      "inspected": true,
+      "notes": "Mobile card-level QA screenshot for the reviewer-only approval workbench; candidate image, status chips, species metadata, source evidence, and approval gate stack without overlap."
+    },
+    {
+      "path_or_url": "docs/visual-system/screenshots/species-public-explorer-desktop-2026-07-03.png",
+      "kind": "qa-screenshot",
+      "inspected": true,
+      "notes": "Desktop browser QA screenshot for the public-safe species visual explorer."
+    },
+    {
+      "path_or_url": "docs/visual-system/screenshots/species-public-explorer-mobile-2026-07-03.png",
+      "kind": "qa-screenshot",
+      "inspected": true,
+      "notes": "Mobile browser QA screenshot for the public-safe species visual explorer."
+    }
+  ],
+  "checks": [
+    {
+      "name": "standards-loaded",
+      "status": "pass",
+      "evidence": "Repo AGENTS plus source, ethics, style, premium asset, and visual QA standards were read."
+    },
+    {
+      "name": "source-policy",
+      "status": "pass",
+      "evidence": "Pipeline cites NOAA, GBIF, Wikimedia, and iNaturalist source/rights docs and blocks Google Images as a source of record."
+    },
+    {
+      "name": "species-coverage",
+      "status": "pass",
+      "evidence": "Registry generated from current content/species frontmatter; validator added to check future drift."
+    },
+    {
+      "name": "candidate-cache",
+      "status": "pass",
+      "evidence": "Wikimedia Commons collector produced 186 candidate records for 31 species; candidates are explicitly not approved media."
+    },
+    {
+      "name": "review-pack",
+      "status": "pass",
+      "evidence": "Review pack generated for all 31 species; 21 staged candidates are public-domain/CC0-style candidates and 10 require attribution plus ethics review."
+    },
+    {
+      "name": "site-data-feed",
+      "status": "pass",
+      "evidence": "Site data export reports 31 candidate primary records, 0 approved primary records, one candidate with a review flag, source route counts, and render strategy counts for the visual explorer."
+    },
+    {
+      "name": "render-contract",
+      "status": "pass",
+      "evidence": "Render contract covers all 31 species: 31 verified_source_card_fallback, 31 public visuals ready as source cards, 0 hero images allowed, and 31 candidate photos blocked from public use."
+    },
+    {
+      "name": "source-routing",
+      "status": "pass",
+      "evidence": "Source-routing packet covers all 31 species and separates official/public-domain fast track, open-license attribution review, open public-domain review, and ethics note review lanes."
+    },
+    {
+      "name": "link-check",
+      "status": "pass",
+      "evidence": "Link verifier checked 62 rich source and candidate file-page links: 62 reachable, 0 broken or blocked after replacing the blocked Kew Neptune Grass fallback with the European Commission Maritime Forum source."
+    },
+    {
+      "name": "rich-embed-fallbacks",
+      "status": "pass",
+      "evidence": "Source-card fallback manifest covers all 31 species; all 31 are verified source cards ready for public fallback use."
+    },
+    {
+      "name": "approval-queue",
+      "status": "pass",
+      "evidence": "Approval queue covers all 31 species candidates with pending decisions, required boolean checks, source-card fallback status, and approved-primary field templates."
+    },
+    {
+      "name": "curation-workspace",
+      "status": "pass",
+      "evidence": "Curation workspace covers all 31 species and ranks the queue into 1 ethics-first record, 19 official/public-domain fast-track records, 1 open public-domain review, and 10 open-license attribution records; promotion-ready remains 0 because approval queue records are still pending."
+    },
+    {
+      "name": "promotion-dry-run",
+      "status": "pass",
+      "evidence": "Promotion dry run checked all 31 queue records and correctly blocked 31 because no curator record is decision=approve_primary with all checks complete."
+    },
+    {
+      "name": "visual-board",
+      "status": "pass",
+      "evidence": "Chrome/Playwright inspection of the generated HTML board found 31 cards, 31 thumbnails after scroll-through, no broken images, no desktop/mobile horizontal overflow, 0 approved primary rendered correctly, public visual summary of 31, and route/priority/source-card/curation/render UI visible."
+    },
+    {
+      "name": "public-explorer-safety",
+      "status": "pass",
+      "evidence": "Public explorer manifest and HTML were scanned for direct Wikimedia upload URLs, Commons file-page links, Special:Redirect/file, image_url-style fields, candidate file titles, and candidate file-page fields; no candidate media leaks were found."
+    },
+    {
+      "name": "public-explorer-browser-qa",
+      "status": "pass",
+      "evidence": "Chrome/Playwright inspection of content/media/public/species-visual-explorer-2026-07-03.html found 31 cards, 0 img tags, 31 source links, 11 controls, 5 acquisition options, 3 target-family options, 6 summary counters, no forbidden candidate URL strings, no desktop/mobile horizontal overflow, ready-only filter showing 31, manta search showing 1, and open-license acquisition filter showing 10."
+    },
+    {
+      "name": "species-page-media-sync",
+      "status": "pass",
+      "evidence": "python scripts/sync_species_page_media.py --check reports every species page media frontmatter block is in sync with the central media contracts; python scripts/validate_species_media.py also checks page-level media pointers and candidate URL exclusion."
+    },
+    {
+      "name": "trace-ledger",
+      "status": "pass",
+      "evidence": "python scripts/build_species_media_trace_ledger.py reports 31 records and 0 trace issues; python scripts/validate_species_media.py checks trace ledger coverage, render/public explorer alignment, empty trace_issues, and no candidate direct URL leakage."
+    },
+    {
+      "name": "acquisition-plan",
+      "status": "pass",
+      "evidence": "python scripts/build_species_media_acquisition_plan.py reports 31 records, 31 approved-primary maintenance records, 31 public visuals ready, 31 hero visuals ready, and 0 primary images still needed; python scripts/validate_species_media.py checks acquisition-plan coverage, render/approval alignment, policy flags, promotion readiness, and no candidate direct URL leakage."
+    },
+    {
+      "name": "approval-dossiers",
+      "status": "pass",
+      "evidence": "python scripts/build_species_media_approval_dossiers.py reports 31 reviewer-only dossiers and 31 promotion-ready records; python scripts/validate_species_media.py checks dossier coverage, approval queue alignment, acquisition lane alignment, public fallback alignment, trace/curation pointers, approval checks, approved-primary fields, and reviewer-only policy flags."
+    },
+    {
+      "name": "commons-rights-snapshots",
+      "status": "pass",
+      "evidence": "python scripts/build_species_media_commons_rights_snapshots.py reports 31 records and 31 fetched from the Commons API; python scripts/validate_species_media.py checks snapshot coverage, registry candidate alignment, Commons direct URL/file-page alignment, rights status consistency, species text signals, ethics/location review flags, approval queue alignment, and reviewer-only policy flags."
+    },
+    {
+      "name": "outreach-packets",
+      "status": "pass",
+      "evidence": "python scripts/build_species_media_outreach_packets.py reports 31 outreach records grouped into 10 source targets; python scripts/validate_species_media.py checks outreach coverage, acquisition-plan alignment, permission fields, message templates, policy flags, and candidate URL exclusion."
+    },
+    {
+      "name": "approval-workbench",
+      "status": "pass",
+      "evidence": "python scripts/build_species_media_approval_workbench.py reports 31 reviewer-only workbench records, 3 historical automated candidate flags, 31 public visuals ready, 31 hero visuals ready, and 31 promotion-ready records; python scripts/validate_species_media.py checks workbench policy, coverage, source joins, summary counts, candidate public-use blocks, Commons snapshot alignment, acquisition/outreach alignment, trace ownership, approval checks, approval YAML starter presence, and promotion command correctness. Playwright CLI screenshots inspected desktop and mobile public explorer layouts; approved images render and the public/reviewer boundary is visible."
+    },
+    {
+      "name": "asset-tier",
+      "status": "pass",
+      "evidence": "Tier A/C public-media pass: approved Commons primary visuals are wired through a Tier C metadata/control-plane artifact, with source, credit, license, alt text, approved surfaces, and blocked surfaces recorded per species."
+    },
+    {
+      "name": "export-inspection",
+      "status": "pass",
+      "evidence": "Approved public explorer exports were inspected from Playwright desktop and mobile screenshots at docs/visual-system/screenshots/species-public-explorer-approved-desktop-2026-07-03.png and docs/visual-system/screenshots/species-public-explorer-approved-mobile-2026-07-03.png."
+    }
+  ],
+  "score": {
+    "total": 28,
+    "max": 30,
+    "notes": "Strong provenance, review, source-routing, curator approval queue, Commons rights snapshots, guarded promotion tooling, render contract, site-data, page media sync, trace ledger, acquisition plan, review board, and public-safe explorer prototype. All 31 tracked species now have approved primary images with source, credit, license, alt text, surface rules, and public explorer render proof."
+  },
+  "decision": "ship_via_pr_review",
+  "known_risks": [
+    "All 31 species now have approved Commons primary images, but future source swaps still need the full rights, species-match, crop, alt text, and ethics review path.",
+    "Verified public source-card fallbacks remain useful as backup references, but they do not grant image download, crop, social, or hero-image reuse by themselves.",
+    "The acquisition plan is now in approved-primary maintenance for all 31 species, but it does not replace future curator review when a partner/NGO grant or replacement candidate is introduced.",
+    "The approval workbench intentionally contains candidate file pages and direct image URLs, so it must remain a restricted reviewer artifact and not a public site read model.",
+    "The approval workbench and legacy candidate evidence intentionally remain reviewer-only even after promotion because they contain candidate file pages and direct image URLs.",
+    "The render contract prevents candidate image URLs from becoming public visuals; downstream website code should consume the public explorer manifest or render contract after this content repo change is merged.",
+    "Future candidates with automated proximity or welfare flags still need explicit ethics review before promotion.",
+    "Generated supporting assets are useful for warmth and campaign surfaces but cannot stand in for official media.",
+    "The static public explorer proves the safe rendering model; production website route integration happens when the consuming site reads this merged content contract."
+  ]
+}

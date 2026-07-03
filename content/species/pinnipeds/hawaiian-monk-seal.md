@@ -1,65 +1,104 @@
 ---
 id: species-hawaiian-monk-seal
 type: species-page
-title: "Hawaiian Monk Seal (Neomonachus schauinslandi)"
+title: Hawaiian Monk Seal (Neomonachus schauinslandi)
 species_group:
-  - pinnipeds
+- pinnipeds
 species:
-  - neomonachus-schauinslandi
+- neomonachus-schauinslandi
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/13654/45227978"
-    title: "IUCN Red List — Neomonachus schauinslandi (Hawaiian Monk Seal)"
-    accessed: "2026-06-16"
-    tier: 1
-  - url: "https://www.fisheries.noaa.gov/species/hawaiian-monk-seal"
-    title: "Hawaiian Monk Seal — NOAA Fisheries"
-    accessed: "2026-06-16"
-    tier: 2
-  - url: "https://cites.org/eng/app/appendices.php"
-    title: "CITES Appendices (Neomonachus schauinslandi listed Appendix I)"
-    accessed: "2026-06-16"
-    tier: 2
+- url: https://www.iucnredlist.org/species/13654/45227978
+  title: "IUCN Red List \u2014 Neomonachus schauinslandi (Hawaiian Monk Seal)"
+  accessed: '2026-06-16'
+  tier: 1
+- url: https://www.fisheries.noaa.gov/species/hawaiian-monk-seal
+  title: "Hawaiian Monk Seal \u2014 NOAA Fisheries"
+  accessed: '2026-06-16'
+  tier: 2
+- url: https://cites.org/eng/app/appendices.php
+  title: CITES Appendices (Neomonachus schauinslandi listed Appendix I)
+  accessed: '2026-06-16'
+  tier: 2
 iucn:
   category: EN
-  assessment_date: "2015"
+  assessment_date: '2015'
   scope: global
   population_trend: increasing
 sensitivity:
   tier: extreme
-  rationale: "Endangered species with very small population; haul-out and pupping sites are harassment and disturbance targets. No precise locations published."
+  rationale: Endangered species with very small population; haul-out and pupping sites are harassment and disturbance targets. No precise locations published.
   generalized_to: regional
 welfare:
   state: critical
   dominant_stressor: prey-limitation
   confidence: expert-opinion
   five_domains:
-    nutrition: "Food limitation, especially for juveniles, is a leading constraint on recovery (NOAA Fisheries, accessed 2026-06-16)."
-    health: "Shark predation, toxoplasmosis (a leading cause of death in the main Hawaiian Islands), and entanglement in marine debris are documented threats (NOAA Fisheries, accessed 2026-06-16)."
-    environment: "Habitat loss from erosion and sea-level rise reduces pupping and resting habitat in low-lying atolls (NOAA Fisheries, accessed 2026-06-16)."
-    behaviour: "Human disturbance of resting seals on main-island beaches interrupts rest and can displace mothers and pups (NOAA Fisheries, accessed 2026-06-16)."
+    nutrition: Food limitation, especially for juveniles, is a leading constraint on recovery (NOAA Fisheries, accessed 2026-06-16).
+    health: Shark predation, toxoplasmosis (a leading cause of death in the main Hawaiian Islands), and entanglement in marine debris are documented threats (NOAA Fisheries, accessed 2026-06-16).
+    environment: Habitat loss from erosion and sea-level rise reduces pupping and resting habitat in low-lying atolls (NOAA Fisheries, accessed 2026-06-16).
+    behaviour: Human disturbance of resting seals on main-island beaches interrupts rest and can displace mothers and pups (NOAA Fisheries, accessed 2026-06-16).
 review:
   science: required
   ethics: approved
   editor: pending
 consensus_state: settled
-last_verified: "2026-06-16"
+last_verified: '2026-06-16'
 outputs:
   website_path: /species/pinnipeds/hawaiian-monk-seal
   github_path: content/species/pinnipeds/hawaiian-monk-seal.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed species intelligence page for the endangered Hawaiian monk seal."
+  claim: Published a source-reviewed species intelligence page for the endangered Hawaiian monk seal.
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#species-hawaiian-monk-seal
+  render_contract: content/media/species-media-render-contract.yaml#species-hawaiian-monk-seal
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-hawaiian-monk-seal
+  primary:
+    asset_id: species-hawaiian-monk-seal-wikimedia-moenchsrobbe-1
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:Moenchsrobbe_1.jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Moenchsrobbe_1.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/f/f9/Moenchsrobbe_1.jpg
+    creator: U.S. Fish and Wildlife Service
+    credit: http://images.fws.gov
+    license: Public domain
+    license_url: null
+    rights_status: public-domain
+    alt_text: Hawaiian Monk Seal.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:Moenchsrobbe_1.jpg
+    rights_status: public-domain
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: Public domain
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets: []
 ---
 
 # Hawaiian Monk Seal (Neomonachus schauinslandi)

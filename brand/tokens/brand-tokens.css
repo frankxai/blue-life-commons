@@ -1,0 +1,52 @@
+/* Blue Life Commons — Visual Tokens (2026-06-26 seed)
+   Extends hero.svg palette with warm life accents.
+   Use with dark-first preference (underwater + surface hope).
+*/
+
+:root {
+  /* Deep Ocean Base */
+  --blc-abyss: #041014;
+  --blc-midnight: #06202A;
+  --blc-deep-teal: #083241;
+
+  /* Signature */
+  --blc-teal: #4FD1C5;        /* Primary — Teal Current */
+  --blc-sky: #38BDF8;         /* Secondary — Sky Light */
+  --blc-gold: #F5B84B;        /* Warm hope — Sunbreak */
+
+  /* Light / Text */
+  --blc-foam: #F2FBFF;
+  --blc-mist: #A9D7E2;
+
+  /* Life Accents (use sparingly) */
+  --blc-coral: #E07A5F;
+  --blc-kelp: #2E8B57;
+
+  /* Surfaces & UI */
+  --blc-surface: #071D24;
+  --blc-surface-2: #0A2530;
+  --blc-border: rgba(79, 209, 197, 0.2);
+
+  /* Typography (recommend Inter / Geist family) */
+  --blc-font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --blc-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Glass / elevated card (matches hero language) */
+.blc-glass {
+  background: color-mix(in oklab, var(--blc-surface) 85%, transparent);
+  border: 1px solid var(--blc-border);
+  backdrop-filter: blur(20px) saturate(160%);
+}
+
+/* Accent buttons / tags */
+.blc-btn-primary {
+  background: var(--blc-teal);
+  color: var(--blc-abyss);
+}
+
+.blc-tag {
+  background: var(--blc-deep-teal);
+  color: var(--blc-foam);
+  border: 1px solid var(--blc-teal);
+}

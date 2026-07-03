@@ -1,0 +1,1922 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blue Life Commons Public Species Visual Explorer</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #102126;
+      --muted: #5c6d70;
+      --paper: #f7f7f1;
+      --panel: #ffffff;
+      --line: #d6ddd9;
+      --line-strong: #9fb3ae;
+      --sea: #0e6f70;
+      --kelp: #466f33;
+      --clay: #a6533d;
+      --sun: #b07a16;
+      --deep: #18445a;
+      --violet: #65507c;
+      --shadow: 0 16px 44px rgba(16, 33, 38, 0.11);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.72), rgba(247,247,241,0.92)),
+        repeating-linear-gradient(90deg, rgba(16,33,38,0.035) 0 1px, transparent 1px 96px);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+    main {
+      width: min(1480px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 28px 0 40px;
+    }
+    header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+      gap: 28px;
+      align-items: end;
+      min-height: 232px;
+      border-bottom: 1px solid var(--line);
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--sea);
+      font-weight: 800;
+      font-size: 0.78rem;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      max-width: 850px;
+      font-size: 3.1rem;
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      max-width: 820px;
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+    .contract-panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.84);
+      padding: 16px;
+      box-shadow: 0 10px 28px rgba(16,33,38,0.07);
+    }
+    .contract-panel h2 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+    .contract-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 0;
+    }
+    .contract-list div {
+      border-top: 1px solid var(--line);
+      padding-top: 8px;
+      min-width: 0;
+    }
+    .contract-list dt {
+      color: var(--muted);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+    .contract-list dd {
+      margin: 3px 0 0;
+      font-size: 1.16rem;
+      font-weight: 780;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .summary-item {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 13px 15px;
+      min-width: 0;
+      box-shadow: 0 8px 24px rgba(16,33,38,0.06);
+    }
+    .summary-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 760;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+    .summary-item strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 1.85rem;
+      line-height: 1.08;
+    }
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      display: grid;
+      grid-template-columns: minmax(200px, 1.25fr) repeat(9, minmax(104px, 0.65fr)) minmax(88px, auto);
+      gap: 9px;
+      align-items: center;
+      padding: 13px 0;
+      background: rgba(247,247,241,0.91);
+      backdrop-filter: blur(12px);
+    }
+    input, select {
+      width: 100%;
+      min-height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      color: var(--ink);
+      padding: 0 11px;
+      font: inherit;
+    }
+    label.checkbox {
+      display: inline-flex;
+      min-height: 42px;
+      align-items: center;
+      gap: 7px;
+      color: var(--muted);
+      white-space: nowrap;
+      font-weight: 680;
+    }
+    .count {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .species-card {
+      overflow: hidden;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+    .species-card::before {
+      content: "";
+      display: block;
+      height: 5px;
+      background: var(--sea);
+    }
+    .group-pinnipeds::before { background: var(--clay); }
+    .group-turtles::before { background: var(--kelp); }
+    .group-sharks-rays::before { background: var(--deep); }
+    .group-reefs::before { background: var(--sun); }
+    .group-sirenians::before { background: var(--violet); }
+    .source-plate {
+      min-height: 170px;
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr);
+      grid-template-rows: 1fr auto;
+      gap: 14px;
+      padding: 18px;
+      background:
+        linear-gradient(135deg, rgba(14,111,112,0.12), rgba(255,255,255,0.88) 44%, rgba(176,122,22,0.12)),
+        var(--panel);
+      border-bottom: 1px solid var(--line);
+    }
+    .source-plate-pending {
+      background:
+        linear-gradient(135deg, rgba(166,83,61,0.13), rgba(255,255,255,0.9) 46%, rgba(92,109,112,0.11)),
+        var(--panel);
+    }
+    .image-plate {
+      position: relative;
+      min-height: 230px;
+      margin: 0;
+      overflow: hidden;
+      background: #e7eee9;
+      border-bottom: 1px solid var(--line);
+    }
+    .image-plate img {
+      display: block;
+      width: 100%;
+      height: 260px;
+      object-fit: contain;
+      object-position: center;
+      background: #dfe8e4;
+    }
+    .image-plate figcaption {
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      display: grid;
+      gap: 2px;
+      max-width: calc(100% - 24px);
+      padding: 9px 10px;
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 8px;
+      background: rgba(16, 33, 38, 0.72);
+      color: #fff;
+      backdrop-filter: blur(8px);
+    }
+    .image-plate figcaption span {
+      font-size: 0.7rem;
+      font-weight: 820;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      color: rgba(255,255,255,0.78);
+    }
+    .image-plate figcaption strong,
+    .image-plate figcaption small {
+      overflow-wrap: anywhere;
+    }
+    .image-plate figcaption strong {
+      font-size: 0.92rem;
+      line-height: 1.12;
+    }
+    .image-plate figcaption small {
+      color: rgba(255,255,255,0.76);
+      font-size: 0.72rem;
+      line-height: 1.15;
+    }
+    .source-mark {
+      width: 72px;
+      height: 72px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line-strong);
+      border-radius: 8px;
+      color: var(--deep);
+      background: rgba(255,255,255,0.76);
+      font-size: 2rem;
+      font-weight: 820;
+    }
+    .source-copy { min-width: 0; }
+    .source-kicker {
+      margin: 2px 0 5px;
+      color: var(--sea);
+      font-size: 0.78rem;
+      font-weight: 820;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+    .source-domain {
+      margin: 0;
+      font-size: 1.23rem;
+      line-height: 1.15;
+      font-weight: 820;
+      overflow-wrap: anywhere;
+    }
+    .source-type {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      overflow-wrap: anywhere;
+    }
+    .source-note {
+      grid-column: 1 / -1;
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+    .card-body { padding: 16px; }
+    .pill-row, .surface-row, .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      align-items: center;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      max-width: 100%;
+      padding: 3px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #f3f6f3;
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 740;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      overflow-wrap: anywhere;
+    }
+    .pill-ready { border-color: #a7c9bd; color: var(--sea); background: #eef8f3; }
+    .pill-pending { border-color: #e2c1b6; color: var(--clay); background: #fff1ec; }
+    .pill-kind { border-color: #c7d5da; color: var(--deep); background: #eef6f8; }
+    .pill-render { border-color: #d9c69d; color: #76520d; background: #fff8e8; }
+    .pill-blocked { border-color: #d8d4c9; color: #59666a; background: #f7f4ee; }
+    .pill-priority { border-color: #beb4d2; color: var(--violet); background: #f4f0fa; }
+    .pill-acquisition { border-color: #b9cda9; color: var(--kelp); background: #f1f8ee; }
+    h2 {
+      margin: 13px 0 0;
+      font-size: 1.22rem;
+      line-height: 1.16;
+      letter-spacing: 0;
+    }
+    .scientific {
+      margin: 3px 0 14px;
+      color: var(--muted);
+      font-style: italic;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 12px;
+      margin: 0;
+    }
+    dt {
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 760;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+    dd {
+      margin: 2px 0 0;
+      overflow-wrap: anywhere;
+      font-size: 0.91rem;
+    }
+    .surface-row { margin-top: 14px; }
+    .links { margin-top: 14px; min-height: 36px; }
+    .source-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink);
+      background: #fbfcfa;
+      text-decoration: none;
+      font-weight: 760;
+      font-size: 0.9rem;
+    }
+    .source-link:hover, .source-link:focus {
+      border-color: var(--sea);
+      color: var(--sea);
+      outline: none;
+    }
+    .hidden { display: none; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+    @media (max-width: 1240px) {
+      .toolbar { grid-template-columns: minmax(220px, 1fr) minmax(150px, 0.6fr) minmax(150px, 0.6fr); }
+      .summary-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .board { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 760px) {
+      main { width: min(100% - 32px, 640px); padding-top: 18px; }
+      header, .board, .meta-grid { grid-template-columns: 1fr; }
+      header { min-height: auto; padding-bottom: 16px; gap: 18px; }
+      h1 { font-size: 2rem; }
+      .subtitle { font-size: 0.98rem; }
+      .summary-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+      .summary-item { padding: 10px; }
+      .summary-item span { font-size: 0.68rem; }
+      .summary-item strong { font-size: 1.45rem; }
+      .toolbar { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+      .toolbar input { grid-column: 1 / -1; }
+      .contract-list { grid-template-columns: 1fr 1fr; }
+      .source-plate { grid-template-columns: 58px minmax(0, 1fr); min-height: 154px; padding: 15px; }
+      .source-mark { width: 58px; height: 58px; font-size: 1.55rem; }
+    }
+    @media (max-width: 430px) {
+      main { width: min(100% - 24px, 390px); }
+      h1 { font-size: 1.88rem; }
+      .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <main data-public-explorer="true">
+    <header>
+      <div>
+        <p class="eyebrow">Blue Life Commons media contract</p>
+        <h1>Public Species Visual Explorer</h1>
+      <p class="subtitle">Every species now has an approved primary image with source, credit, license, alt text, and blocked-surface rules. Candidate evidence stays hidden from public routes.</p>
+      </div>
+      <section class="contract-panel" aria-label="Publication contract">
+        <h2>Render Boundary</h2>
+        <dl class="contract-list">
+          <div><dt>Generated</dt><dd>2026-07-03</dd></div>
+          <div><dt>Candidate URLs</dt><dd>omitted</dd></div>
+          <div><dt>Approved Images</dt><dd>31</dd></div>
+          <div><dt>Primary needed</dt><dd>0</dd></div>
+        </dl>
+      </section>
+    </header>
+    <section class="summary-grid" aria-label="Summary">
+      <div class="summary-item"><span>Species</span><strong>31</strong></div>
+      <div class="summary-item"><span>Public Visuals</span><strong>31</strong></div>
+      <div class="summary-item"><span>Hero Ready</span><strong>31</strong></div>
+      <div class="summary-item"><span>Primary Needed</span><strong>0</strong></div>
+      <div class="summary-item"><span>Candidate Blocked</span><strong>31</strong></div>
+      <div class="summary-item"><span>Acquisition Lanes</span><strong>1</strong></div>
+    </section>
+    <section class="toolbar" aria-label="Filters">
+      <input id="search" type="search" placeholder="Search species/lane">
+      <select id="group"><option value="">All groups</option><option value="cetaceans">cetaceans (6)</option><option value="pinnipeds">pinnipeds (5)</option><option value="reefs">reefs (6)</option><option value="sharks-rays">sharks-rays (7)</option><option value="sirenians">sirenians (1)</option><option value="turtles">turtles (6)</option></select>
+      <select id="kind"><option value="">All visuals</option><option value="image">image (31)</option></select>
+      <select id="render"><option value="">All render</option><option value="approved_primary_image">approved primary image (31)</option></select>
+      <select id="sourceStatus"><option value="">All cards</option><option value="verified_source_card">verified source card (31)</option></select>
+      <select id="sourceType"><option value="">All types</option><option value="authority_source">authority source (3)</option><option value="institutional">institutional (2)</option><option value="official_institutional">official institutional (24)</option><option value="partner_or_ngo">partner or ngo (2)</option></select>
+      <select id="domain"><option value="">All domains</option><option value="commons.wikimedia.org">commons.wikimedia.org (31)</option></select>
+      <select id="batch"><option value="">Curation</option><option value="03_official_public_domain_fast_track">03 official public domain fast track (19)</option><option value="04_open_public_domain_review">04 open public domain review (1)</option><option value="05_open_license_attribution">05 open license attribution (10)</option><option value="06_partner_grant_or_new_candidate">06 partner grant or new candidate (1)</option></select>
+      <select id="acquisition"><option value="">Acquisition</option><option value="primary_approved_maintenance">primary approved maintenance (31)</option></select>
+      <select id="family"><option value="">Targets</option><option value="official_institutional">official institutional (20)</option><option value="open_license_candidate">open license candidate (11)</option></select>
+      <label class="checkbox"><input id="readyOnly" type="checkbox"> Ready only</label>
+    </section>
+    <p class="count"><span id="visible-count">31</span> shown</p>
+    <section class="board" id="board">
+
+    <article class="species-card group-cetaceans" data-search="species-blue-whale blue whale balaenoptera musculus content/species/cetaceans/blue-whale.md /species/cetaceans/blue-whale cetaceans image approved_primary_image verified_source_card official_institutional commons.wikimedia.org official_public_domain_fast_track p1 03_official_public_domain_fast_track official/public-domain fast track primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p1 official_institutional official or institutional recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="cetaceans" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="03_official_public_domain_fast_track" data-acquisition="primary_approved_maintenance" data-family="official_institutional" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bluewhale877.jpg?width=900" alt="Adult blue whale (Balaenoptera musculus) from the eastern Pacific Ocean." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>NMFS Northeast Fisheries Science Center (NOAA) / Public domain</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">cetaceans</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>Blue Whale</h2>
+        <p class="scientific">Balaenoptera musculus</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Species path</dt><dd>/species/cetaceans/blue-whale</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Official or institutional</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Bluewhale877.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-cetaceans" data-search="species-bottlenose-dolphin common bottlenose dolphin tursiops truncatus content/species/cetaceans/bottlenose-dolphin.md /species/cetaceans/bottlenose-dolphin cetaceans image approved_primary_image verified_source_card official_institutional commons.wikimedia.org ethics_note_review p1 06_partner_grant_or_new_candidate partner grant or replacement candidate partner_or_replacement primary_approved_maintenance primary approved; maintain rights and attribution p1 official_institutional official or institutional recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="cetaceans" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="06_partner_grant_or_new_candidate" data-acquisition="primary_approved_maintenance" data-family="official_institutional" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tursiops_truncatus_01.jpg?width=900" alt="Bottlenose Dolphin - Tursiops truncatus A dolphin surfs the wake of a research boat on the Banana River - near the Kennedy Space Center." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>NASA / Public domain</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">cetaceans</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>Common Bottlenose Dolphin</h2>
+        <p class="scientific">Tursiops truncatus</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>ethics note review</dd></div>
+          <div><dt>Species path</dt><dd>/species/cetaceans/bottlenose-dolphin</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Official or institutional</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-cetaceans" data-search="species-humpback-whale humpback whale megaptera novaeangliae content/species/cetaceans/humpback-whale.md /species/cetaceans/humpback-whale cetaceans image approved_primary_image verified_source_card authority_source commons.wikimedia.org official_public_domain_fast_track p1 03_official_public_domain_fast_track official/public-domain fast track primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p1 official_institutional official or institutional recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="cetaceans" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="authority_source" data-domain="commons.wikimedia.org" data-batch="03_official_public_domain_fast_track" data-acquisition="primary_approved_maintenance" data-family="official_institutional" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Humpback_whales_in_singing_position.jpg?width=900" alt="Humpback whales in the singing position. Humpback Whale NMS." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>Dr. Louis M. Herman. / Public domain</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">cetaceans</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>Humpback Whale</h2>
+        <p class="scientific">Megaptera novaeangliae</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>authority source</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Species path</dt><dd>/species/cetaceans/humpback-whale</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Official or institutional</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Humpback_whales_in_singing_position.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-cetaceans" data-search="species-north-atlantic-right-whale north atlantic right whale eubalaena glacialis content/species/cetaceans/north-atlantic-right-whale.md /species/cetaceans/north-atlantic-right-whale cetaceans image approved_primary_image verified_source_card official_institutional commons.wikimedia.org official_public_domain_fast_track p1 03_official_public_domain_fast_track official/public-domain fast track primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p1 official_institutional official or institutional recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="cetaceans" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="03_official_public_domain_fast_track" data-acquisition="primary_approved_maintenance" data-family="official_institutional" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/North_Atlantic_right_whale_-_Earth_Is_Blue.jpg?width=900" alt="North Atlantic right whale as part of NOAA&#x27;s Earth Is Blue series." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>NOAA Gray&#x27;s Reef NMS / Public domain</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">cetaceans</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>North Atlantic Right Whale</h2>
+        <p class="scientific">Eubalaena glacialis</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Species path</dt><dd>/species/cetaceans/north-atlantic-right-whale</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Official or institutional</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:North_Atlantic_right_whale_-_Earth_Is_Blue.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-cetaceans" data-search="species-orca orca orcinus orca content/species/cetaceans/orca.md /species/cetaceans/orca cetaceans image approved_primary_image verified_source_card official_institutional commons.wikimedia.org official_public_domain_fast_track p1 03_official_public_domain_fast_track official/public-domain fast track primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p1 official_institutional official or institutional recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="cetaceans" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="03_official_public_domain_fast_track" data-acquisition="primary_approved_maintenance" data-family="official_institutional" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Killerwhales_jumping.jpg?width=900" alt="Orca (Orcinus orca) in an approved source image used for species identification." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>Robert Pittman / Public domain</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">cetaceans</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>Orca</h2>
+        <p class="scientific">Orcinus orca</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Species path</dt><dd>/species/cetaceans/orca</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Official or institutional</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-cetaceans" data-search="species-sperm-whale sperm whale physeter macrocephalus content/species/cetaceans/sperm-whale.md /species/cetaceans/sperm-whale cetaceans image approved_primary_image verified_source_card official_institutional commons.wikimedia.org official_public_domain_fast_track p1 03_official_public_domain_fast_track official/public-domain fast track primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p1 official_institutional official or institutional recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="cetaceans" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="03_official_public_domain_fast_track" data-acquisition="primary_approved_maintenance" data-family="official_institutional" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/6%2818%29_Sperm_whale.JPG?width=900" alt="Sperm whale (Physeter macrocephalus) at Kaikoura, New Zealand." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>Marion &amp; Christoph Aistleitner / CC0</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">cetaceans</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>Sperm Whale</h2>
+        <p class="scientific">Physeter macrocephalus</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Species path</dt><dd>/species/cetaceans/sperm-whale</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Official or institutional</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:6(18)_Sperm_whale.JPG" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-pinnipeds" data-search="species-california-sea-lion california sea lion zalophus californianus content/species/pinnipeds/california-sea-lion.md /species/pinnipeds/california-sea-lion pinnipeds image approved_primary_image verified_source_card official_institutional commons.wikimedia.org open_license_attribution_review p2 05_open_license_attribution open-license attribution review primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p2 open_license_candidate open-license candidate recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="pinnipeds" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="05_open_license_attribution" data-acquisition="primary_approved_maintenance" data-family="open_license_candidate" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bigmalesealion.jpg?width=900" alt="California Sea Lion in Morro Bay." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>https://www.flickr.com/photos/mikebaird/ Mike Baird / CC BY 2.0</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">pinnipeds</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P2</span>
+        </div>
+        <h2>California Sea Lion</h2>
+        <p class="scientific">Zalophus californianus</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>open license attribution review</dd></div>
+          <div><dt>Species path</dt><dd>/species/pinnipeds/california-sea-lion</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Open-license candidate</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Bigmalesealion.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-pinnipeds" data-search="species-grey-seal grey seal halichoerus grypus content/species/pinnipeds/grey-seal.md /species/pinnipeds/grey-seal pinnipeds image approved_primary_image verified_source_card official_institutional commons.wikimedia.org open_license_attribution_review p2 05_open_license_attribution open-license attribution review primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p2 open_license_candidate open-license candidate recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="pinnipeds" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="05_open_license_attribution" data-acquisition="primary_approved_maintenance" data-family="open_license_candidate" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Szarytka_morska.jpg?width=900" alt="Grey seal in Baltic Sea, Poland." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>Aneta p / CC BY 4.0</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">pinnipeds</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P2</span>
+        </div>
+        <h2>Grey Seal</h2>
+        <p class="scientific">Halichoerus grypus</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>open license attribution review</dd></div>
+          <div><dt>Species path</dt><dd>/species/pinnipeds/grey-seal</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Open-license candidate</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Szarytka_morska.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-pinnipeds" data-search="species-harbor-seal harbor seal phoca vitulina content/species/pinnipeds/harbor-seal.md /species/pinnipeds/harbor-seal pinnipeds image approved_primary_image verified_source_card official_institutional commons.wikimedia.org open_license_attribution_review p2 05_open_license_attribution open-license attribution review primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p2 open_license_candidate open-license candidate recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="pinnipeds" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="05_open_license_attribution" data-acquisition="primary_approved_maintenance" data-family="open_license_candidate" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Harbor_Seal%2C_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg?width=900" alt="Harbor Seal, Phoca vitulina." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>Greg Schechter from San Francisco, USA / CC BY 2.0</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">pinnipeds</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P2</span>
+        </div>
+        <h2>Harbor Seal</h2>
+        <p class="scientific">Phoca vitulina</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>open license attribution review</dd></div>
+          <div><dt>Species path</dt><dd>/species/pinnipeds/harbor-seal</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Open-license candidate</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Harbor_Seal,_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-pinnipeds" data-search="species-hawaiian-monk-seal hawaiian monk seal neomonachus schauinslandi content/species/pinnipeds/hawaiian-monk-seal.md /species/pinnipeds/hawaiian-monk-seal pinnipeds image approved_primary_image verified_source_card official_institutional commons.wikimedia.org official_public_domain_fast_track p1 03_official_public_domain_fast_track official/public-domain fast track primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p1 official_institutional official or institutional recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="pinnipeds" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="03_official_public_domain_fast_track" data-acquisition="primary_approved_maintenance" data-family="official_institutional" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Moenchsrobbe_1.jpg?width=900" alt="Hawaiian Monk Seal." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>U.S. Fish and Wildlife Service / Public domain</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">pinnipeds</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>Hawaiian Monk Seal</h2>
+        <p class="scientific">Neomonachus schauinslandi</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Species path</dt><dd>/species/pinnipeds/hawaiian-monk-seal</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Official or institutional</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Moenchsrobbe_1.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-pinnipeds" data-search="species-walrus walrus odobenus rosmarus content/species/pinnipeds/walrus.md /species/pinnipeds/walrus pinnipeds image approved_primary_image verified_source_card official_institutional commons.wikimedia.org official_public_domain_fast_track p1 03_official_public_domain_fast_track official/public-domain fast track primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p1 official_institutional official or institutional recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="pinnipeds" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="03_official_public_domain_fast_track" data-acquisition="primary_approved_maintenance" data-family="official_institutional" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pacific_Walrus_-_Bull_%288247646168%29.jpg?width=900" alt="A large Pacific Walrus bull watches the camera. The adult bulls can weigh up to 3,700 pounds." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>Joel Garlich-Miller, U.S. Fish and Wildlife Service / Public domain</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">pinnipeds</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>Walrus</h2>
+        <p class="scientific">Odobenus rosmarus</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Species path</dt><dd>/species/pinnipeds/walrus</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Official or institutional</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Pacific_Walrus_-_Bull_(8247646168).jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-reefs" data-search="species-brain-coral grooved brain coral diploria labyrinthiformis content/species/reefs/brain-coral.md /species/reefs/brain-coral reefs image approved_primary_image verified_source_card official_institutional commons.wikimedia.org official_public_domain_fast_track p1 03_official_public_domain_fast_track official/public-domain fast track primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p1 official_institutional official or institutional recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="reefs" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="03_official_public_domain_fast_track" data-acquisition="primary_approved_maintenance" data-family="official_institutional" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Metal_block_with_coral_Dry_Tortugas_20100629.jpg?width=900" alt="Metal block with corals on it (Diploria labyrinthiformis and Diploria strigosa) in shallow water next to Fort Jefferson, Dry Tortugas National Park, Florida." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>Jstuby / CC0</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">reefs</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>Grooved Brain Coral</h2>
+        <p class="scientific">Diploria labyrinthiformis</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Species path</dt><dd>/species/reefs/brain-coral</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Official or institutional</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Metal_block_with_coral_Dry_Tortugas_20100629.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-reefs" data-search="species-elkhorn-coral elkhorn coral acropora palmata content/species/reefs/elkhorn-coral.md /species/reefs/elkhorn-coral reefs image approved_primary_image verified_source_card official_institutional commons.wikimedia.org official_public_domain_fast_track p1 03_official_public_domain_fast_track official/public-domain fast track primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p1 official_institutional official or institutional recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="reefs" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="03_official_public_domain_fast_track" data-acquisition="primary_approved_maintenance" data-family="official_institutional" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gaulin_Reef_San_Salvador.jpg?width=900" alt="Elkhorn coral (Acropora palmata) on the crest of Gaulin Reef, San Salvador Island, Bahamas. June 24, 1999." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>Jstuby at en.wikipedia / CC0</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">reefs</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>Elkhorn Coral</h2>
+        <p class="scientific">Acropora palmata</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Species path</dt><dd>/species/reefs/elkhorn-coral</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Official or institutional</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Gaulin_Reef_San_Salvador.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-reefs" data-search="species-giant-kelp giant kelp macrocystis pyrifera content/species/reefs/giant-kelp.md /species/reefs/giant-kelp reefs image approved_primary_image verified_source_card official_institutional commons.wikimedia.org official_public_domain_fast_track p1 03_official_public_domain_fast_track official/public-domain fast track primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p1 official_institutional official or institutional recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="reefs" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="03_official_public_domain_fast_track" data-acquisition="primary_approved_maintenance" data-family="official_institutional" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sanc0063_-_Flickr_-_NOAA_Photo_Library.jpg?width=900" alt="Giant kelp (Macrocystis pyrifera). California, Channel Islands NMS." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>Claire Fackler, CINMS, NOAA. / Public domain</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">reefs</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>Giant Kelp</h2>
+        <p class="scientific">Macrocystis pyrifera</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Species path</dt><dd>/species/reefs/giant-kelp</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Official or institutional</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Sanc0063_-_Flickr_-_NOAA_Photo_Library.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-reefs" data-search="species-red-mangrove red mangrove rhizophora mangle content/species/reefs/red-mangrove.md /species/reefs/red-mangrove reefs image approved_primary_image verified_source_card official_institutional commons.wikimedia.org official_public_domain_fast_track p1 03_official_public_domain_fast_track official/public-domain fast track primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p1 official_institutional official or institutional recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="reefs" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="03_official_public_domain_fast_track" data-acquisition="primary_approved_maintenance" data-family="official_institutional" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg?width=900" alt="Photo of red mangrove uploaded from iNaturalist." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>no rights reserved / CC0</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">reefs</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>Red Mangrove</h2>
+        <p class="scientific">Rhizophora mangle</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Species path</dt><dd>/species/reefs/red-mangrove</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Official or institutional</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-reefs" data-search="species-seagrass-posidonia neptune grass posidonia oceanica content/species/reefs/seagrass-posidonia.md /species/reefs/seagrass-posidonia reefs image approved_primary_image verified_source_card official_institutional commons.wikimedia.org official_public_domain_fast_track p1 03_official_public_domain_fast_track official/public-domain fast track primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p1 official_institutional official or institutional recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="reefs" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="03_official_public_domain_fast_track" data-acquisition="primary_approved_maintenance" data-family="official_institutional" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Posidonia_oceanica.jpg?width=900" alt="Posidonia oceanica." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>National Oceanic and Atmospheric Administration / Public domain</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">reefs</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>Neptune Grass</h2>
+        <p class="scientific">Posidonia oceanica</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Species path</dt><dd>/species/reefs/seagrass-posidonia</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Official or institutional</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Posidonia_oceanica.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-reefs" data-search="species-staghorn-coral staghorn coral acropora cervicornis content/species/reefs/staghorn-coral.md /species/reefs/staghorn-coral reefs image approved_primary_image verified_source_card authority_source commons.wikimedia.org official_public_domain_fast_track p1 03_official_public_domain_fast_track official/public-domain fast track primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p1 official_institutional official or institutional recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="reefs" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="authority_source" data-domain="commons.wikimedia.org" data-batch="03_official_public_domain_fast_track" data-acquisition="primary_approved_maintenance" data-family="official_institutional" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Staghorn_coral_on_Baker_Island_NWR_%285123996348%29.jpg?width=900" alt="Beds of staghorn coral (Acropora Sp) undulate across the sea floor at Baker Island National Wildlife Refuge in the Pacific, some 1,600 miles southwest of Honolulu. (Jim Maragos/USFWS)." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>U.S. Fish and Wildlife Service Headquarters / Public domain</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">reefs</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>Staghorn Coral</h2>
+        <p class="scientific">Acropora cervicornis</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>authority source</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Species path</dt><dd>/species/reefs/staghorn-coral</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Official or institutional</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Staghorn_coral_on_Baker_Island_NWR_(5123996348).jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-sharks-rays" data-search="basking-shark basking shark cetorhinus maximus content/species/sharks-rays/basking-shark.md /species/sharks-rays/basking-shark sharks-rays image approved_primary_image verified_source_card institutional commons.wikimedia.org official_public_domain_fast_track p1 03_official_public_domain_fast_track official/public-domain fast track primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p1 official_institutional official or institutional recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="sharks-rays" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="institutional" data-domain="commons.wikimedia.org" data-batch="03_official_public_domain_fast_track" data-acquisition="primary_approved_maintenance" data-family="official_institutional" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cetorhinus_maximus_by_greg_skomal.JPG?width=900" alt="Basking shark (Cetorhinus maximus)." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>Greg Skomal / NOAA Fisheries Service / Public domain</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">sharks-rays</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>Basking Shark</h2>
+        <p class="scientific">Cetorhinus maximus</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Species path</dt><dd>/species/sharks-rays/basking-shark</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Official or institutional</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Cetorhinus_maximus_by_greg_skomal.JPG" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-sharks-rays" data-search="great-white-shark great white shark carcharodon carcharias content/species/sharks-rays/great-white-shark.md /species/sharks-rays/great-white-shark sharks-rays image approved_primary_image verified_source_card official_institutional commons.wikimedia.org open_license_attribution_review p2 05_open_license_attribution open-license attribution review primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p2 open_license_candidate open-license candidate recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="sharks-rays" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="05_open_license_attribution" data-acquisition="primary_approved_maintenance" data-family="open_license_candidate" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/White_shark.jpg?width=900" alt="Great white shark at Isla Guadalupe, Mexico, August 2006. Shot with Nikon D70s in Ikelite housing, in natural light. Animal estimated at 11-12 feet (3.3 to 3.6 m) in length, age unknown." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>Pterantula (Terry Goss) at en.wikipedia / CC BY 2.5</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">sharks-rays</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P2</span>
+        </div>
+        <h2>Great White Shark</h2>
+        <p class="scientific">Carcharodon carcharias</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>open license attribution review</dd></div>
+          <div><dt>Species path</dt><dd>/species/sharks-rays/great-white-shark</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Open-license candidate</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:White_shark.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-sharks-rays" data-search="reef-manta-ray reef manta ray mobula alfredi content/species/sharks-rays/reef-manta-ray.md /species/sharks-rays/reef-manta-ray sharks-rays image approved_primary_image verified_source_card partner_or_ngo commons.wikimedia.org open_license_attribution_review p2 05_open_license_attribution open-license attribution review primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p2 open_license_candidate open-license candidate recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="sharks-rays" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="partner_or_ngo" data-domain="commons.wikimedia.org" data-batch="05_open_license_attribution" data-acquisition="primary_approved_maintenance" data-family="open_license_candidate" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Manta_alfredi_cruising_-_journal.pone.0046170.g002A.png?width=900" alt="Reef Manta Ray (Mobula alfredi) in an approved source image used for species identification." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>Jaine FRA, Couturier LIE, Weeks SJ, Townsend KA, Bennett MB, et al. (2012) / CC BY 2.5</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">sharks-rays</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P2</span>
+        </div>
+        <h2>Reef Manta Ray</h2>
+        <p class="scientific">Mobula alfredi</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>partner or ngo</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>open license attribution review</dd></div>
+          <div><dt>Species path</dt><dd>/species/sharks-rays/reef-manta-ray</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Open-license candidate</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Manta_alfredi_cruising_-_journal.pone.0046170.g002A.png" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-sharks-rays" data-search="scalloped-hammerhead scalloped hammerhead sphyrna lewini content/species/sharks-rays/scalloped-hammerhead.md /species/sharks-rays/scalloped-hammerhead sharks-rays image approved_primary_image verified_source_card official_institutional commons.wikimedia.org official_public_domain_fast_track p1 03_official_public_domain_fast_track official/public-domain fast track primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p1 official_institutional official or institutional recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="sharks-rays" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="03_official_public_domain_fast_track" data-acquisition="primary_approved_maintenance" data-family="official_institutional" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sphyrna_lewini_%28Griffith_%26_Smith%2C_1834%29_2422815227.jpg?width=900" alt="Sphyrna lewini (Griffith &amp; Smith, 1834) 2422815227." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>iNaturalist.org (Simon Tonge) (Simon%20Tonge) / CC0</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">sharks-rays</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>Scalloped Hammerhead</h2>
+        <p class="scientific">Sphyrna lewini</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Species path</dt><dd>/species/sharks-rays/scalloped-hammerhead</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Official or institutional</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Sphyrna_lewini_(Griffith_%26_Smith,_1834)_2422815227.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-sharks-rays" data-search="shortfin-mako shortfin mako isurus oxyrinchus content/species/sharks-rays/shortfin-mako.md /species/sharks-rays/shortfin-mako sharks-rays image approved_primary_image verified_source_card official_institutional commons.wikimedia.org official_public_domain_fast_track p1 03_official_public_domain_fast_track official/public-domain fast track primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p1 official_institutional official or institutional recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="sharks-rays" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="03_official_public_domain_fast_track" data-acquisition="primary_approved_maintenance" data-family="official_institutional" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Isurus_oxyrinchus_by_mark_conlin.jpg?width=900" alt="Shortfin mako shark (Isurus oxyrinchus)." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>Mark Conlin, SWFSC Large Pelagics Program / Public domain</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">sharks-rays</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>Shortfin Mako</h2>
+        <p class="scientific">Isurus oxyrinchus</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Species path</dt><dd>/species/sharks-rays/shortfin-mako</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Official or institutional</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Isurus_oxyrinchus_by_mark_conlin.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-sharks-rays" data-search="tiger-shark tiger shark galeocerdo cuvier content/species/sharks-rays/tiger-shark.md /species/sharks-rays/tiger-shark sharks-rays image approved_primary_image verified_source_card institutional commons.wikimedia.org open_license_attribution_review p2 05_open_license_attribution open-license attribution review primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p2 open_license_candidate open-license candidate recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="sharks-rays" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="institutional" data-domain="commons.wikimedia.org" data-batch="05_open_license_attribution" data-acquisition="primary_approved_maintenance" data-family="open_license_candidate" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Requin_tigre_%28Galeocerdo_cuvier%29_%28Ifremer_00756-86782%29.jpg?width=900" alt="Tiger Shark (Galeocerdo cuvier) in an approved source image used for species identification." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>Fanchon Varenne (IFREMER, Délégation océan Indien (DOI), Département Ressources Biologiques et Environnement (RBE), F-97420 Le Port, France) / CC BY 4.0</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">sharks-rays</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P2</span>
+        </div>
+        <h2>Tiger Shark</h2>
+        <p class="scientific">Galeocerdo cuvier</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>open license attribution review</dd></div>
+          <div><dt>Species path</dt><dd>/species/sharks-rays/tiger-shark</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Open-license candidate</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Requin_tigre_(Galeocerdo_cuvier)_(Ifremer_00756-86782).jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-sharks-rays" data-search="species-whale-shark whale shark rhincodon typus content/species/sharks-rays/whale-shark.md /species/sharks-rays/whale-shark sharks-rays image approved_primary_image verified_source_card authority_source commons.wikimedia.org open_public_domain_review p1 04_open_public_domain_review open public-domain review primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p1 open_license_candidate open-license candidate recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="sharks-rays" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="authority_source" data-domain="commons.wikimedia.org" data-batch="04_open_public_domain_review" data-acquisition="primary_approved_maintenance" data-family="open_license_candidate" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/OLYMPUS_DIGITAL_CAMERA_%2827591269541%29.jpg?width=900" alt="Whale Shark (Rhincodon typus) in an approved source image used for species identification." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>cotterillmike / CC0</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">sharks-rays</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>Whale Shark</h2>
+        <p class="scientific">Rhincodon typus</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>authority source</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>open public domain review</dd></div>
+          <div><dt>Species path</dt><dd>/species/sharks-rays/whale-shark</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Open-license candidate</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:OLYMPUS_DIGITAL_CAMERA_(27591269541).jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-sirenians" data-search="species-west-indian-manatee west indian manatee trichechus manatus content/species/sirenians/west-indian-manatee.md /species/sirenians/west-indian-manatee sirenians image approved_primary_image verified_source_card official_institutional commons.wikimedia.org official_public_domain_fast_track p1 03_official_public_domain_fast_track official/public-domain fast track primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p1 official_institutional official or institutional recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="sirenians" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="03_official_public_domain_fast_track" data-acquisition="primary_approved_maintenance" data-family="official_institutional" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Manatee_photo.jpg?width=900" alt="West Indian manatee (Trichechus manatus) at Merritt Island&#x27;s National Wildlife Refuge in Florida next to Kennedy Space Center." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>NASA / Public domain</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">sirenians</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>West Indian Manatee</h2>
+        <p class="scientific">Trichechus manatus</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Species path</dt><dd>/species/sirenians/west-indian-manatee</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Official or institutional</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Manatee_photo.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-turtles" data-search="species-green-turtle green turtle chelonia mydas content/species/turtles/green-turtle.md /species/turtles/green-turtle turtles image approved_primary_image verified_source_card partner_or_ngo commons.wikimedia.org open_license_attribution_review p2 05_open_license_attribution open-license attribution review primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p2 open_license_candidate open-license candidate recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="turtles" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="partner_or_ngo" data-domain="commons.wikimedia.org" data-batch="05_open_license_attribution" data-acquisition="primary_approved_maintenance" data-family="open_license_candidate" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hawaii_turtle_2.JPG?width=900" alt="Green turtle (Chelonia mydas), Hawai&#x27;i, USA." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>Brocken Inaglory / CC BY-SA 3.0</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">turtles</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P2</span>
+        </div>
+        <h2>Green Turtle</h2>
+        <p class="scientific">Chelonia mydas</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>partner or ngo</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>open license attribution review</dd></div>
+          <div><dt>Species path</dt><dd>/species/turtles/green-turtle</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Open-license candidate</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Hawaii_turtle_2.JPG" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-turtles" data-search="hawksbill-turtle hawksbill turtle eretmochelys imbricata content/species/turtles/hawksbill-turtle.md /species/turtles/hawksbill-turtle turtles image approved_primary_image verified_source_card official_institutional commons.wikimedia.org open_license_attribution_review p2 05_open_license_attribution open-license attribution review primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p2 open_license_candidate open-license candidate recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="turtles" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="05_open_license_attribution" data-acquisition="primary_approved_maintenance" data-family="open_license_candidate" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tortuga_carey_%28Eretmochelys_imbricata%29%2C_parque_nacional_Ras_Muhammad%2C_Egipto%2C_2022-03-28%2C_DD_56.jpg?width=900" alt="Hawksbill sea turtle (Eretmochelys imbricata), Ras Muhammad National Park, Egypt." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>Diego Delso / CC BY-SA 4.0</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">turtles</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P2</span>
+        </div>
+        <h2>Hawksbill Turtle</h2>
+        <p class="scientific">Eretmochelys imbricata</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>open license attribution review</dd></div>
+          <div><dt>Species path</dt><dd>/species/turtles/hawksbill-turtle</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Open-license candidate</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_parque_nacional_Ras_Muhammad,_Egipto,_2022-03-28,_DD_56.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-turtles" data-search="kemps-ridley-turtle kemp&#x27;s ridley turtle lepidochelys kempii content/species/turtles/kemps-ridley-turtle.md /species/turtles/kemps-ridley-turtle turtles image approved_primary_image verified_source_card official_institutional commons.wikimedia.org official_public_domain_fast_track p1 03_official_public_domain_fast_track official/public-domain fast track primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p1 official_institutional official or institutional recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="turtles" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="03_official_public_domain_fast_track" data-acquisition="primary_approved_maintenance" data-family="official_institutional" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg?width=900" alt="Kemp&#x27;s Ridley Turtle (Lepidochelys kempii) in an approved source image used for species identification." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>uploaded by Johntex / Public domain</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">turtles</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>Kemp&#x27;s Ridley Turtle</h2>
+        <p class="scientific">Lepidochelys kempii</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Species path</dt><dd>/species/turtles/kemps-ridley-turtle</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Official or institutional</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-turtles" data-search="leatherback-turtle leatherback turtle dermochelys coriacea content/species/turtles/leatherback-turtle.md /species/turtles/leatherback-turtle turtles image approved_primary_image verified_source_card official_institutional commons.wikimedia.org official_public_domain_fast_track p1 03_official_public_domain_fast_track official/public-domain fast track primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p1 official_institutional official or institutional recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="turtles" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="03_official_public_domain_fast_track" data-acquisition="primary_approved_maintenance" data-family="official_institutional" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/LeatherbackTurtle.jpg?width=900" alt="Adult Dermochelys coriacea, Leatherback Sea Turtle. In Las Baulas National Marine Park, Costa Rica." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>National Oceanic and Atmospheric Administration, NOAA / Public domain</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">turtles</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P1</span>
+        </div>
+        <h2>Leatherback Turtle</h2>
+        <p class="scientific">Dermochelys coriacea</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Species path</dt><dd>/species/turtles/leatherback-turtle</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Official or institutional</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:LeatherbackTurtle.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-turtles" data-search="loggerhead-turtle loggerhead turtle caretta caretta content/species/turtles/loggerhead-turtle.md /species/turtles/loggerhead-turtle turtles image approved_primary_image verified_source_card official_institutional commons.wikimedia.org open_license_attribution_review p2 05_open_license_attribution open-license attribution review primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p2 open_license_candidate open-license candidate recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="turtles" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="05_open_license_attribution" data-acquisition="primary_approved_maintenance" data-family="open_license_candidate" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Loggerhead_Sea_Turtle_%28Caretta_caretta%29_2.jpg?width=900" alt="Loggerhead Sea Turtle (Caretta caretta)." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>Brian Gratwicke / CC BY 2.0</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">turtles</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P2</span>
+        </div>
+        <h2>Loggerhead Turtle</h2>
+        <p class="scientific">Caretta caretta</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>open license attribution review</dd></div>
+          <div><dt>Species path</dt><dd>/species/turtles/loggerhead-turtle</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Open-license candidate</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Loggerhead_Sea_Turtle_(Caretta_caretta)_2.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+
+    <article class="species-card group-turtles" data-search="olive-ridley-turtle olive ridley turtle lepidochelys olivacea content/species/turtles/olive-ridley-turtle.md /species/turtles/olive-ridley-turtle turtles image approved_primary_image verified_source_card official_institutional commons.wikimedia.org open_license_attribution_review p2 05_open_license_attribution open-license attribution review primary_image_review primary_approved_maintenance primary approved; maintain rights and attribution p2 open_license_candidate open-license candidate recheck attribution, license, crop, and alt text during scheduled content reviews. commons.wikimedia.org approved primary image ready" data-group="turtles" data-kind="image" data-render="approved_primary_image" data-source-status="verified_source_card" data-source-type="official_institutional" data-domain="commons.wikimedia.org" data-batch="05_open_license_attribution" data-acquisition="primary_approved_maintenance" data-family="open_license_candidate" data-ready="true">
+
+      <figure class="image-plate image-plate-ready">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Olive_ridley_sea_turtle_cropped.jpg?width=900" alt="Olive Ridley Turtle (Lepidochelys olivacea) in an approved source image used for species identification." loading="lazy">
+        <figcaption>
+          <span>Approved image</span>
+          <strong>commons.wikimedia.org</strong>
+          <small>Remove &quot;cropped&quot; from file name and see original file / CC BY-SA 4.0</small>
+        </figcaption>
+      </figure>
+
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">turtles</span>
+          <span class="pill pill-ready">public ready</span>
+          <span class="pill pill-kind">image</span>
+          <span class="pill pill-render">approved primary image</span>
+          <span class="pill pill-priority">P2</span>
+        </div>
+        <h2>Olive Ridley Turtle</h2>
+        <p class="scientific">Lepidochelys olivacea</p>
+        <dl class="meta-grid">
+          <div><dt>Source</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Source type</dt><dd>official institutional</dd></div>
+          <div><dt>Source card</dt><dd>verified source card</dd></div>
+          <div><dt>Primary image</dt><dd>approved</dd></div>
+          <div><dt>Curation lane</dt><dd>Primary approved; maintain attribution</dd></div>
+          <div><dt>Approval checks</dt><dd>9/9</dd></div>
+          <div><dt>Route</dt><dd>open license attribution review</dd></div>
+          <div><dt>Species path</dt><dd>/species/turtles/olive-ridley-turtle</dd></div>
+          <div><dt>Acquisition</dt><dd>Primary approved; maintain rights and attribution</dd></div>
+          <div><dt>Target</dt><dd>Open-license candidate</dd></div>
+          <div><dt>Outreach</dt><dd>commons.wikimedia.org</dd></div>
+          <div><dt>Next action</dt><dd>Recheck attribution, license, crop, and alt text during scheduled content reviews.</dd></div>
+        </dl>
+        <div class="surface-row">
+          <span class="pill pill-blocked">candidate hidden</span>
+          <span class="pill pill-blocked">no copy/crop rights from source card</span>
+          <span class="pill pill-ready">hero ready</span>
+          <span class="pill pill-acquisition">partner grant needed</span>
+        </div>
+        <div class="links"><a class="source-link" href="https://commons.wikimedia.org/wiki/File:Olive_ridley_sea_turtle_cropped.jpg" target="_blank" rel="noreferrer">Open source</a></div>
+      </div>
+    </article>
+
+    </section>
+  </main>
+  <script>
+    const cards = Array.from(document.querySelectorAll(".species-card"));
+    const search = document.getElementById("search");
+    const group = document.getElementById("group");
+    const kind = document.getElementById("kind");
+    const render = document.getElementById("render");
+    const sourceStatus = document.getElementById("sourceStatus");
+    const sourceType = document.getElementById("sourceType");
+    const domain = document.getElementById("domain");
+    const batch = document.getElementById("batch");
+    const acquisition = document.getElementById("acquisition");
+    const family = document.getElementById("family");
+    const readyOnly = document.getElementById("readyOnly");
+    const count = document.getElementById("visible-count");
+
+    function applyFilters() {
+      const query = search.value.trim().toLowerCase();
+      let visible = 0;
+      for (const card of cards) {
+        const show =
+          (!query || card.dataset.search.includes(query)) &&
+          (!group.value || card.dataset.group === group.value) &&
+          (!kind.value || card.dataset.kind === kind.value) &&
+          (!render.value || card.dataset.render === render.value) &&
+          (!sourceStatus.value || card.dataset.sourceStatus === sourceStatus.value) &&
+          (!sourceType.value || card.dataset.sourceType === sourceType.value) &&
+          (!domain.value || card.dataset.domain === domain.value) &&
+          (!batch.value || card.dataset.batch === batch.value) &&
+          (!acquisition.value || card.dataset.acquisition === acquisition.value) &&
+          (!family.value || card.dataset.family === family.value) &&
+          (!readyOnly.checked || card.dataset.ready === "true");
+        card.classList.toggle("hidden", !show);
+        if (show) visible += 1;
+      }
+      count.textContent = visible.toString();
+    }
+
+    for (const control of [search, group, kind, render, sourceStatus, sourceType, domain, batch, acquisition, family, readyOnly]) {
+      control.addEventListener("input", applyFilters);
+      control.addEventListener("change", applyFilters);
+    }
+  </script>
+</body>
+</html>

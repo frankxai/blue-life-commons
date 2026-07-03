@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="220" viewBox="0 0 1120 220" role="img" aria-labelledby="title desc">
+  <title id="title">Ocean Intelligence System lockup</title>
+  <desc id="desc">A companion lockup for the Ocean Intelligence System guardian and connector layer.</desc>
+  <defs>
+    <linearGradient id="ois-shell" x1="40" y1="28" x2="180" y2="182" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#06202A"/>
+      <stop offset="1" stop-color="#041014"/>
+    </linearGradient>
+    <linearGradient id="ois-signal" x1="62" y1="67" x2="158" y2="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4FD1C5"/>
+      <stop offset="0.55" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#6EA8FE"/>
+    </linearGradient>
+  </defs>
+  <rect width="1120" height="220" fill="#041014"/>
+  <g transform="translate(42 28)">
+    <rect x="0" y="0" width="164" height="164" rx="42" fill="url(#ois-shell)" stroke="#38BDF8" stroke-width="6"/>
+    <path d="M35 111c14-18 29-27 45-27s31 9 45 27" fill="none" stroke="url(#ois-signal)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M44 74c12-12 25-18 38-18s26 6 38 18" fill="none" stroke="#A9D7E2" stroke-width="8" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="82" cy="83" r="13" fill="#F5B84B"/>
+    <path d="M82 96v32" stroke="#F2FBFF" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <g font-family="Instrument Sans, Geist, Arial, Helvetica, sans-serif" fill="#F2FBFF">
+    <text x="250" y="91" font-size="48" font-weight="800">Ocean Intelligence System</text>
+    <text x="254" y="130" font-size="21" font-weight="650" fill="#A9D7E2">Guardians, connectors, dashboards, and provenance-preserving signals.</text>
+    <text x="254" y="165" font-size="15" font-weight="800" fill="#4FD1C5">knowledge in the commons -> machinery in the system -> reach through partners</text>
+  </g>
+</svg>

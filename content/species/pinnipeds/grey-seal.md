@@ -1,52 +1,91 @@
 ---
 id: species-grey-seal
 type: species-page
-title: "Grey Seal (Halichoerus grypus)"
+title: Grey Seal (Halichoerus grypus)
 species_group:
-  - pinnipeds
+- pinnipeds
 species:
-  - halichoerus-grypus
+- halichoerus-grypus
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/9660/45226042"
-    title: "IUCN Red List — Halichoerus grypus (Grey Seal)"
-    accessed: "2026-06-16"
-    tier: 1
-  - url: "https://www.fisheries.noaa.gov/species/gray-seal"
-    title: "Gray Seal — NOAA Fisheries"
-    accessed: "2026-06-16"
-    tier: 2
-  - url: "https://www.fisheries.noaa.gov/topic/marine-life-viewing-guidelines/guidelines-and-distances"
-    title: "Marine Life Viewing Guidelines: Guidelines and Distances — NOAA Fisheries"
-    accessed: "2026-06-16"
-    tier: 2
+- url: https://www.iucnredlist.org/species/9660/45226042
+  title: "IUCN Red List \u2014 Halichoerus grypus (Grey Seal)"
+  accessed: '2026-06-16'
+  tier: 1
+- url: https://www.fisheries.noaa.gov/species/gray-seal
+  title: "Gray Seal \u2014 NOAA Fisheries"
+  accessed: '2026-06-16'
+  tier: 2
+- url: https://www.fisheries.noaa.gov/topic/marine-life-viewing-guidelines/guidelines-and-distances
+  title: "Marine Life Viewing Guidelines: Guidelines and Distances \u2014 NOAA Fisheries"
+  accessed: '2026-06-16'
+  tier: 2
 review:
   science: required
   ethics: approved
   editor: pending
 iucn:
   category: LC
-  assessment_date: "2016"
+  assessment_date: '2016'
   scope: global
   population_trend: increasing
 consensus_state: settled
-last_verified: "2026-06-16"
+last_verified: '2026-06-16'
 outputs:
   website_path: /species/pinnipeds/grey-seal
   github_path: content/species/pinnipeds/grey-seal.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed species intelligence page for the grey seal."
+  claim: Published a source-reviewed species intelligence page for the grey seal.
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#species-grey-seal
+  render_contract: content/media/species-media-render-contract.yaml#species-grey-seal
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-grey-seal
+  primary:
+    asset_id: species-grey-seal-wikimedia-szarytka-morska
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:Szarytka_morska.jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Szarytka_morska.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/7/72/Szarytka_morska.jpg
+    creator: Aneta p
+    credit: Own work
+    license: CC BY 4.0
+    license_url: https://creativecommons.org/licenses/by/4.0
+    rights_status: cc-by
+    alt_text: Grey seal in Baltic Sea, Poland.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:Szarytka_morska.jpg
+    rights_status: cc-by
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: CC BY 4.0
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets: []
 ---
 
 # Grey Seal (Halichoerus grypus)

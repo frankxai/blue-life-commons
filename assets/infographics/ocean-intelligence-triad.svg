@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">Ocean Intelligence triad</title>
+  <desc id="desc">The three layers of ocean intelligence: Blue Life Commons, Ocean Intelligence System, and Starlight Marine Intelligence Systems.</desc>
+  <defs>
+    <linearGradient id="triad-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#041014"/>
+      <stop offset="1" stop-color="#06202A"/>
+    </linearGradient>
+    <linearGradient id="triad-line" x1="240" y1="432" x2="1160" y2="432" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4FD1C5"/>
+      <stop offset="0.5" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#F5B84B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="820" fill="url(#triad-bg)"/>
+  <g font-family="Instrument Sans, Geist, Arial, Helvetica, sans-serif">
+    <text x="90" y="100" fill="#4FD1C5" font-size="20" font-weight="850">PUBLIC-GOOD OCEAN INTELLIGENCE</text>
+    <text x="90" y="160" fill="#F2FBFF" font-size="58" font-weight="850">Trust, continuity, reach</text>
+    <text x="92" y="207" fill="#A9D7E2" font-size="24" font-weight="600">A visual architecture for the commons, the guardian system, and implementation partners.</text>
+    <path d="M322 432H1078" stroke="url(#triad-line)" stroke-width="10" stroke-linecap="round"/>
+    <g>
+      <rect x="92" y="300" width="340" height="280" rx="28" fill="#041014" stroke="#4FD1C5" stroke-width="3"/>
+      <rect x="530" y="300" width="340" height="280" rx="28" fill="#041014" stroke="#38BDF8" stroke-width="3"/>
+      <rect x="968" y="300" width="340" height="280" rx="28" fill="#041014" stroke="#F5B84B" stroke-width="3"/>
+    </g>
+    <g font-size="26" font-weight="850" fill="#F2FBFF">
+      <text x="134" y="370">Blue Life Commons</text>
+      <text x="572" y="370">Ocean Intelligence</text>
+      <text x="572" y="402">System</text>
+      <text x="1010" y="370">Starlight Marine</text>
+      <text x="1010" y="402">Intelligence Systems</text>
+    </g>
+    <g font-size="20" font-weight="800">
+      <text x="134" y="456" fill="#4FD1C5">creates trust</text>
+      <text x="572" y="456" fill="#38BDF8">creates continuity</text>
+      <text x="1010" y="456" fill="#F5B84B">creates reach</text>
+    </g>
+    <g font-size="18" font-weight="620" fill="#A9D7E2">
+      <text x="134" y="502">Species pages, region</text>
+      <text x="134" y="528">briefings, field missions,</text>
+      <text x="134" y="554">dataset cards, sources.</text>
+      <text x="572" y="502">Connectors, guardians,</text>
+      <text x="572" y="528">dashboards, portals,</text>
+      <text x="572" y="554">provenance signals.</text>
+      <text x="1010" y="502">Design, implementation,</text>
+      <text x="1010" y="528">institutional adoption,</text>
+      <text x="1010" y="554">media, reliability.</text>
+    </g>
+    <g transform="translate(94 660)">
+      <rect width="1214" height="70" rx="22" fill="#06202A" stroke="#38BDF8" stroke-opacity="0.45"/>
+      <text x="36" y="44" fill="#F2FBFF" font-size="22" font-weight="800">Boundary:</text>
+      <text x="176" y="44" fill="#A9D7E2" font-size="22" font-weight="620">the commons stays free; software and services add speed, integration, and reliability.</text>
+    </g>
+  </g>
+</svg>

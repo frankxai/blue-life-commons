@@ -50,6 +50,7 @@ Run the checks locally before you open a PR:
 python scripts/build_catalog.py --check    # is the catalog index current?
 python scripts/validate_artifacts.py        # do artifacts match the schema?
 python scripts/lint_content.py              # style + link checks
+python scripts/validate_species_media.py    # are approved species visuals safe to render?
 ```
 
 ---
@@ -58,15 +59,17 @@ python scripts/lint_content.py              # style + link checks
 
 ```
 blue-life-commons
-├── content/              # versioned knowledge
+├── content/              # versioned knowledge and media contracts
 │   ├── species/          # species guilds: cetaceans, pinnipeds, turtles, sharks-rays, reefs, sirenians
+│   ├── media/            # species image, source-card, rights, and review registries
 │   └── regions/          # regional ocean briefings
 ├── missions/             # citizen-science + travel field missions
 ├── schema/               # the metadata schema that connects every artifact
 ├── governance/           # governance stages, funding architecture, impact records
 ├── agent/                # role briefs for coding agents working the commons
-├── scripts/              # catalog build + artifact validation + content lint
+├── scripts/              # catalog, artifact, content, and media validation/build tools
 ├── docs/                 # contributor onboarding, researcher guides
+│   └── visual-system/    # brand assets, species media pipeline, and visual explorer specs
 └── .github/              # issue templates, PR template, CI validation
 ```
 

@@ -1,0 +1,2315 @@
+version: '2026-07-03'
+updated: '2026-07-03'
+purpose: Canonical queue for species primary images, rich embeds, rights, provenance, and generated supporting assets.
+policy:
+  required_for: Every Markdown species page under content/species, excluding README and _templates files.
+  primary_media_definition: Official, partner-granted, owned, public-domain, or open-license media with image-level attribution
+    and ethics QA.
+  google_images_policy: Discovery only. Never use a Google Images result as a source of record or reusable asset without original-page
+    rights verification.
+  generated_media_role: Supporting/concept visuals only; never biological evidence, official identification media, maps, charts,
+    or conservation claims.
+source_profiles:
+  noaa_fisheries:
+    type: official_institutional
+    rights_note: NOAA-created photos are generally usable with NOAA credit; non-NOAA credits require owner permission.
+  noaa_program_site:
+    type: official_institutional
+    rights_note: Check image-level credit/copyright before reuse.
+  us_fish_and_wildlife_service:
+    type: official_institutional
+    rights_note: Check image-level credit/copyright before reuse.
+  national_park_service:
+    type: official_institutional
+    rights_note: Check image-level credit/copyright before reuse.
+  florida_museum:
+    type: institutional
+    rights_note: Use as rich embed/candidate unless image-level license permits reuse.
+  manta_trust:
+    type: partner_or_ngo
+    rights_note: Requires partner grant or explicit asset license for reuse.
+  oceanic_society:
+    type: partner_or_ngo
+    rights_note: Requires partner grant or explicit asset license for reuse.
+  royal_botanic_gardens_kew:
+    type: institutional
+    rights_note: Use as rich embed/candidate unless image-level license permits reuse.
+  smithsonian_ocean:
+    type: institutional
+    rights_note: Use as rich embed/candidate unless image-level license permits reuse.
+  iucn_red_list:
+    type: authority_source
+    rights_note: Use for conservation facts/source cards; do not assume image reuse rights.
+  wikimedia_commons:
+    type: open_license_candidate
+    rights_note: Accept only after file-level license, creator, attribution, and species-match review.
+  gbif_media:
+    type: open_license_candidate
+    rights_note: Occurrence media can be more restrictive than occurrence data; verify multimedia license and publisher terms.
+  inaturalist_open_data:
+    type: open_license_candidate
+    rights_note: Verify individual photo license_code, attribution, observation sensitivity, and commercial-use compatibility.
+  partner_media_grant_needed:
+    type: partner_or_ngo
+    rights_note: Obtain written grant with approved surfaces, credit, revocation/embargo notes, and welfare/location constraints.
+records:
+- artifact_id: species-blue-whale
+  species_page: content/species/cetaceans/blue-whale.md
+  slug: blue-whale
+  taxon_group: cetaceans
+  common_name: Blue Whale
+  scientific_name: Balaenoptera musculus
+  species_slugs:
+  - balaenoptera-musculus
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: species-blue-whale-wikimedia-bluewhale877
+    approved_path: null
+    rights_status: public-domain
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Bluewhale877.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/d/d8/Bluewhale877.jpg
+    creator: NMFS Northeast Fisheries Science Center (NOAA)
+    credit: http://www.nmfs.noaa.gov/pr/species/mammals/cetaceans/bluewhale.htm
+    license: Public domain
+    license_url: null
+    alt_text: Adult blue whale (Balaenoptera musculus) from the eastern Pacific Ocean.
+    species_match_basis: 'Commons file metadata/categories contain species terms: balaenoptera musculus, blue whale; source
+      file: File:Bluewhale877.jpg.'
+    crop_guidance: Use a responsive crop that keeps the Blue Whale or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: species-blue-whale-wikimedia-bluewhale877
+      provider: wikimedia_commons
+      title: File:Bluewhale877.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Bluewhale877.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/d/d8/Bluewhale877.jpg
+      creator: NMFS Northeast Fisheries Science Center (NOAA)
+      credit: http://www.nmfs.noaa.gov/pr/species/mammals/cetaceans/bluewhale.htm
+      license: Public domain
+      license_url: null
+      rights_status: public-domain-or-cc0-candidate
+      flags: []
+      score: 89
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.fisheries.noaa.gov/species/blue-whale
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - noaa_fisheries
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets:
+  - asset_id: blc-keyart-blue-whale-01
+    path: brand/visuals/blc-keyart-blue-whale-01.jpg
+    role: generated_key_art
+    status: concept_only
+    use_limitations: Supporting visual only; not biological evidence, official identification media, or proof of conservation
+      status.
+  next_action: Primary media approved for Blue Whale. Keep source, rights, crop, alt text, and ethics metadata current during
+    future reviews.
+- artifact_id: species-bottlenose-dolphin
+  species_page: content/species/cetaceans/bottlenose-dolphin.md
+  slug: bottlenose-dolphin
+  taxon_group: cetaceans
+  common_name: Common Bottlenose Dolphin
+  scientific_name: Tursiops truncatus
+  species_slugs:
+  - tursiops-truncatus
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: species-bottlenose-dolphin-wikimedia-tursiops-truncatus-01
+    approved_path: null
+    rights_status: public-domain
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/1/10/Tursiops_truncatus_01.jpg
+    creator: NASA
+    credit: 'https://images.nasa.gov/details/KSC-04pd0178
+
+      http://mediaarchive.ksc.nasa.gov/detail.cfm?mediaid=21807 on the Wayback Machine at the Wayback Machine'
+    license: Public domain
+    license_url: null
+    alt_text: Bottlenose Dolphin - Tursiops truncatus A dolphin surfs the wake of a research boat on the Banana River - near
+      the Kennedy Space Center.
+    species_match_basis: 'Commons file metadata/categories contain species terms: bottlenose dolphin, tursiops truncatus;
+      source file: File:Tursiops truncatus 01.jpg.'
+    crop_guidance: Use a responsive crop that keeps the Common Bottlenose Dolphin or habitat context legible; preserve enough
+      surrounding water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site
+      guidance.
+    ethics_notes: 'Approved with constrained-use ethics notes after reviewing automated flags: human_or_vehicle_proximity_review.
+      Use only in neutral education/species identity contexts with attribution and source context. Do not pair this asset
+      with copy that encourages approach, wake-riding, chasing, feeding, or wildlife tourism proximity.'
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-that-implies-close-approach
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    - wildlife-tourism-promotion
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: species-bottlenose-dolphin-wikimedia-tursiops-truncatus-01
+      provider: wikimedia_commons
+      title: File:Tursiops truncatus 01.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/1/10/Tursiops_truncatus_01.jpg
+      creator: NASA
+      credit: 'https://images.nasa.gov/details/KSC-04pd0178
+
+        http://mediaarchive.ksc.nasa.gov/detail.cfm?mediaid=21807 on the Wayback Machine at the Wayback Machine'
+      license: Public domain
+      license_url: null
+      rights_status: public-domain-or-cc0-candidate
+      flags:
+      - human_or_vehicle_proximity_review
+      score: 67
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - noaa_fisheries
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for Common Bottlenose Dolphin. Keep source, rights, crop, alt text, and ethics metadata
+    current during future reviews.
+- artifact_id: species-humpback-whale
+  species_page: content/species/cetaceans/humpback-whale.md
+  slug: humpback-whale
+  taxon_group: cetaceans
+  common_name: Humpback Whale
+  scientific_name: Megaptera novaeangliae
+  species_slugs:
+  - megaptera-novaeangliae
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: species-humpback-whale-wikimedia-humpback-whales-in-singing-position
+    approved_path: null
+    rights_status: public-domain
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Humpback_whales_in_singing_position.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/8/8b/Humpback_whales_in_singing_position.jpg
+    creator: Dr. Louis M. Herman.
+    credit: 'NOAA Photo Library: sanc0602'
+    license: Public domain
+    license_url: null
+    alt_text: Humpback whales in the singing position. Humpback Whale NMS.
+    species_match_basis: 'Commons file metadata/categories contain species terms: humpback whale, megaptera novaeangliae;
+      source file: File:Humpback whales in singing position.jpg.'
+    crop_guidance: Use a responsive crop that keeps the Humpback Whale or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: species-humpback-whale-wikimedia-humpback-whales-in-singing-position
+      provider: wikimedia_commons
+      title: File:Humpback whales in singing position.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Humpback_whales_in_singing_position.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/8/8b/Humpback_whales_in_singing_position.jpg
+      creator: Dr. Louis M. Herman.
+      credit: 'NOAA Photo Library: sanc0602'
+      license: Public domain
+      license_url: null
+      rights_status: public-domain-or-cc0-candidate
+      flags: []
+      score: 89
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://iucn.org/content/humpback-whale-road-recovery-reveals-iucn-red-list
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets:
+  - asset_id: blc-imagegen-humpback-distance-001
+    path: assets/generated/imagegen/2026-06-26-batch-004/blc-imagegen-humpback-distance-001.png
+    role: generated_ethics_plate
+    status: approved_draft
+    use_limitations: Supporting visual only; not biological evidence, official identification media, or proof of conservation
+      status.
+  next_action: Primary media approved for Humpback Whale. Keep source, rights, crop, alt text, and ethics metadata current
+    during future reviews.
+- artifact_id: species-north-atlantic-right-whale
+  species_page: content/species/cetaceans/north-atlantic-right-whale.md
+  slug: north-atlantic-right-whale
+  taxon_group: cetaceans
+  common_name: North Atlantic Right Whale
+  scientific_name: Eubalaena glacialis
+  species_slugs:
+  - eubalaena-glacialis
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: species-north-atlantic-right-whale-wikimedia-north-atlantic-right-whale-earth-is-blue
+    approved_path: null
+    rights_status: public-domain
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:North_Atlantic_right_whale_-_Earth_Is_Blue.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/a/a6/North_Atlantic_right_whale_-_Earth_Is_Blue.jpg
+    creator: NOAA Gray's Reef NMS
+    credit: https://twitter.com/GraysReefNMS/status/1348724327156477957/photo/1
+    license: Public domain
+    license_url: null
+    alt_text: North Atlantic right whale as part of NOAA's Earth Is Blue series.
+    species_match_basis: 'Commons file metadata/categories contain species terms: eubalaena glacialis, north atlantic right
+      whale; source file: File:North Atlantic right whale - Earth Is Blue.jpg.'
+    crop_guidance: Use a responsive crop that keeps the North Atlantic Right Whale or habitat context legible; preserve enough
+      surrounding water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site
+      guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: species-north-atlantic-right-whale-wikimedia-north-atlantic-right-whale-earth-is-blue
+      provider: wikimedia_commons
+      title: File:North Atlantic right whale - Earth Is Blue.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:North_Atlantic_right_whale_-_Earth_Is_Blue.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/a/a6/North_Atlantic_right_whale_-_Earth_Is_Blue.jpg
+      creator: NOAA Gray's Reef NMS
+      credit: https://twitter.com/GraysReefNMS/status/1348724327156477957/photo/1
+      license: Public domain
+      license_url: null
+      rights_status: public-domain-or-cc0-candidate
+      flags: []
+      score: 89
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.fisheries.noaa.gov/species/north-atlantic-right-whale
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - noaa_fisheries
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for North Atlantic Right Whale. Keep source, rights, crop, alt text, and ethics metadata
+    current during future reviews.
+- artifact_id: species-orca
+  species_page: content/species/cetaceans/orca.md
+  slug: orca
+  taxon_group: cetaceans
+  common_name: Orca
+  scientific_name: Orcinus orca
+  species_slugs:
+  - orcinus-orca
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: species-orca-wikimedia-killerwhales-jumping
+    approved_path: null
+    rights_status: public-domain
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/3/37/Killerwhales_jumping.jpg
+    creator: Robert Pittman
+    credit: NOAA (http://www.afsc.noaa.gov/Quarterly/amj2005/divrptsNMML3.htm])
+    license: Public domain
+    license_url: null
+    alt_text: Orca (Orcinus orca) in an approved source image used for species identification.
+    species_match_basis: 'Commons file metadata/categories contain species terms: orca, orcinus orca; source file: File:Killerwhales
+      jumping.jpg.'
+    crop_guidance: Use a responsive crop that keeps the Orca or habitat context legible; preserve enough surrounding water/habitat
+      for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: species-orca-wikimedia-killerwhales-jumping
+      provider: wikimedia_commons
+      title: File:Killerwhales jumping.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/3/37/Killerwhales_jumping.jpg
+      creator: Robert Pittman
+      credit: NOAA (http://www.afsc.noaa.gov/Quarterly/amj2005/divrptsNMML3.htm])
+      license: Public domain
+      license_url: null
+      rights_status: public-domain-or-cc0-candidate
+      flags: []
+      score: 89
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.fisheries.noaa.gov/species/killer-whale
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - noaa_fisheries
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets:
+  - asset_id: blc-keyart-orca-01
+    path: brand/visuals/blc-keyart-orca-01.jpg
+    role: generated_key_art
+    status: concept_only
+    use_limitations: Supporting visual only; not biological evidence, official identification media, or proof of conservation
+      status.
+  next_action: Primary media approved for Orca. Keep source, rights, crop, alt text, and ethics metadata current during future
+    reviews.
+- artifact_id: species-sperm-whale
+  species_page: content/species/cetaceans/sperm-whale.md
+  slug: sperm-whale
+  taxon_group: cetaceans
+  common_name: Sperm Whale
+  scientific_name: Physeter macrocephalus
+  species_slugs:
+  - physeter-macrocephalus
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: species-sperm-whale-wikimedia-6-18-sperm-whale
+    approved_path: null
+    rights_status: cc0
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:6(18)_Sperm_whale.JPG
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/2/24/6%2818%29_Sperm_whale.JPG
+    creator: Marion & Christoph Aistleitner
+    credit: own picture (User:Mediocrity)
+    license: CC0
+    license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    alt_text: Sperm whale (Physeter macrocephalus) at Kaikoura, New Zealand.
+    species_match_basis: 'Commons file metadata/categories contain species terms: physeter macrocephalus, sperm whale; source
+      file: File:6(18) Sperm whale.JPG.'
+    crop_guidance: Use a responsive crop that keeps the Sperm Whale or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: species-sperm-whale-wikimedia-6-18-sperm-whale
+      provider: wikimedia_commons
+      title: File:6(18) Sperm whale.JPG
+      commons_file_page: https://commons.wikimedia.org/wiki/File:6(18)_Sperm_whale.JPG
+      image_url: https://upload.wikimedia.org/wikipedia/commons/2/24/6%2818%29_Sperm_whale.JPG
+      creator: Marion & Christoph Aistleitner
+      credit: own picture (User:Mediocrity)
+      license: CC0
+      license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+      rights_status: public-domain-or-cc0-candidate
+      flags: []
+      score: 67
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.fisheries.noaa.gov/species/sperm-whale
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - noaa_fisheries
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for Sperm Whale. Keep source, rights, crop, alt text, and ethics metadata current during
+    future reviews.
+- artifact_id: species-california-sea-lion
+  species_page: content/species/pinnipeds/california-sea-lion.md
+  slug: california-sea-lion
+  taxon_group: pinnipeds
+  common_name: California Sea Lion
+  scientific_name: Zalophus californianus
+  species_slugs:
+  - zalophus-californianus
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: species-california-sea-lion-wikimedia-bigmalesealion
+    approved_path: null
+    rights_status: cc-by
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Bigmalesealion.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/5/5c/Bigmalesealion.jpg
+    creator: https://www.flickr.com/photos/mikebaird/ Mike Baird
+    credit: https://www.flickr.com/photos/mikebaird/3044736530/
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    alt_text: California Sea Lion in Morro Bay.
+    species_match_basis: 'Commons file metadata/categories contain species terms: california sea lion, zalophus californianus;
+      source file: File:Bigmalesealion.jpg.'
+    crop_guidance: Use a responsive crop that keeps the California Sea Lion or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: species-california-sea-lion-wikimedia-bigmalesealion
+      provider: wikimedia_commons
+      title: File:Bigmalesealion.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Bigmalesealion.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/5/5c/Bigmalesealion.jpg
+      creator: https://www.flickr.com/photos/mikebaird/ Mike Baird
+      credit: https://www.flickr.com/photos/mikebaird/3044736530/
+      license: CC BY 2.0
+      license_url: https://creativecommons.org/licenses/by/2.0
+      rights_status: cc-by-candidate
+      flags: []
+      score: 57
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.fisheries.noaa.gov/species/california-sea-lion
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - noaa_fisheries
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for California Sea Lion. Keep source, rights, crop, alt text, and ethics metadata current
+    during future reviews.
+- artifact_id: species-grey-seal
+  species_page: content/species/pinnipeds/grey-seal.md
+  slug: grey-seal
+  taxon_group: pinnipeds
+  common_name: Grey Seal
+  scientific_name: Halichoerus grypus
+  species_slugs:
+  - halichoerus-grypus
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: species-grey-seal-wikimedia-szarytka-morska
+    approved_path: null
+    rights_status: cc-by
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Szarytka_morska.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/7/72/Szarytka_morska.jpg
+    creator: Aneta p
+    credit: Own work
+    license: CC BY 4.0
+    license_url: https://creativecommons.org/licenses/by/4.0
+    alt_text: Grey seal in Baltic Sea, Poland.
+    species_match_basis: 'Commons file metadata/categories contain species terms: grey seal, halichoerus grypus; source file:
+      File:Szarytka morska.jpg.'
+    crop_guidance: Use a responsive crop that keeps the Grey Seal or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: species-grey-seal-wikimedia-szarytka-morska
+      provider: wikimedia_commons
+      title: File:Szarytka morska.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Szarytka_morska.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/7/72/Szarytka_morska.jpg
+      creator: Aneta p
+      credit: Own work
+      license: CC BY 4.0
+      license_url: https://creativecommons.org/licenses/by/4.0
+      rights_status: cc-by-candidate
+      flags: []
+      score: 61
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.fisheries.noaa.gov/species/gray-seal
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - noaa_fisheries
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for Grey Seal. Keep source, rights, crop, alt text, and ethics metadata current during
+    future reviews.
+- artifact_id: species-harbor-seal
+  species_page: content/species/pinnipeds/harbor-seal.md
+  slug: harbor-seal
+  taxon_group: pinnipeds
+  common_name: Harbor Seal
+  scientific_name: Phoca vitulina
+  species_slugs:
+  - phoca-vitulina
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: species-harbor-seal-wikimedia-harbor-seal-phoca-vitulina-flickr-gregthebusker
+    approved_path: null
+    rights_status: cc-by
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Harbor_Seal,_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/5/50/Harbor_Seal%2C_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg
+    creator: Greg Schechter from San Francisco, USA
+    credit: Harbor Seal, Phoca vitulina
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    alt_text: Harbor Seal, Phoca vitulina.
+    species_match_basis: 'Commons file metadata/categories contain species terms: harbor seal, phoca vitulina; source file:
+      File:Harbor Seal, Phoca vitulina - Flickr - GregTheBusker.jpg.'
+    crop_guidance: Use a responsive crop that keeps the Harbor Seal or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: species-harbor-seal-wikimedia-harbor-seal-phoca-vitulina-flickr-gregthebusker
+      provider: wikimedia_commons
+      title: File:Harbor Seal, Phoca vitulina - Flickr - GregTheBusker.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Harbor_Seal,_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/5/50/Harbor_Seal%2C_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg
+      creator: Greg Schechter from San Francisco, USA
+      credit: Harbor Seal, Phoca vitulina
+      license: CC BY 2.0
+      license_url: https://creativecommons.org/licenses/by/2.0
+      rights_status: cc-by-candidate
+      flags: []
+      score: 61
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.nps.gov/places/harbor-seal.htm
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - national_park_service
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for Harbor Seal. Keep source, rights, crop, alt text, and ethics metadata current during
+    future reviews.
+- artifact_id: species-hawaiian-monk-seal
+  species_page: content/species/pinnipeds/hawaiian-monk-seal.md
+  slug: hawaiian-monk-seal
+  taxon_group: pinnipeds
+  common_name: Hawaiian Monk Seal
+  scientific_name: Neomonachus schauinslandi
+  species_slugs:
+  - neomonachus-schauinslandi
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: species-hawaiian-monk-seal-wikimedia-moenchsrobbe-1
+    approved_path: null
+    rights_status: public-domain
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Moenchsrobbe_1.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/f/f9/Moenchsrobbe_1.jpg
+    creator: U.S. Fish and Wildlife Service
+    credit: http://images.fws.gov
+    license: Public domain
+    license_url: null
+    alt_text: Hawaiian Monk Seal.
+    species_match_basis: 'Commons file metadata/categories contain species terms: hawaiian monk seal; source file: File:Moenchsrobbe
+      1.jpg.'
+    crop_guidance: Use a responsive crop that keeps the Hawaiian Monk Seal or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: species-hawaiian-monk-seal-wikimedia-moenchsrobbe-1
+      provider: wikimedia_commons
+      title: File:Moenchsrobbe 1.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Moenchsrobbe_1.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/f/f9/Moenchsrobbe_1.jpg
+      creator: U.S. Fish and Wildlife Service
+      credit: http://images.fws.gov
+      license: Public domain
+      license_url: null
+      rights_status: public-domain-or-cc0-candidate
+      flags: []
+      score: 89
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.fisheries.noaa.gov/species/hawaiian-monk-seal
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - noaa_fisheries
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for Hawaiian Monk Seal. Keep source, rights, crop, alt text, and ethics metadata current
+    during future reviews.
+- artifact_id: species-walrus
+  species_page: content/species/pinnipeds/walrus.md
+  slug: walrus
+  taxon_group: pinnipeds
+  common_name: Walrus
+  scientific_name: Odobenus rosmarus
+  species_slugs:
+  - odobenus-rosmarus
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: species-walrus-wikimedia-pacific-walrus-bull-8247646168
+    approved_path: null
+    rights_status: public-domain
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Pacific_Walrus_-_Bull_(8247646168).jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/2/22/Pacific_Walrus_-_Bull_%288247646168%29.jpg
+    creator: Joel Garlich-Miller, U.S. Fish and Wildlife Service
+    credit: Pacific Walrus Bull
+    license: Public domain
+    license_url: null
+    alt_text: A large Pacific Walrus bull watches the camera. The adult bulls can weigh up to 3,700 pounds.
+    species_match_basis: 'Commons file metadata/categories contain species terms: odobenus rosmarus, walrus; source file:
+      File:Pacific Walrus - Bull (8247646168).jpg.'
+    crop_guidance: Use a responsive crop that keeps the Walrus or habitat context legible; preserve enough surrounding water/habitat
+      for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: 'Approved with constrained-use ethics notes after reviewing automated flags: human_or_vehicle_proximity_review.
+      Use only in neutral education/species identity contexts with attribution and source context. Do not pair this asset
+      with copy that encourages approach, wake-riding, chasing, feeding, or wildlife tourism proximity.'
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-that-implies-close-approach
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    - wildlife-tourism-promotion
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: species-walrus-wikimedia-pacific-walrus-bull-8247646168
+      provider: wikimedia_commons
+      title: File:Pacific Walrus - Bull (8247646168).jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Pacific_Walrus_-_Bull_(8247646168).jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/2/22/Pacific_Walrus_-_Bull_%288247646168%29.jpg
+      creator: Joel Garlich-Miller, U.S. Fish and Wildlife Service
+      credit: Pacific Walrus Bull
+      license: Public domain
+      license_url: null
+      rights_status: public-domain-or-cc0-candidate
+      flags: []
+      score: 89
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.fws.gov/species/pacific-walrus-odobenus-rosmarus-divergens
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - us_fish_and_wildlife_service
+    - noaa_fisheries
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for Walrus. Keep source, rights, crop, alt text, and ethics metadata current during
+    future reviews.
+- artifact_id: species-brain-coral
+  species_page: content/species/reefs/brain-coral.md
+  slug: brain-coral
+  taxon_group: reefs
+  common_name: Grooved Brain Coral
+  scientific_name: Diploria labyrinthiformis
+  species_slugs:
+  - diploria-labyrinthiformis
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: species-brain-coral-wikimedia-metal-block-with-coral-dry-tortugas-20100629
+    approved_path: null
+    rights_status: cc0
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Metal_block_with_coral_Dry_Tortugas_20100629.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/8/8e/Metal_block_with_coral_Dry_Tortugas_20100629.jpg
+    creator: Jstuby
+    credit: Own work
+    license: CC0
+    license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    alt_text: Metal block with corals on it (Diploria labyrinthiformis and Diploria strigosa) in shallow water next to Fort
+      Jefferson, Dry Tortugas National Park, Florida.
+    species_match_basis: 'Commons file metadata/categories contain species terms: diploria labyrinthiformis; source file:
+      File:Metal block with coral Dry Tortugas 20100629.jpg.'
+    crop_guidance: Use a responsive crop that keeps the Grooved Brain Coral or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: species-brain-coral-wikimedia-metal-block-with-coral-dry-tortugas-20100629
+      provider: wikimedia_commons
+      title: File:Metal block with coral Dry Tortugas 20100629.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Metal_block_with_coral_Dry_Tortugas_20100629.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/8/8e/Metal_block_with_coral_Dry_Tortugas_20100629.jpg
+      creator: Jstuby
+      credit: Own work
+      license: CC0
+      license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+      rights_status: public-domain-or-cc0-candidate
+      flags: []
+      score: 67
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://cdhc.noaa.gov/coral-disease/characterized-diseases/stony-coral-tissue-loss-disease-sctld/
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - noaa_program_site
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets:
+  - asset_id: blc-keyart-brain-coral-01
+    path: brand/visuals/blc-keyart-brain-coral-01.jpg
+    role: generated_key_art
+    status: concept_only
+    use_limitations: Supporting visual only; not biological evidence, official identification media, or proof of conservation
+      status.
+  next_action: Primary media approved for Grooved Brain Coral. Keep source, rights, crop, alt text, and ethics metadata current
+    during future reviews.
+- artifact_id: species-elkhorn-coral
+  species_page: content/species/reefs/elkhorn-coral.md
+  slug: elkhorn-coral
+  taxon_group: reefs
+  common_name: Elkhorn Coral
+  scientific_name: Acropora palmata
+  species_slugs:
+  - acropora-palmata
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: species-elkhorn-coral-wikimedia-gaulin-reef-san-salvador
+    approved_path: null
+    rights_status: cc0
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Gaulin_Reef_San_Salvador.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/e/ea/Gaulin_Reef_San_Salvador.jpg
+    creator: Jstuby at en.wikipedia
+    credit: Own workTransferred from en.wikipedia
+    license: CC0
+    license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    alt_text: Elkhorn coral (Acropora palmata) on the crest of Gaulin Reef, San Salvador Island, Bahamas. June 24, 1999.
+    species_match_basis: 'Commons file metadata/categories contain species terms: acropora palmata, elkhorn coral; source
+      file: File:Gaulin Reef San Salvador.jpg.'
+    crop_guidance: Use a responsive crop that keeps the Elkhorn Coral or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: species-elkhorn-coral-wikimedia-gaulin-reef-san-salvador
+      provider: wikimedia_commons
+      title: File:Gaulin Reef San Salvador.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Gaulin_Reef_San_Salvador.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/e/ea/Gaulin_Reef_San_Salvador.jpg
+      creator: Jstuby at en.wikipedia
+      credit: Own workTransferred from en.wikipedia
+      license: CC0
+      license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+      rights_status: public-domain-or-cc0-candidate
+      flags: []
+      score: 63
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.fisheries.noaa.gov/action/listing-elkhorn-and-staghorn-corals-under-esa
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - noaa_fisheries
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for Elkhorn Coral. Keep source, rights, crop, alt text, and ethics metadata current
+    during future reviews.
+- artifact_id: species-giant-kelp
+  species_page: content/species/reefs/giant-kelp.md
+  slug: giant-kelp
+  taxon_group: reefs
+  common_name: Giant Kelp
+  scientific_name: Macrocystis pyrifera
+  species_slugs:
+  - macrocystis-pyrifera
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: species-giant-kelp-wikimedia-sanc0063-flickr-noaa-photo-library
+    approved_path: null
+    rights_status: public-domain
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Sanc0063_-_Flickr_-_NOAA_Photo_Library.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/f/f8/Sanc0063_-_Flickr_-_NOAA_Photo_Library.jpg
+    creator: Claire Fackler, CINMS, NOAA.
+    credit: 'NOAA Photo Library: sanc0063'
+    license: Public domain
+    license_url: null
+    alt_text: Giant kelp (Macrocystis pyrifera). California, Channel Islands NMS.
+    species_match_basis: 'Commons file metadata/categories contain species terms: giant kelp, macrocystis pyrifera; source
+      file: File:Sanc0063 - Flickr - NOAA Photo Library.jpg.'
+    crop_guidance: Use a responsive crop that keeps the Giant Kelp or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: species-giant-kelp-wikimedia-sanc0063-flickr-noaa-photo-library
+      provider: wikimedia_commons
+      title: File:Sanc0063 - Flickr - NOAA Photo Library.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Sanc0063_-_Flickr_-_NOAA_Photo_Library.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/f/f8/Sanc0063_-_Flickr_-_NOAA_Photo_Library.jpg
+      creator: Claire Fackler, CINMS, NOAA.
+      credit: 'NOAA Photo Library: sanc0063'
+      license: Public domain
+      license_url: null
+      rights_status: public-domain-or-cc0-candidate
+      flags: []
+      score: 89
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.fisheries.noaa.gov/west-coast/habitat-conservation/kelp-forest-habitat-west-coast
+  source_candidates:
+    official_or_institutional_refs:
+    - noaa_fisheries
+    - noaa_program_site
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for Giant Kelp. Keep source, rights, crop, alt text, and ethics metadata current during
+    future reviews.
+- artifact_id: species-red-mangrove
+  species_page: content/species/reefs/red-mangrove.md
+  slug: red-mangrove
+  taxon_group: reefs
+  common_name: Red Mangrove
+  scientific_name: Rhizophora mangle
+  species_slugs:
+  - rhizophora-mangle
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: species-red-mangrove-wikimedia-red-mangrove-imported-from-inaturalist-photo-256
+    approved_path: null
+    rights_status: cc0
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/f/f4/Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg
+    creator: no rights reserved
+    credit: https://www.inaturalist.org/photos/256882666
+    license: CC0
+    license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    alt_text: Photo of red mangrove uploaded from iNaturalist.
+    species_match_basis: 'Commons file metadata/categories contain species terms: red mangrove, rhizophora mangle; source
+      file: File:Red mangrove imported from iNaturalist photo 256882666 on 27 February 2024.jpg.'
+    crop_guidance: Use a responsive crop that keeps the Red Mangrove or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: species-red-mangrove-wikimedia-red-mangrove-imported-from-inaturalist-photo-256
+      provider: wikimedia_commons
+      title: File:Red mangrove imported from iNaturalist photo 256882666 on 27 February 2024.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/f/f4/Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg
+      creator: no rights reserved
+      credit: https://www.inaturalist.org/photos/256882666
+      license: CC0
+      license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+      rights_status: public-domain-or-cc0-candidate
+      flags: []
+      score: 67
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://floridakeys.noaa.gov/plants/mangroves.html
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - noaa_program_site
+    - smithsonian_ocean
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets:
+  - asset_id: blc-imagegen-mangrove-nursery-001
+    path: assets/generated/imagegen/2026-06-26-batch-004/blc-imagegen-mangrove-nursery-001.png
+    role: generated_habitat_plate
+    status: approved_draft
+    use_limitations: Supporting visual only; not biological evidence, official identification media, or proof of conservation
+      status.
+  next_action: Primary media approved for Red Mangrove. Keep source, rights, crop, alt text, and ethics metadata current during
+    future reviews.
+- artifact_id: species-seagrass-posidonia
+  species_page: content/species/reefs/seagrass-posidonia.md
+  slug: seagrass-posidonia
+  taxon_group: reefs
+  common_name: Neptune Grass
+  scientific_name: Posidonia oceanica
+  species_slugs:
+  - posidonia-oceanica
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: species-seagrass-posidonia-wikimedia-posidonia-oceanica
+    approved_path: null
+    rights_status: public-domain
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Posidonia_oceanica.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/8/80/Posidonia_oceanica.jpg
+    creator: National Oceanic and Atmospheric Administration
+    credit: http://www.noaa.gov/
+    license: Public domain
+    license_url: null
+    alt_text: Posidonia oceanica.
+    species_match_basis: 'Commons file metadata/categories contain species terms: posidonia oceanica; source file: File:Posidonia
+      oceanica.jpg.'
+    crop_guidance: Use a responsive crop that keeps the Neptune Grass or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: species-seagrass-posidonia-wikimedia-posidonia-oceanica
+      provider: wikimedia_commons
+      title: File:Posidonia oceanica.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Posidonia_oceanica.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/8/80/Posidonia_oceanica.jpg
+      creator: National Oceanic and Atmospheric Administration
+      credit: http://www.noaa.gov/
+      license: Public domain
+      license_url: null
+      rights_status: public-domain-or-cc0-candidate
+      flags: []
+      score: 85
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://maritime-forum.ec.europa.eu/map-week-seagrass-meadows-posidonia-oceanica_en
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - royal_botanic_gardens_kew
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for Neptune Grass. Keep source, rights, crop, alt text, and ethics metadata current
+    during future reviews.
+- artifact_id: species-staghorn-coral
+  species_page: content/species/reefs/staghorn-coral.md
+  slug: staghorn-coral
+  taxon_group: reefs
+  common_name: Staghorn Coral
+  scientific_name: Acropora cervicornis
+  species_slugs:
+  - acropora-cervicornis
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: species-staghorn-coral-wikimedia-staghorn-coral-on-baker-island-nwr-5123996348
+    approved_path: null
+    rights_status: public-domain
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Staghorn_coral_on_Baker_Island_NWR_(5123996348).jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/0/03/Staghorn_coral_on_Baker_Island_NWR_%285123996348%29.jpg
+    creator: U.S. Fish and Wildlife Service Headquarters
+    credit: 'Staghorn coral on Baker Island NWR
+
+
+      Uploaded by Dolovis'
+    license: Public domain
+    license_url: null
+    alt_text: Beds of staghorn coral (Acropora Sp) undulate across the sea floor at Baker Island National Wildlife Refuge
+      in the Pacific, some 1,600 miles southwest of Honolulu. (Jim Maragos/USFWS).
+    species_match_basis: 'Commons file metadata/categories contain species terms: acropora cervicornis, staghorn coral; source
+      file: File:Staghorn coral on Baker Island NWR (5123996348).jpg.'
+    crop_guidance: Use a responsive crop that keeps the Staghorn Coral or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: species-staghorn-coral-wikimedia-staghorn-coral-on-baker-island-nwr-5123996348
+      provider: wikimedia_commons
+      title: File:Staghorn coral on Baker Island NWR (5123996348).jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Staghorn_coral_on_Baker_Island_NWR_(5123996348).jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/0/03/Staghorn_coral_on_Baker_Island_NWR_%285123996348%29.jpg
+      creator: U.S. Fish and Wildlife Service Headquarters
+      credit: 'Staghorn coral on Baker Island NWR
+
+
+        Uploaded by Dolovis'
+      license: Public domain
+      license_url: null
+      rights_status: public-domain-or-cc0-candidate
+      flags: []
+      score: 89
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://iucn.org/press-release/202411/over-40-coral-species-face-extinction-iucn-red-list
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for Staghorn Coral. Keep source, rights, crop, alt text, and ethics metadata current
+    during future reviews.
+- artifact_id: basking-shark
+  species_page: content/species/sharks-rays/basking-shark.md
+  slug: basking-shark
+  taxon_group: sharks-rays
+  common_name: Basking Shark
+  scientific_name: Cetorhinus maximus
+  species_slugs:
+  - cetorhinus-maximus
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: basking-shark-wikimedia-cetorhinus-maximus-by-greg-skomal
+    approved_path: null
+    rights_status: public-domain
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Cetorhinus_maximus_by_greg_skomal.JPG
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/0/0b/Cetorhinus_maximus_by_greg_skomal.JPG
+    creator: Greg Skomal / NOAA Fisheries Service
+    credit: Basking Shark (english). NOAA Fisheries Service. National Oceanic and Atmospheric Administration.
+    license: Public domain
+    license_url: null
+    alt_text: Basking shark (Cetorhinus maximus).
+    species_match_basis: 'Commons file metadata/categories contain species terms: basking shark, cetorhinus maximus; source
+      file: File:Cetorhinus maximus by greg skomal.JPG.'
+    crop_guidance: Use a responsive crop that keeps the Basking Shark or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: basking-shark-wikimedia-cetorhinus-maximus-by-greg-skomal
+      provider: wikimedia_commons
+      title: File:Cetorhinus maximus by greg skomal.JPG
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Cetorhinus_maximus_by_greg_skomal.JPG
+      image_url: https://upload.wikimedia.org/wikipedia/commons/0/0b/Cetorhinus_maximus_by_greg_skomal.JPG
+      creator: Greg Skomal / NOAA Fisheries Service
+      credit: Basking Shark (english). NOAA Fisheries Service. National Oceanic and Atmospheric Administration.
+      license: Public domain
+      license_url: null
+      rights_status: public-domain-or-cc0-candidate
+      flags: []
+      score: 89
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/cetorhinus-maximus/
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - florida_museum
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for Basking Shark. Keep source, rights, crop, alt text, and ethics metadata current
+    during future reviews.
+- artifact_id: great-white-shark
+  species_page: content/species/sharks-rays/great-white-shark.md
+  slug: great-white-shark
+  taxon_group: sharks-rays
+  common_name: Great White Shark
+  scientific_name: Carcharodon carcharias
+  species_slugs:
+  - Carcharodon carcharias
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: great-white-shark-wikimedia-white-shark
+    approved_path: null
+    rights_status: cc-by
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:White_shark.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/5/56/White_shark.jpg
+    creator: Pterantula (Terry Goss) at en.wikipedia
+    credit: Derivative of w:Image:Whiteshark-TGoss5b.jpg
+    license: CC BY 2.5
+    license_url: https://creativecommons.org/licenses/by/2.5
+    alt_text: Great white shark at Isla Guadalupe, Mexico, August 2006. Shot with Nikon D70s in Ikelite housing, in natural
+      light. Animal estimated at 11-12 feet (3.3 to 3.6 m) in length, age unknown.
+    species_match_basis: 'Commons file metadata/categories contain species terms: carcharodon carcharias, great white shark;
+      source file: File:White shark.jpg.'
+    crop_guidance: Use a responsive crop that keeps the Great White Shark or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: great-white-shark-wikimedia-white-shark
+      provider: wikimedia_commons
+      title: File:White shark.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:White_shark.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/5/56/White_shark.jpg
+      creator: Pterantula (Terry Goss) at en.wikipedia
+      credit: Derivative of w:Image:Whiteshark-TGoss5b.jpg
+      license: CC BY 2.5
+      license_url: https://creativecommons.org/licenses/by/2.5
+      rights_status: cc-by-candidate
+      flags: []
+      score: 61
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.fisheries.noaa.gov/species/white-shark
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - noaa_fisheries
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for Great White Shark. Keep source, rights, crop, alt text, and ethics metadata current
+    during future reviews.
+- artifact_id: reef-manta-ray
+  species_page: content/species/sharks-rays/reef-manta-ray.md
+  slug: reef-manta-ray
+  taxon_group: sharks-rays
+  common_name: Reef Manta Ray
+  scientific_name: Mobula alfredi
+  species_slugs:
+  - mobula-alfredi
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: reef-manta-ray-wikimedia-manta-alfredi-cruising-journal-pone-0046170-g002
+    approved_path: null
+    rights_status: cc-by
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Manta_alfredi_cruising_-_journal.pone.0046170.g002A.png
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/c/c5/Manta_alfredi_cruising_-_journal.pone.0046170.g002A.png
+    creator: Jaine FRA, Couturier LIE, Weeks SJ, Townsend KA, Bennett MB, et al. (2012)
+    credit: 'Jaine FRA, Couturier LIE, Weeks SJ, Townsend KA, Bennett MB, et al. (2012) When Giants Turn Up: Sighting Trends,
+      Environmental Influences and Habitat Use of the Manta Ray Manta alfredi at a Coral Reef. PLoS ONE 7(10): e46170. doi:10.1371/journal.pone.0046170'
+    license: CC BY 2.5
+    license_url: https://creativecommons.org/licenses/by/2.5
+    alt_text: Reef Manta Ray (Mobula alfredi) in an approved source image used for species identification.
+    species_match_basis: 'Commons file metadata/categories contain species terms: mobula alfredi; source file: File:Manta
+      alfredi cruising - journal.pone.0046170.g002A.png.'
+    crop_guidance: Use a responsive crop that keeps the Reef Manta Ray or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: reef-manta-ray-wikimedia-manta-alfredi-cruising-journal-pone-0046170-g002
+      provider: wikimedia_commons
+      title: File:Manta alfredi cruising - journal.pone.0046170.g002A.png
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Manta_alfredi_cruising_-_journal.pone.0046170.g002A.png
+      image_url: https://upload.wikimedia.org/wikipedia/commons/c/c5/Manta_alfredi_cruising_-_journal.pone.0046170.g002A.png
+      creator: Jaine FRA, Couturier LIE, Weeks SJ, Townsend KA, Bennett MB, et al. (2012)
+      credit: 'Jaine FRA, Couturier LIE, Weeks SJ, Townsend KA, Bennett MB, et al. (2012) When Giants Turn Up: Sighting Trends,
+        Environmental Influences and Habitat Use of the Manta Ray Manta alfredi at a Coral Reef. PLoS ONE 7(10): e46170. doi:10.1371/journal.pone.0046170'
+      license: CC BY 2.5
+      license_url: https://creativecommons.org/licenses/by/2.5
+      rights_status: cc-by-candidate
+      flags: []
+      score: 57
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.mantatrust.org/mobula-alfredi
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - manta_trust
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets:
+  - asset_id: blc-imagegen-manta-ray-001
+    path: assets/generated/imagegen/2026-06-26-batch-004/blc-imagegen-manta-ray-001.png
+    role: generated_key_art
+    status: approved_draft
+    use_limitations: Supporting visual only; not biological evidence, official identification media, or proof of conservation
+      status.
+  next_action: Primary media approved for Reef Manta Ray. Keep source, rights, crop, alt text, and ethics metadata current
+    during future reviews.
+- artifact_id: scalloped-hammerhead
+  species_page: content/species/sharks-rays/scalloped-hammerhead.md
+  slug: scalloped-hammerhead
+  taxon_group: sharks-rays
+  common_name: Scalloped Hammerhead
+  scientific_name: Sphyrna lewini
+  species_slugs:
+  - sphyrna-lewini
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: scalloped-hammerhead-wikimedia-sphyrna-lewini-griffith-smith-1834-2422815227
+    approved_path: null
+    rights_status: cc0
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Sphyrna_lewini_(Griffith_%26_Smith,_1834)_2422815227.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/d/df/Sphyrna_lewini_%28Griffith_%26_Smith%2C_1834%29_2422815227.jpg
+    creator: iNaturalist.org (Simon Tonge) (Simon%20Tonge)
+    credit: https://www.gbif.org/occurrence/2422815227
+    license: CC0
+    license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    alt_text: Sphyrna lewini (Griffith & Smith, 1834) 2422815227.
+    species_match_basis: 'Commons file metadata/categories contain species terms: sphyrna lewini; source file: File:Sphyrna
+      lewini (Griffith & Smith, 1834) 2422815227.jpg.'
+    crop_guidance: Use a responsive crop that keeps the Scalloped Hammerhead or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: scalloped-hammerhead-wikimedia-sphyrna-lewini-griffith-smith-1834-2422815227
+      provider: wikimedia_commons
+      title: File:Sphyrna lewini (Griffith & Smith, 1834) 2422815227.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Sphyrna_lewini_(Griffith_%26_Smith,_1834)_2422815227.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/d/df/Sphyrna_lewini_%28Griffith_%26_Smith%2C_1834%29_2422815227.jpg
+      creator: iNaturalist.org (Simon Tonge) (Simon%20Tonge)
+      credit: https://www.gbif.org/occurrence/2422815227
+      license: CC0
+      license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+      rights_status: public-domain-or-cc0-candidate
+      flags: []
+      score: 67
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.fisheries.noaa.gov/species/scalloped-hammerhead-shark
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - noaa_fisheries
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for Scalloped Hammerhead. Keep source, rights, crop, alt text, and ethics metadata current
+    during future reviews.
+- artifact_id: shortfin-mako
+  species_page: content/species/sharks-rays/shortfin-mako.md
+  slug: shortfin-mako
+  taxon_group: sharks-rays
+  common_name: Shortfin Mako
+  scientific_name: Isurus oxyrinchus
+  species_slugs:
+  - isurus-oxyrinchus
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: shortfin-mako-wikimedia-isurus-oxyrinchus-by-mark-conlin
+    approved_path: null
+    rights_status: public-domain
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Isurus_oxyrinchus_by_mark_conlin.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/7/74/Isurus_oxyrinchus_by_mark_conlin.jpg
+    creator: Mark Conlin, SWFSC Large Pelagics Program
+    credit: https://swfsc.noaa.gov/ImageGallery/Default.aspx?moid=533
+    license: Public domain
+    license_url: null
+    alt_text: Shortfin mako shark (Isurus oxyrinchus).
+    species_match_basis: 'Commons file metadata/categories contain species terms: isurus oxyrinchus, shortfin mako; source
+      file: File:Isurus oxyrinchus by mark conlin.jpg.'
+    crop_guidance: Use a responsive crop that keeps the Shortfin Mako or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: shortfin-mako-wikimedia-isurus-oxyrinchus-by-mark-conlin
+      provider: wikimedia_commons
+      title: File:Isurus oxyrinchus by mark conlin.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Isurus_oxyrinchus_by_mark_conlin.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/7/74/Isurus_oxyrinchus_by_mark_conlin.jpg
+      creator: Mark Conlin, SWFSC Large Pelagics Program
+      credit: https://swfsc.noaa.gov/ImageGallery/Default.aspx?moid=533
+      license: Public domain
+      license_url: null
+      rights_status: public-domain-or-cc0-candidate
+      flags: []
+      score: 85
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.fisheries.noaa.gov/species/shortfin-mako-shark
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - noaa_fisheries
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for Shortfin Mako. Keep source, rights, crop, alt text, and ethics metadata current
+    during future reviews.
+- artifact_id: tiger-shark
+  species_page: content/species/sharks-rays/tiger-shark.md
+  slug: tiger-shark
+  taxon_group: sharks-rays
+  common_name: Tiger Shark
+  scientific_name: Galeocerdo cuvier
+  species_slugs:
+  - galeocerdo-cuvier
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: tiger-shark-wikimedia-requin-tigre-galeocerdo-cuvier-ifremer-00756-867
+    approved_path: null
+    rights_status: cc-by
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Requin_tigre_(Galeocerdo_cuvier)_(Ifremer_00756-86782).jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/b/be/Requin_tigre_%28Galeocerdo_cuvier%29_%28Ifremer_00756-86782%29.jpg
+    creator: "Fanchon Varenne (IFREMER, D\xE9l\xE9gation oc\xE9an Indien (DOI), D\xE9partement Ressources Biologiques et Environnement\
+      \ (RBE), F-97420 Le Port, France)"
+    credit: Requin tigre (Galeocerdo cuvier)
+    license: CC BY 4.0
+    license_url: https://creativecommons.org/licenses/by/4.0
+    alt_text: Tiger Shark (Galeocerdo cuvier) in an approved source image used for species identification.
+    species_match_basis: 'Commons file metadata/categories contain species terms: galeocerdo cuvier; source file: File:Requin
+      tigre (Galeocerdo cuvier) (Ifremer 00756-86782).jpg.'
+    crop_guidance: Use a responsive crop that keeps the Tiger Shark or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: tiger-shark-wikimedia-requin-tigre-galeocerdo-cuvier-ifremer-00756-867
+      provider: wikimedia_commons
+      title: File:Requin tigre (Galeocerdo cuvier) (Ifremer 00756-86782).jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Requin_tigre_(Galeocerdo_cuvier)_(Ifremer_00756-86782).jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/b/be/Requin_tigre_%28Galeocerdo_cuvier%29_%28Ifremer_00756-86782%29.jpg
+      creator: "Fanchon Varenne (IFREMER, D\xE9l\xE9gation oc\xE9an Indien (DOI), D\xE9partement Ressources Biologiques et\
+        \ Environnement (RBE), F-97420 Le Port, France)"
+      credit: Requin tigre (Galeocerdo cuvier)
+      license: CC BY 4.0
+      license_url: https://creativecommons.org/licenses/by/4.0
+      rights_status: cc-by-candidate
+      flags: []
+      score: 61
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/galeocerdo-cuvier/
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - florida_museum
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for Tiger Shark. Keep source, rights, crop, alt text, and ethics metadata current during
+    future reviews.
+- artifact_id: species-whale-shark
+  species_page: content/species/sharks-rays/whale-shark.md
+  slug: whale-shark
+  taxon_group: sharks-rays
+  common_name: Whale Shark
+  scientific_name: Rhincodon typus
+  species_slugs:
+  - rhincodon-typus
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: species-whale-shark-wikimedia-olympus-digital-camera-27591269541
+    approved_path: null
+    rights_status: cc0
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:OLYMPUS_DIGITAL_CAMERA_(27591269541).jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/3/3f/OLYMPUS_DIGITAL_CAMERA_%2827591269541%29.jpg
+    creator: cotterillmike
+    credit: https://www.flickr.com/photos/cotterillmike/27591269541/
+    license: CC0
+    license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    alt_text: Whale Shark (Rhincodon typus) in an approved source image used for species identification.
+    species_match_basis: 'Commons file metadata/categories contain species terms: rhincodon typus; source file: File:OLYMPUS
+      DIGITAL CAMERA (27591269541).jpg.'
+    crop_guidance: Use a responsive crop that keeps the Whale Shark or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: species-whale-shark-wikimedia-olympus-digital-camera-27591269541
+      provider: wikimedia_commons
+      title: File:OLYMPUS DIGITAL CAMERA (27591269541).jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:OLYMPUS_DIGITAL_CAMERA_(27591269541).jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/3/3f/OLYMPUS_DIGITAL_CAMERA_%2827591269541%29.jpg
+      creator: cotterillmike
+      credit: https://www.flickr.com/photos/cotterillmike/27591269541/
+      license: CC0
+      license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+      rights_status: public-domain-or-cc0-candidate
+      flags: []
+      score: 67
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://iucn.org/news/secretariat/201607/whale-sharks-winghead-sharks-and-bornean-orangutans-slide-towards-extinction
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets:
+  - asset_id: blc-keyart-whale-shark-ningaloo-01
+    path: brand/visuals/blc-keyart-whale-shark-ningaloo-01.jpg
+    role: generated_key_art
+    status: concept_only
+    use_limitations: Supporting visual only; not biological evidence, official identification media, or proof of conservation
+      status.
+  next_action: Primary media approved for Whale Shark. Keep source, rights, crop, alt text, and ethics metadata current during
+    future reviews.
+- artifact_id: species-west-indian-manatee
+  species_page: content/species/sirenians/west-indian-manatee.md
+  slug: west-indian-manatee
+  taxon_group: sirenians
+  common_name: West Indian Manatee
+  scientific_name: Trichechus manatus
+  species_slugs:
+  - trichechus-manatus
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: species-west-indian-manatee-wikimedia-manatee-photo
+    approved_path: null
+    rights_status: public-domain
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Manatee_photo.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/b/b1/Manatee_photo.jpg
+    creator: NASA
+    credit: 'NASA
+
+
+      http://www-pao.ksc.nasa.gov/kscpao/visit/kscovrv.htm.
+
+      http://www.nasa.gov/centers/kennedy/images/content/91132main_79c265.jpg'
+    license: Public domain
+    license_url: null
+    alt_text: West Indian manatee (Trichechus manatus) at Merritt Island's National Wildlife Refuge in Florida next to Kennedy
+      Space Center.
+    species_match_basis: 'Commons file metadata/categories contain species terms: trichechus manatus, west indian manatee;
+      source file: File:Manatee photo.jpg.'
+    crop_guidance: Use a responsive crop that keeps the West Indian Manatee or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: species-west-indian-manatee-wikimedia-manatee-photo
+      provider: wikimedia_commons
+      title: File:Manatee photo.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Manatee_photo.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/b/b1/Manatee_photo.jpg
+      creator: NASA
+      credit: 'NASA
+
+
+        http://www-pao.ksc.nasa.gov/kscpao/visit/kscovrv.htm.
+
+        http://www.nasa.gov/centers/kennedy/images/content/91132main_79c265.jpg'
+      license: Public domain
+      license_url: null
+      rights_status: public-domain-or-cc0-candidate
+      flags: []
+      score: 85
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.fws.gov/press-release/2017-03/manatee-reclassified-endangered-threatened-habitat-improves-and-population
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - us_fish_and_wildlife_service
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for West Indian Manatee. Keep source, rights, crop, alt text, and ethics metadata current
+    during future reviews.
+- artifact_id: species-green-turtle
+  species_page: content/species/turtles/green-turtle.md
+  slug: green-turtle
+  taxon_group: turtles
+  common_name: Green Turtle
+  scientific_name: Chelonia mydas
+  species_slugs:
+  - chelonia-mydas
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: species-green-turtle-wikimedia-hawaii-turtle-2
+    approved_path: null
+    rights_status: cc-by-sa
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Hawaii_turtle_2.JPG
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/b/bb/Hawaii_turtle_2.JPG
+    creator: Brocken Inaglory
+    credit: Photograph by Brocken Inaglory, edited by Keta
+    license: CC BY-SA 3.0
+    license_url: http://creativecommons.org/licenses/by-sa/3.0/
+    alt_text: Green turtle (Chelonia mydas), Hawai'i, USA.
+    species_match_basis: 'Commons file metadata/categories contain species terms: chelonia mydas, green turtle; source file:
+      File:Hawaii turtle 2.JPG.'
+    crop_guidance: Use a responsive crop that keeps the Green Turtle or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - closed-license-remix-without-share-alike-review
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: species-green-turtle-wikimedia-hawaii-turtle-2
+      provider: wikimedia_commons
+      title: File:Hawaii turtle 2.JPG
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Hawaii_turtle_2.JPG
+      image_url: https://upload.wikimedia.org/wikipedia/commons/b/bb/Hawaii_turtle_2.JPG
+      creator: Brocken Inaglory
+      credit: Photograph by Brocken Inaglory, edited by Keta
+      license: CC BY-SA 3.0
+      license_url: http://creativecommons.org/licenses/by-sa/3.0/
+      rights_status: cc-by-sa-candidate
+      flags: []
+      score: 55
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.oceanicsociety.org/news-and-announcements/green-sea-turtle-status-improvement-2025/
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - oceanic_society
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets:
+  - asset_id: blc-keyart-green-turtle-01
+    path: brand/visuals/blc-keyart-green-turtle-01.jpg
+    role: generated_key_art
+    status: concept_only
+    use_limitations: Supporting visual only; not biological evidence, official identification media, or proof of conservation
+      status.
+  next_action: Primary media approved for Green Turtle. Keep source, rights, crop, alt text, and ethics metadata current during
+    future reviews.
+- artifact_id: hawksbill-turtle
+  species_page: content/species/turtles/hawksbill-turtle.md
+  slug: hawksbill-turtle
+  taxon_group: turtles
+  common_name: Hawksbill Turtle
+  scientific_name: Eretmochelys imbricata
+  species_slugs:
+  - eretmochelys-imbricata
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-parque-naci
+    approved_path: null
+    rights_status: cc-by-sa
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_parque_nacional_Ras_Muhammad,_Egipto,_2022-03-28,_DD_56.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/8/8b/Tortuga_carey_%28Eretmochelys_imbricata%29%2C_parque_nacional_Ras_Muhammad%2C_Egipto%2C_2022-03-28%2C_DD_56.jpg
+    creator: Diego Delso
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    alt_text: Hawksbill sea turtle (Eretmochelys imbricata), Ras Muhammad National Park, Egypt.
+    species_match_basis: 'Commons file metadata/categories contain species terms: eretmochelys imbricata; source file: File:Tortuga
+      carey (Eretmochelys imbricata), parque nacional Ras Muhammad, Egipto, 2022-03-28, DD 56.jpg.'
+    crop_guidance: Use a responsive crop that keeps the Hawksbill Turtle or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - closed-license-remix-without-share-alike-review
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-parque-naci
+      provider: wikimedia_commons
+      title: File:Tortuga carey (Eretmochelys imbricata), parque nacional Ras Muhammad, Egipto, 2022-03-28, DD 56.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_parque_nacional_Ras_Muhammad,_Egipto,_2022-03-28,_DD_56.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/8/8b/Tortuga_carey_%28Eretmochelys_imbricata%29%2C_parque_nacional_Ras_Muhammad%2C_Egipto%2C_2022-03-28%2C_DD_56.jpg
+      creator: Diego Delso
+      credit: Own work
+      license: CC BY-SA 4.0
+      license_url: https://creativecommons.org/licenses/by-sa/4.0
+      rights_status: cc-by-sa-candidate
+      flags: []
+      score: 55
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.fisheries.noaa.gov/species/hawksbill-turtle
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - noaa_fisheries
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for Hawksbill Turtle. Keep source, rights, crop, alt text, and ethics metadata current
+    during future reviews.
+- artifact_id: kemps-ridley-turtle
+  species_page: content/species/turtles/kemps-ridley-turtle.md
+  slug: kemps-ridley-turtle
+  taxon_group: turtles
+  common_name: Kemp's Ridley Turtle
+  scientific_name: Lepidochelys kempii
+  species_slugs:
+  - lepidochelys-kempii
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: kemps-ridley-turtle-wikimedia-padre-island-national-seashore-kemps-ridley-sea-
+    approved_path: null
+    rights_status: public-domain
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/d/d8/Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg
+    creator: uploaded by Johntex
+    credit: United States Fish & Wildlife Service (USFWS) [1]
+    license: Public domain
+    license_url: null
+    alt_text: Kemp's Ridley Turtle (Lepidochelys kempii) in an approved source image used for species identification.
+    species_match_basis: 'Commons file metadata/categories contain species terms: lepidochelys kempii; source file: File:Padre
+      Island National Seashore - Kemps Ridley Sea Turtle.jpg.'
+    crop_guidance: Use a responsive crop that keeps the Kemp's Ridley Turtle or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: kemps-ridley-turtle-wikimedia-padre-island-national-seashore-kemps-ridley-sea-
+      provider: wikimedia_commons
+      title: File:Padre Island National Seashore - Kemps Ridley Sea Turtle.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/d/d8/Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg
+      creator: uploaded by Johntex
+      credit: United States Fish & Wildlife Service (USFWS) [1]
+      license: Public domain
+      license_url: null
+      rights_status: public-domain-or-cc0-candidate
+      flags: []
+      score: 89
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.fisheries.noaa.gov/species/kemps-ridley-turtle
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - noaa_fisheries
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for Kemp's Ridley Turtle. Keep source, rights, crop, alt text, and ethics metadata current
+    during future reviews.
+- artifact_id: leatherback-turtle
+  species_page: content/species/turtles/leatherback-turtle.md
+  slug: leatherback-turtle
+  taxon_group: turtles
+  common_name: Leatherback Turtle
+  scientific_name: Dermochelys coriacea
+  species_slugs:
+  - dermochelys-coriacea
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: leatherback-turtle-wikimedia-leatherbackturtle
+    approved_path: null
+    rights_status: public-domain
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:LeatherbackTurtle.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/9/9b/LeatherbackTurtle.jpg
+    creator: National Oceanic and Atmospheric Administration, NOAA
+    credit: National Oceanic and Atmospheric Administration, NOAA
+    license: Public domain
+    license_url: null
+    alt_text: Adult Dermochelys coriacea, Leatherback Sea Turtle. In Las Baulas National Marine Park, Costa Rica.
+    species_match_basis: 'Commons file metadata/categories contain species terms: dermochelys coriacea; source file: File:LeatherbackTurtle.jpg.'
+    crop_guidance: Use a responsive crop that keeps the Leatherback Turtle or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: 'Approved with constrained-use ethics notes after reviewing automated flags: sensitive_life_stage_or_site_review.
+      Use only in neutral education/species identity contexts with attribution and source context. Do not use this asset for
+      field guidance, exact-location promotion, nesting/rookery tourism, or location-sensitive calls to action.'
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - nesting-or-rookery-promotion
+    - paid-ad-without-extra-rights-check
+    - precise-location-field-guidance
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: leatherback-turtle-wikimedia-leatherbackturtle
+      provider: wikimedia_commons
+      title: File:LeatherbackTurtle.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:LeatherbackTurtle.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/9/9b/LeatherbackTurtle.jpg
+      creator: null
+      credit: National Oceanic and Atmospheric Administration, NOAA
+      license: Public domain
+      license_url: null
+      rights_status: public-domain-or-cc0-candidate
+      flags: []
+      score: 83
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.fisheries.noaa.gov/species/leatherback-turtle
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - noaa_fisheries
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for Leatherback Turtle. Keep source, rights, crop, alt text, and ethics metadata current
+    during future reviews.
+- artifact_id: loggerhead-turtle
+  species_page: content/species/turtles/loggerhead-turtle.md
+  slug: loggerhead-turtle
+  taxon_group: turtles
+  common_name: Loggerhead Turtle
+  scientific_name: Caretta caretta
+  species_slugs:
+  - caretta-caretta
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: loggerhead-turtle-wikimedia-loggerhead-sea-turtle-caretta-caretta-2
+    approved_path: null
+    rights_status: cc-by
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Loggerhead_Sea_Turtle_(Caretta_caretta)_2.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/8/81/Loggerhead_Sea_Turtle_%28Caretta_caretta%29_2.jpg
+    creator: Brian Gratwicke
+    credit: Loggerhead Sea Turtle (Caretta caretta)
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    alt_text: Loggerhead Sea Turtle (Caretta caretta).
+    species_match_basis: 'Commons file metadata/categories contain species terms: caretta caretta; source file: File:Loggerhead
+      Sea Turtle (Caretta caretta) 2.jpg.'
+    crop_guidance: Use a responsive crop that keeps the Loggerhead Turtle or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: loggerhead-turtle-wikimedia-loggerhead-sea-turtle-caretta-caretta-2
+      provider: wikimedia_commons
+      title: File:Loggerhead Sea Turtle (Caretta caretta) 2.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Loggerhead_Sea_Turtle_(Caretta_caretta)_2.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/8/81/Loggerhead_Sea_Turtle_%28Caretta_caretta%29_2.jpg
+      creator: Brian Gratwicke
+      credit: Loggerhead Sea Turtle (Caretta caretta)
+      license: CC BY 2.0
+      license_url: https://creativecommons.org/licenses/by/2.0
+      rights_status: cc-by-candidate
+      flags: []
+      score: 61
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.fisheries.noaa.gov/species/loggerhead-turtle
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - noaa_fisheries
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for Loggerhead Turtle. Keep source, rights, crop, alt text, and ethics metadata current
+    during future reviews.
+- artifact_id: olive-ridley-turtle
+  species_page: content/species/turtles/olive-ridley-turtle.md
+  slug: olive-ridley-turtle
+  taxon_group: turtles
+  common_name: Olive Ridley Turtle
+  scientific_name: Lepidochelys olivacea
+  species_slugs:
+  - lepidochelys-olivacea
+  media_status: approved_primary
+  primary:
+    status: approved
+    approved_asset_id: olive-ridley-turtle-wikimedia-olive-ridley-sea-turtle-cropped
+    approved_path: null
+    rights_status: cc-by-sa
+    qa_status: approved
+    source_url: https://commons.wikimedia.org/wiki/File:Olive_ridley_sea_turtle_cropped.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/f/f2/Olive_ridley_sea_turtle_cropped.jpg
+    creator: Remove "cropped" from file name and see original file
+    credit: Remove "cropped" from file name and see original file
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    alt_text: Olive Ridley Turtle (Lepidochelys olivacea) in an approved source image used for species identification.
+    species_match_basis: 'Commons file metadata/categories contain species terms: lepidochelys olivacea; source file: File:Olive
+      ridley sea turtle cropped.jpg.'
+    crop_guidance: Use a responsive crop that keeps the Olive Ridley Turtle or habitat context legible; preserve enough surrounding
+      water/habitat for source context and avoid crops that imply contact, feeding, crowding, or precise sensitive-site guidance.
+    ethics_notes: Approved for neutral education and species identity surfaces. Snapshot review found no automated feeding,
+      touching, captivity glamour, distress, or precise sensitive-location flags.
+    approved_surfaces:
+    - species-page-primary
+    - visual-explorer-card
+    - public-species-card-image
+    - education-deck
+    blocked_surfaces:
+    - closed-license-remix-without-share-alike-review
+    - merchandise
+    - paid-ad-without-extra-rights-check
+    - social-crop-without-visible-credit
+    - wildlife-interaction-instructional-content
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    approved_from_candidate:
+      asset_id: olive-ridley-turtle-wikimedia-olive-ridley-sea-turtle-cropped
+      provider: wikimedia_commons
+      title: File:Olive ridley sea turtle cropped.jpg
+      commons_file_page: https://commons.wikimedia.org/wiki/File:Olive_ridley_sea_turtle_cropped.jpg
+      image_url: https://upload.wikimedia.org/wikipedia/commons/f/f2/Olive_ridley_sea_turtle_cropped.jpg
+      creator: Remove "cropped" from file name and see original file
+      credit: Remove "cropped" from file name and see original file
+      license: CC BY-SA 4.0
+      license_url: https://creativecommons.org/licenses/by-sa/4.0
+      rights_status: cc-by-sa-candidate
+      flags: []
+      score: 51
+  rich_embed:
+    status: candidate
+    type: official_source_card
+    preferred_source_url: https://www.fisheries.noaa.gov/species/olive-ridley-turtle
+  source_candidates:
+    official_or_institutional_refs:
+    - iucn_red_list
+    - noaa_fisheries
+    open_license_refs:
+    - wikimedia_commons
+    - gbif_media
+    - inaturalist_open_data
+    partner_refs:
+    - partner_media_grant_needed
+  current_supporting_assets: []
+  next_action: Primary media approved for Olive Ridley Turtle. Keep source, rights, crop, alt text, and ethics metadata current
+    during future reviews.

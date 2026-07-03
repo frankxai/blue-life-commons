@@ -1,25 +1,25 @@
 ---
 id: species-harbor-seal
 type: species-page
-title: "Harbor Seal (Phoca vitulina)"
+title: Harbor Seal (Phoca vitulina)
 species_group:
-  - pinnipeds
+- pinnipeds
 species:
-  - phoca-vitulina
+- phoca-vitulina
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/17013/45229114"
-    title: "IUCN Red List — Phoca vitulina (Harbor Seal)"
-    accessed: "2026-06-11"
-  - url: "https://www.nps.gov/places/harbor-seal.htm"
-    title: "Harbor Seal — U.S. National Park Service"
-    accessed: "2026-06-11"
+- url: https://www.iucnredlist.org/species/17013/45229114
+  title: "IUCN Red List \u2014 Phoca vitulina (Harbor Seal)"
+  accessed: '2026-06-11'
+- url: https://www.nps.gov/places/harbor-seal.htm
+  title: "Harbor Seal \u2014 U.S. National Park Service"
+  accessed: '2026-06-11'
 review:
   science: required
   ethics: required
@@ -29,11 +29,50 @@ outputs:
   github_path: content/species/pinnipeds/harbor-seal.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed species intelligence page for the harbor seal."
+  claim: Published a source-reviewed species intelligence page for the harbor seal.
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#species-harbor-seal
+  render_contract: content/media/species-media-render-contract.yaml#species-harbor-seal
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-harbor-seal
+  primary:
+    asset_id: species-harbor-seal-wikimedia-harbor-seal-phoca-vitulina-flickr-gregthebusker
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:Harbor_Seal,_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Harbor_Seal%2C_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/5/50/Harbor_Seal%2C_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg
+    creator: Greg Schechter from San Francisco, USA
+    credit: Harbor Seal, Phoca vitulina
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by
+    alt_text: Harbor Seal, Phoca vitulina.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:Harbor_Seal,_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg
+    rights_status: cc-by
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: CC BY 2.0
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets: []
 ---
 
 # Harbor Seal (Phoca vitulina)

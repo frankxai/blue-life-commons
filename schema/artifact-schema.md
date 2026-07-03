@@ -20,6 +20,7 @@ The machine-readable definition lives in [`artifact-schema.yaml`](artifact-schem
 | `sources` | yes | list | Objects with `url`, optional `title`, `accessed` |
 | `review` | yes | object | `science`, `ethics`, `editor` — each `pending` \| `required` \| `approved` \| `not-applicable` |
 | `outputs` | yes | object | `website_path`, `github_path`, `map_layer` (bool) |
+| `media` | no | object | Primary image, rich embeds, supporting assets, and registry pointers. Species pages are centrally tracked in `content/media/species-media-registry.yaml` |
 | `impact` | no | object | `claim` (string), `eligible_for_hypercert` (bool) |
 | `sensitivity` | no | object | Location-data sensitivity per the GBIF four-category model — `tier` (`public`\|`low`\|`medium`\|`high`\|`extreme`), `rationale`, `generalized_to` |
 | `welfare` | no | object | First-class welfare state — `state` (`favourable`\|`pressured`\|`critical`\|`recovering`\|`unknown`), `dominant_stressor`, `five_domains`, `confidence` (`measured`\|`modeled`\|`expert-opinion`). See [WELFARE.md](../WELFARE.md) |
@@ -35,6 +36,21 @@ The machine-readable definition lives in [`artifact-schema.yaml`](artifact-schem
 ### Source object fields
 
 Each entry in `sources` has `url` (required) plus optional `title`, `accessed`, `doi`, `tier` (`1`–`3` per [SOURCES.md](../SOURCES.md)), `license`, and `commercial_use_ok`. **A `commercial_use_ok: false` source must not underpin an artifact whose `impact.eligible_for_hypercert` is true** — you cannot build a commercial impact claim on a non-commercial source.
+
+### Media object fields
+
+The optional `media` object may include:
+
+- `registry_record`: path or pointer to the central media registry.
+- `render_contract`: path or pointer to the public render contract that decides approved image, source-card fallback, or placeholder behavior.
+- `public_explorer_record`: path or pointer to the sanitized public explorer read model for this artifact.
+- `primary`: approved public image or rich embed metadata, including `asset_id`, `path`, `source_url`, `creator`, `credit`, `license`, `rights_status`, `alt_text`, and `qa_status`.
+- `embeds`: rich source cards used when direct image reuse is not available.
+- `render`: the public render-contract snapshot for the species page visual slot, including `strategy`, `public_visual_kind`, `species_page_hero_image_allowed`, `candidate_thumbnail_allowed`, and `candidate_public_use`.
+- `review`: media curation state mirrored from the approval queue, including `primary_status`, `curation_decision`, check counts, and whether promotion is currently allowed.
+- `supporting_assets`: generated or editorial visuals with explicit `use_limitations`.
+
+Species pages must also be represented in [`content/media/species-media-registry.yaml`](../content/media/species-media-registry.yaml), even when no primary image has been approved yet. Public species surfaces should follow [`content/media/species-media-render-contract.yaml`](../content/media/species-media-render-contract.yaml) or the sanitized [`content/media/species-media-public-explorer-manifest.yaml`](../content/media/species-media-public-explorer-manifest.yaml) so candidate photos remain review-only. Run `python scripts/sync_species_page_media.py --check` to check page-level media pointer drift and `python scripts/validate_species_media.py` to check coverage, approved-primary requirements, source-card fallbacks, approval queue coverage, render-contract safety, and public explorer safety.
 
 ### Scientific-integrity rules (added 2026-06-15)
 

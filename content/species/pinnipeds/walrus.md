@@ -1,34 +1,34 @@
 ---
 id: species-walrus
 type: species-page
-title: "Walrus (Odobenus rosmarus)"
+title: Walrus (Odobenus rosmarus)
 species_group:
-  - pinnipeds
+- pinnipeds
 species:
-  - odobenus-rosmarus
+- odobenus-rosmarus
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/15106/45228501"
-    title: "IUCN Red List — Odobenus rosmarus (Walrus)"
-    accessed: "2026-06-16"
-    tier: 1
-  - url: "https://www.fws.gov/species/pacific-walrus-odobenus-rosmarus-divergens"
-    title: "Pacific Walrus (Odobenus rosmarus divergens) — U.S. Fish & Wildlife Service"
-    accessed: "2026-06-16"
-    tier: 2
-  - url: "https://www.fisheries.noaa.gov/alaska/marine-mammal-protection/walrus-sea-otters-and-polar-bears"
-    title: "Walrus, Sea Otters and Polar Bears — NOAA Fisheries (jurisdiction note)"
-    accessed: "2026-06-16"
-    tier: 2
+- url: https://www.iucnredlist.org/species/15106/45228501
+  title: "IUCN Red List \u2014 Odobenus rosmarus (Walrus)"
+  accessed: '2026-06-16'
+  tier: 1
+- url: https://www.fws.gov/species/pacific-walrus-odobenus-rosmarus-divergens
+  title: "Pacific Walrus (Odobenus rosmarus divergens) \u2014 U.S. Fish & Wildlife Service"
+  accessed: '2026-06-16'
+  tier: 2
+- url: https://www.fisheries.noaa.gov/alaska/marine-mammal-protection/walrus-sea-otters-and-polar-bears
+  title: "Walrus, Sea Otters and Polar Bears \u2014 NOAA Fisheries (jurisdiction note)"
+  accessed: '2026-06-16'
+  tier: 2
 iucn:
   category: VU
-  assessment_date: "2016"
+  assessment_date: '2016'
   scope: global
   population_trend: unknown
 welfare:
@@ -36,29 +36,68 @@ welfare:
   dominant_stressor: sea-ice-loss
   confidence: expert-opinion
   five_domains:
-    environment: "Loss of sea ice removes resting and pupping platforms over benthic foraging grounds and increases the energetic cost of reaching prey (USFWS / NOAA, accessed 2026-06-16)."
-    nutrition: "Walruses depend on seafloor invertebrates (clams, snails, mussels) that may be affected by warming Arctic waters (NOAA Fisheries, accessed 2026-06-16)."
-    behaviour: "Forced haul-outs on land when ice is absent can lead to crowding and trampling-related mortality; increasing shipping is a growing disturbance source (NOAA Fisheries, accessed 2026-06-16)."
+    environment: Loss of sea ice removes resting and pupping platforms over benthic foraging grounds and increases the energetic cost of reaching prey (USFWS / NOAA, accessed 2026-06-16).
+    nutrition: Walruses depend on seafloor invertebrates (clams, snails, mussels) that may be affected by warming Arctic waters (NOAA Fisheries, accessed 2026-06-16).
+    behaviour: Forced haul-outs on land when ice is absent can lead to crowding and trampling-related mortality; increasing shipping is a growing disturbance source (NOAA Fisheries, accessed 2026-06-16).
 review:
   science: required
   ethics: approved
   editor: pending
 sensitivity:
   tier: medium
-  rationale: "Large terrestrial haul-outs are vulnerable to stampede mortality if disturbed; precise haul-out coordinates are not published."
+  rationale: Large terrestrial haul-outs are vulnerable to stampede mortality if disturbed; precise haul-out coordinates are not published.
   generalized_to: regional
 consensus_state: contested
-last_verified: "2026-06-16"
+last_verified: '2026-06-16'
 outputs:
   website_path: /species/pinnipeds/walrus
   github_path: content/species/pinnipeds/walrus.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed species intelligence page for the walrus."
+  claim: Published a source-reviewed species intelligence page for the walrus.
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#species-walrus
+  render_contract: content/media/species-media-render-contract.yaml#species-walrus
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-walrus
+  primary:
+    asset_id: species-walrus-wikimedia-pacific-walrus-bull-8247646168
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:Pacific_Walrus_-_Bull_(8247646168).jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Pacific_Walrus_-_Bull_%288247646168%29.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/2/22/Pacific_Walrus_-_Bull_%288247646168%29.jpg
+    creator: Joel Garlich-Miller, U.S. Fish and Wildlife Service
+    credit: Pacific Walrus Bull
+    license: Public domain
+    license_url: null
+    rights_status: public-domain
+    alt_text: A large Pacific Walrus bull watches the camera. The adult bulls can weigh up to 3,700 pounds.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:Pacific_Walrus_-_Bull_(8247646168).jpg
+    rights_status: public-domain
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: Public domain
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets: []
 ---
 
 # Walrus (Odobenus rosmarus)

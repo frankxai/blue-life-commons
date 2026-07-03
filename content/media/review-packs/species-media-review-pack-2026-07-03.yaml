@@ -1,0 +1,3212 @@
+generated_at: '2026-07-03'
+source_cache: content/media/candidates/wikimedia-species-media-candidates-2026-07-03.yaml
+policy: Review-only candidate pack. Do not publish as primary media until approval fields are completed in the registry.
+recommendations:
+- artifact_id: species-blue-whale
+  species_page: content/species/cetaceans/blue-whale.md
+  common_name: Blue Whale
+  scientific_name: Balaenoptera musculus
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id001
+    asset_id: species-blue-whale-wikimedia-bluewhale877
+    score: 89
+    flags: []
+    title: File:Bluewhale877.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Bluewhale877.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/d8/Bluewhale877.jpg
+    creator: NMFS Northeast Fisheries Science Center (NOAA)
+    credit: http://www.nmfs.noaa.gov/pr/species/mammals/cetaceans/bluewhale.htm
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Adult blue whale (Balaenoptera musculus) from the eastern Pacific Ocean.
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id001
+  - asset_id: species-blue-whale-wikimedia-blue-whale-001-body-bw
+    score: 89
+    flags: []
+    title: File:Blue Whale 001 body bw.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Blue_Whale_001_body_bw.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/06/Blue_Whale_001_body_bw.jpg
+    creator: NOAA Fisheries (TBjornstad 11:17, 18 April 2007 (UTC))
+    credit: Protected Resouces Division, Southwest Fisheries Science Center, La Jolla, California
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Blue Whale
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-blue-whale-wikimedia-anim1754-flickr-noaa-photo-library
+    score: 89
+    flags: []
+    title: File:Anim1754 - Flickr - NOAA Photo Library.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Anim1754_-_Flickr_-_NOAA_Photo_Library.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/1c/Anim1754_-_Flickr_-_NOAA_Photo_Library.jpg
+    creator: NOAA Photo Library
+    credit: anim1754
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Balaenoptera musculus
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-blue-whale-wikimedia-anim1754-flickr-noaa-photo-library-rotated
+    score: 89
+    flags: []
+    title: File:Anim1754 - Flickr - NOAA Photo Library (rotated).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Anim1754_-_Flickr_-_NOAA_Photo_Library_(rotated).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/f5/Anim1754_-_Flickr_-_NOAA_Photo_Library_%28rotated%29.jpg
+    creator: NOAA Photo Library
+    credit: anim1754
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Balaenoptera musculus
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-blue-whale-wikimedia-blue-whale-tail-fluke
+    score: 67
+    flags: []
+    title: File:Blue whale tail fluke.JPG
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Blue_whale_tail_fluke.JPG
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/db/Blue_whale_tail_fluke.JPG
+    creator: Shulman at English Wikipedia
+    credit: Transferred from en.wikipedia to Commons.
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Image of a Blue Whale's tail fluke with the Santa Barbara Channel Islands in the background. August 2007.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-blue-whale-wikimedia-faroe-stamp-402-blue-whale-balaenoptera-musculus
+    score: 63
+    flags: []
+    title: File:Faroe stamp 402 blue whale (Balaenoptera musculus) crop.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Faroe_stamp_402_blue_whale_(Balaenoptera_musculus)_crop.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/51/Faroe_stamp_402_blue_whale_%28Balaenoptera_musculus%29_crop.jpg
+    creator: "Postverk F\xF8roya - Philatelic Office"
+    credit: "Postverk F\xF8roya - Philatelic Office"
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Balaenoptera musculus
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: species-bottlenose-dolphin
+  species_page: content/species/cetaceans/bottlenose-dolphin.md
+  common_name: Common Bottlenose Dolphin
+  scientific_name: Tursiops truncatus
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id002
+    asset_id: species-bottlenose-dolphin-wikimedia-tursiops-truncatus-01
+    score: 67
+    flags:
+    - human_or_vehicle_proximity_review
+    title: File:Tursiops truncatus 01.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/10/Tursiops_truncatus_01.jpg
+    creator: NASA
+    credit: 'https://images.nasa.gov/details/KSC-04pd0178
+
+      http://mediaarchive.ksc.nasa.gov/detail.cfm?mediaid=21807 on the Wayback Machine at the Wayback Machine'
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Bottlenose Dolphin - Tursiops truncatus A dolphin surfs the wake of a research boat on the Banana River - near
+      the Kennedy Space Center.
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id002
+  - asset_id: species-bottlenose-dolphin-wikimedia-tursiops-truncatus-01-cropped
+    score: 67
+    flags:
+    - human_or_vehicle_proximity_review
+    title: File:Tursiops truncatus 01-cropped.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01-cropped.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/b/bc/Tursiops_truncatus_01-cropped.jpg
+    creator: NASA
+    credit: 'https://images.nasa.gov/details/KSC-04pd0178
+
+      http://mediaarchive.ksc.nasa.gov/detail.cfm?mediaid=21807 on the Wayback Machine at the Wayback Machine'
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Bottlenose Dolphin - Tursiops truncatus A dolphin surfs the wake of a research boat on the Banana River - near
+      the  Kennedy Space Center.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-bottlenose-dolphin-wikimedia-rr5516-0005r
+    score: 63
+    flags: []
+    title: "File:RR5516-0005R \u0427\u0435\u0440\u043D\u043E\u043C\u043E\u0440\u0441\u043A\u0430\u044F \u0430\u0444\u0430\u043B\
+      \u0438\u043D\u0430.png"
+    commons_file_page: https://commons.wikimedia.org/wiki/File:RR5516-0005R_%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%BC%D0%BE%D1%80%D1%81%D0%BA%D0%B0%D1%8F_%D0%B0%D1%84%D0%B0%D0%BB%D0%B8%D0%BD%D0%B0.png
+    image_url: https://upload.wikimedia.org/wikipedia/commons/b/b4/RR5516-0005R_%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%BC%D0%BE%D1%80%D1%81%D0%BA%D0%B0%D1%8F_%D0%B0%D1%84%D0%B0%D0%BB%D0%B8%D0%BD%D0%B0.png
+    creator: Central Bank of Russia
+    credit: http://cbr.ru/Bank-notes_coins/coins_base/ShowCoins/?cat_num=5516-0005
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Commemorative coin - Black Sea bottlenose dolphin
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-bottlenose-dolphin-wikimedia-010-atlantic-bottlenose-dolphin-jumping-at-pelic
+    score: 55
+    flags: []
+    title: File:010 Atlantic bottlenose dolphin jumping at Pelican point Photo by Giles Laurent.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:010_Atlantic_bottlenose_dolphin_jumping_at_Pelican_point_Photo_by_Giles_Laurent.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/6/60/010_Atlantic_bottlenose_dolphin_jumping_at_Pelican_point_Photo_by_Giles_Laurent.jpg
+    creator: Giles Laurent
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Atlantic bottlenose dolphin jumping at Pelican point, Namibia
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-bottlenose-dolphin-wikimedia-sprung-bottlenose-side
+    score: 51
+    flags: []
+    title: File:Sprung Bottlenose side.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Sprung_Bottlenose_side.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/07/Sprung_Bottlenose_side.jpg
+    creator: Frank Wirth Whales-dolphins
+    credit: From the German Wikipedia
+    license: CC BY-SA 3.0
+    license_url: http://creativecommons.org/licenses/by-sa/3.0/
+    rights_status: cc-by-sa-candidate
+    source: Bottlenose Dolphin (Tursiops truncatus) jumping
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-bottlenose-dolphin-wikimedia-nmmp-dolphin-with-locator
+    score: 45
+    flags:
+    - individual_or_tagged_animal_review
+    title: File:NMMP dolphin with locator.jpeg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:NMMP_dolphin_with_locator.jpeg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/da/NMMP_dolphin_with_locator.jpeg
+    creator: U.S. Navy photo by Photographer's Mate 1st Class Brien Aho.
+    credit: "This image was released by the United States Navy with the ID 030318-N-5319A-002 (next).\nThis tag does not indicate\
+      \ the copyright status of the attached work. A normal copyright tag is still required. See Commons:Licensing.\n\n\n\u0627\
+      \u0644\u0639\u0631\u0628\u064A\u0629\_\u2219 \u09AC\u09BE\u0982\u09B2\u09BE\_\u2219 \nBahaso Jambi\_\u2219 \nDeutsch\_\
+      \u2219 Deutsch (Sie-Form)\_\u2219 English\_\u2219 espa\xF1ol\_\u2219 euskara\_\u2219 \u0641\u0627\u0631\u0633\u06CC\_\
+      \u2219 fran\xE7ais\_\u2219 italiano\_\u2219 \u65E5\u672C\u8A9E\_\u2219 \uD55C\uAD6D\uC5B4\_\u2219 \u043C\u0430\u043A\
+      \u0435\u0434\u043E\u043D\u0441\u043A\u0438\_\u2219 \u0D2E\u0D32\u0D2F\u0D3E\u0D33\u0D02\_\u2219 Plattd\xFC\xFCtsch\_\
+      \u2219 Nederlands\_\u2219 polski\_\u2219 \u067E\u069A\u062A\u0648\_\u2219 portugu\xEAs\_\u2219 \u0440\u0443\u0441\u0441\
+      \u043A\u0438\u0439\_\u2219 sloven\u0161\u010Dina\_\u2219 svenska\_\u2219 T\xFCrk\xE7e\_\u2219 \u0443\u043A\u0440\u0430\
+      \u0457\u043D\u0441\u044C\u043A\u0430\_\u2219 \u7B80\u4F53\u4E2D\u6587\_\u2219 \u7E41\u9AD4\u4E2D\u6587\_\u2219 +/\u2212"
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: 'Bottlenose dolphin (Tursiops truncatus) of the NMMP on mineclearance operations, with locator beacon.
+
+      K-Dog, a bottle-nose dolphin belonging to Commander Task Unit (CTU) 55.4.3, leaps out of the water in front of Sgt.
+      Andrew Garrett while training near the USS Gunston Hall (LSD 44) in the Persian Gulf. Attached to the dolphin''s pectoral
+      fin is a "pinger" device that allows the handler to keep track of the dolphin when out of sight.
+
+
+      CTU-55.4.3 is a multi-national team consisting of Naval Special Clearance Team-One, Fleet Diving Unit Three from the
+      United Kingdom, Clearance Dive Team from Australia, and Explosive Ordnance Disposal Mobile Units Six and Eight (EODMU-6
+      and -8). These units are conducting deep/shallow water mine countermeasure operations to clear shipping lanes.'
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: species-humpback-whale
+  species_page: content/species/cetaceans/humpback-whale.md
+  common_name: Humpback Whale
+  scientific_name: Megaptera novaeangliae
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id003
+    asset_id: species-humpback-whale-wikimedia-humpback-whales-in-singing-position
+    score: 89
+    flags: []
+    title: File:Humpback whales in singing position.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Humpback_whales_in_singing_position.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/8b/Humpback_whales_in_singing_position.jpg
+    creator: Dr. Louis M. Herman.
+    credit: 'NOAA Photo Library: sanc0602'
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Humpback whales in the singing position. Humpback Whale NMS.
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id003
+  - asset_id: species-humpback-whale-wikimedia-026b-humpback-whale-jump-and-splash-photo-by-gil
+    score: 55
+    flags: []
+    title: File:026b Humpback whale jump and splash Photo by Giles Laurent.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:026b_Humpback_whale_jump_and_splash_Photo_by_Giles_Laurent.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/7/79/026b_Humpback_whale_jump_and_splash_Photo_by_Giles_Laurent.jpg
+    creator: Giles Laurent
+    credit: Own work, from gileslaurent.com
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: "Humpback whale (Megaptera novaeangliae) jumping in the air and splashing the water at \xCDsafjar\xF0ardj\xFA\
+      p (Iceland). The reasons why whales practice breaching are still unknown today. Some hypotheses among others are that\
+      \ breaching is done in order to either communicate, court, assert dominance, warn of danger, remove parasites from the\
+      \ skin or play. Image set number 2 out of 5."
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-humpback-whale-wikimedia-031-humpback-whale-lobtailing-photo-by-giles-lau
+    score: 55
+    flags: []
+    title: File:031 Humpback whale lobtailing Photo by Giles Laurent.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:031_Humpback_whale_lobtailing_Photo_by_Giles_Laurent.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/6/6e/031_Humpback_whale_lobtailing_Photo_by_Giles_Laurent.jpg
+    creator: Giles Laurent
+    credit: Own work, from gileslaurent.com
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: "Humpback whale (Megaptera novaeangliae) lobtailing at \xCDsafjar\xF0ardj\xFAp (Iceland). It is believed that\
+      \ lobtailing is practiced by humpback whales either to communicate or as a mean of foraging."
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-humpback-whale-wikimedia-001-humpback-whale-breaching-in-ballena-marine-n
+    score: 55
+    flags: []
+    title: File:001 Humpback whale breaching in Ballena Marine National Park Photo by Giles Laurent.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:001_Humpback_whale_breaching_in_Ballena_Marine_National_Park_Photo_by_Giles_Laurent.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/b/ba/001_Humpback_whale_breaching_in_Ballena_Marine_National_Park_Photo_by_Giles_Laurent.jpg
+    creator: Giles Laurent
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Humpback whale breaching in Ballena Marine National Park, Costa Rica. The reasons why whales practice breaching
+      are still unknown today. Some hypotheses among others are that breaching is done in order to either communicate, court,
+      assert dominance, warn of danger, remove parasites from the skin or play.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-humpback-whale-wikimedia-073-humpback-whale-tail-in-ballena-marine-nation
+    score: 55
+    flags: []
+    title: File:073 Humpback whale tail in Ballena Marine National Park Photo by Giles Laurent.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:073_Humpback_whale_tail_in_Ballena_Marine_National_Park_Photo_by_Giles_Laurent.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/3d/073_Humpback_whale_tail_in_Ballena_Marine_National_Park_Photo_by_Giles_Laurent.jpg
+    creator: Giles Laurent
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Humpback whale tail in Ballena Marine National Park, Costa Rica
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-humpback-whale-wikimedia-baleine-bosse-et-son-baleineau-2
+    score: 37
+    flags:
+    - sensitive_life_stage_or_site_review
+    title: "File:Baleine \xE0 bosse et son baleineau 2.jpg"
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Baleine_%C3%A0_bosse_et_son_baleineau_2.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/3d/Baleine_%C3%A0_bosse_et_son_baleineau_2.jpg
+    creator: "J\xE9r\xE9mie Silvestro (If you can improve this photo development, ask me the RAW.)"
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Humpback whale (Megaptera novaeangliae) near its whale calf, breaching off to keep away males. Taken offshore
+      (Tahiti, French Polynesia).
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: species-north-atlantic-right-whale
+  species_page: content/species/cetaceans/north-atlantic-right-whale.md
+  common_name: North Atlantic Right Whale
+  scientific_name: Eubalaena glacialis
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id004
+    asset_id: species-north-atlantic-right-whale-wikimedia-north-atlantic-right-whale-earth-is-blue
+    score: 89
+    flags: []
+    title: File:North Atlantic right whale - Earth Is Blue.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:North_Atlantic_right_whale_-_Earth_Is_Blue.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/a/a6/North_Atlantic_right_whale_-_Earth_Is_Blue.jpg
+    creator: NOAA Gray's Reef NMS
+    credit: https://twitter.com/GraysReefNMS/status/1348724327156477957/photo/1
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: North Atlantic right whale as part of NOAA's Earth Is Blue series.
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id004
+  - asset_id: species-north-atlantic-right-whale-wikimedia-anim1750-flickr-noaa-photo-library-cropped
+    score: 71
+    flags:
+    - sensitive_life_stage_or_site_review
+    title: File:Anim1750 - Flickr - NOAA Photo Library (cropped).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Anim1750_-_Flickr_-_NOAA_Photo_Library_(cropped).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/e/e6/Anim1750_-_Flickr_-_NOAA_Photo_Library_%28cropped%29.jpg
+    creator: NOAA Photo Library
+    credit: animl1750
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: A right whale cow and calf
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-north-atlantic-right-whale-wikimedia-lac-p-de-histoire-naturelle-des-c-tac-es-1804-pl
+    score: 61
+    flags: []
+    title: "File:Lac\xE9p\xE8de - Histoire naturelle des c\xE9tac\xE9es (1804) pl. 2.jpg"
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Lac%C3%A9p%C3%A8de_-_Histoire_naturelle_des_c%C3%A9tac%C3%A9es_(1804)_pl._2.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/9/9f/Lac%C3%A9p%C3%A8de_-_Histoire_naturelle_des_c%C3%A9tac%C3%A9es_%281804%29_pl._2.jpg
+    creator: null
+    credit: 'Internet Archive identifier: histoirenaturell00lac'
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: "Histoire naturelle des c\xE9tac\xE9es de Lac\xE9p\xE8de, planche 2"
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-north-atlantic-right-whale-wikimedia-lac-p-de-histoire-naturelle-des-c-tac-es-1804-pl
+    score: 61
+    flags: []
+    title: "File:Lac\xE9p\xE8de - Histoire naturelle des c\xE9tac\xE9es (1804) pl. 3.jpg"
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Lac%C3%A9p%C3%A8de_-_Histoire_naturelle_des_c%C3%A9tac%C3%A9es_(1804)_pl._3.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/52/Lac%C3%A9p%C3%A8de_-_Histoire_naturelle_des_c%C3%A9tac%C3%A9es_%281804%29_pl._3.jpg
+    creator: null
+    credit: 'Internet Archive identifier: histoirenaturell00lac'
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: "Histoire naturelle des c\xE9tac\xE9es de Lac\xE9p\xE8de, planche 3"
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-north-atlantic-right-whale-wikimedia-adolphe-millot-mammiferes-b1-baleine-des-basques
+    score: 39
+    flags:
+    - non_photo_or_historical_media_review
+    title: File:Adolphe Millot mammiferes B1 baleine des Basques.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Adolphe_Millot_mammiferes_B1_baleine_des_Basques.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/d4/Adolphe_Millot_mammiferes_B1_baleine_des_Basques.jpg
+    creator: Adolphe Millot
+    credit: "Nouveau Larousse illustr\xE9"
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Baleinde des Basques
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-north-atlantic-right-whale-wikimedia-eubalaena-glacialis-with-calf
+    score: 28
+    flags:
+    - sensitive_life_stage_or_site_review
+    - missing_creator_or_credit
+    title: File:Eubalaena glacialis with calf.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Eubalaena_glacialis_with_calf.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/6/6a/Eubalaena_glacialis_with_calf.jpg
+    creator: null
+    credit: null
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Eubalaena glacialis with calf
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: species-orca
+  species_page: content/species/cetaceans/orca.md
+  common_name: Orca
+  scientific_name: Orcinus orca
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id005
+    asset_id: species-orca-wikimedia-killerwhales-jumping
+    score: 89
+    flags: []
+    title: File:Killerwhales jumping.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/37/Killerwhales_jumping.jpg
+    creator: Robert Pittman
+    credit: NOAA (http://www.afsc.noaa.gov/Quarterly/amj2005/divrptsNMML3.htm])
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: "Kardsz\xE1rny\xFA delfin"
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id005
+  - asset_id: species-orca-wikimedia-anim1133-flickr-noaa-photo-library
+    score: 89
+    flags: []
+    title: File:Anim1133 - Flickr - NOAA Photo Library.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Anim1133_-_Flickr_-_NOAA_Photo_Library.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/0e/Anim1133_-_Flickr_-_NOAA_Photo_Library.jpg
+    creator: Allen Shimada NOAA/NMFS/OST/AMD.
+    credit: 'NOAA Photo Library: anim1133'
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Killer Whale.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-orca-wikimedia-type-c-orcas-2
+    score: 67
+    flags:
+    - sensitive_life_stage_or_site_review
+    title: File:Type C Orcas 2.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Type_C_Orcas_2.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/c/c0/Type_C_Orcas_2.jpg
+    creator: Photo by Robert Pitman.
+    credit: 'From http://www.usap.gov/scienceSupport/sciencePlanningSummaries/2004_2005/indiv_projs/B289.htm . Taken by a
+      U.S. Federal Government employee. Public domain.
+
+
+      The high-resolution version of the file was provided by the photographer, in response to an e-mail request from User:Clayoquot.'
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Mother-calf pair of "Type C" killer whales in the Ross Sea. Type C killer whales are smaller and occur in larger
+      groups than killer whales found throughout the rest of the world. They prefer fast ice, are known to eat fish, including
+      Antarctic toothfish, and may be a separate species.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-orca-wikimedia-orcinus-orca-loro-parque-01
+    score: 55
+    flags: []
+    title: File:Orcinus orca - Loro Parque 01.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Orcinus_orca_-_Loro_Parque_01.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/4/40/Orcinus_orca_-_Loro_Parque_01.jpg
+    creator: H. Zell
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: Orcinus orca (Linnaeus, 1758), Killer whale; Loro Parque, Tenerife, Canary Islands, Spain.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-orca-wikimedia-killer-whale-types
+    score: 51
+    flags: []
+    title: File:Killer Whale Types.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Killer_Whale_Types.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/84/Killer_Whale_Types.jpg
+    creator: Albino.orca
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: Known types of Killer Whale
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-orca-wikimedia-killer-whales-hunting-a-seal
+    score: 33
+    flags:
+    - human_or_vehicle_proximity_review
+    title: File:Killer Whales Hunting a Seal.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Killer_Whales_Hunting_a_Seal.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/6/66/Killer_Whales_Hunting_a_Seal.jpg
+    creator: Callan Carpenter
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: This photograph was taken off the Graham Coast, Antarctica from aboard the National Geographic Explorer on January
+      3, 2018. It captures one moment during a two-hour encounter between four cooperatively hunting orcas and a crabeater
+      seal. The seal, known informally as "Kevin", survived the ordeal despite over three dozen attempts by the orcas to wash
+      him off of various ice floes. The orcas repeatedly aligned four abreast and charged directly at the ice floes in a synchronized
+      fashion. By swimming in close formation just below the surface of the water, the orcas generated enormous bow waves
+      that would wash over the ice floes, dislodging Kevin time and again. Kevin finally escaped by swimming at a 90 degree
+      angle to the course of the whales as they dove under his ice floe a final time.
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: species-sperm-whale
+  species_page: content/species/cetaceans/sperm-whale.md
+  common_name: Sperm Whale
+  scientific_name: Physeter macrocephalus
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id006
+    asset_id: species-sperm-whale-wikimedia-6-18-sperm-whale
+    score: 67
+    flags: []
+    title: File:6(18) Sperm whale.JPG
+    commons_file_page: https://commons.wikimedia.org/wiki/File:6(18)_Sperm_whale.JPG
+    image_url: https://upload.wikimedia.org/wikipedia/commons/2/24/6%2818%29_Sperm_whale.JPG
+    creator: Marion & Christoph Aistleitner
+    credit: own picture (User:Mediocrity)
+    license: CC0
+    license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    rights_status: public-domain-or-cc0-candidate
+    source: Sperm whale (Physeter macrocephalus) at Kaikoura, New Zealand
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id006
+  - asset_id: species-sperm-whale-wikimedia-0b4a8510-by-vitaly-sokol-dbw6sol
+    score: 57
+    flags: []
+    title: File:0b4a8510 by vitaly sokol-dbw6sol.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:0b4a8510_by_vitaly_sokol-dbw6sol.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/6/66/0b4a8510_by_vitaly_sokol-dbw6sol.jpg
+    creator: Will Falcon aka Vitaly Sokol
+    credit: Own work
+    license: CC BY 4.0
+    license_url: https://creativecommons.org/licenses/by/4.0
+    rights_status: cc-by-candidate
+    source: A pod of Spermwhales underwater
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-sperm-whale-wikimedia-0b4a8510-by-vitaly-sokol-dbw2sol
+    score: 57
+    flags: []
+    title: File:0b4a8510 by vitaly sokol-dbw2sol.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:0b4a8510_by_vitaly_sokol-dbw2sol.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/a/ae/0b4a8510_by_vitaly_sokol-dbw2sol.jpg
+    creator: Will Falcon aka Vitaly Sokol
+    credit: Own work
+    license: CC BY 4.0
+    license_url: https://creativecommons.org/licenses/by/4.0
+    rights_status: cc-by-candidate
+    source: A pod of Spermwhales socializing
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-sperm-whale-wikimedia-mother-and-baby-sperm-whale
+    score: 37
+    flags:
+    - sensitive_life_stage_or_site_review
+    title: File:Mother and baby sperm whale.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Mother_and_baby_sperm_whale.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/b/b1/Mother_and_baby_sperm_whale.jpg
+    creator: Gabriel Barathieu
+    credit: https://www.flickr.com/photos/barathieu/7277953560/
+    license: CC BY-SA 2.0
+    license_url: https://creativecommons.org/licenses/by-sa/2.0
+    rights_status: cc-by-sa-candidate
+    source: A mother sperm whale and her calf off the coast of Mauritius.  The calf has remoras attached to its body.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-sperm-whale-wikimedia-0b4a8510-by-vitaly-sokol-dbw5sol
+    score: 35
+    flags:
+    - human_or_vehicle_proximity_review
+    title: File:0b4a8510 by vitaly sokol-dbw5sol.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:0b4a8510_by_vitaly_sokol-dbw5sol.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/01/0b4a8510_by_vitaly_sokol-dbw5sol.jpg
+    creator: Will Falcon aka Vitaly Sokol
+    credit: Own work
+    license: CC BY 4.0
+    license_url: https://creativecommons.org/licenses/by/4.0
+    rights_status: cc-by-candidate
+    source: A freediver swimming near spermwhale underwater
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-sperm-whale-wikimedia-skeleton-of-sperm-whale-physeter-macrocephalus-l
+    score: 0
+    flags:
+    - distress_or_mortality_review
+    title: File:Skeleton of Sperm Whale (Physeter macrocephalus), Lee Kong Chian Natural History Museum (105036).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Skeleton_of_Sperm_Whale_(Physeter_macrocephalus),_Lee_Kong_Chian_Natural_History_Museum_(105036).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/16/Skeleton_of_Sperm_Whale_%28Physeter_macrocephalus%29%2C_Lee_Kong_Chian_Natural_History_Museum_%28105036%29.jpg
+    creator: Moheen Reeyad
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: 'Skeleton of a 10.6 metre long female Sperm whale (Physeter macrocephalus), Lee Kong Chian Natural History Museum,
+      National University of Singapore, 2 Conservatory Drive, Singapore.
+
+      Found dead and floating off Jurong Island on 10 July 2015 and was the first record of this species in Singapore. A deep
+      cut near her tail area led scientists to conclude that the whale had likely collided with a ship. Sperm Whales are the
+      largest toothed mammals in the world and can be identified by their large, block-shaped head that can take up more than
+      a quarter of their total length. While Sperm Whales are not the largest whale species, their brains are the largest
+      of all known animal species, weighing an average of more than seven kilograms!'
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: species-california-sea-lion
+  species_page: content/species/pinnipeds/california-sea-lion.md
+  common_name: California Sea Lion
+  scientific_name: Zalophus californianus
+  readiness: attribution_and_ethics_review
+  top_candidate: &id007
+    asset_id: species-california-sea-lion-wikimedia-bigmalesealion
+    score: 57
+    flags: []
+    title: File:Bigmalesealion.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Bigmalesealion.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/5c/Bigmalesealion.jpg
+    creator: https://www.flickr.com/photos/mikebaird/ Mike Baird
+    credit: https://www.flickr.com/photos/mikebaird/3044736530/
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by-candidate
+    source: California Sea Lion in Morro Bay
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id007
+  - asset_id: species-california-sea-lion-wikimedia-zalophus-californianus-01
+    score: 55
+    flags: []
+    title: File:Zalophus californianus 01.JPG
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Zalophus_californianus_01.JPG
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/d5/Zalophus_californianus_01.JPG
+    creator: H. Zell
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: California Sea Lion, skeleton, length about 2 m; State Museum of Natural History Karlsruhe, Germany.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-california-sea-lion-wikimedia-california-sea-lion-in-la-jolla-70568
+    score: 55
+    flags: []
+    title: File:California sea lion in La Jolla (70568).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:California_sea_lion_in_La_Jolla_(70568).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/7/74/California_sea_lion_in_La_Jolla_%2870568%29.jpg
+    creator: Rhododendrites
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: California sea lion (Zalophus californianus) and a Western gull (Larus occidentalis) in Scripps Park in La Jolla
+      (San Diego, California).
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-california-sea-lion-wikimedia-zalophus-californianus-otarie-de-californie-410
+    score: -39
+    flags:
+    - captivity_or_facility_review
+    - individual_or_tagged_animal_review
+    - non_photo_or_historical_media_review
+    title: File:Zalophus californianus (Otarie de Californie) - 410.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Zalophus_californianus_(Otarie_de_Californie)_-_410.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/d0/Zalophus_californianus_%28Otarie_de_Californie%29_-_410.jpg
+    creator: 'Another one of my pictures:
+
+
+
+
+      This photograph was taken by Medium69 (William Crochot) and released under the license stated below. You are free to
+      use it for any purpose as long as you credit the author (William Crochot), the Source (Wikimedia Commons) and the license
+      (CC-BY-SA 4.0) in close relation to the image.
+
+
+
+
+
+
+      Please do not upload an updated image here without consultation with the Author. The author would like to make corrections
+      only at his own source RAW. This ensures that the changes are preserved.Please if you think that any changes should
+      be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates
+      derivative or extract.'
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Zalophus californianus (California sea lion)the sea lion show in the ZooParc de Beauval in Saint-Aignan-sur-Cher,
+      France.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-california-sea-lion-wikimedia-zalophus-californianus-otarie-de-californie-411
+    score: -39
+    flags:
+    - captivity_or_facility_review
+    - individual_or_tagged_animal_review
+    - non_photo_or_historical_media_review
+    title: File:Zalophus californianus (Otarie de Californie) - 411.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Zalophus_californianus_(Otarie_de_Californie)_-_411.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/38/Zalophus_californianus_%28Otarie_de_Californie%29_-_411.jpg
+    creator: 'Another one of my pictures:
+
+
+
+
+      This photograph was taken by Medium69 (William Crochot) and released under the license stated below. You are free to
+      use it for any purpose as long as you credit the author (William Crochot), the Source (Wikimedia Commons) and the license
+      (CC-BY-SA 4.0) in close relation to the image.
+
+
+
+
+
+
+      Please do not upload an updated image here without consultation with the Author. The author would like to make corrections
+      only at his own source RAW. This ensures that the changes are preserved.Please if you think that any changes should
+      be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates
+      derivative or extract.'
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Zalophus californianus (California sea lion)the sea lion show in the ZooParc de Beauval in Saint-Aignan-sur-Cher,
+      France.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-california-sea-lion-wikimedia-zalophus-californianus-otarie-de-californie-418
+    score: -39
+    flags:
+    - captivity_or_facility_review
+    - individual_or_tagged_animal_review
+    - non_photo_or_historical_media_review
+    title: File:Zalophus californianus (Otarie de Californie) - 418.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Zalophus_californianus_(Otarie_de_Californie)_-_418.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/b/b8/Zalophus_californianus_%28Otarie_de_Californie%29_-_418.jpg
+    creator: 'Another one of my pictures:
+
+
+
+
+      This photograph was taken by Medium69 (William Crochot) and released under the license stated below. You are free to
+      use it for any purpose as long as you credit the author (William Crochot), the Source (Wikimedia Commons) and the license
+      (CC-BY-SA 4.0) in close relation to the image.
+
+
+
+
+
+
+      Please do not upload an updated image here without consultation with the Author. The author would like to make corrections
+      only at his own source RAW. This ensures that the changes are preserved.Please if you think that any changes should
+      be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates
+      derivative or extract.'
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Zalophus californianus (California sea lion) the sea lion show in the ZooParc de Beauval in Saint-Aignan-sur-Cher,
+      France.
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: species-grey-seal
+  species_page: content/species/pinnipeds/grey-seal.md
+  common_name: Grey Seal
+  scientific_name: Halichoerus grypus
+  readiness: attribution_and_ethics_review
+  top_candidate: &id008
+    asset_id: species-grey-seal-wikimedia-szarytka-morska
+    score: 61
+    flags: []
+    title: File:Szarytka morska.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Szarytka_morska.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/7/72/Szarytka_morska.jpg
+    creator: Aneta p
+    credit: Own work
+    license: CC BY 4.0
+    license_url: https://creativecommons.org/licenses/by/4.0
+    rights_status: cc-by-candidate
+    source: Grey seal in Baltic Sea, Poland
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id008
+  - asset_id: species-grey-seal-wikimedia-halichoerus-grypus-male
+    score: 55
+    flags: []
+    title: File:Halichoerus grypus male.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Halichoerus_grypus_male.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/16/Halichoerus_grypus_male.jpg
+    creator: Andreas Trepte
+    credit: Own work
+    license: CC BY-SA 2.5
+    license_url: https://creativecommons.org/licenses/by-sa/2.5
+    rights_status: cc-by-sa-candidate
+    source: Grey Seal
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-grey-seal-wikimedia-halichoerus-grypus-june-2014-01
+    score: 55
+    flags: []
+    title: File:Halichoerus grypus June 2014 01.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Halichoerus_grypus_June_2014_01.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/9/90/Halichoerus_grypus_June_2014_01.jpg
+    creator: "Arild V\xE5gen"
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: "Grey seal ((Halichoerus grypus) in Stockholm archipelago. In the background, Svenska H\xF6garna"
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-grey-seal-wikimedia-two-seals-in-the-water
+    score: 55
+    flags: []
+    title: File:Two seals in the water.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Two_seals_in_the_water.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/54/Two_seals_in_the_water.jpg
+    creator: Lucc77
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: "M\xE5kl\xE4ppen is a restricted area and have only open one month a year. Its a nature reserve with seals and\
+      \ birdlife. In this picture a Grey Seal looks curious and the other\nwants to play."
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-grey-seal-wikimedia-grey-seal-brodtener-winkel-german-baltic-sea-2
+    score: 55
+    flags: []
+    title: File:Grey Seal, Brodtener Winkel, German Baltic Sea 2.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Grey_Seal,_Brodtener_Winkel,_German_Baltic_Sea_2.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/8f/Grey_Seal%2C_Brodtener_Winkel%2C_German_Baltic_Sea_2.jpg
+    creator: Atemue
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: This was an indulgent one. Sitting maybe three arm lengths away from the beach, she was enjoying the sun and neither
+      men, women nor dogs could chase her away. Brodtener Winkel, Germany.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-grey-seal-wikimedia-grey-seal-on-seaweed-iceland
+    score: 55
+    flags: []
+    title: File:Grey Seal on seaweed, Iceland.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Grey_Seal_on_seaweed,_Iceland.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/e/e9/Grey_Seal_on_seaweed%2C_Iceland.jpg
+    creator: "Waitblock \n\n\n\n\n\n\nThis  is a retouched picture, which means that it has been digitally altered from its\
+      \ original version. Modifications: Removed seaweed in background."
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Grey Seal in Iceland perched on seaweed.
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: species-harbor-seal
+  species_page: content/species/pinnipeds/harbor-seal.md
+  common_name: Harbor Seal
+  scientific_name: Phoca vitulina
+  readiness: attribution_and_ethics_review
+  top_candidate: &id009
+    asset_id: species-harbor-seal-wikimedia-harbor-seal-phoca-vitulina-flickr-gregthebusker
+    score: 61
+    flags: []
+    title: File:Harbor Seal, Phoca vitulina - Flickr - GregTheBusker.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Harbor_Seal,_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/50/Harbor_Seal%2C_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg
+    creator: Greg Schechter from San Francisco, USA
+    credit: Harbor Seal, Phoca vitulina
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by-candidate
+    source: Harbor Seal, Phoca vitulina
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id009
+  - asset_id: species-harbor-seal-wikimedia-common-seal-phoca-vitulina
+    score: 55
+    flags: []
+    title: File:Common Seal Phoca vitulina.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Common_Seal_Phoca_vitulina.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/00/Common_Seal_Phoca_vitulina.jpg
+    creator: Andreas Trepte
+    credit: Own work
+    license: CC BY-SA 2.5
+    license_url: https://creativecommons.org/licenses/by-sa/2.5
+    rights_status: cc-by-sa-candidate
+    source: Common Seal
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-harbor-seal-wikimedia-common-seal-phoca-vitulina
+    score: 55
+    flags: []
+    title: File:Common seal (Phoca vitulina).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Common_seal_(Phoca_vitulina).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/7/76/Common_seal_%28Phoca_vitulina%29.jpg
+    creator: Charles J. Sharp
+    credit: Own work, from Sharp Photography, sharpphotography
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Common seal (Phoca vitulina), Argyll
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-harbor-seal-wikimedia-harbor-seal-phoca-vitulina-at-magdalen-fjord-sva
+    score: 55
+    flags: []
+    title: File:Harbor seal (Phoca vitulina) at Magdalen fjord, Svalbard (1).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Harbor_seal_(Phoca_vitulina)_at_Magdalen_fjord,_Svalbard_(1).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/b/b0/Harbor_seal_%28Phoca_vitulina%29_at_Magdalen_fjord%2C_Svalbard_%281%29.jpg
+    creator: AWeith
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: This harbor seal Phoca vitulina lives in a community of about 20 animals in Magdalen fjord in the north of Svalbard.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-harbor-seal-wikimedia-harbor-seal-in-holyoke-ma-connecticut-river-01
+    score: 45
+    flags:
+    - individual_or_tagged_animal_review
+    title: File:Harbor seal in Holyoke, MA. Connecticut River. 01.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Harbor_seal_in_Holyoke,_MA._Connecticut_River._01.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/11/Harbor_seal_in_Holyoke%2C_MA._Connecticut_River._01.jpg
+    creator: LufkinF
+    credit: Own work
+    license: CC0
+    license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    rights_status: public-domain-or-cc0-candidate
+    source: Laysan, a tagged harbor seal on Connecticut River bank, Holyoke, MA. May '19. Migrated upriver in pursuit of shad.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-harbor-seal-wikimedia-021-wild-smiling-harbor-seal-at-j-kuls-rl-n-icel
+    score: 33
+    flags:
+    - individual_or_tagged_animal_review
+    title: "File:021 Wild smiling harbor seal at J\xF6kuls\xE1rl\xF3n (Iceland) Photo by Giles Laurent.jpg"
+    commons_file_page: https://commons.wikimedia.org/wiki/File:021_Wild_smiling_harbor_seal_at_J%C3%B6kuls%C3%A1rl%C3%B3n_(Iceland)_Photo_by_Giles_Laurent.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/6/63/021_Wild_smiling_harbor_seal_at_J%C3%B6kuls%C3%A1rl%C3%B3n_%28Iceland%29_Photo_by_Giles_Laurent.jpg
+    creator: Giles Laurent
+    credit: Own work, from gileslaurent.com
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: "Smiling wild harbor seal (Phoca vitulina) at J\xF6kuls\xE1rl\xF3n (Iceland). J\xF6kuls\xE1rl\xF3n is a glacier\
+      \ lagoon connected to the Atlantic ocean. The fish go to the lagoon to take advantage of the nutrients released by the\
+      \ glacier. This in turn attracts seals to the lagoon where they can feed on the fish. The blocks of ice floating in\
+      \ the water from the melting glacier are also used by the seals to bask."
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: species-hawaiian-monk-seal
+  species_page: content/species/pinnipeds/hawaiian-monk-seal.md
+  common_name: Hawaiian Monk Seal
+  scientific_name: Neomonachus schauinslandi
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id010
+    asset_id: species-hawaiian-monk-seal-wikimedia-moenchsrobbe-1
+    score: 89
+    flags: []
+    title: File:Moenchsrobbe 1.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Moenchsrobbe_1.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/f9/Moenchsrobbe_1.jpg
+    creator: U.S. Fish and Wildlife Service
+    credit: http://images.fws.gov
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Hawaiian Monk Seal
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id010
+  - asset_id: species-hawaiian-monk-seal-wikimedia-hawaiian-monk-seal-monachus-schauinslandi
+    score: 89
+    flags: []
+    title: File:Hawaiian monk seal - Monachus schauinslandi.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Hawaiian_monk_seal_-_Monachus_schauinslandi.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/6/64/Hawaiian_monk_seal_-_Monachus_schauinslandi.jpg
+    creator: Dr. James P. McVey, NOAA Sea Grant Program
+    credit: http://www.photolib.noaa.gov/bigs/anim0289.jpg
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Hawaiian monk seal - Monachus schauinslandi[1]
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-hawaiian-monk-seal-wikimedia-hawaiian-monk-seal-phocidae-monachus-schauinslan
+    score: 89
+    flags: []
+    title: File:Hawaiian monk seal phocidae monachus schauinslandi.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Hawaiian_monk_seal_phocidae_monachus_schauinslandi.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/7/71/Hawaiian_monk_seal_phocidae_monachus_schauinslandi.jpg
+    creator: Hollingsworth John and Karen, U.S. Fish and Wildlife Service
+    credit: http://www.public-domain-image.com/public-domain-images-pictures-free-stock-photos/fauna-animals-public-domain-images-pictures/seals-and-sea-lions-public-domain-images-pictures/hawaiian-monk-seal-pictures/hawaiian-monk-seal-phocidae-monachus-schauinslandi.jpg
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: 'Image title: Hawaiian monk seal phocidae monachus schauinslandi
+
+      Image from Public domain images website, http://www.public-domain-image.com/full-image/fauna-animals-public-domain-images-pictures/seals-and-sea-lions-public-domain-images-pictures/hawaiian-monk-seal-pictures/hawaiian-monk-seal-phocidae-monachus-schauinslandi.jpg.html'
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-hawaiian-monk-seal-wikimedia-monachus-schauinslandi
+    score: 55
+    flags: []
+    title: File:Monachus schauinslandi.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Monachus_schauinslandi.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/83/Monachus_schauinslandi.jpg
+    creator: N3kt0n
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: Foca monje de Hawai.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-hawaiian-monk-seal-wikimedia-hawaiian-monk-seal-close-up-neomonachus-schauins
+    score: 33
+    flags:
+    - human_or_vehicle_proximity_review
+    title: File:Hawaiian monk seal close-up (Neomonachus schauinslandi).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Hawaiian_monk_seal_close-up_(Neomonachus_schauinslandi).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/a/a1/Hawaiian_monk_seal_close-up_%28Neomonachus_schauinslandi%29.jpg
+    creator: E bailey
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Hawaiian monk seal close-up (Neomonachus schauinslandi) resting on a beach on Kauai.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-hawaiian-monk-seal-wikimedia-the-seal-and-the-student-23859225175
+    score: 13
+    flags:
+    - captivity_or_facility_review
+    title: File:The Seal and the Student (23859225175).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:The_Seal_and_the_Student_(23859225175).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/52/The_Seal_and_the_Student_%2823859225175%29.jpg
+    creator: incidencematrix
+    credit: The Seal and the Student
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by-candidate
+    source: 'Waikiki Aquarium
+
+
+      Waikiki, Honolulu, HI'
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: species-walrus
+  species_page: content/species/pinnipeds/walrus.md
+  common_name: Walrus
+  scientific_name: Odobenus rosmarus
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id011
+    asset_id: species-walrus-wikimedia-pacific-walrus-bull-8247646168
+    score: 89
+    flags: []
+    title: File:Pacific Walrus - Bull (8247646168).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Pacific_Walrus_-_Bull_(8247646168).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/2/22/Pacific_Walrus_-_Bull_%288247646168%29.jpg
+    creator: Joel Garlich-Miller, U.S. Fish and Wildlife Service
+    credit: Pacific Walrus Bull
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: A large Pacific Walrus bull watches the camera. The adult bulls can weigh up to 3,700 pounds.
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id011
+  - asset_id: species-walrus-wikimedia-walrus-2-6383855895
+    score: 71
+    flags:
+    - sensitive_life_stage_or_site_review
+    title: File:Walrus 2 (6383855895).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Walrus_2_(6383855895).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/8f/Walrus_2_%286383855895%29.jpg
+    creator: Dolovis (uploader)
+    credit: Walrus 2
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: 'Pacific walrus with pup. Credit: USFWS'
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-walrus-wikimedia-noaa-walrus22
+    score: 67
+    flags:
+    - human_or_vehicle_proximity_review
+    title: File:Noaa-walrus22.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Noaa-walrus22.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/c/ce/Noaa-walrus22.jpg
+    creator: Captain Budd Christman, NOAA Corps
+    credit: "NOAA's Ark - Animals Collection \n\nImage ID: anim0022 ([1])"
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Large walrus on the ice - Odobenus rosmarus divergens - contemplating the photographer  - Alaska, Bering Sea
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-walrus-wikimedia-walruses-on-ice-floes
+    score: 55
+    flags: []
+    title: File:Walruses on ice floes.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Walruses_on_ice_floes.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/7/75/Walruses_on_ice_floes.jpg
+    creator: Kirill.uyutnov
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: "\u041D\u0430\u0446\u0438\u043E\u043D\u0430\u043B\u044C\u043D\u044B\u0439 \u043F\u0430\u0440\u043A \xAB\u0420\u0443\
+      \u0441\u0441\u043A\u0430\u044F \u0410\u0440\u043A\u0442\u0438\u043A\u0430\xBB: \u0441\u0435\u0432\u0435\u0440\u043D\u0430\
+      \u044F \u0447\u0430\u0441\u0442\u044C \u0430\u0440\u0445\u0438\u043F\u0435\u043B\u0430\u0433\u0430 \u041D\u043E\u0432\
+      \u0430\u044F \u0417\u0435\u043C\u043B\u044F \u0438 \u0417\u0435\u043C\u043B\u044F \u0424\u0440\u0430\u043D\u0446\u0430\
+      -\u0418\u043E\u0441\u0438\u0444\u0430,  \u041D\u043E\u0432\u0430\u044F \u0417\u0435\u043C\u043B\u044F, \u0410\u0440\u0445\
+      \u0430\u043D\u0433\u0435\u043B\u044C\u0441\u043A\u0430\u044F \u043E\u0431\u043B\u0430\u0441\u0442\u044C"
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-walrus-wikimedia-thor-the-walrus-at-blyth-harbour-northumberland-
+    score: 55
+    flags: []
+    title: File:'Thor' the Walrus at Blyth Harbour, Northumberland 1.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:%27Thor%27_the_Walrus_at_Blyth_Harbour,_Northumberland_1.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/e/e4/%27Thor%27_the_Walrus_at_Blyth_Harbour%2C_Northumberland_1.jpg
+    creator: MPF
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: '''Thor'' the Walrus Odobenus rosmarus rosmarus at Blyth Harbour, Northumberland'
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-walrus-wikimedia-walrus2
+    score: 49
+    flags:
+    - human_or_vehicle_proximity_review
+    - sensitive_life_stage_or_site_review
+    title: File:Walrus2.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Walrus2.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/13/Walrus2.jpg
+    creator: Togiak National Wildlife Refuge
+    credit: 'This image originates from the National Digital Library of the United States Fish and Wildlife Service at this
+      page
+
+      This tag does not indicate the copyright status of the attached work. A normal copyright tag is still required. See
+      Commons:Licensing.See Category:Images from the United States Fish and Wildlife Service.'
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Pacific Walrus utilize beaches around Cape Peirce as haulout areas on which to rest between feeding forays. These
+      beaches are surrounded by sheer cliffs affording the walrus protection from predators.
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: species-brain-coral
+  species_page: content/species/reefs/brain-coral.md
+  common_name: Grooved Brain Coral
+  scientific_name: Diploria labyrinthiformis
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id012
+    asset_id: species-brain-coral-wikimedia-metal-block-with-coral-dry-tortugas-20100629
+    score: 67
+    flags: []
+    title: File:Metal block with coral Dry Tortugas 20100629.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Metal_block_with_coral_Dry_Tortugas_20100629.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/8e/Metal_block_with_coral_Dry_Tortugas_20100629.jpg
+    creator: Jstuby
+    credit: Own work
+    license: CC0
+    license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    rights_status: public-domain-or-cc0-candidate
+    source: Metal block with corals on it (Diploria labyrinthiformis and Diploria strigosa) in shallow water next to Fort
+      Jefferson, Dry Tortugas National Park, Florida.
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id012
+  - asset_id: species-brain-coral-wikimedia-corals-5-conch-reef-20230713
+    score: 67
+    flags: []
+    title: File:Corals 5 Conch Reef 20230713.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Corals_5_Conch_Reef_20230713.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/c/cd/Corals_5_Conch_Reef_20230713.jpg
+    creator: Jstuby
+    credit: Own work
+    license: CC0
+    license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    rights_status: public-domain-or-cc0-candidate
+    source: Hard coral (Diploria?) at Conch Reef, Florida Keys.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-brain-coral-wikimedia-diploria-labyrinthiformis-384402865
+    score: 57
+    flags: []
+    title: File:Diploria labyrinthiformis 384402865.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Diploria_labyrinthiformis_384402865.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/b/b6/Diploria_labyrinthiformis_384402865.jpg
+    creator: Pauline Walsh Jacobson
+    credit: https://www.inaturalist.org/photos/384402865
+    license: CC BY 4.0
+    license_url: https://creativecommons.org/licenses/by/4.0
+    rights_status: cc-by-candidate
+    source: Grooved Brain Coral (Diploria labyrinthiformis) in Bonaire, Sint Eustatius and Saba
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-brain-coral-wikimedia-diploria-labyrinthiformis-mhnt-2012-water-exhibi
+    score: 55
+    flags: []
+    title: File:Diploria labyrinthiformis - MHNT - 2012 water exhibition.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Diploria_labyrinthiformis_-_MHNT_-_2012_water_exhibition.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/34/Diploria_labyrinthiformis_-_MHNT_-_2012_water_exhibition.jpg
+    creator: PierreSelim
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: "Temporary exhibition on water at the Mus\xE9um de Toulouse - A brain corail (Diploria labyrinthiformis)"
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-brain-coral-wikimedia-brain-coral
+    score: 42
+    flags:
+    - missing_creator_or_credit
+    title: File:Brain coral.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Brain_coral.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/56/Brain_coral.jpg
+    creator: null
+    credit: null
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Brain coral
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-brain-coral-wikimedia-dead-brain-coral-pickles-reef-20230713
+    score: 12
+    flags:
+    - distress_or_mortality_review
+    title: File:Dead Brain Coral Pickles Reef 20230713.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Dead_Brain_Coral_Pickles_Reef_20230713.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/b/ba/Dead_Brain_Coral_Pickles_Reef_20230713.jpg
+    creator: Jstuby
+    credit: Own work
+    license: CC0
+    license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    rights_status: public-domain-or-cc0-candidate
+    source: Dead Brain Coral (Diploria) at Pickles Reef, Florida Keys.
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: species-elkhorn-coral
+  species_page: content/species/reefs/elkhorn-coral.md
+  common_name: Elkhorn Coral
+  scientific_name: Acropora palmata
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id013
+    asset_id: species-elkhorn-coral-wikimedia-gaulin-reef-san-salvador
+    score: 63
+    flags: []
+    title: File:Gaulin Reef San Salvador.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Gaulin_Reef_San_Salvador.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/e/ea/Gaulin_Reef_San_Salvador.jpg
+    creator: Jstuby at en.wikipedia
+    credit: Own workTransferred from en.wikipedia
+    license: CC0
+    license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    rights_status: public-domain-or-cc0-candidate
+    source: Elkhorn coral (Acropora palmata) on the crest of Gaulin Reef, San Salvador Island, Bahamas.  June 24, 1999.
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id013
+  - asset_id: species-elkhorn-coral-wikimedia-smallmouth-grunt-haemulon-chrysargyreum-and-elkh
+    score: 61
+    flags: []
+    title: File:Smallmouth grunt Haemulon chrysargyreum and elkhorn coral Acropora palmata (2412819097).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Smallmouth_grunt_Haemulon_chrysargyreum_and_elkhorn_coral_Acropora_palmata_(2412819097).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/d3/Smallmouth_grunt_Haemulon_chrysargyreum_and_elkhorn_coral_Acropora_palmata_%282412819097%29.jpg
+    creator: Paul Asman and Jill Lenoble
+    credit: 'smallmouth grunt Haemulon chrysargyreum and elkhorn coral Acropora palmata
+
+
+      Uploaded by Amada44'
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by-candidate
+    source: smallmouth grunt Haemulon chrysargyreum and elkhorn coral Acropora palmata
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-elkhorn-coral-wikimedia-elkhorn-coral-37983543605
+    score: 61
+    flags: []
+    title: File:Elkhorn coral (37983543605).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Elkhorn_coral_(37983543605).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/00/Elkhorn_coral_%2837983543605%29.jpg
+    creator: Dr Mary Gillham Archive Project
+    credit: Elkhorn coral
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by-candidate
+    source: Nassau Town Market and Port
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-elkhorn-coral-wikimedia-elkhorn-coral-the-florida-keys-52930727163
+    score: 61
+    flags: []
+    title: File:Elkhorn coral, the Florida Keys - 52930727163.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Elkhorn_coral,_the_Florida_Keys_-_52930727163.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/e/ea/Elkhorn_coral%2C_the_Florida_Keys_-_52930727163.jpg
+    creator: Symbiosis
+    credit: https://www.flickr.com/photos/75554154@N00/52930727163/
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by-candidate
+    source: This healthy Elkhorn coral has been grown in a coral nursery and successfully transplanted on the coral reef.     So
+      far it is looking great.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-elkhorn-coral-wikimedia-elkhorn-coral-the-florida-keys-52930727453
+    score: 61
+    flags: []
+    title: File:Elkhorn coral, the Florida Keys - 52930727453.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Elkhorn_coral,_the_Florida_Keys_-_52930727453.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/b/be/Elkhorn_coral%2C_the_Florida_Keys_-_52930727453.jpg
+    creator: Symbiosis
+    credit: https://www.flickr.com/photos/75554154@N00/52930727453/
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by-candidate
+    source: This healthy Elkhorn coral has been grown in a coral nursery and successfully transplanted on the coral reef.     So
+      far it is looking great.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-elkhorn-coral-wikimedia-elkhorn-coral
+    score: 42
+    flags:
+    - missing_creator_or_credit
+    title: File:Elkhorn coral.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Elkhorn_coral.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/5f/Elkhorn_coral.jpg
+    creator: null
+    credit: null
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Elkhorn coral
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: species-giant-kelp
+  species_page: content/species/reefs/giant-kelp.md
+  common_name: Giant Kelp
+  scientific_name: Macrocystis pyrifera
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id014
+    asset_id: species-giant-kelp-wikimedia-sanc0063-flickr-noaa-photo-library
+    score: 89
+    flags: []
+    title: File:Sanc0063 - Flickr - NOAA Photo Library.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Sanc0063_-_Flickr_-_NOAA_Photo_Library.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/f8/Sanc0063_-_Flickr_-_NOAA_Photo_Library.jpg
+    creator: Claire Fackler, CINMS, NOAA.
+    credit: 'NOAA Photo Library: sanc0063'
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Giant kelp (Macrocystis pyrifera). California, Channel Islands NMS.
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id014
+  - asset_id: species-giant-kelp-wikimedia-cape-town-za-sea-point-promenade-k-ste-algen-202
+    score: 55
+    flags: []
+    title: "File:Cape Town (ZA), Sea Point Promenade, K\xFCste, Algen -- 2024 -- 3625.jpg"
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Cape_Town_(ZA),_Sea_Point_Promenade,_K%C3%BCste,_Algen_--_2024_--_3625.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/3c/Cape_Town_%28ZA%29%2C_Sea_Point_Promenade%2C_K%C3%BCste%2C_Algen_--_2024_--_3625.jpg
+    creator: Dietmar Rabich
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Seaweed (Macrocystis Pyrifera) on the coast at Sea Point, Cape Town, Western Cape, South Africa
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-giant-kelp-wikimedia-giantkelp2-300
+    score: 46
+    flags:
+    - missing_creator_or_credit
+    title: File:Giantkelp2 300.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Giantkelp2_300.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/9/9a/Giantkelp2_300.jpg
+    creator: null
+    credit: null
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Giantkelp2 300
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-giant-kelp-wikimedia-kelp-300
+    score: 42
+    flags:
+    - missing_creator_or_credit
+    title: File:Kelp 300.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Kelp_300.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/b/b2/Kelp_300.jpg
+    creator: null
+    credit: null
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Kelp 300
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-giant-kelp-wikimedia-cas-macrocystis-2
+    score: 7
+    flags:
+    - captivity_or_facility_review
+    title: File:CAS Macrocystis 2.JPG
+    commons_file_page: https://commons.wikimedia.org/wiki/File:CAS_Macrocystis_2.JPG
+    image_url: https://upload.wikimedia.org/wikipedia/commons/6/6a/CAS_Macrocystis_2.JPG
+    creator: EncycloPetey
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: Giant kelp (Macrocystis pyrifera) in the Steinhart Aquarium at the California Academy of Sciences, San Francisco,
+      California
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-giant-kelp-wikimedia-cas-macrocystis-3
+    score: 7
+    flags:
+    - captivity_or_facility_review
+    title: File:CAS Macrocystis 3.JPG
+    commons_file_page: https://commons.wikimedia.org/wiki/File:CAS_Macrocystis_3.JPG
+    image_url: https://upload.wikimedia.org/wikipedia/commons/a/a5/CAS_Macrocystis_3.JPG
+    creator: EncycloPetey
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: Giant kelp (Macrocystis pyrifera) in the Steinhart Aquarium at the California Academy of Sciences, San Francisco,
+      California
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: species-red-mangrove
+  species_page: content/species/reefs/red-mangrove.md
+  common_name: Red Mangrove
+  scientific_name: Rhizophora mangle
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id015
+    asset_id: species-red-mangrove-wikimedia-red-mangrove-imported-from-inaturalist-photo-256
+    score: 67
+    flags: []
+    title: File:Red mangrove imported from iNaturalist photo 256882666 on 27 February 2024.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/f4/Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg
+    creator: no rights reserved
+    credit: https://www.inaturalist.org/photos/256882666
+    license: CC0
+    license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    rights_status: public-domain-or-cc0-candidate
+    source: Photo of red mangrove uploaded from iNaturalist.
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id015
+  - asset_id: species-red-mangrove-wikimedia-detail-of-mangrove-roots
+    score: 55
+    flags: []
+    title: File:Detail of mangrove roots.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Detail_of_mangrove_roots.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/2/25/Detail_of_mangrove_roots.jpg
+    creator: Jonathan Wilkins
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: "Detail of red mangrove (Rhizophora mangle) roots in Prado, Bahia state, Brazil.\nMangroves are various kinds\
+      \ of trees up to medium height and shrubs that grow in saline coastal sediment habitats in the tropics and subtropics\
+      \ \u2013 mainly between latitudes 25\xB0 N and 25\xB0 S. The remaining mangrove forest areas of the world in 2000 was\
+      \ 53,190 square miles (137,760 km\xB2) spanning 118 countries and territories.[1][2] The word is used in at least three\
+      \ senses: (1) most broadly to refer to the habitat and entire plant assemblage or mangal,[3][page needed] for which\
+      \ the terms mangrove forest biome, mangrove swamp and mangrove forest are also used, (2) to refer to all trees and large\
+      \ shrubs in the mangrove swamp, and (3) narrowly to refer to the mangrove family of plants, the Rhizophoraceae, or even\
+      \ more specifically just to mangrove trees of the genus Rhizophora. The term \"mangrove\" comes to English from Spanish\
+      \ (perhaps by way of Portuguese), and is of Caribbean origin, likely Ta\xEDno. It was earlier \"mangrow\" (from Portugues\
+      \ mangue or Spanish mangle), but this was corrupted via folk etymology influence of \"grove\".The mangrove biome, or\
+      \ mangal, is a distinct saline woodland or shrubland habitat characterized by a depositional coastal environments, where\
+      \ fine sediments (often with high organic content) collect in areas protected from high-energy wave action. Mangroves\
+      \ dominate three quarters of tropical coastlines.[4] The saline conditions tolerated by various mangrove species range\
+      \ from brackish water, through pure seawater (30 to 40 ppt), to water concentrated by evaporation to over twice the\
+      \ salinity of ocean seawater (up to 90 ppt).[4][5]"
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-red-mangrove-wikimedia-mangrove-petit-canal-grande-terre-guadeloupe-201
+    score: 55
+    flags: []
+    title: File:Mangrove, Petit-Canal, Grande-Terre, Guadeloupe, 2010-03-28-.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Mangrove,_Petit-Canal,_Grande-Terre,_Guadeloupe,_2010-03-28-.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/fe/Mangrove%2C_Petit-Canal%2C_Grande-Terre%2C_Guadeloupe%2C_2010-03-28-.jpg
+    creator: Slaunger
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: "Panoramic of red mangrove (Rhizophora mangle) at Anse du Canal near Petit-Canal on Grande-Terre, Guadeloupe,\
+      \ France. Identified by Daniel Imbert, Universit\xE9 des Antilles et de Guyane, 97159 Pointe-\xE0-Pitre, Guadeloupe,\
+      \ France."
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-red-mangrove-wikimedia-rhizophora-mangle-flower
+    score: 51
+    flags: []
+    title: File:Rhizophora mangle-flower.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Rhizophora_mangle-flower.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/2/28/Rhizophora_mangle-flower.jpg
+    creator: Ulf Mehlig
+    credit: Own work
+    license: CC BY-SA 2.5
+    license_url: https://creativecommons.org/licenses/by-sa/2.5
+    rights_status: cc-by-sa-candidate
+    source: "Flower of the Red Mangrove (Rhizophora mangle), mangrove forest near Acaraj\xF3, Bragan\xE7a, Par\xE1, Brazil"
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-red-mangrove-wikimedia-rhizophora-mangle-botgardbln1105rootsleaves
+    score: 34
+    flags:
+    - missing_creator_or_credit
+    title: File:Rhizophora mangle BotGardBln1105RootsLeaves.JPG
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Rhizophora_mangle_BotGardBln1105RootsLeaves.JPG
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/55/Rhizophora_mangle_BotGardBln1105RootsLeaves.JPG
+    creator: null
+    credit: null
+    license: CC BY-SA 3.0
+    license_url: http://creativecommons.org/licenses/by-sa/3.0/
+    rights_status: cc-by-sa-candidate
+    source: Rhizophora mangle BotGardBln1105RootsLeaves
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-red-mangrove-wikimedia-red-mangrove-aquarium-of-the-pacific
+    score: 7
+    flags:
+    - captivity_or_facility_review
+    title: File:Red-mangrove-Aquarium-of-the-Pacific.png
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Red-mangrove-Aquarium-of-the-Pacific.png
+    image_url: https://upload.wikimedia.org/wikipedia/commons/c/cc/Red-mangrove-Aquarium-of-the-Pacific.png
+    creator: Coughdrop12
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: A red mangrove (Rhizophora mangle) in the Shark Lagoon exhibit at the Aquarium of the Pacific in Long Beach, California,
+      United States.
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: species-seagrass-posidonia
+  species_page: content/species/reefs/seagrass-posidonia.md
+  common_name: Neptune Grass
+  scientific_name: Posidonia oceanica
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id016
+    asset_id: species-seagrass-posidonia-wikimedia-posidonia-oceanica
+    score: 85
+    flags: []
+    title: File:Posidonia oceanica.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Posidonia_oceanica.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/80/Posidonia_oceanica.jpg
+    creator: National Oceanic and Atmospheric Administration
+    credit: http://www.noaa.gov/
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Posidonia oceanica
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id016
+  - asset_id: species-seagrass-posidonia-wikimedia-posidonia-oceanica-10-3897-mycokeys-55-35682-fig
+    score: 61
+    flags: []
+    title: File:Posidonia oceanica (10.3897-mycokeys.55.35682) Figure 1.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Posidonia_oceanica_(10.3897-mycokeys.55.35682)_Figure_1.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/55/Posidonia_oceanica_%2810.3897-mycokeys.55.35682%29_Figure_1.jpg
+    creator: "Vohn\xEDk M, Borovec O, Kola\u0159\xEDkov\xE1 Z, Sudov\xE1 R, R\xE9blov\xE1 M (2019) Extensive sampling and\
+      \ high-throughput sequencing reveal Posidoniomyces atricolor gen. et sp. nov. (Aigialaceae, Pleosporales) as the dominant\
+      \ root mycobiont of the dominant Mediterranean seagrass Posidonia oceanica. MycoKeys 55: 59-86. https://doi.org/10.3897/mycokeys.55.35682"
+    credit: https://mycokeys.pensoft.net/article/35682/list/2/ (license)
+    license: CC BY 4.0
+    license_url: https://creativecommons.org/licenses/by/4.0
+    rights_status: cc-by-candidate
+    source: Figure 1; The dominant Mediterranean seagrass Posidonia oceanica. a Overall appearance, note dense branched root
+      system of the seagrass (encircled); b Posidonia oceanica growing on an approx. 1.5 m thick layer of matte; c typical
+      habitat of the dominant Mediterranean seagrass, note the layer of shed seagrass leaves on the seabed.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-seagrass-posidonia-wikimedia-posidonia-2-alberto-romeo
+    score: 55
+    flags: []
+    title: File:Posidonia 2 Alberto Romeo.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Posidonia_2_Alberto_Romeo.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/e/e1/Posidonia_2_Alberto_Romeo.jpg
+    creator: Alberto Romeoalbertoromeo@neomedia.ithttp://www.romeofotosub.it
+    credit: personal work - authorization
+    license: CC BY-SA 2.5
+    license_url: https://creativecommons.org/licenses/by-sa/2.5
+    rights_status: cc-by-sa-candidate
+    source: Posidonia oceanica
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-seagrass-posidonia-wikimedia-posidonia-oceanica-l
+    score: 55
+    flags: []
+    title: File:Posidonia oceanica (L).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Posidonia_oceanica_(L).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/50/Posidonia_oceanica_%28L%29.jpg
+    creator: "Fr\xE9d\xE9ric Ducarme"
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Posidonia oceanica observed at La Ciotat.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-seagrass-posidonia-wikimedia-posidonia-oceanica-praderia
+    score: 55
+    flags: []
+    title: File:Posidonia oceanica praderia.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Posidonia_oceanica_praderia.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/57/Posidonia_oceanica_praderia.jpg
+    creator: CofreDeSofre
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: "A la imatge es pot observar una praderia de Posidonia oceanica, envoltada per roques amb diferents algues per\
+      \ sobre, i peixos t\xEDpics d'aquest h\xE0bitat, com un fadr\xED."
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-seagrass-posidonia-wikimedia-underwater-posidonia-capraia-2024
+    score: -13
+    flags:
+    - captivity_or_facility_review
+    - human_or_vehicle_proximity_review
+    title: File:Underwater Posidonia Capraia 2024.png
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Underwater_Posidonia_Capraia_2024.png
+    image_url: https://upload.wikimedia.org/wikipedia/commons/2/2e/Underwater_Posidonia_Capraia_2024.png
+    creator: DipartimentoBiologiaUniPi
+    credit: Own work
+    license: CC BY 4.0
+    license_url: https://creativecommons.org/licenses/by/4.0
+    rights_status: cc-by-candidate
+    source: 'Underwater Research Activities of University of Pisa and Stazione Zoologica Anton Dhorn in the waters of the
+      Tuscan Archipelago National Park. Monitoring on potential impacts of stressors on a meadow of Posidonia oceanica.
+
+      . Project AquaPLAN - Aquatic Pollution from Light and Anthropogenic Noise: management of impacts on biodiversity - Grant
+      Agreement number 101135471 - CUP I57G23000430006 Call for proposal HORIZON-CL6-2023-BIODIV-0'
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: species-staghorn-coral
+  species_page: content/species/reefs/staghorn-coral.md
+  common_name: Staghorn Coral
+  scientific_name: Acropora cervicornis
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id017
+    asset_id: species-staghorn-coral-wikimedia-staghorn-coral-on-baker-island-nwr-5123996348
+    score: 89
+    flags: []
+    title: File:Staghorn coral on Baker Island NWR (5123996348).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Staghorn_coral_on_Baker_Island_NWR_(5123996348).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/03/Staghorn_coral_on_Baker_Island_NWR_%285123996348%29.jpg
+    creator: U.S. Fish and Wildlife Service Headquarters
+    credit: 'Staghorn coral on Baker Island NWR
+
+
+      Uploaded by Dolovis'
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Beds of staghorn coral (Acropora Sp) undulate across the sea floor at Baker Island National Wildlife Refuge in
+      the Pacific, some 1,600 miles southwest of Honolulu. (Jim Maragos/USFWS)
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id017
+  - asset_id: species-staghorn-coral-wikimedia-acropora-guarder-a-artificial
+    score: 85
+    flags: []
+    title: "File:Acropora, guarder\xEDa artificial.jpg"
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Acropora,_guarder%C3%ADa_artificial.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/e/e7/Acropora%2C_guarder%C3%ADa_artificial.jpg
+    creator: NOAA
+    credit: https://www.flickr.com/photos/usoceangov/15871611940/
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: NOAA uses coral nurseries to help corals recover after traumatic events, such as a ship grounding. Hung on a tree
+      structure, the staghorn coral (Acropora cervicornis) shown here will have a better chance of surviving and being transplanted
+      back onto a reef.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-staghorn-coral-wikimedia-hertshoon
+    score: 67
+    flags: []
+    title: File:Hertshoon.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Hertshoon.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/c/cb/Hertshoon.jpg
+    creator: 'Albert Kok at Dutch Wikipedia
+
+
+      (Original text: albert kok)'
+    credit: Transferred from nl.wikipedia to Commons.
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Hertshoorn koraal
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-staghorn-coral-wikimedia-healthy-staghorn
+    score: 61
+    flags: []
+    title: File:Healthy Staghorn.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Healthy_Staghorn.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/9/92/Healthy_Staghorn.jpg
+    creator: Joeschmitty at English Wikipedia
+    credit: Transferred from en.wikipedia to Commons.
+    license: CC BY 2.5
+    license_url: https://creativecommons.org/licenses/by/2.5
+    rights_status: cc-by-candidate
+    source: Staghorn coral (Acropora cervicornis)
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-staghorn-coral-wikimedia-acropora-cervicornis-staghorn-coral-haiti
+    score: 55
+    flags: []
+    title: File:Acropora cervicornis (Staghorn Coral - Haiti).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Acropora_cervicornis_(Staghorn_Coral_-_Haiti).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/2/25/Acropora_cervicornis_%28Staghorn_Coral_-_Haiti%29.jpg
+    creator: "Nhobgood (talk\_\xB7 contribs) Nick Hobgood"
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: Acropora cervicornis (Staghorn Coral - Haiti)
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-staghorn-coral-wikimedia-acropora-cervicornis-staghorn-coral-san-salvador
+    score: -9
+    flags:
+    - captivity_or_facility_review
+    - individual_or_tagged_animal_review
+    title: File:Acropora cervicornis (staghorn coral) (San Salvador Island, Bahamas) 1 (15513633663).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Acropora_cervicornis_(staghorn_coral)_(San_Salvador_Island,_Bahamas)_1_(15513633663).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/16/Acropora_cervicornis_%28staghorn_coral%29_%28San_Salvador_Island%2C_Bahamas%29_1_%2815513633663%29.jpg
+    creator: James St. John
+    credit: Acropora cervicornis (staghorn coral) (San Salvador Island, Bahamas) 1
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by-candidate
+    source: "Acropora cervicornis (Lamarck, 1816) - staghorn coral on a reef.\nStony corals have a patchy distribution in\
+      \ the shallow marine waters surrounding San Salvador Island.  They occur as isolated individual colonies, in patch reefs,\
+      \ fringing reefs, and barrier reefs.  Stony corals are scleractinian anthozoan cnidarians (there are also non-scleractinian\
+      \ stony corals in the fossil record, such as tabulates and rugosans).  They consist of individuals or colonies of gelatinous\
+      \ polyps that secrete hard skeletons of aragonite (CaCO3).  Most scleractinian corals live in warm, tropical to subtropical,\
+      \ photic zone environments (the shallow portions of the world\u2019s oceans where sunlight penetrates).  Microbes (Symbiodinium\
+      \ - Protista, Dinoflagellata/Pyrrhophyta) called zooxanthellae live in their tissues and need to be in sunlight to make\
+      \ their own food (photosynthesis), which is shared with the host coral animal.  Scleractinian corals have stinging cells\
+      \ (nematocysts) in their tentacles that paralyze prey.\nThe brownish-colored organism at lower right is an octocoral.\
+      \  The pinkish-lavender colored areas are calcareous red algae (Rhodophyta).\nClassification: Animalia, Cnidaria, Anthozoa,\
+      \ Scleractinia, Acroporidae\n\nLocality: Gaulin Reef, northern Graham's Harbour, offshore northern San Salvador Island,\
+      \ eastern Bahamas"
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: basking-shark
+  species_page: content/species/sharks-rays/basking-shark.md
+  common_name: Basking Shark
+  scientific_name: Cetorhinus maximus
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id018
+    asset_id: basking-shark-wikimedia-cetorhinus-maximus-by-greg-skomal
+    score: 89
+    flags: []
+    title: File:Cetorhinus maximus by greg skomal.JPG
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Cetorhinus_maximus_by_greg_skomal.JPG
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/0b/Cetorhinus_maximus_by_greg_skomal.JPG
+    creator: Greg Skomal / NOAA Fisheries Service
+    credit: Basking Shark (english). NOAA Fisheries Service. National Oceanic and Atmospheric Administration.
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Basking shark (Cetorhinus maximus).
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id018
+  - asset_id: basking-shark-wikimedia-tdpguipa
+    score: 77
+    flags: []
+    title: File:TDpGUipa.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:TDpGUipa.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/2/24/TDpGUipa.jpg
+    creator: LittleJerry
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: 'Images taken from:
+
+      File:Olympic Coast National Marine Sanctuary 2011 Dogfish.jpg NOAA''s National Ocean Service
+
+      File:Squatina australis 3.jpg Mark Norman / Museum Victoria
+
+      File:Whale Shark 1 AdF.jpg Arturo de Frias Marques
+
+      File:Great White Shark (14730723649).jpg Elias Levy
+
+      File:Pristiophorus japonicus.jpg OpenCago.info
+
+      File:Scalloped Hammerhead Shark Sphyrna Lewini (226845659).jpeg Kris Mikael Krister
+
+      File:Chlamydoselachus anguineus head.jpg Citron
+
+      File:Hornhai (Heterodontus francisci).JPG Cymothoa exigua'
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: basking-shark-wikimedia-basking-shark-fin-at-a-tokyo-restaurant
+    score: 61
+    flags: []
+    title: File:Basking Shark fin at a Tokyo restaurant.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Basking_Shark_fin_at_a_Tokyo_restaurant.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/e/ec/Basking_Shark_fin_at_a_Tokyo_restaurant.jpg
+    creator: amanderson2
+    credit: https://www.flickr.com/photos/amanderson/14851055486/
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by-candidate
+    source: A Basking Shark fin at a restaurant in Tokyo Station, Japan
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: basking-shark-wikimedia-austromola-angerhoferi
+    score: 51
+    flags: []
+    title: File:Austromola angerhoferi.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Austromola_angerhoferi.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/d9/Austromola_angerhoferi.jpg
+    creator: Apokryltaros
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Restoration of the extinct sunfish, Austromola angerhoferi, of the Paratethys Sea in Miocene-aged Austria
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: basking-shark-wikimedia-basking-shark
+    score: 46
+    flags:
+    - missing_creator_or_credit
+    title: File:Basking Shark.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Basking_Shark.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/0a/Basking_Shark.jpg
+    creator: null
+    credit: null
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Basking Shark
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: basking-shark-wikimedia-basking-shark-caught-at-holsteinborg
+    score: 8
+    flags:
+    - distress_or_mortality_review
+    title: File:Basking shark caught at Holsteinborg.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Basking_shark_caught_at_Holsteinborg.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/c/cd/Basking_shark_caught_at_Holsteinborg.jpg
+    creator: Unknown photographer
+    credit: "David Goes to Greenland (1926). New York & London. G. P. Putnam's Sons \n\nInternet Archive identifier: davidgoestogreen00putn"
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Basking shark caught at Holsteinborg
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: great-white-shark
+  species_page: content/species/sharks-rays/great-white-shark.md
+  common_name: Great White Shark
+  scientific_name: Carcharodon carcharias
+  readiness: attribution_and_ethics_review
+  top_candidate: &id019
+    asset_id: great-white-shark-wikimedia-white-shark
+    score: 61
+    flags: []
+    title: File:White shark.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:White_shark.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/56/White_shark.jpg
+    creator: Pterantula (Terry Goss) at en.wikipedia
+    credit: Derivative of w:Image:Whiteshark-TGoss5b.jpg
+    license: CC BY 2.5
+    license_url: https://creativecommons.org/licenses/by/2.5
+    rights_status: cc-by-candidate
+    source: Great white shark at Isla Guadalupe, Mexico, August 2006. Shot with Nikon D70s in Ikelite housing, in natural
+      light. Animal estimated at 11-12 feet (3.3 to 3.6 m) in length, age unknown.
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id019
+  - asset_id: great-white-shark-wikimedia-great-white-shark-14730796397
+    score: 61
+    flags: []
+    title: File:Great White Shark (14730796397).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Great_White_Shark_(14730796397).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/7/79/Great_White_Shark_%2814730796397%29.jpg
+    creator: Elias Levy
+    credit: Great White Shark
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by-candidate
+    source: Great white shark (Carcharodon carcharias)
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: great-white-shark-wikimedia-whiteshark-tgoss1
+    score: 57
+    flags: []
+    title: File:Whiteshark-TGoss1.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Whiteshark-TGoss1.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/12/Whiteshark-TGoss1.jpg
+    creator: Terry Goss
+    credit: Own work
+    license: CC BY 2.5
+    license_url: https://creativecommons.org/licenses/by/2.5
+    rights_status: cc-by-candidate
+    source: Taken at Isla Guadalupe, Mexico, August 2006. Shot with Nikon D70s in Ikelite housing, in natural light, approx
+      25fsw. Animal estimated at 11-12 feet in length, age unknown.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: great-white-shark-wikimedia-great-white-shark-south-africa
+    score: 57
+    flags: []
+    title: File:Great white shark south africa.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Great_white_shark_south_africa.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/31/Great_white_shark_south_africa.jpg
+    creator: Hermanus Backpackers
+    credit: Great White Shark Cage Diving
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by-candidate
+    source: Great white shark (Carcharodon carcharias) off South Africa
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: great-white-shark-wikimedia-great-white-shark
+    score: 57
+    flags: []
+    title: File:Great white shark.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Great_white_shark.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/4/4b/Great_white_shark.jpg
+    creator: Bruce
+    credit: https://www.flickr.com/photos/67114894@N00/1740650663/
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by-candidate
+    source: Great white shark
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: great-white-shark-wikimedia-great-white-dyer-island-2010-07
+    score: 33
+    flags:
+    - human_or_vehicle_proximity_review
+    title: File:Great white Dyer island 2010-07.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Great_white_Dyer_island_2010-07.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/1b/Great_white_Dyer_island_2010-07.jpg
+    creator: Alban
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: A great white shark approaches divers in a cage off Dyer Island, Western Cape, South Africa.
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: reef-manta-ray
+  species_page: content/species/sharks-rays/reef-manta-ray.md
+  common_name: Reef Manta Ray
+  scientific_name: Mobula alfredi
+  readiness: attribution_and_ethics_review
+  top_candidate: &id020
+    asset_id: reef-manta-ray-wikimedia-manta-alfredi-cruising-journal-pone-0046170-g002
+    score: 57
+    flags: []
+    title: File:Manta alfredi cruising - journal.pone.0046170.g002A.png
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Manta_alfredi_cruising_-_journal.pone.0046170.g002A.png
+    image_url: https://upload.wikimedia.org/wikipedia/commons/c/c5/Manta_alfredi_cruising_-_journal.pone.0046170.g002A.png
+    creator: Jaine FRA, Couturier LIE, Weeks SJ, Townsend KA, Bennett MB, et al. (2012)
+    credit: 'Jaine FRA, Couturier LIE, Weeks SJ, Townsend KA, Bennett MB, et al. (2012) When Giants Turn Up: Sighting Trends,
+      Environmental Influences and Habitat Use of the Manta Ray Manta alfredi at a Coral Reef. PLoS ONE 7(10): e46170. doi:10.1371/journal.pone.0046170'
+    license: CC BY 2.5
+    license_url: https://creativecommons.org/licenses/by/2.5
+    rights_status: cc-by-candidate
+    source: 'Manta alfredi cruising (swimming with cephalic lobes rolled and mouth closed).
+
+      doi:10.1371/journal.pone.0046170.g002A'
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id020
+  - asset_id: reef-manta-ray-wikimedia-manta-alfredi-fushivaru-thila
+    score: 55
+    flags: []
+    title: File:Manta alfredi fushivaru thila.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Manta_alfredi_fushivaru_thila.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/85/Manta_alfredi_fushivaru_thila.jpg
+    creator: asands from London, UK
+    credit: Manta at Fushivaru Thila
+    license: CC BY-SA 2.0
+    license_url: https://creativecommons.org/licenses/by-sa/2.0
+    rights_status: cc-by-sa-candidate
+    source: Reef manta ray (Manta alfredi) at the Fushivaru Thila cleaning stations, Lhaviyani Atoll in the Maldives.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: reef-manta-ray-wikimedia-m-alfredi-in-maxell-aqua-park-shinagawa-tokyo
+    score: 55
+    flags: []
+    title: File:M.alfredi in maxell Aqua park shinagawa, Tokyo.png
+    commons_file_page: https://commons.wikimedia.org/wiki/File:M.alfredi_in_maxell_Aqua_park_shinagawa,_Tokyo.png
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/f8/M.alfredi_in_maxell_Aqua_park_shinagawa%2C_Tokyo.png
+    creator: Gant223
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: M.alfredi in maxell Aqua park shinagawa, Tokyo
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: reef-manta-ray-wikimedia-mobula-alfredi-in-maxell-aqua-park-shinagawa-tok
+    score: 55
+    flags: []
+    title: File:Mobula alfredi in maxell Aqua park shinagawa, Tokyo.png
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Mobula_alfredi_in_maxell_Aqua_park_shinagawa,_Tokyo.png
+    image_url: https://upload.wikimedia.org/wikipedia/commons/7/74/Mobula_alfredi_in_maxell_Aqua_park_shinagawa%2C_Tokyo.png
+    creator: Gant223
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Mobula alfredi in maxell Aqua park shinagawa, Tokyo.png
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: reef-manta-ray-wikimedia-reef-manta-ray-manta-alfredi-49877611243
+    score: 39
+    flags:
+    - human_or_vehicle_proximity_review
+    title: File:Reef manta ray (Manta alfredi) - 49877611243.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Reef_manta_ray_(Manta_alfredi)_-_49877611243.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/0d/Reef_manta_ray_%28Manta_alfredi%29_-_49877611243.jpg
+    creator: Rickard Zerpe
+    credit: https://www.flickr.com/photos/krokodiver/49877611243/
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by-candidate
+    source: www.fishbase.se/summary/65179 Manta alfredi
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: reef-manta-ray-wikimedia-reef-manta-ray-manta-alfredi-49878144346
+    score: 39
+    flags:
+    - human_or_vehicle_proximity_review
+    title: File:Reef manta ray (Manta alfredi) - 49878144346.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Reef_manta_ray_(Manta_alfredi)_-_49878144346.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/19/Reef_manta_ray_%28Manta_alfredi%29_-_49878144346.jpg
+    creator: Rickard Zerpe
+    credit: https://www.flickr.com/photos/krokodiver/49878144346/
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by-candidate
+    source: www.fishbase.se/summary/65179 Manta alfredi
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: scalloped-hammerhead
+  species_page: content/species/sharks-rays/scalloped-hammerhead.md
+  common_name: Scalloped Hammerhead
+  scientific_name: Sphyrna lewini
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id021
+    asset_id: scalloped-hammerhead-wikimedia-sphyrna-lewini-griffith-smith-1834-2422815227
+    score: 67
+    flags: []
+    title: File:Sphyrna lewini (Griffith & Smith, 1834) 2422815227.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Sphyrna_lewini_(Griffith_%26_Smith,_1834)_2422815227.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/df/Sphyrna_lewini_%28Griffith_%26_Smith%2C_1834%29_2422815227.jpg
+    creator: iNaturalist.org (Simon Tonge) (Simon%20Tonge)
+    credit: https://www.gbif.org/occurrence/2422815227
+    license: CC0
+    license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    rights_status: public-domain-or-cc0-candidate
+    source: Sphyrna lewini (Griffith & Smith, 1834) 2422815227
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id021
+  - asset_id: scalloped-hammerhead-wikimedia-scalloped-hammerhead-cocos
+    score: 61
+    flags: []
+    title: File:Scalloped hammerhead cocos.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Scalloped_hammerhead_cocos.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/e/ee/Scalloped_hammerhead_cocos.jpg
+    creator: Barry Peters`
+    credit: '637943300305'
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by-candidate
+    source: Scalloped hammerheads (Sphyrna lewini) off Cocos Island, Costa Rica.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: scalloped-hammerhead-wikimedia-hammer-head
+    score: 55
+    flags: []
+    title: File:Hammer Head.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Hammer_Head.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/07/Hammer_Head.jpg
+    creator: Xvic
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: "\u0410\u043A\u0443\u043B\u0430-\u043C\u043E\u043B\u043E\u0442"
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: scalloped-hammerhead-wikimedia-scalloped-hammerhead-shark-in-aqua-park-shinagaw
+    score: 55
+    flags: []
+    title: File:Scalloped hammerhead shark in Aqua park shinagawa.png
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Scalloped_hammerhead_shark_in_Aqua_park_shinagawa.png
+    image_url: https://upload.wikimedia.org/wikipedia/commons/b/b9/Scalloped_hammerhead_shark_in_Aqua_park_shinagawa.png
+    creator: Gant223
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Scalloped hammerhead shark in Aqua park shinagawa
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: scalloped-hammerhead-wikimedia-scalloped-hammerhead-sharks-sphyrna-lewini-img-2
+    score: 55
+    flags: []
+    title: File:Scalloped Hammerhead Sharks Sphyrna lewini IMG 20231031 01.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Scalloped_Hammerhead_Sharks_Sphyrna_lewini_IMG_20231031_01.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/6/6d/Scalloped_Hammerhead_Sharks_Sphyrna_lewini_IMG_20231031_01.jpg
+    creator: Dr. Raju Kasambe
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Scalloped Hammerhead Sharks Sphyrna lewini. Photographed at Sassoon Dock fish market, Mumbai, Maharashtra. Seen
+      in the market for sale. Image by Dr Raju Kasambe
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: scalloped-hammerhead-wikimedia-scalloped-hammerhead-shark-sphyrna-lewini-01
+    score: 55
+    flags: []
+    title: File:Scalloped Hammerhead Shark Sphyrna lewini 01.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Scalloped_Hammerhead_Shark_Sphyrna_lewini_01.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/f5/Scalloped_Hammerhead_Shark_Sphyrna_lewini_01.jpg
+    creator: Dr. Raju Kasambe
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Scalloped Hammerhead Shark Sphyrna lewini. For sale for food at a Fish Market in Mumbai, Maharashtra. Photo by
+      Raju Kasambe
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: shortfin-mako
+  species_page: content/species/sharks-rays/shortfin-mako.md
+  common_name: Shortfin Mako
+  scientific_name: Isurus oxyrinchus
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id022
+    asset_id: shortfin-mako-wikimedia-isurus-oxyrinchus-by-mark-conlin
+    score: 85
+    flags: []
+    title: File:Isurus oxyrinchus by mark conlin.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Isurus_oxyrinchus_by_mark_conlin.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/7/74/Isurus_oxyrinchus_by_mark_conlin.jpg
+    creator: Mark Conlin, SWFSC Large Pelagics Program
+    credit: https://swfsc.noaa.gov/ImageGallery/Default.aspx?moid=533
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Shortfin mako shark (Isurus oxyrinchus)
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id022
+  - asset_id: shortfin-mako-wikimedia-isurus-oxyrinchus-by-mark-conlin2
+    score: 85
+    flags: []
+    title: File:Isurus oxyrinchus by mark conlin2.JPG
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Isurus_oxyrinchus_by_mark_conlin2.JPG
+    image_url: https://upload.wikimedia.org/wikipedia/commons/2/2f/Isurus_oxyrinchus_by_mark_conlin2.JPG
+    creator: Mark Conlin, SWFSC Large Pelagics Program
+    credit: http://swfsc.noaa.gov/ImageGallery/Default.aspx?moid=532
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Shortfin mako shark (Isurus oxyrinchus)
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: shortfin-mako-wikimedia-isurus-oxyrinchus-by-mark-conlin3
+    score: 85
+    flags: []
+    title: File:Isurus oxyrinchus by mark conlin3.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Isurus_oxyrinchus_by_mark_conlin3.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/c/ca/Isurus_oxyrinchus_by_mark_conlin3.jpg
+    creator: Mark Conlin, SWFSC Large Pelagics Program
+    credit: http://swfsc.noaa.gov/ImageGallery/Default.aspx?moid=531
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Shortfin mako sharks (Isurus oxyrinchus)
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: shortfin-mako-wikimedia-requin-taupe-isurus-oxyrinchus-ifremer-00764-875
+    score: 61
+    flags: []
+    title: File:Requin taupe (Isurus oxyrinchus) (Ifremer 00764-87575).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Requin_taupe_(Isurus_oxyrinchus)_(Ifremer_00764-87575).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/d8/Requin_taupe_%28Isurus_oxyrinchus%29_%28Ifremer_00764-87575%29.jpg
+    creator: "Hugues Evano (IFREMER, D\xE9l\xE9gation oc\xE9an Indien (DOI), D\xE9partement Ressources Biologiques et Environnement\
+      \ (RBE), F-97420 Le Port, France)"
+    credit: Requin taupe (Isurus oxyrinchus)
+    license: CC BY 4.0
+    license_url: https://creativecommons.org/licenses/by/4.0
+    rights_status: cc-by-candidate
+    source: "Mako (local name in R\xE9union): species of fish found in the tropical waters of the Indian Ocean. It can measure\
+      \ up to 430cm and reach depths of 750m. This fish was photographed during field sampling (SIH, Fisheries Information\
+      \ System) or laboratory dissections (research projects). The photo in PNG format (without background) is available from\
+      \ the associated dataset."
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: shortfin-mako-wikimedia-kurzflossen-mako
+    score: 55
+    flags: []
+    title: File:Kurzflossen-Mako.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Kurzflossen-Mako.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/de/Kurzflossen-Mako.jpg
+    creator: Patrick Doll
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: Shortfin mako shark in the north atlantic at Condor Bank, Azores
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: shortfin-mako-wikimedia-shortfin-mako
+    score: 42
+    flags:
+    - missing_creator_or_credit
+    title: File:Shortfin mako.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Shortfin_mako.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/f7/Shortfin_mako.jpg
+    creator: null
+    credit: null
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Shortfin mako
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: tiger-shark
+  species_page: content/species/sharks-rays/tiger-shark.md
+  common_name: Tiger Shark
+  scientific_name: Galeocerdo cuvier
+  readiness: attribution_and_ethics_review
+  top_candidate: &id023
+    asset_id: tiger-shark-wikimedia-requin-tigre-galeocerdo-cuvier-ifremer-00756-867
+    score: 61
+    flags: []
+    title: File:Requin tigre (Galeocerdo cuvier) (Ifremer 00756-86782).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Requin_tigre_(Galeocerdo_cuvier)_(Ifremer_00756-86782).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/b/be/Requin_tigre_%28Galeocerdo_cuvier%29_%28Ifremer_00756-86782%29.jpg
+    creator: "Fanchon Varenne (IFREMER, D\xE9l\xE9gation oc\xE9an Indien (DOI), D\xE9partement Ressources Biologiques et Environnement\
+      \ (RBE), F-97420 Le Port, France)"
+    credit: Requin tigre (Galeocerdo cuvier)
+    license: CC BY 4.0
+    license_url: https://creativecommons.org/licenses/by/4.0
+    rights_status: cc-by-candidate
+    source: "Tiger (local name in R\xE9union): species of fish found in the tropical waters of the Indian Ocean. It can measure\
+      \ up to 700cm and reach depths of 370m. This fish was photographed during field sampling (SIH, Fisheries Information\
+      \ System) or laboratory dissections (research projects). The photo in PNG format (without background) is available from\
+      \ the associated dataset."
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id023
+  - asset_id: tiger-shark-wikimedia-tiger-shark
+    score: 55
+    flags: []
+    title: File:Tiger shark.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Tiger_shark.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/39/Tiger_shark.jpg
+    creator: Albert kok
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: Tiger shark, Bahamas
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: tiger-shark-wikimedia-tiger-shark-2
+    score: 51
+    flags: []
+    title: File:Tiger shark(2).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Tiger_shark(2).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/13/Tiger_shark%282%29.jpg
+    creator: Albert Kok
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: Tiger Shark from Bahamas
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: tiger-shark-wikimedia-scarface-tigershark
+    score: 36
+    flags:
+    - missing_creator_or_credit
+    title: File:Scarface-tigershark.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Scarface-tigershark.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/12/Scarface-tigershark.jpg
+    creator: null
+    credit: null
+    license: CC BY 2.5
+    license_url: https://creativecommons.org/licenses/by/2.5
+    rights_status: cc-by-candidate
+    source: Scarface-tigershark
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: tiger-shark-wikimedia-feeding-time
+    score: 33
+    flags:
+    - human_or_vehicle_proximity_review
+    title: File:Feeding time!.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Feeding_time!.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/a/ab/Feeding_time%21.jpg
+    creator: Bill Abbott
+    credit: https://www.flickr.com/photos/wbaiv/2961231580/
+    license: CC BY-SA 2.0
+    license_url: https://creativecommons.org/licenses/by-sa/2.0
+    rights_status: cc-by-sa-candidate
+    source: Feeding time!
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: tiger-shark-wikimedia-shark-feeding
+    score: -49
+    flags:
+    - captivity_or_facility_review
+    - human_or_vehicle_proximity_review
+    - sensitive_life_stage_or_site_review
+    - individual_or_tagged_animal_review
+    title: File:Shark Feeding.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Shark_Feeding.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/53/Shark_Feeding.jpg
+    creator: Brian Channell
+    credit: https://www.flickr.com/photos/bchannell/3899036796/
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by-candidate
+    source: Female tiger shark pup (Galeocerdo cuvier)  in the Aquarium of the Pacific's Shark Lagoon exhibit. This individual
+      was captured in Taiwan in February 2009 and released in September of the same year.
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: species-whale-shark
+  species_page: content/species/sharks-rays/whale-shark.md
+  common_name: Whale Shark
+  scientific_name: Rhincodon typus
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id024
+    asset_id: species-whale-shark-wikimedia-olympus-digital-camera-27591269541
+    score: 67
+    flags: []
+    title: File:OLYMPUS DIGITAL CAMERA (27591269541).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:OLYMPUS_DIGITAL_CAMERA_(27591269541).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/3f/OLYMPUS_DIGITAL_CAMERA_%2827591269541%29.jpg
+    creator: cotterillmike
+    credit: https://www.flickr.com/photos/cotterillmike/27591269541/
+    license: CC0
+    license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    rights_status: public-domain-or-cc0-candidate
+    source: OLYMPUS DIGITAL CAMERA
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id024
+  - asset_id: species-whale-shark-wikimedia-similan-dive-center-great-whale-shark
+    score: 51
+    flags: []
+    title: File:Similan Dive Center - great whale shark.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Similan_Dive_Center_-_great_whale_shark.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/f6/Similan_Dive_Center_-_great_whale_shark.jpg
+    creator: Abe Khao Lak
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Whale shark at the Andaman sea
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-whale-shark-wikimedia-whale-shark-georgia-aquarium
+    score: 7
+    flags:
+    - captivity_or_facility_review
+    title: File:Whale shark Georgia aquarium.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Whale_shark_Georgia_aquarium.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/f1/Whale_shark_Georgia_aquarium.jpg
+    creator: User:Zac Wolf (original), en:User:Stefan (cropping)
+    credit: en:Image:Whale shark Georgia aquarium.jpg
+    license: CC BY-SA 2.5
+    license_url: https://creativecommons.org/licenses/by-sa/2.5
+    rights_status: cc-by-sa-candidate
+    source: '"cropped and adjusted version of IMG 1023.JPG in commons"'
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-whale-shark-wikimedia-male-whale-shark-at-georgia-aquarium
+    score: 7
+    flags:
+    - captivity_or_facility_review
+    title: File:Male whale shark at Georgia Aquarium.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Male_whale_shark_at_Georgia_Aquarium.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/a/a1/Male_whale_shark_at_Georgia_Aquarium.jpg
+    creator: Zac Wolf
+    credit: Own work
+    license: CC BY-SA 2.5
+    license_url: https://creativecommons.org/licenses/by-sa/2.5
+    rights_status: cc-by-sa-candidate
+    source: One of two resident male whale sharks in the Georgia Aquarium in the United States.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-whale-shark-wikimedia-okinawa-aquarium
+    score: 7
+    flags:
+    - captivity_or_facility_review
+    title: File:Okinawa Aquarium.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Okinawa_Aquarium.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/4/47/Okinawa_Aquarium.jpg
+    creator: Jordy Meow
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: The Kuroshio Sea, the main tank of the Okinawa Churaumi Aquarium.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-whale-shark-wikimedia-whale-shark-adf
+    score: -44
+    flags:
+    - distress_or_mortality_review
+    - human_or_vehicle_proximity_review
+    - individual_or_tagged_animal_review
+    title: File:Whale Shark AdF.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Whale_Shark_AdF.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/c/c7/Whale_Shark_AdF.jpg
+    creator: Arturo de Frias Marques
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: "Whale Shark (Rhincodon typus). Face portrait of an 8-meter individual filter-feeding plankton at night. His eye\
+      \ is clearly visible. His upper lip shows recent scars \u2013 whale sharks steal food from fishermen nets and the fishermen\
+      \ hit them in the mouth to try to discourage them. Thaa Atoll, Maldives"
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: species-west-indian-manatee
+  species_page: content/species/sirenians/west-indian-manatee.md
+  common_name: West Indian Manatee
+  scientific_name: Trichechus manatus
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id025
+    asset_id: species-west-indian-manatee-wikimedia-manatee-photo
+    score: 85
+    flags: []
+    title: File:Manatee photo.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Manatee_photo.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/b/b1/Manatee_photo.jpg
+    creator: NASA
+    credit: 'NASA
+
+
+      http://www-pao.ksc.nasa.gov/kscpao/visit/kscovrv.htm.
+
+      http://www.nasa.gov/centers/kennedy/images/content/91132main_79c265.jpg'
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: West Indian manatee (Trichechus manatus) at Merritt Island's National Wildlife Refuge in Florida next to Kennedy
+      Space Center.
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id025
+  - asset_id: species-west-indian-manatee-wikimedia-manatee-with-calf-pd
+    score: 71
+    flags:
+    - sensitive_life_stage_or_site_review
+    title: File:Manatee with calf.PD.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Manatee_with_calf.PD.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/4/41/Manatee_with_calf.PD.jpg
+    creator: Galen Rathbun
+    credit: USFWS Digital Library, WO3544-Highlights. Published by DIVISION OF PUBLIC AFFAIRS, U.S. Fish and Wildlife Service
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: A manatee and her calf. West Indian Manatee, an endangered aquatic mammal of Puerto Rico.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-west-indian-manatee-wikimedia-manatee-with-calf-pd-colour-corrected
+    score: 71
+    flags:
+    - sensitive_life_stage_or_site_review
+    title: File:Manatee with calf.PD - colour corrected.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Manatee_with_calf.PD_-_colour_corrected.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/9/99/Manatee_with_calf.PD_-_colour_corrected.jpg
+    creator: Galen Rathbun
+    credit: USFWS Digital Library. Published by DIVISION OF PUBLIC AFFAIRS, U.S. Fish and Wildlife Service
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: A manatee and her calf. West Indian Manatee, an endangered aquatic mammal of Puerto Rico.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-west-indian-manatee-wikimedia-manatees-surfacing-for-air
+    score: 67
+    flags:
+    - human_or_vehicle_proximity_review
+    title: File:Manatees surfacing for air.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Manatees_surfacing_for_air.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/fe/Manatees_surfacing_for_air.jpg
+    creator: Boone, Robert K, U.S. Fish and Wildlife Service
+    credit: http://www.public-domain-image.com/public-domain-images-pictures-free-stock-photos/fauna-animals-public-domain-images-pictures/manatee-pictures/manatees-surfacing-for-air.jpg
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: 'Image title: Manatees surfacing for air
+
+      Image from Public domain images website, http://www.public-domain-image.com/full-image/fauna-animals-public-domain-images-pictures/manatee-pictures/manatees-surfacing-for-air.jpg.html'
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-west-indian-manatee-wikimedia-manatee
+    score: 57
+    flags:
+    - human_or_vehicle_proximity_review
+    title: File:Manatee.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Manatee.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/81/Manatee.jpg
+    creator: null
+    credit: from http://www.csc.noaa.gov/benthic/resources/gallery/life/manatee.htm
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: This group of three West Indian manatees (Trichechus manatus) was photographed while feeding on seagrass.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-west-indian-manatee-wikimedia-rea-de-prote-o-ambiental-barra-do-rio-mamanguape
+    score: 55
+    flags: []
+    title: "File:\xC1rea de Prote\xE7\xE3o Ambiental Barra do Rio Mamanguape Emerson Gomes Dantas (10).jpg"
+    commons_file_page: https://commons.wikimedia.org/wiki/File:%C3%81rea_de_Prote%C3%A7%C3%A3o_Ambiental_Barra_do_Rio_Mamanguape_Emerson_Gomes_Dantas_(10).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/db/%C3%81rea_de_Prote%C3%A7%C3%A3o_Ambiental_Barra_do_Rio_Mamanguape_Emerson_Gomes_Dantas_%2810%29.jpg
+    creator: Emerson Gomes D.
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: "\xC1rea de Prote\xE7\xE3o Ambiental Barra do Rio Mamanguape de n\xEDvel Federal, localizado (a) em Ba\xEDa da\
+      \ Trai\xE7\xE3o (PB), Lucena (PB), Marca\xE7\xE3o (PB), Rio Tinto (PB)"
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: species-green-turtle
+  species_page: content/species/turtles/green-turtle.md
+  common_name: Green Turtle
+  scientific_name: Chelonia mydas
+  readiness: attribution_and_ethics_review
+  top_candidate: &id026
+    asset_id: species-green-turtle-wikimedia-hawaii-turtle-2
+    score: 55
+    flags: []
+    title: File:Hawaii turtle 2.JPG
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Hawaii_turtle_2.JPG
+    image_url: https://upload.wikimedia.org/wikipedia/commons/b/bb/Hawaii_turtle_2.JPG
+    creator: Brocken Inaglory
+    credit: Photograph by Brocken Inaglory, edited by Keta
+    license: CC BY-SA 3.0
+    license_url: http://creativecommons.org/licenses/by-sa/3.0/
+    rights_status: cc-by-sa-candidate
+    source: Green turtle (Chelonia mydas), Hawai'i, USA.
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id026
+  - asset_id: species-green-turtle-wikimedia-total-internal-reflection-of-chelonia-mydas
+    score: 55
+    flags: []
+    title: File:Total internal reflection of Chelonia mydas.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Total_internal_reflection_of_Chelonia_mydas.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/5c/Total_internal_reflection_of_Chelonia_mydas.jpg
+    creator: Brocken Inaglory
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Green sea turtle, Chelonia mydas and his total internal reflection.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-green-turtle-wikimedia-chelonia-mydas-is-going-for-the-air-edit
+    score: 55
+    flags: []
+    title: File:Chelonia mydas is going for the air edit.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Chelonia_mydas_is_going_for_the_air_edit.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/6/6e/Chelonia_mydas_is_going_for_the_air_edit.jpg
+    creator: Brocken Inaglory
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: Green turtle, Chelonia mydas is going for the air.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-green-turtle-wikimedia-green-turtle-in-kona-2008
+    score: 55
+    flags: []
+    title: File:Green turtle in Kona 2008.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Green_turtle_in_Kona_2008.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/0f/Green_turtle_in_Kona_2008.jpg
+    creator: Brocken Inaglory
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: Green turtle, Chelonia mydas in w:Kona District, Hawaii
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-green-turtle-wikimedia-green-sea-turtle-grazing-seagrass
+    score: 55
+    flags: []
+    title: File:Green Sea Turtle grazing seagrass.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Green_Sea_Turtle_grazing_seagrass.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/d7/Green_Sea_Turtle_grazing_seagrass.jpg
+    creator: P.Lindgren
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: Green Sea Turtle grazing seagrass at Akumal bay.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: species-green-turtle-wikimedia-green-sea-turtle-chelonia-mydas-moorea
+    score: 55
+    flags: []
+    title: File:Green sea turtle (Chelonia mydas) Moorea.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Green_sea_turtle_(Chelonia_mydas)_Moorea.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/a/a3/Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg
+    creator: Charles J. Sharp
+    credit: Own work, from Sharp Photography, sharpphotography.co.uk
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Green sea turtle (Chelonia mydas), Moorea, French Polynesia
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: hawksbill-turtle
+  species_page: content/species/turtles/hawksbill-turtle.md
+  common_name: Hawksbill Turtle
+  scientific_name: Eretmochelys imbricata
+  readiness: attribution_and_ethics_review
+  top_candidate: &id027
+    asset_id: hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-parque-naci
+    score: 55
+    flags: []
+    title: File:Tortuga carey (Eretmochelys imbricata), parque nacional Ras Muhammad, Egipto, 2022-03-28, DD 56.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_parque_nacional_Ras_Muhammad,_Egipto,_2022-03-28,_DD_56.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/8b/Tortuga_carey_%28Eretmochelys_imbricata%29%2C_parque_nacional_Ras_Muhammad%2C_Egipto%2C_2022-03-28%2C_DD_56.jpg
+    creator: Diego Delso
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Hawksbill sea turtle (Eretmochelys imbricata), Ras Muhammad National Park, Egypt
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id027
+  - asset_id: hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-parque-naci
+    score: 55
+    flags: []
+    title: File:Tortuga carey (Eretmochelys imbricata), parque nacional Ras Muhammad, Egipto, 2022-03-28, DD 60.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_parque_nacional_Ras_Muhammad,_Egipto,_2022-03-28,_DD_60.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/6/67/Tortuga_carey_%28Eretmochelys_imbricata%29%2C_parque_nacional_Ras_Muhammad%2C_Egipto%2C_2022-03-28%2C_DD_60.jpg
+    creator: Diego Delso
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Hawksbill sea turtle (Eretmochelys imbricata), Ras Muhammad National Park, Egypt
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-anilao-fili
+    score: 55
+    flags: []
+    title: File:Tortuga carey (Eretmochelys imbricata), Anilao, Filipinas, 2023-08-22, DD 11.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_Anilao,_Filipinas,_2023-08-22,_DD_11.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/51/Tortuga_carey_%28Eretmochelys_imbricata%29%2C_Anilao%2C_Filipinas%2C_2023-08-22%2C_DD_11.jpg
+    creator: Diego Delso
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Hawksbill sea turtle (Eretmochelys imbricata), Anilao, Philippines
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-anilao-fili
+    score: 55
+    flags: []
+    title: File:Tortuga carey (Eretmochelys imbricata), Anilao, Filipinas, 2023-08-22, DD 15.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_Anilao,_Filipinas,_2023-08-22,_DD_15.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/4/45/Tortuga_carey_%28Eretmochelys_imbricata%29%2C_Anilao%2C_Filipinas%2C_2023-08-22%2C_DD_15.jpg
+    creator: Diego Delso
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Hawksbill sea turtle (Eretmochelys imbricata), Anilao, Philippines
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-islas-ad-di
+    score: 55
+    flags: []
+    title: "File:Tortuga carey (Eretmochelys imbricata), islas Ad Dimaniyat, Om\xE1n, 2024-08-13, DD 69.jpg"
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_islas_Ad_Dimaniyat,_Om%C3%A1n,_2024-08-13,_DD_69.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/7/7d/Tortuga_carey_%28Eretmochelys_imbricata%29%2C_islas_Ad_Dimaniyat%2C_Om%C3%A1n%2C_2024-08-13%2C_DD_69.jpg
+    creator: Diego Delso
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: "Hawksbill sea turtle\u200B (Eretmochelys imbricata), Ad Dimaniyat Islands, Oman"
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-islas-ad-di
+    score: 55
+    flags: []
+    title: "File:Tortuga carey (Eretmochelys imbricata), islas Ad Dimaniyat, Om\xE1n, 2024-08-15, DD 15.jpg"
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_islas_Ad_Dimaniyat,_Om%C3%A1n,_2024-08-15,_DD_15.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/fd/Tortuga_carey_%28Eretmochelys_imbricata%29%2C_islas_Ad_Dimaniyat%2C_Om%C3%A1n%2C_2024-08-15%2C_DD_15.jpg
+    creator: Diego Delso
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: "Hawksbill sea turtle\u200B (Eretmochelys imbricata), Ad Dimaniyat Islands, Oman"
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: kemps-ridley-turtle
+  species_page: content/species/turtles/kemps-ridley-turtle.md
+  common_name: Kemp's Ridley Turtle
+  scientific_name: Lepidochelys kempii
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id028
+    asset_id: kemps-ridley-turtle-wikimedia-padre-island-national-seashore-kemps-ridley-sea-
+    score: 89
+    flags: []
+    title: File:Padre Island National Seashore - Kemps Ridley Sea Turtle.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/d8/Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg
+    creator: uploaded by Johntex
+    credit: United States Fish & Wildlife Service (USFWS) [1]
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: 'Photos and maps related to Padre Island.
+
+
+      Padre Island National Seashore - Kemps Ridley Sea Turtle'
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id028
+  - asset_id: kemps-ridley-turtle-wikimedia-lepidochelys-kempii
+    score: 83
+    flags: []
+    title: File:Lepidochelys kempii.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Lepidochelys_kempii.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/5b/Lepidochelys_kempii.jpg
+    creator: U.S. Fish and Wildlife Service Southeast Region
+    credit: https://www.flickr.com/photos/usfwssoutheast/8904425989/
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by-candidate
+    source: Kemp's ridley sea turtle (Lepidochelys kempii) on beach in Bon Secour, Alabama, USA
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: kemps-ridley-turtle-wikimedia-kemp-s-ridley-sea-turtle-nesting
+    score: 71
+    flags:
+    - sensitive_life_stage_or_site_review
+    title: File:Kemp's Ridley sea turtle nesting.JPG
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Kemp%27s_Ridley_sea_turtle_nesting.JPG
+    image_url: https://upload.wikimedia.org/wikipedia/commons/7/7f/Kemp%27s_Ridley_sea_turtle_nesting.JPG
+    creator: National Park Service
+    credit: http://www.nps.gov/pais/naturescience/Nesting-Kemps-ridley-Sea-Turtles.htm
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Kemp's Ridley sea turtle nesting.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: kemps-ridley-turtle-wikimedia-kemp-s-ridley-sea-turtle-nesting-cropped
+    score: 71
+    flags:
+    - sensitive_life_stage_or_site_review
+    title: File:Kemp's Ridley sea turtle nesting (cropped).JPG
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Kemp%27s_Ridley_sea_turtle_nesting_(cropped).JPG
+    image_url: https://upload.wikimedia.org/wikipedia/commons/e/ec/Kemp%27s_Ridley_sea_turtle_nesting_%28cropped%29.JPG
+    creator: National Park Service
+    credit: http://www.nps.gov/pais/naturescience/Nesting-Kemps-ridley-Sea-Turtles.htm
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: Kemp's Ridley sea turtle nesting.
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: kemps-ridley-turtle-wikimedia-2009-kemp-s-ridley-sea-turtle-project-at-padre-i
+    score: 45
+    flags:
+    - sensitive_life_stage_or_site_review
+    - individual_or_tagged_animal_review
+    title: File:2009 Kemp's ridley sea turtle project at Padre Island National Seashore (9f74a803-a05f-4adf-aab8-951a59fed856).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:2009_Kemp%27s_ridley_sea_turtle_project_at_Padre_Island_National_Seashore_(9f74a803-a05f-4adf-aab8-951a59fed856).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/c/c5/2009_Kemp%27s_ridley_sea_turtle_project_at_Padre_Island_National_Seashore_%289f74a803-a05f-4adf-aab8-951a59fed856%29.jpg
+    creator: NPS Staff (Division of Sea Turtle Science and Recovery)
+    credit: NPGallery
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: 'Nesting Kemp''s ridley sea turtle returns to the water after nesting at Padre Island National Seashore on 24
+      April 2009. A record 117 Kemp?s ridley nests were located at the park during 2009, marking the sixth consecutive year
+      that record numbers of Kemp''s ridley nests have been recorded at the park since record keeping began in 1980.Park:
+      Padre Island National SeashoreDate Taken: 04/09Photographer: NPS StaffLocation: Padre Island National SeashoreFig. 2.
+      NPS staff record data on a nesting Kemp''s ridley sea turtle on 23 April 2009. Park: Padre Island National SeashoreDate
+      Taken: 04/09Photographer: NPS StaffLocation: Padre Island National Seashore, 1 mile marker, South BeachFig. 3. A hatchling
+      Kemp''s ridley crawls towards the water on 1 August 2009. Kemp?s ridley sea turtle eggs are incubated at Padre Island
+      National Seashore and the hatchlings are released soon after they emerge. The public was invited to attend 23 hatchling
+      releases in 2009. Park: Padre Island National SeashoreDate Taken: 08/09Photographer: NPS StaffLocation: Padre Island
+      National SeashoreFig. 4. Hatchling Kemp''s ridley crawls towards the water on 25 June 2009. Kemp?s ridley sea turtle
+      hatchlings are released at Padre Island National Seashore. The public was invited to attend 23 hatchling releases in
+      2009. Park: Padre Island National SeashoreDate Taken: 06/09Photographer: NPS StaffLocation: Padre Island National Seashore,
+      Malaquite BeachFig. 5. NPS staff collect eggs from a Kemp?s ridley nest on 27 May 2009.Park: Padre Island National SeashoreDate
+      Taken: 05/09Photographer: NPS StaffLocation: Padre Island National Seashore, 4.8 mile marker
+
+      In 2009, 117 Kemp''s ridley sea turtle nests were found at Padre Island National seashore. This marks the sixth consecutive
+      year that record numbers of Kemp''s ridley nests have been recorded in the park since record keeping began in 1980.
+
+      Keywords: kemp''s ridley sea turtle; sea turtle; endangered species; beach; reptile; Endangered and threatened animals;
+      Reptiles; Wildlife management'
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: kemps-ridley-turtle-wikimedia-hc-144a-transporting-sea-turtles
+    score: -3
+    flags:
+    - captivity_or_facility_review
+    - individual_or_tagged_animal_review
+    title: File:HC-144A transporting sea turtles.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:HC-144A_transporting_sea_turtles.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/1b/HC-144A_transporting_sea_turtles.jpg
+    creator: Petty Officer 3rd Class Connie Terrell
+    credit: U.S. Coast Guard photo 101212-G-8030T-007 [1]
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: "LINCOLN, Mass. -- Volunteers and staff from the New England Aquarium, Hanscom Air Force Base and Coast Guard\
+      \ work to load endangered Kemp\u2019s Ridley sea turtles into a Mobile, Ala.-based Coast Guard HC-144A Ocean Sentry\
+      \ for transport from Hanscom to Orlando, Fla., Sun., Dec. 12, 2010. Once in Orlando, Sea World staff will continue to\
+      \ rehabilitate the 20 sea turtles and potentially release them back into the wild. Coast Guard photo by Petty Officer\
+      \ 3rd Class Connie Terrell."
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: leatherback-turtle
+  species_page: content/species/turtles/leatherback-turtle.md
+  common_name: Leatherback Turtle
+  scientific_name: Dermochelys coriacea
+  readiness: fast_track_rights_ethics_review
+  top_candidate: &id029
+    asset_id: leatherback-turtle-wikimedia-leatherbackturtle
+    score: 83
+    flags: []
+    title: File:LeatherbackTurtle.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:LeatherbackTurtle.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/9/9b/LeatherbackTurtle.jpg
+    creator: null
+    credit: National Oceanic and Atmospheric Administration, NOAA
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: 'Adult Dermochelys coriacea, Leatherback Sea Turtle.
+
+      In Las Baulas National Marine Park, Costa Rica.'
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id029
+  - asset_id: leatherback-turtle-wikimedia-close-up-of-dermochelys-coriacea-leatherback-tur
+    score: 67
+    flags:
+    - human_or_vehicle_proximity_review
+    title: File:Close up of dermochelys coriacea leatherback turtle.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Close_up_of_dermochelys_coriacea_leatherback_turtle.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/b/b1/Close_up_of_dermochelys_coriacea_leatherback_turtle.jpg
+    creator: Rabon David, U.S. Fish and Wildlife Service
+    credit: http://www.public-domain-image.com/public-domain-images-pictures-free-stock-photos/fauna-animals-public-domain-images-pictures/reptiles-and-amphibians-public-domain-images-pictures/turtles-pictures/close-up-of-dermochelys-coriacea-leatherback-turtle.jpg
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: 'Image title: Close up of dermochelys coriacea leatherback turtle
+
+      Image from Public domain images website, http://www.public-domain-image.com/full-image/fauna-animals-public-domain-images-pictures/reptiles-and-amphibians-public-domain-images-pictures/turtles-pictures/close-up-of-dermochelys-coriacea-leatherback-turtle.jpg.html'
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: leatherback-turtle-wikimedia-estaci-n-can
+    score: 55
+    flags: []
+    title: "File:Estaci\xF3n can\xE1.jpg"
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Estaci%C3%B3n_can%C3%A1.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/e/ed/Estaci%C3%B3n_can%C3%A1.jpg
+    creator: Samitor05
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: "Alojamiento ecotur\xEDstico Estaci\xF3n can\xE1"
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: leatherback-turtle-wikimedia-penyu-belimbing-dermochelys-coriacea
+    score: 51
+    flags: []
+    title: File:Penyu Belimbing (Dermochelys coriacea).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Penyu_Belimbing_(Dermochelys_coriacea).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/f0/Penyu_Belimbing_%28Dermochelys_coriacea%29.jpg
+    creator: Ghofar Ismail Putra
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: 'Penyu belimbing (Dermochelys coriacea) yang telah bertahan hidup selama lebih dari ratusan juta tahun, kini menghadapi
+      kepunahan. Dari perkiraan menunjukkan, selama dua puluh tahun terakhir jumlah spesies ini menurun dengan cepat, khususnya
+      di kawasan pasifik: hanya sekitar 2.300 betina dewasa yang tersisa. Hal ini menempatkan penyu belimbing pasifik menjadi
+      penyu laut yang paling terancam populasinya di dunia.'
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: leatherback-turtle-wikimedia-leatherback-turtle-near-galibi
+    score: 37
+    flags:
+    - sensitive_life_stage_or_site_review
+    title: File:Leatherback Turtle near Galibi.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Leatherback_Turtle_near_Galibi.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/7/7f/Leatherback_Turtle_near_Galibi.jpg
+    creator: JuliasTravels
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: Leatherback Turtle nesting near Galibi, Suriname
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: leatherback-turtle-wikimedia-taxidermied-leatherback-sea-turtle-dermochelys-c
+    score: 0
+    flags:
+    - distress_or_mortality_review
+    title: File:Taxidermied Leatherback sea turtle (Dermochelys coriacea), Lee Kong Chian Natural History Museum (104136).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Taxidermied_Leatherback_sea_turtle_(Dermochelys_coriacea),_Lee_Kong_Chian_Natural_History_Museum_(104136).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/6/6f/Taxidermied_Leatherback_sea_turtle_%28Dermochelys_coriacea%29%2C_Lee_Kong_Chian_Natural_History_Museum_%28104136%29.jpg
+    creator: Moheen Reeyad
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: 'Taxidermied Leatherback sea turtle (Dermochelys coriacea), Lee Kong Chian Natural History Museum, National University
+      of Singapore, 2 Conservatory Drive, Singapore.
+
+      The largest extant marine turtle species in the world with a cosmopolitan global range, this 1.75 metre-long specimen
+      is the only recorded sighting of this species in Singapore and was found dead at a beach near Siglap in 1883. Leatherback
+      Turtles can be distinguished by their leathery skin texture and the presence of seven ridges running along its carapace.
+      They can dive to depths of up to 1200 metres and feed mainly on sea jellies.'
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: loggerhead-turtle
+  species_page: content/species/turtles/loggerhead-turtle.md
+  common_name: Loggerhead Turtle
+  scientific_name: Caretta caretta
+  readiness: attribution_and_ethics_review
+  top_candidate: &id030
+    asset_id: loggerhead-turtle-wikimedia-loggerhead-sea-turtle-caretta-caretta-2
+    score: 61
+    flags: []
+    title: File:Loggerhead Sea Turtle (Caretta caretta) 2.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Loggerhead_Sea_Turtle_(Caretta_caretta)_2.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/81/Loggerhead_Sea_Turtle_%28Caretta_caretta%29_2.jpg
+    creator: Brian Gratwicke
+    credit: Loggerhead Sea Turtle (Caretta caretta)
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by-candidate
+    source: Loggerhead Sea Turtle (Caretta caretta)
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id030
+  - asset_id: loggerhead-turtle-wikimedia-loggerhead-sea-turtle
+    score: 61
+    flags: []
+    title: File:Loggerhead sea turtle.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Loggerhead_sea_turtle.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/8e/Loggerhead_sea_turtle.jpg
+    creator: ukanda
+    credit: originally posted to Flickr as Loggerhead turtle
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by-candidate
+    source: Underside of a loggerhead sea turtle as it swims overhead
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: loggerhead-turtle-wikimedia-guarder-a-de-tortugas-sodade-de-morro-jable-02
+    score: 55
+    flags: []
+    title: "File:Guarder\xEDa de tortugas Sodade de Morro Jable 02.jpg"
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Guarder%C3%ADa_de_tortugas_Sodade_de_Morro_Jable_02.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/09/Guarder%C3%ADa_de_tortugas_Sodade_de_Morro_Jable_02.jpg
+    creator: H. Zell
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: "Pools for rearing young turtles (Caretta caretta), Guarder\xEDa de tortugas Sodade de Morro Jable at the Port\
+      \ of Morro Jable, Fuerteventura, Canary Islands."
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: loggerhead-turtle-wikimedia-sea-turtles-caretta-caretta
+    score: 55
+    flags: []
+    title: File:Sea turtles Caretta caretta.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Sea_turtles_Caretta_caretta.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/f2/Sea_turtles_Caretta_caretta.jpg
+    creator: Eco cruising
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: This is a a picture of a Natura 2000 protected area with ID
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: loggerhead-turtle-wikimedia-parque-nacional-marinho-de-fernando-de-noronha-j
+    score: 33
+    flags:
+    - human_or_vehicle_proximity_review
+    title: "File:Parque Nacional Marinho de Fernando de Noronha - Jo\xE3o Paulo Marques DAndretta 12.jpg"
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Parque_Nacional_Marinho_de_Fernando_de_Noronha_-_Jo%C3%A3o_Paulo_Marques_DAndretta_12.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/9/96/Parque_Nacional_Marinho_de_Fernando_de_Noronha_-_Jo%C3%A3o_Paulo_Marques_DAndretta_12.jpg
+    creator: "Jo\xE3o D'Andretta"
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Loggerhead sea turtle (Caretta caretta) with diver in the background, Fernando de Noronha Marine National Park,
+      Pernambuco, Brazil
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: loggerhead-turtle-wikimedia-loggerhead-turtle
+    score: 19
+    flags:
+    - captivity_or_facility_review
+    title: File:Loggerhead turtle.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Loggerhead_turtle.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/13/Loggerhead_turtle.jpg
+    creator: Bachrach44
+    credit: Own work
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: A loggerhead sea turtle in the National Aquarium in Washington DC
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.
+- artifact_id: olive-ridley-turtle
+  species_page: content/species/turtles/olive-ridley-turtle.md
+  common_name: Olive Ridley Turtle
+  scientific_name: Lepidochelys olivacea
+  readiness: attribution_and_ethics_review
+  top_candidate: &id031
+    asset_id: olive-ridley-turtle-wikimedia-olive-ridley-sea-turtle-cropped
+    score: 51
+    flags: []
+    title: File:Olive ridley sea turtle cropped.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Olive_ridley_sea_turtle_cropped.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/f2/Olive_ridley_sea_turtle_cropped.jpg
+    creator: Remove "cropped" from file name and see original file
+    credit: Remove "cropped" from file name and see original file
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa-candidate
+    source: Crop of file in filename
+    review_status: candidate_needs_species_rights_ethics_review
+  ranked_candidates:
+  - *id031
+  - asset_id: olive-ridley-turtle-wikimedia-tauchende-oliv-bastardschildkr-te
+    score: 51
+    flags: []
+    title: "File:Tauchende Oliv-Bastardschildkr\xF6te.JPG"
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Tauchende_Oliv-Bastardschildkr%C3%B6te.JPG
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/39/Tauchende_Oliv-Bastardschildkr%C3%B6te.JPG
+    creator: Christoph Bushe
+    credit: "Archiv Dr. Christoph Bushe, R\xF6bel"
+    license: CC BY-SA 3.0 de
+    license_url: https://creativecommons.org/licenses/by-sa/3.0/de/deed.en
+    rights_status: cc-by-sa-candidate
+    source: "Tauchende Oliv-Bastardschildkr\xF6te vor den Galapagosinseln, rechts Scheinwerferstrahl"
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: olive-ridley-turtle-wikimedia-turtle-golfina-escobilla-oaxaca-mexico-claudio-g
+    score: 37
+    flags:
+    - sensitive_life_stage_or_site_review
+    title: File:Turtle golfina escobilla Oaxaca Mexico Claudio Giovenzana 2010.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Turtle_golfina_escobilla_Oaxaca_Mexico_Claudio_Giovenzana_2010.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/e/e8/Turtle_golfina_escobilla_Oaxaca_Mexico_Claudio_Giovenzana_2010.jpg
+    creator: Claudio Giovenzana
+    credit: Claudio Giovenzana www.longwalk.it
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: Olive ridley turtle nesting on Escobilla Beach, Oaxaca, Mexico
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: olive-ridley-turtle-wikimedia-lieux-pontes-tortue-olivatre
+    score: 33
+    flags:
+    - sensitive_life_stage_or_site_review
+    title: File:Lieux pontes tortue olivatre.png
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Lieux_pontes_tortue_olivatre.png
+    image_url: https://upload.wikimedia.org/wikipedia/commons/a/a3/Lieux_pontes_tortue_olivatre.png
+    creator: Pinpin
+    credit: 'Own work using: Inscape, with [1]'
+    license: CC BY-SA 3.0
+    license_url: http://creativecommons.org/licenses/by-sa/3.0/
+    rights_status: cc-by-sa-candidate
+    source: "Nesting location of Olive Ridley Turtle\_: red dot = major nesting locations, yellow dot=minor nesting locations"
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: olive-ridley-turtle-wikimedia-lepidochelys-olivacea
+    score: 0
+    flags:
+    - distress_or_mortality_review
+    title: File:Lepidochelys olivacea.jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Lepidochelys_olivacea.jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/18/Lepidochelys_olivacea.jpg
+    creator: Bernard Gagnon
+    credit: Own work
+    license: CC BY-SA 3.0
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+    rights_status: cc-by-sa-candidate
+    source: Injured (maybe dead) Olive Ridley turtle, near Mahabalipuram, Tamil Nadu, India
+    review_status: candidate_needs_species_rights_ethics_review
+  - asset_id: olive-ridley-turtle-wikimedia-tucker-26472329582
+    score: -36
+    flags:
+    - distress_or_mortality_review
+    - captivity_or_facility_review
+    - individual_or_tagged_animal_review
+    title: File:Tucker (26472329582).jpg
+    commons_file_page: https://commons.wikimedia.org/wiki/File:Tucker_(26472329582).jpg
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/df/Tucker_%2826472329582%29.jpg
+    creator: USFWS - Pacific Region
+    credit: IMG_0363
+    license: Public domain
+    license_url: null
+    rights_status: public-domain-or-cc0-candidate
+    source: 'Photo by U.S. Fish and Wildlife Service
+
+      Two distressed sea turtles rescued on the coast after winter storms have taken an important next step in their journey
+      to return to the ocean. On April 21, they caught a flight in Seattle aboard a U.S. Coast Guard C-130 transport plane
+      to finish their rehabilitation at Sea World San Diego before eventual release to their home waters in the Pacific Ocean.
+
+
+      Tucker, a male olive ridley sea turtle that has been rehabbing at the Seattle Aquarium, and Comber, a Pacific green
+      sea turtle that has been rehabbing at Vancouver Aquarium in Vancouver, BC. The turtles were found comatose, hypothermic
+      and malnourished following winter storms in Oregon and Canada. The olive ridley is listed as endangered under the Endangered
+      Species Act, and the Pacific green sea turtle is listed as threatened.'
+    review_status: candidate_needs_species_rights_ethics_review
+  review_checklist:
+  - Open Commons file page and original source.
+  - Confirm image-level license, creator, credit, and commercial-use compatibility.
+  - Confirm species match from source caption, taxon page, partner assertion, or expert review.
+  - Reject or demote imagery with distress, unsafe proximity, captivity glamour, or sensitive location leakage.
+  - Write alt text and crop guidance before approval.

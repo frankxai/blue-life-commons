@@ -1,34 +1,34 @@
 ---
 id: species-california-sea-lion
 type: species-page
-title: "California Sea Lion (Zalophus californianus)"
+title: California Sea Lion (Zalophus californianus)
 species_group:
-  - pinnipeds
+- pinnipeds
 species:
-  - zalophus-californianus
+- zalophus-californianus
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/41666/45230310"
-    title: "IUCN Red List — Zalophus californianus (California Sea Lion)"
-    accessed: "2026-06-16"
-    tier: 1
-  - url: "https://www.fisheries.noaa.gov/species/california-sea-lion"
-    title: "California Sea Lion — NOAA Fisheries"
-    accessed: "2026-06-16"
-    tier: 2
+- url: https://www.iucnredlist.org/species/41666/45230310
+  title: "IUCN Red List \u2014 Zalophus californianus (California Sea Lion)"
+  accessed: '2026-06-16'
+  tier: 1
+- url: https://www.fisheries.noaa.gov/species/california-sea-lion
+  title: "California Sea Lion \u2014 NOAA Fisheries"
+  accessed: '2026-06-16'
+  tier: 2
 review:
   science: required
   ethics: approved
   editor: pending
 iucn:
   category: LC
-  assessment_date: "2015"
+  assessment_date: '2015'
   scope: global
   population_trend: increasing
 welfare:
@@ -36,20 +36,59 @@ welfare:
   dominant_stressor: harmful-algal-bloom-toxicosis
   confidence: expert-opinion
   five_domains:
-    health: "Domoic-acid toxicosis from harmful algal blooms is a recurring cause of stranding and mortality on the California coast (NOAA Fisheries, accessed 2026-06-16)."
-    environment: "Entanglement in fishing gear and human-caused injury are listed threats despite a healthy population (NOAA Fisheries, accessed 2026-06-16)."
+    health: Domoic-acid toxicosis from harmful algal blooms is a recurring cause of stranding and mortality on the California coast (NOAA Fisheries, accessed 2026-06-16).
+    environment: Entanglement in fishing gear and human-caused injury are listed threats despite a healthy population (NOAA Fisheries, accessed 2026-06-16).
 consensus_state: settled
-last_verified: "2026-06-16"
+last_verified: '2026-06-16'
 outputs:
   website_path: /species/pinnipeds/california-sea-lion
   github_path: content/species/pinnipeds/california-sea-lion.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed species intelligence page for the California sea lion."
+  claim: Published a source-reviewed species intelligence page for the California sea lion.
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#species-california-sea-lion
+  render_contract: content/media/species-media-render-contract.yaml#species-california-sea-lion
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-california-sea-lion
+  primary:
+    asset_id: species-california-sea-lion-wikimedia-bigmalesealion
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:Bigmalesealion.jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Bigmalesealion.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/5/5c/Bigmalesealion.jpg
+    creator: https://www.flickr.com/photos/mikebaird/ Mike Baird
+    credit: https://www.flickr.com/photos/mikebaird/3044736530/
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by
+    alt_text: California Sea Lion in Morro Bay.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:Bigmalesealion.jpg
+    rights_status: cc-by
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: CC BY 2.0
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets: []
 ---
 
 # California Sea Lion (Zalophus californianus)

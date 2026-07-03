@@ -1,0 +1,1803 @@
+version: '2026-07-03'
+generated_at: '2026-07-03'
+sources:
+  site_data: content/media/species-media-site-data.json
+  approval_queue: content/media/species-media-approval-queue.yaml
+policy:
+  workspace_is_not_approval: true
+  candidate_public_use: false
+  promotion_requires_approval_queue_checks: true
+  do_not_bypass_ethics_or_rights_review: true
+batch_actions:
+  01_source_card_recheck:
+  - Open the source-card URL in a browser.
+  - If the page is reachable, rerun scripts/verify_species_media_links.py and rebuild
+    rich embeds.
+  - Continue candidate review only after the public fallback state is no longer blocked.
+  02_ethics_flag_review:
+  - Inspect the candidate crop first, before rights work.
+  - Reject, replace, or document why the automated proximity/welfare flag is acceptable.
+  - If acceptable, continue through the full approval checklist.
+  03_official_public_domain_fast_track:
+  - Confirm the candidate creator/credit is truly official or institutional.
+  - Confirm image-level public-domain or CC0-style rights on the source page.
+  - Write alt text, crop guidance, species-match basis, ethics notes, and reviewer/date.
+  04_open_public_domain_review:
+  - Confirm public-domain/CC0 rights at the image level.
+  - Check original source and species match; replace if source confidence is weak.
+  - Complete crop, alt text, ethics, and surface metadata before promotion.
+  05_open_license_attribution:
+  - Capture exact creator, credit line, license URL, attribution, and share-alike
+    obligations.
+  - Confirm commercial, derivative, and surface compatibility.
+  - Block paid ads, merchandise, or social crops unless the license/surface review
+    allows them.
+  06_partner_grant_or_new_candidate:
+  - Use the source-card fallback while seeking a written media grant.
+  - Send partner/institution/photographer request with species, surface, credit, and
+    embargo terms.
+  - Replace the candidate if no permission or open-license route is available.
+summary:
+  species_records: 31
+  batch_counts:
+    03_official_public_domain_fast_track: 19
+    04_open_public_domain_review: 1
+    05_open_license_attribution: 10
+    06_partner_grant_or_new_candidate: 1
+  workstream_counts:
+    partner_or_replacement: 1
+    primary_image_review: 30
+  source_route_counts:
+    ethics_note_review: 1
+    official_public_domain_fast_track: 19
+    open_license_attribution_review: 10
+    open_public_domain_review: 1
+  promotion_ready_count: 31
+  promotion_ready_artifact_ids:
+  - species-blue-whale
+  - species-bottlenose-dolphin
+  - species-humpback-whale
+  - species-north-atlantic-right-whale
+  - species-orca
+  - species-sperm-whale
+  - species-california-sea-lion
+  - species-grey-seal
+  - species-harbor-seal
+  - species-hawaiian-monk-seal
+  - species-walrus
+  - species-brain-coral
+  - species-elkhorn-coral
+  - species-giant-kelp
+  - species-red-mangrove
+  - species-seagrass-posidonia
+  - species-staghorn-coral
+  - basking-shark
+  - great-white-shark
+  - reef-manta-ray
+  - scalloped-hammerhead
+  - shortfin-mako
+  - tiger-shark
+  - species-whale-shark
+  - species-west-indian-manatee
+  - species-green-turtle
+  - hawksbill-turtle
+  - kemps-ridley-turtle
+  - leatherback-turtle
+  - loggerhead-turtle
+  - olive-ridley-turtle
+  public_fallback_blocked_artifact_ids: []
+  flagged_candidate_artifact_ids: []
+  partner_ref_counts:
+    manta_trust: 1
+    oceanic_society: 1
+    partner_media_grant_needed: 31
+records:
+- artifact_id: species-blue-whale
+  species_page: content/species/cetaceans/blue-whale.md
+  website_path: /species/cetaceans/blue-whale
+  common_name: Blue Whale
+  scientific_name: Balaenoptera musculus
+  taxon_group: cetaceans
+  recommended_batch: 03_official_public_domain_fast_track
+  batch_label: Official/public-domain fast track
+  workstream: primary_image_review
+  priority: P1
+  source_route: official_public_domain_fast_track
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Bluewhale877.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.fisheries.noaa.gov/species/blue-whale
+    domain: fisheries.noaa.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - confirm official/institutional creator is not a third-party credit
+  - no candidate asset id
+  next_curator_action: Review official/public-domain candidate fields, write alt/crop/species-match
+    notes, then set approval queue checks.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id species-blue-whale
+  - python scripts/promote_species_media.py --artifact-id species-blue-whale --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: species-bottlenose-dolphin
+  species_page: content/species/cetaceans/bottlenose-dolphin.md
+  website_path: /species/cetaceans/bottlenose-dolphin
+  common_name: Common Bottlenose Dolphin
+  scientific_name: Tursiops truncatus
+  taxon_group: cetaceans
+  recommended_batch: 06_partner_grant_or_new_candidate
+  batch_label: Partner grant or replacement candidate
+  workstream: partner_or_replacement
+  priority: P1
+  source_route: ethics_note_review
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin
+    domain: fisheries.noaa.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - no candidate asset id
+  next_curator_action: Use source-card fallback while requesting written grant or
+    finding a replacement candidate.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id species-bottlenose-dolphin
+  - python scripts/promote_species_media.py --artifact-id species-bottlenose-dolphin
+    --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: species-humpback-whale
+  species_page: content/species/cetaceans/humpback-whale.md
+  website_path: /species/cetaceans/humpback-whale
+  common_name: Humpback Whale
+  scientific_name: Megaptera novaeangliae
+  taxon_group: cetaceans
+  recommended_batch: 03_official_public_domain_fast_track
+  batch_label: Official/public-domain fast track
+  workstream: primary_image_review
+  priority: P1
+  source_route: official_public_domain_fast_track
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Humpback_whales_in_singing_position.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://iucn.org/content/humpback-whale-road-recovery-reveals-iucn-red-list
+    domain: iucn.org
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - confirm official/institutional creator is not a third-party credit
+  - no candidate asset id
+  next_curator_action: Review official/public-domain candidate fields, write alt/crop/species-match
+    notes, then set approval queue checks.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id species-humpback-whale
+  - python scripts/promote_species_media.py --artifact-id species-humpback-whale --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: species-north-atlantic-right-whale
+  species_page: content/species/cetaceans/north-atlantic-right-whale.md
+  website_path: /species/cetaceans/north-atlantic-right-whale
+  common_name: North Atlantic Right Whale
+  scientific_name: Eubalaena glacialis
+  taxon_group: cetaceans
+  recommended_batch: 03_official_public_domain_fast_track
+  batch_label: Official/public-domain fast track
+  workstream: primary_image_review
+  priority: P1
+  source_route: official_public_domain_fast_track
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:North_Atlantic_right_whale_-_Earth_Is_Blue.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.fisheries.noaa.gov/species/north-atlantic-right-whale
+    domain: fisheries.noaa.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - confirm official/institutional creator is not a third-party credit
+  - no candidate asset id
+  next_curator_action: Review official/public-domain candidate fields, write alt/crop/species-match
+    notes, then set approval queue checks.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id species-north-atlantic-right-whale
+  - python scripts/promote_species_media.py --artifact-id species-north-atlantic-right-whale
+    --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: species-orca
+  species_page: content/species/cetaceans/orca.md
+  website_path: /species/cetaceans/orca
+  common_name: Orca
+  scientific_name: Orcinus orca
+  taxon_group: cetaceans
+  recommended_batch: 03_official_public_domain_fast_track
+  batch_label: Official/public-domain fast track
+  workstream: primary_image_review
+  priority: P1
+  source_route: official_public_domain_fast_track
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.fisheries.noaa.gov/species/killer-whale
+    domain: fisheries.noaa.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - confirm official/institutional creator is not a third-party credit
+  - no candidate asset id
+  next_curator_action: Review official/public-domain candidate fields, write alt/crop/species-match
+    notes, then set approval queue checks.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id species-orca
+  - python scripts/promote_species_media.py --artifact-id species-orca --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: species-sperm-whale
+  species_page: content/species/cetaceans/sperm-whale.md
+  website_path: /species/cetaceans/sperm-whale
+  common_name: Sperm Whale
+  scientific_name: Physeter macrocephalus
+  taxon_group: cetaceans
+  recommended_batch: 03_official_public_domain_fast_track
+  batch_label: Official/public-domain fast track
+  workstream: primary_image_review
+  priority: P1
+  source_route: official_public_domain_fast_track
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:6(18)_Sperm_whale.JPG
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.fisheries.noaa.gov/species/sperm-whale
+    domain: fisheries.noaa.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - confirm official/institutional creator is not a third-party credit
+  - no candidate asset id
+  next_curator_action: Review official/public-domain candidate fields, write alt/crop/species-match
+    notes, then set approval queue checks.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id species-sperm-whale
+  - python scripts/promote_species_media.py --artifact-id species-sperm-whale --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: species-california-sea-lion
+  species_page: content/species/pinnipeds/california-sea-lion.md
+  website_path: /species/pinnipeds/california-sea-lion
+  common_name: California Sea Lion
+  scientific_name: Zalophus californianus
+  taxon_group: pinnipeds
+  recommended_batch: 05_open_license_attribution
+  batch_label: Open-license attribution review
+  workstream: primary_image_review
+  priority: P2
+  source_route: open_license_attribution_review
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Bigmalesealion.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.fisheries.noaa.gov/species/california-sea-lion
+    domain: fisheries.noaa.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - capture exact attribution and share-alike obligations
+  - no candidate asset id
+  next_curator_action: Capture exact attribution/license obligations before any public-use
+    approval.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id species-california-sea-lion
+  - python scripts/promote_species_media.py --artifact-id species-california-sea-lion
+    --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: species-grey-seal
+  species_page: content/species/pinnipeds/grey-seal.md
+  website_path: /species/pinnipeds/grey-seal
+  common_name: Grey Seal
+  scientific_name: Halichoerus grypus
+  taxon_group: pinnipeds
+  recommended_batch: 05_open_license_attribution
+  batch_label: Open-license attribution review
+  workstream: primary_image_review
+  priority: P2
+  source_route: open_license_attribution_review
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Szarytka_morska.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.fisheries.noaa.gov/species/gray-seal
+    domain: fisheries.noaa.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - capture exact attribution and share-alike obligations
+  - no candidate asset id
+  next_curator_action: Capture exact attribution/license obligations before any public-use
+    approval.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id species-grey-seal
+  - python scripts/promote_species_media.py --artifact-id species-grey-seal --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: species-harbor-seal
+  species_page: content/species/pinnipeds/harbor-seal.md
+  website_path: /species/pinnipeds/harbor-seal
+  common_name: Harbor Seal
+  scientific_name: Phoca vitulina
+  taxon_group: pinnipeds
+  recommended_batch: 05_open_license_attribution
+  batch_label: Open-license attribution review
+  workstream: primary_image_review
+  priority: P2
+  source_route: open_license_attribution_review
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Harbor_Seal,_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.nps.gov/places/harbor-seal.htm
+    domain: nps.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - capture exact attribution and share-alike obligations
+  - no candidate asset id
+  next_curator_action: Capture exact attribution/license obligations before any public-use
+    approval.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id species-harbor-seal
+  - python scripts/promote_species_media.py --artifact-id species-harbor-seal --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: species-hawaiian-monk-seal
+  species_page: content/species/pinnipeds/hawaiian-monk-seal.md
+  website_path: /species/pinnipeds/hawaiian-monk-seal
+  common_name: Hawaiian Monk Seal
+  scientific_name: Neomonachus schauinslandi
+  taxon_group: pinnipeds
+  recommended_batch: 03_official_public_domain_fast_track
+  batch_label: Official/public-domain fast track
+  workstream: primary_image_review
+  priority: P1
+  source_route: official_public_domain_fast_track
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Moenchsrobbe_1.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.fisheries.noaa.gov/species/hawaiian-monk-seal
+    domain: fisheries.noaa.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - confirm official/institutional creator is not a third-party credit
+  - no candidate asset id
+  next_curator_action: Review official/public-domain candidate fields, write alt/crop/species-match
+    notes, then set approval queue checks.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id species-hawaiian-monk-seal
+  - python scripts/promote_species_media.py --artifact-id species-hawaiian-monk-seal
+    --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: species-walrus
+  species_page: content/species/pinnipeds/walrus.md
+  website_path: /species/pinnipeds/walrus
+  common_name: Walrus
+  scientific_name: Odobenus rosmarus
+  taxon_group: pinnipeds
+  recommended_batch: 03_official_public_domain_fast_track
+  batch_label: Official/public-domain fast track
+  workstream: primary_image_review
+  priority: P1
+  source_route: official_public_domain_fast_track
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Pacific_Walrus_-_Bull_(8247646168).jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.fws.gov/species/pacific-walrus-odobenus-rosmarus-divergens
+    domain: fws.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - confirm official/institutional creator is not a third-party credit
+  - no candidate asset id
+  next_curator_action: Review official/public-domain candidate fields, write alt/crop/species-match
+    notes, then set approval queue checks.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id species-walrus
+  - python scripts/promote_species_media.py --artifact-id species-walrus --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: species-brain-coral
+  species_page: content/species/reefs/brain-coral.md
+  website_path: /species/reefs/brain-coral
+  common_name: Grooved Brain Coral
+  scientific_name: Diploria labyrinthiformis
+  taxon_group: reefs
+  recommended_batch: 03_official_public_domain_fast_track
+  batch_label: Official/public-domain fast track
+  workstream: primary_image_review
+  priority: P1
+  source_route: official_public_domain_fast_track
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Metal_block_with_coral_Dry_Tortugas_20100629.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://cdhc.noaa.gov/coral-disease/characterized-diseases/stony-coral-tissue-loss-disease-sctld/
+    domain: cdhc.noaa.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - confirm official/institutional creator is not a third-party credit
+  - no candidate asset id
+  next_curator_action: Review official/public-domain candidate fields, write alt/crop/species-match
+    notes, then set approval queue checks.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id species-brain-coral
+  - python scripts/promote_species_media.py --artifact-id species-brain-coral --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: species-elkhorn-coral
+  species_page: content/species/reefs/elkhorn-coral.md
+  website_path: /species/reefs/elkhorn-coral
+  common_name: Elkhorn Coral
+  scientific_name: Acropora palmata
+  taxon_group: reefs
+  recommended_batch: 03_official_public_domain_fast_track
+  batch_label: Official/public-domain fast track
+  workstream: primary_image_review
+  priority: P1
+  source_route: official_public_domain_fast_track
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Gaulin_Reef_San_Salvador.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.fisheries.noaa.gov/action/listing-elkhorn-and-staghorn-corals-under-esa
+    domain: fisheries.noaa.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - confirm official/institutional creator is not a third-party credit
+  - no candidate asset id
+  next_curator_action: Review official/public-domain candidate fields, write alt/crop/species-match
+    notes, then set approval queue checks.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id species-elkhorn-coral
+  - python scripts/promote_species_media.py --artifact-id species-elkhorn-coral --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: species-giant-kelp
+  species_page: content/species/reefs/giant-kelp.md
+  website_path: /species/reefs/giant-kelp
+  common_name: Giant Kelp
+  scientific_name: Macrocystis pyrifera
+  taxon_group: reefs
+  recommended_batch: 03_official_public_domain_fast_track
+  batch_label: Official/public-domain fast track
+  workstream: primary_image_review
+  priority: P1
+  source_route: official_public_domain_fast_track
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Sanc0063_-_Flickr_-_NOAA_Photo_Library.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.fisheries.noaa.gov/west-coast/habitat-conservation/kelp-forest-habitat-west-coast
+    domain: fisheries.noaa.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - confirm official/institutional creator is not a third-party credit
+  - no candidate asset id
+  next_curator_action: Review official/public-domain candidate fields, write alt/crop/species-match
+    notes, then set approval queue checks.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id species-giant-kelp
+  - python scripts/promote_species_media.py --artifact-id species-giant-kelp --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: species-red-mangrove
+  species_page: content/species/reefs/red-mangrove.md
+  website_path: /species/reefs/red-mangrove
+  common_name: Red Mangrove
+  scientific_name: Rhizophora mangle
+  taxon_group: reefs
+  recommended_batch: 03_official_public_domain_fast_track
+  batch_label: Official/public-domain fast track
+  workstream: primary_image_review
+  priority: P1
+  source_route: official_public_domain_fast_track
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://floridakeys.noaa.gov/plants/mangroves.html
+    domain: floridakeys.noaa.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - confirm official/institutional creator is not a third-party credit
+  - no candidate asset id
+  next_curator_action: Review official/public-domain candidate fields, write alt/crop/species-match
+    notes, then set approval queue checks.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id species-red-mangrove
+  - python scripts/promote_species_media.py --artifact-id species-red-mangrove --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: species-seagrass-posidonia
+  species_page: content/species/reefs/seagrass-posidonia.md
+  website_path: /species/reefs/seagrass-posidonia
+  common_name: Neptune Grass
+  scientific_name: Posidonia oceanica
+  taxon_group: reefs
+  recommended_batch: 03_official_public_domain_fast_track
+  batch_label: Official/public-domain fast track
+  workstream: primary_image_review
+  priority: P1
+  source_route: official_public_domain_fast_track
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Posidonia_oceanica.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://maritime-forum.ec.europa.eu/map-week-seagrass-meadows-posidonia-oceanica_en
+    domain: maritime-forum.ec.europa.eu
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - confirm official/institutional creator is not a third-party credit
+  - no candidate asset id
+  next_curator_action: Review official/public-domain candidate fields, write alt/crop/species-match
+    notes, then set approval queue checks.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id species-seagrass-posidonia
+  - python scripts/promote_species_media.py --artifact-id species-seagrass-posidonia
+    --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: species-staghorn-coral
+  species_page: content/species/reefs/staghorn-coral.md
+  website_path: /species/reefs/staghorn-coral
+  common_name: Staghorn Coral
+  scientific_name: Acropora cervicornis
+  taxon_group: reefs
+  recommended_batch: 03_official_public_domain_fast_track
+  batch_label: Official/public-domain fast track
+  workstream: primary_image_review
+  priority: P1
+  source_route: official_public_domain_fast_track
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Staghorn_coral_on_Baker_Island_NWR_(5123996348).jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://iucn.org/press-release/202411/over-40-coral-species-face-extinction-iucn-red-list
+    domain: iucn.org
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - confirm official/institutional creator is not a third-party credit
+  - no candidate asset id
+  next_curator_action: Review official/public-domain candidate fields, write alt/crop/species-match
+    notes, then set approval queue checks.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id species-staghorn-coral
+  - python scripts/promote_species_media.py --artifact-id species-staghorn-coral --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: basking-shark
+  species_page: content/species/sharks-rays/basking-shark.md
+  website_path: /species/sharks-rays/basking-shark
+  common_name: Basking Shark
+  scientific_name: Cetorhinus maximus
+  taxon_group: sharks-rays
+  recommended_batch: 03_official_public_domain_fast_track
+  batch_label: Official/public-domain fast track
+  workstream: primary_image_review
+  priority: P1
+  source_route: official_public_domain_fast_track
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Cetorhinus_maximus_by_greg_skomal.JPG
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/cetorhinus-maximus/
+    domain: floridamuseum.ufl.edu
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - confirm official/institutional creator is not a third-party credit
+  - no candidate asset id
+  next_curator_action: Review official/public-domain candidate fields, write alt/crop/species-match
+    notes, then set approval queue checks.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id basking-shark
+  - python scripts/promote_species_media.py --artifact-id basking-shark --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: great-white-shark
+  species_page: content/species/sharks-rays/great-white-shark.md
+  website_path: /species/sharks-rays/great-white-shark
+  common_name: Great White Shark
+  scientific_name: Carcharodon carcharias
+  taxon_group: sharks-rays
+  recommended_batch: 05_open_license_attribution
+  batch_label: Open-license attribution review
+  workstream: primary_image_review
+  priority: P2
+  source_route: open_license_attribution_review
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:White_shark.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.fisheries.noaa.gov/species/white-shark
+    domain: fisheries.noaa.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - capture exact attribution and share-alike obligations
+  - no candidate asset id
+  next_curator_action: Capture exact attribution/license obligations before any public-use
+    approval.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id great-white-shark
+  - python scripts/promote_species_media.py --artifact-id great-white-shark --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: reef-manta-ray
+  species_page: content/species/sharks-rays/reef-manta-ray.md
+  website_path: /species/sharks-rays/reef-manta-ray
+  common_name: Reef Manta Ray
+  scientific_name: Mobula alfredi
+  taxon_group: sharks-rays
+  recommended_batch: 05_open_license_attribution
+  batch_label: Open-license attribution review
+  workstream: primary_image_review
+  priority: P2
+  source_route: open_license_attribution_review
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Manta_alfredi_cruising_-_journal.pone.0046170.g002A.png
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.mantatrust.org/mobula-alfredi
+    domain: mantatrust.org
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - capture exact attribution and share-alike obligations
+  - no candidate asset id
+  next_curator_action: Capture exact attribution/license obligations before any public-use
+    approval.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id reef-manta-ray
+  - python scripts/promote_species_media.py --artifact-id reef-manta-ray --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: scalloped-hammerhead
+  species_page: content/species/sharks-rays/scalloped-hammerhead.md
+  website_path: /species/sharks-rays/scalloped-hammerhead
+  common_name: Scalloped Hammerhead
+  scientific_name: Sphyrna lewini
+  taxon_group: sharks-rays
+  recommended_batch: 03_official_public_domain_fast_track
+  batch_label: Official/public-domain fast track
+  workstream: primary_image_review
+  priority: P1
+  source_route: official_public_domain_fast_track
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Sphyrna_lewini_(Griffith_%26_Smith,_1834)_2422815227.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.fisheries.noaa.gov/species/scalloped-hammerhead-shark
+    domain: fisheries.noaa.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - confirm official/institutional creator is not a third-party credit
+  - no candidate asset id
+  next_curator_action: Review official/public-domain candidate fields, write alt/crop/species-match
+    notes, then set approval queue checks.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id scalloped-hammerhead
+  - python scripts/promote_species_media.py --artifact-id scalloped-hammerhead --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: shortfin-mako
+  species_page: content/species/sharks-rays/shortfin-mako.md
+  website_path: /species/sharks-rays/shortfin-mako
+  common_name: Shortfin Mako
+  scientific_name: Isurus oxyrinchus
+  taxon_group: sharks-rays
+  recommended_batch: 03_official_public_domain_fast_track
+  batch_label: Official/public-domain fast track
+  workstream: primary_image_review
+  priority: P1
+  source_route: official_public_domain_fast_track
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Isurus_oxyrinchus_by_mark_conlin.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.fisheries.noaa.gov/species/shortfin-mako-shark
+    domain: fisheries.noaa.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - confirm official/institutional creator is not a third-party credit
+  - no candidate asset id
+  next_curator_action: Review official/public-domain candidate fields, write alt/crop/species-match
+    notes, then set approval queue checks.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id shortfin-mako
+  - python scripts/promote_species_media.py --artifact-id shortfin-mako --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: tiger-shark
+  species_page: content/species/sharks-rays/tiger-shark.md
+  website_path: /species/sharks-rays/tiger-shark
+  common_name: Tiger Shark
+  scientific_name: Galeocerdo cuvier
+  taxon_group: sharks-rays
+  recommended_batch: 05_open_license_attribution
+  batch_label: Open-license attribution review
+  workstream: primary_image_review
+  priority: P2
+  source_route: open_license_attribution_review
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Requin_tigre_(Galeocerdo_cuvier)_(Ifremer_00756-86782).jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/galeocerdo-cuvier/
+    domain: floridamuseum.ufl.edu
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - capture exact attribution and share-alike obligations
+  - no candidate asset id
+  next_curator_action: Capture exact attribution/license obligations before any public-use
+    approval.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id tiger-shark
+  - python scripts/promote_species_media.py --artifact-id tiger-shark --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: species-whale-shark
+  species_page: content/species/sharks-rays/whale-shark.md
+  website_path: /species/sharks-rays/whale-shark
+  common_name: Whale Shark
+  scientific_name: Rhincodon typus
+  taxon_group: sharks-rays
+  recommended_batch: 04_open_public_domain_review
+  batch_label: Open public-domain review
+  workstream: primary_image_review
+  priority: P1
+  source_route: open_public_domain_review
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:OLYMPUS_DIGITAL_CAMERA_(27591269541).jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://iucn.org/news/secretariat/201607/whale-sharks-winghead-sharks-and-bornean-orangutans-slide-towards-extinction
+    domain: iucn.org
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - no candidate asset id
+  next_curator_action: Confirm original source and public-domain/CC0 rights before
+    filling approval queue checks.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id species-whale-shark
+  - python scripts/promote_species_media.py --artifact-id species-whale-shark --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: species-west-indian-manatee
+  species_page: content/species/sirenians/west-indian-manatee.md
+  website_path: /species/sirenians/west-indian-manatee
+  common_name: West Indian Manatee
+  scientific_name: Trichechus manatus
+  taxon_group: sirenians
+  recommended_batch: 03_official_public_domain_fast_track
+  batch_label: Official/public-domain fast track
+  workstream: primary_image_review
+  priority: P1
+  source_route: official_public_domain_fast_track
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Manatee_photo.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.fws.gov/press-release/2017-03/manatee-reclassified-endangered-threatened-habitat-improves-and-population
+    domain: fws.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - confirm official/institutional creator is not a third-party credit
+  - no candidate asset id
+  next_curator_action: Review official/public-domain candidate fields, write alt/crop/species-match
+    notes, then set approval queue checks.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id species-west-indian-manatee
+  - python scripts/promote_species_media.py --artifact-id species-west-indian-manatee
+    --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: species-green-turtle
+  species_page: content/species/turtles/green-turtle.md
+  website_path: /species/turtles/green-turtle
+  common_name: Green Turtle
+  scientific_name: Chelonia mydas
+  taxon_group: turtles
+  recommended_batch: 05_open_license_attribution
+  batch_label: Open-license attribution review
+  workstream: primary_image_review
+  priority: P2
+  source_route: open_license_attribution_review
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Hawaii_turtle_2.JPG
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.oceanicsociety.org/news-and-announcements/green-sea-turtle-status-improvement-2025/
+    domain: oceanicsociety.org
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - capture exact attribution and share-alike obligations
+  - no candidate asset id
+  next_curator_action: Capture exact attribution/license obligations before any public-use
+    approval.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id species-green-turtle
+  - python scripts/promote_species_media.py --artifact-id species-green-turtle --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: hawksbill-turtle
+  species_page: content/species/turtles/hawksbill-turtle.md
+  website_path: /species/turtles/hawksbill-turtle
+  common_name: Hawksbill Turtle
+  scientific_name: Eretmochelys imbricata
+  taxon_group: turtles
+  recommended_batch: 05_open_license_attribution
+  batch_label: Open-license attribution review
+  workstream: primary_image_review
+  priority: P2
+  source_route: open_license_attribution_review
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_parque_nacional_Ras_Muhammad,_Egipto,_2022-03-28,_DD_56.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.fisheries.noaa.gov/species/hawksbill-turtle
+    domain: fisheries.noaa.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - capture exact attribution and share-alike obligations
+  - no candidate asset id
+  next_curator_action: Capture exact attribution/license obligations before any public-use
+    approval.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id hawksbill-turtle
+  - python scripts/promote_species_media.py --artifact-id hawksbill-turtle --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: kemps-ridley-turtle
+  species_page: content/species/turtles/kemps-ridley-turtle.md
+  website_path: /species/turtles/kemps-ridley-turtle
+  common_name: Kemp's Ridley Turtle
+  scientific_name: Lepidochelys kempii
+  taxon_group: turtles
+  recommended_batch: 03_official_public_domain_fast_track
+  batch_label: Official/public-domain fast track
+  workstream: primary_image_review
+  priority: P1
+  source_route: official_public_domain_fast_track
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.fisheries.noaa.gov/species/kemps-ridley-turtle
+    domain: fisheries.noaa.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - confirm official/institutional creator is not a third-party credit
+  - no candidate asset id
+  next_curator_action: Review official/public-domain candidate fields, write alt/crop/species-match
+    notes, then set approval queue checks.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id kemps-ridley-turtle
+  - python scripts/promote_species_media.py --artifact-id kemps-ridley-turtle --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: leatherback-turtle
+  species_page: content/species/turtles/leatherback-turtle.md
+  website_path: /species/turtles/leatherback-turtle
+  common_name: Leatherback Turtle
+  scientific_name: Dermochelys coriacea
+  taxon_group: turtles
+  recommended_batch: 03_official_public_domain_fast_track
+  batch_label: Official/public-domain fast track
+  workstream: primary_image_review
+  priority: P1
+  source_route: official_public_domain_fast_track
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:LeatherbackTurtle.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.fisheries.noaa.gov/species/leatherback-turtle
+    domain: fisheries.noaa.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - confirm official/institutional creator is not a third-party credit
+  - no candidate asset id
+  next_curator_action: Review official/public-domain candidate fields, write alt/crop/species-match
+    notes, then set approval queue checks.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id leatherback-turtle
+  - python scripts/promote_species_media.py --artifact-id leatherback-turtle --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: loggerhead-turtle
+  species_page: content/species/turtles/loggerhead-turtle.md
+  website_path: /species/turtles/loggerhead-turtle
+  common_name: Loggerhead Turtle
+  scientific_name: Caretta caretta
+  taxon_group: turtles
+  recommended_batch: 05_open_license_attribution
+  batch_label: Open-license attribution review
+  workstream: primary_image_review
+  priority: P2
+  source_route: open_license_attribution_review
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Loggerhead_Sea_Turtle_(Caretta_caretta)_2.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.fisheries.noaa.gov/species/loggerhead-turtle
+    domain: fisheries.noaa.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - capture exact attribution and share-alike obligations
+  - no candidate asset id
+  next_curator_action: Capture exact attribution/license obligations before any public-use
+    approval.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id loggerhead-turtle
+  - python scripts/promote_species_media.py --artifact-id loggerhead-turtle --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py
+- artifact_id: olive-ridley-turtle
+  species_page: content/species/turtles/olive-ridley-turtle.md
+  website_path: /species/turtles/olive-ridley-turtle
+  common_name: Olive Ridley Turtle
+  scientific_name: Lepidochelys olivacea
+  taxon_group: turtles
+  recommended_batch: 05_open_license_attribution
+  batch_label: Open-license attribution review
+  workstream: primary_image_review
+  priority: P2
+  source_route: open_license_attribution_review
+  render_strategy: approved_primary_image
+  public_visual:
+    kind: image
+    public_use: true
+    source_url: https://commons.wikimedia.org/wiki/File:Olive_ridley_sea_turtle_cropped.jpg
+    hero_image_allowed: true
+  source_card_fallback:
+    status: verified_source_card
+    public_use: true
+    source_url: https://www.fisheries.noaa.gov/species/olive-ridley-turtle
+    domain: fisheries.noaa.gov
+  candidate:
+    asset_id: null
+    title: null
+    commons_file_page: null
+    image_url: null
+    creator: null
+    credit: null
+    license: null
+    license_url: null
+    rights_status: null
+    flags: []
+    public_use: false
+  approval_state:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  blockers:
+  - capture exact attribution and share-alike obligations
+  - no candidate asset id
+  next_curator_action: Capture exact attribution/license obligations before any public-use
+    approval.
+  commands_after_approval_queue_edit:
+  - python scripts/promote_species_media.py --artifact-id olive-ridley-turtle
+  - python scripts/promote_species_media.py --artifact-id olive-ridley-turtle --apply
+  - python scripts/validate_species_media.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_render_contract.py
+  - python scripts/export_species_media_site_data.py
+  - python scripts/build_species_media_visual_board.py

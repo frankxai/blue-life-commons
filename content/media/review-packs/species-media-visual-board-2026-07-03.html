@@ -1,0 +1,1465 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blue Life Commons Species Media Board</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #132126;
+      --muted: #5a6970;
+      --paper: #f7f8f5;
+      --panel: #ffffff;
+      --line: #d8ded9;
+      --teal: #0f766e;
+      --coral: #b4533f;
+      --amber: #9a6700;
+      --sky: #1d5f8f;
+      --shadow: 0 16px 48px rgba(19, 33, 38, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+    main { max-width: 1480px; margin: 0 auto; padding: 28px; }
+    header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: end;
+      padding: 18px 0 24px;
+      border-bottom: 1px solid var(--line);
+    }
+    h1 { margin: 0; font-size: clamp(1.8rem, 3vw, 3.2rem); line-height: 1.02; letter-spacing: 0; }
+    .subtitle { max-width: 820px; margin: 12px 0 0; color: var(--muted); font-size: 1rem; }
+    .generated { color: var(--muted); font-size: 0.9rem; text-align: right; }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 12px;
+      margin: 22px 0;
+    }
+    .summary-item {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px 16px;
+      box-shadow: 0 8px 28px rgba(19, 33, 38, 0.06);
+    }
+    .summary-item span { color: var(--muted); display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; }
+    .summary-item strong { display: block; font-size: 1.8rem; line-height: 1.1; margin-top: 5px; }
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      display: grid;
+      grid-template-columns: minmax(220px, 1.6fr) repeat(7, minmax(140px, 0.7fr)) auto;
+      gap: 10px;
+      align-items: center;
+      padding: 14px 0;
+      background: color-mix(in srgb, var(--paper) 92%, transparent);
+      backdrop-filter: blur(12px);
+    }
+    input, select {
+      width: 100%;
+      min-height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      color: var(--ink);
+      padding: 0 12px;
+      font: inherit;
+    }
+    label.checkbox {
+      min-height: 42px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      color: var(--muted);
+    }
+    .count { color: var(--muted); font-size: 0.9rem; margin: 0 0 14px; }
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .species-card {
+      overflow: hidden;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+    .media-frame {
+      margin: 0;
+      aspect-ratio: 16 / 10;
+      background: #dde7e6;
+      border-bottom: 1px solid var(--line);
+    }
+    .media-frame img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+    .empty-image {
+      height: 100%;
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      font-weight: 650;
+    }
+    .card-body { padding: 16px; }
+    .pill-row, .flag-row, .links { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #f2f5f2;
+      color: var(--muted);
+      font-size: 0.73rem;
+      font-weight: 680;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      max-width: 100%;
+    }
+    .pill-status { border-color: #b8c8cd; color: var(--sky); background: #eef5f8; }
+    .pill-rights { border-color: #bfd9cf; color: var(--teal); background: #eef8f4; }
+    .pill-priority { border-color: #e2cfa0; color: #7a4f00; background: #fff9ea; }
+    .pill-fallback { border-color: #bad0de; color: #155a74; background: #edf7fb; }
+    .pill-curation { border-color: #dac3e8; color: #68418a; background: #f7effb; }
+    .pill-render { border-color: #c5c6aa; color: #56601d; background: #fafbe9; }
+    .pill-ok { border-color: #b9d6c5; color: var(--teal); background: #eff8f1; }
+    .pill-flag { border-color: #efd39b; color: var(--amber); background: #fff7e3; }
+    h2 { margin: 12px 0 0; font-size: 1.16rem; line-height: 1.18; letter-spacing: 0; }
+    .scientific { margin: 2px 0 14px; color: var(--muted); font-style: italic; }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 12px;
+      margin: 0;
+    }
+    dt { color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; }
+    dd { margin: 2px 0 0; overflow-wrap: anywhere; font-size: 0.9rem; }
+    .flag-row { margin-top: 14px; }
+    .next-action { min-height: 4.5em; margin: 14px 0; color: var(--muted); font-size: 0.92rem; }
+    .button-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 11px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink);
+      background: #fbfcfa;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+    .button-link:hover { border-color: var(--teal); color: var(--teal); }
+    .hidden { display: none; }
+    @media (max-width: 1180px) {
+      .board { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .toolbar { grid-template-columns: minmax(220px, 1fr) minmax(150px, 0.6fr) minmax(150px, 0.6fr); }
+    }
+    @media (max-width: 740px) {
+      main { padding: 18px; }
+      header { grid-template-columns: 1fr; }
+      .generated { text-align: left; }
+      .summary-grid, .board, .toolbar, .meta-grid { grid-template-columns: 1fr; }
+      .toolbar { position: static; }
+      .next-action { min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Species Media Board</h1>
+        <p class="subtitle">Review-only candidate imagery and official-source links for Blue Life Commons species records. Candidate media is not approved for public hero use.</p>
+      </div>
+      <p class="generated">Generated 2026-07-03</p>
+    </header>
+    <section class="summary-grid" aria-label="Summary">
+      <div class="summary-item"><span>Species</span><strong>31</strong></div>
+      <div class="summary-item"><span>Candidate Primary</span><strong>0</strong></div>
+      <div class="summary-item"><span>Approved Primary</span><strong>31</strong></div>
+      <div class="summary-item"><span>Source Cards Ready</span><strong>31</strong></div>
+      <div class="summary-item"><span>Public Visuals</span><strong>31</strong></div>
+      <div class="summary-item"><span>Flagged</span><strong>0</strong></div>
+    </section>
+    <section class="toolbar" aria-label="Filters">
+      <input id="search" type="search" placeholder="Search species, source, rights, creator">
+      <select id="group"><option value="">All groups</option><option value="cetaceans">cetaceans (6)</option><option value="pinnipeds">pinnipeds (5)</option><option value="reefs">reefs (6)</option><option value="sharks-rays">sharks-rays (7)</option><option value="sirenians">sirenians (1)</option><option value="turtles">turtles (6)</option></select>
+      <select id="status"><option value="">All statuses</option><option value="approved">approved (31)</option></select>
+      <select id="rights"><option value="">All rights</option><option value="none">none (31)</option></select>
+      <select id="route"><option value="">All routes</option><option value="ethics_note_review">ethics note review (1)</option><option value="official_public_domain_fast_track">official public domain fast track (19)</option><option value="open_license_attribution_review">open license attribution review (10)</option><option value="open_public_domain_review">open public domain review (1)</option></select>
+      <select id="fallback"><option value="">All source cards</option><option value="verified_source_card">verified source card (31)</option></select>
+      <select id="curation"><option value="">All curation</option><option value="approve_primary">approve primary (31)</option></select>
+      <select id="render"><option value="">All render strategies</option><option value="approved_primary_image">approved primary image (31)</option></select>
+      <label class="checkbox"><input id="flagged" type="checkbox"> Flagged only</label>
+    </section>
+    <p class="count"><span id="visible-count">31</span> shown</p>
+    <section class="board" id="board">
+
+    <article class="species-card" data-search="species-blue-whale blue whale balaenoptera musculus content/species/cetaceans/blue-whale.md    none official_public_domain_fast_track p1 verified_source_card approve_primary approved_primary_image image fisheries.noaa.gov official_institutional candidate appears official/institutional and public-domain/cc0-style, pending image-level review. partner_media_grant_needed " data-group="cetaceans" data-status="approved" data-rights="none" data-route="official_public_domain_fast_track" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">cetaceans</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Blue Whale</h2>
+        <p class="scientific">Balaenoptera musculus</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>fisheries.noaa.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Blue Whale. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.fisheries.noaa.gov/species/blue-whale" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="species-bottlenose-dolphin common bottlenose dolphin tursiops truncatus content/species/cetaceans/bottlenose-dolphin.md    none ethics_note_review p1 verified_source_card approve_primary approved_primary_image image fisheries.noaa.gov official_institutional candidate has automated review flags that may still be approvable after source and crop review. partner_media_grant_needed " data-group="cetaceans" data-status="approved" data-rights="none" data-route="ethics_note_review" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">cetaceans</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Common Bottlenose Dolphin</h2>
+        <p class="scientific">Tursiops truncatus</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>ethics note review</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>fisheries.noaa.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Common Bottlenose Dolphin. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="species-humpback-whale humpback whale megaptera novaeangliae content/species/cetaceans/humpback-whale.md    none official_public_domain_fast_track p1 verified_source_card approve_primary approved_primary_image image iucn.org authority_source candidate appears official/institutional and public-domain/cc0-style, pending image-level review. partner_media_grant_needed " data-group="cetaceans" data-status="approved" data-rights="none" data-route="official_public_domain_fast_track" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">cetaceans</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Humpback Whale</h2>
+        <p class="scientific">Megaptera novaeangliae</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>iucn.org</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Humpback Whale. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://iucn.org/content/humpback-whale-road-recovery-reveals-iucn-red-list" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="species-north-atlantic-right-whale north atlantic right whale eubalaena glacialis content/species/cetaceans/north-atlantic-right-whale.md    none official_public_domain_fast_track p1 verified_source_card approve_primary approved_primary_image image fisheries.noaa.gov official_institutional candidate appears official/institutional and public-domain/cc0-style, pending image-level review. partner_media_grant_needed " data-group="cetaceans" data-status="approved" data-rights="none" data-route="official_public_domain_fast_track" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">cetaceans</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>North Atlantic Right Whale</h2>
+        <p class="scientific">Eubalaena glacialis</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>fisheries.noaa.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for North Atlantic Right Whale. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.fisheries.noaa.gov/species/north-atlantic-right-whale" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="species-orca orca orcinus orca content/species/cetaceans/orca.md    none official_public_domain_fast_track p1 verified_source_card approve_primary approved_primary_image image fisheries.noaa.gov official_institutional candidate appears official/institutional and public-domain/cc0-style, pending image-level review. partner_media_grant_needed " data-group="cetaceans" data-status="approved" data-rights="none" data-route="official_public_domain_fast_track" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">cetaceans</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Orca</h2>
+        <p class="scientific">Orcinus orca</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>fisheries.noaa.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Orca. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.fisheries.noaa.gov/species/killer-whale" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="species-sperm-whale sperm whale physeter macrocephalus content/species/cetaceans/sperm-whale.md    none official_public_domain_fast_track p1 verified_source_card approve_primary approved_primary_image image fisheries.noaa.gov official_institutional candidate appears official/institutional and public-domain/cc0-style, pending image-level review. partner_media_grant_needed " data-group="cetaceans" data-status="approved" data-rights="none" data-route="official_public_domain_fast_track" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">cetaceans</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Sperm Whale</h2>
+        <p class="scientific">Physeter macrocephalus</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>fisheries.noaa.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Sperm Whale. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.fisheries.noaa.gov/species/sperm-whale" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="species-california-sea-lion california sea lion zalophus californianus content/species/pinnipeds/california-sea-lion.md    none open_license_attribution_review p2 verified_source_card approve_primary approved_primary_image image fisheries.noaa.gov official_institutional candidate may be reusable with attribution/share-alike obligations after review. partner_media_grant_needed " data-group="pinnipeds" data-status="approved" data-rights="none" data-route="open_license_attribution_review" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">pinnipeds</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P2</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>California Sea Lion</h2>
+        <p class="scientific">Zalophus californianus</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>open license attribution review</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>fisheries.noaa.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for California Sea Lion. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.fisheries.noaa.gov/species/california-sea-lion" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="species-grey-seal grey seal halichoerus grypus content/species/pinnipeds/grey-seal.md    none open_license_attribution_review p2 verified_source_card approve_primary approved_primary_image image fisheries.noaa.gov official_institutional candidate may be reusable with attribution/share-alike obligations after review. partner_media_grant_needed " data-group="pinnipeds" data-status="approved" data-rights="none" data-route="open_license_attribution_review" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">pinnipeds</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P2</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Grey Seal</h2>
+        <p class="scientific">Halichoerus grypus</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>open license attribution review</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>fisheries.noaa.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Grey Seal. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.fisheries.noaa.gov/species/gray-seal" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="species-harbor-seal harbor seal phoca vitulina content/species/pinnipeds/harbor-seal.md    none open_license_attribution_review p2 verified_source_card approve_primary approved_primary_image image nps.gov official_institutional candidate may be reusable with attribution/share-alike obligations after review. partner_media_grant_needed " data-group="pinnipeds" data-status="approved" data-rights="none" data-route="open_license_attribution_review" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">pinnipeds</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P2</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Harbor Seal</h2>
+        <p class="scientific">Phoca vitulina</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>open license attribution review</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>nps.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Harbor Seal. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.nps.gov/places/harbor-seal.htm" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="species-hawaiian-monk-seal hawaiian monk seal neomonachus schauinslandi content/species/pinnipeds/hawaiian-monk-seal.md    none official_public_domain_fast_track p1 verified_source_card approve_primary approved_primary_image image fisheries.noaa.gov official_institutional candidate appears official/institutional and public-domain/cc0-style, pending image-level review. partner_media_grant_needed " data-group="pinnipeds" data-status="approved" data-rights="none" data-route="official_public_domain_fast_track" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">pinnipeds</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Hawaiian Monk Seal</h2>
+        <p class="scientific">Neomonachus schauinslandi</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>fisheries.noaa.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Hawaiian Monk Seal. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.fisheries.noaa.gov/species/hawaiian-monk-seal" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="species-walrus walrus odobenus rosmarus content/species/pinnipeds/walrus.md    none official_public_domain_fast_track p1 verified_source_card approve_primary approved_primary_image image fws.gov official_institutional candidate appears official/institutional and public-domain/cc0-style, pending image-level review. partner_media_grant_needed " data-group="pinnipeds" data-status="approved" data-rights="none" data-route="official_public_domain_fast_track" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">pinnipeds</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Walrus</h2>
+        <p class="scientific">Odobenus rosmarus</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>fws.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Walrus. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.fws.gov/species/pacific-walrus-odobenus-rosmarus-divergens" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="species-brain-coral grooved brain coral diploria labyrinthiformis content/species/reefs/brain-coral.md    none official_public_domain_fast_track p1 verified_source_card approve_primary approved_primary_image image cdhc.noaa.gov official_institutional candidate appears official/institutional and public-domain/cc0-style, pending image-level review. partner_media_grant_needed " data-group="reefs" data-status="approved" data-rights="none" data-route="official_public_domain_fast_track" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">reefs</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Grooved Brain Coral</h2>
+        <p class="scientific">Diploria labyrinthiformis</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>cdhc.noaa.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Grooved Brain Coral. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://cdhc.noaa.gov/coral-disease/characterized-diseases/stony-coral-tissue-loss-disease-sctld/" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="species-elkhorn-coral elkhorn coral acropora palmata content/species/reefs/elkhorn-coral.md    none official_public_domain_fast_track p1 verified_source_card approve_primary approved_primary_image image fisheries.noaa.gov official_institutional candidate appears official/institutional and public-domain/cc0-style, pending image-level review. partner_media_grant_needed " data-group="reefs" data-status="approved" data-rights="none" data-route="official_public_domain_fast_track" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">reefs</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Elkhorn Coral</h2>
+        <p class="scientific">Acropora palmata</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>fisheries.noaa.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Elkhorn Coral. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.fisheries.noaa.gov/action/listing-elkhorn-and-staghorn-corals-under-esa" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="species-giant-kelp giant kelp macrocystis pyrifera content/species/reefs/giant-kelp.md    none official_public_domain_fast_track p1 verified_source_card approve_primary approved_primary_image image fisheries.noaa.gov official_institutional candidate appears official/institutional and public-domain/cc0-style, pending image-level review. partner_media_grant_needed " data-group="reefs" data-status="approved" data-rights="none" data-route="official_public_domain_fast_track" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">reefs</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Giant Kelp</h2>
+        <p class="scientific">Macrocystis pyrifera</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>fisheries.noaa.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Giant Kelp. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.fisheries.noaa.gov/west-coast/habitat-conservation/kelp-forest-habitat-west-coast" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="species-red-mangrove red mangrove rhizophora mangle content/species/reefs/red-mangrove.md    none official_public_domain_fast_track p1 verified_source_card approve_primary approved_primary_image image floridakeys.noaa.gov official_institutional candidate appears official/institutional and public-domain/cc0-style, pending image-level review. partner_media_grant_needed " data-group="reefs" data-status="approved" data-rights="none" data-route="official_public_domain_fast_track" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">reefs</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Red Mangrove</h2>
+        <p class="scientific">Rhizophora mangle</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>floridakeys.noaa.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Red Mangrove. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://floridakeys.noaa.gov/plants/mangroves.html" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="species-seagrass-posidonia neptune grass posidonia oceanica content/species/reefs/seagrass-posidonia.md    none official_public_domain_fast_track p1 verified_source_card approve_primary approved_primary_image image maritime-forum.ec.europa.eu official_institutional candidate appears official/institutional and public-domain/cc0-style, pending image-level review. partner_media_grant_needed " data-group="reefs" data-status="approved" data-rights="none" data-route="official_public_domain_fast_track" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">reefs</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Neptune Grass</h2>
+        <p class="scientific">Posidonia oceanica</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>maritime-forum.ec.europa.eu</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Neptune Grass. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://maritime-forum.ec.europa.eu/map-week-seagrass-meadows-posidonia-oceanica_en" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="species-staghorn-coral staghorn coral acropora cervicornis content/species/reefs/staghorn-coral.md    none official_public_domain_fast_track p1 verified_source_card approve_primary approved_primary_image image iucn.org authority_source candidate appears official/institutional and public-domain/cc0-style, pending image-level review. partner_media_grant_needed " data-group="reefs" data-status="approved" data-rights="none" data-route="official_public_domain_fast_track" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">reefs</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Staghorn Coral</h2>
+        <p class="scientific">Acropora cervicornis</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>iucn.org</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Staghorn Coral. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://iucn.org/press-release/202411/over-40-coral-species-face-extinction-iucn-red-list" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="basking-shark basking shark cetorhinus maximus content/species/sharks-rays/basking-shark.md    none official_public_domain_fast_track p1 verified_source_card approve_primary approved_primary_image image floridamuseum.ufl.edu institutional candidate appears official/institutional and public-domain/cc0-style, pending image-level review. partner_media_grant_needed " data-group="sharks-rays" data-status="approved" data-rights="none" data-route="official_public_domain_fast_track" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">sharks-rays</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Basking Shark</h2>
+        <p class="scientific">Cetorhinus maximus</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>floridamuseum.ufl.edu</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Basking Shark. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/cetorhinus-maximus/" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="great-white-shark great white shark carcharodon carcharias content/species/sharks-rays/great-white-shark.md    none open_license_attribution_review p2 verified_source_card approve_primary approved_primary_image image fisheries.noaa.gov official_institutional candidate may be reusable with attribution/share-alike obligations after review. partner_media_grant_needed " data-group="sharks-rays" data-status="approved" data-rights="none" data-route="open_license_attribution_review" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">sharks-rays</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P2</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Great White Shark</h2>
+        <p class="scientific">Carcharodon carcharias</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>open license attribution review</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>fisheries.noaa.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Great White Shark. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.fisheries.noaa.gov/species/white-shark" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="reef-manta-ray reef manta ray mobula alfredi content/species/sharks-rays/reef-manta-ray.md    none open_license_attribution_review p2 verified_source_card approve_primary approved_primary_image image mantatrust.org partner_or_ngo candidate may be reusable with attribution/share-alike obligations after review. manta_trust partner_media_grant_needed " data-group="sharks-rays" data-status="approved" data-rights="none" data-route="open_license_attribution_review" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">sharks-rays</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P2</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Reef Manta Ray</h2>
+        <p class="scientific">Mobula alfredi</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>open license attribution review</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>mantatrust.org</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Reef Manta Ray. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.mantatrust.org/mobula-alfredi" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="scalloped-hammerhead scalloped hammerhead sphyrna lewini content/species/sharks-rays/scalloped-hammerhead.md    none official_public_domain_fast_track p1 verified_source_card approve_primary approved_primary_image image fisheries.noaa.gov official_institutional candidate appears official/institutional and public-domain/cc0-style, pending image-level review. partner_media_grant_needed " data-group="sharks-rays" data-status="approved" data-rights="none" data-route="official_public_domain_fast_track" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">sharks-rays</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Scalloped Hammerhead</h2>
+        <p class="scientific">Sphyrna lewini</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>fisheries.noaa.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Scalloped Hammerhead. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.fisheries.noaa.gov/species/scalloped-hammerhead-shark" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="shortfin-mako shortfin mako isurus oxyrinchus content/species/sharks-rays/shortfin-mako.md    none official_public_domain_fast_track p1 verified_source_card approve_primary approved_primary_image image fisheries.noaa.gov official_institutional candidate appears official/institutional and public-domain/cc0-style, pending image-level review. partner_media_grant_needed " data-group="sharks-rays" data-status="approved" data-rights="none" data-route="official_public_domain_fast_track" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">sharks-rays</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Shortfin Mako</h2>
+        <p class="scientific">Isurus oxyrinchus</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>fisheries.noaa.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Shortfin Mako. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.fisheries.noaa.gov/species/shortfin-mako-shark" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="tiger-shark tiger shark galeocerdo cuvier content/species/sharks-rays/tiger-shark.md    none open_license_attribution_review p2 verified_source_card approve_primary approved_primary_image image floridamuseum.ufl.edu institutional candidate may be reusable with attribution/share-alike obligations after review. partner_media_grant_needed " data-group="sharks-rays" data-status="approved" data-rights="none" data-route="open_license_attribution_review" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">sharks-rays</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P2</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Tiger Shark</h2>
+        <p class="scientific">Galeocerdo cuvier</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>open license attribution review</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>floridamuseum.ufl.edu</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Tiger Shark. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/galeocerdo-cuvier/" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="species-whale-shark whale shark rhincodon typus content/species/sharks-rays/whale-shark.md    none open_public_domain_review p1 verified_source_card approve_primary approved_primary_image image iucn.org authority_source candidate has public-domain/cc0-style rights metadata but still needs source and species review. partner_media_grant_needed " data-group="sharks-rays" data-status="approved" data-rights="none" data-route="open_public_domain_review" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">sharks-rays</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Whale Shark</h2>
+        <p class="scientific">Rhincodon typus</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>open public domain review</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>iucn.org</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Whale Shark. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://iucn.org/news/secretariat/201607/whale-sharks-winghead-sharks-and-bornean-orangutans-slide-towards-extinction" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="species-west-indian-manatee west indian manatee trichechus manatus content/species/sirenians/west-indian-manatee.md    none official_public_domain_fast_track p1 verified_source_card approve_primary approved_primary_image image fws.gov official_institutional candidate appears official/institutional and public-domain/cc0-style, pending image-level review. partner_media_grant_needed " data-group="sirenians" data-status="approved" data-rights="none" data-route="official_public_domain_fast_track" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">sirenians</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>West Indian Manatee</h2>
+        <p class="scientific">Trichechus manatus</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>fws.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for West Indian Manatee. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.fws.gov/press-release/2017-03/manatee-reclassified-endangered-threatened-habitat-improves-and-population" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="species-green-turtle green turtle chelonia mydas content/species/turtles/green-turtle.md    none open_license_attribution_review p2 verified_source_card approve_primary approved_primary_image image oceanicsociety.org partner_or_ngo candidate may be reusable with attribution/share-alike obligations after review. oceanic_society partner_media_grant_needed " data-group="turtles" data-status="approved" data-rights="none" data-route="open_license_attribution_review" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">turtles</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P2</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Green Turtle</h2>
+        <p class="scientific">Chelonia mydas</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>open license attribution review</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>oceanicsociety.org</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Green Turtle. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.oceanicsociety.org/news-and-announcements/green-sea-turtle-status-improvement-2025/" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="hawksbill-turtle hawksbill turtle eretmochelys imbricata content/species/turtles/hawksbill-turtle.md    none open_license_attribution_review p2 verified_source_card approve_primary approved_primary_image image fisheries.noaa.gov official_institutional candidate may be reusable with attribution/share-alike obligations after review. partner_media_grant_needed " data-group="turtles" data-status="approved" data-rights="none" data-route="open_license_attribution_review" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">turtles</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P2</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Hawksbill Turtle</h2>
+        <p class="scientific">Eretmochelys imbricata</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>open license attribution review</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>fisheries.noaa.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Hawksbill Turtle. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.fisheries.noaa.gov/species/hawksbill-turtle" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="kemps-ridley-turtle kemp&#x27;s ridley turtle lepidochelys kempii content/species/turtles/kemps-ridley-turtle.md    none official_public_domain_fast_track p1 verified_source_card approve_primary approved_primary_image image fisheries.noaa.gov official_institutional candidate appears official/institutional and public-domain/cc0-style, pending image-level review. partner_media_grant_needed " data-group="turtles" data-status="approved" data-rights="none" data-route="official_public_domain_fast_track" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">turtles</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Kemp&#x27;s Ridley Turtle</h2>
+        <p class="scientific">Lepidochelys kempii</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>fisheries.noaa.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Kemp&#x27;s Ridley Turtle. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.fisheries.noaa.gov/species/kemps-ridley-turtle" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="leatherback-turtle leatherback turtle dermochelys coriacea content/species/turtles/leatherback-turtle.md    none official_public_domain_fast_track p1 verified_source_card approve_primary approved_primary_image image fisheries.noaa.gov official_institutional candidate appears official/institutional and public-domain/cc0-style, pending image-level review. partner_media_grant_needed " data-group="turtles" data-status="approved" data-rights="none" data-route="official_public_domain_fast_track" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">turtles</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P1</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Leatherback Turtle</h2>
+        <p class="scientific">Dermochelys coriacea</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>official public domain fast track</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>fisheries.noaa.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Leatherback Turtle. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.fisheries.noaa.gov/species/leatherback-turtle" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="loggerhead-turtle loggerhead turtle caretta caretta content/species/turtles/loggerhead-turtle.md    none open_license_attribution_review p2 verified_source_card approve_primary approved_primary_image image fisheries.noaa.gov official_institutional candidate may be reusable with attribution/share-alike obligations after review. partner_media_grant_needed " data-group="turtles" data-status="approved" data-rights="none" data-route="open_license_attribution_review" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">turtles</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P2</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Loggerhead Turtle</h2>
+        <p class="scientific">Caretta caretta</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>open license attribution review</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>fisheries.noaa.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Loggerhead Turtle. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.fisheries.noaa.gov/species/loggerhead-turtle" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="species-card" data-search="olive-ridley-turtle olive ridley turtle lepidochelys olivacea content/species/turtles/olive-ridley-turtle.md    none open_license_attribution_review p2 verified_source_card approve_primary approved_primary_image image fisheries.noaa.gov official_institutional candidate may be reusable with attribution/share-alike obligations after review. partner_media_grant_needed " data-group="turtles" data-status="approved" data-rights="none" data-route="open_license_attribution_review" data-fallback="verified_source_card" data-curation="approve_primary" data-render="approved_primary_image" data-flagged="false">
+      <figure class="media-frame">
+        <div class="empty-image">No image candidate</div>
+      </figure>
+      <div class="card-body">
+        <div class="pill-row">
+          <span class="pill pill-neutral">turtles</span>
+          <span class="pill pill-status">approved</span>
+          <span class="pill pill-rights">none</span>
+          <span class="pill pill-priority">P2</span>
+          <span class="pill pill-fallback">verified source card</span>
+          <span class="pill pill-curation">approve primary</span>
+          <span class="pill pill-render">approved primary image</span>
+        </div>
+        <h2>Olive Ridley Turtle</h2>
+        <p class="scientific">Lepidochelys olivacea</p>
+        <dl class="meta-grid">
+          <div><dt>Candidate</dt><dd></dd></div>
+          <div><dt>Creator</dt><dd></dd></div>
+          <div><dt>License</dt><dd></dd></div>
+          <div><dt>Route</dt><dd>open license attribution review</dd></div>
+          <div><dt>Public fallback</dt><dd>verified source card</dd></div>
+          <div><dt>Source card</dt><dd>fisheries.noaa.gov</dd></div>
+          <div><dt>Curation</dt><dd>approve_primary (9/9)</dd></div>
+          <div><dt>Render</dt><dd>approved primary image</dd></div>
+          <div><dt>Hero allowed</dt><dd>yes</dd></div>
+          <div><dt>Review</dt><dd></dd></div>
+        </dl>
+        <div class="flag-row"><span class="pill pill-ok">no automated flags</span></div>
+        <p class="next-action">Primary media approved for Olive Ridley Turtle. Keep source, rights, crop, alt text, and ethics metadata current during future reviews.</p>
+        <div class="links">
+
+
+          <a class="button-link" href="https://www.fisheries.noaa.gov/species/olive-ridley-turtle" target="_blank" rel="noreferrer">Official</a>
+        </div>
+      </div>
+    </article>
+
+    </section>
+  </main>
+  <script>
+    const cards = Array.from(document.querySelectorAll(".species-card"));
+    const search = document.getElementById("search");
+    const group = document.getElementById("group");
+    const status = document.getElementById("status");
+    const rights = document.getElementById("rights");
+    const route = document.getElementById("route");
+    const fallback = document.getElementById("fallback");
+    const curation = document.getElementById("curation");
+    const render = document.getElementById("render");
+    const flagged = document.getElementById("flagged");
+    const count = document.getElementById("visible-count");
+
+    function applyFilters() {
+      const query = search.value.trim().toLowerCase();
+      let visible = 0;
+      for (const card of cards) {
+        const matchesText = !query || card.dataset.search.includes(query);
+        const matchesGroup = !group.value || card.dataset.group === group.value;
+        const matchesStatus = !status.value || card.dataset.status === status.value;
+        const matchesRights = !rights.value || card.dataset.rights === rights.value;
+        const matchesRoute = !route.value || card.dataset.route === route.value;
+        const matchesFallback = !fallback.value || card.dataset.fallback === fallback.value;
+        const matchesCuration = !curation.value || card.dataset.curation === curation.value;
+        const matchesRender = !render.value || card.dataset.render === render.value;
+        const matchesFlag = !flagged.checked || card.dataset.flagged === "true";
+        const show = matchesText && matchesGroup && matchesStatus && matchesRights && matchesRoute && matchesFallback && matchesCuration && matchesRender && matchesFlag;
+        card.classList.toggle("hidden", !show);
+        if (show) visible += 1;
+      }
+      count.textContent = visible.toString();
+    }
+
+    for (const control of [search, group, status, rights, route, fallback, curation, render, flagged]) {
+      control.addEventListener("input", applyFilters);
+      control.addEventListener("change", applyFilters);
+    }
+  </script>
+</body>
+</html>

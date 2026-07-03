@@ -8,7 +8,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next typegen && tsc --noEmit",
+    "typecheck": "next typegen && tsc --noEmit"
   },
   "repository": {
     "type": "git",
