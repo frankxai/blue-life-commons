@@ -1,4 +1,5 @@
 import { TransitionLink } from "@/components/transition-link"
+import { ArtifactCardMedia } from "@/components/artifact-media"
 import { IucnBadge, TypeChip } from "@/components/badges"
 import { GUILD_META, cn } from "@/lib/utils"
 import type { Artifact } from "@/lib/types"
@@ -32,6 +33,8 @@ export function ArtifactCard({
           <IucnBadge category={artifact.iucn.category} size="sm" />
         )}
       </div>
+
+      <ArtifactCardMedia artifact={artifact} />
 
       <h3 className="mt-4 text-pretty font-serif text-lg font-semibold leading-snug text-card-foreground group-hover:text-primary">
         {artifact.title}

@@ -6,6 +6,7 @@ import {
   getRelatedArtifacts,
 } from "@/lib/content"
 import { ArtifactDetail } from "@/components/artifact-detail"
+import { getApprovedSpeciesMedia } from "@/lib/media"
 import { GUILD_META } from "@/lib/utils"
 
 export function generateStaticParams() {
@@ -27,9 +28,20 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const artifact = await getArtifact(params)
   if (!artifact) return {}
+  const media = getApprovedSpeciesMedia(artifact)
   return {
     title: artifact.title,
     description: artifact.excerpt,
+    openGraph: media
+      ? {
+          images: [
+            {
+              url: media.imageUrl,
+              alt: media.altText,
+            },
+          ],
+        }
+      : undefined,
   }
 }
 

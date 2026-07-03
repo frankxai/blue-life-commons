@@ -84,6 +84,58 @@ export interface Outputs {
   map_layer?: boolean
 }
 
+export interface ArtifactMediaPrimary {
+  asset_id?: string
+  path?: string
+  source_url?: string
+  public_media_url?: string
+  original_media_url?: string
+  creator?: string
+  credit?: string
+  license?: string
+  license_url?: string
+  rights_status?: string
+  alt_text?: string
+  qa_status?: string
+}
+
+export interface ArtifactMediaEmbed {
+  provider?: string
+  url?: string
+  rights_status?: string
+  notes?: string
+  domain?: string
+  license?: string
+}
+
+export interface ArtifactMediaRender {
+  strategy?: string
+  public_visual_kind?: string
+  public_visual_public_use?: boolean
+  species_page_visual_slot?: boolean
+  species_page_hero_image_allowed?: boolean
+  candidate_thumbnail_allowed?: boolean
+  candidate_public_use?: boolean
+}
+
+export interface ArtifactMediaReview {
+  primary_status?: string
+  curation_decision?: string
+  checks_complete?: number
+  checks_total?: number
+  promotion_allowed_now?: boolean
+}
+
+export interface ArtifactMedia {
+  registry_record?: string
+  render_contract?: string
+  public_explorer_record?: string
+  primary?: ArtifactMediaPrimary
+  embeds?: ArtifactMediaEmbed[]
+  render?: ArtifactMediaRender
+  review?: ArtifactMediaReview
+}
+
 export interface Artifact {
   id: string
   type: ArtifactType
@@ -113,6 +165,7 @@ export interface Artifact {
   impact?: Impact
   contributors: Contributor[]
   license?: string
+  media?: ArtifactMedia
   mapLayer?: boolean
 }
 

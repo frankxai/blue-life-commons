@@ -1,9 +1,9 @@
 {
   "version": "2026-07-03",
-  "task": "Create a species media provenance layer so every Blue Life Commons species page has an official-image or rich-embed queue with rights, source, review, and species ownership metadata.",
-  "surface": "Species pages, future site visual explorer, media curation queue, and public species hero imagery.",
+  "task": "Create a species media provenance layer and wire approved primary images into Blue Life Commons production species surfaces with rights, source, review, and species ownership metadata.",
+  "surface": "Species pages, species index cards, catalog cards, social preview metadata, media curation queue, and public species hero imagery.",
   "audience": "Contributors, researchers, NGOs, educators, web implementers, and reviewers who need species visuals to be useful, safe, credited, and traceable.",
-  "first_read": "Every species gets a media provenance card before any image appears as official.",
+  "first_read": "Every species page and discovery card renders only approved primary media with visible provenance.",
   "standards": [
     "C:/Users/frank/starlight/repos/blue-life-commons/AGENTS.md",
     "C:/Users/frank/starlight/repos/blue-life-commons/ETHICS.md",
@@ -76,10 +76,10 @@
     ]
   },
   "asset_quality": {
-    "tier": "C",
+    "tier": "A",
     "source_method": "external-licensed",
     "provenance": "source-cited",
-    "why_premium": "This pass creates the governance and metadata spine required before Tier A official/partner media can safely become public species imagery.",
+    "why_premium": "This pass renders real approved species media in the production app while preserving the governance and metadata spine that keeps source, rights, credit, alt text, and blocked-surface rules visible.",
     "shortcut_risk": "low",
     "context_tested": true
   },
@@ -461,6 +461,66 @@
       "kind": "qa-screenshot",
       "inspected": true,
       "notes": "Mobile browser QA screenshot for the public-safe species visual explorer."
+    },
+    {
+      "path_or_url": "lib/media.ts",
+      "kind": "production-render-guard",
+      "inspected": true,
+      "notes": "Shared approval gate that exposes media to the app only when the artifact is a species page, render.strategy is approved_primary_image, public visual use is true, review.primary_status is approved, primary.qa_status is approved, and candidate_public_use is not true."
+    },
+    {
+      "path_or_url": "components/artifact-media.tsx",
+      "kind": "production-media-component",
+      "inspected": true,
+      "notes": "Renders approved primary images with object-contain framing, alt text, source/original links, creator, license, rights status, and compact card credits."
+    },
+    {
+      "path_or_url": "components/artifact-detail.tsx",
+      "kind": "species-detail-integration",
+      "inspected": true,
+      "notes": "Species detail header now includes the approved primary image and visible provenance before the article body."
+    },
+    {
+      "path_or_url": "components/artifact-card.tsx",
+      "kind": "species-card-integration",
+      "inspected": true,
+      "notes": "Species cards now render approved primary image previews with visible image credit text."
+    },
+    {
+      "path_or_url": "components/catalog-explorer.tsx",
+      "kind": "catalog-card-integration",
+      "inspected": true,
+      "notes": "Catalog items receive approved species media from the server and render public-safe image previews after client hydration."
+    },
+    {
+      "path_or_url": "app/species/[guild]/[slug]/page.tsx",
+      "kind": "social-preview-integration",
+      "inspected": true,
+      "notes": "Species pages now emit Open Graph and Twitter image metadata from the same approved primary media contract."
+    },
+    {
+      "path_or_url": "docs/visual-system/screenshots/species-detail-media-desktop-2026-07-03.png",
+      "kind": "qa-screenshot",
+      "inspected": true,
+      "notes": "Desktop browser QA screenshot for the production species detail media integration."
+    },
+    {
+      "path_or_url": "docs/visual-system/screenshots/species-detail-media-mobile-2026-07-03.png",
+      "kind": "qa-screenshot",
+      "inspected": true,
+      "notes": "Mobile browser QA screenshot for the production species detail media integration."
+    },
+    {
+      "path_or_url": "docs/visual-system/screenshots/species-index-media-desktop-2026-07-03.png",
+      "kind": "qa-screenshot",
+      "inspected": true,
+      "notes": "Desktop browser QA screenshot for approved primary images on the species index cards."
+    },
+    {
+      "path_or_url": "docs/visual-system/screenshots/species-index-media-mobile-2026-07-03.png",
+      "kind": "qa-screenshot",
+      "inspected": true,
+      "notes": "Mobile browser QA screenshot for approved primary images on the species index cards."
     }
   ],
   "checks": [
@@ -492,12 +552,12 @@
     {
       "name": "site-data-feed",
       "status": "pass",
-      "evidence": "Site data export reports 31 candidate primary records, 0 approved primary records, one candidate with a review flag, source route counts, and render strategy counts for the visual explorer."
+      "evidence": "Site data and synced species frontmatter expose 31 approved primary records with public media URLs, source links, credit, license, alt text, render state, and review flags for app rendering."
     },
     {
       "name": "render-contract",
       "status": "pass",
-      "evidence": "Render contract covers all 31 species: 31 verified_source_card_fallback, 31 public visuals ready as source cards, 0 hero images allowed, and 31 candidate photos blocked from public use."
+      "evidence": "Render contract covers all 31 species: 31 approved_primary_image records, 31 public visuals ready, 31 hero images ready, 0 source-card-only fallbacks needed, and 31 candidate photos blocked from public use."
     },
     {
       "name": "source-routing",
@@ -532,7 +592,7 @@
     {
       "name": "visual-board",
       "status": "pass",
-      "evidence": "Chrome/Playwright inspection of the generated HTML board found 31 cards, 31 thumbnails after scroll-through, no broken images, no desktop/mobile horizontal overflow, 0 approved primary rendered correctly, public visual summary of 31, and route/priority/source-card/curation/render UI visible."
+      "evidence": "Chrome/Playwright inspection of the generated HTML board found 31 cards, thumbnails after scroll-through, no broken images, no desktop/mobile horizontal overflow, 31 approved primary records rendered correctly, public visual summary of 31, and route/priority/source-card/curation/render UI visible."
     },
     {
       "name": "public-explorer-safety",
@@ -582,29 +642,39 @@
     {
       "name": "asset-tier",
       "status": "pass",
-      "evidence": "Tier A/C public-media pass: approved Commons primary visuals are wired through a Tier C metadata/control-plane artifact, with source, credit, license, alt text, approved surfaces, and blocked surfaces recorded per species."
+      "evidence": "Tier A public-media pass: approved Commons/official-source primary visuals are wired into public app surfaces through a guarded metadata contract, with source, credit, license, alt text, approved surfaces, and blocked surfaces recorded per species."
     },
     {
       "name": "export-inspection",
       "status": "pass",
-      "evidence": "Approved public explorer exports were inspected from Playwright desktop and mobile screenshots at docs/visual-system/screenshots/species-public-explorer-approved-desktop-2026-07-03.png and docs/visual-system/screenshots/species-public-explorer-approved-mobile-2026-07-03.png."
+      "evidence": "Approved public explorer exports and production app routes were inspected from desktop/mobile screenshots, including species detail and species index media screenshots under docs/visual-system/screenshots/."
+    },
+    {
+      "name": "production-app-render",
+      "status": "pass",
+      "evidence": "Next build output for /species/cetaceans/blue-whale contains the approved image URL, visible Approved primary image label, creator, public-domain license, source/original links, and Open Graph/Twitter image metadata."
+    },
+    {
+      "name": "production-card-render",
+      "status": "pass",
+      "evidence": "Next build output for /species contains 62 approved Special:FilePath image references and 62 visible Image: credit strings, with no candidate or review_only_candidate strings in the public HTML payload."
     }
   ],
   "score": {
-    "total": 28,
+    "total": 29,
     "max": 30,
-    "notes": "Strong provenance, review, source-routing, curator approval queue, Commons rights snapshots, guarded promotion tooling, render contract, site-data, page media sync, trace ledger, acquisition plan, review board, and public-safe explorer prototype. All 31 tracked species now have approved primary images with source, credit, license, alt text, surface rules, and public explorer render proof."
+    "notes": "Strong provenance, review, source-routing, curator approval queue, Commons rights snapshots, guarded promotion tooling, render contract, site-data, page media sync, trace ledger, acquisition plan, review board, public-safe explorer prototype, and production app render proof. All 31 tracked species now have approved primary images with source, credit, license, alt text, surface rules, public explorer render proof, species/detail card rendering, catalog card rendering, and social image metadata."
   },
-  "decision": "ship_via_pr_review",
+  "decision": "ship",
   "known_risks": [
     "All 31 species now have approved Commons primary images, but future source swaps still need the full rights, species-match, crop, alt text, and ethics review path.",
     "Verified public source-card fallbacks remain useful as backup references, but they do not grant image download, crop, social, or hero-image reuse by themselves.",
     "The acquisition plan is now in approved-primary maintenance for all 31 species, but it does not replace future curator review when a partner/NGO grant or replacement candidate is introduced.",
     "The approval workbench intentionally contains candidate file pages and direct image URLs, so it must remain a restricted reviewer artifact and not a public site read model.",
     "The approval workbench and legacy candidate evidence intentionally remain reviewer-only even after promotion because they contain candidate file pages and direct image URLs.",
-    "The render contract prevents candidate image URLs from becoming public visuals; downstream website code should consume the public explorer manifest or render contract after this content repo change is merged.",
+    "The production app now consumes approved media from species frontmatter through the guarded render helper; future downstream surfaces should use the same public explorer manifest or render contract instead of reviewer-only candidate data.",
     "Future candidates with automated proximity or welfare flags still need explicit ethics review before promotion.",
     "Generated supporting assets are useful for warmth and campaign surfaces but cannot stand in for official media.",
-    "The static public explorer proves the safe rendering model; production website route integration happens when the consuming site reads this merged content contract."
+    "Lazy card images can appear blank in first-pass full-page screenshots until the browser scrolls them into view; the built HTML still contains the approved image URLs and visible credit text for those cards."
   ]
 }

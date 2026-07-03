@@ -10,7 +10,9 @@ import {
   WelfareBadge,
 } from "@/components/badges"
 import { ArtifactCard } from "@/components/artifact-card"
-import { GITHUB_REPO_URL, formatRegion } from "@/lib/utils"
+import { ArtifactHeroMedia } from "@/components/artifact-media"
+import { getApprovedSpeciesMedia } from "@/lib/media"
+import { GITHUB_REPO_URL, cn, formatRegion } from "@/lib/utils"
 import Link from "next/link"
 
 function Breadcrumb({ trail }: { trail: { label: string; href?: string }[] }) {
@@ -57,6 +59,7 @@ export function ArtifactDetail({
 }) {
   const a = artifact
   const editUrl = `${GITHUB_REPO_URL}/blob/main/${a.githubPath}`
+  const approvedMedia = getApprovedSpeciesMedia(a)
 
   return (
     <article>
@@ -64,24 +67,35 @@ export function ArtifactDetail({
       <header className="border-b border-border bg-secondary">
         <Container className="py-10 sm:py-14">
           <Breadcrumb trail={trail} />
-          <div className="mt-6 flex flex-wrap items-center gap-2">
-            <TypeChip type={a.type} />
-            <StatusPill status={a.status} />
-            {a.sensitivity?.tier === "sensitive" && (
-              <Chip tone="accent">Location generalized</Chip>
+          <div
+            className={cn(
+              "mt-6 grid gap-8",
+              approvedMedia &&
+                "lg:grid-cols-[minmax(0,1fr)_minmax(320px,460px)] lg:items-end",
             )}
-          </div>
-          <h1 className="mt-4 max-w-3xl text-balance font-serif text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-            {a.title}
-          </h1>
-          <div className="mt-5 flex flex-wrap items-center gap-3">
-            <IucnBadge category={a.iucn?.category} />
-            <WelfareBadge state={a.welfare?.state} />
-            {a.region?.map((r) => (
-              <Chip key={r} tone="primary">
-                {formatRegion(r)}
-              </Chip>
-            ))}
+          >
+            <div>
+              <div className="flex flex-wrap items-center gap-2">
+                <TypeChip type={a.type} />
+                <StatusPill status={a.status} />
+                {a.sensitivity?.tier === "sensitive" && (
+                  <Chip tone="accent">Location generalized</Chip>
+                )}
+              </div>
+              <h1 className="mt-4 max-w-3xl text-balance font-serif text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+                {a.title}
+              </h1>
+              <div className="mt-5 flex flex-wrap items-center gap-3">
+                <IucnBadge category={a.iucn?.category} />
+                <WelfareBadge state={a.welfare?.state} />
+                {a.region?.map((r) => (
+                  <Chip key={r} tone="primary">
+                    {formatRegion(r)}
+                  </Chip>
+                ))}
+              </div>
+            </div>
+            <ArtifactHeroMedia artifact={a} />
           </div>
         </Container>
       </header>
@@ -107,6 +121,10 @@ export function ArtifactDetail({
                 <MetaRow label="Reading time" value={`${a.readingMinutes} min`} />
                 <MetaRow label="Last verified" value={a.last_verified} />
                 <MetaRow label="License" value={a.license ?? "CC-BY-4.0"} />
+                <MetaRow
+                  label="Media"
+                  value={approvedMedia ? "Approved primary image" : undefined}
+                />
                 <MetaRow
                   label="Consensus"
                   value={a.consensus_state ? a.consensus_state.replace(/-/g, " ") : undefined}
