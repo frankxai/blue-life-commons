@@ -61,11 +61,7 @@ export function ClosingCta() {
               Find your pathway
               <ArrowRight />
             </ButtonLink>
-            <ButtonLink
-              href="/support"
-              variant="secondary"
-              className="border-abyss-border bg-white/5 text-abyss-foreground hover:border-glow hover:text-glow"
-            >
+            <ButtonLink href="/support" variant="onDarkGhost">
               Sustain the commons
             </ButtonLink>
           </div>

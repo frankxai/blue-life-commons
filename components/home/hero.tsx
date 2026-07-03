@@ -42,11 +42,7 @@ export function HomeHero({ stats }: { stats: CommonsStats }) {
               Explore species intelligence
               <ArrowRight />
             </ButtonLink>
-            <ButtonLink
-              href="/contribute"
-              variant="secondary"
-              className="border-abyss-border bg-white/5 text-abyss-foreground hover:border-glow hover:text-glow"
-            >
+            <ButtonLink href="/contribute" variant="onDarkGhost">
               Contribute an artifact
             </ButtonLink>
           </div>

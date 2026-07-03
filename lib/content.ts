@@ -15,6 +15,7 @@ const CONTENT_ROOTS = [
 // Files/directories we never treat as publishable artifacts.
 const IGNORE_SEGMENTS = new Set([
   "_templates",
+  "templates",
   "node_modules",
   ".git",
   ".next",
@@ -102,8 +103,16 @@ export function getAllArtifacts(): Artifact[] {
       "/" + relPath.replace(/\.md$/, "")
     const slug = href.split("/").filter(Boolean).slice(-1)[0] ?? data.id
 
-    const bodyText = stripMarkdown(content)
-    const bodyHtml = marked.parse(content) as string
+    // If sources exist in frontmatter, drop the markdown "Sources" section —
+    // the site renders a structured sources grid instead.
+    const sources = normalizeSources(data.sources)
+    let body = content
+    if (sources.length > 0) {
+      body = body.replace(/^##\s+Sources\s*$[\s\S]*?(?=^##\s|(?![\s\S]))/m, "")
+    }
+
+    const bodyText = stripMarkdown(body)
+    const bodyHtml = marked.parse(body) as string
     const words = bodyText ? bodyText.split(/\s+/).length : 0
 
     artifacts.push({
@@ -124,7 +133,7 @@ export function getAllArtifacts(): Artifact[] {
       audience: toArray(data.audience),
       difficulty: data.difficulty ? String(data.difficulty) : undefined,
       status: data.status,
-      sources: normalizeSources(data.sources),
+      sources,
       review: data.review,
       iucn: data.iucn,
       welfare: data.welfare,

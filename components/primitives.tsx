@@ -77,7 +77,7 @@ export function ButtonLink({
 }: {
   href: string
   children: React.ReactNode
-  variant?: "primary" | "secondary" | "ghost" | "onDark"
+  variant?: "primary" | "secondary" | "ghost" | "onDark" | "onDarkGhost"
   className?: string
   external?: boolean
 }) {
@@ -89,6 +89,8 @@ export function ButtonLink({
     ghost: "text-primary hover:bg-primary/10",
     onDark:
       "bg-glow text-abyss-deep font-semibold hover:-translate-y-0.5",
+    onDarkGhost:
+      "border border-abyss-border bg-white/5 text-abyss-foreground backdrop-blur-sm hover:border-glow hover:text-glow",
   }
   return (
     <Link

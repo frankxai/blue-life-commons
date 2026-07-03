@@ -54,6 +54,13 @@ export const GUILD_META: Record<string, { label: string }> = {
   other: { label: "Other" },
 }
 
+export const GITHUB_REPO_URL = "https://github.com/frankxai/blue-life-commons"
+export const OCEAN_INTEL_URL = "https://github.com/frankxai/ocean-intelligence-system"
+
+export function formatRegion(s: string): string {
+  return titleCase(s)
+}
+
 export function titleCase(s: string): string {
   return s
     .replace(/[-_]/g, " ")
