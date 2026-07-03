@@ -2,7 +2,7 @@ import fs from "node:fs"
 import path from "node:path"
 import matter from "gray-matter"
 import { marked } from "marked"
-import type { Artifact, ArtifactType, CommonsStats, Source } from "./types"
+import type { Artifact, ArtifactMedia, ArtifactType, CommonsStats, Source } from "./types"
 
 const ROOT = process.cwd()
 
@@ -70,6 +70,93 @@ function normalizeSources(raw: unknown): Source[] {
       }
     })
     .filter((s) => s.url)
+}
+
+function asRecord(value: unknown): Record<string, unknown> | undefined {
+  return value && typeof value === "object" && !Array.isArray(value)
+    ? (value as Record<string, unknown>)
+    : undefined
+}
+
+function optionalString(value: unknown): string | undefined {
+  if (value === undefined || value === null || value === "") return undefined
+  return String(value)
+}
+
+function optionalBoolean(value: unknown): boolean | undefined {
+  return typeof value === "boolean" ? value : undefined
+}
+
+function optionalNumber(value: unknown): number | undefined {
+  if (value === undefined || value === null || value === "") return undefined
+  const n = Number(value)
+  return Number.isFinite(n) ? n : undefined
+}
+
+function normalizeMedia(raw: unknown): ArtifactMedia | undefined {
+  const media = asRecord(raw)
+  if (!media) return undefined
+
+  const primary = asRecord(media.primary)
+  const render = asRecord(media.render)
+  const review = asRecord(media.review)
+
+  const embeds = Array.isArray(media.embeds)
+    ? media.embeds
+        .map(asRecord)
+        .filter((embed): embed is Record<string, unknown> => Boolean(embed))
+        .map((embed) => ({
+          provider: optionalString(embed.provider),
+          url: optionalString(embed.url),
+          rights_status: optionalString(embed.rights_status),
+          notes: optionalString(embed.notes),
+          domain: optionalString(embed.domain),
+          license: optionalString(embed.license),
+        }))
+    : undefined
+
+  return {
+    registry_record: optionalString(media.registry_record),
+    render_contract: optionalString(media.render_contract),
+    public_explorer_record: optionalString(media.public_explorer_record),
+    primary: primary
+      ? {
+          asset_id: optionalString(primary.asset_id),
+          path: optionalString(primary.path),
+          source_url: optionalString(primary.source_url),
+          public_media_url: optionalString(primary.public_media_url),
+          original_media_url: optionalString(primary.original_media_url),
+          creator: optionalString(primary.creator),
+          credit: optionalString(primary.credit),
+          license: optionalString(primary.license),
+          license_url: optionalString(primary.license_url),
+          rights_status: optionalString(primary.rights_status),
+          alt_text: optionalString(primary.alt_text),
+          qa_status: optionalString(primary.qa_status),
+        }
+      : undefined,
+    embeds,
+    render: render
+      ? {
+          strategy: optionalString(render.strategy),
+          public_visual_kind: optionalString(render.public_visual_kind),
+          public_visual_public_use: optionalBoolean(render.public_visual_public_use),
+          species_page_visual_slot: optionalBoolean(render.species_page_visual_slot),
+          species_page_hero_image_allowed: optionalBoolean(render.species_page_hero_image_allowed),
+          candidate_thumbnail_allowed: optionalBoolean(render.candidate_thumbnail_allowed),
+          candidate_public_use: optionalBoolean(render.candidate_public_use),
+        }
+      : undefined,
+    review: review
+      ? {
+          primary_status: optionalString(review.primary_status),
+          curation_decision: optionalString(review.curation_decision),
+          checks_complete: optionalNumber(review.checks_complete),
+          checks_total: optionalNumber(review.checks_total),
+          promotion_allowed_now: optionalBoolean(review.promotion_allowed_now),
+        }
+      : undefined,
+  }
 }
 
 function stripMarkdown(md: string): string {
@@ -161,6 +248,7 @@ export function getAllArtifacts(): Artifact[] {
       impact: data.impact,
       contributors: Array.isArray(data.contributors) ? data.contributors : [],
       license: data.license ? String(data.license) : undefined,
+      media: normalizeMedia(data.media),
       mapLayer: Boolean(outputs.map_layer),
     })
   }

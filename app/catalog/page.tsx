@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Suspense } from "react"
 import { getAllArtifacts } from "@/lib/content"
+import { getApprovedSpeciesMedia } from "@/lib/media"
 import { Container, SectionHeading } from "@/components/primitives"
 import { CatalogExplorer, type CatalogItem } from "@/components/catalog-explorer"
 
@@ -22,6 +23,7 @@ export default function CatalogPage() {
     iucn: a.iucn?.category,
     status: a.status,
     sourceCount: a.sources.length,
+    media: getApprovedSpeciesMedia(a),
   }))
 
   return (

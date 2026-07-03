@@ -185,7 +185,7 @@ The website should expose a visual explorer backed by `content/media/species-med
 
 The current static prototype is `content/media/review-packs/species-media-visual-board-YYYY-MM-DD.html`. It is generated from `content/media/species-media-site-data.json`, which joins `content/media/species-media-source-routing.yaml`, `content/media/species-media-rich-embeds.yaml`, `content/media/species-media-approval-queue.yaml`, and `content/media/species-media-render-contract.yaml`. The curation workspace is the companion operating view for batch review; treat both as reviewer tools, not public species pages.
 
-The current public-safe prototype is `content/media/public/species-visual-explorer-YYYY-MM-DD.html`, generated from `content/media/species-media-public-explorer-manifest.yaml`. Treat that manifest as the public website read model until the application renders the same contract directly. It is safe for approved primary image cards and public attribution metadata, but it still does not authorize blocked surfaces such as merchandise, paid ads without extra rights review, or social crops without visible credit.
+The current public-safe prototype is `content/media/public/species-visual-explorer-YYYY-MM-DD.html`, generated from `content/media/species-media-public-explorer-manifest.yaml`. The Next app now renders the synced species-page `media` block through the same approved-primary contract for species details, species cards, catalog cards, and social image metadata. The public explorer manifest remains the public-safe read model for richer visual explorer work, and neither path authorizes blocked surfaces such as merchandise, paid ads without extra rights review, or social crops without visible credit.
 
 ## Review Gate
 

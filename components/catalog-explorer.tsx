@@ -5,6 +5,8 @@ import Link from "next/link"
 import { useSearchParams } from "next/navigation"
 import { TYPE_LABELS, cn, titleCase } from "@/lib/utils"
 import { Chip, IucnBadge, StatusPill, TypeChip } from "@/components/badges"
+import { MediaCardPreview } from "@/components/artifact-media"
+import type { ApprovedSpeciesMedia } from "@/lib/media"
 
 export interface CatalogItem {
   id: string
@@ -17,6 +19,7 @@ export interface CatalogItem {
   iucn?: string
   status?: string
   sourceCount: number
+  media?: ApprovedSpeciesMedia
 }
 
 const TYPE_ORDER = [
@@ -160,6 +163,7 @@ export function CatalogExplorer({ items }: { items: CatalogItem[] }) {
                   <TypeChip type={item.type} />
                   <IucnBadge category={item.iucn} size="sm" />
                 </div>
+                <MediaCardPreview media={item.media} className="mt-0" />
                 <h3 className="font-serif text-lg font-semibold leading-snug text-foreground group-hover:text-primary">
                   {item.title}
                 </h3>
