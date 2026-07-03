@@ -1,0 +1,231 @@
+import fs from "node:fs"
+import path from "node:path"
+import matter from "gray-matter"
+import { marked } from "marked"
+import type { Artifact, ArtifactType, CommonsStats, Source } from "./types"
+
+const ROOT = process.cwd()
+
+// Directories that hold publishable artifacts, mapped to how we scan them.
+const CONTENT_ROOTS = [
+  path.join(ROOT, "content"),
+  path.join(ROOT, "missions"),
+]
+
+// Files/directories we never treat as publishable artifacts.
+const IGNORE_SEGMENTS = new Set([
+  "_templates",
+  "node_modules",
+  ".git",
+  ".next",
+])
+
+marked.setOptions({ gfm: true, breaks: false })
+
+function walk(dir: string, acc: string[] = []): string[] {
+  if (!fs.existsSync(dir)) return acc
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (IGNORE_SEGMENTS.has(entry.name)) continue
+    const full = path.join(dir, entry.name)
+    if (entry.isDirectory()) {
+      walk(full, acc)
+    } else if (entry.isFile() && entry.name.endsWith(".md")) {
+      // README/index files are navigation, not artifacts.
+      if (entry.name.toLowerCase() === "readme.md") continue
+      acc.push(full)
+    }
+  }
+  return acc
+}
+
+const VALID_TYPES: ArtifactType[] = [
+  "species-page",
+  "region-briefing",
+  "field-mission",
+  "dataset-card",
+  "research-summary",
+  "partner-profile",
+  "welfare-assessment",
+]
+
+function toArray(value: unknown): string[] {
+  if (!value) return []
+  if (Array.isArray(value)) return value.map((v) => String(v))
+  return [String(value)]
+}
+
+function normalizeSources(raw: unknown): Source[] {
+  if (!Array.isArray(raw)) return []
+  return raw
+    .filter((s) => s && typeof s === "object")
+    .map((s) => {
+      const src = s as Record<string, unknown>
+      return {
+        url: String(src.url ?? ""),
+        title: String(src.title ?? src.url ?? "Source"),
+        tier: src.tier ? (Number(src.tier) as 1 | 2 | 3) : undefined,
+        accessed: src.accessed ? String(src.accessed) : undefined,
+        doi: src.doi ? String(src.doi) : undefined,
+      }
+    })
+    .filter((s) => s.url)
+}
+
+function stripMarkdown(md: string): string {
+  return md
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
+    .replace(/[#>*_`~|-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+}
+
+let cache: Artifact[] | null = null
+
+export function getAllArtifacts(): Artifact[] {
+  if (cache) return cache
+
+  const files = CONTENT_ROOTS.flatMap((root) => walk(root))
+  const artifacts: Artifact[] = []
+
+  for (const file of files) {
+    const raw = fs.readFileSync(file, "utf8")
+    const { data, content } = matter(raw)
+    const type = data.type as ArtifactType | undefined
+    if (!type || !VALID_TYPES.includes(type)) continue
+
+    const relPath = path.relative(ROOT, file).replace(/\\/g, "/")
+    const outputs = (data.outputs ?? {}) as Record<string, unknown>
+    const href =
+      (outputs.website_path as string | undefined) ??
+      "/" + relPath.replace(/\.md$/, "")
+    const slug = href.split("/").filter(Boolean).slice(-1)[0] ?? data.id
+
+    const bodyText = stripMarkdown(content)
+    const bodyHtml = marked.parse(content) as string
+    const words = bodyText ? bodyText.split(/\s+/).length : 0
+
+    artifacts.push({
+      id: String(data.id ?? slug),
+      type,
+      title: String(data.title ?? slug),
+      slug: String(slug),
+      path: relPath,
+      href,
+      githubPath: String(outputs.github_path ?? relPath),
+      bodyHtml,
+      bodyText,
+      excerpt: bodyText.slice(0, 220).trim(),
+      readingMinutes: Math.max(1, Math.round(words / 200)),
+      species_group: toArray(data.species_group),
+      species: toArray(data.species),
+      region: toArray(data.region),
+      audience: toArray(data.audience),
+      difficulty: data.difficulty ? String(data.difficulty) : undefined,
+      status: data.status,
+      sources: normalizeSources(data.sources),
+      review: data.review,
+      iucn: data.iucn,
+      welfare: data.welfare,
+      sensitivity: data.sensitivity,
+      consensus_state: data.consensus_state ? String(data.consensus_state) : undefined,
+      last_verified: data.last_verified ? String(data.last_verified) : undefined,
+      impact: data.impact,
+      contributors: Array.isArray(data.contributors) ? data.contributors : [],
+      license: data.license ? String(data.license) : undefined,
+      mapLayer: Boolean(outputs.map_layer),
+    })
+  }
+
+  artifacts.sort((a, b) => a.title.localeCompare(b.title))
+  cache = artifacts
+  return artifacts
+}
+
+export function getArtifactsByType(type: ArtifactType): Artifact[] {
+  return getAllArtifacts().filter((a) => a.type === type)
+}
+
+export function getArtifactByHref(href: string): Artifact | undefined {
+  const normalized = "/" + href.split("/").filter(Boolean).join("/")
+  return getAllArtifacts().find((a) => a.href === normalized)
+}
+
+export function getArtifactById(id: string): Artifact | undefined {
+  return getAllArtifacts().find((a) => a.id === id)
+}
+
+export function getSpeciesGuilds(): { guild: string; count: number }[] {
+  const map = new Map<string, number>()
+  for (const a of getArtifactsByType("species-page")) {
+    // guild is the folder under content/species/<guild>/
+    const parts = a.path.split("/")
+    const idx = parts.indexOf("species")
+    const guild = idx >= 0 && parts[idx + 1] ? parts[idx + 1] : "other"
+    map.set(guild, (map.get(guild) ?? 0) + 1)
+  }
+  return [...map.entries()]
+    .map(([guild, count]) => ({ guild, count }))
+    .sort((a, b) => b.count - a.count)
+}
+
+export function getGuildForArtifact(a: Artifact): string {
+  const parts = a.path.split("/")
+  const idx = parts.indexOf("species")
+  return idx >= 0 && parts[idx + 1] ? parts[idx + 1] : "other"
+}
+
+export function getRelatedArtifacts(a: Artifact, limit = 4): Artifact[] {
+  const all = getAllArtifacts().filter((x) => x.id !== a.id)
+  const scored = all.map((x) => {
+    let score = 0
+    const overlap = (arr1?: string[], arr2?: string[]) => {
+      if (!arr1 || !arr2) return 0
+      const set = new Set(arr1)
+      return arr2.filter((v) => set.has(v)).length
+    }
+    score += overlap(a.species_group, x.species_group) * 2
+    score += overlap(a.species, x.species) * 3
+    score += overlap(a.region, x.region) * 2
+    if (x.type === a.type) score += 1
+    return { x, score }
+  })
+  return scored
+    .filter((s) => s.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map((s) => s.x)
+}
+
+export function getCommonsStats(): CommonsStats {
+  const all = getAllArtifacts()
+  const sourceUrls = new Set<string>()
+  const contributors = new Set<string>()
+  let hypercertEligible = 0
+  let reviewed = 0
+
+  for (const a of all) {
+    for (const s of a.sources) sourceUrls.add(s.url)
+    for (const c of a.contributors) if (c.github) contributors.add(c.github)
+    if (a.impact?.eligible_for_hypercert) hypercertEligible++
+    if (a.status === "reviewed" || a.status === "published") reviewed++
+  }
+
+  const count = (t: ArtifactType) => all.filter((a) => a.type === t).length
+
+  return {
+    total: all.length,
+    species: count("species-page"),
+    regions: count("region-briefing"),
+    missions: count("field-mission"),
+    datasets: count("dataset-card"),
+    research: count("research-summary"),
+    partners: count("partner-profile"),
+    welfare: count("welfare-assessment"),
+    sources: sourceUrls.size,
+    contributors: contributors.size,
+    hypercertEligible,
+    reviewed,
+  }
+}
