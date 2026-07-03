@@ -115,6 +115,24 @@ export function getAllArtifacts(): Artifact[] {
     const bodyHtml = marked.parse(body) as string
     const words = bodyText ? bodyText.split(/\s+/).length : 0
 
+    // Excerpts: prefer frontmatter summary; otherwise use the body with the
+    // leading H1 and the "Status: needs expert review..." blockquote removed
+    // so cards lead with real content instead of boilerplate.
+    let excerptSource = data.summary ? String(data.summary) : ""
+    if (!excerptSource) {
+      const cleaned = body
+        .split("\n")
+        .filter(
+          (line) =>
+            !/^#{1,6}\s/.test(line) &&
+            !/^\s*\|/.test(line) &&
+            !/^>\s*Status:/i.test(line),
+        )
+        .join("\n")
+      excerptSource = stripMarkdown(cleaned)
+    }
+    const excerpt = excerptSource.slice(0, 220).trim()
+
     artifacts.push({
       id: String(data.id ?? slug),
       type,
@@ -125,7 +143,7 @@ export function getAllArtifacts(): Artifact[] {
       githubPath: String(outputs.github_path ?? relPath),
       bodyHtml,
       bodyText,
-      excerpt: bodyText.slice(0, 220).trim(),
+      excerpt,
       readingMinutes: Math.max(1, Math.round(words / 200)),
       species_group: toArray(data.species_group),
       species: toArray(data.species),

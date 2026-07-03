@@ -14,9 +14,10 @@ export function GuardianPreview() {
               The commons, watching in real time
             </h2>
             <p className="mt-4 text-pretty leading-relaxed text-abyss-muted">
-              Guardian layers live public data over our reviewed knowledge — coral
-              bleaching alerts from NOAA Coral Reef Watch and biodiversity
-              occurrence data from OBIS. Facts appear only when the source responds.
+              Guardian layers live public data over our reviewed knowledge —
+              biodiversity occurrence records from OBIS and GBIF, the same open
+              sources the Ocean Intelligence System watches. Facts appear only
+              when the source responds.
             </p>
             <div className="mt-8">
               <ButtonLink href="/guardian" variant="onDark">

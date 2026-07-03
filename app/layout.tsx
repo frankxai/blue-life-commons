@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next"
-import { unstable_ViewTransition as ViewTransition } from "react"
+import { ViewTransition } from "react"
 import { Geist, Geist_Mono, Newsreader } from "next/font/google"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
