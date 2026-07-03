@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next"
+import { unstable_ViewTransition as ViewTransition } from "react"
 import { Geist, Geist_Mono, Newsreader } from "next/font/google"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
@@ -80,9 +81,15 @@ export default function RootLayout({
           Skip to content
         </a>
         <SiteHeader />
-        <main id="main" className="flex-1">
-          {children}
-        </main>
+        <ViewTransition
+          enter={{ "nav-forward": "nav-forward", "nav-back": "nav-back", default: "none" }}
+          exit={{ "nav-forward": "nav-forward", "nav-back": "nav-back", default: "none" }}
+          default="none"
+        >
+          <main id="main" className="flex-1">
+            {children}
+          </main>
+        </ViewTransition>
         <SiteFooter />
       </body>
     </html>

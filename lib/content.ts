@@ -207,6 +207,22 @@ export function getRelatedArtifacts(a: Artifact, limit = 4): Artifact[] {
     .map((s) => s.x)
 }
 
+/**
+ * Load a plain markdown document (governance, docs) as HTML.
+ * Returns null if the file does not exist.
+ */
+export function getDocHtml(relativePath: string): { title: string; html: string } | null {
+  const filePath = path.join(ROOT, relativePath)
+  if (!fs.existsSync(filePath)) return null
+  const raw = fs.readFileSync(filePath, "utf-8")
+  const { content } = matter(raw)
+  const titleMatch = content.match(/^#\s+(.+)$/m)
+  const title = titleMatch ? titleMatch[1].trim() : relativePath
+  // Drop the first H1 — pages render their own title.
+  const body = content.replace(/^#\s+.+$/m, "")
+  return { title, html: marked.parse(body) as string }
+}
+
 export function getCommonsStats(): CommonsStats {
   const all = getAllArtifacts()
   const sourceUrls = new Set<string>()

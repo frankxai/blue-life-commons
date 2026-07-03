@@ -18,14 +18,16 @@ function SignalCard({ signal }: { signal: SpeciesSignal }) {
     >
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <h3 className="truncate font-serif text-lg font-semibold text-abyss-foreground group-hover:text-glow">
+          <h3 className="text-balance font-serif text-lg font-semibold leading-tight text-abyss-foreground group-hover:text-glow">
             {signal.name}
           </h3>
-          <p className="truncate text-xs italic text-abyss-muted">
+          <p className="mt-0.5 truncate text-xs italic text-abyss-muted">
             {signal.scientificName}
           </p>
         </div>
-        <IucnBadge category={signal.iucn} size="sm" />
+        <div className="shrink-0">
+          <IucnBadge category={signal.iucn} size="sm" />
+        </div>
       </div>
 
       {signal.available ? (
