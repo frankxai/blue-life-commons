@@ -4,123 +4,122 @@
   <img src=".github/hero.svg" alt="Blue Life Commons: source-led ocean intelligence contribution workflow" width="100%">
 </p>
 
-Blue Life Commons is an open-source **Ocean Intelligence commons** where citizens, researchers, developers, educators, travelers, and conservation organizations turn ocean curiosity into useful artifacts: species guides, field missions, maps, research summaries, datasets, notebooks, MCP tools, films, and local action systems.
+<p align="center"><b>An open, reviewed, CC-BY commons of ocean intelligence — that humans and AI agents can both read from and contribute to.</b></p>
 
 [![Catalog](https://img.shields.io/badge/catalog-living%20index-0f766e)](CATALOG.md)
 [![Sources](https://img.shields.io/badge/sources-required-2563eb)](SOURCES.md)
 [![Ethics](https://img.shields.io/badge/ethics-review%20gated-7c3aed)](ETHICS.md)
 [![Agents](https://img.shields.io/badge/agents-PRs%20not%20direct%20commits-f59e0b)](AGENTS.md)
+[![Contributions](https://img.shields.io/badge/contributions-welcome-16a34a)](CONTRIBUTING.md)
 [![License: CC BY 4.0](https://img.shields.io/badge/content-CC%20BY%204.0-0891b2)](https://creativecommons.org/licenses/by/4.0/)
+
+Blue Life Commons turns scattered ocean knowledge into **reviewed, source-led, openly-licensed artifacts** — species guides, region briefings, field missions, dataset cards, and the MCP tooling to query them. Every artifact is cited, ethics-checked, and machine-readable. Nothing ships without a source.
 
 An initiative by Starlight Intelligence Systems — starting with whales, dolphins, seals, sea lions, turtles, sharks, rays, and reef ecosystems.
 
+---
+
+## Who it's for
+
+| You are a… | You get… |
+|---|---|
+| **Citizen / ocean lover** | Plain-language, sourced guides to species and places — and a way to add what you know about your stretch of coast. |
+| **Researcher** | A reviewed corpus with citations carried through every artifact, plus dataset cards for the open marine APIs you already use. |
+| **Developer / agent builder** | Schema-valid, machine-readable content and an [MCP server](https://github.com/frankxai/marine-mcp) that serves it `grounded or silent` — no invented facts. |
+| **Educator** | Field missions and lessons you can run with students, each with safety and ethics built in. |
+| **NGO / conservation org** | An open knowledge base you can build a Research-OS on, without starting from a blank page. |
+
+---
+
 ## 90-second start
 
-Choose the lane that matches why you are here:
+Pick the lane that matches why you're here:
 
-| I want to... | Start with |
+| I want to… | Start with |
 |---|---|
-| Browse published artifacts | [`CATALOG.md`](CATALOG.md) |
+| Browse what's already published | [`CATALOG.md`](CATALOG.md) — the living index |
 | Contribute a species page, region briefing, mission, or dataset card | [`CONTRIBUTING.md`](CONTRIBUTING.md) |
-| Use a coding agent safely | [`AGENTS.md`](AGENTS.md) |
-| Check source requirements | [`SOURCES.md`](SOURCES.md) |
-| Check wildlife interaction rules | [`ETHICS.md`](ETHICS.md) |
+| Work the commons with a coding agent | [`AGENTS.md`](AGENTS.md) |
+| Understand the citation bar | [`SOURCES.md`](SOURCES.md) |
+| Understand the wildlife-interaction rules | [`ETHICS.md`](ETHICS.md) |
+| Understand *why* this exists and how it stays free | [`STRATEGY.md`](STRATEGY.md) |
 
-Fast local checks:
+Run the checks locally before you open a PR:
 
 ```bash
-python scripts/build_catalog.py --check
-python scripts/validate_artifacts.py
-python scripts/lint_content.py
-python scripts/validate_species_media.py
+python scripts/build_catalog.py --check    # is the catalog index current?
+python scripts/validate_artifacts.py        # do artifacts match the schema?
+python scripts/lint_content.py              # style + link checks
+python scripts/validate_species_media.py    # are approved species visuals safe to render?
 ```
 
-## The hard rule
+---
 
-> Every conversation becomes an issue. Every issue becomes an artifact. Every artifact becomes public knowledge, partner leverage, or funded impact.
-
-And its corollary:
-
-> Discord discusses. GitHub decides. Website publishes. Ledger records.
-
-## The core model
-
-```
-Person / Researcher / Agent / NGO
-        ↓
-GitHub Issue / Mission / Research Request
-        ↓
-AI-assisted contribution
-        ↓
-Pull Request
-        ↓
-Review: source, ethics, quality
-        ↓
-Website / Map / Notebook / MCP / Report / Film
-        ↓
-Impact record + contributor credit
-        ↓
-Funding, sponsorship, grants, reputation
-```
-
-Every action must end as an artifact. This repository is the machine room: the source of truth from which public pages, maps, lessons, and impact records are generated.
-
-## The three-layer system
-
-| Layer | Surface | Role |
-|---|---|---|
-| **Blue Life Commons** (this project) | Public-good knowledge + open-source workflows + impact ledger | Creates trust |
-| **Ocean Intelligence OS** | Productized software + agent systems + dashboards + partner portals | Creates continuity |
-| **Starlight Marine Intelligence Systems** | Business / implementation / media / institutional adoption | Creates reach |
-
-The commons stays free. The business sells speed, implementation, design, integration, and institutional reliability — never access to ocean knowledge.
-
-## Repository structure
+## What's inside
 
 ```
 blue-life-commons
-├── content/              # species, regions, guides — versioned knowledge
-│   ├── species/          # species guilds: cetaceans, pinnipeds, turtles, sharks-rays, reefs
+├── content/              # versioned knowledge and media contracts
+│   ├── species/          # species guilds: cetaceans, pinnipeds, turtles, sharks-rays, reefs, sirenians
 │   ├── media/            # species image, source-card, rights, and review registries
 │   └── regions/          # regional ocean briefings
-├── missions/             # citizen science + travel field missions
+├── missions/             # citizen-science + travel field missions
 ├── schema/               # the metadata schema that connects every artifact
-├── agent/                # agent harness: role briefs for coding agents
-├── governance/           # funding architecture, governance stages, impact records
+├── governance/           # governance stages, funding architecture, impact records
+├── agent/                # role briefs for coding agents working the commons
+├── scripts/              # catalog, artifact, content, and media validation/build tools
 ├── docs/                 # contributor onboarding, researcher guides
 │   └── visual-system/    # brand assets, species media pipeline, and visual explorer specs
-└── .github/              # issue templates, PR template, validation workflows
+└── .github/              # issue templates, PR template, CI validation
 ```
 
-## Browse the commons
+[`CATALOG.md`](CATALOG.md) is auto-generated from `content/` — it indexes every published artifact by type. Regenerate it with `python scripts/build_catalog.py`; CI fails if it drifts out of date.
 
-[`CATALOG.md`](CATALOG.md) is a living, auto-generated index of every published artifact (species pages, region briefings, missions, dataset cards, partner profiles), grouped by type. Regenerate it with `python scripts/build_catalog.py`; CI fails if it is stale.
+---
 
 ## How to contribute
 
-1. Read [CONTRIBUTING.md](CONTRIBUTING.md) and pick an artifact class (species page, region briefing, field mission, dataset card, MCP connector, translation, lesson…).
-2. Find or open an issue using the templates in `.github/ISSUE_TEMPLATE/`.
-3. Create your artifact with the metadata schema in [schema/artifact-schema.md](schema/artifact-schema.md).
-4. Open a pull request. Reviews check **sources, ethics, and clarity**.
-5. Once merged, your artifact flows to the website, map, academy, and impact ledger — with your credit attached.
+Every contribution is an **artifact**: a reviewed, sourced, schema-valid file that flows to the website, map, and impact ledger with your credit attached.
 
-Using a coding agent (Claude Code, Codex, Cursor)? Start at [AGENTS.md](AGENTS.md).
+1. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) and pick an artifact class — species page, region briefing, field mission, dataset card, MCP connector, translation, or lesson.
+2. Open or find an issue using the templates in [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/).
+3. Write your artifact against the metadata schema in [`schema/artifact-schema.md`](schema/artifact-schema.md).
+4. Open a pull request. Review checks three things: **sources, ethics, and clarity**.
+5. On merge, your artifact is published and credited.
 
-## Agent tooling (the IS-engine)
+New contributors and coding agents both start the same way — with a source. If you can't cite it, it doesn't go in.
 
-Two companion repos let any agent work the commons safely:
+### Working with a coding agent
+
+Two companion repos let Claude Code, Codex, or Cursor work the commons safely:
 
 - **[`marine-mcp`](https://github.com/frankxai/marine-mcp)** — a review-gated MCP server that serves this corpus to agents. It returns a curated body *as fact* only when the artifact is review-approved, and carries `sources[]` through every response (`grounded or silent`).
-- **[`marine-agent-skills`](https://github.com/frankxai/marine-agent-skills)** — a Claude Code skill pack (`/species-page`, `/field-mission`, `/ethics-check`, `/source-verify`, `/validate-artifact`, `/open-artifact-pr`) so contributions are schema-valid, sourced, and ethics-checked before the PR.
+- **[`marine-agent-skills`](https://github.com/frankxai/marine-agent-skills)** — a Claude Code skill pack (`/species-page`, `/field-mission`, `/ethics-check`, `/source-verify`, `/validate-artifact`, `/open-artifact-pr`) so a contribution is schema-valid, sourced, and ethics-checked *before* the PR.
 
-## Non-negotiable standards
+Start at [`AGENTS.md`](AGENTS.md).
 
-These are standards, not popularity contests, and are never subject to community vote:
+---
 
-- Scientific truth and citation standards — see [SOURCES.md](SOURCES.md)
-- Animal safety and wildlife interaction rules — see [ETHICS.md](ETHICS.md)
-- Expert review requirements for science-sensitive content
+## The standards that never bend
+
+These are **standards, not popularity contests** — never subject to community vote or commercial pressure:
+
+- **Scientific truth and citation** — every claim traces to a real, tiered source. See [`SOURCES.md`](SOURCES.md).
+- **Animal safety and wildlife-interaction ethics** — no content that encourages harmful approach or disturbance. See [`ETHICS.md`](ETHICS.md).
+- **Expert review** for science-sensitive content before it is marked `published`.
+
+A guardian, a guide, or a mission is `grounded or silent`: it states a fact only if that fact traces to a reviewed artifact or a cited source. No invented facts, no anthropomorphic guesses.
+
+---
+
+## Why it exists (and how it stays free)
+
+Blue Life Commons is the **trust layer** of a three-layer system: the free, reviewed knowledge base; the open-source software that acts on it ([`ocean-intelligence-system`](https://github.com/frankxai/ocean-intelligence-system)); and the commercial layer that implements and distributes it. The commons stays free forever — sustainability comes from the work *around* the knowledge, never from gating it.
+
+The full picture — the three layers, the operating model, the commercial boundary, and how impact compounds — is in **[`STRATEGY.md`](STRATEGY.md)**. How this repo fits the wider FrankX ecosystem is in [`ECOSYSTEM.md`](ECOSYSTEM.md).
+
+---
 
 ## License
 
-Content is licensed [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) unless an artifact's metadata states otherwise. Code is open source.
+Content is licensed [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) unless an artifact's metadata states otherwise. Code is open source. Cite the commons, build on it, and send your improvements back.

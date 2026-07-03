@@ -1,0 +1,327 @@
+@import "tailwindcss";
+
+/*
+  Blue Life Commons — oceanic editorial design system
+  Two-surface model:
+   - Abyssal dark surfaces for immersive / data moments (hero, guardian, impact)
+   - Warm paper light surfaces for long-form editorial reading
+*/
+
+@theme {
+  /* Fonts */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
+
+  /* Core palette (light editorial surface) */
+  --color-background: oklch(0.98 0.008 220);
+  --color-foreground: oklch(0.24 0.03 240);
+
+  --color-paper: oklch(0.99 0.006 200);
+  --color-paper-foreground: oklch(0.26 0.03 240);
+
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.24 0.03 240);
+
+  --color-muted: oklch(0.95 0.012 220);
+  --color-muted-foreground: oklch(0.5 0.02 235);
+
+  --color-border: oklch(0.9 0.014 220);
+  --color-input: oklch(0.9 0.014 220);
+  --color-ring: oklch(0.55 0.09 200);
+
+  /* Brand: deep teal primary + luminous cyan accent */
+  --color-primary: oklch(0.52 0.09 195);
+  --color-primary-foreground: oklch(0.99 0.006 200);
+
+  --color-accent: oklch(0.72 0.14 200);
+  --color-accent-foreground: oklch(0.2 0.04 235);
+
+  /* Abyssal dark surfaces */
+  --color-abyss: oklch(0.19 0.035 245);
+  --color-abyss-deep: oklch(0.14 0.03 250);
+  --color-abyss-foreground: oklch(0.93 0.02 210);
+  --color-abyss-muted: oklch(0.66 0.03 220);
+  --color-abyss-border: oklch(0.32 0.03 240);
+
+  /* Bioluminescent live-signal accent */
+  --color-glow: oklch(0.82 0.15 195);
+
+  /* Status / semantic */
+  --color-coral: oklch(0.66 0.17 30);
+  --color-coral-foreground: oklch(0.99 0.01 40);
+  --color-amber: oklch(0.75 0.14 75);
+  --color-kelp: oklch(0.58 0.11 150);
+  --color-destructive: oklch(0.58 0.19 25);
+  --color-destructive-foreground: oklch(0.99 0.01 40);
+
+  --radius: 0.75rem;
+  --radius-sm: calc(var(--radius) - 0.35rem);
+  --radius-lg: calc(var(--radius) + 0.35rem);
+
+  --shadow-elevated: 0 1px 2px oklch(0.2 0.03 240 / 0.06),
+    0 12px 32px -12px oklch(0.2 0.05 240 / 0.18);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-accent-foreground);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Editorial prose rendered from markdown */
+  .prose-ocean {
+    color: var(--color-foreground);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+  .prose-ocean > * + * {
+    margin-top: 1.15em;
+  }
+  .prose-ocean h2 {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-top: 2.4rem;
+    letter-spacing: -0.01em;
+    color: var(--color-foreground);
+  }
+  .prose-ocean h3 {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.8rem;
+    color: var(--color-foreground);
+  }
+  .prose-ocean h4 {
+    font-weight: 650;
+    font-size: 1.02rem;
+    margin-top: 1.4rem;
+  }
+  .prose-ocean p,
+  .prose-ocean li {
+    color: color-mix(in oklch, var(--color-foreground) 88%, transparent);
+  }
+  .prose-ocean a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: color-mix(in oklch, var(--color-primary) 40%, transparent);
+  }
+  .prose-ocean a:hover {
+    text-decoration-color: var(--color-primary);
+  }
+  .prose-ocean ul,
+  .prose-ocean ol {
+    padding-left: 1.35rem;
+  }
+  .prose-ocean ul {
+    list-style: disc;
+  }
+  .prose-ocean ol {
+    list-style: decimal;
+  }
+  .prose-ocean li + li {
+    margin-top: 0.4rem;
+  }
+  .prose-ocean blockquote {
+    border-left: 3px solid var(--color-accent);
+    padding-left: 1rem;
+    font-style: italic;
+    color: var(--color-muted-foreground);
+  }
+  .prose-ocean code {
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    background: var(--color-muted);
+    padding: 0.15em 0.4em;
+    border-radius: var(--radius-sm);
+  }
+  .prose-ocean pre {
+    background: var(--color-abyss-deep);
+    color: var(--color-abyss-foreground);
+    padding: 1rem 1.15rem;
+    border-radius: var(--radius);
+    overflow-x: auto;
+    font-size: 0.85rem;
+  }
+  .prose-ocean pre code {
+    background: transparent;
+    padding: 0;
+  }
+  .prose-ocean table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  .prose-ocean th,
+  .prose-ocean td {
+    border: 1px solid var(--color-border);
+    padding: 0.5rem 0.7rem;
+    text-align: left;
+  }
+  .prose-ocean th {
+    background: var(--color-muted);
+    font-weight: 600;
+  }
+  .prose-ocean hr {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 2rem 0;
+  }
+  .prose-ocean em {
+    font-style: italic;
+  }
+
+  /* subtle grid / texture for abyss surfaces */
+  .abyss-grid {
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      color-mix(in oklch, var(--color-abyss-foreground) 12%, transparent) 1px,
+      transparent 0
+    );
+    background-size: 34px 34px;
+  }
+}
+
+/* Live-signal pulse */
+@keyframes signal-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.82);
+  }
+}
+.signal-dot {
+  animation: signal-pulse 2.4s ease-in-out infinite;
+}
+
+/* Scroll reveal */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.reveal {
+  animation: rise-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ===== View Transitions ===== */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.35s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes slide-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+}
+@keyframes slide-to-left {
+  to {
+    opacity: 0;
+    transform: translateX(-28px);
+  }
+}
+@keyframes slide-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-28px);
+  }
+}
+@keyframes slide-to-right {
+  to {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+}
+
+::view-transition-old(.nav-forward) {
+  animation: 0.28s cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+}
+::view-transition-new(.nav-forward) {
+  animation: 0.32s cubic-bezier(0.22, 1, 0.36, 1) both slide-from-right;
+}
+::view-transition-old(.nav-back) {
+  animation: 0.28s cubic-bezier(0.4, 0, 0.2, 1) both slide-to-right;
+}
+::view-transition-new(.nav-back) {
+  animation: 0.32s cubic-bezier(0.22, 1, 0.36, 1) both slide-from-left;
+}
+::view-transition-old(.fade-in) {
+  animation: 0.2s ease both fade-out;
+}
+::view-transition-new(.fade-in) {
+  animation: 0.4s ease both fade-in;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+  .signal-dot {
+    animation: none !important;
+  }
+}

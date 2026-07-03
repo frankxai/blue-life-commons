@@ -1,0 +1,36 @@
+{
+  "name": "blue-life-commons",
+  "version": "1.0.0",
+  "description": "Blue Life Commons — the open intelligence commons for ocean life.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next typegen && tsc --noEmit",
+    "typecheck": "next typegen && tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frankxai/blue-life-commons.git"
+  },
+  "license": "CC-BY-4.0",
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^18.0.5",
+    "next": "^16.2.10",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.2",
+    "@types/node": "^26.1.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "postcss": "^8.5.16",
+    "tailwindcss": "^4.3.2",
+    "typescript": "^6.0.3"
+  }
+}
