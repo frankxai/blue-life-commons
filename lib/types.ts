@@ -1,0 +1,132 @@
+export type ArtifactType =
+  | "species-page"
+  | "region-briefing"
+  | "field-mission"
+  | "dataset-card"
+  | "research-summary"
+  | "partner-profile"
+  | "welfare-assessment"
+
+export type ReviewState = "required" | "pending" | "approved" | "not-applicable"
+export type ArtifactStatus =
+  | "draft"
+  | "needs-expert-review"
+  | "reviewed"
+  | "published"
+
+export type IucnCategory =
+  | "EX"
+  | "EW"
+  | "CR"
+  | "EN"
+  | "VU"
+  | "NT"
+  | "LC"
+  | "DD"
+  | "NE"
+
+export interface Source {
+  url: string
+  title: string
+  tier?: 1 | 2 | 3
+  accessed?: string
+  doi?: string
+}
+
+export interface Review {
+  science?: ReviewState
+  ethics?: ReviewState
+  editor?: ReviewState
+}
+
+export interface Iucn {
+  category?: IucnCategory
+  assessment_date?: string
+  version?: string
+  scope?: string
+  population_trend?: string
+}
+
+export interface FiveDomains {
+  nutrition?: string
+  environment?: string
+  health?: string
+  behaviour?: string
+  mental_state?: string
+}
+
+export interface Welfare {
+  state?: string
+  dominant_stressor?: string
+  confidence?: string
+  five_domains?: FiveDomains
+}
+
+export interface Sensitivity {
+  tier?: string
+  rationale?: string
+  generalized_to?: string
+}
+
+export interface Impact {
+  claim?: string
+  eligible_for_hypercert?: boolean
+}
+
+export interface Contributor {
+  github?: string
+  name?: string
+}
+
+export interface Outputs {
+  website_path?: string
+  github_path?: string
+  map_layer?: boolean
+}
+
+export interface Artifact {
+  id: string
+  type: ArtifactType
+  title: string
+  slug: string
+  path: string
+  href: string
+  githubPath: string
+  bodyHtml: string
+  bodyText: string
+  excerpt: string
+  readingMinutes: number
+
+  species_group?: string[]
+  species?: string[]
+  region?: string[]
+  audience?: string[]
+  difficulty?: string
+  status?: ArtifactStatus
+  sources: Source[]
+  review?: Review
+  iucn?: Iucn
+  welfare?: Welfare
+  sensitivity?: Sensitivity
+  consensus_state?: string
+  last_verified?: string
+  impact?: Impact
+  contributors: Contributor[]
+  license?: string
+  mapLayer?: boolean
+}
+
+export interface CommonsStats {
+  total: number
+  species: number
+  regions: number
+  missions: number
+  datasets: number
+  research: number
+  partners: number
+  welfare: number
+  sources: number
+  contributors: number
+  hypercertEligible: number
+  reviewed: number
+}
