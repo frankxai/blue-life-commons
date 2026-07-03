@@ -1,39 +1,39 @@
 ---
 id: species-red-mangrove
 type: species-page
-title: "Red Mangrove (Rhizophora mangle)"
+title: Red Mangrove (Rhizophora mangle)
 species_group:
-  - reefs
+- reefs
 species:
-  - rhizophora-mangle
+- rhizophora-mangle
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/178851/69024847"
-    title: "IUCN Red List — Rhizophora mangle (Red Mangrove)"
-    tier: 1
-    accessed: "2026-06-16"
-  - url: "https://floridakeys.noaa.gov/plants/mangroves.html"
-    title: "NOAA Florida Keys National Marine Sanctuary — Mangrove Forest"
-    tier: 2
-    accessed: "2026-06-16"
-  - url: "https://ocean.si.edu/ocean-life/plants-algae/mangroves"
-    title: "Smithsonian Ocean — Mangroves"
-    tier: 2
-    accessed: "2026-06-16"
+- url: https://www.iucnredlist.org/species/178851/69024847
+  title: "IUCN Red List \u2014 Rhizophora mangle (Red Mangrove)"
+  tier: 1
+  accessed: '2026-06-16'
+- url: https://floridakeys.noaa.gov/plants/mangroves.html
+  title: "NOAA Florida Keys National Marine Sanctuary \u2014 Mangrove Forest"
+  tier: 2
+  accessed: '2026-06-16'
+- url: https://ocean.si.edu/ocean-life/plants-algae/mangroves
+  title: "Smithsonian Ocean \u2014 Mangroves"
+  tier: 2
+  accessed: '2026-06-16'
 review:
   science: required
   ethics: approved
   editor: pending
 iucn:
   category: LC
-  assessment_date: "2010"
-  version: "3.1"
+  assessment_date: '2010'
+  version: '3.1'
   population_trend: decreasing
   scope: global
 welfare:
@@ -41,20 +41,64 @@ welfare:
   dominant_stressor: habitat-loss
   confidence: modeled
   five_domains:
-    environment: "Coastal development, aquaculture conversion, and altered freshwater flow remove and degrade mangrove forest; sea-level rise and warming add pressure (NOAA; Smithsonian)."
-    health: "Mangroves buffer coasts and trap sediment, but cleared stands are slow to re-establish and their nursery function is lost when forest is removed (NOAA)."
+    environment: Coastal development, aquaculture conversion, and altered freshwater flow remove and degrade mangrove forest; sea-level rise and warming add pressure (NOAA; Smithsonian).
+    health: Mangroves buffer coasts and trap sediment, but cleared stands are slow to re-establish and their nursery function is lost when forest is removed (NOAA).
 consensus_state: settled
-last_verified: "2026-06-16"
+last_verified: '2026-06-16'
 outputs:
   website_path: /species/reefs/red-mangrove
   github_path: content/species/reefs/red-mangrove.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed page for the red mangrove, a coastal foundation species and fish nursery habitat."
+  claim: Published a source-reviewed page for the red mangrove, a coastal foundation species and fish nursery habitat.
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#species-red-mangrove
+  render_contract: content/media/species-media-render-contract.yaml#species-red-mangrove
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-red-mangrove
+  primary:
+    asset_id: species-red-mangrove-wikimedia-red-mangrove-imported-from-inaturalist-photo-256
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/f/f4/Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg
+    creator: no rights reserved
+    credit: https://www.inaturalist.org/photos/256882666
+    license: CC0
+    license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    rights_status: cc0
+    alt_text: Photo of red mangrove uploaded from iNaturalist.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg
+    rights_status: cc0
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: CC0
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets:
+  - asset_id: blc-imagegen-mangrove-nursery-001
+    path: assets/generated/imagegen/2026-06-26-batch-004/blc-imagegen-mangrove-nursery-001.png
+    role: generated_habitat_plate
+    status: approved_draft
+    use_limitations: Supporting visual only; not biological evidence, official identification media, or proof of conservation status.
 ---
 
 # Red Mangrove (Rhizophora mangle)

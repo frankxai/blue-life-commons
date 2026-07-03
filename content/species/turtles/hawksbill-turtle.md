@@ -1,64 +1,103 @@
 ---
 id: hawksbill-turtle
 type: species-page
-title: "Hawksbill Turtle (Eretmochelys imbricata)"
+title: Hawksbill Turtle (Eretmochelys imbricata)
 species_group:
-  - turtles
+- turtles
 species:
-  - eretmochelys-imbricata
+- eretmochelys-imbricata
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/8005/12193210"
-    title: "IUCN Red List — Eretmochelys imbricata (Hawksbill Turtle), global assessment"
-    accessed: "2026-06-16"
-    tier: 1
-  - url: "https://www.fisheries.noaa.gov/species/hawksbill-turtle"
-    title: "NOAA Fisheries — Hawksbill Turtle"
-    accessed: "2026-06-16"
-    tier: 2
-  - url: "https://cites.org/eng/app/appendices.php"
-    title: "CITES Appendices (Eretmochelys imbricata listed Appendix I)"
-    accessed: "2026-06-16"
-    tier: 2
+- url: https://www.iucnredlist.org/species/8005/12193210
+  title: "IUCN Red List \u2014 Eretmochelys imbricata (Hawksbill Turtle), global assessment"
+  accessed: '2026-06-16'
+  tier: 1
+- url: https://www.fisheries.noaa.gov/species/hawksbill-turtle
+  title: "NOAA Fisheries \u2014 Hawksbill Turtle"
+  accessed: '2026-06-16'
+  tier: 2
+- url: https://cites.org/eng/app/appendices.php
+  title: CITES Appendices (Eretmochelys imbricata listed Appendix I)
+  accessed: '2026-06-16'
+  tier: 2
 review:
   science: required
   ethics: approved
   editor: pending
 iucn:
   category: CR
-  assessment_date: "2008"
+  assessment_date: '2008'
   scope: global
   population_trend: decreasing
 sensitivity:
   tier: extreme
-  rationale: "Critically Endangered species whose shell is targeted for the illegal tortoiseshell trade; nesting beaches and reef aggregations are acutely exploitable, so no precise locations are published per ETHICS.md."
+  rationale: Critically Endangered species whose shell is targeted for the illegal tortoiseshell trade; nesting beaches and reef aggregations are acutely exploitable, so no precise locations are published per ETHICS.md.
   generalized_to: regional
 welfare:
   state: critical
   dominant_stressor: habitat-loss
   confidence: expert-opinion
   five_domains:
-    health: "Illegal harvest for the tortoiseshell trade and bycatch in fishing gear are leading threats (NOAA Fisheries; IUCN)."
-    environment: "Dependence on coral-reef foraging habitat makes the species vulnerable to reef degradation and climate change (NOAA Fisheries)."
-    behaviour: "Disturbance of nesting females and hatchlings interrupts reproduction; artificial light disorients hatchlings (ETHICS.md / NOAA Fisheries)."
+    health: Illegal harvest for the tortoiseshell trade and bycatch in fishing gear are leading threats (NOAA Fisheries; IUCN).
+    environment: Dependence on coral-reef foraging habitat makes the species vulnerable to reef degradation and climate change (NOAA Fisheries).
+    behaviour: Disturbance of nesting females and hatchlings interrupts reproduction; artificial light disorients hatchlings (ETHICS.md / NOAA Fisheries).
 consensus_state: settled
-last_verified: "2026-06-16"
+last_verified: '2026-06-16'
 outputs:
   website_path: /species/turtles/hawksbill-turtle
   github_path: content/species/turtles/hawksbill-turtle.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed species intelligence page for the Critically Endangered hawksbill turtle."
+  claim: Published a source-reviewed species intelligence page for the Critically Endangered hawksbill turtle.
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#hawksbill-turtle
+  render_contract: content/media/species-media-render-contract.yaml#hawksbill-turtle
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#hawksbill-turtle
+  primary:
+    asset_id: hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-parque-naci
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_parque_nacional_Ras_Muhammad,_Egipto,_2022-03-28,_DD_56.jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Tortuga_carey_%28Eretmochelys_imbricata%29%2C_parque_nacional_Ras_Muhammad%2C_Egipto%2C_2022-03-28%2C_DD_56.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/8/8b/Tortuga_carey_%28Eretmochelys_imbricata%29%2C_parque_nacional_Ras_Muhammad%2C_Egipto%2C_2022-03-28%2C_DD_56.jpg
+    creator: Diego Delso
+    credit: Own work
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa
+    alt_text: Hawksbill sea turtle (Eretmochelys imbricata), Ras Muhammad National Park, Egypt.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_parque_nacional_Ras_Muhammad,_Egipto,_2022-03-28,_DD_56.jpg
+    rights_status: cc-by-sa
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: CC BY-SA 4.0
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets: []
 ---
 
 # Hawksbill Turtle (Eretmochelys imbricata)

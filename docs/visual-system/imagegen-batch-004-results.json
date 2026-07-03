@@ -1,0 +1,106 @@
+{
+  "batchId": "imagegen-2026-06-26-batch-004",
+  "generatedAt": "2026-06-26T21:23:33+02:00",
+  "tool": "built-in image_gen",
+  "mode": "generate",
+  "repo": "blue-life-commons",
+  "promptDocument": "docs/visual-system/imagegen-batch-004.md",
+  "selectedOutputDirectory": "assets/generated/imagegen/2026-06-26-batch-004",
+  "sourceCacheDirectory": "C:/Users/frank/.codex/generated_images/019f046a-b1a9-7932-a32b-70efd30b04f9",
+  "qaContactSheet": "C:/Users/frank/starlight/repos/_generated/visual-qa/blue-life-commons/imagegen-batch-004/contact-sheet.png",
+  "policy": {
+    "publicationStatus": "draft source plates",
+    "factualUse": "Do not use as biological evidence, species identification proof, exact map, data chart, safety guidance, or conservation claim.",
+    "recommendedUse": "Use as hero, social, deck, and section imagery with factual overlays composed separately from verified sources."
+  },
+  "outputs": [
+    {
+      "id": "commons-current-hero-001",
+      "status": "approved draft",
+      "score30": 28,
+      "file": "assets/generated/imagegen/2026-06-26-batch-004/blc-imagegen-commons-current-hero-001.png",
+      "sourceCacheFile": "ig_05d590669d40bf42016a3ecf47af7481918d0c007b8ff874a6.png",
+      "dimensions": "1672x941",
+      "useCase": "photorealistic-natural",
+      "notes": "Warm, credible commons scene; no readable text visible."
+    },
+    {
+      "id": "humpback-distance-001",
+      "status": "approved draft",
+      "score30": 27,
+      "file": "assets/generated/imagegen/2026-06-26-batch-004/blc-imagegen-humpback-distance-001.png",
+      "sourceCacheFile": "ig_05d590669d40bf42016a3ecfb1a17c81919a76da7c59f6e180.png",
+      "dimensions": "1672x941",
+      "useCase": "photorealistic-natural",
+      "notes": "Ethical vessel distance reads clearly; use as atmosphere, not species evidence."
+    },
+    {
+      "id": "reef-nursery-001",
+      "status": "approved draft",
+      "score30": 28,
+      "file": "assets/generated/imagegen/2026-06-26-batch-004/blc-imagegen-reef-nursery-001.png",
+      "sourceCacheFile": "ig_05d590669d40bf42016a3ecfe90f688191a256f91d15871692.png",
+      "dimensions": "1672x941",
+      "useCase": "scientific-educational",
+      "notes": "Strong restoration source plate with distant diver and no touching."
+    },
+    {
+      "id": "tidepool-learning-001",
+      "status": "approved draft",
+      "score30": 27,
+      "file": "assets/generated/imagegen/2026-06-26-batch-004/blc-imagegen-tidepool-learning-001.png",
+      "sourceCacheFile": "ig_05d590669d40bf42016a3ed01818448191a7867aa51cfb0d7f.png",
+      "dimensions": "1086x1448",
+      "useCase": "photorealistic-natural",
+      "notes": "Humane education tone; keep factual overlays separate."
+    },
+    {
+      "id": "ocean-intelligence-signals-001",
+      "status": "approved draft",
+      "score30": 27,
+      "file": "assets/generated/imagegen/2026-06-26-batch-004/blc-imagegen-ocean-intelligence-signals-001.png",
+      "sourceCacheFile": "ig_05d590669d40bf42016a3ed07b957c819196cf513138e17c2e.png",
+      "dimensions": "1672x941",
+      "useCase": "stylized-concept",
+      "notes": "Good abstract Ocean Intelligence background; no fake UI labels."
+    },
+    {
+      "id": "kelp-otter-guardian-002",
+      "status": "approved draft",
+      "score30": 27,
+      "file": "assets/generated/imagegen/2026-06-26-batch-004/blc-imagegen-kelp-otter-guardian-002.png",
+      "sourceCacheFile": "ig_05d590669d40bf42016a3ed0ff6c388191b59283708951cf24.png",
+      "dimensions": "1672x941",
+      "useCase": "photorealistic-natural",
+      "notes": "Revision fixed the otter identity problem from the first attempt."
+    },
+    {
+      "id": "mangrove-nursery-001",
+      "status": "approved draft",
+      "score30": 28,
+      "file": "assets/generated/imagegen/2026-06-26-batch-004/blc-imagegen-mangrove-nursery-001.png",
+      "sourceCacheFile": "ig_05d590669d40bf42016a3ed13bbabc8191b201479e31e49c37.png",
+      "dimensions": "1672x941",
+      "useCase": "photorealistic-natural",
+      "notes": "Strong habitat plate with subtle community presence."
+    },
+    {
+      "id": "manta-ray-001",
+      "status": "approved draft",
+      "score30": 28,
+      "file": "assets/generated/imagegen/2026-06-26-batch-004/blc-imagegen-manta-ray-001.png",
+      "sourceCacheFile": "ig_05d590669d40bf42016a3ed17b33648191a3ccb553b09e5108.png",
+      "dimensions": "1672x941",
+      "useCase": "photorealistic-natural",
+      "notes": "Clean, spacious species empathy plate; anatomy reads plausible."
+    }
+  ],
+  "rejectedOutputs": [
+    {
+      "id": "kelp-otter-guardian-001",
+      "status": "rejected experiment",
+      "sourceCacheFile": "ig_05d590669d40bf42016a3ed0b4de908191a8a2f2f93431326a.png",
+      "reason": "Animal silhouettes read more like seals or sea lions than sea otters."
+    }
+  ]
+}

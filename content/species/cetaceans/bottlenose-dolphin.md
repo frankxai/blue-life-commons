@@ -1,38 +1,38 @@
 ---
 id: species-bottlenose-dolphin
 type: species-page
-title: "Common Bottlenose Dolphin (Tursiops truncatus)"
+title: Common Bottlenose Dolphin (Tursiops truncatus)
 species_group:
-  - cetaceans
+- cetaceans
 species:
-  - tursiops-truncatus
+- tursiops-truncatus
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/22563/17347397"
-    title: "IUCN Red List — Tursiops truncatus (Common Bottlenose Dolphin)"
-    tier: 1
-    accessed: "2026-06-16"
-  - url: "https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin"
-    title: "NOAA Fisheries — Common Bottlenose Dolphin"
-    tier: 2
-    accessed: "2026-06-16"
-  - url: "https://cites.org/eng/app/appendices.php"
-    title: "CITES Appendices (Tursiops truncatus listed Appendix II)"
-    tier: 2
-    accessed: "2026-06-16"
+- url: https://www.iucnredlist.org/species/22563/17347397
+  title: "IUCN Red List \u2014 Tursiops truncatus (Common Bottlenose Dolphin)"
+  tier: 1
+  accessed: '2026-06-16'
+- url: https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin
+  title: "NOAA Fisheries \u2014 Common Bottlenose Dolphin"
+  tier: 2
+  accessed: '2026-06-16'
+- url: https://cites.org/eng/app/appendices.php
+  title: CITES Appendices (Tursiops truncatus listed Appendix II)
+  tier: 2
+  accessed: '2026-06-16'
 review:
   science: required
   ethics: approved
   editor: pending
 iucn:
   category: LC
-  assessment_date: "2018"
+  assessment_date: '2018'
   scope: global
   population_trend: unknown
 welfare:
@@ -40,24 +40,65 @@ welfare:
   dominant_stressor: entanglement
   confidence: expert-opinion
   five_domains:
-    health: "Fisheries entanglement and gear ingestion, biotoxins, and disease are listed health pressures (NOAA Fisheries)."
-    behaviour: "Illegal feeding and harassment alter natural foraging and caution behaviours (NOAA Fisheries)."
+    health: Fisheries entanglement and gear ingestion, biotoxins, and disease are listed health pressures (NOAA Fisheries).
+    behaviour: Illegal feeding and harassment alter natural foraging and caution behaviours (NOAA Fisheries).
 sensitivity:
   tier: low
-  rationale: "Globally common and wide-ranging; some local resident populations are sensitive but no precise site is published below regional granularity."
+  rationale: Globally common and wide-ranging; some local resident populations are sensitive but no precise site is published below regional granularity.
   generalized_to: regional
 consensus_state: settled
-last_verified: "2026-06-16"
+last_verified: '2026-06-16'
 outputs:
   website_path: /species/cetaceans/bottlenose-dolphin
   github_path: content/species/cetaceans/bottlenose-dolphin.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed species intelligence page for the common bottlenose dolphin."
+  claim: Published a source-reviewed species intelligence page for the common bottlenose dolphin.
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#species-bottlenose-dolphin
+  render_contract: content/media/species-media-render-contract.yaml#species-bottlenose-dolphin
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-bottlenose-dolphin
+  primary:
+    asset_id: species-bottlenose-dolphin-wikimedia-tursiops-truncatus-01
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01.jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Tursiops_truncatus_01.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/1/10/Tursiops_truncatus_01.jpg
+    creator: NASA
+    credit: 'https://images.nasa.gov/details/KSC-04pd0178
+
+      http://mediaarchive.ksc.nasa.gov/detail.cfm?mediaid=21807 on the Wayback Machine at the Wayback Machine'
+    license: Public domain
+    license_url: null
+    rights_status: public-domain
+    alt_text: Bottlenose Dolphin - Tursiops truncatus A dolphin surfs the wake of a research boat on the Banana River - near the Kennedy Space Center.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01.jpg
+    rights_status: public-domain
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: Public domain
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets: []
 ---
 
 # Common Bottlenose Dolphin (Tursiops truncatus)

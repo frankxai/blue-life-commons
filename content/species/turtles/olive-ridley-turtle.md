@@ -1,64 +1,103 @@
 ---
 id: olive-ridley-turtle
 type: species-page
-title: "Olive Ridley Turtle (Lepidochelys olivacea)"
+title: Olive Ridley Turtle (Lepidochelys olivacea)
 species_group:
-  - turtles
+- turtles
 species:
-  - lepidochelys-olivacea
+- lepidochelys-olivacea
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/11534/3292503"
-    title: "IUCN Red List — Lepidochelys olivacea (Olive Ridley Turtle), global assessment"
-    accessed: "2026-06-16"
-    tier: 1
-  - url: "https://www.fisheries.noaa.gov/species/olive-ridley-turtle"
-    title: "NOAA Fisheries — Olive Ridley Turtle"
-    accessed: "2026-06-16"
-    tier: 2
-  - url: "https://cites.org/eng/app/appendices.php"
-    title: "CITES Appendices (Lepidochelys olivacea listed Appendix I)"
-    accessed: "2026-06-16"
-    tier: 2
+- url: https://www.iucnredlist.org/species/11534/3292503
+  title: "IUCN Red List \u2014 Lepidochelys olivacea (Olive Ridley Turtle), global assessment"
+  accessed: '2026-06-16'
+  tier: 1
+- url: https://www.fisheries.noaa.gov/species/olive-ridley-turtle
+  title: "NOAA Fisheries \u2014 Olive Ridley Turtle"
+  accessed: '2026-06-16'
+  tier: 2
+- url: https://cites.org/eng/app/appendices.php
+  title: CITES Appendices (Lepidochelys olivacea listed Appendix I)
+  accessed: '2026-06-16'
+  tier: 2
 review:
   science: required
   ethics: approved
   editor: pending
 iucn:
   category: VU
-  assessment_date: "2008"
+  assessment_date: '2008'
   scope: global
   population_trend: decreasing
 sensitivity:
   tier: high
-  rationale: "Arribada mass-nesting beaches concentrate enormous numbers of reproductive females and eggs in a few sites, making them acutely exploitable; precise nesting locations are withheld per ETHICS.md."
+  rationale: Arribada mass-nesting beaches concentrate enormous numbers of reproductive females and eggs in a few sites, making them acutely exploitable; precise nesting locations are withheld per ETHICS.md.
   generalized_to: regional
 welfare:
   state: pressured
   dominant_stressor: bycatch
   confidence: expert-opinion
   five_domains:
-    health: "Bycatch in fishing gear is identified by NOAA Fisheries as a major threat; historical commercial harvest drove steep declines (NOAA Fisheries; IUCN)."
-    environment: "Nesting-habitat loss and marine debris degrade critical habitat (NOAA Fisheries)."
-    behaviour: "Arribada synchrony concentrates the population at a few beaches, so disturbance there has outsized reproductive consequences (IUCN)."
+    health: Bycatch in fishing gear is identified by NOAA Fisheries as a major threat; historical commercial harvest drove steep declines (NOAA Fisheries; IUCN).
+    environment: Nesting-habitat loss and marine debris degrade critical habitat (NOAA Fisheries).
+    behaviour: Arribada synchrony concentrates the population at a few beaches, so disturbance there has outsized reproductive consequences (IUCN).
 consensus_state: settled
-last_verified: "2026-06-16"
+last_verified: '2026-06-16'
 outputs:
   website_path: /species/turtles/olive-ridley-turtle
   github_path: content/species/turtles/olive-ridley-turtle.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed species intelligence page for the olive ridley turtle."
+  claim: Published a source-reviewed species intelligence page for the olive ridley turtle.
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#olive-ridley-turtle
+  render_contract: content/media/species-media-render-contract.yaml#olive-ridley-turtle
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#olive-ridley-turtle
+  primary:
+    asset_id: olive-ridley-turtle-wikimedia-olive-ridley-sea-turtle-cropped
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:Olive_ridley_sea_turtle_cropped.jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Olive_ridley_sea_turtle_cropped.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/f/f2/Olive_ridley_sea_turtle_cropped.jpg
+    creator: Remove "cropped" from file name and see original file
+    credit: Remove "cropped" from file name and see original file
+    license: CC BY-SA 4.0
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+    rights_status: cc-by-sa
+    alt_text: Olive Ridley Turtle (Lepidochelys olivacea) in an approved source image used for species identification.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:Olive_ridley_sea_turtle_cropped.jpg
+    rights_status: cc-by-sa
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: CC BY-SA 4.0
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets: []
 ---
 
 # Olive Ridley Turtle (Lepidochelys olivacea)

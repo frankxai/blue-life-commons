@@ -32,6 +32,7 @@ Fast local checks:
 python scripts/build_catalog.py --check
 python scripts/validate_artifacts.py
 python scripts/lint_content.py
+python scripts/validate_species_media.py
 ```
 
 ## The hard rule
@@ -80,12 +81,14 @@ The commons stays free. The business sells speed, implementation, design, integr
 blue-life-commons
 ├── content/              # species, regions, guides — versioned knowledge
 │   ├── species/          # species guilds: cetaceans, pinnipeds, turtles, sharks-rays, reefs
+│   ├── media/            # species image, source-card, rights, and review registries
 │   └── regions/          # regional ocean briefings
 ├── missions/             # citizen science + travel field missions
 ├── schema/               # the metadata schema that connects every artifact
 ├── agent/                # agent harness: role briefs for coding agents
 ├── governance/           # funding architecture, governance stages, impact records
 ├── docs/                 # contributor onboarding, researcher guides
+│   └── visual-system/    # brand assets, species media pipeline, and visual explorer specs
 └── .github/              # issue templates, PR template, validation workflows
 ```
 

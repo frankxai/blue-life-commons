@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="220" viewBox="0 0 920 220" role="img" aria-labelledby="title desc">
+  <title id="title">Blue Life Commons lockup</title>
+  <desc id="desc">Horizontal Blue Life Commons logo lockup with source-led ocean intelligence tagline.</desc>
+  <defs>
+    <linearGradient id="card" x1="24" y1="25" x2="144" y2="160" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#06202A"/>
+      <stop offset="1" stop-color="#041014"/>
+    </linearGradient>
+    <linearGradient id="current" x1="35" y1="82" x2="144" y2="142" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4FD1C5"/>
+      <stop offset="0.58" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#F5B84B"/>
+    </linearGradient>
+  </defs>
+  <rect width="920" height="220" rx="0" fill="#041014"/>
+  <g transform="translate(40 32)">
+    <rect x="0" y="0" width="156" height="156" rx="34" fill="url(#card)" stroke="#4FD1C5" stroke-width="6"/>
+    <path d="M39 43h54" stroke="#F2FBFF" stroke-width="9" stroke-linecap="round"/>
+    <path d="M39 62h40" stroke="#A9D7E2" stroke-width="9" stroke-linecap="round"/>
+    <path d="M20 106c25-23 49-23 73 0 15 13.5 28.5 15.4 43 6.4v22c-19 8.1-36.8 4.1-55-11.5-20-17.2-40-17.2-61 0.3V106z" fill="url(#current)"/>
+    <circle cx="111" cy="51" r="14" fill="#F5B84B"/>
+  </g>
+  <g font-family="Instrument Sans, Geist, Arial, Helvetica, sans-serif" fill="#F2FBFF">
+    <text x="236" y="92" font-size="52" font-weight="800">Blue Life Commons</text>
+    <text x="240" y="131" font-size="21" font-weight="650" fill="#A9D7E2">Source-led ocean intelligence for people protecting marine life.</text>
+    <g transform="translate(240 154)" font-size="15" font-weight="800">
+      <rect width="92" height="32" rx="16" fill="#06202A" stroke="#4FD1C5" stroke-opacity="0.75"/>
+      <text x="20" y="21" fill="#F2FBFF">sources</text>
+      <rect x="105" width="82" height="32" rx="16" fill="#06202A" stroke="#38BDF8" stroke-opacity="0.75"/>
+      <text x="126" y="21" fill="#F2FBFF">ethics</text>
+      <rect x="200" width="122" height="32" rx="16" fill="#06202A" stroke="#F5B84B" stroke-opacity="0.8"/>
+      <text x="222" y="21" fill="#F2FBFF">public artifact</text>
+    </g>
+  </g>
+</svg>

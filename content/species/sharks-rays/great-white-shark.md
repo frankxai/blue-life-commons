@@ -3,28 +3,28 @@ id: great-white-shark
 type: species-page
 title: Great White Shark
 region:
-  - Global Temperate Oceans
+- Global Temperate Oceans
 species_group:
-  - sharks-rays
+- sharks-rays
 species:
-  - "Carcharodon carcharias"
+- Carcharodon carcharias
 status: needs-expert-review
 iucn:
   category: VU
-  assessment_date: "2019"
+  assessment_date: '2019'
   scope: global
 consensus_state: settled
 sensitivity:
   tier: high
-  rationale: "Targeted by fisheries for jaws, teeth, and fins; publish range at regional granularity only — no aggregation sites."
+  rationale: "Targeted by fisheries for jaws, teeth, and fins; publish range at regional granularity only \u2014 no aggregation sites."
   generalized_to: regional
 sources:
-  - url: "https://www.iucnredlist.org/species/3855/2878607"
-    title: "IUCN Red List: Carcharodon carcharias"
-    accessed: "2026-06-12"
-  - url: "https://www.fisheries.noaa.gov/species/great-white-shark"
-    title: "NOAA Fisheries: Great White Shark"
-    accessed: "2026-06-12"
+- url: https://www.iucnredlist.org/species/3855/2878607
+  title: 'IUCN Red List: Carcharodon carcharias'
+  accessed: '2026-06-12'
+- url: https://www.fisheries.noaa.gov/species/great-white-shark
+  title: 'NOAA Fisheries: Great White Shark'
+  accessed: '2026-06-12'
 review:
   science: pending
   ethics: approved
@@ -33,8 +33,47 @@ outputs:
   website_path: /species/sharks-rays/great-white-shark
   github_path: content/species/sharks-rays/great-white-shark.md
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#great-white-shark
+  render_contract: content/media/species-media-render-contract.yaml#great-white-shark
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#great-white-shark
+  primary:
+    asset_id: great-white-shark-wikimedia-white-shark
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:White_shark.jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/White_shark.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/5/56/White_shark.jpg
+    creator: Pterantula (Terry Goss) at en.wikipedia
+    credit: Derivative of w:Image:Whiteshark-TGoss5b.jpg
+    license: CC BY 2.5
+    license_url: https://creativecommons.org/licenses/by/2.5
+    rights_status: cc-by
+    alt_text: Great white shark at Isla Guadalupe, Mexico, August 2006. Shot with Nikon D70s in Ikelite housing, in natural light. Animal estimated at 11-12 feet (3.3 to 3.6 m) in length, age unknown.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:White_shark.jpg
+    rights_status: cc-by
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: CC BY 2.5
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets: []
 ---
 
 # Great White Shark (*Carcharodon carcharias*)

@@ -1,41 +1,41 @@
 ---
 id: species-seagrass-posidonia
 type: species-page
-title: "Neptune Grass (Posidonia oceanica)"
+title: Neptune Grass (Posidonia oceanica)
 species_group:
-  - reefs
+- reefs
 species:
-  - posidonia-oceanica
+- posidonia-oceanica
 region:
-  - mediterranean
+- mediterranean
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/153534/4516034"
-    title: "IUCN Red List — Posidonia oceanica (Neptune Grass / Mediterranean tapeweed)"
-    tier: 1
-    accessed: "2026-06-16"
-  - url: "https://www.kew.org/plants/neptune-grass"
-    title: "Royal Botanic Gardens, Kew — Neptune grass (Posidonia oceanica)"
-    tier: 2
-    accessed: "2026-06-16"
-  - url: "https://www.nature.com/articles/srep12505"
-    title: "Telesca et al. (2015), Scientific Reports — Seagrass meadows (Posidonia oceanica) distribution and trajectories of change"
-    tier: 1
-    accessed: "2026-06-16"
+- url: https://www.iucnredlist.org/species/153534/4516034
+  title: "IUCN Red List \u2014 Posidonia oceanica (Neptune Grass / Mediterranean tapeweed)"
+  tier: 1
+  accessed: '2026-06-16'
+- url: https://www.kew.org/plants/neptune-grass
+  title: "Royal Botanic Gardens, Kew \u2014 Neptune grass (Posidonia oceanica)"
+  tier: 2
+  accessed: '2026-06-16'
+- url: https://www.nature.com/articles/srep12505
+  title: "Telesca et al. (2015), Scientific Reports \u2014 Seagrass meadows (Posidonia oceanica) distribution and trajectories of change"
+  tier: 1
+  accessed: '2026-06-16'
 review:
   science: required
   ethics: approved
   editor: pending
 iucn:
   category: LC
-  assessment_date: "2010"
-  version: "3.1"
+  assessment_date: '2010'
+  version: '3.1'
   population_trend: decreasing
   scope: global
 welfare:
@@ -43,20 +43,59 @@ welfare:
   dominant_stressor: habitat-loss
   confidence: modeled
   five_domains:
-    environment: "Coastal development, anchoring, trawling, and declining water clarity have reduced meadow extent across the Mediterranean basin (Telesca et al. 2015)."
-    health: "A slow-growing, slow-recovering species; meadows lost over decades do not recover on management-relevant timescales (literature)."
+    environment: Coastal development, anchoring, trawling, and declining water clarity have reduced meadow extent across the Mediterranean basin (Telesca et al. 2015).
+    health: A slow-growing, slow-recovering species; meadows lost over decades do not recover on management-relevant timescales (literature).
 consensus_state: settled
-last_verified: "2026-06-16"
+last_verified: '2026-06-16'
 outputs:
   website_path: /species/reefs/seagrass-posidonia
   github_path: content/species/reefs/seagrass-posidonia.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed page for Posidonia oceanica, the foundation seagrass of Mediterranean meadows."
+  claim: Published a source-reviewed page for Posidonia oceanica, the foundation seagrass of Mediterranean meadows.
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#species-seagrass-posidonia
+  render_contract: content/media/species-media-render-contract.yaml#species-seagrass-posidonia
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-seagrass-posidonia
+  primary:
+    asset_id: species-seagrass-posidonia-wikimedia-posidonia-oceanica
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:Posidonia_oceanica.jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Posidonia_oceanica.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/8/80/Posidonia_oceanica.jpg
+    creator: National Oceanic and Atmospheric Administration
+    credit: http://www.noaa.gov/
+    license: Public domain
+    license_url: null
+    rights_status: public-domain
+    alt_text: Posidonia oceanica.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:Posidonia_oceanica.jpg
+    rights_status: public-domain
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: Public domain
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets: []
 ---
 
 # Neptune Grass (Posidonia oceanica)

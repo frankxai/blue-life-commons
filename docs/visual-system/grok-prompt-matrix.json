@@ -1,0 +1,343 @@
+{
+  "version": "2026-06-26",
+  "brand": "Blue Life Commons / Ocean Intelligence",
+  "output_root": "C:\\Users\\frank\\starlight\\repos\\_generated\\media\\blue-life-commons\\2026-06-26-visual-system",
+  "global_constraints": [
+    "No readable text, captions, charts, maps, labels, UI copy, scientific claims, or statistics inside generated pixels.",
+    "For notebooks, forms, cards, laptops, dashboards, posters, or maps: blank surfaces only; no writing, no pseudo-text, no scribbles, no fake interface glyphs.",
+    "No unsafe wildlife proximity, feeding, touching, baiting, chasing, crowding, captivity glamour, or exact sensitive locations.",
+    "Use generated imagery for warmth and scenes; compose exact educational text and data with SVG/code afterward.",
+    "Generated assets are drafts until inspected and scored."
+  ],
+  "tokens": {
+    "abyss_ink": "#041014",
+    "field_night": "#06202A",
+    "reef_teal": "#4FD1C5",
+    "signal_blue": "#38BDF8",
+    "warm_steward": "#F5B84B",
+    "foam_white": "#F2FBFF",
+    "mist_blue": "#A9D7E2"
+  },
+  "prompts": [
+    {
+      "id": "blc-hero-commons-current-001",
+      "category": "brand-hero",
+      "surface": "website hero / README hero",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A warm premium 2026 hero scene for Blue Life Commons: an open marine field station table at twilight with a waterproof notebook, ethical observation forms, a small laptop showing abstract ocean signal shapes without readable UI, and a window facing a calm coastal bay. The scene feels source-led, public-good, practical, and caring; use deep #041014 shadows, #4FD1C5 teal reflections, #38BDF8 signal light, and a small #F5B84B human stewardship accent. Cinematic but honest, no text, no labels, no people too close to wildlife.",
+      "qa_focus": "Warmth, source-led first read, no fake text."
+    },
+    {
+      "id": "blc-hero-public-library-002",
+      "category": "brand-hero",
+      "surface": "deck section header",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A coastal public library fused with a modest marine research outpost, shelves of field binders, waterproof cases, and windows opening to a quiet harbor at dawn. The mood is generous, trustworthy, and educational, with teal-blue ocean light and a restrained warm review accent. No readable book titles, no signs, no logos, no crowds, no wildlife interaction.",
+      "qa_focus": "Public-good knowledge, quiet credibility."
+    },
+    {
+      "id": "blc-hero-artifact-table-003",
+      "category": "brand-hero",
+      "surface": "Open Graph / social crop",
+      "aspect_ratio": "19.5:9",
+      "image_prompt": "A precise top-down field-station composition: waterproof notebook, blank source cards, camera lens cap, tide-worn stone, and abstract ocean-current light flowing between them. Premium dark marine palette with #041014, #06202A, #4FD1C5, #38BDF8, and #F5B84B. No readable text, no numbers, no fake labels.",
+      "qa_focus": "Ownable commons-current metaphor."
+    },
+    {
+      "id": "blc-hero-student-stewards-004",
+      "category": "brand-hero",
+      "surface": "education campaign",
+      "aspect_ratio": "3:4",
+      "image_prompt": "A small group of students and a field mentor on a coastal boardwalk, using binoculars and notebooks from a respectful distance, with the ocean beyond them and no visible close wildlife. Warm, hopeful, practical, and safe; teal and signal-blue atmosphere with natural daylight. No text, no signs, no logos, no animal crowding.",
+      "qa_focus": "Ethical observation, inclusive education."
+    },
+    {
+      "id": "blc-hero-night-signals-005",
+      "category": "brand-hero",
+      "surface": "dashboard background",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A quiet night scene in a marine operations room overlooking the sea, abstract signal glows reflected in glass and paper, no readable screens, no fake UI. The emotional read is calm vigilance and care, not emergency. Deep #041014 background, #38BDF8 signal lines, #4FD1C5 source light, tiny #F5B84B review accent.",
+      "qa_focus": "Operational calm, no fake dashboards."
+    },
+    {
+      "id": "blc-hero-community-shore-006",
+      "category": "brand-hero",
+      "surface": "community landing page",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A coastal community gathering at sunset near a harbor classroom, people reviewing blank field cards and looking toward the water from land. The mood is warm, useful, and grounded in local care. No readable text, no specific location markers, no wildlife interaction, no dramatic disaster tone.",
+      "qa_focus": "Human warmth, no guilt language."
+    },
+    {
+      "id": "blc-guardian-reef-ningaloo-001",
+      "category": "guardian-place",
+      "surface": "guardian dashboard background",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A respectful wide underwater reef scene that could support an Ocean Guardian dashboard background: clear blue water, coral structures, small schooling fish, and a sense of monitored environmental signals represented only as subtle abstract light paths, not text or UI. The mood is calm vigilance and ecological care, with a warm sunrise surface glow and restrained #4FD1C5 and #38BDF8 accents. No maps, no exact location marker, no labels, no diver touching reef.",
+      "qa_focus": "Calm reef watch, no labels or unsafe diving."
+    },
+    {
+      "id": "blc-guardian-wadden-bay-002",
+      "category": "guardian-place",
+      "surface": "bay guardian card",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A broad tidal-flat bay at soft morning light, distant birds and water channels, seen from a respectful public path with a field notebook in the foreground. Abstract teal-blue signal threads follow the water channels without becoming a map. No exact location, no animals close enough to identify individually, no text.",
+      "qa_focus": "Regional granularity and respectful distance."
+    },
+    {
+      "id": "blc-guardian-monterey-kelp-003",
+      "category": "guardian-place",
+      "surface": "region card",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A kelp forest scene with sunlight columns and gentle abstract monitoring light, composed wide and calm for a region briefing background. No divers handling wildlife, no labels, no exact map markers, no text. Premium natural documentary lighting with restrained teal and signal-blue accents.",
+      "qa_focus": "Kelp habitat mood, no claims."
+    },
+    {
+      "id": "blc-guardian-salish-sound-004",
+      "category": "guardian-place",
+      "surface": "regional digest background",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A misty temperate inland sea at dawn, forested shoreline, field-station dock, and abstract provenance lights moving from notebook to water. No close wildlife, no boats pursuing animals, no readable text or signs. The tone is quiet care and long-term watchfulness.",
+      "qa_focus": "Stewardship without animal spectacle."
+    },
+    {
+      "id": "blc-guardian-azores-open-ocean-005",
+      "category": "guardian-place",
+      "surface": "open ocean briefing",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A wide open-ocean research scene near volcanic islands, viewed from shore or a distant vessel deck with equipment at rest, no close animals. Abstract blue-teal signal paths sit subtly in the sky and water as visual metaphor only. No text, no labels, no exact coordinates.",
+      "qa_focus": "Place mood without precision."
+    },
+    {
+      "id": "blc-guardian-antarctic-peninsula-006",
+      "category": "guardian-place",
+      "surface": "polar region card",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A distant Antarctic coastal seascape with ice, cold blue light, and a quiet research notebook in the foreground, no close wildlife, no dramatic danger. Subtle signal-blue lines suggest environmental monitoring without becoming a chart. No text, no labels, no exact location.",
+      "qa_focus": "Research humility and no sensitive wildlife scene."
+    },
+    {
+      "id": "blc-animal-whale-distance-001",
+      "category": "animal-education",
+      "surface": "ethical observation poster background",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A distant whale surfacing far offshore, seen from a respectful coastal observation point with binoculars and field notebook in the foreground. The composition communicates ethical distance, wonder, and careful documentation rather than spectacle; no boats crowding the animal, no people in the water, no text. Use cinematic natural light, dark ocean blues, mist blue air, and a tiny warm stewardship accent.",
+      "qa_focus": "Ethical distance is obvious."
+    },
+    {
+      "id": "blc-animal-humpback-wide-002",
+      "category": "animal-education",
+      "surface": "species hero background",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A wide ocean scene with a humpback whale visible at respectful distance, framed with generous negative space for later exact source-backed copy. No boat pursuit, no swimmers, no close contact, no text. Natural documentary lighting, calm awe, and sober public-good tone.",
+      "qa_focus": "No unsafe proximity."
+    },
+    {
+      "id": "blc-animal-dolphin-coastal-003",
+      "category": "animal-education",
+      "surface": "species hero background",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A small group of dolphins seen from a respectful distance in open coastal water, not interacting with people or boats. The image should feel observational and calm, with room for later educational overlay. No text, no labels, no anthropomorphic expression, no performing behavior.",
+      "qa_focus": "Observation, not entertainment."
+    },
+    {
+      "id": "blc-animal-seal-distance-004",
+      "category": "animal-education",
+      "surface": "safe observation guide background",
+      "aspect_ratio": "3:4",
+      "image_prompt": "A seal resting on a distant shoreline seen from a marked public viewpoint, with binoculars and a blank notebook in the foreground. The animal remains far away and undisturbed; no people approach it. Soft coastal light, practical education tone, no text, no signs, no exact location.",
+      "qa_focus": "Distance and non-disturbance."
+    },
+    {
+      "id": "blc-animal-monk-seal-regional-005",
+      "category": "animal-education",
+      "surface": "welfare explainer background",
+      "aspect_ratio": "3:4",
+      "image_prompt": "A quiet tropical shoreline with a single distant resting seal shape at regional granularity, protected by visual distance and negative space. No exact beach, no people near the animal, no signage text, no location clues. Tone is dignity and protection, not cute captivity.",
+      "qa_focus": "No precise live-animal location."
+    },
+    {
+      "id": "blc-education-turtle-001",
+      "category": "animal-education",
+      "surface": "educational poster background",
+      "aspect_ratio": "3:4",
+      "image_prompt": "A sea turtle moving through sunlit water at a respectful distance, composed as an educational poster background with clean negative space for later exact SVG copy. The animal is calm in habitat, not touched or followed, with soft caustic light, reef teal water, signal blue depth, and warm sunlight. No text, no labels, no human interaction, no biologically specific claims.",
+      "qa_focus": "Clean negative space and no contact."
+    },
+    {
+      "id": "blc-animal-hawksbill-coral-007",
+      "category": "animal-education",
+      "surface": "species hero background",
+      "aspect_ratio": "3:4",
+      "image_prompt": "A sea turtle in a coral reef environment seen from a respectful, non-invasive distance, with no divers or human contact. Elegant natural light, clear negative space, no labels, no species facts, no text. Use the image as a draft background only, not an identification plate.",
+      "qa_focus": "Habitat mood, not ID certainty."
+    },
+    {
+      "id": "blc-animal-whale-shark-wide-008",
+      "category": "animal-education",
+      "surface": "ethical tourism guide background",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A wide, respectful open-water scene with a whale shark far enough away to emphasize space and non-intrusion, no swimmers crowding the animal, no boats nearby. Calm, luminous water, negative space for later exact guidance overlay, no text, no labels.",
+      "qa_focus": "Avoid tourism crowding."
+    },
+    {
+      "id": "blc-animal-manta-ray-009",
+      "category": "animal-education",
+      "surface": "species hero background",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A graceful manta ray gliding through blue water with respectful distance and no human interaction, composed as a clean educational hero background. No text, no labels, no claims, no close-contact spectacle. Premium natural underwater light.",
+      "qa_focus": "In-habitat calm."
+    },
+    {
+      "id": "blc-animal-kelp-forest-010",
+      "category": "animal-education",
+      "surface": "habitat hero",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A kelp forest habitat scene with layered fronds, sunlight, and small fish, no exact region labels and no text. The tone is nourishing, alive, and educational, with enough negative space for later SVG copy.",
+      "qa_focus": "Habitat without claims."
+    },
+    {
+      "id": "blc-animal-coral-close-011",
+      "category": "animal-education",
+      "surface": "reef education background",
+      "aspect_ratio": "1:1",
+      "image_prompt": "A respectful macro-inspired coral reef texture and small fish scene, composed as a background plate for a later exact infographic. No labels, no text, no false data visualizations, no divers touching coral. Colorful but not oversaturated; premium natural documentary style.",
+      "qa_focus": "Avoid fake science charts."
+    },
+    {
+      "id": "blc-animal-mangrove-nursery-012",
+      "category": "animal-education",
+      "surface": "habitat hero",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A mangrove waterline scene with roots, shallow water, and small fish silhouettes, warm morning light, calm and protective. No text, no labels, no people disturbing habitat, no precise location markers. Use as a draft habitat background only.",
+      "qa_focus": "Nourishing habitat tone."
+    },
+    {
+      "id": "blc-human-ngo-briefing-001",
+      "category": "human-workflow",
+      "surface": "NGO workflow hero",
+      "aspect_ratio": "4:3",
+      "image_prompt": "A small NGO and coastal community briefing room, diverse adults gathered around a table reviewing printed ocean field notes and abstract dashboard cards with no readable text. Warm, humane, practical, and credible; rain on windows, coastal map shapes blurred into abstract forms, teal-blue signal light from a screen, gold review stickers as non-readable shapes. No fake UI text, no claims, no logos.",
+      "qa_focus": "Human warmth and no fake text."
+    },
+    {
+      "id": "blc-human-researcher-field-002",
+      "category": "human-workflow",
+      "surface": "researcher guide hero",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A marine researcher on shore organizing sample containers and a blank waterproof notebook, with the ocean in the background and no live animal handling visible. Calm, careful, provenance-focused, no readable labels, no hazardous behavior, no text.",
+      "qa_focus": "Research workflow without clinical claims."
+    },
+    {
+      "id": "blc-human-citizen-science-003",
+      "category": "human-workflow",
+      "surface": "field mission hero",
+      "aspect_ratio": "3:4",
+      "image_prompt": "A citizen scientist standing on a legal public viewing path with binoculars and a blank field sheet, looking toward a distant shoreline. No close wildlife, no interaction, no signage text, no exact location. Warm daylight, practical and inviting.",
+      "qa_focus": "Safe observation posture."
+    },
+    {
+      "id": "blc-human-educator-lesson-004",
+      "category": "human-workflow",
+      "surface": "educator guide hero",
+      "aspect_ratio": "4:3",
+      "image_prompt": "An educator preparing an ocean lesson at a table with blank cards, shells, a globe-like abstract sphere, and projected water light. No readable text, no species claims, no logos. Warm, accessible, and curious without becoming childish.",
+      "qa_focus": "Learning warmth."
+    },
+    {
+      "id": "blc-human-steward-review-005",
+      "category": "human-workflow",
+      "surface": "review workflow hero",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A commons steward reviewing a stack of blank printed artifacts beside a laptop with abstract signal shapes, not readable UI. A warm gold review accent contrasts with teal-blue source light. No text, no claims, no identifiable private data.",
+      "qa_focus": "Review gate and trust."
+    },
+    {
+      "id": "blc-human-sanctuary-care-006",
+      "category": "human-workflow",
+      "surface": "welfare workflow background",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A respectful marine rehabilitation facility workspace without showing a live patient location: clean table, towels, blank care forms, water reflection, and closed equipment cases. No live animal, no clinical procedure, no readable text, no glamour of captivity. Tone is dignity, care, and review.",
+      "qa_focus": "No live-animal location or clinical guidance."
+    },
+    {
+      "id": "blc-provenance-ledger-001",
+      "category": "infographic-background",
+      "surface": "provenance explainer background",
+      "aspect_ratio": "1:1",
+      "image_prompt": "A premium abstract still life for ocean data provenance: waterproof sample tags, a field notebook, a shell or smooth stone, and a small stack of source cards connected by gentle ocean-current light, all on a dark field-station desk. It should feel like trustworthy public knowledge becoming a living artifact; no readable text, no numbers, no fake labels, no logos. Use #041014, #06202A, #4FD1C5, #38BDF8, and a restrained #F5B84B accent.",
+      "qa_focus": "No text; strong provenance metaphor."
+    },
+    {
+      "id": "blc-background-disturbance-budget-002",
+      "category": "infographic-background",
+      "surface": "disturbance budget explainer",
+      "aspect_ratio": "16:9",
+      "image_prompt": "An abstract, non-factual ocean pressure background: many faint vessel-light traces far above a dark water surface, balanced by calm protected water and a field notebook in the foreground. This is a metaphor for cumulative pressure, not a chart. No maps, no numbers, no labels, no exact routes.",
+      "qa_focus": "Metaphor only, no fake data."
+    },
+    {
+      "id": "blc-background-five-domains-003",
+      "category": "infographic-background",
+      "surface": "welfare explainer background",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A calm abstract marine welfare background with five subtle environmental panels represented through light, water, habitat texture, health-care still life, and behavior space, but no text, icons, numbers, or claims. Warm, source-led, and scientifically restrained.",
+      "qa_focus": "Supports exact overlay, no model labels."
+    },
+    {
+      "id": "blc-background-connector-spine-004",
+      "category": "infographic-background",
+      "surface": "connector provenance spine",
+      "aspect_ratio": "16:9",
+      "image_prompt": "A dark premium abstract image of ocean data connectors as physical cables and water-current light moving between blank source cards and a quiet dashboard surface with no readable UI. It should feel technical, trustworthy, and calm. No text, no numbers, no labels, no fake maps.",
+      "qa_focus": "Tech clarity without fake UI."
+    },
+    {
+      "id": "blc-social-whale-story-001",
+      "category": "social",
+      "surface": "social 9:16",
+      "aspect_ratio": "9:16",
+      "image_prompt": "A vertical cinematic composition of distant whale observation from land with large clean negative space for later exact overlay. The viewer sees binoculars and a field notebook in the lower foreground, ocean and distant surfacing whale far away. No text, no close approach, no boats crowding wildlife.",
+      "qa_focus": "Mobile crop and ethical distance."
+    },
+    {
+      "id": "blc-social-reef-story-002",
+      "category": "social",
+      "surface": "social 9:16",
+      "aspect_ratio": "9:16",
+      "image_prompt": "A vertical reef guardian story background: layered coral and water column, subtle abstract signal light, no divers touching reef, no labels, no text. Strong top negative space for later headline overlay; calm, hopeful, and precise.",
+      "qa_focus": "Vertical crop and negative space."
+    },
+    {
+      "id": "blc-social-student-story-003",
+      "category": "social",
+      "surface": "social 9:16",
+      "aspect_ratio": "9:16",
+      "image_prompt": "A vertical scene of students on a coastal boardwalk using binoculars and notebooks from a safe distance, ocean beyond them, warm daylight. No readable signs, no close animals, no interaction. Clear space at top for later exact text overlay.",
+      "qa_focus": "Human invitation, safe behavior."
+    },
+    {
+      "id": "blc-social-provenance-story-004",
+      "category": "social",
+      "surface": "social 9:16",
+      "aspect_ratio": "9:16",
+      "image_prompt": "A vertical still life of blank source cards, field notebook, camera strap, and ocean-current light on a dark desk. Premium, warm, trustworthy, and minimal. No text, no numbers, no labels, no logos.",
+      "qa_focus": "Story crop and no fake labels."
+    },
+    {
+      "id": "blc-og-triad-001",
+      "category": "open-graph",
+      "surface": "Open Graph background",
+      "aspect_ratio": "19.5:9",
+      "image_prompt": "A cinematic abstract background for the ocean intelligence triad: three calm layers of water, paper, and signal light representing trust, continuity, and reach. Do not render words, icons, charts, or labels. Deep marine palette with teal, blue, and warm gold accents.",
+      "qa_focus": "Works behind exact SVG text overlay."
+    },
+    {
+      "id": "blc-og-commons-library-002",
+      "category": "open-graph",
+      "surface": "Open Graph background",
+      "aspect_ratio": "19.5:9",
+      "image_prompt": "A wide, elegant public ocean knowledge table: blank artifacts, notebooks, subtle marine specimens like stones or shells, and a window to the sea. No readable text, no labels, no logos, no sensitive species location. Warm and trustworthy.",
+      "qa_focus": "Readable overlay space."
+    }
+  ]
+}

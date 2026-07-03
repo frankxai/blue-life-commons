@@ -1,28 +1,28 @@
 ---
 id: species-staghorn-coral
 type: species-page
-title: "Staghorn Coral (Acropora cervicornis)"
+title: Staghorn Coral (Acropora cervicornis)
 species_group:
-  - reefs
+- reefs
 species:
-  - acropora-cervicornis
+- acropora-cervicornis
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://iucn.org/press-release/202411/over-40-coral-species-face-extinction-iucn-red-list"
-    title: "IUCN — Over 40% of coral species face extinction (Red List, Nov 2024)"
-    accessed: "2026-06-11"
-  - url: "https://www.iucnredlist.org/species/133381/165860142"
-    title: "IUCN Red List — Acropora cervicornis (Staghorn Coral)"
-    accessed: "2026-06-11"
-  - url: "https://cites.org/eng/app/appendices.php"
-    title: "CITES Appendices (Acropora spp. listed Appendix II)"
-    accessed: "2026-06-11"
+- url: https://iucn.org/press-release/202411/over-40-coral-species-face-extinction-iucn-red-list
+  title: "IUCN \u2014 Over 40% of coral species face extinction (Red List, Nov 2024)"
+  accessed: '2026-06-11'
+- url: https://www.iucnredlist.org/species/133381/165860142
+  title: "IUCN Red List \u2014 Acropora cervicornis (Staghorn Coral)"
+  accessed: '2026-06-11'
+- url: https://cites.org/eng/app/appendices.php
+  title: CITES Appendices (Acropora spp. listed Appendix II)
+  accessed: '2026-06-11'
 review:
   science: required
   ethics: required
@@ -32,11 +32,53 @@ outputs:
   github_path: content/species/reefs/staghorn-coral.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed species page for staghorn coral, completing reef-guild coverage."
+  claim: Published a source-reviewed species page for staghorn coral, completing reef-guild coverage.
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#species-staghorn-coral
+  render_contract: content/media/species-media-render-contract.yaml#species-staghorn-coral
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-staghorn-coral
+  primary:
+    asset_id: species-staghorn-coral-wikimedia-staghorn-coral-on-baker-island-nwr-5123996348
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:Staghorn_coral_on_Baker_Island_NWR_(5123996348).jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Staghorn_coral_on_Baker_Island_NWR_%285123996348%29.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/0/03/Staghorn_coral_on_Baker_Island_NWR_%285123996348%29.jpg
+    creator: U.S. Fish and Wildlife Service Headquarters
+    credit: 'Staghorn coral on Baker Island NWR
+
+
+      Uploaded by Dolovis'
+    license: Public domain
+    license_url: null
+    rights_status: public-domain
+    alt_text: Beds of staghorn coral (Acropora Sp) undulate across the sea floor at Baker Island National Wildlife Refuge in the Pacific, some 1,600 miles southwest of Honolulu. (Jim Maragos/USFWS).
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:Staghorn_coral_on_Baker_Island_NWR_(5123996348).jpg
+    rights_status: public-domain
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: Public domain
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets: []
 ---
 
 # Staghorn Coral (Acropora cervicornis)

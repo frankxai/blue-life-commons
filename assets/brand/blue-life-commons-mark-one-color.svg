@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Blue Life Commons one-color mark</title>
+  <desc id="desc">One-color version of the Blue Life Commons review-card and ocean-current mark.</desc>
+  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="9" y="8" width="46" height="48" rx="14" stroke-width="4"/>
+    <path d="M20 20h19" stroke-width="4"/>
+    <path d="M20 27h14" stroke-width="4"/>
+    <path d="M15 41c7.7-7.1 15.4-7.1 23.1 0 4.4 4.1 8.3 4.8 11.9 2.1" stroke-width="5"/>
+    <circle cx="44" cy="23" r="4.5" fill="currentColor" stroke="none"/>
+  </g>
+</svg>

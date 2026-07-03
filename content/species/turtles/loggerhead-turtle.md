@@ -1,64 +1,103 @@
 ---
 id: loggerhead-turtle
 type: species-page
-title: "Loggerhead Turtle (Caretta caretta)"
+title: Loggerhead Turtle (Caretta caretta)
 species_group:
-  - turtles
+- turtles
 species:
-  - caretta-caretta
+- caretta-caretta
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/3897/119333622"
-    title: "IUCN Red List — Caretta caretta (Loggerhead Turtle), global assessment"
-    accessed: "2026-06-16"
-    tier: 1
-  - url: "https://www.fisheries.noaa.gov/species/loggerhead-turtle"
-    title: "NOAA Fisheries — Loggerhead Turtle"
-    accessed: "2026-06-16"
-    tier: 2
-  - url: "https://cites.org/eng/app/appendices.php"
-    title: "CITES Appendices (Caretta caretta listed Appendix I)"
-    accessed: "2026-06-16"
-    tier: 2
+- url: https://www.iucnredlist.org/species/3897/119333622
+  title: "IUCN Red List \u2014 Caretta caretta (Loggerhead Turtle), global assessment"
+  accessed: '2026-06-16'
+  tier: 1
+- url: https://www.fisheries.noaa.gov/species/loggerhead-turtle
+  title: "NOAA Fisheries \u2014 Loggerhead Turtle"
+  accessed: '2026-06-16'
+  tier: 2
+- url: https://cites.org/eng/app/appendices.php
+  title: CITES Appendices (Caretta caretta listed Appendix I)
+  accessed: '2026-06-16'
+  tier: 2
 review:
   science: required
   ethics: approved
   editor: pending
 iucn:
   category: VU
-  assessment_date: "2015"
+  assessment_date: '2015'
   scope: global
   population_trend: decreasing
 sensitivity:
   tier: high
-  rationale: "Nesting beaches concentrate reproductive females and eggs and are acutely vulnerable to disturbance and coastal development; precise nesting locations are withheld per ETHICS.md."
+  rationale: Nesting beaches concentrate reproductive females and eggs and are acutely vulnerable to disturbance and coastal development; precise nesting locations are withheld per ETHICS.md.
   generalized_to: regional
 welfare:
   state: pressured
   dominant_stressor: bycatch
   confidence: expert-opinion
   five_domains:
-    health: "Bycatch in fishing gear is identified by NOAA Fisheries as the primary threat to the species (NOAA Fisheries)."
-    environment: "Loss of nesting habitat from coastal development and marine pollution degrade critical habitat (NOAA Fisheries; IUCN)."
-    behaviour: "Disturbance of nesting females and hatchlings interrupts reproduction; artificial light disorients hatchlings (ETHICS.md / NOAA Fisheries)."
+    health: Bycatch in fishing gear is identified by NOAA Fisheries as the primary threat to the species (NOAA Fisheries).
+    environment: Loss of nesting habitat from coastal development and marine pollution degrade critical habitat (NOAA Fisheries; IUCN).
+    behaviour: Disturbance of nesting females and hatchlings interrupts reproduction; artificial light disorients hatchlings (ETHICS.md / NOAA Fisheries).
 consensus_state: settled
-last_verified: "2026-06-16"
+last_verified: '2026-06-16'
 outputs:
   website_path: /species/turtles/loggerhead-turtle
   github_path: content/species/turtles/loggerhead-turtle.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed species intelligence page for the loggerhead turtle."
+  claim: Published a source-reviewed species intelligence page for the loggerhead turtle.
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#loggerhead-turtle
+  render_contract: content/media/species-media-render-contract.yaml#loggerhead-turtle
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#loggerhead-turtle
+  primary:
+    asset_id: loggerhead-turtle-wikimedia-loggerhead-sea-turtle-caretta-caretta-2
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:Loggerhead_Sea_Turtle_(Caretta_caretta)_2.jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Loggerhead_Sea_Turtle_%28Caretta_caretta%29_2.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/8/81/Loggerhead_Sea_Turtle_%28Caretta_caretta%29_2.jpg
+    creator: Brian Gratwicke
+    credit: Loggerhead Sea Turtle (Caretta caretta)
+    license: CC BY 2.0
+    license_url: https://creativecommons.org/licenses/by/2.0
+    rights_status: cc-by
+    alt_text: Loggerhead Sea Turtle (Caretta caretta).
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:Loggerhead_Sea_Turtle_(Caretta_caretta)_2.jpg
+    rights_status: cc-by
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: CC BY 2.0
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets: []
 ---
 
 # Loggerhead Turtle (Caretta caretta)

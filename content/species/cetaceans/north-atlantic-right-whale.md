@@ -1,38 +1,38 @@
 ---
 id: species-north-atlantic-right-whale
 type: species-page
-title: "North Atlantic Right Whale (Eubalaena glacialis)"
+title: North Atlantic Right Whale (Eubalaena glacialis)
 species_group:
-  - cetaceans
+- cetaceans
 species:
-  - eubalaena-glacialis
+- eubalaena-glacialis
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/41712/178589687"
-    title: "IUCN Red List — Eubalaena glacialis (North Atlantic Right Whale)"
-    tier: 1
-    accessed: "2026-06-16"
-  - url: "https://www.fisheries.noaa.gov/species/north-atlantic-right-whale"
-    title: "NOAA Fisheries — North Atlantic Right Whale"
-    tier: 2
-    accessed: "2026-06-16"
-  - url: "https://cites.org/eng/app/appendices.php"
-    title: "CITES Appendices (Eubalaena glacialis listed Appendix I)"
-    tier: 2
-    accessed: "2026-06-16"
+- url: https://www.iucnredlist.org/species/41712/178589687
+  title: "IUCN Red List \u2014 Eubalaena glacialis (North Atlantic Right Whale)"
+  tier: 1
+  accessed: '2026-06-16'
+- url: https://www.fisheries.noaa.gov/species/north-atlantic-right-whale
+  title: "NOAA Fisheries \u2014 North Atlantic Right Whale"
+  tier: 2
+  accessed: '2026-06-16'
+- url: https://cites.org/eng/app/appendices.php
+  title: CITES Appendices (Eubalaena glacialis listed Appendix I)
+  tier: 2
+  accessed: '2026-06-16'
 review:
   science: required
   ethics: approved
   editor: pending
 iucn:
   category: CR
-  assessment_date: "2020"
+  assessment_date: '2020'
   scope: global
   population_trend: decreasing
 welfare:
@@ -40,30 +40,69 @@ welfare:
   dominant_stressor: vessel-strike
   confidence: measured
   five_domains:
-    health: "Entanglement in fishing gear and vessel strikes are the leading documented causes of human-caused mortality and serious injury (NOAA Fisheries; IUCN)."
-    environment: "Ocean noise and shifting prey distribution under changing environmental conditions are listed pressures (NOAA Fisheries). Reduced glucocorticoid stress correlates were measured when shipping noise fell after 2001 (Rolland et al. 2012)."
-    nutrition: "Changes in distribution and availability of copepod prey are a recognised pressure on body condition (NOAA Fisheries)."
+    health: Entanglement in fishing gear and vessel strikes are the leading documented causes of human-caused mortality and serious injury (NOAA Fisheries; IUCN).
+    environment: Ocean noise and shifting prey distribution under changing environmental conditions are listed pressures (NOAA Fisheries). Reduced glucocorticoid stress correlates were measured when shipping noise fell after 2001 (Rolland et al. 2012).
+    nutrition: Changes in distribution and availability of copepod prey are a recognised pressure on body condition (NOAA Fisheries).
 sensitivity:
   tier: high
-  rationale: "Critically Endangered with very few individuals; aggregation and calving areas are sensitive and must not be published at fine resolution."
+  rationale: Critically Endangered with very few individuals; aggregation and calving areas are sensitive and must not be published at fine resolution.
   generalized_to: regional
 disturbance_budget:
-  scope: "North Atlantic right whale population (global, ~370-380 individuals)"
-  season: "year-round; calving and feeding aggregations seasonally sensitive"
-  capacity_note: "With fewer than ~250 mature individuals, the population's tolerance for added human-caused mortality is effectively near zero; US regulation sets a 500-yard mandatory vessel buffer."
+  scope: North Atlantic right whale population (global, ~370-380 individuals)
+  season: year-round; calving and feeding aggregations seasonally sensitive
+  capacity_note: With fewer than ~250 mature individuals, the population's tolerance for added human-caused mortality is effectively near zero; US regulation sets a 500-yard mandatory vessel buffer.
   utilization: exceeded
 consensus_state: settled
-last_verified: "2026-06-16"
+last_verified: '2026-06-16'
 outputs:
   website_path: /species/cetaceans/north-atlantic-right-whale
   github_path: content/species/cetaceans/north-atlantic-right-whale.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed species intelligence page for the Critically Endangered North Atlantic right whale."
+  claim: Published a source-reviewed species intelligence page for the Critically Endangered North Atlantic right whale.
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#species-north-atlantic-right-whale
+  render_contract: content/media/species-media-render-contract.yaml#species-north-atlantic-right-whale
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-north-atlantic-right-whale
+  primary:
+    asset_id: species-north-atlantic-right-whale-wikimedia-north-atlantic-right-whale-earth-is-blue
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:North_Atlantic_right_whale_-_Earth_Is_Blue.jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/North_Atlantic_right_whale_-_Earth_Is_Blue.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/a/a6/North_Atlantic_right_whale_-_Earth_Is_Blue.jpg
+    creator: NOAA Gray's Reef NMS
+    credit: https://twitter.com/GraysReefNMS/status/1348724327156477957/photo/1
+    license: Public domain
+    license_url: null
+    rights_status: public-domain
+    alt_text: North Atlantic right whale as part of NOAA's Earth Is Blue series.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:North_Atlantic_right_whale_-_Earth_Is_Blue.jpg
+    rights_status: public-domain
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: Public domain
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets: []
 ---
 
 # North Atlantic Right Whale (Eubalaena glacialis)

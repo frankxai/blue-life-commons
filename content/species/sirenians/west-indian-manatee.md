@@ -1,32 +1,32 @@
 ---
 id: species-west-indian-manatee
 type: species-page
-title: "West Indian Manatee (Trichechus manatus)"
+title: West Indian Manatee (Trichechus manatus)
 species:
-  - trichechus-manatus
+- trichechus-manatus
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/22103/9356917"
-    title: "IUCN Red List — Trichechus manatus (West Indian Manatee)"
-    accessed: "2026-06-16"
-    tier: 1
-  - url: "https://www.fws.gov/press-release/2017-03/manatee-reclassified-endangered-threatened-habitat-improves-and-population"
-    title: "Manatee Reclassified from Endangered to Threatened — U.S. Fish & Wildlife Service"
-    accessed: "2026-06-16"
-    tier: 2
-  - url: "https://myfwc.com/education/wildlife/manatee/viewing-guidelines/"
-    title: "Manatee Viewing Guidelines — Florida Fish and Wildlife Conservation Commission"
-    accessed: "2026-06-16"
-    tier: 2
+- url: https://www.iucnredlist.org/species/22103/9356917
+  title: "IUCN Red List \u2014 Trichechus manatus (West Indian Manatee)"
+  accessed: '2026-06-16'
+  tier: 1
+- url: https://www.fws.gov/press-release/2017-03/manatee-reclassified-endangered-threatened-habitat-improves-and-population
+  title: "Manatee Reclassified from Endangered to Threatened \u2014 U.S. Fish & Wildlife Service"
+  accessed: '2026-06-16'
+  tier: 2
+- url: https://myfwc.com/education/wildlife/manatee/viewing-guidelines/
+  title: "Manatee Viewing Guidelines \u2014 Florida Fish and Wildlife Conservation Commission"
+  accessed: '2026-06-16'
+  tier: 2
 iucn:
   category: VU
-  assessment_date: "2023"
+  assessment_date: '2023'
   scope: global
   population_trend: decreasing
 welfare:
@@ -34,28 +34,72 @@ welfare:
   dominant_stressor: watercraft-strike
   confidence: expert-opinion
   five_domains:
-    health: "Watercraft collisions are a major source of injury and mortality; cold stress and harmful algal blooms (red tide) cause periodic die-offs (USFWS, accessed 2026-06-16)."
-    environment: "Loss of warm-water refuges and seagrass habitat degradation reduce winter survival and forage (USFWS, accessed 2026-06-16)."
+    health: Watercraft collisions are a major source of injury and mortality; cold stress and harmful algal blooms (red tide) cause periodic die-offs (USFWS, accessed 2026-06-16).
+    environment: Loss of warm-water refuges and seagrass habitat degradation reduce winter survival and forage (USFWS, accessed 2026-06-16).
 review:
   science: required
   ethics: approved
   editor: pending
 sensitivity:
   tier: low
-  rationale: "Winter warm-water aggregation sites concentrate manatees and are disturbance-sensitive; this page keeps to regional granularity."
+  rationale: Winter warm-water aggregation sites concentrate manatees and are disturbance-sensitive; this page keeps to regional granularity.
   generalized_to: regional
 consensus_state: settled
-last_verified: "2026-06-16"
+last_verified: '2026-06-16'
 outputs:
   website_path: /species/sirenians/west-indian-manatee
   github_path: content/species/sirenians/west-indian-manatee.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed species intelligence page for the West Indian manatee."
+  claim: Published a source-reviewed species intelligence page for the West Indian manatee.
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#species-west-indian-manatee
+  render_contract: content/media/species-media-render-contract.yaml#species-west-indian-manatee
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-west-indian-manatee
+  primary:
+    asset_id: species-west-indian-manatee-wikimedia-manatee-photo
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:Manatee_photo.jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Manatee_photo.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/b/b1/Manatee_photo.jpg
+    creator: NASA
+    credit: 'NASA
+
+
+      http://www-pao.ksc.nasa.gov/kscpao/visit/kscovrv.htm.
+
+      http://www.nasa.gov/centers/kennedy/images/content/91132main_79c265.jpg'
+    license: Public domain
+    license_url: null
+    rights_status: public-domain
+    alt_text: West Indian manatee (Trichechus manatus) at Merritt Island's National Wildlife Refuge in Florida next to Kennedy Space Center.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:Manatee_photo.jpg
+    rights_status: public-domain
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: Public domain
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets: []
 ---
 
 # West Indian Manatee (Trichechus manatus)

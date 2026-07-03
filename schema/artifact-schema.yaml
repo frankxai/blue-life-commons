@@ -200,6 +200,109 @@ properties:
         type: string
       map_layer:
         type: boolean
+  media:
+    description: "Optional artifact-level media pointers. Species pages are also tracked in content/media/species-media-registry.yaml and public rendering follows content/media/species-media-render-contract.yaml."
+    type: object
+    properties:
+      registry_record:
+        description: "Path to the registry record source when media is managed centrally."
+        type: string
+      render_contract:
+        description: "Path to the public render contract that decides approved image, source-card fallback, or placeholder behavior."
+        type: string
+      public_explorer_record:
+        description: "Path to the sanitized public explorer read model for this artifact. Must not expose review-only candidate image URLs."
+        type: string
+      primary:
+        description: "Approved primary image or rich embed for public rendering."
+        type: object
+        properties:
+          asset_id:
+            type: [string, "null"]
+          path:
+            type: [string, "null"]
+          source_url:
+            type: [string, "null"]
+          creator:
+            type: [string, "null"]
+          credit:
+            type: [string, "null"]
+          license:
+            type: [string, "null"]
+          rights_status:
+            type: string
+            enum: [owned, generated-owned, licensed, public-domain, cc0, cc-by, cc-by-sa, partner-grant, open-access-review, needs-review, blocked]
+          alt_text:
+            type: [string, "null"]
+          qa_status:
+            type: string
+            enum: [not-started, candidate, approved, blocked]
+      embeds:
+        description: "Rich source cards or embeds used when direct image reuse is unavailable."
+        type: array
+        items:
+          type: object
+          properties:
+            provider:
+              type: [string, "null"]
+            url:
+              type: [string, "null"]
+            rights_status:
+              type: [string, "null"]
+            notes:
+              type: [string, "null"]
+            domain:
+              type: [string, "null"]
+            source_type:
+              type: [string, "null"]
+      render:
+        description: "Public render-contract snapshot for this artifact. Candidate media must remain blocked until curator approval."
+        type: object
+        properties:
+          strategy:
+            type: [string, "null"]
+          public_visual_kind:
+            type: [string, "null"]
+          public_visual_public_use:
+            type: boolean
+          species_page_visual_slot:
+            type: boolean
+          species_page_hero_image_allowed:
+            type: boolean
+          candidate_thumbnail_allowed:
+            type: boolean
+          candidate_public_use:
+            type: boolean
+      review:
+        description: "Media curation state mirrored from the central approval queue."
+        type: object
+        properties:
+          primary_status:
+            type: [string, "null"]
+          curation_decision:
+            type: [string, "null"]
+          checks_complete:
+            type: integer
+          checks_total:
+            type: integer
+          promotion_allowed_now:
+            type: boolean
+      supporting_assets:
+        description: "Generated or editorial visuals that support the artifact but are not official evidence."
+        type: array
+        items:
+          type: object
+          properties:
+            asset_id:
+              type: [string, "null"]
+            path:
+              type: [string, "null"]
+            role:
+              type: [string, "null"]
+            status:
+              type: [string, "null"]
+            use_limitations:
+              type: [string, "null"]
   impact:
     type: object
     properties:

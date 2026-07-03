@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">From commons artifact to Ocean Guardian</title>
+  <desc id="desc">A source-led flow from request, artifact, review, connector, guardian, and public dashboard.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#041014"/>
+      <stop offset="0.55" stop-color="#06202A"/>
+      <stop offset="1" stop-color="#083241"/>
+    </linearGradient>
+    <linearGradient id="line" x1="150" y1="455" x2="1240" y2="455" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4FD1C5"/>
+      <stop offset="0.54" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#F5B84B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+  <g opacity="0.13" stroke="#4FD1C5" stroke-width="1">
+    <path d="M80 130H1320M80 260H1320M80 390H1320M80 520H1320M80 650H1320M80 780H1320"/>
+    <path d="M180 80V820M360 80V820M540 80V820M720 80V820M900 80V820M1080 80V820M1260 80V820"/>
+  </g>
+  <g font-family="Instrument Sans, Geist, Arial, Helvetica, sans-serif">
+    <text x="86" y="98" fill="#4FD1C5" font-size="20" font-weight="850">BLUE LIFE COMMONS VISUAL SYSTEM</text>
+    <text x="86" y="158" fill="#F2FBFF" font-size="56" font-weight="850">From artifact to guardian</text>
+    <text x="88" y="204" fill="#A9D7E2" font-size="24" font-weight="600">Exact text and facts belong in SVG/code. Generated imagery supplies warmth, context, and care.</text>
+
+    <path d="M190 454H1210" stroke="url(#line)" stroke-width="8" stroke-linecap="round"/>
+    <g fill="#041014" stroke-width="3">
+      <rect x="90" y="320" width="190" height="250" rx="22" stroke="#4FD1C5"/>
+      <rect x="310" y="320" width="190" height="250" rx="22" stroke="#38BDF8"/>
+      <rect x="530" y="320" width="190" height="250" rx="22" stroke="#F5B84B"/>
+      <rect x="750" y="320" width="190" height="250" rx="22" stroke="#38BDF8"/>
+      <rect x="970" y="320" width="190" height="250" rx="22" stroke="#4FD1C5"/>
+      <rect x="1190" y="320" width="120" height="250" rx="22" stroke="#F5B84B"/>
+    </g>
+    <g font-size="20" font-weight="850" fill="#F2FBFF">
+      <text x="130" y="386">Issue or</text>
+      <text x="130" y="414">mission</text>
+      <text x="350" y="386">Sourced</text>
+      <text x="350" y="414">artifact</text>
+      <text x="570" y="386">Review</text>
+      <text x="570" y="414">gate</text>
+      <text x="790" y="386">Connector</text>
+      <text x="790" y="414">signal</text>
+      <text x="1010" y="386">Ocean</text>
+      <text x="1010" y="414">Guardian</text>
+      <text x="1228" y="386">Public</text>
+      <text x="1228" y="414">surface</text>
+    </g>
+    <g font-size="15" font-weight="650" fill="#A9D7E2">
+      <text x="130" y="474">Conversation,</text>
+      <text x="130" y="496">form, field note,</text>
+      <text x="130" y="518">or research ask</text>
+      <text x="350" y="474">Markdown with</text>
+      <text x="350" y="496">metadata and</text>
+      <text x="350" y="518">sources</text>
+      <text x="570" y="474">Science, ethics,</text>
+      <text x="570" y="496">editorial clarity,</text>
+      <text x="570" y="518">PR review</text>
+      <text x="790" y="474">Read-only data,</text>
+      <text x="790" y="496">provenance,</text>
+      <text x="790" y="518">license carried</text>
+      <text x="1010" y="474">Place-scoped,</text>
+      <text x="1010" y="496">grounded or</text>
+      <text x="1010" y="518">silent</text>
+      <text x="1228" y="474">Dashboard,</text>
+      <text x="1228" y="496">briefing,</text>
+      <text x="1228" y="518">lesson</text>
+    </g>
+
+    <g transform="translate(94 690)">
+      <rect width="1210" height="88" rx="24" fill="#041014" stroke="#4FD1C5" stroke-opacity="0.5"/>
+      <text x="34" y="38" fill="#F2FBFF" font-size="22" font-weight="850">Visual rule:</text>
+      <text x="192" y="38" fill="#A9D7E2" font-size="22" font-weight="650">do not ask image models to render claims, charts, or small labels.</text>
+      <text x="34" y="67" fill="#A9D7E2" font-size="20" font-weight="650">Use Grok for subject-rich scenes; use Markdown, SVG, and source-backed overlays for educational precision.</text>
+    </g>
+  </g>
+</svg>

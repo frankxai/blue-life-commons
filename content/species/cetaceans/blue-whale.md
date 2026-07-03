@@ -1,38 +1,38 @@
 ---
 id: species-blue-whale
 type: species-page
-title: "Blue Whale (Balaenoptera musculus)"
+title: Blue Whale (Balaenoptera musculus)
 species_group:
-  - cetaceans
+- cetaceans
 species:
-  - balaenoptera-musculus
+- balaenoptera-musculus
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/15402/214387580"
-    title: "IUCN Red List — Balaenoptera musculus (Blue Whale)"
-    tier: 1
-    accessed: "2026-06-16"
-  - url: "https://www.fisheries.noaa.gov/species/blue-whale"
-    title: "NOAA Fisheries — Blue Whale"
-    tier: 2
-    accessed: "2026-06-16"
-  - url: "https://cites.org/eng/app/appendices.php"
-    title: "CITES Appendices (Balaenoptera musculus listed Appendix I)"
-    tier: 2
-    accessed: "2026-06-16"
+- url: https://www.iucnredlist.org/species/15402/214387580
+  title: "IUCN Red List \u2014 Balaenoptera musculus (Blue Whale)"
+  tier: 1
+  accessed: '2026-06-16'
+- url: https://www.fisheries.noaa.gov/species/blue-whale
+  title: "NOAA Fisheries \u2014 Blue Whale"
+  tier: 2
+  accessed: '2026-06-16'
+- url: https://cites.org/eng/app/appendices.php
+  title: CITES Appendices (Balaenoptera musculus listed Appendix I)
+  tier: 2
+  accessed: '2026-06-16'
 review:
   science: required
   ethics: approved
   editor: pending
 iucn:
   category: EN
-  assessment_date: "2018"
+  assessment_date: '2018'
   scope: global
   population_trend: increasing
 welfare:
@@ -40,24 +40,68 @@ welfare:
   dominant_stressor: vessel-strike
   confidence: expert-opinion
   five_domains:
-    health: "Vessel strikes and entanglement in fishing gear are recognised mortality and injury risks (NOAA Fisheries)."
-    environment: "Ocean noise, pollution, and climate-driven prey shifts are listed habitat pressures (NOAA Fisheries)."
+    health: Vessel strikes and entanglement in fishing gear are recognised mortality and injury risks (NOAA Fisheries).
+    environment: Ocean noise, pollution, and climate-driven prey shifts are listed habitat pressures (NOAA Fisheries).
 sensitivity:
   tier: low
-  rationale: "Wide-ranging pelagic species; no fixed aggregation site is published below regional granularity."
+  rationale: Wide-ranging pelagic species; no fixed aggregation site is published below regional granularity.
   generalized_to: regional
 consensus_state: settled
-last_verified: "2026-06-16"
+last_verified: '2026-06-16'
 outputs:
   website_path: /species/cetaceans/blue-whale
   github_path: content/species/cetaceans/blue-whale.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed species intelligence page for the blue whale."
+  claim: Published a source-reviewed species intelligence page for the blue whale.
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#species-blue-whale
+  render_contract: content/media/species-media-render-contract.yaml#species-blue-whale
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-blue-whale
+  primary:
+    asset_id: species-blue-whale-wikimedia-bluewhale877
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:Bluewhale877.jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Bluewhale877.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/d/d8/Bluewhale877.jpg
+    creator: NMFS Northeast Fisheries Science Center (NOAA)
+    credit: http://www.nmfs.noaa.gov/pr/species/mammals/cetaceans/bluewhale.htm
+    license: Public domain
+    license_url: null
+    rights_status: public-domain
+    alt_text: Adult blue whale (Balaenoptera musculus) from the eastern Pacific Ocean.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:Bluewhale877.jpg
+    rights_status: public-domain
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: Public domain
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets:
+  - asset_id: blc-keyart-blue-whale-01
+    path: brand/visuals/blc-keyart-blue-whale-01.jpg
+    role: generated_key_art
+    status: concept_only
+    use_limitations: Supporting visual only; not biological evidence, official identification media, or proof of conservation status.
 ---
 
 # Blue Whale (Balaenoptera musculus)

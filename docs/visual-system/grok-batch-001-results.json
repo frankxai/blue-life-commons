@@ -1,0 +1,63 @@
+{
+  "version": "2026-06-26",
+  "tool": "Grok Imagine via grok-build image_gen",
+  "output_directory": "C:\\Users\\frank\\starlight\\repos\\_generated\\media\\blue-life-commons\\2026-06-26-visual-system\\batch-001",
+  "media_job": "C:\\Users\\frank\\starlight\\repos\\_generated\\media\\blue-life-commons\\2026-06-26-visual-system\\batch-001\\media-job.json",
+  "batch_status": "inspected",
+  "overall_decision": "iterate",
+  "lessons": [
+    "Grok does not accept 4:5; use 3:4 or 2:3 for portrait poster assets.",
+    "Prompts must explicitly ban pseudo-text and scribbles on blank surfaces.",
+    "Generated scenes can carry warmth and subject atmosphere, but exact educational assets still need SVG/code overlays."
+  ],
+  "outputs": [
+    {
+      "prompt_id": "blc-hero-commons-current-001",
+      "path": "C:\\Users\\frank\\starlight\\repos\\_generated\\media\\blue-life-commons\\2026-06-26-visual-system\\batch-001\\blc-hero-commons-current-001.jpg",
+      "dimensions": "1280x720",
+      "score": 23,
+      "decision": "iterate",
+      "qa_note": "Strong field-station warmth and brand mood, but generated forms/notebooks contain pseudo-text."
+    },
+    {
+      "prompt_id": "blc-guardian-reef-ningaloo-001",
+      "path": "C:\\Users\\frank\\starlight\\repos\\_generated\\media\\blue-life-commons\\2026-06-26-visual-system\\batch-001\\blc-guardian-reef-ningaloo-001.jpg",
+      "dimensions": "1280x720",
+      "score": 27,
+      "decision": "approve-draft",
+      "qa_note": "Strong reef scene, no text, no unsafe interaction, good dashboard background potential."
+    },
+    {
+      "prompt_id": "blc-animal-whale-distance-001",
+      "path": "C:\\Users\\frank\\starlight\\repos\\_generated\\media\\blue-life-commons\\2026-06-26-visual-system\\batch-001\\blc-animal-whale-distance-001.jpg",
+      "dimensions": "1280x720",
+      "score": 24,
+      "decision": "iterate",
+      "qa_note": "Ethical distance is clear; notebook/hat details create possible pseudo-text or logo noise."
+    },
+    {
+      "prompt_id": "blc-human-ngo-briefing-001",
+      "path": "C:\\Users\\frank\\starlight\\repos\\_generated\\media\\blue-life-commons\\2026-06-26-visual-system\\batch-001\\blc-human-ngo-briefing-001.jpg",
+      "dimensions": "1152x864",
+      "score": 19,
+      "decision": "restart",
+      "qa_note": "Too much fake text, fake UI, and map-like detail. Not publication-ready."
+    },
+    {
+      "prompt_id": "blc-education-turtle-001",
+      "path": "C:\\Users\\frank\\starlight\\repos\\_generated\\media\\blue-life-commons\\2026-06-26-visual-system\\batch-001\\blc-education-turtle-001.jpg",
+      "dimensions": "864x1152",
+      "score": 26,
+      "decision": "approve-draft",
+      "qa_note": "Strong poster background with negative space and no human interaction; not species-ID proof."
+    },
+    {
+      "prompt_id": "blc-provenance-ledger-001",
+      "path": "C:\\Users\\frank\\starlight\\repos\\_generated\\media\\blue-life-commons\\2026-06-26-visual-system\\batch-001\\blc-provenance-ledger-001.jpg",
+      "dimensions": "1024x1024",
+      "score": 26,
+      "decision": "approve-draft",
+      "qa_note": "Strong provenance still life; minor scribble risk on tag/book surfaces."
+    }
+  ]
+}

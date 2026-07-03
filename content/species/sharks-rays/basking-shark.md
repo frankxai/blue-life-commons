@@ -1,27 +1,27 @@
 ---
 id: basking-shark
 type: species-page
-title: "Basking Shark (Cetorhinus maximus)"
+title: Basking Shark (Cetorhinus maximus)
 region:
-  - North Atlantic and North Pacific Temperate Waters
+- North Atlantic and North Pacific Temperate Waters
 species_group:
-  - sharks-rays
+- sharks-rays
 species:
-  - cetorhinus-maximus
+- cetorhinus-maximus
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/4292/2686902"
-    title: "IUCN Red List: Cetorhinus maximus (Basking Shark)"
-    tier: 1
-    accessed: "2026-06-16"
-  - url: "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/cetorhinus-maximus/"
-    title: "Florida Museum — Discover Fishes: Basking Shark (Cetorhinus maximus)"
-    tier: 2
-    accessed: "2026-06-16"
+- url: https://www.iucnredlist.org/species/4292/2686902
+  title: 'IUCN Red List: Cetorhinus maximus (Basking Shark)'
+  tier: 1
+  accessed: '2026-06-16'
+- url: https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/cetorhinus-maximus/
+  title: "Florida Museum \u2014 Discover Fishes: Basking Shark (Cetorhinus maximus)"
+  tier: 2
+  accessed: '2026-06-16'
 iucn:
   category: EN
-  assessment_date: "2018"
-  version: "2019-1"
+  assessment_date: '2018'
+  version: 2019-1
   population_trend: decreasing
   scope: global
 welfare:
@@ -29,14 +29,14 @@ welfare:
   dominant_stressor: bycatch
   confidence: expert-opinion
   five_domains:
-    health: "Severe historic declines from past target fisheries; now taken as bycatch in trawl, trammel, and set-net gear and entangled in pot lines, with very low biological productivity slowing recovery (IUCN 2018 assessment)."
-    behaviour: "Surface filter-feeding and seasonal coastal aggregation, tracking zooplankton, overlaps with fishing and vessel traffic (Florida Museum; IUCN)."
+    health: Severe historic declines from past target fisheries; now taken as bycatch in trawl, trammel, and set-net gear and entangled in pot lines, with very low biological productivity slowing recovery (IUCN 2018 assessment).
+    behaviour: Surface filter-feeding and seasonal coastal aggregation, tracking zooplankton, overlaps with fishing and vessel traffic (Florida Museum; IUCN).
 sensitivity:
   tier: high
-  rationale: "Large fins are highly valuable in the fin trade and the species was historically targeted; surface-feeding aggregation areas are predictable and must be published at regional granularity only — no precise sites."
+  rationale: "Large fins are highly valuable in the fin trade and the species was historically targeted; surface-feeding aggregation areas are predictable and must be published at regional granularity only \u2014 no precise sites."
   generalized_to: regional
 consensus_state: settled
-last_verified: "2026-06-16"
+last_verified: '2026-06-16'
 outputs:
   website_path: /species/sharks-rays/basking-shark
   github_path: content/species/sharks-rays/basking-shark.md
@@ -46,8 +46,47 @@ review:
   ethics: approved
   editor: pending
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#basking-shark
+  render_contract: content/media/species-media-render-contract.yaml#basking-shark
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#basking-shark
+  primary:
+    asset_id: basking-shark-wikimedia-cetorhinus-maximus-by-greg-skomal
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:Cetorhinus_maximus_by_greg_skomal.JPG
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Cetorhinus_maximus_by_greg_skomal.JPG?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/0/0b/Cetorhinus_maximus_by_greg_skomal.JPG
+    creator: Greg Skomal / NOAA Fisheries Service
+    credit: Basking Shark (english). NOAA Fisheries Service. National Oceanic and Atmospheric Administration.
+    license: Public domain
+    license_url: null
+    rights_status: public-domain
+    alt_text: Basking shark (Cetorhinus maximus).
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:Cetorhinus_maximus_by_greg_skomal.JPG
+    rights_status: public-domain
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: Public domain
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets: []
 ---
 
 # Basking Shark (*Cetorhinus maximus*)

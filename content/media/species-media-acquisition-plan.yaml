@@ -1,0 +1,2363 @@
+version: '2026-07-03'
+generated_at: '2026-07-03'
+sources:
+  registry: content/media/species-media-registry.yaml
+  source_routing: content/media/species-media-source-routing.yaml
+  rich_embeds: content/media/species-media-rich-embeds.yaml
+  approval_queue: content/media/species-media-approval-queue.yaml
+  render_contract: content/media/species-media-render-contract.yaml
+  curation_workspace: content/media/species-media-curation-workspace.yaml
+  trace_ledger: content/media/species-media-trace-ledger.yaml
+policy:
+  acquisition_plan_is_not_approval: true
+  public_safe: true
+  candidate_direct_urls_omitted: true
+  candidate_public_use: false
+  approved_primary_required_for_hero_image: true
+  source_card_does_not_authorize_image_copy: true
+  google_images_discovery_only: true
+  partner_grants_require_written_permission: true
+summary:
+  species_records: 31
+  public_visual_ready: 31
+  hero_image_ready: 31
+  approved_primary_needed: 0
+  candidate_public_use_blocked: 31
+  promotion_ready_count: 31
+  promotion_ready_artifact_ids:
+  - species-blue-whale
+  - species-bottlenose-dolphin
+  - species-humpback-whale
+  - species-north-atlantic-right-whale
+  - species-orca
+  - species-sperm-whale
+  - species-california-sea-lion
+  - species-grey-seal
+  - species-harbor-seal
+  - species-hawaiian-monk-seal
+  - species-walrus
+  - species-brain-coral
+  - species-elkhorn-coral
+  - species-giant-kelp
+  - species-red-mangrove
+  - species-seagrass-posidonia
+  - species-staghorn-coral
+  - basking-shark
+  - great-white-shark
+  - reef-manta-ray
+  - scalloped-hammerhead
+  - shortfin-mako
+  - tiger-shark
+  - species-whale-shark
+  - species-west-indian-manatee
+  - species-green-turtle
+  - hawksbill-turtle
+  - kemps-ridley-turtle
+  - leatherback-turtle
+  - loggerhead-turtle
+  - olive-ridley-turtle
+  candidate_records_with_flags: []
+  acquisition_lane_counts:
+    primary_approved_maintenance: 31
+  target_source_family_counts:
+    official_institutional: 20
+    open_license_candidate: 11
+  priority_counts:
+    P1: 21
+    P2: 10
+  public_source_domain_counts:
+    commons.wikimedia.org: 31
+records:
+- artifact_id: species-blue-whale
+  ownership_key: species-blue-whale|content/species/cetaceans/blue-whale.md
+  species_page: content/species/cetaceans/blue-whale.md
+  website_path: /species/cetaceans/blue-whale
+  common_name: Blue Whale
+  scientific_name: Balaenoptera musculus
+  taxon_group: cetaceans
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Bluewhale877.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - noaa_fisheries
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Bluewhale877.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-blue-whale
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#species-blue-whale
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#species-blue-whale
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: species-bottlenose-dolphin
+  ownership_key: species-bottlenose-dolphin|content/species/cetaceans/bottlenose-dolphin.md
+  species_page: content/species/cetaceans/bottlenose-dolphin.md
+  website_path: /species/cetaceans/bottlenose-dolphin
+  common_name: Common Bottlenose Dolphin
+  scientific_name: Tursiops truncatus
+  taxon_group: cetaceans
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - noaa_fisheries
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-bottlenose-dolphin
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#species-bottlenose-dolphin
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#species-bottlenose-dolphin
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: species-humpback-whale
+  ownership_key: species-humpback-whale|content/species/cetaceans/humpback-whale.md
+  species_page: content/species/cetaceans/humpback-whale.md
+  website_path: /species/cetaceans/humpback-whale
+  common_name: Humpback Whale
+  scientific_name: Megaptera novaeangliae
+  taxon_group: cetaceans
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Humpback_whales_in_singing_position.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: authority_source
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Humpback_whales_in_singing_position.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-humpback-whale
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#species-humpback-whale
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#species-humpback-whale
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: species-north-atlantic-right-whale
+  ownership_key: species-north-atlantic-right-whale|content/species/cetaceans/north-atlantic-right-whale.md
+  species_page: content/species/cetaceans/north-atlantic-right-whale.md
+  website_path: /species/cetaceans/north-atlantic-right-whale
+  common_name: North Atlantic Right Whale
+  scientific_name: Eubalaena glacialis
+  taxon_group: cetaceans
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:North_Atlantic_right_whale_-_Earth_Is_Blue.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - noaa_fisheries
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:North_Atlantic_right_whale_-_Earth_Is_Blue.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-north-atlantic-right-whale
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#species-north-atlantic-right-whale
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#species-north-atlantic-right-whale
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: species-orca
+  ownership_key: species-orca|content/species/cetaceans/orca.md
+  species_page: content/species/cetaceans/orca.md
+  website_path: /species/cetaceans/orca
+  common_name: Orca
+  scientific_name: Orcinus orca
+  taxon_group: cetaceans
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - noaa_fisheries
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-orca
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#species-orca
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#species-orca
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: species-sperm-whale
+  ownership_key: species-sperm-whale|content/species/cetaceans/sperm-whale.md
+  species_page: content/species/cetaceans/sperm-whale.md
+  website_path: /species/cetaceans/sperm-whale
+  common_name: Sperm Whale
+  scientific_name: Physeter macrocephalus
+  taxon_group: cetaceans
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:6(18)_Sperm_whale.JPG
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - noaa_fisheries
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:6(18)_Sperm_whale.JPG
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-sperm-whale
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#species-sperm-whale
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#species-sperm-whale
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: species-california-sea-lion
+  ownership_key: species-california-sea-lion|content/species/pinnipeds/california-sea-lion.md
+  species_page: content/species/pinnipeds/california-sea-lion.md
+  website_path: /species/pinnipeds/california-sea-lion
+  common_name: California Sea Lion
+  scientific_name: Zalophus californianus
+  taxon_group: pinnipeds
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P2
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Bigmalesealion.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - noaa_fisheries
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Bigmalesealion.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-california-sea-lion
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#species-california-sea-lion
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#species-california-sea-lion
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: species-grey-seal
+  ownership_key: species-grey-seal|content/species/pinnipeds/grey-seal.md
+  species_page: content/species/pinnipeds/grey-seal.md
+  website_path: /species/pinnipeds/grey-seal
+  common_name: Grey Seal
+  scientific_name: Halichoerus grypus
+  taxon_group: pinnipeds
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P2
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Szarytka_morska.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - noaa_fisheries
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Szarytka_morska.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-grey-seal
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#species-grey-seal
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#species-grey-seal
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: species-harbor-seal
+  ownership_key: species-harbor-seal|content/species/pinnipeds/harbor-seal.md
+  species_page: content/species/pinnipeds/harbor-seal.md
+  website_path: /species/pinnipeds/harbor-seal
+  common_name: Harbor Seal
+  scientific_name: Phoca vitulina
+  taxon_group: pinnipeds
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P2
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Harbor_Seal,_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - national_park_service
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Harbor_Seal,_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-harbor-seal
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#species-harbor-seal
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#species-harbor-seal
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: species-hawaiian-monk-seal
+  ownership_key: species-hawaiian-monk-seal|content/species/pinnipeds/hawaiian-monk-seal.md
+  species_page: content/species/pinnipeds/hawaiian-monk-seal.md
+  website_path: /species/pinnipeds/hawaiian-monk-seal
+  common_name: Hawaiian Monk Seal
+  scientific_name: Neomonachus schauinslandi
+  taxon_group: pinnipeds
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Moenchsrobbe_1.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - noaa_fisheries
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Moenchsrobbe_1.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-hawaiian-monk-seal
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#species-hawaiian-monk-seal
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#species-hawaiian-monk-seal
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: species-walrus
+  ownership_key: species-walrus|content/species/pinnipeds/walrus.md
+  species_page: content/species/pinnipeds/walrus.md
+  website_path: /species/pinnipeds/walrus
+  common_name: Walrus
+  scientific_name: Odobenus rosmarus
+  taxon_group: pinnipeds
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Pacific_Walrus_-_Bull_(8247646168).jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - us_fish_and_wildlife_service
+      - noaa_fisheries
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Pacific_Walrus_-_Bull_(8247646168).jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-walrus
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#species-walrus
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#species-walrus
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: species-brain-coral
+  ownership_key: species-brain-coral|content/species/reefs/brain-coral.md
+  species_page: content/species/reefs/brain-coral.md
+  website_path: /species/reefs/brain-coral
+  common_name: Grooved Brain Coral
+  scientific_name: Diploria labyrinthiformis
+  taxon_group: reefs
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Metal_block_with_coral_Dry_Tortugas_20100629.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - noaa_program_site
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Metal_block_with_coral_Dry_Tortugas_20100629.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-brain-coral
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#species-brain-coral
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#species-brain-coral
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: species-elkhorn-coral
+  ownership_key: species-elkhorn-coral|content/species/reefs/elkhorn-coral.md
+  species_page: content/species/reefs/elkhorn-coral.md
+  website_path: /species/reefs/elkhorn-coral
+  common_name: Elkhorn Coral
+  scientific_name: Acropora palmata
+  taxon_group: reefs
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Gaulin_Reef_San_Salvador.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - noaa_fisheries
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Gaulin_Reef_San_Salvador.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-elkhorn-coral
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#species-elkhorn-coral
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#species-elkhorn-coral
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: species-giant-kelp
+  ownership_key: species-giant-kelp|content/species/reefs/giant-kelp.md
+  species_page: content/species/reefs/giant-kelp.md
+  website_path: /species/reefs/giant-kelp
+  common_name: Giant Kelp
+  scientific_name: Macrocystis pyrifera
+  taxon_group: reefs
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Sanc0063_-_Flickr_-_NOAA_Photo_Library.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - noaa_fisheries
+      - noaa_program_site
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Sanc0063_-_Flickr_-_NOAA_Photo_Library.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-giant-kelp
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#species-giant-kelp
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#species-giant-kelp
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: species-red-mangrove
+  ownership_key: species-red-mangrove|content/species/reefs/red-mangrove.md
+  species_page: content/species/reefs/red-mangrove.md
+  website_path: /species/reefs/red-mangrove
+  common_name: Red Mangrove
+  scientific_name: Rhizophora mangle
+  taxon_group: reefs
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - noaa_program_site
+      - smithsonian_ocean
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-red-mangrove
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#species-red-mangrove
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#species-red-mangrove
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: species-seagrass-posidonia
+  ownership_key: species-seagrass-posidonia|content/species/reefs/seagrass-posidonia.md
+  species_page: content/species/reefs/seagrass-posidonia.md
+  website_path: /species/reefs/seagrass-posidonia
+  common_name: Neptune Grass
+  scientific_name: Posidonia oceanica
+  taxon_group: reefs
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Posidonia_oceanica.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - royal_botanic_gardens_kew
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Posidonia_oceanica.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-seagrass-posidonia
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#species-seagrass-posidonia
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#species-seagrass-posidonia
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: species-staghorn-coral
+  ownership_key: species-staghorn-coral|content/species/reefs/staghorn-coral.md
+  species_page: content/species/reefs/staghorn-coral.md
+  website_path: /species/reefs/staghorn-coral
+  common_name: Staghorn Coral
+  scientific_name: Acropora cervicornis
+  taxon_group: reefs
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Staghorn_coral_on_Baker_Island_NWR_(5123996348).jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: authority_source
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Staghorn_coral_on_Baker_Island_NWR_(5123996348).jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-staghorn-coral
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#species-staghorn-coral
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#species-staghorn-coral
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: basking-shark
+  ownership_key: basking-shark|content/species/sharks-rays/basking-shark.md
+  species_page: content/species/sharks-rays/basking-shark.md
+  website_path: /species/sharks-rays/basking-shark
+  common_name: Basking Shark
+  scientific_name: Cetorhinus maximus
+  taxon_group: sharks-rays
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Cetorhinus_maximus_by_greg_skomal.JPG
+    public_source_domain: commons.wikimedia.org
+    public_source_type: institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - florida_museum
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Cetorhinus_maximus_by_greg_skomal.JPG
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#basking-shark
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#basking-shark
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#basking-shark
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: great-white-shark
+  ownership_key: great-white-shark|content/species/sharks-rays/great-white-shark.md
+  species_page: content/species/sharks-rays/great-white-shark.md
+  website_path: /species/sharks-rays/great-white-shark
+  common_name: Great White Shark
+  scientific_name: Carcharodon carcharias
+  taxon_group: sharks-rays
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P2
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:White_shark.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - noaa_fisheries
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:White_shark.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#great-white-shark
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#great-white-shark
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#great-white-shark
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: reef-manta-ray
+  ownership_key: reef-manta-ray|content/species/sharks-rays/reef-manta-ray.md
+  species_page: content/species/sharks-rays/reef-manta-ray.md
+  website_path: /species/sharks-rays/reef-manta-ray
+  common_name: Reef Manta Ray
+  scientific_name: Mobula alfredi
+  taxon_group: sharks-rays
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P2
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Manta_alfredi_cruising_-_journal.pone.0046170.g002A.png
+    public_source_domain: commons.wikimedia.org
+    public_source_type: partner_or_ngo
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - manta_trust
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Manta_alfredi_cruising_-_journal.pone.0046170.g002A.png
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#reef-manta-ray
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#reef-manta-ray
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#reef-manta-ray
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: scalloped-hammerhead
+  ownership_key: scalloped-hammerhead|content/species/sharks-rays/scalloped-hammerhead.md
+  species_page: content/species/sharks-rays/scalloped-hammerhead.md
+  website_path: /species/sharks-rays/scalloped-hammerhead
+  common_name: Scalloped Hammerhead
+  scientific_name: Sphyrna lewini
+  taxon_group: sharks-rays
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Sphyrna_lewini_(Griffith_%26_Smith,_1834)_2422815227.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - noaa_fisheries
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Sphyrna_lewini_(Griffith_%26_Smith,_1834)_2422815227.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#scalloped-hammerhead
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#scalloped-hammerhead
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#scalloped-hammerhead
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: shortfin-mako
+  ownership_key: shortfin-mako|content/species/sharks-rays/shortfin-mako.md
+  species_page: content/species/sharks-rays/shortfin-mako.md
+  website_path: /species/sharks-rays/shortfin-mako
+  common_name: Shortfin Mako
+  scientific_name: Isurus oxyrinchus
+  taxon_group: sharks-rays
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Isurus_oxyrinchus_by_mark_conlin.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - noaa_fisheries
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Isurus_oxyrinchus_by_mark_conlin.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#shortfin-mako
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#shortfin-mako
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#shortfin-mako
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: tiger-shark
+  ownership_key: tiger-shark|content/species/sharks-rays/tiger-shark.md
+  species_page: content/species/sharks-rays/tiger-shark.md
+  website_path: /species/sharks-rays/tiger-shark
+  common_name: Tiger Shark
+  scientific_name: Galeocerdo cuvier
+  taxon_group: sharks-rays
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P2
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Requin_tigre_(Galeocerdo_cuvier)_(Ifremer_00756-86782).jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - florida_museum
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Requin_tigre_(Galeocerdo_cuvier)_(Ifremer_00756-86782).jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#tiger-shark
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#tiger-shark
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#tiger-shark
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: species-whale-shark
+  ownership_key: species-whale-shark|content/species/sharks-rays/whale-shark.md
+  species_page: content/species/sharks-rays/whale-shark.md
+  website_path: /species/sharks-rays/whale-shark
+  common_name: Whale Shark
+  scientific_name: Rhincodon typus
+  taxon_group: sharks-rays
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:OLYMPUS_DIGITAL_CAMERA_(27591269541).jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: authority_source
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:OLYMPUS_DIGITAL_CAMERA_(27591269541).jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-whale-shark
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#species-whale-shark
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#species-whale-shark
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: species-west-indian-manatee
+  ownership_key: species-west-indian-manatee|content/species/sirenians/west-indian-manatee.md
+  species_page: content/species/sirenians/west-indian-manatee.md
+  website_path: /species/sirenians/west-indian-manatee
+  common_name: West Indian Manatee
+  scientific_name: Trichechus manatus
+  taxon_group: sirenians
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Manatee_photo.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - us_fish_and_wildlife_service
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Manatee_photo.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-west-indian-manatee
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#species-west-indian-manatee
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#species-west-indian-manatee
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: species-green-turtle
+  ownership_key: species-green-turtle|content/species/turtles/green-turtle.md
+  species_page: content/species/turtles/green-turtle.md
+  website_path: /species/turtles/green-turtle
+  common_name: Green Turtle
+  scientific_name: Chelonia mydas
+  taxon_group: turtles
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P2
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Hawaii_turtle_2.JPG
+    public_source_domain: commons.wikimedia.org
+    public_source_type: partner_or_ngo
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - oceanic_society
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Hawaii_turtle_2.JPG
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-green-turtle
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#species-green-turtle
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#species-green-turtle
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: hawksbill-turtle
+  ownership_key: hawksbill-turtle|content/species/turtles/hawksbill-turtle.md
+  species_page: content/species/turtles/hawksbill-turtle.md
+  website_path: /species/turtles/hawksbill-turtle
+  common_name: Hawksbill Turtle
+  scientific_name: Eretmochelys imbricata
+  taxon_group: turtles
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P2
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_parque_nacional_Ras_Muhammad,_Egipto,_2022-03-28,_DD_56.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - noaa_fisheries
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_parque_nacional_Ras_Muhammad,_Egipto,_2022-03-28,_DD_56.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#hawksbill-turtle
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#hawksbill-turtle
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#hawksbill-turtle
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: kemps-ridley-turtle
+  ownership_key: kemps-ridley-turtle|content/species/turtles/kemps-ridley-turtle.md
+  species_page: content/species/turtles/kemps-ridley-turtle.md
+  website_path: /species/turtles/kemps-ridley-turtle
+  common_name: Kemp's Ridley Turtle
+  scientific_name: Lepidochelys kempii
+  taxon_group: turtles
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - noaa_fisheries
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#kemps-ridley-turtle
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#kemps-ridley-turtle
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#kemps-ridley-turtle
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: leatherback-turtle
+  ownership_key: leatherback-turtle|content/species/turtles/leatherback-turtle.md
+  species_page: content/species/turtles/leatherback-turtle.md
+  website_path: /species/turtles/leatherback-turtle
+  common_name: Leatherback Turtle
+  scientific_name: Dermochelys coriacea
+  taxon_group: turtles
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P1
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:LeatherbackTurtle.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - noaa_fisheries
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:LeatherbackTurtle.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#leatherback-turtle
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#leatherback-turtle
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#leatherback-turtle
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: loggerhead-turtle
+  ownership_key: loggerhead-turtle|content/species/turtles/loggerhead-turtle.md
+  species_page: content/species/turtles/loggerhead-turtle.md
+  website_path: /species/turtles/loggerhead-turtle
+  common_name: Loggerhead Turtle
+  scientific_name: Caretta caretta
+  taxon_group: turtles
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P2
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Loggerhead_Sea_Turtle_(Caretta_caretta)_2.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - noaa_fisheries
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Loggerhead_Sea_Turtle_(Caretta_caretta)_2.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#loggerhead-turtle
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#loggerhead-turtle
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#loggerhead-turtle
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.
+- artifact_id: olive-ridley-turtle
+  ownership_key: olive-ridley-turtle|content/species/turtles/olive-ridley-turtle.md
+  species_page: content/species/turtles/olive-ridley-turtle.md
+  website_path: /species/turtles/olive-ridley-turtle
+  common_name: Olive Ridley Turtle
+  scientific_name: Lepidochelys olivacea
+  taxon_group: turtles
+  desired_outcome: approved_primary_image
+  asset_tier_target: Tier A real species media
+  acquisition_lane: primary_approved_maintenance
+  acquisition_label: Primary approved; maintain rights and attribution
+  priority: P2
+  current_visual:
+    render_strategy: approved_primary_image
+    public_visual_kind: image
+    public_use: true
+    public_source_url: https://commons.wikimedia.org/wiki/File:Olive_ridley_sea_turtle_cropped.jpg
+    public_source_domain: commons.wikimedia.org
+    public_source_type: official_institutional
+    hero_image_ready: true
+    source_card_status: verified_source_card
+    source_card_copies_external_media: false
+  source_strategy:
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    source_refs:
+      official_or_institutional:
+      - iucn_red_list
+      - noaa_fisheries
+      open_license:
+      - wikimedia_commons
+      - gbif_media
+      - inaturalist_open_data
+      partner:
+      - partner_media_grant_needed
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+    preferred_source_card_url: https://commons.wikimedia.org/wiki/File:Olive_ridley_sea_turtle_cropped.jpg
+  candidate_snapshot:
+    asset_id: null
+    provider: null
+    rights_status: null
+    license: null
+    review_status: candidate_needs_species_rights_ethics_review
+    flags: []
+    public_use: false
+    direct_urls_omitted: true
+  approval_gap:
+    decision: approve_primary
+    reviewer: Codex media curator (delegated by FrankXAI)
+    reviewed_on: '2026-07-03'
+    checks_complete: 9
+    checks_total: 9
+    missing_checks: []
+    promotion_allowed_now: true
+  safety_controls:
+    candidate_public_use: false
+    candidate_thumbnail_allowed: false
+    approved_primary_required_for_hero_image: true
+    source_card_does_not_authorize_image_copy: true
+    direct_candidate_urls_omitted: true
+    trace_record_present: true
+    trace_issues: []
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#olive-ridley-turtle
+    curation_workspace_record: content/media/species-media-curation-workspace.yaml#olive-ridley-turtle
+    trace_ledger_record: content/media/species-media-trace-ledger.yaml#olive-ridley-turtle
+  next_actions:
+  - Keep rendering the verified source card publicly until a primary image is approved.
+  - Recheck attribution, license, crop, and alt text during scheduled content reviews.
+  - Keep blocked surfaces current if license terms or partner terms change.
+  - Run partner outreach in parallel for stronger or owned media from commons.wikimedia.org.

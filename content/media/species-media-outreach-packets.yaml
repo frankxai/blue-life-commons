@@ -1,0 +1,2494 @@
+version: '2026-07-03'
+generated_at: '2026-07-03'
+sources:
+  registry: content/media/species-media-registry.yaml
+  acquisition_plan: content/media/species-media-acquisition-plan.yaml
+  public_explorer: content/media/species-media-public-explorer-manifest.yaml
+  approval_queue: content/media/species-media-approval-queue.yaml
+policy:
+  outreach_is_not_approval: true
+  public_safe: true
+  candidate_direct_urls_omitted: true
+  candidate_public_use: false
+  source_card_does_not_authorize_image_copy: true
+  google_images_discovery_only: true
+  written_permission_required_before_reuse: true
+  do_not_infer_private_contact_details: true
+  no_scraping_or_bulk_download: true
+summary:
+  species_records: 31
+  outreach_target_count: 1
+  outreach_request_count: 31
+  approved_primary_needed: 0
+  request_type_counts:
+    rights_maintenance_recheck: 31
+  outreach_status_counts:
+    draft: 31
+  acquisition_lane_counts:
+    primary_approved_maintenance: 31
+  target_source_family_counts:
+    official_institutional: 20
+    open_license_candidate: 11
+  priority_counts:
+    P1: 21
+    P2: 10
+  source_domain_counts:
+    commons.wikimedia.org: 31
+target_packets:
+- target_id: commons-wikimedia-org
+  target: commons.wikimedia.org
+  status: draft
+  request_count: 31
+  species_artifact_ids:
+  - species-blue-whale
+  - species-bottlenose-dolphin
+  - species-humpback-whale
+  - species-north-atlantic-right-whale
+  - species-orca
+  - species-sperm-whale
+  - species-california-sea-lion
+  - species-grey-seal
+  - species-harbor-seal
+  - species-hawaiian-monk-seal
+  - species-walrus
+  - species-brain-coral
+  - species-elkhorn-coral
+  - species-giant-kelp
+  - species-red-mangrove
+  - species-seagrass-posidonia
+  - species-staghorn-coral
+  - basking-shark
+  - great-white-shark
+  - reef-manta-ray
+  - scalloped-hammerhead
+  - shortfin-mako
+  - tiger-shark
+  - species-whale-shark
+  - species-west-indian-manatee
+  - species-green-turtle
+  - hawksbill-turtle
+  - kemps-ridley-turtle
+  - leatherback-turtle
+  - loggerhead-turtle
+  - olive-ridley-turtle
+  source_urls:
+  - https://commons.wikimedia.org/wiki/File:6(18)_Sperm_whale.JPG
+  - https://commons.wikimedia.org/wiki/File:Bigmalesealion.jpg
+  - https://commons.wikimedia.org/wiki/File:Bluewhale877.jpg
+  - https://commons.wikimedia.org/wiki/File:Cetorhinus_maximus_by_greg_skomal.JPG
+  - https://commons.wikimedia.org/wiki/File:Gaulin_Reef_San_Salvador.jpg
+  - https://commons.wikimedia.org/wiki/File:Harbor_Seal,_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg
+  - https://commons.wikimedia.org/wiki/File:Hawaii_turtle_2.JPG
+  - https://commons.wikimedia.org/wiki/File:Humpback_whales_in_singing_position.jpg
+  - https://commons.wikimedia.org/wiki/File:Isurus_oxyrinchus_by_mark_conlin.jpg
+  - https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg
+  - https://commons.wikimedia.org/wiki/File:LeatherbackTurtle.jpg
+  - https://commons.wikimedia.org/wiki/File:Loggerhead_Sea_Turtle_(Caretta_caretta)_2.jpg
+  - https://commons.wikimedia.org/wiki/File:Manatee_photo.jpg
+  - https://commons.wikimedia.org/wiki/File:Manta_alfredi_cruising_-_journal.pone.0046170.g002A.png
+  - https://commons.wikimedia.org/wiki/File:Metal_block_with_coral_Dry_Tortugas_20100629.jpg
+  - https://commons.wikimedia.org/wiki/File:Moenchsrobbe_1.jpg
+  - https://commons.wikimedia.org/wiki/File:North_Atlantic_right_whale_-_Earth_Is_Blue.jpg
+  - https://commons.wikimedia.org/wiki/File:OLYMPUS_DIGITAL_CAMERA_(27591269541).jpg
+  - https://commons.wikimedia.org/wiki/File:Olive_ridley_sea_turtle_cropped.jpg
+  - https://commons.wikimedia.org/wiki/File:Pacific_Walrus_-_Bull_(8247646168).jpg
+  - https://commons.wikimedia.org/wiki/File:Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg
+  - https://commons.wikimedia.org/wiki/File:Posidonia_oceanica.jpg
+  - https://commons.wikimedia.org/wiki/File:Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg
+  - https://commons.wikimedia.org/wiki/File:Requin_tigre_(Galeocerdo_cuvier)_(Ifremer_00756-86782).jpg
+  - https://commons.wikimedia.org/wiki/File:Sanc0063_-_Flickr_-_NOAA_Photo_Library.jpg
+  - https://commons.wikimedia.org/wiki/File:Sphyrna_lewini_(Griffith_%26_Smith,_1834)_2422815227.jpg
+  - https://commons.wikimedia.org/wiki/File:Staghorn_coral_on_Baker_Island_NWR_(5123996348).jpg
+  - https://commons.wikimedia.org/wiki/File:Szarytka_morska.jpg
+  - https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_parque_nacional_Ras_Muhammad,_Egipto,_2022-03-28,_DD_56.jpg
+  - https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01.jpg
+  - https://commons.wikimedia.org/wiki/File:White_shark.jpg
+  request_type_counts:
+    rights_maintenance_recheck: 31
+  acquisition_lane_counts:
+    primary_approved_maintenance: 31
+  preferred_contact_route: Use the publisher, institution, NGO, or partner media/contact page. Do not infer private email
+    addresses.
+  packet_goal: Confirm image-level rights or request a written media grant/replacement image.
+  permission_fields: &id001
+  - exact image or media item
+  - creator or photographer
+  - required credit line
+  - license name and license URL
+  - rights status
+  - commercial-use compatibility
+  - derivative/crop compatibility
+  - approved surfaces
+  - blocked surfaces
+  - embargo, revocation, or takedown terms
+  - sensitive-location or EXIF handling
+  - welfare or depiction constraints
+  - written permission contact and date
+  records:
+  - artifact_id: species-blue-whale
+    common_name: Blue Whale
+    scientific_name: Balaenoptera musculus
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:Bluewhale877.jpg
+  - artifact_id: species-bottlenose-dolphin
+    common_name: Common Bottlenose Dolphin
+    scientific_name: Tursiops truncatus
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01.jpg
+  - artifact_id: species-humpback-whale
+    common_name: Humpback Whale
+    scientific_name: Megaptera novaeangliae
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:Humpback_whales_in_singing_position.jpg
+  - artifact_id: species-north-atlantic-right-whale
+    common_name: North Atlantic Right Whale
+    scientific_name: Eubalaena glacialis
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:North_Atlantic_right_whale_-_Earth_Is_Blue.jpg
+  - artifact_id: species-orca
+    common_name: Orca
+    scientific_name: Orcinus orca
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg
+  - artifact_id: species-sperm-whale
+    common_name: Sperm Whale
+    scientific_name: Physeter macrocephalus
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:6(18)_Sperm_whale.JPG
+  - artifact_id: species-california-sea-lion
+    common_name: California Sea Lion
+    scientific_name: Zalophus californianus
+    request_type: rights_maintenance_recheck
+    priority: P2
+    source_url: https://commons.wikimedia.org/wiki/File:Bigmalesealion.jpg
+  - artifact_id: species-grey-seal
+    common_name: Grey Seal
+    scientific_name: Halichoerus grypus
+    request_type: rights_maintenance_recheck
+    priority: P2
+    source_url: https://commons.wikimedia.org/wiki/File:Szarytka_morska.jpg
+  - artifact_id: species-harbor-seal
+    common_name: Harbor Seal
+    scientific_name: Phoca vitulina
+    request_type: rights_maintenance_recheck
+    priority: P2
+    source_url: https://commons.wikimedia.org/wiki/File:Harbor_Seal,_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg
+  - artifact_id: species-hawaiian-monk-seal
+    common_name: Hawaiian Monk Seal
+    scientific_name: Neomonachus schauinslandi
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:Moenchsrobbe_1.jpg
+  - artifact_id: species-walrus
+    common_name: Walrus
+    scientific_name: Odobenus rosmarus
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:Pacific_Walrus_-_Bull_(8247646168).jpg
+  - artifact_id: species-brain-coral
+    common_name: Grooved Brain Coral
+    scientific_name: Diploria labyrinthiformis
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:Metal_block_with_coral_Dry_Tortugas_20100629.jpg
+  - artifact_id: species-elkhorn-coral
+    common_name: Elkhorn Coral
+    scientific_name: Acropora palmata
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:Gaulin_Reef_San_Salvador.jpg
+  - artifact_id: species-giant-kelp
+    common_name: Giant Kelp
+    scientific_name: Macrocystis pyrifera
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:Sanc0063_-_Flickr_-_NOAA_Photo_Library.jpg
+  - artifact_id: species-red-mangrove
+    common_name: Red Mangrove
+    scientific_name: Rhizophora mangle
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg
+  - artifact_id: species-seagrass-posidonia
+    common_name: Neptune Grass
+    scientific_name: Posidonia oceanica
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:Posidonia_oceanica.jpg
+  - artifact_id: species-staghorn-coral
+    common_name: Staghorn Coral
+    scientific_name: Acropora cervicornis
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:Staghorn_coral_on_Baker_Island_NWR_(5123996348).jpg
+  - artifact_id: basking-shark
+    common_name: Basking Shark
+    scientific_name: Cetorhinus maximus
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:Cetorhinus_maximus_by_greg_skomal.JPG
+  - artifact_id: great-white-shark
+    common_name: Great White Shark
+    scientific_name: Carcharodon carcharias
+    request_type: rights_maintenance_recheck
+    priority: P2
+    source_url: https://commons.wikimedia.org/wiki/File:White_shark.jpg
+  - artifact_id: reef-manta-ray
+    common_name: Reef Manta Ray
+    scientific_name: Mobula alfredi
+    request_type: rights_maintenance_recheck
+    priority: P2
+    source_url: https://commons.wikimedia.org/wiki/File:Manta_alfredi_cruising_-_journal.pone.0046170.g002A.png
+  - artifact_id: scalloped-hammerhead
+    common_name: Scalloped Hammerhead
+    scientific_name: Sphyrna lewini
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:Sphyrna_lewini_(Griffith_%26_Smith,_1834)_2422815227.jpg
+  - artifact_id: shortfin-mako
+    common_name: Shortfin Mako
+    scientific_name: Isurus oxyrinchus
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:Isurus_oxyrinchus_by_mark_conlin.jpg
+  - artifact_id: tiger-shark
+    common_name: Tiger Shark
+    scientific_name: Galeocerdo cuvier
+    request_type: rights_maintenance_recheck
+    priority: P2
+    source_url: https://commons.wikimedia.org/wiki/File:Requin_tigre_(Galeocerdo_cuvier)_(Ifremer_00756-86782).jpg
+  - artifact_id: species-whale-shark
+    common_name: Whale Shark
+    scientific_name: Rhincodon typus
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:OLYMPUS_DIGITAL_CAMERA_(27591269541).jpg
+  - artifact_id: species-west-indian-manatee
+    common_name: West Indian Manatee
+    scientific_name: Trichechus manatus
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:Manatee_photo.jpg
+  - artifact_id: species-green-turtle
+    common_name: Green Turtle
+    scientific_name: Chelonia mydas
+    request_type: rights_maintenance_recheck
+    priority: P2
+    source_url: https://commons.wikimedia.org/wiki/File:Hawaii_turtle_2.JPG
+  - artifact_id: hawksbill-turtle
+    common_name: Hawksbill Turtle
+    scientific_name: Eretmochelys imbricata
+    request_type: rights_maintenance_recheck
+    priority: P2
+    source_url: https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_parque_nacional_Ras_Muhammad,_Egipto,_2022-03-28,_DD_56.jpg
+  - artifact_id: kemps-ridley-turtle
+    common_name: Kemp's Ridley Turtle
+    scientific_name: Lepidochelys kempii
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg
+  - artifact_id: leatherback-turtle
+    common_name: Leatherback Turtle
+    scientific_name: Dermochelys coriacea
+    request_type: rights_maintenance_recheck
+    priority: P1
+    source_url: https://commons.wikimedia.org/wiki/File:LeatherbackTurtle.jpg
+  - artifact_id: loggerhead-turtle
+    common_name: Loggerhead Turtle
+    scientific_name: Caretta caretta
+    request_type: rights_maintenance_recheck
+    priority: P2
+    source_url: https://commons.wikimedia.org/wiki/File:Loggerhead_Sea_Turtle_(Caretta_caretta)_2.jpg
+  - artifact_id: olive-ridley-turtle
+    common_name: Olive Ridley Turtle
+    scientific_name: Lepidochelys olivacea
+    request_type: rights_maintenance_recheck
+    priority: P2
+    source_url: https://commons.wikimedia.org/wiki/File:Olive_ridley_sea_turtle_cropped.jpg
+records:
+- artifact_id: species-blue-whale
+  ownership_key: species-blue-whale|content/species/cetaceans/blue-whale.md
+  species_page: content/species/cetaceans/blue-whale.md
+  website_path: /species/cetaceans/blue-whale
+  common_name: Blue Whale
+  scientific_name: Balaenoptera musculus
+  taxon_group: cetaceans
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Bluewhale877.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: &id002
+    - species page visual slot
+    - species visual explorer card
+    - education deck
+    - grant or partner report
+    - social crop
+    blocked_until_written_permission: &id003
+    - species page hero image
+    - downloaded/cropped source-page image
+    - social crop
+    - paid ads or merchandise
+    - any use that exposes precise sensitive location metadata
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Blue Whale'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Blue Whale (Balaenoptera musculus).
+    - ''
+    - 'Species record: species-blue-whale'
+    - 'Future public page path: /species/cetaceans/blue-whale'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Bluewhale877.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-blue-whale
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#species-blue-whale
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-blue-whale
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: species-bottlenose-dolphin
+  ownership_key: species-bottlenose-dolphin|content/species/cetaceans/bottlenose-dolphin.md
+  species_page: content/species/cetaceans/bottlenose-dolphin.md
+  website_path: /species/cetaceans/bottlenose-dolphin
+  common_name: Common Bottlenose Dolphin
+  scientific_name: Tursiops truncatus
+  taxon_group: cetaceans
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Common Bottlenose Dolphin'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Common Bottlenose Dolphin (Tursiops truncatus).
+    - ''
+    - 'Species record: species-bottlenose-dolphin'
+    - 'Future public page path: /species/cetaceans/bottlenose-dolphin'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-bottlenose-dolphin
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#species-bottlenose-dolphin
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-bottlenose-dolphin
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: species-humpback-whale
+  ownership_key: species-humpback-whale|content/species/cetaceans/humpback-whale.md
+  species_page: content/species/cetaceans/humpback-whale.md
+  website_path: /species/cetaceans/humpback-whale
+  common_name: Humpback Whale
+  scientific_name: Megaptera novaeangliae
+  taxon_group: cetaceans
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Humpback_whales_in_singing_position.jpg
+    domain: commons.wikimedia.org
+    source_type: authority_source
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Humpback Whale'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Humpback Whale (Megaptera novaeangliae).
+    - ''
+    - 'Species record: species-humpback-whale'
+    - 'Future public page path: /species/cetaceans/humpback-whale'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Humpback_whales_in_singing_position.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-humpback-whale
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#species-humpback-whale
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-humpback-whale
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: species-north-atlantic-right-whale
+  ownership_key: species-north-atlantic-right-whale|content/species/cetaceans/north-atlantic-right-whale.md
+  species_page: content/species/cetaceans/north-atlantic-right-whale.md
+  website_path: /species/cetaceans/north-atlantic-right-whale
+  common_name: North Atlantic Right Whale
+  scientific_name: Eubalaena glacialis
+  taxon_group: cetaceans
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:North_Atlantic_right_whale_-_Earth_Is_Blue.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: North Atlantic Right Whale'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      North Atlantic Right Whale (Eubalaena glacialis).
+    - ''
+    - 'Species record: species-north-atlantic-right-whale'
+    - 'Future public page path: /species/cetaceans/north-atlantic-right-whale'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:North_Atlantic_right_whale_-_Earth_Is_Blue.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-north-atlantic-right-whale
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#species-north-atlantic-right-whale
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-north-atlantic-right-whale
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: species-orca
+  ownership_key: species-orca|content/species/cetaceans/orca.md
+  species_page: content/species/cetaceans/orca.md
+  website_path: /species/cetaceans/orca
+  common_name: Orca
+  scientific_name: Orcinus orca
+  taxon_group: cetaceans
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Orca'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Orca (Orcinus orca).
+    - ''
+    - 'Species record: species-orca'
+    - 'Future public page path: /species/cetaceans/orca'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-orca
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#species-orca
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-orca
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: species-sperm-whale
+  ownership_key: species-sperm-whale|content/species/cetaceans/sperm-whale.md
+  species_page: content/species/cetaceans/sperm-whale.md
+  website_path: /species/cetaceans/sperm-whale
+  common_name: Sperm Whale
+  scientific_name: Physeter macrocephalus
+  taxon_group: cetaceans
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:6(18)_Sperm_whale.JPG
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Sperm Whale'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Sperm Whale (Physeter macrocephalus).
+    - ''
+    - 'Species record: species-sperm-whale'
+    - 'Future public page path: /species/cetaceans/sperm-whale'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:6(18)_Sperm_whale.JPG'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-sperm-whale
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#species-sperm-whale
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-sperm-whale
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: species-california-sea-lion
+  ownership_key: species-california-sea-lion|content/species/pinnipeds/california-sea-lion.md
+  species_page: content/species/pinnipeds/california-sea-lion.md
+  website_path: /species/pinnipeds/california-sea-lion
+  common_name: California Sea Lion
+  scientific_name: Zalophus californianus
+  taxon_group: pinnipeds
+  priority: P2
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Bigmalesealion.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: California Sea Lion'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      California Sea Lion (Zalophus californianus).
+    - ''
+    - 'Species record: species-california-sea-lion'
+    - 'Future public page path: /species/pinnipeds/california-sea-lion'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Bigmalesealion.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-california-sea-lion
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#species-california-sea-lion
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-california-sea-lion
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: species-grey-seal
+  ownership_key: species-grey-seal|content/species/pinnipeds/grey-seal.md
+  species_page: content/species/pinnipeds/grey-seal.md
+  website_path: /species/pinnipeds/grey-seal
+  common_name: Grey Seal
+  scientific_name: Halichoerus grypus
+  taxon_group: pinnipeds
+  priority: P2
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Szarytka_morska.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Grey Seal'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Grey Seal (Halichoerus grypus).
+    - ''
+    - 'Species record: species-grey-seal'
+    - 'Future public page path: /species/pinnipeds/grey-seal'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Szarytka_morska.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-grey-seal
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#species-grey-seal
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-grey-seal
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: species-harbor-seal
+  ownership_key: species-harbor-seal|content/species/pinnipeds/harbor-seal.md
+  species_page: content/species/pinnipeds/harbor-seal.md
+  website_path: /species/pinnipeds/harbor-seal
+  common_name: Harbor Seal
+  scientific_name: Phoca vitulina
+  taxon_group: pinnipeds
+  priority: P2
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Harbor_Seal,_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Harbor Seal'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Harbor Seal (Phoca vitulina).
+    - ''
+    - 'Species record: species-harbor-seal'
+    - 'Future public page path: /species/pinnipeds/harbor-seal'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Harbor_Seal,_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-harbor-seal
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#species-harbor-seal
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-harbor-seal
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: species-hawaiian-monk-seal
+  ownership_key: species-hawaiian-monk-seal|content/species/pinnipeds/hawaiian-monk-seal.md
+  species_page: content/species/pinnipeds/hawaiian-monk-seal.md
+  website_path: /species/pinnipeds/hawaiian-monk-seal
+  common_name: Hawaiian Monk Seal
+  scientific_name: Neomonachus schauinslandi
+  taxon_group: pinnipeds
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Moenchsrobbe_1.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Hawaiian Monk Seal'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Hawaiian Monk Seal (Neomonachus schauinslandi).
+    - ''
+    - 'Species record: species-hawaiian-monk-seal'
+    - 'Future public page path: /species/pinnipeds/hawaiian-monk-seal'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Moenchsrobbe_1.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-hawaiian-monk-seal
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#species-hawaiian-monk-seal
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-hawaiian-monk-seal
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: species-walrus
+  ownership_key: species-walrus|content/species/pinnipeds/walrus.md
+  species_page: content/species/pinnipeds/walrus.md
+  website_path: /species/pinnipeds/walrus
+  common_name: Walrus
+  scientific_name: Odobenus rosmarus
+  taxon_group: pinnipeds
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Pacific_Walrus_-_Bull_(8247646168).jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Walrus'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Walrus (Odobenus rosmarus).
+    - ''
+    - 'Species record: species-walrus'
+    - 'Future public page path: /species/pinnipeds/walrus'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Pacific_Walrus_-_Bull_(8247646168).jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-walrus
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#species-walrus
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-walrus
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: species-brain-coral
+  ownership_key: species-brain-coral|content/species/reefs/brain-coral.md
+  species_page: content/species/reefs/brain-coral.md
+  website_path: /species/reefs/brain-coral
+  common_name: Grooved Brain Coral
+  scientific_name: Diploria labyrinthiformis
+  taxon_group: reefs
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Metal_block_with_coral_Dry_Tortugas_20100629.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Grooved Brain Coral'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Grooved Brain Coral (Diploria labyrinthiformis).
+    - ''
+    - 'Species record: species-brain-coral'
+    - 'Future public page path: /species/reefs/brain-coral'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Metal_block_with_coral_Dry_Tortugas_20100629.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-brain-coral
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#species-brain-coral
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-brain-coral
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: species-elkhorn-coral
+  ownership_key: species-elkhorn-coral|content/species/reefs/elkhorn-coral.md
+  species_page: content/species/reefs/elkhorn-coral.md
+  website_path: /species/reefs/elkhorn-coral
+  common_name: Elkhorn Coral
+  scientific_name: Acropora palmata
+  taxon_group: reefs
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Gaulin_Reef_San_Salvador.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Elkhorn Coral'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Elkhorn Coral (Acropora palmata).
+    - ''
+    - 'Species record: species-elkhorn-coral'
+    - 'Future public page path: /species/reefs/elkhorn-coral'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Gaulin_Reef_San_Salvador.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-elkhorn-coral
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#species-elkhorn-coral
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-elkhorn-coral
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: species-giant-kelp
+  ownership_key: species-giant-kelp|content/species/reefs/giant-kelp.md
+  species_page: content/species/reefs/giant-kelp.md
+  website_path: /species/reefs/giant-kelp
+  common_name: Giant Kelp
+  scientific_name: Macrocystis pyrifera
+  taxon_group: reefs
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Sanc0063_-_Flickr_-_NOAA_Photo_Library.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Giant Kelp'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Giant Kelp (Macrocystis pyrifera).
+    - ''
+    - 'Species record: species-giant-kelp'
+    - 'Future public page path: /species/reefs/giant-kelp'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Sanc0063_-_Flickr_-_NOAA_Photo_Library.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-giant-kelp
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#species-giant-kelp
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-giant-kelp
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: species-red-mangrove
+  ownership_key: species-red-mangrove|content/species/reefs/red-mangrove.md
+  species_page: content/species/reefs/red-mangrove.md
+  website_path: /species/reefs/red-mangrove
+  common_name: Red Mangrove
+  scientific_name: Rhizophora mangle
+  taxon_group: reefs
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Red Mangrove'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Red Mangrove (Rhizophora mangle).
+    - ''
+    - 'Species record: species-red-mangrove'
+    - 'Future public page path: /species/reefs/red-mangrove'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-red-mangrove
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#species-red-mangrove
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-red-mangrove
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: species-seagrass-posidonia
+  ownership_key: species-seagrass-posidonia|content/species/reefs/seagrass-posidonia.md
+  species_page: content/species/reefs/seagrass-posidonia.md
+  website_path: /species/reefs/seagrass-posidonia
+  common_name: Neptune Grass
+  scientific_name: Posidonia oceanica
+  taxon_group: reefs
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Posidonia_oceanica.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Neptune Grass'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Neptune Grass (Posidonia oceanica).
+    - ''
+    - 'Species record: species-seagrass-posidonia'
+    - 'Future public page path: /species/reefs/seagrass-posidonia'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Posidonia_oceanica.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-seagrass-posidonia
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#species-seagrass-posidonia
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-seagrass-posidonia
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: species-staghorn-coral
+  ownership_key: species-staghorn-coral|content/species/reefs/staghorn-coral.md
+  species_page: content/species/reefs/staghorn-coral.md
+  website_path: /species/reefs/staghorn-coral
+  common_name: Staghorn Coral
+  scientific_name: Acropora cervicornis
+  taxon_group: reefs
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Staghorn_coral_on_Baker_Island_NWR_(5123996348).jpg
+    domain: commons.wikimedia.org
+    source_type: authority_source
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Staghorn Coral'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Staghorn Coral (Acropora cervicornis).
+    - ''
+    - 'Species record: species-staghorn-coral'
+    - 'Future public page path: /species/reefs/staghorn-coral'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Staghorn_coral_on_Baker_Island_NWR_(5123996348).jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-staghorn-coral
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#species-staghorn-coral
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-staghorn-coral
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: basking-shark
+  ownership_key: basking-shark|content/species/sharks-rays/basking-shark.md
+  species_page: content/species/sharks-rays/basking-shark.md
+  website_path: /species/sharks-rays/basking-shark
+  common_name: Basking Shark
+  scientific_name: Cetorhinus maximus
+  taxon_group: sharks-rays
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Cetorhinus_maximus_by_greg_skomal.JPG
+    domain: commons.wikimedia.org
+    source_type: institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Basking Shark'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Basking Shark (Cetorhinus maximus).
+    - ''
+    - 'Species record: basking-shark'
+    - 'Future public page path: /species/sharks-rays/basking-shark'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Cetorhinus_maximus_by_greg_skomal.JPG'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#basking-shark
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#basking-shark
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#basking-shark
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: great-white-shark
+  ownership_key: great-white-shark|content/species/sharks-rays/great-white-shark.md
+  species_page: content/species/sharks-rays/great-white-shark.md
+  website_path: /species/sharks-rays/great-white-shark
+  common_name: Great White Shark
+  scientific_name: Carcharodon carcharias
+  taxon_group: sharks-rays
+  priority: P2
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:White_shark.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Great White Shark'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Great White Shark (Carcharodon carcharias).
+    - ''
+    - 'Species record: great-white-shark'
+    - 'Future public page path: /species/sharks-rays/great-white-shark'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:White_shark.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#great-white-shark
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#great-white-shark
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#great-white-shark
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: reef-manta-ray
+  ownership_key: reef-manta-ray|content/species/sharks-rays/reef-manta-ray.md
+  species_page: content/species/sharks-rays/reef-manta-ray.md
+  website_path: /species/sharks-rays/reef-manta-ray
+  common_name: Reef Manta Ray
+  scientific_name: Mobula alfredi
+  taxon_group: sharks-rays
+  priority: P2
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Manta_alfredi_cruising_-_journal.pone.0046170.g002A.png
+    domain: commons.wikimedia.org
+    source_type: partner_or_ngo
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Reef Manta Ray'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Reef Manta Ray (Mobula alfredi).
+    - ''
+    - 'Species record: reef-manta-ray'
+    - 'Future public page path: /species/sharks-rays/reef-manta-ray'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Manta_alfredi_cruising_-_journal.pone.0046170.g002A.png'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#reef-manta-ray
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#reef-manta-ray
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#reef-manta-ray
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: scalloped-hammerhead
+  ownership_key: scalloped-hammerhead|content/species/sharks-rays/scalloped-hammerhead.md
+  species_page: content/species/sharks-rays/scalloped-hammerhead.md
+  website_path: /species/sharks-rays/scalloped-hammerhead
+  common_name: Scalloped Hammerhead
+  scientific_name: Sphyrna lewini
+  taxon_group: sharks-rays
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Sphyrna_lewini_(Griffith_%26_Smith,_1834)_2422815227.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Scalloped Hammerhead'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Scalloped Hammerhead (Sphyrna lewini).
+    - ''
+    - 'Species record: scalloped-hammerhead'
+    - 'Future public page path: /species/sharks-rays/scalloped-hammerhead'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Sphyrna_lewini_(Griffith_%26_Smith,_1834)_2422815227.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#scalloped-hammerhead
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#scalloped-hammerhead
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#scalloped-hammerhead
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: shortfin-mako
+  ownership_key: shortfin-mako|content/species/sharks-rays/shortfin-mako.md
+  species_page: content/species/sharks-rays/shortfin-mako.md
+  website_path: /species/sharks-rays/shortfin-mako
+  common_name: Shortfin Mako
+  scientific_name: Isurus oxyrinchus
+  taxon_group: sharks-rays
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Isurus_oxyrinchus_by_mark_conlin.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Shortfin Mako'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Shortfin Mako (Isurus oxyrinchus).
+    - ''
+    - 'Species record: shortfin-mako'
+    - 'Future public page path: /species/sharks-rays/shortfin-mako'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Isurus_oxyrinchus_by_mark_conlin.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#shortfin-mako
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#shortfin-mako
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#shortfin-mako
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: tiger-shark
+  ownership_key: tiger-shark|content/species/sharks-rays/tiger-shark.md
+  species_page: content/species/sharks-rays/tiger-shark.md
+  website_path: /species/sharks-rays/tiger-shark
+  common_name: Tiger Shark
+  scientific_name: Galeocerdo cuvier
+  taxon_group: sharks-rays
+  priority: P2
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Requin_tigre_(Galeocerdo_cuvier)_(Ifremer_00756-86782).jpg
+    domain: commons.wikimedia.org
+    source_type: institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Tiger Shark'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Tiger Shark (Galeocerdo cuvier).
+    - ''
+    - 'Species record: tiger-shark'
+    - 'Future public page path: /species/sharks-rays/tiger-shark'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Requin_tigre_(Galeocerdo_cuvier)_(Ifremer_00756-86782).jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#tiger-shark
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#tiger-shark
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#tiger-shark
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: species-whale-shark
+  ownership_key: species-whale-shark|content/species/sharks-rays/whale-shark.md
+  species_page: content/species/sharks-rays/whale-shark.md
+  website_path: /species/sharks-rays/whale-shark
+  common_name: Whale Shark
+  scientific_name: Rhincodon typus
+  taxon_group: sharks-rays
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:OLYMPUS_DIGITAL_CAMERA_(27591269541).jpg
+    domain: commons.wikimedia.org
+    source_type: authority_source
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Whale Shark'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Whale Shark (Rhincodon typus).
+    - ''
+    - 'Species record: species-whale-shark'
+    - 'Future public page path: /species/sharks-rays/whale-shark'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:OLYMPUS_DIGITAL_CAMERA_(27591269541).jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-whale-shark
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#species-whale-shark
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-whale-shark
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: species-west-indian-manatee
+  ownership_key: species-west-indian-manatee|content/species/sirenians/west-indian-manatee.md
+  species_page: content/species/sirenians/west-indian-manatee.md
+  website_path: /species/sirenians/west-indian-manatee
+  common_name: West Indian Manatee
+  scientific_name: Trichechus manatus
+  taxon_group: sirenians
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Manatee_photo.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: West Indian Manatee'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      West Indian Manatee (Trichechus manatus).
+    - ''
+    - 'Species record: species-west-indian-manatee'
+    - 'Future public page path: /species/sirenians/west-indian-manatee'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Manatee_photo.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-west-indian-manatee
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#species-west-indian-manatee
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-west-indian-manatee
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: species-green-turtle
+  ownership_key: species-green-turtle|content/species/turtles/green-turtle.md
+  species_page: content/species/turtles/green-turtle.md
+  website_path: /species/turtles/green-turtle
+  common_name: Green Turtle
+  scientific_name: Chelonia mydas
+  taxon_group: turtles
+  priority: P2
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Hawaii_turtle_2.JPG
+    domain: commons.wikimedia.org
+    source_type: partner_or_ngo
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Green Turtle'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Green Turtle (Chelonia mydas).
+    - ''
+    - 'Species record: species-green-turtle'
+    - 'Future public page path: /species/turtles/green-turtle'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Hawaii_turtle_2.JPG'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#species-green-turtle
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#species-green-turtle
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-green-turtle
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: hawksbill-turtle
+  ownership_key: hawksbill-turtle|content/species/turtles/hawksbill-turtle.md
+  species_page: content/species/turtles/hawksbill-turtle.md
+  website_path: /species/turtles/hawksbill-turtle
+  common_name: Hawksbill Turtle
+  scientific_name: Eretmochelys imbricata
+  taxon_group: turtles
+  priority: P2
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_parque_nacional_Ras_Muhammad,_Egipto,_2022-03-28,_DD_56.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Hawksbill Turtle'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Hawksbill Turtle (Eretmochelys imbricata).
+    - ''
+    - 'Species record: hawksbill-turtle'
+    - 'Future public page path: /species/turtles/hawksbill-turtle'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_parque_nacional_Ras_Muhammad,_Egipto,_2022-03-28,_DD_56.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#hawksbill-turtle
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#hawksbill-turtle
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#hawksbill-turtle
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: kemps-ridley-turtle
+  ownership_key: kemps-ridley-turtle|content/species/turtles/kemps-ridley-turtle.md
+  species_page: content/species/turtles/kemps-ridley-turtle.md
+  website_path: /species/turtles/kemps-ridley-turtle
+  common_name: Kemp's Ridley Turtle
+  scientific_name: Lepidochelys kempii
+  taxon_group: turtles
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Kemp''s Ridley Turtle'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Kemp's Ridley Turtle (Lepidochelys kempii).
+    - ''
+    - 'Species record: kemps-ridley-turtle'
+    - 'Future public page path: /species/turtles/kemps-ridley-turtle'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#kemps-ridley-turtle
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#kemps-ridley-turtle
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#kemps-ridley-turtle
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: leatherback-turtle
+  ownership_key: leatherback-turtle|content/species/turtles/leatherback-turtle.md
+  species_page: content/species/turtles/leatherback-turtle.md
+  website_path: /species/turtles/leatherback-turtle
+  common_name: Leatherback Turtle
+  scientific_name: Dermochelys coriacea
+  taxon_group: turtles
+  priority: P1
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: official_institutional
+    target_source_family_label: Official or institutional
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:LeatherbackTurtle.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Leatherback Turtle'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Leatherback Turtle (Dermochelys coriacea).
+    - ''
+    - 'Species record: leatherback-turtle'
+    - 'Future public page path: /species/turtles/leatherback-turtle'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:LeatherbackTurtle.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#leatherback-turtle
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#leatherback-turtle
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#leatherback-turtle
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: loggerhead-turtle
+  ownership_key: loggerhead-turtle|content/species/turtles/loggerhead-turtle.md
+  species_page: content/species/turtles/loggerhead-turtle.md
+  website_path: /species/turtles/loggerhead-turtle
+  common_name: Loggerhead Turtle
+  scientific_name: Caretta caretta
+  taxon_group: turtles
+  priority: P2
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Loggerhead_Sea_Turtle_(Caretta_caretta)_2.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Loggerhead Turtle'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Loggerhead Turtle (Caretta caretta).
+    - ''
+    - 'Species record: loggerhead-turtle'
+    - 'Future public page path: /species/turtles/loggerhead-turtle'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Loggerhead_Sea_Turtle_(Caretta_caretta)_2.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#loggerhead-turtle
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#loggerhead-turtle
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#loggerhead-turtle
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.
+- artifact_id: olive-ridley-turtle
+  ownership_key: olive-ridley-turtle|content/species/turtles/olive-ridley-turtle.md
+  species_page: content/species/turtles/olive-ridley-turtle.md
+  website_path: /species/turtles/olive-ridley-turtle
+  common_name: Olive Ridley Turtle
+  scientific_name: Lepidochelys olivacea
+  taxon_group: turtles
+  priority: P2
+  outreach_status: draft
+  request_type: rights_maintenance_recheck
+  request_label: Recheck approved rights, attribution, and blocked surfaces on schedule.
+  acquisition:
+    lane: primary_approved_maintenance
+    label: Primary approved; maintain rights and attribution
+    target_source_family: open_license_candidate
+    target_source_family_label: Open-license candidate
+    google_images_role: discovery_only
+    partner_media_grant_needed: true
+    outreach_targets:
+    - commons.wikimedia.org
+  current_public_source:
+    kind: image
+    source_url: https://commons.wikimedia.org/wiki/File:Olive_ridley_sea_turtle_cropped.jpg
+    domain: commons.wikimedia.org
+    source_type: official_institutional
+    source_card_status: verified_source_card
+    public_use: true
+    source_card_does_not_authorize_image_copy: true
+  approval_gap:
+    decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  permission_request:
+    requested_surfaces: *id002
+    blocked_until_written_permission: *id003
+    required_permission_fields: *id001
+    source_card_fallback_until_approved: true
+    candidate_direct_urls_omitted: true
+    candidate_public_use: false
+    written_permission_required_before_reuse: true
+  message_template:
+    subject: 'Blue Life Commons media permission request: Olive Ridley Turtle'
+    body_lines:
+    - Hello,
+    - ''
+    - Blue Life Commons is preparing source-led species media records and would like to confirm image-level media terms for
+      Olive Ridley Turtle (Lepidochelys olivacea).
+    - ''
+    - 'Species record: olive-ridley-turtle'
+    - 'Future public page path: /species/turtles/olive-ridley-turtle'
+    - 'Current source card URL: https://commons.wikimedia.org/wiki/File:Olive_ridley_sea_turtle_cropped.jpg'
+    - ''
+    - 'Could you point us to an official image, partner media item, or permission path that includes:'
+    - '- exact creator/photographer and credit line'
+    - '- image-level license or written permission terms'
+    - '- approved and blocked surfaces'
+    - '- crop/derivative/social-use constraints'
+    - '- any sensitive-location, EXIF, welfare, or embargo constraints'
+    - ''
+    - Until those terms are explicit, we will keep the page on a source-card fallback and will not copy, crop, download, or
+      use the image as a species hero.
+    - ''
+    - Thank you.
+  handoff:
+    approval_queue_record: content/media/species-media-approval-queue.yaml#olive-ridley-turtle
+    acquisition_plan_record: content/media/species-media-acquisition-plan.yaml#olive-ridley-turtle
+    public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#olive-ridley-turtle
+    after_permission_next_step: Update species-media-approval-queue.yaml with reviewer, date, checks, approved-primary metadata,
+      then run promote_species_media.py as a dry run.

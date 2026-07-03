@@ -1,0 +1,174 @@
+{
+  "version": "2026-06-23",
+  "task": "Create a Blue Life Commons and Ocean Intelligence visual asset foundation with vector logos, exact SVG infographics, Grok prompt metadata, and an initial generation experiment plan.",
+  "surface": "Brand identity, README/deck assets, exact infographics, Grok-generated scene library, Ocean Intelligence handoff.",
+  "audience": "Contributors, researchers, NGOs, educators, coastal communities, developers, and partner stakeholders who must understand and trust the ocean intelligence system quickly.",
+  "first_read": "A source-led ocean commons turns reviewed artifacts into ethical guardians and public-good surfaces.",
+  "standards": [
+    "C:/Users/frank/starlight/repos/DESIGN_TASTE.md",
+    "C:/Users/frank/starlight/repos/design-agent-standards/DESIGN.md",
+    "C:/Users/frank/starlight/repos/design-agent-standards/AGENTIC_DESIGN_LOOP.md",
+    "C:/Users/frank/starlight/repos/design-agent-standards/ULTIMATE_AGENTIC_LOOPS.md",
+    "C:/Users/frank/starlight/repos/design-agent-standards/RED_TEAM_CHECKLIST.md",
+    "C:/Users/frank/starlight/repos/design-agent-standards/OUTCOMES.md",
+    "C:/Users/frank/starlight/repos/VISUAL_QA_GATE.md",
+    "C:/Users/frank/starlight/repos/blue-life-commons/ETHICS.md",
+    "C:/Users/frank/starlight/repos/blue-life-commons/SOURCES.md",
+    "C:/Users/frank/starlight/repos/blue-life-commons/STYLE.md",
+    "C:/Users/frank/starlight/repos/blue-life-commons/WELFARE.md"
+  ],
+  "references": [
+    {
+      "label": "Blue Life Commons README",
+      "source": "C:/Users/frank/starlight/repos/blue-life-commons/README.md",
+      "reason": "Defines the three-layer model, audience, contribution workflow, and commons promise."
+    },
+    {
+      "label": "Blue Life Commons Catalog",
+      "source": "C:/Users/frank/starlight/repos/blue-life-commons/CATALOG.md",
+      "reason": "Confirms 58 current artifacts and the species/region/content spread."
+    },
+    {
+      "label": "Ocean Intelligence System README",
+      "source": "gh:frankxai/ocean-intelligence-system/README.md",
+      "reason": "Defines guardians, connectors, dashboard surfaces, and the trust/continuity/reach boundary."
+    },
+    {
+      "label": "Ocean Intelligence Architecture",
+      "source": "gh:frankxai/ocean-intelligence-system/ARCHITECTURE.md",
+      "reason": "Defines provenance, license, connector, signal, guardian, and dashboard invariants."
+    },
+    {
+      "label": "Generated Asset Quality Gate",
+      "source": "C:/Users/frank/starlight/repos/starlight-design-intelligence/evals/generated-asset-quality-gate.md",
+      "reason": "Defines the 30 point score and generated asset approval threshold."
+    }
+  ],
+  "direction": {
+    "keep": [
+      "Warm, practical, source-led tone.",
+      "Clear distinction between exact SVG/code facts and generated emotional imagery.",
+      "Respectful animal distance and no unsafe wildlife interaction.",
+      "Teal, signal blue, and warm review accent from the existing README hero."
+    ],
+    "avoid": [
+      "Generated text, labels, charts, maps, or dashboards.",
+      "Animal rescue or clinical imagery that implies decisions or exact live-animal locations.",
+      "Generic blue-tech gradients, whale-tail logos, anchors, globes, or node-cluster AI marks.",
+      "Conservation claims not sourced in repo artifacts."
+    ],
+    "signature": "The commons current: sourced artifacts moving through review into guardians and public surfaces.",
+    "system": [
+      "Vector-first identity.",
+      "Exact SVG infographics for labels and claims.",
+      "Grok scene generation in small batches with prompt IDs and metadata.",
+      "Generated images reviewed as draft source plates, not final facts."
+    ]
+  },
+  "artifacts": [
+    {
+      "path_or_url": "assets/brand/blue-life-commons-mark.svg",
+      "kind": "logo",
+      "inspected": true,
+      "notes": "Vector mark created as source-led artifact card plus living current; one-color companion added for small-size testing."
+    },
+    {
+      "path_or_url": "assets/brand/blue-life-commons-mark-one-color.svg",
+      "kind": "logo",
+      "inspected": true,
+      "notes": "Monochrome SVG uses currentColor and avoids glow-dependent detail."
+    },
+    {
+      "path_or_url": "assets/brand/blue-life-commons-lockup.svg",
+      "kind": "logo",
+      "inspected": true,
+      "notes": "Horizontal lockup includes source, ethics, public artifact chips composed as exact SVG text."
+    },
+    {
+      "path_or_url": "assets/brand/ocean-intelligence-system-lockup.svg",
+      "kind": "logo",
+      "inspected": true,
+      "notes": "Companion lockup for the private/runtime layer, aligned to guardian and connector language."
+    },
+    {
+      "path_or_url": "assets/infographics/commons-to-guardian-flow.svg",
+      "kind": "image",
+      "inspected": true,
+      "notes": "Exact SVG infographic; no generated text or claims."
+    },
+    {
+      "path_or_url": "assets/infographics/ocean-intelligence-triad.svg",
+      "kind": "image",
+      "inspected": true,
+      "notes": "Exact SVG triad diagram based on README and Ocean Intelligence README."
+    },
+    {
+      "path_or_url": "docs/visual-system/grok-prompt-matrix.json",
+      "kind": "image",
+      "inspected": true,
+      "notes": "40 prompt metadata records prepared; first six generated exports have been inspected and scored."
+    },
+    {
+      "path_or_url": "docs/visual-system/grok-batch-001-qa.md",
+      "kind": "image",
+      "inspected": true,
+      "notes": "Six Grok-generated JPGs inspected and scored. Three approved as draft source plates, two marked iterate, one marked restart."
+    },
+    {
+      "path_or_url": "docs/visual-system/grok-generation-summary-2026-06-26.md",
+      "kind": "image",
+      "inspected": true,
+      "notes": "Thirty Grok-generated JPGs across three batches summarized. Fifteen approved as draft source plates, fourteen marked iterate, one marked restart."
+    },
+    {
+      "path_or_url": "C:/Users/frank/starlight/repos/_generated/media/blue-life-commons/2026-06-26-visual-system/batch-001/blc-guardian-reef-ningaloo-001.jpg",
+      "kind": "image",
+      "inspected": true,
+      "notes": "Approved as draft source plate at 27/30: strong reef scene, no text, no unsafe interaction."
+    },
+    {
+      "path_or_url": "C:/Users/frank/starlight/repos/_generated/media/blue-life-commons/2026-06-26-visual-system/batch-001/blc-human-ngo-briefing-001.jpg",
+      "kind": "image",
+      "inspected": true,
+      "notes": "Restart at 19/30: too much fake text, fake UI, and map-like detail."
+    }
+  ],
+  "checks": [
+    {
+      "name": "standards-loaded",
+      "status": "pass",
+      "evidence": "DESIGN_TASTE, DESIGN.md, AGENTIC_DESIGN_LOOP, ULTIMATE_AGENTIC_LOOPS, RED_TEAM_CHECKLIST, OUTCOMES, VISUAL_QA_GATE, generated asset gate, and repo ethics/source/style docs were read."
+    },
+    {
+      "name": "repo-local-instructions",
+      "status": "pass",
+      "evidence": "blue-life-commons/AGENTS.md read before edits; Ocean Intelligence AGENTS.md read through GitHub."
+    },
+    {
+      "name": "logo-vector-first",
+      "status": "pass",
+      "evidence": "Vector SVG master and one-color mark created before any rendered logo prompt."
+    },
+    {
+      "name": "generated-media-inspection",
+      "status": "pass",
+      "evidence": "Grok batches 001-003 produced thirty JPGs and media-job.json files; contact sheets and QA summaries were created under _generated and docs/visual-system."
+    },
+    {
+      "name": "animal-safety",
+      "status": "pass",
+      "evidence": "Prompt constraints explicitly ban unsafe proximity, feeding, touching, baiting, crowding, captivity glamour, exact sensitive locations, and anthropomorphic claims."
+    }
+  ],
+  "score": {
+    "total": 25,
+    "max": 30,
+    "notes": "Planning, vector identity, exact infographic foundation, and Grok batch execution are strong. Score remains iterate because many paper/screen/human workflow scenes need crop, edit, or regeneration before publication."
+  },
+  "decision": "iterate",
+  "known_risks": [
+    "Grok saved 30 local files successfully, but paper/screen scenes can still produce pseudo-text and fake UI.",
+    "Generated animal scenes may need expert/editor review before educational use.",
+    "The private ocean-intelligence-system repo is not checked out locally, so companion assets are prepared here as a handoff rather than written there."
+  ]
+}

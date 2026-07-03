@@ -1,38 +1,38 @@
 ---
 id: species-sperm-whale
 type: species-page
-title: "Sperm Whale (Physeter macrocephalus)"
+title: Sperm Whale (Physeter macrocephalus)
 species_group:
-  - cetaceans
+- cetaceans
 species:
-  - physeter-macrocephalus
+- physeter-macrocephalus
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/41755/160983555"
-    title: "IUCN Red List — Physeter macrocephalus (Sperm Whale)"
-    tier: 1
-    accessed: "2026-06-16"
-  - url: "https://www.fisheries.noaa.gov/species/sperm-whale"
-    title: "NOAA Fisheries — Sperm Whale"
-    tier: 2
-    accessed: "2026-06-16"
-  - url: "https://cites.org/eng/app/appendices.php"
-    title: "CITES Appendices (Physeter macrocephalus listed Appendix I)"
-    tier: 2
-    accessed: "2026-06-16"
+- url: https://www.iucnredlist.org/species/41755/160983555
+  title: "IUCN Red List \u2014 Physeter macrocephalus (Sperm Whale)"
+  tier: 1
+  accessed: '2026-06-16'
+- url: https://www.fisheries.noaa.gov/species/sperm-whale
+  title: "NOAA Fisheries \u2014 Sperm Whale"
+  tier: 2
+  accessed: '2026-06-16'
+- url: https://cites.org/eng/app/appendices.php
+  title: CITES Appendices (Physeter macrocephalus listed Appendix I)
+  tier: 2
+  accessed: '2026-06-16'
 review:
   science: required
   ethics: approved
   editor: pending
 iucn:
   category: VU
-  assessment_date: "2019"
+  assessment_date: '2019'
   scope: global
   population_trend: unknown
 welfare:
@@ -40,24 +40,63 @@ welfare:
   dominant_stressor: entanglement
   confidence: expert-opinion
   five_domains:
-    health: "Entanglement in fishing gear, vessel strikes, and marine-debris ingestion are listed mortality and injury risks (NOAA Fisheries)."
-    environment: "Ocean noise from shipping and industrial activity is a recognised pressure on a species that relies on sound (NOAA Fisheries)."
+    health: Entanglement in fishing gear, vessel strikes, and marine-debris ingestion are listed mortality and injury risks (NOAA Fisheries).
+    environment: Ocean noise from shipping and industrial activity is a recognised pressure on a species that relies on sound (NOAA Fisheries).
 sensitivity:
   tier: low
-  rationale: "Deep-water, wide-ranging species; no fixed aggregation site is published below regional granularity."
+  rationale: Deep-water, wide-ranging species; no fixed aggregation site is published below regional granularity.
   generalized_to: regional
 consensus_state: settled
-last_verified: "2026-06-16"
+last_verified: '2026-06-16'
 outputs:
   website_path: /species/cetaceans/sperm-whale
   github_path: content/species/cetaceans/sperm-whale.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed species intelligence page for the sperm whale."
+  claim: Published a source-reviewed species intelligence page for the sperm whale.
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#species-sperm-whale
+  render_contract: content/media/species-media-render-contract.yaml#species-sperm-whale
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-sperm-whale
+  primary:
+    asset_id: species-sperm-whale-wikimedia-6-18-sperm-whale
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:6(18)_Sperm_whale.JPG
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/6%2818%29_Sperm_whale.JPG?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/2/24/6%2818%29_Sperm_whale.JPG
+    creator: Marion & Christoph Aistleitner
+    credit: own picture (User:Mediocrity)
+    license: CC0
+    license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    rights_status: cc0
+    alt_text: Sperm whale (Physeter macrocephalus) at Kaikoura, New Zealand.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:6(18)_Sperm_whale.JPG
+    rights_status: cc0
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: CC0
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets: []
 ---
 
 # Sperm Whale (Physeter macrocephalus)

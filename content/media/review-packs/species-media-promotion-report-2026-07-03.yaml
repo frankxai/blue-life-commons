@@ -1,0 +1,18 @@
+version: '2026-07-03'
+generated_at: '2026-07-03'
+mode: apply
+source_registry: content/media/species-media-registry.yaml
+source_approval_queue: content/media/species-media-approval-queue.yaml
+policy:
+  promotion_requires_curator_approval: true
+  dry_run_by_default: true
+  approved_primary_images_must_pass_registry_validator: true
+summary:
+  records_checked: 1
+  status_counts:
+    promoted: 1
+results:
+- artifact_id: leatherback-turtle
+  common_name: Leatherback Turtle
+  status: promoted
+  notes: registry updated

@@ -1,64 +1,103 @@
 ---
 id: kemps-ridley-turtle
 type: species-page
-title: "Kemp's Ridley Turtle (Lepidochelys kempii)"
+title: Kemp's Ridley Turtle (Lepidochelys kempii)
 species_group:
-  - turtles
+- turtles
 species:
-  - lepidochelys-kempii
+- lepidochelys-kempii
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://www.iucnredlist.org/species/11533/155057916"
-    title: "IUCN Red List — Lepidochelys kempii (Kemp's Ridley Turtle), global assessment"
-    accessed: "2026-06-16"
-    tier: 1
-  - url: "https://www.fisheries.noaa.gov/species/kemps-ridley-turtle"
-    title: "NOAA Fisheries — Kemp's Ridley Turtle"
-    accessed: "2026-06-16"
-    tier: 2
-  - url: "https://cites.org/eng/app/appendices.php"
-    title: "CITES Appendices (Lepidochelys kempii listed Appendix I)"
-    accessed: "2026-06-16"
-    tier: 2
+- url: https://www.iucnredlist.org/species/11533/155057916
+  title: "IUCN Red List \u2014 Lepidochelys kempii (Kemp's Ridley Turtle), global assessment"
+  accessed: '2026-06-16'
+  tier: 1
+- url: https://www.fisheries.noaa.gov/species/kemps-ridley-turtle
+  title: "NOAA Fisheries \u2014 Kemp's Ridley Turtle"
+  accessed: '2026-06-16'
+  tier: 2
+- url: https://cites.org/eng/app/appendices.php
+  title: CITES Appendices (Lepidochelys kempii listed Appendix I)
+  accessed: '2026-06-16'
+  tier: 2
 review:
   science: required
   ethics: approved
   editor: pending
 iucn:
   category: CR
-  assessment_date: "2019"
+  assessment_date: '2019'
   scope: global
   population_trend: increasing
 sensitivity:
   tier: extreme
-  rationale: "World's most endangered sea turtle, with nesting concentrated in a very small area and a population that collapsed to a few hundred nests within living memory; precise nesting locations are withheld per ETHICS.md."
+  rationale: World's most endangered sea turtle, with nesting concentrated in a very small area and a population that collapsed to a few hundred nests within living memory; precise nesting locations are withheld per ETHICS.md.
   generalized_to: regional
 welfare:
   state: critical
   dominant_stressor: bycatch
   confidence: expert-opinion
   five_domains:
-    health: "Bycatch in fishing gear is identified by NOAA Fisheries as the greatest threat; historical egg over-harvest drove the population collapse (NOAA Fisheries)."
-    environment: "Nesting concentrated in a small Gulf region and degradation of foraging habitat heighten vulnerability (NOAA Fisheries)."
-    behaviour: "Daytime arribada nesting concentrates reproduction in space and time, so disturbance there has outsized consequences (NOAA Fisheries)."
+    health: Bycatch in fishing gear is identified by NOAA Fisheries as the greatest threat; historical egg over-harvest drove the population collapse (NOAA Fisheries).
+    environment: Nesting concentrated in a small Gulf region and degradation of foraging habitat heighten vulnerability (NOAA Fisheries).
+    behaviour: Daytime arribada nesting concentrates reproduction in space and time, so disturbance there has outsized consequences (NOAA Fisheries).
 consensus_state: settled
-last_verified: "2026-06-16"
+last_verified: '2026-06-16'
 outputs:
   website_path: /species/turtles/kemps-ridley-turtle
   github_path: content/species/turtles/kemps-ridley-turtle.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed species intelligence page for the Critically Endangered Kemp's ridley turtle."
+  claim: Published a source-reviewed species intelligence page for the Critically Endangered Kemp's ridley turtle.
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#kemps-ridley-turtle
+  render_contract: content/media/species-media-render-contract.yaml#kemps-ridley-turtle
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#kemps-ridley-turtle
+  primary:
+    asset_id: kemps-ridley-turtle-wikimedia-padre-island-national-seashore-kemps-ridley-sea-
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/d/d8/Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg
+    creator: uploaded by Johntex
+    credit: United States Fish & Wildlife Service (USFWS) [1]
+    license: Public domain
+    license_url: null
+    rights_status: public-domain
+    alt_text: Kemp's Ridley Turtle (Lepidochelys kempii) in an approved source image used for species identification.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg
+    rights_status: public-domain
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: Public domain
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets: []
 ---
 
 # Kemp's Ridley Turtle (Lepidochelys kempii)

@@ -1,28 +1,28 @@
 ---
 id: species-humpback-whale
 type: species-page
-title: "Humpback Whale (Megaptera novaeangliae)"
+title: Humpback Whale (Megaptera novaeangliae)
 species_group:
-  - cetaceans
+- cetaceans
 species:
-  - megaptera-novaeangliae
+- megaptera-novaeangliae
 difficulty: beginner
 audience:
-  - traveler
-  - student
-  - citizen-scientist
-  - researcher
+- traveler
+- student
+- citizen-scientist
+- researcher
 status: needs-expert-review
 sources:
-  - url: "https://iucn.org/content/humpback-whale-road-recovery-reveals-iucn-red-list"
-    title: "IUCN — Humpback whale on road to recovery (Red List update)"
-    accessed: "2026-06-11"
-  - url: "https://www.iucnredlist.org/species/13006/50362794"
-    title: "IUCN Red List — Megaptera novaeangliae (Humpback Whale)"
-    accessed: "2026-06-11"
-  - url: "https://cites.org/eng/app/appendices.php"
-    title: "CITES Appendices (Megaptera novaeangliae listed Appendix I)"
-    accessed: "2026-06-11"
+- url: https://iucn.org/content/humpback-whale-road-recovery-reveals-iucn-red-list
+  title: "IUCN \u2014 Humpback whale on road to recovery (Red List update)"
+  accessed: '2026-06-11'
+- url: https://www.iucnredlist.org/species/13006/50362794
+  title: "IUCN Red List \u2014 Megaptera novaeangliae (Humpback Whale)"
+  accessed: '2026-06-11'
+- url: https://cites.org/eng/app/appendices.php
+  title: CITES Appendices (Megaptera novaeangliae listed Appendix I)
+  accessed: '2026-06-11'
 review:
   science: required
   ethics: required
@@ -32,11 +32,55 @@ outputs:
   github_path: content/species/cetaceans/humpback-whale.md
   map_layer: false
 impact:
-  claim: "Published a source-reviewed species intelligence page for the humpback whale."
+  claim: Published a source-reviewed species intelligence page for the humpback whale.
   eligible_for_hypercert: true
 contributors:
-  - github: frankxai
+- github: frankxai
 license: CC-BY-4.0
+media:
+  registry_record: content/media/species-media-registry.yaml#species-humpback-whale
+  render_contract: content/media/species-media-render-contract.yaml#species-humpback-whale
+  public_explorer_record: content/media/species-media-public-explorer-manifest.yaml#species-humpback-whale
+  primary:
+    asset_id: species-humpback-whale-wikimedia-humpback-whales-in-singing-position
+    path: null
+    source_url: https://commons.wikimedia.org/wiki/File:Humpback_whales_in_singing_position.jpg
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Humpback_whales_in_singing_position.jpg?width=900
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/8/8b/Humpback_whales_in_singing_position.jpg
+    creator: Dr. Louis M. Herman.
+    credit: 'NOAA Photo Library: sanc0602'
+    license: Public domain
+    license_url: null
+    rights_status: public-domain
+    alt_text: Humpback whales in the singing position. Humpback Whale NMS.
+    qa_status: approved
+  embeds:
+  - provider: approved_primary_source
+    url: https://commons.wikimedia.org/wiki/File:Humpback_whales_in_singing_position.jpg
+    rights_status: public-domain
+    notes: Approved primary media source; render public_media_url with stored attribution and blocked-surface rules.
+    domain: commons.wikimedia.org
+    license: Public domain
+  render:
+    strategy: approved_primary_image
+    public_visual_kind: image
+    public_visual_public_use: true
+    species_page_visual_slot: true
+    species_page_hero_image_allowed: true
+    candidate_thumbnail_allowed: false
+    candidate_public_use: false
+  review:
+    primary_status: approved
+    curation_decision: approve_primary
+    checks_complete: 9
+    checks_total: 9
+    promotion_allowed_now: true
+  supporting_assets:
+  - asset_id: blc-imagegen-humpback-distance-001
+    path: assets/generated/imagegen/2026-06-26-batch-004/blc-imagegen-humpback-distance-001.png
+    role: generated_ethics_plate
+    status: approved_draft
+    use_limitations: Supporting visual only; not biological evidence, official identification media, or proof of conservation status.
 ---
 
 # Humpback Whale (Megaptera novaeangliae)

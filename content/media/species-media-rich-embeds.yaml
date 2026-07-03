@@ -1,0 +1,1001 @@
+version: '2026-07-03'
+generated_at: '2026-07-03'
+source_registry: content/media/species-media-registry.yaml
+source_link_check: content/media/review-packs/species-media-link-check-2026-07-03.yaml
+policy:
+  source_cards_copy_external_media: false
+  source_card_public_use_does_not_grant_image_reuse: true
+  approved_primary_image_still_required_for_species_hero: true
+  google_images_discovery_only: true
+summary:
+  species_records: 31
+  public_fallback_ready: 31
+  needs_browser_recheck: 0
+  needs_link_check: 0
+  broken_or_blocked: 0
+  missing_source_url: 0
+  status_counts:
+    verified_source_card: 31
+  domain_counts:
+    cdhc.noaa.gov: 1
+    fisheries.noaa.gov: 18
+    floridakeys.noaa.gov: 1
+    floridamuseum.ufl.edu: 2
+    fws.gov: 2
+    iucn.org: 3
+    mantatrust.org: 1
+    maritime-forum.ec.europa.eu: 1
+    nps.gov: 1
+    oceanicsociety.org: 1
+  source_type_counts:
+    authority_source: 3
+    institutional: 2
+    official_institutional: 24
+    partner_or_ngo: 2
+link_check_summary:
+  species_records: 31
+  links_checked: 62
+  reachable: 62
+  broken_or_blocked: 0
+records:
+- artifact_id: species-blue-whale
+  species_page: content/species/cetaceans/blue-whale.md
+  common_name: Blue Whale
+  scientific_name: Balaenoptera musculus
+  taxon_group: cetaceans
+  source_card:
+    embed_id: species-blue-whale-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.fisheries.noaa.gov/species/blue-whale
+    domain: fisheries.noaa.gov
+    source_type: official_institutional
+    display_title: Blue Whale source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 549
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: species-bottlenose-dolphin
+  species_page: content/species/cetaceans/bottlenose-dolphin.md
+  common_name: Common Bottlenose Dolphin
+  scientific_name: Tursiops truncatus
+  taxon_group: cetaceans
+  source_card:
+    embed_id: species-bottlenose-dolphin-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin
+    domain: fisheries.noaa.gov
+    source_type: official_institutional
+    display_title: Common Bottlenose Dolphin source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 512
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: species-humpback-whale
+  species_page: content/species/cetaceans/humpback-whale.md
+  common_name: Humpback Whale
+  scientific_name: Megaptera novaeangliae
+  taxon_group: cetaceans
+  source_card:
+    embed_id: species-humpback-whale-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://iucn.org/content/humpback-whale-road-recovery-reveals-iucn-red-list
+    domain: iucn.org
+    source_type: authority_source
+    display_title: Humpback Whale source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 158
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: species-north-atlantic-right-whale
+  species_page: content/species/cetaceans/north-atlantic-right-whale.md
+  common_name: North Atlantic Right Whale
+  scientific_name: Eubalaena glacialis
+  taxon_group: cetaceans
+  source_card:
+    embed_id: species-north-atlantic-right-whale-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.fisheries.noaa.gov/species/north-atlantic-right-whale
+    domain: fisheries.noaa.gov
+    source_type: official_institutional
+    display_title: North Atlantic Right Whale source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 396
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: species-orca
+  species_page: content/species/cetaceans/orca.md
+  common_name: Orca
+  scientific_name: Orcinus orca
+  taxon_group: cetaceans
+  source_card:
+    embed_id: species-orca-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.fisheries.noaa.gov/species/killer-whale
+    domain: fisheries.noaa.gov
+    source_type: official_institutional
+    display_title: Orca source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 454
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: species-sperm-whale
+  species_page: content/species/cetaceans/sperm-whale.md
+  common_name: Sperm Whale
+  scientific_name: Physeter macrocephalus
+  taxon_group: cetaceans
+  source_card:
+    embed_id: species-sperm-whale-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.fisheries.noaa.gov/species/sperm-whale
+    domain: fisheries.noaa.gov
+    source_type: official_institutional
+    display_title: Sperm Whale source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 327
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: species-california-sea-lion
+  species_page: content/species/pinnipeds/california-sea-lion.md
+  common_name: California Sea Lion
+  scientific_name: Zalophus californianus
+  taxon_group: pinnipeds
+  source_card:
+    embed_id: species-california-sea-lion-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.fisheries.noaa.gov/species/california-sea-lion
+    domain: fisheries.noaa.gov
+    source_type: official_institutional
+    display_title: California Sea Lion source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 248
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: species-grey-seal
+  species_page: content/species/pinnipeds/grey-seal.md
+  common_name: Grey Seal
+  scientific_name: Halichoerus grypus
+  taxon_group: pinnipeds
+  source_card:
+    embed_id: species-grey-seal-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.fisheries.noaa.gov/species/gray-seal
+    domain: fisheries.noaa.gov
+    source_type: official_institutional
+    display_title: Grey Seal source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 251
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: species-harbor-seal
+  species_page: content/species/pinnipeds/harbor-seal.md
+  common_name: Harbor Seal
+  scientific_name: Phoca vitulina
+  taxon_group: pinnipeds
+  source_card:
+    embed_id: species-harbor-seal-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.nps.gov/places/harbor-seal.htm
+    domain: nps.gov
+    source_type: official_institutional
+    display_title: Harbor Seal source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 102
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: species-hawaiian-monk-seal
+  species_page: content/species/pinnipeds/hawaiian-monk-seal.md
+  common_name: Hawaiian Monk Seal
+  scientific_name: Neomonachus schauinslandi
+  taxon_group: pinnipeds
+  source_card:
+    embed_id: species-hawaiian-monk-seal-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.fisheries.noaa.gov/species/hawaiian-monk-seal
+    domain: fisheries.noaa.gov
+    source_type: official_institutional
+    display_title: Hawaiian Monk Seal source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 195
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: species-walrus
+  species_page: content/species/pinnipeds/walrus.md
+  common_name: Walrus
+  scientific_name: Odobenus rosmarus
+  taxon_group: pinnipeds
+  source_card:
+    embed_id: species-walrus-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.fws.gov/species/pacific-walrus-odobenus-rosmarus-divergens
+    domain: fws.gov
+    source_type: official_institutional
+    display_title: Walrus source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 237
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: species-brain-coral
+  species_page: content/species/reefs/brain-coral.md
+  common_name: Grooved Brain Coral
+  scientific_name: Diploria labyrinthiformis
+  taxon_group: reefs
+  source_card:
+    embed_id: species-brain-coral-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://cdhc.noaa.gov/coral-disease/characterized-diseases/stony-coral-tissue-loss-disease-sctld/
+    domain: cdhc.noaa.gov
+    source_type: official_institutional
+    display_title: Grooved Brain Coral source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 605
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: species-elkhorn-coral
+  species_page: content/species/reefs/elkhorn-coral.md
+  common_name: Elkhorn Coral
+  scientific_name: Acropora palmata
+  taxon_group: reefs
+  source_card:
+    embed_id: species-elkhorn-coral-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.fisheries.noaa.gov/action/listing-elkhorn-and-staghorn-corals-under-esa
+    domain: fisheries.noaa.gov
+    source_type: official_institutional
+    display_title: Elkhorn Coral source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 224
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: species-giant-kelp
+  species_page: content/species/reefs/giant-kelp.md
+  common_name: Giant Kelp
+  scientific_name: Macrocystis pyrifera
+  taxon_group: reefs
+  source_card:
+    embed_id: species-giant-kelp-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.fisheries.noaa.gov/west-coast/habitat-conservation/kelp-forest-habitat-west-coast
+    domain: fisheries.noaa.gov
+    source_type: official_institutional
+    display_title: Giant Kelp source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 188
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: species-red-mangrove
+  species_page: content/species/reefs/red-mangrove.md
+  common_name: Red Mangrove
+  scientific_name: Rhizophora mangle
+  taxon_group: reefs
+  source_card:
+    embed_id: species-red-mangrove-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://floridakeys.noaa.gov/plants/mangroves.html
+    domain: floridakeys.noaa.gov
+    source_type: official_institutional
+    display_title: Red Mangrove source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 566
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: species-seagrass-posidonia
+  species_page: content/species/reefs/seagrass-posidonia.md
+  common_name: Neptune Grass
+  scientific_name: Posidonia oceanica
+  taxon_group: reefs
+  source_card:
+    embed_id: species-seagrass-posidonia-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://maritime-forum.ec.europa.eu/map-week-seagrass-meadows-posidonia-oceanica_en
+    domain: maritime-forum.ec.europa.eu
+    source_type: official_institutional
+    display_title: Neptune Grass source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 225
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: species-staghorn-coral
+  species_page: content/species/reefs/staghorn-coral.md
+  common_name: Staghorn Coral
+  scientific_name: Acropora cervicornis
+  taxon_group: reefs
+  source_card:
+    embed_id: species-staghorn-coral-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://iucn.org/press-release/202411/over-40-coral-species-face-extinction-iucn-red-list
+    domain: iucn.org
+    source_type: authority_source
+    display_title: Staghorn Coral source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 107
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: basking-shark
+  species_page: content/species/sharks-rays/basking-shark.md
+  common_name: Basking Shark
+  scientific_name: Cetorhinus maximus
+  taxon_group: sharks-rays
+  source_card:
+    embed_id: basking-shark-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/cetorhinus-maximus/
+    domain: floridamuseum.ufl.edu
+    source_type: institutional
+    display_title: Basking Shark source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 1714
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: great-white-shark
+  species_page: content/species/sharks-rays/great-white-shark.md
+  common_name: Great White Shark
+  scientific_name: Carcharodon carcharias
+  taxon_group: sharks-rays
+  source_card:
+    embed_id: great-white-shark-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.fisheries.noaa.gov/species/white-shark
+    domain: fisheries.noaa.gov
+    source_type: official_institutional
+    display_title: Great White Shark source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 230
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: reef-manta-ray
+  species_page: content/species/sharks-rays/reef-manta-ray.md
+  common_name: Reef Manta Ray
+  scientific_name: Mobula alfredi
+  taxon_group: sharks-rays
+  source_card:
+    embed_id: reef-manta-ray-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.mantatrust.org/mobula-alfredi
+    domain: mantatrust.org
+    source_type: partner_or_ngo
+    display_title: Reef Manta Ray source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 166
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: scalloped-hammerhead
+  species_page: content/species/sharks-rays/scalloped-hammerhead.md
+  common_name: Scalloped Hammerhead
+  scientific_name: Sphyrna lewini
+  taxon_group: sharks-rays
+  source_card:
+    embed_id: scalloped-hammerhead-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.fisheries.noaa.gov/species/scalloped-hammerhead-shark
+    domain: fisheries.noaa.gov
+    source_type: official_institutional
+    display_title: Scalloped Hammerhead source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 198
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: shortfin-mako
+  species_page: content/species/sharks-rays/shortfin-mako.md
+  common_name: Shortfin Mako
+  scientific_name: Isurus oxyrinchus
+  taxon_group: sharks-rays
+  source_card:
+    embed_id: shortfin-mako-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.fisheries.noaa.gov/species/shortfin-mako-shark
+    domain: fisheries.noaa.gov
+    source_type: official_institutional
+    display_title: Shortfin Mako source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 229
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: tiger-shark
+  species_page: content/species/sharks-rays/tiger-shark.md
+  common_name: Tiger Shark
+  scientific_name: Galeocerdo cuvier
+  taxon_group: sharks-rays
+  source_card:
+    embed_id: tiger-shark-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/galeocerdo-cuvier/
+    domain: floridamuseum.ufl.edu
+    source_type: institutional
+    display_title: Tiger Shark source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 1404
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: species-whale-shark
+  species_page: content/species/sharks-rays/whale-shark.md
+  common_name: Whale Shark
+  scientific_name: Rhincodon typus
+  taxon_group: sharks-rays
+  source_card:
+    embed_id: species-whale-shark-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://iucn.org/news/secretariat/201607/whale-sharks-winghead-sharks-and-bornean-orangutans-slide-towards-extinction
+    domain: iucn.org
+    source_type: authority_source
+    display_title: Whale Shark source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 102
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: species-west-indian-manatee
+  species_page: content/species/sirenians/west-indian-manatee.md
+  common_name: West Indian Manatee
+  scientific_name: Trichechus manatus
+  taxon_group: sirenians
+  source_card:
+    embed_id: species-west-indian-manatee-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.fws.gov/press-release/2017-03/manatee-reclassified-endangered-threatened-habitat-improves-and-population
+    domain: fws.gov
+    source_type: official_institutional
+    display_title: West Indian Manatee source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 215
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: species-green-turtle
+  species_page: content/species/turtles/green-turtle.md
+  common_name: Green Turtle
+  scientific_name: Chelonia mydas
+  taxon_group: turtles
+  source_card:
+    embed_id: species-green-turtle-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.oceanicsociety.org/news-and-announcements/green-sea-turtle-status-improvement-2025/
+    domain: oceanicsociety.org
+    source_type: partner_or_ngo
+    display_title: Green Turtle source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 915
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: hawksbill-turtle
+  species_page: content/species/turtles/hawksbill-turtle.md
+  common_name: Hawksbill Turtle
+  scientific_name: Eretmochelys imbricata
+  taxon_group: turtles
+  source_card:
+    embed_id: hawksbill-turtle-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.fisheries.noaa.gov/species/hawksbill-turtle
+    domain: fisheries.noaa.gov
+    source_type: official_institutional
+    display_title: Hawksbill Turtle source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 258
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: kemps-ridley-turtle
+  species_page: content/species/turtles/kemps-ridley-turtle.md
+  common_name: Kemp's Ridley Turtle
+  scientific_name: Lepidochelys kempii
+  taxon_group: turtles
+  source_card:
+    embed_id: kemps-ridley-turtle-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.fisheries.noaa.gov/species/kemps-ridley-turtle
+    domain: fisheries.noaa.gov
+    source_type: official_institutional
+    display_title: Kemp's Ridley Turtle source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 217
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: leatherback-turtle
+  species_page: content/species/turtles/leatherback-turtle.md
+  common_name: Leatherback Turtle
+  scientific_name: Dermochelys coriacea
+  taxon_group: turtles
+  source_card:
+    embed_id: leatherback-turtle-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.fisheries.noaa.gov/species/leatherback-turtle
+    domain: fisheries.noaa.gov
+    source_type: official_institutional
+    display_title: Leatherback Turtle source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 221
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: loggerhead-turtle
+  species_page: content/species/turtles/loggerhead-turtle.md
+  common_name: Loggerhead Turtle
+  scientific_name: Caretta caretta
+  taxon_group: turtles
+  source_card:
+    embed_id: loggerhead-turtle-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.fisheries.noaa.gov/species/loggerhead-turtle
+    domain: fisheries.noaa.gov
+    source_type: official_institutional
+    display_title: Loggerhead Turtle source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 202
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
+- artifact_id: olive-ridley-turtle
+  species_page: content/species/turtles/olive-ridley-turtle.md
+  common_name: Olive Ridley Turtle
+  scientific_name: Lepidochelys olivacea
+  taxon_group: turtles
+  source_card:
+    embed_id: olive-ridley-turtle-source-card-001
+    status: verified_source_card
+    status_label: Verified source card
+    public_use: true
+    copies_external_media: false
+    use_role: public fallback when approved primary image is absent
+    source_url: https://www.fisheries.noaa.gov/species/olive-ridley-turtle
+    domain: fisheries.noaa.gov
+    source_type: official_institutional
+    display_title: Olive Ridley Turtle source card
+    allowed_surfaces:
+    - species-page-source-card
+    - visual-explorer-source-inspector
+    - review-pack
+    blocked_surfaces:
+    - primary-image-download
+    - social-crop-as-image
+    - hero-image-reuse-without-image-level-license
+    link_check:
+      ok: true
+      status_code: 200
+      method: HEAD
+      elapsed_ms: 219
+      error: null
+    reviewer_action: Safe as a link-backed fallback; do not copy images from the page without image-level rights review.
