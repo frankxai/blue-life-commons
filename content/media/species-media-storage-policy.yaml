@@ -2,29 +2,30 @@ version: '2026-07-04'
 updated: '2026-07-04'
 purpose: Long-term media storage contract for approved Blue Life Commons animal images and derivatives.
 provider:
-  primary: cloudflare_r2
-  interface: s3_compatible
-  public_delivery: custom_domain
-  why: Keep GitHub as the metadata and review system, use object storage for pixels, and keep Vercel focused on the application.
+  primary: vercel_blob
+  interface: vercel_blob_sdk
+  public_delivery: vercel_blob_public_cdn
+  why: Start with the Vercel-native object store so approved species images can be mirrored quickly without adding Cloudflare infrastructure.
+  later_scale_option: cloudflare_r2
+  later_scale_trigger: Revisit R2 when image traffic, partner libraries, large originals, video, or long-term egress economics justify a dedicated media domain.
   official_docs:
-  - https://developers.cloudflare.com/r2/
-  - https://developers.cloudflare.com/r2/api/s3/
-  - https://developers.cloudflare.com/r2/api/s3/api/
-  - https://developers.cloudflare.com/r2/buckets/public-buckets/
-  - https://developers.cloudflare.com/r2/pricing/
   - https://vercel.com/docs/vercel-blob
+  - https://vercel.com/docs/vercel-blob/using-blob-sdk
+  - https://vercel.com/docs/cli/blob
   - https://vercel.com/docs/pricing
+  - https://vercel.com/docs/domains/set-up-custom-domain
+  - https://developers.cloudflare.com/r2/pricing/
   - https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github
 public_delivery:
-  public_base_url: https://media.bluelifecommons.org
-  custom_domain_required: true
-  public_bucket_mode: custom_domain
-  upload_endpoint_pattern: https://<ACCOUNT_ID>.r2.cloudflarestorage.com
-  note: Public reads should use the media domain. Writes should use the S3-compatible R2 endpoint with scoped credentials.
-buckets:
-  production: blue-life-media-prod
-  staging: blue-life-media-staging
-  review_private: blue-life-media-review
+  public_base_url: vercel_blob_upload_result_url
+  custom_domain_required: false
+  public_bucket_mode: vercel_blob_public_store
+  upload_endpoint_pattern: '@vercel/blob put(pathname, body, { access: "public" })'
+  note: Public reads use the URL returned by Vercel Blob. Keep original source URLs and attribution visible on public pages.
+stores:
+  production: blue-life-commons-media
+  staging: blue-life-commons-media
+  review_private: blue-life-commons-media-private-future
 repo_boundary:
   github_stores:
   - source and application code
@@ -36,7 +37,7 @@ repo_boundary:
   - bulk original image libraries
   - unapproved candidate image files
   - private partner originals
-  - R2 credentials or signed URLs
+  - Vercel Blob tokens, OIDC tokens, or signed URLs
   - precise sensitive-location EXIF data
 storage_boundary:
   object_storage_stores:
@@ -52,19 +53,16 @@ storage_boundary:
   vercel_stores:
   - application deployment
   - public routes and reviewer UI
-  - environment variables only
+  - Vercel Blob object storage during the first production phase
+  - environment variables and OIDC/runtime credentials
 env_contract:
   public:
   - BLC_MEDIA_STORAGE_PROVIDER
-  - BLC_MEDIA_PUBLIC_BASE_URL
-  - BLC_MEDIA_PRODUCTION_BUCKET
-  - BLC_MEDIA_STAGING_BUCKET
-  - BLC_MEDIA_REVIEW_BUCKET
+  - BLC_MEDIA_PRODUCTION_STORE
   secret:
-  - R2_ACCOUNT_ID
-  - R2_ENDPOINT
-  - R2_ACCESS_KEY_ID
-  - R2_SECRET_ACCESS_KEY
+  - BLOB_READ_WRITE_TOKEN
+  - BLOB_STORE_ID
+  - VERCEL_OIDC_TOKEN
   - MEDIA_DATABASE_URL
   - MEDIA_SIGNING_SECRET
 object_keys:
@@ -139,11 +137,12 @@ operations:
   normal_flow:
   - collect candidate metadata without downloading
   - approve primary media in registry
-  - mirror approved source into private original object when allowed
-  - generate deterministic public variants
+  - mirror approved source into Vercel Blob when allowed
+  - record Vercel Blob upload result URL in the public blob manifest
+  - generate deterministic public variants in a later optimization pass
   - write media asset and variant rows to database
   - export public-safe manifest to Git
-  - switch public routes from source URL to owned derivative URL
+  - switch public routes from source URL to owned Blob URL
   - keep original source and attribution visible
   blocked_flow:
   - never mirror noncommercial, no-derivatives, unclear-license, or partner-unapproved media

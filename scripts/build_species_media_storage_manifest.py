@@ -73,6 +73,8 @@ def source_extension(url: str | None) -> str:
 
 
 def public_url(base_url: str, key: str) -> str:
+    if not base_url or base_url == "vercel_blob_upload_result_url":
+        return "assigned_after_vercel_blob_upload"
     return f"{base_url.rstrip('/')}/{key}"
 
 
@@ -119,6 +121,8 @@ def build_record(record: dict, policy: dict) -> dict:
 
     rights_status = primary.get("rights_status")
     mirror_allowed = rights_status in {"owned", "licensed", "public-domain", "cc0", "cc-by", "cc-by-sa", "partner-grant"}
+    stores = policy.get("stores") or policy.get("buckets") or {}
+    production_store = stores.get("production")
     return {
         "artifact_id": record.get("artifact_id"),
         "species_page": record.get("species_page"),
@@ -143,14 +147,15 @@ def build_record(record: dict, policy: dict) -> dict:
         "blocked_surfaces": primary.get("blocked_surfaces") or [],
         "storage": {
             "provider": policy["provider"]["primary"],
-            "bucket": policy["buckets"]["production"],
-            "public_base_url": policy["public_delivery"]["public_base_url"],
+            "store": production_store,
+            "bucket": production_store,
+            "public_base_url": policy["public_delivery"].get("public_base_url"),
             "object_prefix": prefix,
             "source_ext": source_ext,
             "status": "mirror_pending",
             "mirror_allowed_by_current_rights_status": mirror_allowed,
             "no_download_performed": True,
-            "public_site_preference": "current_approved_source_url_until_owned_variants_exist",
+            "public_site_preference": "current_approved_source_url_until_blob_manifest_has_uploaded_record",
             "variants": variants,
         },
         "migration_gate": {

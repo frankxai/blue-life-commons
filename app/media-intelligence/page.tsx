@@ -200,6 +200,9 @@ export default function MediaIntelligencePage() {
   const publicStorageVariants = MEDIA_STORAGE_VARIANTS.filter(
     (variant) => variant.publicUse,
   )
+  const hostedBlobImages = approved.filter(
+    (record) => record.media.imageUrlSource === "vercel_blob",
+  ).length
   const plannedPublicVariants = approved.length * publicStorageVariants.length
   const plannedStorageObjects = approved.length * MEDIA_STORAGE_VARIANTS.length
 
@@ -340,23 +343,23 @@ export default function MediaIntelligencePage() {
             id="storage-heading"
             eyebrow="Scale storage"
             title="Git stores truth; object storage stores pixels"
-            description="The long-term setup keeps this repo as the rights and review ledger while approved image files move to an R2/S3-compatible media domain. Vercel stays focused on rendering the app."
+            description="The first production storage layer keeps this repo as the rights and review ledger while approved image files are mirrored into Vercel Blob. R2 stays available later if traffic economics demand a dedicated media domain."
           />
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <StatCard
-              label="Mirror-ready"
-              value={String(approved.length)}
-              detail="Approved species images mapped to deterministic object-storage prefixes."
+              label="Blob-hosted"
+              value={String(hostedBlobImages)}
+              detail="Approved species images now mirrored into the connected Vercel Blob store."
             />
             <StatCard
-              label="Public variants"
+              label="Planned variants"
               value={String(plannedPublicVariants)}
-              detail={`${publicStorageVariants.length} generated public derivatives per approved image.`}
+              detail={`${publicStorageVariants.length} derivative slots per approved image for the next optimization pass.`}
             />
             <StatCard
-              label="Storage objects"
+              label="Storage plan"
               value={String(plannedStorageObjects)}
-              detail="Original plus public derivative objects planned by the storage manifest."
+              detail="Original plus public derivative object paths tracked by the storage manifest."
             />
             <StatCard
               label="Git originals"
@@ -393,9 +396,9 @@ export default function MediaIntelligencePage() {
               {MEDIA_STORAGE_PUBLIC_BASE_URL}
             </p>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Public routes should switch to owned `card`, `hero`, and `og`
-              derivatives only after the manifest row has generated objects,
-              checksums, rights review, and an audit event.
+              Public routes now prefer uploaded Vercel Blob originals when the
+              approved asset appears in the Blob manifest. `card`, `hero`, and
+              `og` derivatives remain a planned optimization step.
             </p>
           </div>
         </section>

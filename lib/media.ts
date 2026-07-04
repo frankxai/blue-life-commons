@@ -1,10 +1,14 @@
 import type { Artifact } from "@/lib/types"
+import blobManifest from "@/content/media/species-media-blob-manifest.json"
 
 export interface ApprovedSpeciesMedia {
   assetId?: string
   imageUrl: string
+  imageUrlSource?: "vercel_blob" | "approved_source"
   sourceUrl?: string
   originalMediaUrl?: string
+  ownedStorageUrl?: string
+  ownedStorageProvider?: string
   creator?: string
   credit?: string
   license?: string
@@ -13,10 +17,30 @@ export interface ApprovedSpeciesMedia {
   altText: string
 }
 
+interface SpeciesBlobRecord {
+  approved_asset_id?: string
+  storage?: {
+    provider?: string
+    status?: string
+    blob_url?: string
+  }
+}
+
 function cleanText(value?: string): string | undefined {
   const cleaned = value?.replace(/\s+/g, " ").trim()
   return cleaned || undefined
 }
+
+const blobByAssetId = new Map(
+  ((blobManifest as { records?: SpeciesBlobRecord[] }).records ?? [])
+    .filter(
+      (record) =>
+        record.approved_asset_id &&
+        record.storage?.status === "uploaded" &&
+        record.storage?.blob_url,
+    )
+    .map((record) => [record.approved_asset_id as string, record]),
+)
 
 export function getApprovedSpeciesMedia(
   artifact: Artifact,
@@ -34,11 +58,19 @@ export function getApprovedSpeciesMedia(
   if (primary.qa_status !== "approved") return undefined
   if (render.candidate_public_use === true) return undefined
 
+  const ownedBlob = primary.asset_id ? blobByAssetId.get(primary.asset_id) : undefined
+  const ownedStorageUrl = cleanText(ownedBlob?.storage?.blob_url)
+
   return {
     assetId: cleanText(primary.asset_id),
-    imageUrl: primary.public_media_url,
+    imageUrl: ownedStorageUrl ?? primary.public_media_url,
+    imageUrlSource: ownedStorageUrl ? "vercel_blob" : "approved_source",
     sourceUrl: cleanText(primary.source_url),
     originalMediaUrl: cleanText(primary.original_media_url),
+    ownedStorageUrl,
+    ownedStorageProvider: ownedStorageUrl
+      ? cleanText(ownedBlob?.storage?.provider) ?? "vercel_blob"
+      : undefined,
     creator: cleanText(primary.creator),
     credit: cleanText(primary.credit),
     license: cleanText(primary.license),

@@ -4,58 +4,62 @@ Last updated: 2026-07-04
 
 ## Decision
 
-Blue Life Commons should use this split:
+Blue Life Commons now uses this production split:
 
-- GitHub stores code, metadata, review trail, source URLs, license fields, object keys, and public-safe manifests.
-- Cloudflare R2 stores approved originals and generated public derivatives.
-- Postgres stores the operational registry, review events, partner grants, object inventory, and stale-source state.
-- Vercel hosts the Next.js application, reviewer/contributor interfaces, and production routes.
+- GitHub stores code, rights metadata, review trail, source URLs, object pathnames, public manifests, and evidence.
+- Vercel Blob stores the first owned copies of approved species images.
+- Vercel hosts the Next.js application, project environments, Blob store connection, previews, and production routes.
+- Postgres remains the next operational registry layer for grants, review events, stale-source checks, object inventory, and contributor workflows.
+- Cloudflare R2 remains a later migration option when traffic, partner libraries, video, or egress economics justify a dedicated media domain.
 
-This keeps the repository light and reviewable while making the image platform durable enough for tens of thousands or millions of assets.
+This matches the current product need: get every approved animal image hosted on the same platform as the app, with minimal infrastructure, while keeping the repo reviewable.
 
-## Why R2 First
+## Why Vercel Blob First
 
-Cloudflare documents R2 as S3-compatible object storage and lists the S3 API endpoint pattern as `https://<ACCOUNT_ID>.r2.cloudflarestorage.com`. R2 public buckets can be connected to a custom domain for public reads. Cloudflare's R2 pricing page also says there are no egress bandwidth charges for any storage class, while storage and operations are metered.
+Vercel Blob is integrated with Vercel projects and the `@vercel/blob` SDK. The Vercel docs describe a project-connected Blob store, local `BLOB_READ_WRITE_TOKEN` use for batch uploads, and OIDC as the preferred runtime authentication path. The Vercel CLI also supports Blob store creation and file operations.
 
-Vercel Blob remains a good fallback for simple Vercel-native uploads, but Vercel Blob has storage, operation, and data-transfer pricing. For a public animal image library, the lower egress-risk architecture is R2 plus pre-generated derivatives served from a media domain.
-
-GitHub is not the pixel warehouse. GitHub's large-file guidance discourages large binary repositories; the repo should keep media truth and review data, not bulk originals.
+Cloudflare R2 is still attractive for a large public media library because its pricing docs list free internet egress for R2 storage classes. For the next phase, however, Vercel Blob is simpler and already connected to the production project.
 
 Sources:
 
-- Cloudflare R2 overview: <https://developers.cloudflare.com/r2/>
-- Cloudflare R2 S3 API: <https://developers.cloudflare.com/r2/api/s3/>
-- Cloudflare R2 S3 compatibility endpoint: <https://developers.cloudflare.com/r2/api/s3/api/>
-- Cloudflare R2 public buckets: <https://developers.cloudflare.com/r2/buckets/public-buckets/>
-- Cloudflare R2 pricing: <https://developers.cloudflare.com/r2/pricing/>
 - Vercel Blob docs: <https://vercel.com/docs/vercel-blob>
+- Vercel Blob SDK docs: <https://vercel.com/docs/vercel-blob/using-blob-sdk>
+- Vercel Blob CLI docs: <https://vercel.com/docs/cli/blob>
 - Vercel pricing: <https://vercel.com/docs/pricing>
+- Vercel custom domain guide: <https://vercel.com/docs/domains/set-up-custom-domain>
+- Cloudflare R2 pricing: <https://developers.cloudflare.com/r2/pricing/>
 - GitHub large-file guidance: <https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github>
 
-## Buckets
+## Current Production State
 
-Use three buckets:
+| Layer | State |
+|---|---|
+| Vercel project | `starlight-intelligence/blue-life-commons` |
+| Blob store | `blue-life-commons-media` |
+| Blob access | public |
+| Store region | `iad1` |
+| Uploaded approved images | 31 |
+| Public Blob manifest | `content/media/species-media-blob-manifest.json` |
+| App read behavior | Prefer Blob URL when an approved asset appears in the Blob manifest; fall back to approved source URL otherwise |
+| Official domain | Not connected yet; `bluelifecommons.org` was available for purchase on 2026-07-04 |
 
-| Bucket | Access | Purpose |
-|---|---|---|
-| `blue-life-media-prod` | public derivatives through `media.bluelifecommons.org`; originals private by default | Approved production media |
-| `blue-life-media-staging` | private or restricted | Variant generation, QA, migration batches |
-| `blue-life-media-review` | private | Contributor uploads, partner originals, reviewer-only candidates |
+## Object Pathnames
 
-Writes use the S3-compatible R2 endpoint. Public reads use the custom media domain.
-
-## Object Keys
-
-Approved species media uses this immutable prefix:
+Approved species media uses this immutable pathname prefix:
 
 ```text
 species/{taxon_group}/{slug}/{asset_id}/
 ```
 
-Inside each prefix:
+The first Vercel Blob upload pass stores the approved source copy at:
 
 ```text
 original/source.{source_ext}
+```
+
+The storage manifest still tracks the intended derivative slots:
+
+```text
 public/thumb-320.webp
 public/card-640.webp
 public/hero-1280.webp
@@ -63,56 +67,66 @@ public/og-1200x630.jpg
 public/full-1920.webp
 ```
 
-Never overwrite an approved asset prefix. If a species gets a better image, create a new asset id and retire the older asset in the database.
+Those derivative variants are not required for the first production pass. They should be generated after image transformation, EXIF stripping, checksum logging, and QA are automated.
 
-## Current Setup In Repo
+## Repo Assets
 
 - Storage policy: `content/media/species-media-storage-policy.yaml`
-- Generated storage manifest: `content/media/species-media-storage-manifest.yaml`
+- Storage plan: `content/media/species-media-storage-manifest.yaml`
+- Blob upload manifest: `content/media/species-media-blob-manifest.json`
 - Human review pack: `content/media/review-packs/species-media-storage-manifest-2026-07-04.md`
 - Operational SQL schema: `schema/media-storage-schema.sql`
+- Upload script: `scripts/upload_species_media_to_vercel_blob.mjs`
 - Env contract: `.env.example`
-- Generator: `scripts/build_species_media_storage_manifest.py`
 
-Run:
+Commands:
 
 ```bash
-python scripts/build_species_media_storage_manifest.py
-python scripts/build_species_media_storage_manifest.py --check
+npm run media:storage
+npm run media:storage:check
+npm run media:blob:plan
+npm run media:blob:upload
+npm run media:blob:check
 ```
 
-The first generated manifest maps the current 31 approved species images into deterministic object keys and derivative URLs, but it does not download, transform, upload, or sign any file.
+`media:blob:upload` reads `.env.local` or `BLOB_READ_WRITE_TOKEN`, uploads only approved media rows, and writes public Blob URLs to the Blob manifest. Secrets are never written to Git.
 
-## Migration Flow
+## Domain Runbook
 
-1. Keep using the existing approved source URLs in production until owned derivatives exist.
-2. Create the three R2 buckets and connect `media.bluelifecommons.org` to the production bucket.
-3. Add the `.env.example` variables to Vercel and local secret storage.
-4. Run the storage manifest generator.
-5. For each approved image, re-check rights, source, credit, blocked surfaces, and EXIF/sensitive-location constraints.
-6. Mirror only media whose rights allow copying and derivative generation.
-7. Generate the fixed derivatives.
-8. Insert `media_asset`, `media_variant`, `media_rights_grant`, and `media_review_event` rows.
-9. Export a public-safe manifest back to Git.
-10. Switch public routes from `original_media_url` to the owned `card`, `hero`, and `og` variants.
+The app metadata and sitemap are already prepared for:
+
+```text
+https://bluelifecommons.org
+```
+
+As of 2026-07-04, Vercel reported `bluelifecommons.org` as available for `$9.99/year`; DNS resolution for `bluelifecommons.org` and `www.bluelifecommons.org` failed, and the Vercel project listed only Vercel-managed domains.
+
+To make the official domain live:
+
+1. Purchase or transfer `bluelifecommons.org`.
+2. Add `bluelifecommons.org` and `www.bluelifecommons.org` to the Vercel project.
+3. If using third-party DNS, configure the Vercel-provided DNS records. Vercel's standard guide uses an apex `A` record to Vercel and a `www` CNAME to Vercel DNS when prompted.
+4. Wait for Vercel verification and certificate issuance.
+5. Verify `/`, `/species`, `/encyclopedia`, `/media-intelligence`, and `/sitemap.xml` on the official domain.
+
+Do not claim the official domain is connected until DNS resolves and Vercel lists the domain on the project.
 
 ## Cost Guardrails
 
-- Pre-generate variants instead of relying on request-time transformations.
-- Prefer `<picture>`/`srcset` with immutable variant URLs.
-- Do not use Vercel Image Optimization as the default path for the large public library.
-- Keep originals private unless public inspection requires a public `full` derivative.
-- Strip EXIF before public derivative generation.
-- Keep partner originals private unless the grant explicitly allows public hosting.
-- Track stale source URLs and license changes as review events.
+- Store approved originals once; avoid duplicates.
+- Keep Git free of bulk binaries.
+- Do not run request-time transformations for every page view.
+- Generate `thumb`, `card`, `hero`, and `og` variants in a controlled batch before traffic grows.
+- Keep original source pages and credits visible even after owned hosting.
+- Move to R2 or another dedicated object store only when transfer volume, partner archives, or large media justify the extra provider.
 
 ## Scale Model
 
 | Scale | Assets | Expected Path |
 |---|---:|---|
-| Current | 31 approved images | external approved URLs plus storage manifest |
-| Near term | 1k-5k assets | R2 buckets, generated derivatives, manifest exports |
-| Growth | 30k-500k assets | Postgres registry, queue-based ingest, stale-source jobs |
-| Commons scale | 1M+ assets | dedicated media service, search index, partner grant automation |
+| Current | 31 approved images | Vercel Blob originals plus public manifest |
+| Near term | 100-1,000 images | Vercel Blob, generated variants, source/rights ledger |
+| Growth | 1,000-10,000 images | Postgres registry, queue-based ingest, stale-source jobs |
+| Heavy media | 10,000+ images, video, or high transfer | Compare Vercel Blob transfer against R2 free-egress architecture |
 
-The expensive mistakes are not storage itself. They are hot transformations, unbounded egress, committing binaries to Git, and publishing assets whose rights or welfare context are unclear.
+The expensive mistakes are not the first 31 images. They are unbounded transfer, hot transformations, storing binaries in Git, and publishing media whose rights or welfare context are unclear.

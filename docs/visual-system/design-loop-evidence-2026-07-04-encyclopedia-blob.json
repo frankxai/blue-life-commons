@@ -1,0 +1,229 @@
+{
+  "version": "2026-07-04",
+  "task": "Build the public Blue Life Commons ocean-life encyclopedia with every current animal entry wired to approved Vercel Blob-hosted imagery, rights metadata, source links, and production-ready verification.",
+  "surface": "/species, /encyclopedia, /media-intelligence storage section, Vercel Blob media manifest, upload script, storage policy, navigation, sitemap, and storage runbook.",
+  "audience": "Researchers, NGOs, educators, contributors, reviewers, partners, and public visitors who need a browsable animal encyclopedia with inspectable image provenance.",
+  "first_read": "Blue Life Commons should be an image-first, source-led animal encyclopedia: current approved animals render real licensed or public-domain media from owned Vercel Blob URLs, while candidate media remains outside public routes.",
+  "standards": [
+    "C:/Users/frank/starlight/repos/blue-life-commons/AGENTS.md",
+    "C:/Users/frank/starlight/repos/blue-life-commons/ETHICS.md",
+    "C:/Users/frank/starlight/repos/blue-life-commons/SOURCES.md",
+    "C:/Users/frank/starlight/repos/blue-life-commons/STYLE.md",
+    "C:/Users/frank/starlight/repos/blue-life-commons/schema/artifact-schema.md",
+    "C:/Users/frank/starlight/repos/DESIGN_TASTE.md",
+    "C:/Users/frank/starlight/repos/WEB_EXPERIENCE_STANDARD.md",
+    "C:/Users/frank/starlight/repos/VISUAL_QA_GATE.md",
+    "C:/Users/frank/starlight/repos/_intelligence/README.md",
+    "C:/Users/frank/starlight/repos/_intelligence/operating-system.md",
+    "C:/Users/frank/starlight/repos/_intelligence/quality-gates.md",
+    "C:/Users/frank/starlight/repos/_intelligence/asset-intelligence.md",
+    "C:/Users/frank/starlight/repos/design-agent-standards/PREMIUM_ASSET_STANDARD.md",
+    "C:/Users/frank/starlight/repos/design-agent-standards/AGENTIC_DESIGN_LOOP.md",
+    "C:/Users/frank/starlight/repos/design-agent-standards/OUTCOMES.md"
+  ],
+  "references": [
+    {
+      "label": "Vercel Blob",
+      "source": "https://vercel.com/docs/vercel-blob",
+      "reason": "Primary public object storage and delivery layer for approved species images."
+    },
+    {
+      "label": "Vercel Blob SDK",
+      "source": "https://vercel.com/docs/vercel-blob/using-blob-sdk",
+      "reason": "Upload behavior, public access, and Blob URL contract."
+    },
+    {
+      "label": "Vercel Blob CLI",
+      "source": "https://vercel.com/docs/cli/blob",
+      "reason": "Store provisioning, project connection, and operational commands."
+    },
+    {
+      "label": "Vercel custom domains",
+      "source": "https://vercel.com/docs/domains/set-up-custom-domain",
+      "reason": "Official-domain setup path after the domain is owned or purchased."
+    },
+    {
+      "label": "Vercel add a domain",
+      "source": "https://vercel.com/docs/domains/working-with-domains/add-a-domain",
+      "reason": "Project domain assignment and verification workflow."
+    },
+    {
+      "label": "GitHub large file guidance",
+      "source": "https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github",
+      "reason": "Repo boundary: Git tracks metadata and manifests, not the bulk image library."
+    }
+  ],
+  "direction": {
+    "keep": [
+      "Current public species pages remain source-led and citation-backed.",
+      "Only approved primary media enters public routes.",
+      "Vercel Blob is the first owned pixel store so the app is not hotlink-dependent for current approved animal images.",
+      "GitHub stores review truth, rights metadata, source URLs, checksums, and public manifests.",
+      "Official domain connection is documented but blocked until the domain is purchased or otherwise owned."
+    ],
+    "avoid": [
+      "Using Google Images as a source of record.",
+      "Publishing review-only candidate URLs.",
+      "Committing downloaded image binaries to Git.",
+      "Claiming domain ownership or official-domain production before DNS/project verification exists.",
+      "Overclaiming beyond the current 31 approved species records."
+    ],
+    "signature": "A real animal encyclopedia surface: visual-first browsing, guild grouping, source and rights tracking, Vercel-hosted image delivery, and a documented growth path for more animals.",
+    "system": [
+      "content/media/species-media-blob-manifest.json records 31 uploaded approved image URLs in Vercel Blob.",
+      "lib/media.ts prefers Blob URLs for approved species media and falls back to approved source URLs only when needed.",
+      "components/species-encyclopedia.tsx renders the browsable public catalog for /species and /encyclopedia.",
+      "app/media-intelligence/page.tsx exposes the storage state and scale strategy.",
+      "scripts/upload_species_media_to_vercel_blob.mjs plans, uploads, and checks approved media without exposing secrets.",
+      "content/media/species-media-storage-policy.yaml defines the Vercel-Blob-first storage contract and later R2 scale option."
+    ]
+  },
+  "asset_quality": {
+    "tier": "A",
+    "source_method": "product-capture",
+    "provenance": "source-cited",
+    "why_premium": "The primary asset is the working production app surface backed by real approved species images, source metadata, and Vercel Blob delivery instead of decorative or generated animal art.",
+    "shortcut_risk": "low",
+    "context_tested": true
+  },
+  "artifacts": [
+    {
+      "path_or_url": "components/species-encyclopedia.tsx",
+      "kind": "web",
+      "inspected": true,
+      "notes": "Image-first encyclopedia layout, guild navigation, rights/source chips, source links, and Blob-hosted indicators."
+    },
+    {
+      "path_or_url": "content/media/species-media-blob-manifest.json",
+      "kind": "generated-data",
+      "inspected": true,
+      "notes": "31 approved species image records uploaded to the connected Vercel Blob store."
+    },
+    {
+      "path_or_url": "scripts/upload_species_media_to_vercel_blob.mjs",
+      "kind": "tooling",
+      "inspected": true,
+      "notes": "Dry-run, upload, and check workflow for approved public species images."
+    },
+    {
+      "path_or_url": "docs/visual-system/media-storage-architecture.md",
+      "kind": "process-doc",
+      "inspected": true,
+      "notes": "Vercel-Blob-first architecture, official-domain blocker, cost posture, and later R2 option."
+    },
+    {
+      "path_or_url": "docs/visual-system/screenshots/species-encyclopedia-desktop-2026-07-04.png",
+      "kind": "screenshot",
+      "inspected": true,
+      "notes": "Desktop encyclopedia hero and visual catalog QA."
+    },
+    {
+      "path_or_url": "docs/visual-system/screenshots/species-encyclopedia-mobile-2026-07-04.png",
+      "kind": "screenshot",
+      "inspected": true,
+      "notes": "Mobile encyclopedia hero, stats, buttons, and first image QA after copy-overflow fix."
+    },
+    {
+      "path_or_url": "docs/visual-system/screenshots/encyclopedia-alias-desktop-2026-07-04.png",
+      "kind": "screenshot",
+      "inspected": true,
+      "notes": "Desktop QA for the /encyclopedia alias route."
+    },
+    {
+      "path_or_url": "docs/visual-system/screenshots/media-intelligence-blob-desktop-2026-07-04.png",
+      "kind": "screenshot",
+      "inspected": true,
+      "notes": "Desktop media intelligence route top-level coverage QA."
+    },
+    {
+      "path_or_url": "docs/visual-system/screenshots/media-intelligence-blob-storage-desktop-2026-07-04.png",
+      "kind": "screenshot",
+      "inspected": true,
+      "notes": "Tall desktop capture including the Blob/storage architecture section."
+    }
+  ],
+  "checks": [
+    {
+      "name": "standards-loaded",
+      "status": "pass",
+      "evidence": "Repo AGENTS, ethics/source/style/schema rules, Premium Web OS, asset intelligence, visual QA, and premium asset standards were read or applied through the current task context."
+    },
+    {
+      "name": "asset-tier",
+      "status": "pass",
+      "evidence": "Tier A product-proof surface: public pages use real approved species media and Vercel Blob URLs, not generated animal placeholders."
+    },
+    {
+      "name": "blob-upload",
+      "status": "pass",
+      "evidence": "npm run media:blob:upload uploaded 31 approved image originals to the blue-life-commons-media Vercel Blob store; npm run media:blob:check reports coverage for 31 approved species images."
+    },
+    {
+      "name": "storage-manifest",
+      "status": "pass",
+      "evidence": "npm run media:storage:check reports the Vercel Blob storage manifest is up to date."
+    },
+    {
+      "name": "content-integrity",
+      "status": "pass",
+      "evidence": "python scripts/validate_artifacts.py checked 71 artifacts with 0 errors; python scripts/lint_content.py reported 0 errors and 0 warnings."
+    },
+    {
+      "name": "catalog-sync",
+      "status": "pass",
+      "evidence": "python scripts/sync_species_page_media.py --check and python scripts/build_catalog.py --check passed."
+    },
+    {
+      "name": "typescript",
+      "status": "pass",
+      "evidence": "npm run lint passed after the encyclopedia and media plumbing changes."
+    },
+    {
+      "name": "build",
+      "status": "pass",
+      "evidence": "npm run build generated /species, /encyclopedia, /media-intelligence, and all 31 species detail pages. The only warning is the known nonfatal Turbopack NFT trace warning through app/sitemap.ts and lib/content.ts."
+    },
+    {
+      "name": "local-route-verification",
+      "status": "pass",
+      "evidence": "Production build served locally on port 3022: /species, /encyclopedia, and /media-intelligence returned 200 and rendered 64-78 Blob host mentions per page."
+    },
+    {
+      "name": "blob-delivery",
+      "status": "pass",
+      "evidence": "Sampled Vercel Blob object HEAD requests for basking shark, blue whale, and California sea lion returned HTTP 200 with image/jpeg content."
+    },
+    {
+      "name": "public-safety",
+      "status": "pass",
+      "evidence": "Served public routes were scanned for review-only candidate markers, candidate file-page fields, and candidate direct-file patterns; no forbidden markers were found."
+    },
+    {
+      "name": "export-inspection",
+      "status": "pass",
+      "evidence": "Chrome headless screenshots were captured for desktop/mobile encyclopedia, /encyclopedia alias, and media intelligence storage coverage."
+    },
+    {
+      "name": "visual-qa",
+      "status": "pass",
+      "evidence": "Desktop and mobile screenshots show animal images, stats, controls, and route text rendering without overlap; a mobile text overflow was found and fixed before final screenshots."
+    },
+    {
+      "name": "official-domain-readiness",
+      "status": "pass",
+      "evidence": "Vercel project domains were inspected and the architecture runbook records the blocker: bluelifecommons.org is not currently owned/verified, so purchase or DNS control is required before official-domain production."
+    }
+  ],
+  "score": {
+    "total": 28,
+    "max": 30,
+    "notes": "Strong product surface, real hosted imagery, production build, visual QA, and source-safety checks. Remaining score is reserved for official-domain purchase/verification and future transformed image variants."
+  },
+  "decision": "ship",
+  "known_risks": [
+    "Official domain cannot be attached until bluelifecommons.org is purchased or DNS control is provided.",
+    "The current Blob pass uploads approved originals; card, hero, open-graph, and thumbnail derivatives remain the next optimization pass.",
+    "Future animal expansion still needs sourced species content, media rights review, approval records, and public-route safety checks before images render.",
+    "npm audit reports two moderate advisories inherited through Next's nested postcss dependency; the offered audit fix is a major downgrade path and was not applied."
+  ]
+}

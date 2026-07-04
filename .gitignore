@@ -1,0 +1,16 @@
+.next/
+out/
+dist/
+node_modules/
+
+.env
+.env.*
+!.env.example
+
+.vercel/
+
+content/media/blob-downloads/
+content/media/blob-upload-output/
+
+.vercel
+.env*
