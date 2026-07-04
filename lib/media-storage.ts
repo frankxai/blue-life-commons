@@ -14,7 +14,8 @@ export interface MediaStorageLayer {
   reason: string
 }
 
-export const MEDIA_STORAGE_PUBLIC_BASE_URL = "https://media.bluelifecommons.org"
+export const MEDIA_STORAGE_PUBLIC_BASE_URL =
+  "https://7xuojupgkl56rqhi.public.blob.vercel-storage.com"
 
 export const MEDIA_STORAGE_STACK: MediaStorageLayer[] = [
   {
@@ -26,12 +27,12 @@ export const MEDIA_STORAGE_STACK: MediaStorageLayer[] = [
       "Git should stay small, reviewable, and transparent; it should not become the image warehouse.",
   },
   {
-    name: "Cloudflare R2",
-    job: "Durable pixel storage",
+    name: "Vercel Blob",
+    job: "First owned pixel store",
     stores:
-      "Approved originals, generated public derivatives, and private reviewer uploads.",
+      "The first 31 approved species images, public Blob URLs, and the upload manifest used by production routes.",
     reason:
-      "S3-compatible object storage keeps the public image library independent from the app deploy and easier to move if costs or needs change.",
+      "Vercel-native storage gets the encyclopedia fully owned and hosted without adding a second infrastructure provider at launch.",
   },
   {
     name: "Postgres",
@@ -45,9 +46,9 @@ export const MEDIA_STORAGE_STACK: MediaStorageLayer[] = [
     name: "Vercel",
     job: "Application and publishing layer",
     stores:
-      "Next.js routes, reviewer UI, environment variables, and production deployments.",
+      "Next.js routes, reviewer UI, environment variables, Blob store connection, and production deployments.",
     reason:
-      "Vercel should render the experience and avoid carrying the large image library or transformation workload by default.",
+      "The app and first media store now live together; R2 remains the later option if high image traffic makes egress economics more important.",
   },
 ]
 

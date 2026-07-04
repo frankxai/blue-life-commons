@@ -50,6 +50,11 @@ export function ArtifactHeroMedia({ artifact }: { artifact: Artifact }) {
               {media.rightsStatus.replace(/-/g, " ")}
             </span>
           )}
+          {media.imageUrlSource === "vercel_blob" && (
+            <span className="rounded-full bg-kelp/15 px-2.5 py-1 text-xs font-semibold text-foreground">
+              Hosted on Vercel Blob
+            </span>
+          )}
         </div>
         <p className="mt-3 text-sm leading-relaxed text-foreground">
           {media.altText}

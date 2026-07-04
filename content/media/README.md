@@ -130,8 +130,16 @@ python scripts/build_species_media_public_explorer.py
 Build the object-storage migration manifest for approved images:
 
 ```bash
-python scripts/build_species_media_storage_manifest.py
-python scripts/build_species_media_storage_manifest.py --check
+npm run media:storage
+npm run media:storage:check
+```
+
+Plan, upload, and verify approved images in Vercel Blob:
+
+```bash
+npm run media:blob:plan
+npm run media:blob:upload
+npm run media:blob:check
 ```
 
 Generated key art may support a page, campaign, or section mood, but it is never the official identification image. Primary species media must come from an official/institutional source, partner grant, owned contributor media, public-domain media, or open-license media with image-level attribution and ethics QA.
@@ -156,4 +164,4 @@ The approval workbench, `species-media-approval-workbench.yaml`, joins the appro
 
 Curators should use `species-media-curation-workspace.yaml` or the matching review-pack Markdown to process candidates in batches: ethics-first candidates, official/public-domain fast track, open public-domain review, open-license attribution review, and partner-grant/replacement work.
 
-The storage policy, `species-media-storage-policy.yaml`, defines the long-term object-storage boundary: GitHub stores reviewable metadata, Cloudflare R2 or another S3-compatible store holds approved pixels and derivatives, Postgres tracks operational state, and Vercel renders the application. The generated `species-media-storage-manifest.yaml` maps each approved species image to deterministic storage keys and public derivative URLs without downloading or uploading files.
+The storage policy, `species-media-storage-policy.yaml`, defines the Vercel-Blob-first object-storage boundary: GitHub stores reviewable metadata, Vercel Blob holds the first approved image mirrors, Postgres later tracks operational state, and Vercel renders the application. The generated `species-media-storage-manifest.yaml` maps each approved species image to deterministic pathnames. The committed `species-media-blob-manifest.json` records the public Blob URLs that production routes prefer when an approved asset has been uploaded.

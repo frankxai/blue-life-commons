@@ -34,7 +34,7 @@ The ownable idea is the **commons current**: sourced artifacts moving through re
 | Species media pipeline | `docs/visual-system/species-media-pipeline.md` | Source priority, metadata, rights, and approval gate for official species visuals |
 | Species visual explorer spec | `docs/visual-system/species-visual-explorer-spec.md` | Site surface spec for media coverage, provenance, and curation queue |
 | Media intelligence platform strategy | `docs/visual-system/media-intelligence-platform-strategy.md` | Live media-intelligence surface, public visual audit board, competitive/partner benchmark, and expansion model for scaling approved animal images |
-| Media storage architecture | `docs/visual-system/media-storage-architecture.md` | Long-term GitHub, R2/S3, Postgres, and Vercel split for scaling animal image storage |
+| Media storage architecture | `docs/visual-system/media-storage-architecture.md` | Vercel-Blob-first storage split, official-domain runbook, and later R2 scale option for animal image storage |
 | Species source routing | `content/media/species-media-source-routing.yaml` | Machine-readable review lanes, partner/grant targets, and reviewer actions |
 | Species rich embeds | `content/media/species-media-rich-embeds.yaml` | Verified source-card fallbacks when approved primary images are absent |
 | Species approval queue | `content/media/species-media-approval-queue.yaml` | Curator worksheet for promoting review-only candidates to approved primary media |
@@ -42,8 +42,9 @@ The ownable idea is the **commons current**: sourced artifacts moving through re
 | Species curation workspace | `content/media/species-media-curation-workspace.yaml` | Batch-ranked curator action view for rechecks, fast-track candidates, attribution work, and blockers |
 | Species public explorer manifest | `content/media/species-media-public-explorer-manifest.yaml` | Public-safe read model that omits candidate URLs while exposing render-contract visual slots and acquisition-plan next-action metadata |
 | Species public explorer prototype | `content/media/public/species-visual-explorer-2026-07-03.html` | Static public-safe explorer prototype with 31 approved primary images, attribution metadata, acquisition filters, target-source filters, and no review-only thumbnails |
-| Species storage policy | `content/media/species-media-storage-policy.yaml` | R2/S3 object storage, variant, bucket, environment, and repo-boundary contract |
-| Species storage manifest | `content/media/species-media-storage-manifest.yaml` | Generated object-key and derivative-URL plan for approved species images |
+| Species storage policy | `content/media/species-media-storage-policy.yaml` | Vercel Blob store, pathname, upload, environment, and repo-boundary contract |
+| Species storage manifest | `content/media/species-media-storage-manifest.yaml` | Generated pathname and derivative-slot plan for approved species images |
+| Species Blob manifest | `content/media/species-media-blob-manifest.json` | Public Vercel Blob URLs for 31 uploaded approved species images |
 | Species trace ledger | `content/media/species-media-trace-ledger.yaml` | Ownership proof layer linking each species page, public source card, render rule, curation lane, and review-only candidate ID |
 | Species trace ledger review pack | `content/media/review-packs/species-media-trace-ledger-2026-07-03.md` | Human-readable trace matrix for checking which visual/source record belongs to which animal |
 | Species acquisition plan | `content/media/species-media-acquisition-plan.yaml` | Public-safe next-action layer for official/public-domain review, open-license review, ethics-first review, and partner/NGO media outreach |
@@ -60,6 +61,7 @@ The ownable idea is the **commons current**: sourced artifacts moving through re
 | Species media evidence | `docs/visual-system/design-loop-evidence-2026-07-03-species-media.json` | Loop trace, QA status, and known risks for the species media pipeline |
 | Media intelligence evidence | `docs/visual-system/design-loop-evidence-2026-07-04-media-intelligence.json` | Loop trace, QA status, and production surface proof for the media intelligence platform pass |
 | Media storage evidence | `docs/visual-system/design-loop-evidence-2026-07-04-media-storage.json` | Loop trace, QA status, and architecture proof for the long-term media storage pass |
+| Encyclopedia Blob evidence | `docs/visual-system/design-loop-evidence-2026-07-04-encyclopedia-blob.json` | Loop trace, QA status, Blob upload proof, and ship-readiness evidence for the image-first animal encyclopedia |
 
 ## Production stance
 

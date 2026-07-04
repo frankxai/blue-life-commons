@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 import { WaveMark } from "@/components/wave-mark"
 
 const NAV = [
-  { href: "/species", label: "Species" },
+  { href: "/species", label: "Encyclopedia" },
   { href: "/media-intelligence", label: "Media" },
   { href: "/regions", label: "Regions" },
   { href: "/missions", label: "Missions" },
