@@ -127,6 +127,13 @@ Build the public-safe visual explorer prototype and manifest:
 python scripts/build_species_media_public_explorer.py
 ```
 
+Build the object-storage migration manifest for approved images:
+
+```bash
+python scripts/build_species_media_storage_manifest.py
+python scripts/build_species_media_storage_manifest.py --check
+```
+
 Generated key art may support a page, campaign, or section mood, but it is never the official identification image. Primary species media must come from an official/institutional source, partner grant, owned contributor media, public-domain media, or open-license media with image-level attribution and ethics QA.
 
 Public site surfaces should read `species-media-render-contract.yaml` or the joined `render_contract` object in `species-media-site-data.json`. They may render approved primary images, verified source-card fallbacks, or placeholders. The 2026-07-03 contract renders approved primary images for all 31 tracked species. Public routes must not render candidate image URLs as species identity media.
@@ -148,3 +155,5 @@ The outreach packets, `species-media-outreach-packets.yaml`, are public-safe ope
 The approval workbench, `species-media-approval-workbench.yaml`, joins the approval queue, approval dossiers, Commons rights snapshots, acquisition plan, outreach packets, public explorer, and trace ledger into one reviewer-only operating surface. It intentionally contains candidate file pages and direct image URLs, so it must not feed public site routes. Use the generated HTML workbench in `review-packs/` to inspect the candidate image, rights evidence, species text signal, public fallback, outreach target, missing checks, missing approved-primary fields, approval YAML starter, and promotion command for the same animal.
 
 Curators should use `species-media-curation-workspace.yaml` or the matching review-pack Markdown to process candidates in batches: ethics-first candidates, official/public-domain fast track, open public-domain review, open-license attribution review, and partner-grant/replacement work.
+
+The storage policy, `species-media-storage-policy.yaml`, defines the long-term object-storage boundary: GitHub stores reviewable metadata, Cloudflare R2 or another S3-compatible store holds approved pixels and derivatives, Postgres tracks operational state, and Vercel renders the application. The generated `species-media-storage-manifest.yaml` maps each approved species image to deterministic storage keys and public derivative URLs without downloading or uploading files.

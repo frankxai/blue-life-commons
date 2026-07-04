@@ -9,7 +9,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next typegen && tsc --noEmit",
-    "typecheck": "next typegen && tsc --noEmit"
+    "typecheck": "next typegen && tsc --noEmit",
+    "media:storage": "python scripts/build_species_media_storage_manifest.py",
+    "media:storage:check": "python scripts/build_species_media_storage_manifest.py --check"
   },
   "repository": {
     "type": "git",

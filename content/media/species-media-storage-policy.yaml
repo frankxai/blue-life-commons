@@ -1,0 +1,151 @@
+version: '2026-07-04'
+updated: '2026-07-04'
+purpose: Long-term media storage contract for approved Blue Life Commons animal images and derivatives.
+provider:
+  primary: cloudflare_r2
+  interface: s3_compatible
+  public_delivery: custom_domain
+  why: Keep GitHub as the metadata and review system, use object storage for pixels, and keep Vercel focused on the application.
+  official_docs:
+  - https://developers.cloudflare.com/r2/
+  - https://developers.cloudflare.com/r2/api/s3/
+  - https://developers.cloudflare.com/r2/api/s3/api/
+  - https://developers.cloudflare.com/r2/buckets/public-buckets/
+  - https://developers.cloudflare.com/r2/pricing/
+  - https://vercel.com/docs/vercel-blob
+  - https://vercel.com/docs/pricing
+  - https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github
+public_delivery:
+  public_base_url: https://media.bluelifecommons.org
+  custom_domain_required: true
+  public_bucket_mode: custom_domain
+  upload_endpoint_pattern: https://<ACCOUNT_ID>.r2.cloudflarestorage.com
+  note: Public reads should use the media domain. Writes should use the S3-compatible R2 endpoint with scoped credentials.
+buckets:
+  production: blue-life-media-prod
+  staging: blue-life-media-staging
+  review_private: blue-life-media-review
+repo_boundary:
+  github_stores:
+  - source and application code
+  - media rights metadata
+  - approved public URLs and object keys
+  - generated public-safe manifests
+  - small QA screenshots and evidence
+  github_never_stores:
+  - bulk original image libraries
+  - unapproved candidate image files
+  - private partner originals
+  - R2 credentials or signed URLs
+  - precise sensitive-location EXIF data
+storage_boundary:
+  object_storage_stores:
+  - approved original copies when rights allow mirroring
+  - generated public derivatives
+  - private reviewer-only uploads
+  - partner-granted media under explicit terms
+  database_stores:
+  - asset ownership and rights state
+  - variant inventory
+  - review and audit events
+  - partner grants and expiry dates
+  vercel_stores:
+  - application deployment
+  - public routes and reviewer UI
+  - environment variables only
+env_contract:
+  public:
+  - BLC_MEDIA_STORAGE_PROVIDER
+  - BLC_MEDIA_PUBLIC_BASE_URL
+  - BLC_MEDIA_PRODUCTION_BUCKET
+  - BLC_MEDIA_STAGING_BUCKET
+  - BLC_MEDIA_REVIEW_BUCKET
+  secret:
+  - R2_ACCOUNT_ID
+  - R2_ENDPOINT
+  - R2_ACCESS_KEY_ID
+  - R2_SECRET_ACCESS_KEY
+  - MEDIA_DATABASE_URL
+  - MEDIA_SIGNING_SECRET
+object_keys:
+  prefix_pattern: species/{taxon_group}/{slug}/{asset_id}/
+  immutable: true
+  replacement_rule: New image approvals create new asset prefixes instead of overwriting old approved objects.
+  lifecycle_rule: Keep approved originals and public variants; expire rejected review uploads after 90 days unless a partner grant requires retention.
+variants:
+- name: original
+  role: archived source copy
+  public_use: false
+  format: source
+  width: null
+  height: null
+  key_template: original/source.{source_ext}
+  note: Store only when rights allow mirroring. Keep private by default.
+- name: thumb
+  role: compact grid and admin thumbnail
+  public_use: true
+  format: webp
+  width: 320
+  height: null
+  key_template: public/thumb-320.webp
+- name: card
+  role: species cards and visual audit board
+  public_use: true
+  format: webp
+  width: 640
+  height: null
+  key_template: public/card-640.webp
+- name: hero
+  role: species page hero
+  public_use: true
+  format: webp
+  width: 1280
+  height: null
+  key_template: public/hero-1280.webp
+- name: og
+  role: social preview image
+  public_use: true
+  format: jpg
+  width: 1200
+  height: 630
+  key_template: public/og-1200x630.jpg
+- name: full
+  role: public high-resolution inspection
+  public_use: true
+  format: webp
+  width: 1920
+  height: null
+  key_template: public/full-1920.webp
+approval_gate:
+  mirror_requires:
+  - approved primary media record
+  - image-level rights allow copying or derivative generation
+  - creator and credit recorded
+  - license URL recorded when available
+  - source URL and original media URL recorded
+  - species match basis recorded
+  - sensitive-location and EXIF review complete
+  - welfare/ethics notes complete
+  - approved and blocked surfaces recorded
+  publish_requires:
+  - public derivative exists
+  - variant checksum recorded
+  - object key recorded
+  - public URL recorded
+  - review event recorded
+  - public route uses approved variant, not candidate input
+operations:
+  first_migration_batch: current 31 approved species images
+  normal_flow:
+  - collect candidate metadata without downloading
+  - approve primary media in registry
+  - mirror approved source into private original object when allowed
+  - generate deterministic public variants
+  - write media asset and variant rows to database
+  - export public-safe manifest to Git
+  - switch public routes from source URL to owned derivative URL
+  - keep original source and attribution visible
+  blocked_flow:
+  - never mirror noncommercial, no-derivatives, unclear-license, or partner-unapproved media
+  - never publish review-private uploads
+  - never rely on Google Images as permission
