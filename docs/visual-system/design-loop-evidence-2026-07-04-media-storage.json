@@ -1,0 +1,167 @@
+{
+  "version": "2026-07-04",
+  "task": "Set up the long-term media storage architecture for scaling Blue Life Commons animal images without turning GitHub or Vercel into the bulk image warehouse.",
+  "surface": "/media-intelligence storage section, R2/S3 storage policy, generated storage manifest, SQL registry schema, environment contract, and storage runbook.",
+  "audience": "Maintainers, reviewers, contributors, and future platform operators who need a durable image storage plan for thousands to millions of animal media records.",
+  "first_read": "GitHub stores metadata and review truth; R2/S3-compatible object storage stores pixels; Postgres tracks operational state; Vercel renders the app.",
+  "standards": [
+    "C:/Users/frank/starlight/repos/blue-life-commons/AGENTS.md",
+    "C:/Users/frank/starlight/repos/blue-life-commons/ETHICS.md",
+    "C:/Users/frank/starlight/repos/blue-life-commons/SOURCES.md",
+    "C:/Users/frank/starlight/repos/DESIGN_TASTE.md",
+    "C:/Users/frank/starlight/repos/WEB_EXPERIENCE_STANDARD.md",
+    "C:/Users/frank/starlight/repos/VISUAL_QA_GATE.md",
+    "C:/Users/frank/starlight/repos/design-agent-standards/PREMIUM_ASSET_STANDARD.md",
+    "C:/Users/frank/starlight/repos/design-agent-standards/AGENTIC_DESIGN_LOOP.md",
+    "C:/Users/frank/starlight/repos/design-agent-standards/OUTCOMES.md"
+  ],
+  "references": [
+    {
+      "label": "Cloudflare R2 overview",
+      "source": "https://developers.cloudflare.com/r2/",
+      "reason": "Primary storage provider and public object-store architecture."
+    },
+    {
+      "label": "Cloudflare R2 S3 API",
+      "source": "https://developers.cloudflare.com/r2/api/s3/",
+      "reason": "S3-compatible upload and tooling path."
+    },
+    {
+      "label": "Cloudflare R2 public buckets",
+      "source": "https://developers.cloudflare.com/r2/buckets/public-buckets/",
+      "reason": "Custom-domain public delivery route."
+    },
+    {
+      "label": "Cloudflare R2 pricing",
+      "source": "https://developers.cloudflare.com/r2/pricing/",
+      "reason": "Cost-risk model for storage, operations, and egress."
+    },
+    {
+      "label": "Vercel Blob",
+      "source": "https://vercel.com/docs/vercel-blob",
+      "reason": "Vercel-native storage fallback comparison."
+    },
+    {
+      "label": "GitHub large-file guidance",
+      "source": "https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github",
+      "reason": "Repo boundary for avoiding bulk image binaries in Git."
+    }
+  ],
+  "direction": {
+    "keep": [
+      "GitHub remains the transparent metadata and review ledger.",
+      "Object storage is the durable pixel layer.",
+      "Vercel remains the app and publishing layer.",
+      "Current public pages keep using approved source URLs until owned derivatives exist.",
+      "The storage manifest does not download, transform, upload, or sign any media."
+    ],
+    "avoid": [
+      "Committing original media libraries to Git.",
+      "Publishing candidate or reviewer-only uploads.",
+      "Switching public routes to owned URLs before derivatives, checksums, and audit rows exist.",
+      "Using request-time image transformation as the default scaling path."
+    ],
+    "signature": "A practical scale-control plane: buckets, env vars, SQL, deterministic object keys, generated manifest, and public storage status on the media intelligence page.",
+    "system": [
+      "content/media/species-media-storage-policy.yaml defines the long-term storage contract.",
+      "scripts/build_species_media_storage_manifest.py generates deterministic storage records from approved media.",
+      "schema/media-storage-schema.sql defines operational tables for assets, variants, grants, sources, and review events.",
+      "lib/media-storage.ts feeds the public storage architecture section.",
+      ".env.example records the required public and secret variables without real credentials."
+    ]
+  },
+  "asset_quality": {
+    "tier": "A",
+    "source_method": "product-capture",
+    "provenance": "source-cited",
+    "why_premium": "The primary asset is operational product infrastructure with a public-facing control surface and source-backed storage decision.",
+    "shortcut_risk": "low",
+    "context_tested": true
+  },
+  "artifacts": [
+    {
+      "path_or_url": "content/media/species-media-storage-policy.yaml",
+      "kind": "policy",
+      "inspected": true,
+      "notes": "Bucket, env, variant, repo-boundary, and migration contract."
+    },
+    {
+      "path_or_url": "content/media/species-media-storage-manifest.yaml",
+      "kind": "generated-data",
+      "inspected": true,
+      "notes": "31 approved records mapped to 186 planned objects and 155 public variants."
+    },
+    {
+      "path_or_url": "schema/media-storage-schema.sql",
+      "kind": "schema",
+      "inspected": true,
+      "notes": "Postgres operational registry schema for media assets, variants, rights grants, sources, and review events."
+    },
+    {
+      "path_or_url": "app/media-intelligence/page.tsx",
+      "kind": "web",
+      "inspected": true,
+      "notes": "Public storage architecture section added to the media intelligence page."
+    },
+    {
+      "path_or_url": "docs/visual-system/screenshots/media-intelligence-storage-desktop-2026-07-04.png",
+      "kind": "screenshot",
+      "inspected": true,
+      "notes": "Desktop storage section visual QA."
+    },
+    {
+      "path_or_url": "docs/visual-system/screenshots/media-intelligence-storage-mobile-2026-07-04.png",
+      "kind": "screenshot",
+      "inspected": true,
+      "notes": "Mobile storage section visual QA."
+    }
+  ],
+  "checks": [
+    {
+      "name": "storage-manifest",
+      "status": "pass",
+      "evidence": "npm run media:storage:check passed."
+    },
+    {
+      "name": "asset-tier",
+      "status": "pass",
+      "evidence": "Tier A product-proof infrastructure: real approved media records are mapped into storage keys and the public page shows live storage counts."
+    },
+    {
+      "name": "typescript",
+      "status": "pass",
+      "evidence": "npm run lint passed."
+    },
+    {
+      "name": "build",
+      "status": "pass",
+      "evidence": "npm run build passed with the known nonfatal Turbopack NFT tracing warning from app/sitemap.ts through lib/content.ts."
+    },
+    {
+      "name": "export-inspection",
+      "status": "pass",
+      "evidence": "Inspected exported screenshots docs/visual-system/screenshots/media-intelligence-storage-desktop-2026-07-04.png and docs/visual-system/screenshots/media-intelligence-storage-mobile-2026-07-04.png."
+    },
+    {
+      "name": "visual-qa",
+      "status": "pass",
+      "evidence": "Desktop and mobile screenshots show readable storage stats and layer cards without overlap."
+    },
+    {
+      "name": "public-safety",
+      "status": "pass",
+      "evidence": "Built route still renders 31 approved images and zero review-only candidate leakage."
+    }
+  ],
+  "score": {
+    "total": 28,
+    "max": 30,
+    "notes": "Strong architecture and generated migration manifest. Remaining score is reserved for real R2 bucket provisioning and upload/variant workers once credentials are available."
+  },
+  "decision": "ship",
+  "known_risks": [
+    "Cloudflare account credentials and DNS access are required before buckets and media.bluelifecommons.org can be provisioned.",
+    "The current manifest intentionally leaves every record at mirror_pending until actual derivative generation and upload exist.",
+    "Future route switching must wait for database rows, checksums, public variant URLs, and review events."
+  ]
+}

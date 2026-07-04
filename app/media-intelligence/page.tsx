@@ -9,6 +9,11 @@ import {
   MEDIA_EXPANSION_STEPS,
   MEDIA_SOURCE_LANES,
 } from "@/lib/media-intelligence"
+import {
+  MEDIA_STORAGE_PUBLIC_BASE_URL,
+  MEDIA_STORAGE_STACK,
+  MEDIA_STORAGE_VARIANTS,
+} from "@/lib/media-storage"
 import { GUILD_META } from "@/lib/utils"
 import type { Artifact } from "@/lib/types"
 
@@ -192,6 +197,11 @@ export default function MediaIntelligencePage() {
   const rightsRows = [...rights.entries()].sort((a, b) => b[1] - a[1])
   const guildRows = [...guilds.entries()].sort((a, b) => b[1] - a[1])
   const coverage = pct(approved.length, species.length)
+  const publicStorageVariants = MEDIA_STORAGE_VARIANTS.filter(
+    (variant) => variant.publicUse,
+  )
+  const plannedPublicVariants = approved.length * publicStorageVariants.length
+  const plannedStorageObjects = approved.length * MEDIA_STORAGE_VARIANTS.length
 
   return (
     <main>
@@ -322,6 +332,71 @@ export default function MediaIntelligencePage() {
             {approved.map((record) => (
               <ApprovedMediaCard key={record.artifact.id} record={record} />
             ))}
+          </div>
+        </section>
+
+        <section className="mt-16" aria-labelledby="storage-heading">
+          <SectionHeading
+            id="storage-heading"
+            eyebrow="Scale storage"
+            title="Git stores truth; object storage stores pixels"
+            description="The long-term setup keeps this repo as the rights and review ledger while approved image files move to an R2/S3-compatible media domain. Vercel stays focused on rendering the app."
+          />
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <StatCard
+              label="Mirror-ready"
+              value={String(approved.length)}
+              detail="Approved species images mapped to deterministic object-storage prefixes."
+            />
+            <StatCard
+              label="Public variants"
+              value={String(plannedPublicVariants)}
+              detail={`${publicStorageVariants.length} generated public derivatives per approved image.`}
+            />
+            <StatCard
+              label="Storage objects"
+              value={String(plannedStorageObjects)}
+              detail="Original plus public derivative objects planned by the storage manifest."
+            />
+            <StatCard
+              label="Git originals"
+              value="0"
+              detail="Bulk source pixels stay out of the repository."
+            />
+          </div>
+          <div className="mt-8 grid gap-4 lg:grid-cols-4">
+            {MEDIA_STORAGE_STACK.map((layer) => (
+              <article key={layer.name} className="rounded-2xl border border-border bg-card p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">
+                  {layer.job}
+                </p>
+                <h3 className="mt-2 font-serif text-xl font-semibold text-foreground">
+                  {layer.name}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {layer.stores}
+                </p>
+                <p className="mt-4 text-xs font-semibold uppercase tracking-[0.12em] text-foreground">
+                  Why
+                </p>
+                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                  {layer.reason}
+                </p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-6 rounded-2xl border border-border bg-secondary p-5">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">
+              Media domain
+            </p>
+            <p className="mt-2 font-mono text-sm text-foreground">
+              {MEDIA_STORAGE_PUBLIC_BASE_URL}
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              Public routes should switch to owned `card`, `hero`, and `og`
+              derivatives only after the manifest row has generated objects,
+              checksums, rights review, and an audit event.
+            </p>
           </div>
         </section>
 

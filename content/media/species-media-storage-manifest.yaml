@@ -1,0 +1,3146 @@
+version: '2026-07-04'
+generated_at: '2026-07-04'
+policy:
+  source: content/media/species-media-storage-policy.yaml
+  no_download_performed: true
+  candidate_public_use: false
+  github_is_not_pixel_storage: true
+  object_storage_is_pixel_storage: true
+  public_routes_must_use_approved_variants_only: true
+summary:
+  approved_species_records: 31
+  provider_counts:
+    cloudflare_r2: 31
+  rights_status_counts:
+    cc-by: 7
+    cc-by-sa: 3
+    cc0: 6
+    public-domain: 15
+  source_host_counts:
+    commons.wikimedia.org: 31
+  planned_object_count: 186
+  planned_public_variant_count: 155
+  mirror_pending_count: 31
+  owned_storage_ready_count: 0
+records:
+- artifact_id: species-blue-whale
+  species_page: content/species/cetaceans/blue-whale.md
+  website_path: /species/cetaceans/blue-whale
+  taxon_group: cetaceans
+  slug: blue-whale
+  common_name: Blue Whale
+  scientific_name: Balaenoptera musculus
+  approved_asset_id: species-blue-whale-wikimedia-bluewhale877
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/d/d8/Bluewhale877.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Bluewhale877.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/d/d8/Bluewhale877.jpg
+  original_media_host: upload.wikimedia.org
+  creator: NMFS Northeast Fisheries Science Center (NOAA)
+  credit: http://www.nmfs.noaa.gov/pr/species/mammals/cetaceans/bluewhale.htm
+  license: Public domain
+  license_url: null
+  rights_status: public-domain
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/cetaceans/blue-whale/species-blue-whale-wikimedia-bluewhale877/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/cetaceans/blue-whale/species-blue-whale-wikimedia-bluewhale877/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/cetaceans/blue-whale/species-blue-whale-wikimedia-bluewhale877/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/blue-whale/species-blue-whale-wikimedia-bluewhale877/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/cetaceans/blue-whale/species-blue-whale-wikimedia-bluewhale877/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/blue-whale/species-blue-whale-wikimedia-bluewhale877/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/cetaceans/blue-whale/species-blue-whale-wikimedia-bluewhale877/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/blue-whale/species-blue-whale-wikimedia-bluewhale877/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/cetaceans/blue-whale/species-blue-whale-wikimedia-bluewhale877/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/blue-whale/species-blue-whale-wikimedia-bluewhale877/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/cetaceans/blue-whale/species-blue-whale-wikimedia-bluewhale877/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/blue-whale/species-blue-whale-wikimedia-bluewhale877/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: species-bottlenose-dolphin
+  species_page: content/species/cetaceans/bottlenose-dolphin.md
+  website_path: /species/cetaceans/bottlenose-dolphin
+  taxon_group: cetaceans
+  slug: bottlenose-dolphin
+  common_name: Common Bottlenose Dolphin
+  scientific_name: Tursiops truncatus
+  approved_asset_id: species-bottlenose-dolphin-wikimedia-tursiops-truncatus-01
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/1/10/Tursiops_truncatus_01.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/1/10/Tursiops_truncatus_01.jpg
+  original_media_host: upload.wikimedia.org
+  creator: NASA
+  credit: 'https://images.nasa.gov/details/KSC-04pd0178
+
+    http://mediaarchive.ksc.nasa.gov/detail.cfm?mediaid=21807 on the Wayback Machine at the Wayback Machine'
+  license: Public domain
+  license_url: null
+  rights_status: public-domain
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-that-implies-close-approach
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  - wildlife-tourism-promotion
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/cetaceans/bottlenose-dolphin/species-bottlenose-dolphin-wikimedia-tursiops-truncatus-01/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/cetaceans/bottlenose-dolphin/species-bottlenose-dolphin-wikimedia-tursiops-truncatus-01/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/cetaceans/bottlenose-dolphin/species-bottlenose-dolphin-wikimedia-tursiops-truncatus-01/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/bottlenose-dolphin/species-bottlenose-dolphin-wikimedia-tursiops-truncatus-01/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/cetaceans/bottlenose-dolphin/species-bottlenose-dolphin-wikimedia-tursiops-truncatus-01/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/bottlenose-dolphin/species-bottlenose-dolphin-wikimedia-tursiops-truncatus-01/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/cetaceans/bottlenose-dolphin/species-bottlenose-dolphin-wikimedia-tursiops-truncatus-01/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/bottlenose-dolphin/species-bottlenose-dolphin-wikimedia-tursiops-truncatus-01/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/cetaceans/bottlenose-dolphin/species-bottlenose-dolphin-wikimedia-tursiops-truncatus-01/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/bottlenose-dolphin/species-bottlenose-dolphin-wikimedia-tursiops-truncatus-01/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/cetaceans/bottlenose-dolphin/species-bottlenose-dolphin-wikimedia-tursiops-truncatus-01/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/bottlenose-dolphin/species-bottlenose-dolphin-wikimedia-tursiops-truncatus-01/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: species-humpback-whale
+  species_page: content/species/cetaceans/humpback-whale.md
+  website_path: /species/cetaceans/humpback-whale
+  taxon_group: cetaceans
+  slug: humpback-whale
+  common_name: Humpback Whale
+  scientific_name: Megaptera novaeangliae
+  approved_asset_id: species-humpback-whale-wikimedia-humpback-whales-in-singing-position
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/8/8b/Humpback_whales_in_singing_position.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Humpback_whales_in_singing_position.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/8/8b/Humpback_whales_in_singing_position.jpg
+  original_media_host: upload.wikimedia.org
+  creator: Dr. Louis M. Herman.
+  credit: 'NOAA Photo Library: sanc0602'
+  license: Public domain
+  license_url: null
+  rights_status: public-domain
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/cetaceans/humpback-whale/species-humpback-whale-wikimedia-humpback-whales-in-singing-position/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/cetaceans/humpback-whale/species-humpback-whale-wikimedia-humpback-whales-in-singing-position/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/cetaceans/humpback-whale/species-humpback-whale-wikimedia-humpback-whales-in-singing-position/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/humpback-whale/species-humpback-whale-wikimedia-humpback-whales-in-singing-position/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/cetaceans/humpback-whale/species-humpback-whale-wikimedia-humpback-whales-in-singing-position/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/humpback-whale/species-humpback-whale-wikimedia-humpback-whales-in-singing-position/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/cetaceans/humpback-whale/species-humpback-whale-wikimedia-humpback-whales-in-singing-position/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/humpback-whale/species-humpback-whale-wikimedia-humpback-whales-in-singing-position/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/cetaceans/humpback-whale/species-humpback-whale-wikimedia-humpback-whales-in-singing-position/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/humpback-whale/species-humpback-whale-wikimedia-humpback-whales-in-singing-position/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/cetaceans/humpback-whale/species-humpback-whale-wikimedia-humpback-whales-in-singing-position/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/humpback-whale/species-humpback-whale-wikimedia-humpback-whales-in-singing-position/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: species-north-atlantic-right-whale
+  species_page: content/species/cetaceans/north-atlantic-right-whale.md
+  website_path: /species/cetaceans/north-atlantic-right-whale
+  taxon_group: cetaceans
+  slug: north-atlantic-right-whale
+  common_name: North Atlantic Right Whale
+  scientific_name: Eubalaena glacialis
+  approved_asset_id: species-north-atlantic-right-whale-wikimedia-north-atlantic-right-whale-earth-is-blue
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/a/a6/North_Atlantic_right_whale_-_Earth_Is_Blue.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:North_Atlantic_right_whale_-_Earth_Is_Blue.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/a/a6/North_Atlantic_right_whale_-_Earth_Is_Blue.jpg
+  original_media_host: upload.wikimedia.org
+  creator: NOAA Gray's Reef NMS
+  credit: https://twitter.com/GraysReefNMS/status/1348724327156477957/photo/1
+  license: Public domain
+  license_url: null
+  rights_status: public-domain
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/cetaceans/north-atlantic-right-whale/species-north-atlantic-right-whale-wikimedia-north-atlantic-right-whale-earth-is-blue/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/cetaceans/north-atlantic-right-whale/species-north-atlantic-right-whale-wikimedia-north-atlantic-right-whale-earth-is-blue/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/cetaceans/north-atlantic-right-whale/species-north-atlantic-right-whale-wikimedia-north-atlantic-right-whale-earth-is-blue/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/north-atlantic-right-whale/species-north-atlantic-right-whale-wikimedia-north-atlantic-right-whale-earth-is-blue/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/cetaceans/north-atlantic-right-whale/species-north-atlantic-right-whale-wikimedia-north-atlantic-right-whale-earth-is-blue/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/north-atlantic-right-whale/species-north-atlantic-right-whale-wikimedia-north-atlantic-right-whale-earth-is-blue/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/cetaceans/north-atlantic-right-whale/species-north-atlantic-right-whale-wikimedia-north-atlantic-right-whale-earth-is-blue/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/north-atlantic-right-whale/species-north-atlantic-right-whale-wikimedia-north-atlantic-right-whale-earth-is-blue/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/cetaceans/north-atlantic-right-whale/species-north-atlantic-right-whale-wikimedia-north-atlantic-right-whale-earth-is-blue/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/north-atlantic-right-whale/species-north-atlantic-right-whale-wikimedia-north-atlantic-right-whale-earth-is-blue/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/cetaceans/north-atlantic-right-whale/species-north-atlantic-right-whale-wikimedia-north-atlantic-right-whale-earth-is-blue/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/north-atlantic-right-whale/species-north-atlantic-right-whale-wikimedia-north-atlantic-right-whale-earth-is-blue/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: species-orca
+  species_page: content/species/cetaceans/orca.md
+  website_path: /species/cetaceans/orca
+  taxon_group: cetaceans
+  slug: orca
+  common_name: Orca
+  scientific_name: Orcinus orca
+  approved_asset_id: species-orca-wikimedia-killerwhales-jumping
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/3/37/Killerwhales_jumping.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/3/37/Killerwhales_jumping.jpg
+  original_media_host: upload.wikimedia.org
+  creator: Robert Pittman
+  credit: NOAA (http://www.afsc.noaa.gov/Quarterly/amj2005/divrptsNMML3.htm])
+  license: Public domain
+  license_url: null
+  rights_status: public-domain
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/cetaceans/orca/species-orca-wikimedia-killerwhales-jumping/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/cetaceans/orca/species-orca-wikimedia-killerwhales-jumping/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/cetaceans/orca/species-orca-wikimedia-killerwhales-jumping/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/orca/species-orca-wikimedia-killerwhales-jumping/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/cetaceans/orca/species-orca-wikimedia-killerwhales-jumping/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/orca/species-orca-wikimedia-killerwhales-jumping/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/cetaceans/orca/species-orca-wikimedia-killerwhales-jumping/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/orca/species-orca-wikimedia-killerwhales-jumping/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/cetaceans/orca/species-orca-wikimedia-killerwhales-jumping/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/orca/species-orca-wikimedia-killerwhales-jumping/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/cetaceans/orca/species-orca-wikimedia-killerwhales-jumping/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/orca/species-orca-wikimedia-killerwhales-jumping/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: species-sperm-whale
+  species_page: content/species/cetaceans/sperm-whale.md
+  website_path: /species/cetaceans/sperm-whale
+  taxon_group: cetaceans
+  slug: sperm-whale
+  common_name: Sperm Whale
+  scientific_name: Physeter macrocephalus
+  approved_asset_id: species-sperm-whale-wikimedia-6-18-sperm-whale
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/2/24/6%2818%29_Sperm_whale.JPG
+  source_url: https://commons.wikimedia.org/wiki/File:6(18)_Sperm_whale.JPG
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/2/24/6%2818%29_Sperm_whale.JPG
+  original_media_host: upload.wikimedia.org
+  creator: Marion & Christoph Aistleitner
+  credit: own picture (User:Mediocrity)
+  license: CC0
+  license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+  rights_status: cc0
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/cetaceans/sperm-whale/species-sperm-whale-wikimedia-6-18-sperm-whale/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/cetaceans/sperm-whale/species-sperm-whale-wikimedia-6-18-sperm-whale/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/cetaceans/sperm-whale/species-sperm-whale-wikimedia-6-18-sperm-whale/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/sperm-whale/species-sperm-whale-wikimedia-6-18-sperm-whale/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/cetaceans/sperm-whale/species-sperm-whale-wikimedia-6-18-sperm-whale/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/sperm-whale/species-sperm-whale-wikimedia-6-18-sperm-whale/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/cetaceans/sperm-whale/species-sperm-whale-wikimedia-6-18-sperm-whale/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/sperm-whale/species-sperm-whale-wikimedia-6-18-sperm-whale/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/cetaceans/sperm-whale/species-sperm-whale-wikimedia-6-18-sperm-whale/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/sperm-whale/species-sperm-whale-wikimedia-6-18-sperm-whale/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/cetaceans/sperm-whale/species-sperm-whale-wikimedia-6-18-sperm-whale/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/cetaceans/sperm-whale/species-sperm-whale-wikimedia-6-18-sperm-whale/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: species-california-sea-lion
+  species_page: content/species/pinnipeds/california-sea-lion.md
+  website_path: /species/pinnipeds/california-sea-lion
+  taxon_group: pinnipeds
+  slug: california-sea-lion
+  common_name: California Sea Lion
+  scientific_name: Zalophus californianus
+  approved_asset_id: species-california-sea-lion-wikimedia-bigmalesealion
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/5/5c/Bigmalesealion.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Bigmalesealion.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/5/5c/Bigmalesealion.jpg
+  original_media_host: upload.wikimedia.org
+  creator: https://www.flickr.com/photos/mikebaird/ Mike Baird
+  credit: https://www.flickr.com/photos/mikebaird/3044736530/
+  license: CC BY 2.0
+  license_url: https://creativecommons.org/licenses/by/2.0
+  rights_status: cc-by
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/pinnipeds/california-sea-lion/species-california-sea-lion-wikimedia-bigmalesealion/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/pinnipeds/california-sea-lion/species-california-sea-lion-wikimedia-bigmalesealion/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/pinnipeds/california-sea-lion/species-california-sea-lion-wikimedia-bigmalesealion/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/california-sea-lion/species-california-sea-lion-wikimedia-bigmalesealion/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/pinnipeds/california-sea-lion/species-california-sea-lion-wikimedia-bigmalesealion/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/california-sea-lion/species-california-sea-lion-wikimedia-bigmalesealion/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/pinnipeds/california-sea-lion/species-california-sea-lion-wikimedia-bigmalesealion/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/california-sea-lion/species-california-sea-lion-wikimedia-bigmalesealion/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/pinnipeds/california-sea-lion/species-california-sea-lion-wikimedia-bigmalesealion/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/california-sea-lion/species-california-sea-lion-wikimedia-bigmalesealion/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/pinnipeds/california-sea-lion/species-california-sea-lion-wikimedia-bigmalesealion/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/california-sea-lion/species-california-sea-lion-wikimedia-bigmalesealion/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: species-grey-seal
+  species_page: content/species/pinnipeds/grey-seal.md
+  website_path: /species/pinnipeds/grey-seal
+  taxon_group: pinnipeds
+  slug: grey-seal
+  common_name: Grey Seal
+  scientific_name: Halichoerus grypus
+  approved_asset_id: species-grey-seal-wikimedia-szarytka-morska
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/7/72/Szarytka_morska.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Szarytka_morska.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/7/72/Szarytka_morska.jpg
+  original_media_host: upload.wikimedia.org
+  creator: Aneta p
+  credit: Own work
+  license: CC BY 4.0
+  license_url: https://creativecommons.org/licenses/by/4.0
+  rights_status: cc-by
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/pinnipeds/grey-seal/species-grey-seal-wikimedia-szarytka-morska/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/pinnipeds/grey-seal/species-grey-seal-wikimedia-szarytka-morska/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/pinnipeds/grey-seal/species-grey-seal-wikimedia-szarytka-morska/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/grey-seal/species-grey-seal-wikimedia-szarytka-morska/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/pinnipeds/grey-seal/species-grey-seal-wikimedia-szarytka-morska/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/grey-seal/species-grey-seal-wikimedia-szarytka-morska/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/pinnipeds/grey-seal/species-grey-seal-wikimedia-szarytka-morska/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/grey-seal/species-grey-seal-wikimedia-szarytka-morska/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/pinnipeds/grey-seal/species-grey-seal-wikimedia-szarytka-morska/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/grey-seal/species-grey-seal-wikimedia-szarytka-morska/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/pinnipeds/grey-seal/species-grey-seal-wikimedia-szarytka-morska/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/grey-seal/species-grey-seal-wikimedia-szarytka-morska/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: species-harbor-seal
+  species_page: content/species/pinnipeds/harbor-seal.md
+  website_path: /species/pinnipeds/harbor-seal
+  taxon_group: pinnipeds
+  slug: harbor-seal
+  common_name: Harbor Seal
+  scientific_name: Phoca vitulina
+  approved_asset_id: species-harbor-seal-wikimedia-harbor-seal-phoca-vitulina-flickr-gregthebusker
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/5/50/Harbor_Seal%2C_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Harbor_Seal,_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/5/50/Harbor_Seal%2C_Phoca_vitulina_-_Flickr_-_GregTheBusker.jpg
+  original_media_host: upload.wikimedia.org
+  creator: Greg Schechter from San Francisco, USA
+  credit: Harbor Seal, Phoca vitulina
+  license: CC BY 2.0
+  license_url: https://creativecommons.org/licenses/by/2.0
+  rights_status: cc-by
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/pinnipeds/harbor-seal/species-harbor-seal-wikimedia-harbor-seal-phoca-vitulina-flickr-gregthebusker/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/pinnipeds/harbor-seal/species-harbor-seal-wikimedia-harbor-seal-phoca-vitulina-flickr-gregthebusker/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/pinnipeds/harbor-seal/species-harbor-seal-wikimedia-harbor-seal-phoca-vitulina-flickr-gregthebusker/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/harbor-seal/species-harbor-seal-wikimedia-harbor-seal-phoca-vitulina-flickr-gregthebusker/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/pinnipeds/harbor-seal/species-harbor-seal-wikimedia-harbor-seal-phoca-vitulina-flickr-gregthebusker/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/harbor-seal/species-harbor-seal-wikimedia-harbor-seal-phoca-vitulina-flickr-gregthebusker/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/pinnipeds/harbor-seal/species-harbor-seal-wikimedia-harbor-seal-phoca-vitulina-flickr-gregthebusker/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/harbor-seal/species-harbor-seal-wikimedia-harbor-seal-phoca-vitulina-flickr-gregthebusker/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/pinnipeds/harbor-seal/species-harbor-seal-wikimedia-harbor-seal-phoca-vitulina-flickr-gregthebusker/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/harbor-seal/species-harbor-seal-wikimedia-harbor-seal-phoca-vitulina-flickr-gregthebusker/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/pinnipeds/harbor-seal/species-harbor-seal-wikimedia-harbor-seal-phoca-vitulina-flickr-gregthebusker/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/harbor-seal/species-harbor-seal-wikimedia-harbor-seal-phoca-vitulina-flickr-gregthebusker/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: species-hawaiian-monk-seal
+  species_page: content/species/pinnipeds/hawaiian-monk-seal.md
+  website_path: /species/pinnipeds/hawaiian-monk-seal
+  taxon_group: pinnipeds
+  slug: hawaiian-monk-seal
+  common_name: Hawaiian Monk Seal
+  scientific_name: Neomonachus schauinslandi
+  approved_asset_id: species-hawaiian-monk-seal-wikimedia-moenchsrobbe-1
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/f/f9/Moenchsrobbe_1.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Moenchsrobbe_1.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/f/f9/Moenchsrobbe_1.jpg
+  original_media_host: upload.wikimedia.org
+  creator: U.S. Fish and Wildlife Service
+  credit: http://images.fws.gov
+  license: Public domain
+  license_url: null
+  rights_status: public-domain
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/pinnipeds/hawaiian-monk-seal/species-hawaiian-monk-seal-wikimedia-moenchsrobbe-1/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/pinnipeds/hawaiian-monk-seal/species-hawaiian-monk-seal-wikimedia-moenchsrobbe-1/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/pinnipeds/hawaiian-monk-seal/species-hawaiian-monk-seal-wikimedia-moenchsrobbe-1/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/hawaiian-monk-seal/species-hawaiian-monk-seal-wikimedia-moenchsrobbe-1/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/pinnipeds/hawaiian-monk-seal/species-hawaiian-monk-seal-wikimedia-moenchsrobbe-1/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/hawaiian-monk-seal/species-hawaiian-monk-seal-wikimedia-moenchsrobbe-1/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/pinnipeds/hawaiian-monk-seal/species-hawaiian-monk-seal-wikimedia-moenchsrobbe-1/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/hawaiian-monk-seal/species-hawaiian-monk-seal-wikimedia-moenchsrobbe-1/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/pinnipeds/hawaiian-monk-seal/species-hawaiian-monk-seal-wikimedia-moenchsrobbe-1/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/hawaiian-monk-seal/species-hawaiian-monk-seal-wikimedia-moenchsrobbe-1/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/pinnipeds/hawaiian-monk-seal/species-hawaiian-monk-seal-wikimedia-moenchsrobbe-1/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/hawaiian-monk-seal/species-hawaiian-monk-seal-wikimedia-moenchsrobbe-1/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: species-walrus
+  species_page: content/species/pinnipeds/walrus.md
+  website_path: /species/pinnipeds/walrus
+  taxon_group: pinnipeds
+  slug: walrus
+  common_name: Walrus
+  scientific_name: Odobenus rosmarus
+  approved_asset_id: species-walrus-wikimedia-pacific-walrus-bull-8247646168
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/2/22/Pacific_Walrus_-_Bull_%288247646168%29.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Pacific_Walrus_-_Bull_(8247646168).jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/2/22/Pacific_Walrus_-_Bull_%288247646168%29.jpg
+  original_media_host: upload.wikimedia.org
+  creator: Joel Garlich-Miller, U.S. Fish and Wildlife Service
+  credit: Pacific Walrus Bull
+  license: Public domain
+  license_url: null
+  rights_status: public-domain
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-that-implies-close-approach
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  - wildlife-tourism-promotion
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/pinnipeds/walrus/species-walrus-wikimedia-pacific-walrus-bull-8247646168/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/pinnipeds/walrus/species-walrus-wikimedia-pacific-walrus-bull-8247646168/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/pinnipeds/walrus/species-walrus-wikimedia-pacific-walrus-bull-8247646168/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/walrus/species-walrus-wikimedia-pacific-walrus-bull-8247646168/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/pinnipeds/walrus/species-walrus-wikimedia-pacific-walrus-bull-8247646168/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/walrus/species-walrus-wikimedia-pacific-walrus-bull-8247646168/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/pinnipeds/walrus/species-walrus-wikimedia-pacific-walrus-bull-8247646168/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/walrus/species-walrus-wikimedia-pacific-walrus-bull-8247646168/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/pinnipeds/walrus/species-walrus-wikimedia-pacific-walrus-bull-8247646168/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/walrus/species-walrus-wikimedia-pacific-walrus-bull-8247646168/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/pinnipeds/walrus/species-walrus-wikimedia-pacific-walrus-bull-8247646168/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/pinnipeds/walrus/species-walrus-wikimedia-pacific-walrus-bull-8247646168/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: species-brain-coral
+  species_page: content/species/reefs/brain-coral.md
+  website_path: /species/reefs/brain-coral
+  taxon_group: reefs
+  slug: brain-coral
+  common_name: Grooved Brain Coral
+  scientific_name: Diploria labyrinthiformis
+  approved_asset_id: species-brain-coral-wikimedia-metal-block-with-coral-dry-tortugas-20100629
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/8/8e/Metal_block_with_coral_Dry_Tortugas_20100629.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Metal_block_with_coral_Dry_Tortugas_20100629.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/8/8e/Metal_block_with_coral_Dry_Tortugas_20100629.jpg
+  original_media_host: upload.wikimedia.org
+  creator: Jstuby
+  credit: Own work
+  license: CC0
+  license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+  rights_status: cc0
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/reefs/brain-coral/species-brain-coral-wikimedia-metal-block-with-coral-dry-tortugas-20100629/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/reefs/brain-coral/species-brain-coral-wikimedia-metal-block-with-coral-dry-tortugas-20100629/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/reefs/brain-coral/species-brain-coral-wikimedia-metal-block-with-coral-dry-tortugas-20100629/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/brain-coral/species-brain-coral-wikimedia-metal-block-with-coral-dry-tortugas-20100629/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/reefs/brain-coral/species-brain-coral-wikimedia-metal-block-with-coral-dry-tortugas-20100629/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/brain-coral/species-brain-coral-wikimedia-metal-block-with-coral-dry-tortugas-20100629/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/reefs/brain-coral/species-brain-coral-wikimedia-metal-block-with-coral-dry-tortugas-20100629/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/brain-coral/species-brain-coral-wikimedia-metal-block-with-coral-dry-tortugas-20100629/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/reefs/brain-coral/species-brain-coral-wikimedia-metal-block-with-coral-dry-tortugas-20100629/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/brain-coral/species-brain-coral-wikimedia-metal-block-with-coral-dry-tortugas-20100629/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/reefs/brain-coral/species-brain-coral-wikimedia-metal-block-with-coral-dry-tortugas-20100629/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/brain-coral/species-brain-coral-wikimedia-metal-block-with-coral-dry-tortugas-20100629/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: species-elkhorn-coral
+  species_page: content/species/reefs/elkhorn-coral.md
+  website_path: /species/reefs/elkhorn-coral
+  taxon_group: reefs
+  slug: elkhorn-coral
+  common_name: Elkhorn Coral
+  scientific_name: Acropora palmata
+  approved_asset_id: species-elkhorn-coral-wikimedia-gaulin-reef-san-salvador
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/e/ea/Gaulin_Reef_San_Salvador.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Gaulin_Reef_San_Salvador.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/e/ea/Gaulin_Reef_San_Salvador.jpg
+  original_media_host: upload.wikimedia.org
+  creator: Jstuby at en.wikipedia
+  credit: Own workTransferred from en.wikipedia
+  license: CC0
+  license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+  rights_status: cc0
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/reefs/elkhorn-coral/species-elkhorn-coral-wikimedia-gaulin-reef-san-salvador/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/reefs/elkhorn-coral/species-elkhorn-coral-wikimedia-gaulin-reef-san-salvador/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/reefs/elkhorn-coral/species-elkhorn-coral-wikimedia-gaulin-reef-san-salvador/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/elkhorn-coral/species-elkhorn-coral-wikimedia-gaulin-reef-san-salvador/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/reefs/elkhorn-coral/species-elkhorn-coral-wikimedia-gaulin-reef-san-salvador/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/elkhorn-coral/species-elkhorn-coral-wikimedia-gaulin-reef-san-salvador/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/reefs/elkhorn-coral/species-elkhorn-coral-wikimedia-gaulin-reef-san-salvador/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/elkhorn-coral/species-elkhorn-coral-wikimedia-gaulin-reef-san-salvador/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/reefs/elkhorn-coral/species-elkhorn-coral-wikimedia-gaulin-reef-san-salvador/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/elkhorn-coral/species-elkhorn-coral-wikimedia-gaulin-reef-san-salvador/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/reefs/elkhorn-coral/species-elkhorn-coral-wikimedia-gaulin-reef-san-salvador/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/elkhorn-coral/species-elkhorn-coral-wikimedia-gaulin-reef-san-salvador/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: species-giant-kelp
+  species_page: content/species/reefs/giant-kelp.md
+  website_path: /species/reefs/giant-kelp
+  taxon_group: reefs
+  slug: giant-kelp
+  common_name: Giant Kelp
+  scientific_name: Macrocystis pyrifera
+  approved_asset_id: species-giant-kelp-wikimedia-sanc0063-flickr-noaa-photo-library
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/f/f8/Sanc0063_-_Flickr_-_NOAA_Photo_Library.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Sanc0063_-_Flickr_-_NOAA_Photo_Library.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/f/f8/Sanc0063_-_Flickr_-_NOAA_Photo_Library.jpg
+  original_media_host: upload.wikimedia.org
+  creator: Claire Fackler, CINMS, NOAA.
+  credit: 'NOAA Photo Library: sanc0063'
+  license: Public domain
+  license_url: null
+  rights_status: public-domain
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/reefs/giant-kelp/species-giant-kelp-wikimedia-sanc0063-flickr-noaa-photo-library/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/reefs/giant-kelp/species-giant-kelp-wikimedia-sanc0063-flickr-noaa-photo-library/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/reefs/giant-kelp/species-giant-kelp-wikimedia-sanc0063-flickr-noaa-photo-library/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/giant-kelp/species-giant-kelp-wikimedia-sanc0063-flickr-noaa-photo-library/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/reefs/giant-kelp/species-giant-kelp-wikimedia-sanc0063-flickr-noaa-photo-library/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/giant-kelp/species-giant-kelp-wikimedia-sanc0063-flickr-noaa-photo-library/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/reefs/giant-kelp/species-giant-kelp-wikimedia-sanc0063-flickr-noaa-photo-library/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/giant-kelp/species-giant-kelp-wikimedia-sanc0063-flickr-noaa-photo-library/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/reefs/giant-kelp/species-giant-kelp-wikimedia-sanc0063-flickr-noaa-photo-library/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/giant-kelp/species-giant-kelp-wikimedia-sanc0063-flickr-noaa-photo-library/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/reefs/giant-kelp/species-giant-kelp-wikimedia-sanc0063-flickr-noaa-photo-library/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/giant-kelp/species-giant-kelp-wikimedia-sanc0063-flickr-noaa-photo-library/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: species-red-mangrove
+  species_page: content/species/reefs/red-mangrove.md
+  website_path: /species/reefs/red-mangrove
+  taxon_group: reefs
+  slug: red-mangrove
+  common_name: Red Mangrove
+  scientific_name: Rhizophora mangle
+  approved_asset_id: species-red-mangrove-wikimedia-red-mangrove-imported-from-inaturalist-photo-256
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/f/f4/Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/f/f4/Red_mangrove_imported_from_iNaturalist_photo_256882666_on_27_February_2024.jpg
+  original_media_host: upload.wikimedia.org
+  creator: no rights reserved
+  credit: https://www.inaturalist.org/photos/256882666
+  license: CC0
+  license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+  rights_status: cc0
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/reefs/red-mangrove/species-red-mangrove-wikimedia-red-mangrove-imported-from-inaturalist-photo-256/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/reefs/red-mangrove/species-red-mangrove-wikimedia-red-mangrove-imported-from-inaturalist-photo-256/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/reefs/red-mangrove/species-red-mangrove-wikimedia-red-mangrove-imported-from-inaturalist-photo-256/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/red-mangrove/species-red-mangrove-wikimedia-red-mangrove-imported-from-inaturalist-photo-256/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/reefs/red-mangrove/species-red-mangrove-wikimedia-red-mangrove-imported-from-inaturalist-photo-256/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/red-mangrove/species-red-mangrove-wikimedia-red-mangrove-imported-from-inaturalist-photo-256/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/reefs/red-mangrove/species-red-mangrove-wikimedia-red-mangrove-imported-from-inaturalist-photo-256/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/red-mangrove/species-red-mangrove-wikimedia-red-mangrove-imported-from-inaturalist-photo-256/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/reefs/red-mangrove/species-red-mangrove-wikimedia-red-mangrove-imported-from-inaturalist-photo-256/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/red-mangrove/species-red-mangrove-wikimedia-red-mangrove-imported-from-inaturalist-photo-256/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/reefs/red-mangrove/species-red-mangrove-wikimedia-red-mangrove-imported-from-inaturalist-photo-256/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/red-mangrove/species-red-mangrove-wikimedia-red-mangrove-imported-from-inaturalist-photo-256/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: species-seagrass-posidonia
+  species_page: content/species/reefs/seagrass-posidonia.md
+  website_path: /species/reefs/seagrass-posidonia
+  taxon_group: reefs
+  slug: seagrass-posidonia
+  common_name: Neptune Grass
+  scientific_name: Posidonia oceanica
+  approved_asset_id: species-seagrass-posidonia-wikimedia-posidonia-oceanica
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/8/80/Posidonia_oceanica.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Posidonia_oceanica.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/8/80/Posidonia_oceanica.jpg
+  original_media_host: upload.wikimedia.org
+  creator: National Oceanic and Atmospheric Administration
+  credit: http://www.noaa.gov/
+  license: Public domain
+  license_url: null
+  rights_status: public-domain
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/reefs/seagrass-posidonia/species-seagrass-posidonia-wikimedia-posidonia-oceanica/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/reefs/seagrass-posidonia/species-seagrass-posidonia-wikimedia-posidonia-oceanica/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/reefs/seagrass-posidonia/species-seagrass-posidonia-wikimedia-posidonia-oceanica/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/seagrass-posidonia/species-seagrass-posidonia-wikimedia-posidonia-oceanica/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/reefs/seagrass-posidonia/species-seagrass-posidonia-wikimedia-posidonia-oceanica/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/seagrass-posidonia/species-seagrass-posidonia-wikimedia-posidonia-oceanica/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/reefs/seagrass-posidonia/species-seagrass-posidonia-wikimedia-posidonia-oceanica/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/seagrass-posidonia/species-seagrass-posidonia-wikimedia-posidonia-oceanica/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/reefs/seagrass-posidonia/species-seagrass-posidonia-wikimedia-posidonia-oceanica/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/seagrass-posidonia/species-seagrass-posidonia-wikimedia-posidonia-oceanica/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/reefs/seagrass-posidonia/species-seagrass-posidonia-wikimedia-posidonia-oceanica/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/seagrass-posidonia/species-seagrass-posidonia-wikimedia-posidonia-oceanica/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: species-staghorn-coral
+  species_page: content/species/reefs/staghorn-coral.md
+  website_path: /species/reefs/staghorn-coral
+  taxon_group: reefs
+  slug: staghorn-coral
+  common_name: Staghorn Coral
+  scientific_name: Acropora cervicornis
+  approved_asset_id: species-staghorn-coral-wikimedia-staghorn-coral-on-baker-island-nwr-5123996348
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/0/03/Staghorn_coral_on_Baker_Island_NWR_%285123996348%29.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Staghorn_coral_on_Baker_Island_NWR_(5123996348).jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/0/03/Staghorn_coral_on_Baker_Island_NWR_%285123996348%29.jpg
+  original_media_host: upload.wikimedia.org
+  creator: U.S. Fish and Wildlife Service Headquarters
+  credit: 'Staghorn coral on Baker Island NWR
+
+
+    Uploaded by Dolovis'
+  license: Public domain
+  license_url: null
+  rights_status: public-domain
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/reefs/staghorn-coral/species-staghorn-coral-wikimedia-staghorn-coral-on-baker-island-nwr-5123996348/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/reefs/staghorn-coral/species-staghorn-coral-wikimedia-staghorn-coral-on-baker-island-nwr-5123996348/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/reefs/staghorn-coral/species-staghorn-coral-wikimedia-staghorn-coral-on-baker-island-nwr-5123996348/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/staghorn-coral/species-staghorn-coral-wikimedia-staghorn-coral-on-baker-island-nwr-5123996348/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/reefs/staghorn-coral/species-staghorn-coral-wikimedia-staghorn-coral-on-baker-island-nwr-5123996348/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/staghorn-coral/species-staghorn-coral-wikimedia-staghorn-coral-on-baker-island-nwr-5123996348/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/reefs/staghorn-coral/species-staghorn-coral-wikimedia-staghorn-coral-on-baker-island-nwr-5123996348/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/staghorn-coral/species-staghorn-coral-wikimedia-staghorn-coral-on-baker-island-nwr-5123996348/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/reefs/staghorn-coral/species-staghorn-coral-wikimedia-staghorn-coral-on-baker-island-nwr-5123996348/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/staghorn-coral/species-staghorn-coral-wikimedia-staghorn-coral-on-baker-island-nwr-5123996348/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/reefs/staghorn-coral/species-staghorn-coral-wikimedia-staghorn-coral-on-baker-island-nwr-5123996348/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/reefs/staghorn-coral/species-staghorn-coral-wikimedia-staghorn-coral-on-baker-island-nwr-5123996348/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: basking-shark
+  species_page: content/species/sharks-rays/basking-shark.md
+  website_path: /species/sharks-rays/basking-shark
+  taxon_group: sharks-rays
+  slug: basking-shark
+  common_name: Basking Shark
+  scientific_name: Cetorhinus maximus
+  approved_asset_id: basking-shark-wikimedia-cetorhinus-maximus-by-greg-skomal
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/0/0b/Cetorhinus_maximus_by_greg_skomal.JPG
+  source_url: https://commons.wikimedia.org/wiki/File:Cetorhinus_maximus_by_greg_skomal.JPG
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/0/0b/Cetorhinus_maximus_by_greg_skomal.JPG
+  original_media_host: upload.wikimedia.org
+  creator: Greg Skomal / NOAA Fisheries Service
+  credit: Basking Shark (english). NOAA Fisheries Service. National Oceanic and Atmospheric Administration.
+  license: Public domain
+  license_url: null
+  rights_status: public-domain
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/sharks-rays/basking-shark/basking-shark-wikimedia-cetorhinus-maximus-by-greg-skomal/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/sharks-rays/basking-shark/basking-shark-wikimedia-cetorhinus-maximus-by-greg-skomal/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/sharks-rays/basking-shark/basking-shark-wikimedia-cetorhinus-maximus-by-greg-skomal/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/basking-shark/basking-shark-wikimedia-cetorhinus-maximus-by-greg-skomal/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/sharks-rays/basking-shark/basking-shark-wikimedia-cetorhinus-maximus-by-greg-skomal/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/basking-shark/basking-shark-wikimedia-cetorhinus-maximus-by-greg-skomal/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/sharks-rays/basking-shark/basking-shark-wikimedia-cetorhinus-maximus-by-greg-skomal/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/basking-shark/basking-shark-wikimedia-cetorhinus-maximus-by-greg-skomal/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/sharks-rays/basking-shark/basking-shark-wikimedia-cetorhinus-maximus-by-greg-skomal/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/basking-shark/basking-shark-wikimedia-cetorhinus-maximus-by-greg-skomal/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/sharks-rays/basking-shark/basking-shark-wikimedia-cetorhinus-maximus-by-greg-skomal/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/basking-shark/basking-shark-wikimedia-cetorhinus-maximus-by-greg-skomal/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: great-white-shark
+  species_page: content/species/sharks-rays/great-white-shark.md
+  website_path: /species/sharks-rays/great-white-shark
+  taxon_group: sharks-rays
+  slug: great-white-shark
+  common_name: Great White Shark
+  scientific_name: Carcharodon carcharias
+  approved_asset_id: great-white-shark-wikimedia-white-shark
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/5/56/White_shark.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:White_shark.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/5/56/White_shark.jpg
+  original_media_host: upload.wikimedia.org
+  creator: Pterantula (Terry Goss) at en.wikipedia
+  credit: Derivative of w:Image:Whiteshark-TGoss5b.jpg
+  license: CC BY 2.5
+  license_url: https://creativecommons.org/licenses/by/2.5
+  rights_status: cc-by
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/sharks-rays/great-white-shark/great-white-shark-wikimedia-white-shark/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/sharks-rays/great-white-shark/great-white-shark-wikimedia-white-shark/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/sharks-rays/great-white-shark/great-white-shark-wikimedia-white-shark/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/great-white-shark/great-white-shark-wikimedia-white-shark/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/sharks-rays/great-white-shark/great-white-shark-wikimedia-white-shark/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/great-white-shark/great-white-shark-wikimedia-white-shark/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/sharks-rays/great-white-shark/great-white-shark-wikimedia-white-shark/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/great-white-shark/great-white-shark-wikimedia-white-shark/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/sharks-rays/great-white-shark/great-white-shark-wikimedia-white-shark/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/great-white-shark/great-white-shark-wikimedia-white-shark/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/sharks-rays/great-white-shark/great-white-shark-wikimedia-white-shark/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/great-white-shark/great-white-shark-wikimedia-white-shark/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: reef-manta-ray
+  species_page: content/species/sharks-rays/reef-manta-ray.md
+  website_path: /species/sharks-rays/reef-manta-ray
+  taxon_group: sharks-rays
+  slug: reef-manta-ray
+  common_name: Reef Manta Ray
+  scientific_name: Mobula alfredi
+  approved_asset_id: reef-manta-ray-wikimedia-manta-alfredi-cruising-journal-pone-0046170-g002
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/c/c5/Manta_alfredi_cruising_-_journal.pone.0046170.g002A.png
+  source_url: https://commons.wikimedia.org/wiki/File:Manta_alfredi_cruising_-_journal.pone.0046170.g002A.png
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/c/c5/Manta_alfredi_cruising_-_journal.pone.0046170.g002A.png
+  original_media_host: upload.wikimedia.org
+  creator: Jaine FRA, Couturier LIE, Weeks SJ, Townsend KA, Bennett MB, et al. (2012)
+  credit: 'Jaine FRA, Couturier LIE, Weeks SJ, Townsend KA, Bennett MB, et al. (2012) When Giants Turn Up: Sighting Trends,
+    Environmental Influences and Habitat Use of the Manta Ray Manta alfredi at a Coral Reef. PLoS ONE 7(10): e46170. doi:10.1371/journal.pone.0046170'
+  license: CC BY 2.5
+  license_url: https://creativecommons.org/licenses/by/2.5
+  rights_status: cc-by
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/sharks-rays/reef-manta-ray/reef-manta-ray-wikimedia-manta-alfredi-cruising-journal-pone-0046170-g002/
+    source_ext: png
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/sharks-rays/reef-manta-ray/reef-manta-ray-wikimedia-manta-alfredi-cruising-journal-pone-0046170-g002/original/source.png
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/sharks-rays/reef-manta-ray/reef-manta-ray-wikimedia-manta-alfredi-cruising-journal-pone-0046170-g002/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/reef-manta-ray/reef-manta-ray-wikimedia-manta-alfredi-cruising-journal-pone-0046170-g002/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/sharks-rays/reef-manta-ray/reef-manta-ray-wikimedia-manta-alfredi-cruising-journal-pone-0046170-g002/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/reef-manta-ray/reef-manta-ray-wikimedia-manta-alfredi-cruising-journal-pone-0046170-g002/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/sharks-rays/reef-manta-ray/reef-manta-ray-wikimedia-manta-alfredi-cruising-journal-pone-0046170-g002/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/reef-manta-ray/reef-manta-ray-wikimedia-manta-alfredi-cruising-journal-pone-0046170-g002/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/sharks-rays/reef-manta-ray/reef-manta-ray-wikimedia-manta-alfredi-cruising-journal-pone-0046170-g002/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/reef-manta-ray/reef-manta-ray-wikimedia-manta-alfredi-cruising-journal-pone-0046170-g002/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/sharks-rays/reef-manta-ray/reef-manta-ray-wikimedia-manta-alfredi-cruising-journal-pone-0046170-g002/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/reef-manta-ray/reef-manta-ray-wikimedia-manta-alfredi-cruising-journal-pone-0046170-g002/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: scalloped-hammerhead
+  species_page: content/species/sharks-rays/scalloped-hammerhead.md
+  website_path: /species/sharks-rays/scalloped-hammerhead
+  taxon_group: sharks-rays
+  slug: scalloped-hammerhead
+  common_name: Scalloped Hammerhead
+  scientific_name: Sphyrna lewini
+  approved_asset_id: scalloped-hammerhead-wikimedia-sphyrna-lewini-griffith-smith-1834-2422815227
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/d/df/Sphyrna_lewini_%28Griffith_%26_Smith%2C_1834%29_2422815227.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Sphyrna_lewini_(Griffith_%26_Smith,_1834)_2422815227.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/d/df/Sphyrna_lewini_%28Griffith_%26_Smith%2C_1834%29_2422815227.jpg
+  original_media_host: upload.wikimedia.org
+  creator: iNaturalist.org (Simon Tonge) (Simon%20Tonge)
+  credit: https://www.gbif.org/occurrence/2422815227
+  license: CC0
+  license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+  rights_status: cc0
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/sharks-rays/scalloped-hammerhead/scalloped-hammerhead-wikimedia-sphyrna-lewini-griffith-smith-1834-2422815227/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/sharks-rays/scalloped-hammerhead/scalloped-hammerhead-wikimedia-sphyrna-lewini-griffith-smith-1834-2422815227/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/sharks-rays/scalloped-hammerhead/scalloped-hammerhead-wikimedia-sphyrna-lewini-griffith-smith-1834-2422815227/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/scalloped-hammerhead/scalloped-hammerhead-wikimedia-sphyrna-lewini-griffith-smith-1834-2422815227/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/sharks-rays/scalloped-hammerhead/scalloped-hammerhead-wikimedia-sphyrna-lewini-griffith-smith-1834-2422815227/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/scalloped-hammerhead/scalloped-hammerhead-wikimedia-sphyrna-lewini-griffith-smith-1834-2422815227/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/sharks-rays/scalloped-hammerhead/scalloped-hammerhead-wikimedia-sphyrna-lewini-griffith-smith-1834-2422815227/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/scalloped-hammerhead/scalloped-hammerhead-wikimedia-sphyrna-lewini-griffith-smith-1834-2422815227/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/sharks-rays/scalloped-hammerhead/scalloped-hammerhead-wikimedia-sphyrna-lewini-griffith-smith-1834-2422815227/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/scalloped-hammerhead/scalloped-hammerhead-wikimedia-sphyrna-lewini-griffith-smith-1834-2422815227/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/sharks-rays/scalloped-hammerhead/scalloped-hammerhead-wikimedia-sphyrna-lewini-griffith-smith-1834-2422815227/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/scalloped-hammerhead/scalloped-hammerhead-wikimedia-sphyrna-lewini-griffith-smith-1834-2422815227/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: shortfin-mako
+  species_page: content/species/sharks-rays/shortfin-mako.md
+  website_path: /species/sharks-rays/shortfin-mako
+  taxon_group: sharks-rays
+  slug: shortfin-mako
+  common_name: Shortfin Mako
+  scientific_name: Isurus oxyrinchus
+  approved_asset_id: shortfin-mako-wikimedia-isurus-oxyrinchus-by-mark-conlin
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/7/74/Isurus_oxyrinchus_by_mark_conlin.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Isurus_oxyrinchus_by_mark_conlin.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/7/74/Isurus_oxyrinchus_by_mark_conlin.jpg
+  original_media_host: upload.wikimedia.org
+  creator: Mark Conlin, SWFSC Large Pelagics Program
+  credit: https://swfsc.noaa.gov/ImageGallery/Default.aspx?moid=533
+  license: Public domain
+  license_url: null
+  rights_status: public-domain
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/sharks-rays/shortfin-mako/shortfin-mako-wikimedia-isurus-oxyrinchus-by-mark-conlin/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/sharks-rays/shortfin-mako/shortfin-mako-wikimedia-isurus-oxyrinchus-by-mark-conlin/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/sharks-rays/shortfin-mako/shortfin-mako-wikimedia-isurus-oxyrinchus-by-mark-conlin/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/shortfin-mako/shortfin-mako-wikimedia-isurus-oxyrinchus-by-mark-conlin/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/sharks-rays/shortfin-mako/shortfin-mako-wikimedia-isurus-oxyrinchus-by-mark-conlin/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/shortfin-mako/shortfin-mako-wikimedia-isurus-oxyrinchus-by-mark-conlin/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/sharks-rays/shortfin-mako/shortfin-mako-wikimedia-isurus-oxyrinchus-by-mark-conlin/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/shortfin-mako/shortfin-mako-wikimedia-isurus-oxyrinchus-by-mark-conlin/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/sharks-rays/shortfin-mako/shortfin-mako-wikimedia-isurus-oxyrinchus-by-mark-conlin/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/shortfin-mako/shortfin-mako-wikimedia-isurus-oxyrinchus-by-mark-conlin/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/sharks-rays/shortfin-mako/shortfin-mako-wikimedia-isurus-oxyrinchus-by-mark-conlin/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/shortfin-mako/shortfin-mako-wikimedia-isurus-oxyrinchus-by-mark-conlin/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: tiger-shark
+  species_page: content/species/sharks-rays/tiger-shark.md
+  website_path: /species/sharks-rays/tiger-shark
+  taxon_group: sharks-rays
+  slug: tiger-shark
+  common_name: Tiger Shark
+  scientific_name: Galeocerdo cuvier
+  approved_asset_id: tiger-shark-wikimedia-requin-tigre-galeocerdo-cuvier-ifremer-00756-867
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/b/be/Requin_tigre_%28Galeocerdo_cuvier%29_%28Ifremer_00756-86782%29.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Requin_tigre_(Galeocerdo_cuvier)_(Ifremer_00756-86782).jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/b/be/Requin_tigre_%28Galeocerdo_cuvier%29_%28Ifremer_00756-86782%29.jpg
+  original_media_host: upload.wikimedia.org
+  creator: "Fanchon Varenne (IFREMER, D\xE9l\xE9gation oc\xE9an Indien (DOI), D\xE9partement Ressources Biologiques et Environnement\
+    \ (RBE), F-97420 Le Port, France)"
+  credit: Requin tigre (Galeocerdo cuvier)
+  license: CC BY 4.0
+  license_url: https://creativecommons.org/licenses/by/4.0
+  rights_status: cc-by
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/sharks-rays/tiger-shark/tiger-shark-wikimedia-requin-tigre-galeocerdo-cuvier-ifremer-00756-867/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/sharks-rays/tiger-shark/tiger-shark-wikimedia-requin-tigre-galeocerdo-cuvier-ifremer-00756-867/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/sharks-rays/tiger-shark/tiger-shark-wikimedia-requin-tigre-galeocerdo-cuvier-ifremer-00756-867/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/tiger-shark/tiger-shark-wikimedia-requin-tigre-galeocerdo-cuvier-ifremer-00756-867/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/sharks-rays/tiger-shark/tiger-shark-wikimedia-requin-tigre-galeocerdo-cuvier-ifremer-00756-867/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/tiger-shark/tiger-shark-wikimedia-requin-tigre-galeocerdo-cuvier-ifremer-00756-867/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/sharks-rays/tiger-shark/tiger-shark-wikimedia-requin-tigre-galeocerdo-cuvier-ifremer-00756-867/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/tiger-shark/tiger-shark-wikimedia-requin-tigre-galeocerdo-cuvier-ifremer-00756-867/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/sharks-rays/tiger-shark/tiger-shark-wikimedia-requin-tigre-galeocerdo-cuvier-ifremer-00756-867/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/tiger-shark/tiger-shark-wikimedia-requin-tigre-galeocerdo-cuvier-ifremer-00756-867/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/sharks-rays/tiger-shark/tiger-shark-wikimedia-requin-tigre-galeocerdo-cuvier-ifremer-00756-867/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/tiger-shark/tiger-shark-wikimedia-requin-tigre-galeocerdo-cuvier-ifremer-00756-867/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: species-whale-shark
+  species_page: content/species/sharks-rays/whale-shark.md
+  website_path: /species/sharks-rays/whale-shark
+  taxon_group: sharks-rays
+  slug: whale-shark
+  common_name: Whale Shark
+  scientific_name: Rhincodon typus
+  approved_asset_id: species-whale-shark-wikimedia-olympus-digital-camera-27591269541
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/3/3f/OLYMPUS_DIGITAL_CAMERA_%2827591269541%29.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:OLYMPUS_DIGITAL_CAMERA_(27591269541).jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/3/3f/OLYMPUS_DIGITAL_CAMERA_%2827591269541%29.jpg
+  original_media_host: upload.wikimedia.org
+  creator: cotterillmike
+  credit: https://www.flickr.com/photos/cotterillmike/27591269541/
+  license: CC0
+  license_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+  rights_status: cc0
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/sharks-rays/whale-shark/species-whale-shark-wikimedia-olympus-digital-camera-27591269541/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/sharks-rays/whale-shark/species-whale-shark-wikimedia-olympus-digital-camera-27591269541/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/sharks-rays/whale-shark/species-whale-shark-wikimedia-olympus-digital-camera-27591269541/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/whale-shark/species-whale-shark-wikimedia-olympus-digital-camera-27591269541/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/sharks-rays/whale-shark/species-whale-shark-wikimedia-olympus-digital-camera-27591269541/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/whale-shark/species-whale-shark-wikimedia-olympus-digital-camera-27591269541/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/sharks-rays/whale-shark/species-whale-shark-wikimedia-olympus-digital-camera-27591269541/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/whale-shark/species-whale-shark-wikimedia-olympus-digital-camera-27591269541/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/sharks-rays/whale-shark/species-whale-shark-wikimedia-olympus-digital-camera-27591269541/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/whale-shark/species-whale-shark-wikimedia-olympus-digital-camera-27591269541/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/sharks-rays/whale-shark/species-whale-shark-wikimedia-olympus-digital-camera-27591269541/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sharks-rays/whale-shark/species-whale-shark-wikimedia-olympus-digital-camera-27591269541/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: species-west-indian-manatee
+  species_page: content/species/sirenians/west-indian-manatee.md
+  website_path: /species/sirenians/west-indian-manatee
+  taxon_group: sirenians
+  slug: west-indian-manatee
+  common_name: West Indian Manatee
+  scientific_name: Trichechus manatus
+  approved_asset_id: species-west-indian-manatee-wikimedia-manatee-photo
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/b/b1/Manatee_photo.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Manatee_photo.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/b/b1/Manatee_photo.jpg
+  original_media_host: upload.wikimedia.org
+  creator: NASA
+  credit: 'NASA
+
+
+    http://www-pao.ksc.nasa.gov/kscpao/visit/kscovrv.htm.
+
+    http://www.nasa.gov/centers/kennedy/images/content/91132main_79c265.jpg'
+  license: Public domain
+  license_url: null
+  rights_status: public-domain
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/sirenians/west-indian-manatee/species-west-indian-manatee-wikimedia-manatee-photo/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/sirenians/west-indian-manatee/species-west-indian-manatee-wikimedia-manatee-photo/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/sirenians/west-indian-manatee/species-west-indian-manatee-wikimedia-manatee-photo/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sirenians/west-indian-manatee/species-west-indian-manatee-wikimedia-manatee-photo/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/sirenians/west-indian-manatee/species-west-indian-manatee-wikimedia-manatee-photo/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sirenians/west-indian-manatee/species-west-indian-manatee-wikimedia-manatee-photo/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/sirenians/west-indian-manatee/species-west-indian-manatee-wikimedia-manatee-photo/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sirenians/west-indian-manatee/species-west-indian-manatee-wikimedia-manatee-photo/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/sirenians/west-indian-manatee/species-west-indian-manatee-wikimedia-manatee-photo/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sirenians/west-indian-manatee/species-west-indian-manatee-wikimedia-manatee-photo/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/sirenians/west-indian-manatee/species-west-indian-manatee-wikimedia-manatee-photo/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/sirenians/west-indian-manatee/species-west-indian-manatee-wikimedia-manatee-photo/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: species-green-turtle
+  species_page: content/species/turtles/green-turtle.md
+  website_path: /species/turtles/green-turtle
+  taxon_group: turtles
+  slug: green-turtle
+  common_name: Green Turtle
+  scientific_name: Chelonia mydas
+  approved_asset_id: species-green-turtle-wikimedia-hawaii-turtle-2
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/b/bb/Hawaii_turtle_2.JPG
+  source_url: https://commons.wikimedia.org/wiki/File:Hawaii_turtle_2.JPG
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/b/bb/Hawaii_turtle_2.JPG
+  original_media_host: upload.wikimedia.org
+  creator: Brocken Inaglory
+  credit: Photograph by Brocken Inaglory, edited by Keta
+  license: CC BY-SA 3.0
+  license_url: http://creativecommons.org/licenses/by-sa/3.0/
+  rights_status: cc-by-sa
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - closed-license-remix-without-share-alike-review
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/turtles/green-turtle/species-green-turtle-wikimedia-hawaii-turtle-2/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/turtles/green-turtle/species-green-turtle-wikimedia-hawaii-turtle-2/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/turtles/green-turtle/species-green-turtle-wikimedia-hawaii-turtle-2/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/green-turtle/species-green-turtle-wikimedia-hawaii-turtle-2/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/turtles/green-turtle/species-green-turtle-wikimedia-hawaii-turtle-2/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/green-turtle/species-green-turtle-wikimedia-hawaii-turtle-2/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/turtles/green-turtle/species-green-turtle-wikimedia-hawaii-turtle-2/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/green-turtle/species-green-turtle-wikimedia-hawaii-turtle-2/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/turtles/green-turtle/species-green-turtle-wikimedia-hawaii-turtle-2/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/green-turtle/species-green-turtle-wikimedia-hawaii-turtle-2/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/turtles/green-turtle/species-green-turtle-wikimedia-hawaii-turtle-2/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/green-turtle/species-green-turtle-wikimedia-hawaii-turtle-2/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: hawksbill-turtle
+  species_page: content/species/turtles/hawksbill-turtle.md
+  website_path: /species/turtles/hawksbill-turtle
+  taxon_group: turtles
+  slug: hawksbill-turtle
+  common_name: Hawksbill Turtle
+  scientific_name: Eretmochelys imbricata
+  approved_asset_id: hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-parque-naci
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/8/8b/Tortuga_carey_%28Eretmochelys_imbricata%29%2C_parque_nacional_Ras_Muhammad%2C_Egipto%2C_2022-03-28%2C_DD_56.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Tortuga_carey_(Eretmochelys_imbricata),_parque_nacional_Ras_Muhammad,_Egipto,_2022-03-28,_DD_56.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/8/8b/Tortuga_carey_%28Eretmochelys_imbricata%29%2C_parque_nacional_Ras_Muhammad%2C_Egipto%2C_2022-03-28%2C_DD_56.jpg
+  original_media_host: upload.wikimedia.org
+  creator: Diego Delso
+  credit: Own work
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0
+  rights_status: cc-by-sa
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - closed-license-remix-without-share-alike-review
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/turtles/hawksbill-turtle/hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-parque-naci/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/turtles/hawksbill-turtle/hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-parque-naci/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/turtles/hawksbill-turtle/hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-parque-naci/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/hawksbill-turtle/hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-parque-naci/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/turtles/hawksbill-turtle/hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-parque-naci/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/hawksbill-turtle/hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-parque-naci/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/turtles/hawksbill-turtle/hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-parque-naci/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/hawksbill-turtle/hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-parque-naci/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/turtles/hawksbill-turtle/hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-parque-naci/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/hawksbill-turtle/hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-parque-naci/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/turtles/hawksbill-turtle/hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-parque-naci/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/hawksbill-turtle/hawksbill-turtle-wikimedia-tortuga-carey-eretmochelys-imbricata-parque-naci/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: kemps-ridley-turtle
+  species_page: content/species/turtles/kemps-ridley-turtle.md
+  website_path: /species/turtles/kemps-ridley-turtle
+  taxon_group: turtles
+  slug: kemps-ridley-turtle
+  common_name: Kemp's Ridley Turtle
+  scientific_name: Lepidochelys kempii
+  approved_asset_id: kemps-ridley-turtle-wikimedia-padre-island-national-seashore-kemps-ridley-sea-
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/d/d8/Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/d/d8/Padre_Island_National_Seashore_-_Kemps_Ridley_Sea_Turtle.jpg
+  original_media_host: upload.wikimedia.org
+  creator: uploaded by Johntex
+  credit: United States Fish & Wildlife Service (USFWS) [1]
+  license: Public domain
+  license_url: null
+  rights_status: public-domain
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/turtles/kemps-ridley-turtle/kemps-ridley-turtle-wikimedia-padre-island-national-seashore-kemps-ridley-sea-/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/turtles/kemps-ridley-turtle/kemps-ridley-turtle-wikimedia-padre-island-national-seashore-kemps-ridley-sea-/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/turtles/kemps-ridley-turtle/kemps-ridley-turtle-wikimedia-padre-island-national-seashore-kemps-ridley-sea-/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/kemps-ridley-turtle/kemps-ridley-turtle-wikimedia-padre-island-national-seashore-kemps-ridley-sea-/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/turtles/kemps-ridley-turtle/kemps-ridley-turtle-wikimedia-padre-island-national-seashore-kemps-ridley-sea-/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/kemps-ridley-turtle/kemps-ridley-turtle-wikimedia-padre-island-national-seashore-kemps-ridley-sea-/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/turtles/kemps-ridley-turtle/kemps-ridley-turtle-wikimedia-padre-island-national-seashore-kemps-ridley-sea-/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/kemps-ridley-turtle/kemps-ridley-turtle-wikimedia-padre-island-national-seashore-kemps-ridley-sea-/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/turtles/kemps-ridley-turtle/kemps-ridley-turtle-wikimedia-padre-island-national-seashore-kemps-ridley-sea-/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/kemps-ridley-turtle/kemps-ridley-turtle-wikimedia-padre-island-national-seashore-kemps-ridley-sea-/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/turtles/kemps-ridley-turtle/kemps-ridley-turtle-wikimedia-padre-island-national-seashore-kemps-ridley-sea-/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/kemps-ridley-turtle/kemps-ridley-turtle-wikimedia-padre-island-national-seashore-kemps-ridley-sea-/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: leatherback-turtle
+  species_page: content/species/turtles/leatherback-turtle.md
+  website_path: /species/turtles/leatherback-turtle
+  taxon_group: turtles
+  slug: leatherback-turtle
+  common_name: Leatherback Turtle
+  scientific_name: Dermochelys coriacea
+  approved_asset_id: leatherback-turtle-wikimedia-leatherbackturtle
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/9/9b/LeatherbackTurtle.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:LeatherbackTurtle.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/9/9b/LeatherbackTurtle.jpg
+  original_media_host: upload.wikimedia.org
+  creator: National Oceanic and Atmospheric Administration, NOAA
+  credit: National Oceanic and Atmospheric Administration, NOAA
+  license: Public domain
+  license_url: null
+  rights_status: public-domain
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - nesting-or-rookery-promotion
+  - paid-ad-without-extra-rights-check
+  - precise-location-field-guidance
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/turtles/leatherback-turtle/leatherback-turtle-wikimedia-leatherbackturtle/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/turtles/leatherback-turtle/leatherback-turtle-wikimedia-leatherbackturtle/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/turtles/leatherback-turtle/leatherback-turtle-wikimedia-leatherbackturtle/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/leatherback-turtle/leatherback-turtle-wikimedia-leatherbackturtle/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/turtles/leatherback-turtle/leatherback-turtle-wikimedia-leatherbackturtle/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/leatherback-turtle/leatherback-turtle-wikimedia-leatherbackturtle/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/turtles/leatherback-turtle/leatherback-turtle-wikimedia-leatherbackturtle/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/leatherback-turtle/leatherback-turtle-wikimedia-leatherbackturtle/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/turtles/leatherback-turtle/leatherback-turtle-wikimedia-leatherbackturtle/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/leatherback-turtle/leatherback-turtle-wikimedia-leatherbackturtle/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/turtles/leatherback-turtle/leatherback-turtle-wikimedia-leatherbackturtle/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/leatherback-turtle/leatherback-turtle-wikimedia-leatherbackturtle/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: loggerhead-turtle
+  species_page: content/species/turtles/loggerhead-turtle.md
+  website_path: /species/turtles/loggerhead-turtle
+  taxon_group: turtles
+  slug: loggerhead-turtle
+  common_name: Loggerhead Turtle
+  scientific_name: Caretta caretta
+  approved_asset_id: loggerhead-turtle-wikimedia-loggerhead-sea-turtle-caretta-caretta-2
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/8/81/Loggerhead_Sea_Turtle_%28Caretta_caretta%29_2.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Loggerhead_Sea_Turtle_(Caretta_caretta)_2.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/8/81/Loggerhead_Sea_Turtle_%28Caretta_caretta%29_2.jpg
+  original_media_host: upload.wikimedia.org
+  creator: Brian Gratwicke
+  credit: Loggerhead Sea Turtle (Caretta caretta)
+  license: CC BY 2.0
+  license_url: https://creativecommons.org/licenses/by/2.0
+  rights_status: cc-by
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/turtles/loggerhead-turtle/loggerhead-turtle-wikimedia-loggerhead-sea-turtle-caretta-caretta-2/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/turtles/loggerhead-turtle/loggerhead-turtle-wikimedia-loggerhead-sea-turtle-caretta-caretta-2/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/turtles/loggerhead-turtle/loggerhead-turtle-wikimedia-loggerhead-sea-turtle-caretta-caretta-2/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/loggerhead-turtle/loggerhead-turtle-wikimedia-loggerhead-sea-turtle-caretta-caretta-2/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/turtles/loggerhead-turtle/loggerhead-turtle-wikimedia-loggerhead-sea-turtle-caretta-caretta-2/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/loggerhead-turtle/loggerhead-turtle-wikimedia-loggerhead-sea-turtle-caretta-caretta-2/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/turtles/loggerhead-turtle/loggerhead-turtle-wikimedia-loggerhead-sea-turtle-caretta-caretta-2/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/loggerhead-turtle/loggerhead-turtle-wikimedia-loggerhead-sea-turtle-caretta-caretta-2/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/turtles/loggerhead-turtle/loggerhead-turtle-wikimedia-loggerhead-sea-turtle-caretta-caretta-2/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/loggerhead-turtle/loggerhead-turtle-wikimedia-loggerhead-sea-turtle-caretta-caretta-2/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/turtles/loggerhead-turtle/loggerhead-turtle-wikimedia-loggerhead-sea-turtle-caretta-caretta-2/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/loggerhead-turtle/loggerhead-turtle-wikimedia-loggerhead-sea-turtle-caretta-caretta-2/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
+- artifact_id: olive-ridley-turtle
+  species_page: content/species/turtles/olive-ridley-turtle.md
+  website_path: /species/turtles/olive-ridley-turtle
+  taxon_group: turtles
+  slug: olive-ridley-turtle
+  common_name: Olive Ridley Turtle
+  scientific_name: Lepidochelys olivacea
+  approved_asset_id: olive-ridley-turtle-wikimedia-olive-ridley-sea-turtle-cropped
+  current_public_media_url: https://upload.wikimedia.org/wikipedia/commons/f/f2/Olive_ridley_sea_turtle_cropped.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Olive_ridley_sea_turtle_cropped.jpg
+  source_host: commons.wikimedia.org
+  original_media_url: https://upload.wikimedia.org/wikipedia/commons/f/f2/Olive_ridley_sea_turtle_cropped.jpg
+  original_media_host: upload.wikimedia.org
+  creator: Remove "cropped" from file name and see original file
+  credit: Remove "cropped" from file name and see original file
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0
+  rights_status: cc-by-sa
+  qa_status: approved
+  approved_surfaces:
+  - species-page-primary
+  - visual-explorer-card
+  - public-species-card-image
+  - education-deck
+  blocked_surfaces:
+  - closed-license-remix-without-share-alike-review
+  - merchandise
+  - paid-ad-without-extra-rights-check
+  - social-crop-without-visible-credit
+  - wildlife-interaction-instructional-content
+  storage:
+    provider: cloudflare_r2
+    bucket: blue-life-media-prod
+    public_base_url: https://media.bluelifecommons.org
+    object_prefix: species/turtles/olive-ridley-turtle/olive-ridley-turtle-wikimedia-olive-ridley-sea-turtle-cropped/
+    source_ext: jpg
+    status: mirror_pending
+    mirror_allowed_by_current_rights_status: true
+    no_download_performed: true
+    public_site_preference: current_approved_source_url_until_owned_variants_exist
+    variants:
+    - name: original
+      role: archived source copy
+      public_use: false
+      format: source
+      width: null
+      height: null
+      object_key: species/turtles/olive-ridley-turtle/olive-ridley-turtle-wikimedia-olive-ridley-sea-turtle-cropped/original/source.jpg
+      status: pending_generation
+    - name: thumb
+      role: compact grid and admin thumbnail
+      public_use: true
+      format: webp
+      width: 320
+      height: null
+      object_key: species/turtles/olive-ridley-turtle/olive-ridley-turtle-wikimedia-olive-ridley-sea-turtle-cropped/public/thumb-320.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/olive-ridley-turtle/olive-ridley-turtle-wikimedia-olive-ridley-sea-turtle-cropped/public/thumb-320.webp
+    - name: card
+      role: species cards and visual audit board
+      public_use: true
+      format: webp
+      width: 640
+      height: null
+      object_key: species/turtles/olive-ridley-turtle/olive-ridley-turtle-wikimedia-olive-ridley-sea-turtle-cropped/public/card-640.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/olive-ridley-turtle/olive-ridley-turtle-wikimedia-olive-ridley-sea-turtle-cropped/public/card-640.webp
+    - name: hero
+      role: species page hero
+      public_use: true
+      format: webp
+      width: 1280
+      height: null
+      object_key: species/turtles/olive-ridley-turtle/olive-ridley-turtle-wikimedia-olive-ridley-sea-turtle-cropped/public/hero-1280.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/olive-ridley-turtle/olive-ridley-turtle-wikimedia-olive-ridley-sea-turtle-cropped/public/hero-1280.webp
+    - name: og
+      role: social preview image
+      public_use: true
+      format: jpg
+      width: 1200
+      height: 630
+      object_key: species/turtles/olive-ridley-turtle/olive-ridley-turtle-wikimedia-olive-ridley-sea-turtle-cropped/public/og-1200x630.jpg
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/olive-ridley-turtle/olive-ridley-turtle-wikimedia-olive-ridley-sea-turtle-cropped/public/og-1200x630.jpg
+    - name: full
+      role: public high-resolution inspection
+      public_use: true
+      format: webp
+      width: 1920
+      height: null
+      object_key: species/turtles/olive-ridley-turtle/olive-ridley-turtle-wikimedia-olive-ridley-sea-turtle-cropped/public/full-1920.webp
+      status: pending_generation
+      public_url: https://media.bluelifecommons.org/species/turtles/olive-ridley-turtle/olive-ridley-turtle-wikimedia-olive-ridley-sea-turtle-cropped/public/full-1920.webp
+  migration_gate:
+    ready_for_mirror_review: true
+    requires_human_recheck_before_copy: true
+    requires_exif_strip: true
+    requires_checksum_after_upload: true
+    requires_database_asset_row: true
+    requires_database_variant_rows: true
