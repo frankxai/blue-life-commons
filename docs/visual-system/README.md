@@ -33,6 +33,7 @@ The ownable idea is the **commons current**: sourced artifacts moving through re
 | Infographic system | `docs/visual-system/infographic-system.md` | Rules for exact text, data, sources, and overlays |
 | Species media pipeline | `docs/visual-system/species-media-pipeline.md` | Source priority, metadata, rights, and approval gate for official species visuals |
 | Species visual explorer spec | `docs/visual-system/species-visual-explorer-spec.md` | Site surface spec for media coverage, provenance, and curation queue |
+| Media intelligence platform strategy | `docs/visual-system/media-intelligence-platform-strategy.md` | Live media-intelligence surface, public visual audit board, competitive/partner benchmark, and expansion model for scaling approved animal images |
 | Species source routing | `content/media/species-media-source-routing.yaml` | Machine-readable review lanes, partner/grant targets, and reviewer actions |
 | Species rich embeds | `content/media/species-media-rich-embeds.yaml` | Verified source-card fallbacks when approved primary images are absent |
 | Species approval queue | `content/media/species-media-approval-queue.yaml` | Curator worksheet for promoting review-only candidates to approved primary media |
@@ -54,6 +55,7 @@ The ownable idea is the **commons current**: sourced artifacts moving through re
 | Species approval workbench prototype | `content/media/review-packs/species-media-approval-workbench-2026-07-03.html` | Static reviewer workbench with candidate thumbnails and filters; not a public site data source |
 | Evidence manifest | `docs/visual-system/design-loop-evidence-2026-06-26.json` | Loop trace and QA status for the original visual system pass |
 | Species media evidence | `docs/visual-system/design-loop-evidence-2026-07-03-species-media.json` | Loop trace, QA status, and known risks for the species media pipeline |
+| Media intelligence evidence | `docs/visual-system/design-loop-evidence-2026-07-04-media-intelligence.json` | Loop trace, QA status, and production surface proof for the media intelligence platform pass |
 
 ## Production stance
 

@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/research",
     "/guardian",
     "/catalog",
+    "/media-intelligence",
     "/impact",
     "/partners",
     "/governance",

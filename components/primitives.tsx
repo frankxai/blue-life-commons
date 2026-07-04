@@ -16,12 +16,14 @@ export function Container({
 }
 
 export function SectionHeading({
+  id,
   eyebrow,
   title,
   description,
   align = "left",
   tone = "light",
 }: {
+  id?: string
   eyebrow?: string
   title: string
   description?: string
@@ -46,6 +48,7 @@ export function SectionHeading({
         </span>
       )}
       <h2
+        id={id}
         className={cn(
           "text-balance font-serif text-3xl font-semibold leading-tight tracking-tight sm:text-4xl",
           tone === "dark" ? "text-abyss-foreground" : "text-foreground",

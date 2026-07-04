@@ -1,0 +1,215 @@
+{
+  "version": "2026-07-04",
+  "task": "Extend Blue Life Commons with a public media intelligence platform surface that explains approved animal-image coverage, partner/source strategy, competitive lessons, and the operating loop for adding more animals and images safely.",
+  "surface": "/media-intelligence route, public visual audit board, primary navigation, footer navigation, strategy documentation, and typed source/benchmark data.",
+  "audience": "Researchers, NGOs, contributors, educators, reviewers, and partner media owners who need to understand how Blue Life scales animal images without weakening source, rights, or welfare standards.",
+  "first_read": "Blue Life Commons is the approved visual layer for ocean life: every current animal has a rights-checked image, and the next job is scale through partners and source gates.",
+  "standards": [
+    "C:/Users/frank/starlight/repos/blue-life-commons/AGENTS.md",
+    "C:/Users/frank/starlight/repos/blue-life-commons/ETHICS.md",
+    "C:/Users/frank/starlight/repos/blue-life-commons/SOURCES.md",
+    "C:/Users/frank/starlight/repos/blue-life-commons/STYLE.md",
+    "C:/Users/frank/starlight/repos/DESIGN_TASTE.md",
+    "C:/Users/frank/starlight/repos/WEB_EXPERIENCE_STANDARD.md",
+    "C:/Users/frank/starlight/repos/VISUAL_QA_GATE.md",
+    "C:/Users/frank/starlight/repos/_intelligence/README.md",
+    "C:/Users/frank/starlight/repos/_intelligence/operating-system.md",
+    "C:/Users/frank/starlight/repos/_intelligence/quality-gates.md",
+    "C:/Users/frank/starlight/repos/_intelligence/asset-intelligence.md",
+    "C:/Users/frank/starlight/repos/design-agent-standards/PREMIUM_ASSET_STANDARD.md",
+    "C:/Users/frank/starlight/repos/design-agent-standards/AGENTIC_DESIGN_LOOP.md",
+    "C:/Users/frank/starlight/repos/design-agent-standards/OUTCOMES.md"
+  ],
+  "references": [
+    {
+      "label": "iNaturalist Seek",
+      "source": "https://www.inaturalist.org/pages/seek_app",
+      "reason": "Benchmarks community observations and image-recognition positioning."
+    },
+    {
+      "label": "GBIF Occurrence Image API",
+      "source": "https://techdocs.gbif.org/en/openapi/images",
+      "reason": "Benchmarks occurrence image infrastructure and image-license cautions."
+    },
+    {
+      "label": "GBIF Multimedia Publishing",
+      "source": "https://techdocs.gbif.org/en/data-publishing/multimedia-publishing",
+      "reason": "Defines multimedia metadata fields and publishing constraints."
+    },
+    {
+      "label": "Encyclopedia of Life",
+      "source": "https://naturalhistory.si.edu/research/eol",
+      "reason": "Benchmarks species knowledge and trait infrastructure."
+    },
+    {
+      "label": "OBIS Data Access",
+      "source": "https://obis.org/data/access/",
+      "reason": "Benchmarks marine occurrence data access and programmatic pathways."
+    },
+    {
+      "label": "WoRMS REST Service",
+      "source": "https://www.marinespecies.org/rest/",
+      "reason": "Benchmarks marine taxonomic identifier infrastructure."
+    },
+    {
+      "label": "Wild Me",
+      "source": "https://www.wildme.org/what-we-do.html",
+      "reason": "Benchmarks individual animal photo-identification and researcher collaboration."
+    },
+    {
+      "label": "Wildlife Insights",
+      "source": "https://www.wildlifeinsights.org/",
+      "reason": "Benchmarks bulk image intake, machine tagging, analysis, and public project workflows."
+    },
+    {
+      "label": "FishBase Hints",
+      "source": "https://www.fishbase.se/hints.htm",
+      "reason": "Benchmarks fish media access routes and reuse caveats."
+    },
+    {
+      "label": "NOAA Fisheries Website Policies",
+      "source": "https://www.fisheries.noaa.gov/national/about-us/website-policies-and-disclaimers",
+      "reason": "Anchors official-source image reuse and permission cautions."
+    }
+  ],
+  "direction": {
+    "keep": [
+      "Current 31 of 31 approved species images remain visible as production proof.",
+      "Every public claim is source-backed or phrased as a strategy decision.",
+      "Competitors are treated as partner/source ecosystems, not enemies to copy.",
+      "Candidate and reviewer-only media remain blocked from public rendering."
+    ],
+    "avoid": [
+      "Claiming to be the largest animal image platform.",
+      "Using Google Images as a source of record.",
+      "Promising photo identification without an implemented reviewed workflow.",
+      "Inferring image rights from biodiversity data availability."
+    ],
+    "signature": "A public media command surface: coverage now, visual ownership proof, benchmark lessons, source lanes, and the repeatable path from animal to live approved image.",
+    "system": [
+      "Typed source and benchmark data in lib/media-intelligence.ts.",
+      "Server-rendered /media-intelligence route using live species/media counts.",
+      "Public visual audit board maps every approved image to its species page, guild, source host, rights status, license, asset id, and source page link.",
+      "No new external images; current approved species media is the Tier A proof layer.",
+      "Navigation routes users from Species to Media to Contribute."
+    ]
+  },
+  "asset_quality": {
+    "tier": "A",
+    "source_method": "product-capture",
+    "provenance": "source-cited",
+    "why_premium": "The primary asset is the real production media system: live approved species images and source-backed partner intelligence rendered as an inspectable product surface.",
+    "shortcut_risk": "low",
+    "context_tested": true
+  },
+  "artifacts": [
+    {
+      "path_or_url": "app/media-intelligence/page.tsx",
+      "kind": "web",
+      "inspected": true,
+      "notes": "Public media intelligence route for coverage, visual audit board, benchmark lessons, source lanes, and expansion loop."
+    },
+    {
+      "path_or_url": "lib/media-intelligence.ts",
+      "kind": "data",
+      "inspected": true,
+      "notes": "Typed benchmark/source/expansion data with source URLs."
+    },
+    {
+      "path_or_url": "docs/visual-system/media-intelligence-platform-strategy.md",
+      "kind": "process-doc",
+      "inspected": true,
+      "notes": "Competitive/partner strategy, source priority, scale loop, guardrails, and best-platform answer."
+    },
+    {
+      "path_or_url": "components/site-header.tsx",
+      "kind": "navigation",
+      "inspected": true,
+      "notes": "Primary nav exposes the Media route."
+    },
+    {
+      "path_or_url": "components/site-footer.tsx",
+      "kind": "navigation",
+      "inspected": true,
+      "notes": "Footer Explore column exposes the Media route."
+    },
+    {
+      "path_or_url": "components/primitives.tsx",
+      "kind": "accessibility",
+      "inspected": true,
+      "notes": "SectionHeading now supports optional heading ids for route anchors and aria-labelledby wiring."
+    },
+    {
+      "path_or_url": "docs/visual-system/screenshots/media-intelligence-desktop-2026-07-04.png",
+      "kind": "screenshot",
+      "inspected": true,
+      "notes": "Full desktop route layout capture showing coverage, ledger section, partner benchmarks, source lanes, expansion loop, and footer."
+    },
+    {
+      "path_or_url": "docs/visual-system/screenshots/media-intelligence-mobile-2026-07-04.png",
+      "kind": "screenshot",
+      "inspected": true,
+      "notes": "Full mobile route capture for stacked layout and lazy-loading behavior."
+    },
+    {
+      "path_or_url": "docs/visual-system/screenshots/media-intelligence-desktop-ledger-2026-07-04.png",
+      "kind": "screenshot",
+      "inspected": true,
+      "notes": "Focused desktop visual audit board capture with decoded approved animal images and tracking metadata."
+    },
+    {
+      "path_or_url": "docs/visual-system/screenshots/media-intelligence-mobile-ledger-2026-07-04.png",
+      "kind": "screenshot",
+      "inspected": true,
+      "notes": "Focused mobile visual audit board capture with decoded approved animal images and readable tracking metadata."
+    }
+  ],
+  "checks": [
+    {
+      "name": "standards-loaded",
+      "status": "pass",
+      "evidence": "Repo instructions, Premium Web OS, asset intelligence, visual QA, and premium asset standards were read."
+    },
+    {
+      "name": "source-policy",
+      "status": "pass",
+      "evidence": "The route and strategy cite official/source pages for iNaturalist, GBIF, EOL, OBIS, WoRMS, Wild Me, Wildlife Insights, FishBase, and NOAA."
+    },
+    {
+      "name": "asset-tier",
+      "status": "pass",
+      "evidence": "Tier A product-proof surface: the page uses live species/media coverage from the production content system rather than decorative assets."
+    },
+    {
+      "name": "export-inspection",
+      "status": "pass",
+      "evidence": "Production build served locally on port 3018 and inspected via desktop/mobile route screenshots plus focused ledger screenshots."
+    },
+    {
+      "name": "visual-qa",
+      "status": "pass",
+      "evidence": "Desktop and mobile captures show no layout overlap; ledger cards render decoded animal images and readable metadata."
+    },
+    {
+      "name": "local-build",
+      "status": "pass",
+      "evidence": "npm run lint and npm run build passed. Build still reports the known nonfatal Turbopack NFT tracing warning from app/sitemap.ts through lib/content.ts."
+    },
+    {
+      "name": "public-safety",
+      "status": "pass",
+      "evidence": "The route renders approved media only through getApprovedSpeciesMedia; review-only candidate URLs remain excluded from public output."
+    }
+  ],
+  "score": {
+    "total": 28,
+    "max": 30,
+    "notes": "Strong production utility, live approved-image audit board, source-backed benchmark strategy, responsive QA, and build verification. Remaining score is reserved for future contributor submission/dashboard workflows."
+  },
+  "decision": "ship",
+  "known_risks": [
+    "The live route must not overclaim platform size beyond the current corpus.",
+    "Future machine-assisted intake needs explicit reviewer gates before public use.",
+    "Additional animal pages still require source-backed species content and approved media records."
+  ]
+}
