@@ -1,0 +1,111 @@
+name: Species media intake
+description: Propose an official, partner, NGO, photographer, or open-license image for a species page.
+title: "Media intake: [species] - [source]"
+labels:
+  - media
+  - rights-review
+  - species-media
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for species images or rich visual embeds. Google Images is discovery only; the source of record must be the original page, file page, or written permission grant. Do not include precise live-animal locations or private contact details in public issue text.
+  - type: input
+    id: species_page
+    attributes:
+      label: Species page
+      description: Link the Blue Life Commons species page, if it exists.
+      placeholder: "/species/cetaceans/blue-whale"
+    validations:
+      required: true
+  - type: input
+    id: artifact_id
+    attributes:
+      label: Artifact ID
+      description: Use the existing artifact_id when known.
+      placeholder: "species-blue-whale"
+    validations:
+      required: false
+  - type: input
+    id: common_name
+    attributes:
+      label: Common name
+      placeholder: "Blue Whale"
+    validations:
+      required: true
+  - type: input
+    id: scientific_name
+    attributes:
+      label: Scientific name
+      placeholder: "Balaenoptera musculus"
+    validations:
+      required: true
+  - type: input
+    id: source_url
+    attributes:
+      label: Source URL
+      description: Official page, file page, partner page, or permission record URL.
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: input
+    id: original_media_url
+    attributes:
+      label: Original media URL
+      description: Direct image/media URL only when the source permits it. Leave blank if the source is a page or written grant.
+      placeholder: "https://..."
+    validations:
+      required: false
+  - type: input
+    id: owner_creator
+    attributes:
+      label: Owner or creator
+      placeholder: "NOAA Fisheries / Photographer name / NGO name"
+    validations:
+      required: true
+  - type: textarea
+    id: license_terms
+    attributes:
+      label: License or permission terms
+      description: Include license name, public-domain status, CC terms, or written grant summary.
+      placeholder: "CC BY 4.0; credit required; no paid ads; source page says..."
+    validations:
+      required: true
+  - type: textarea
+    id: credit_line
+    attributes:
+      label: Required credit line
+      placeholder: "Photo: Creator / Organization, license..."
+    validations:
+      required: true
+  - type: textarea
+    id: surfaces
+    attributes:
+      label: Allowed and blocked surfaces
+      description: State whether use is allowed for species page, cards, social, downloads, paid ads, merchandise, partner decks, and crops.
+      placeholder: "Allowed: species page, educational cards. Blocked: paid ads, merchandise. Unknown: social crops."
+    validations:
+      required: true
+  - type: textarea
+    id: species_match
+    attributes:
+      label: Species-match basis
+      description: What proves the image belongs to this animal?
+      placeholder: "Official caption, taxon page, expert review, partner assertion, metadata..."
+    validations:
+      required: true
+  - type: textarea
+    id: welfare_location_notes
+    attributes:
+      label: Welfare and sensitive-location notes
+      description: Mention any unsafe proximity, feeding, touching, baiting, chasing, captivity glamor, precise location, EXIF, or individual-animal risk. Do not post precise sensitive locations.
+      placeholder: "No unsafe interaction visible; no precise live location; EXIF unknown..."
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context
+      description: Optional curator notes, partner contact route, replacement rationale, or uncertainty.
+    validations:
+      required: false

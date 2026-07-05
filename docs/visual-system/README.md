@@ -35,6 +35,7 @@ The ownable idea is the **commons current**: sourced artifacts moving through re
 | Species visual explorer spec | `docs/visual-system/species-visual-explorer-spec.md` | Site surface spec for media coverage, provenance, and curation queue |
 | Media intelligence platform strategy | `docs/visual-system/media-intelligence-platform-strategy.md` | Live media-intelligence surface, public visual audit board, competitive/partner benchmark, and expansion model for scaling approved animal images |
 | Media storage architecture | `docs/visual-system/media-storage-architecture.md` | Vercel-Blob-first storage split, official-domain runbook, and later R2 scale option for animal image storage |
+| Product excellence OS | `docs/product/README.md` | PRD, success metrics, user flows, benchmark, operating team, validation loop, and scale/cost plan for the animal encyclopedia |
 | Species source routing | `content/media/species-media-source-routing.yaml` | Machine-readable review lanes, partner/grant targets, and reviewer actions |
 | Species rich embeds | `content/media/species-media-rich-embeds.yaml` | Verified source-card fallbacks when approved primary images are absent |
 | Species approval queue | `content/media/species-media-approval-queue.yaml` | Curator worksheet for promoting review-only candidates to approved primary media |

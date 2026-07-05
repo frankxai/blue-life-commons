@@ -38,6 +38,7 @@ Pick the lane that matches why you're here:
 | I want to… | Start with |
 |---|---|
 | Browse what's already published | [`CATALOG.md`](CATALOG.md) — the living index |
+| Lead product growth, metrics, user flows, and media scale | [`docs/product/README.md`](docs/product/README.md) |
 | Contribute a species page, region briefing, mission, or dataset card | [`CONTRIBUTING.md`](CONTRIBUTING.md) |
 | Work the commons with a coding agent | [`AGENTS.md`](AGENTS.md) |
 | Understand the citation bar | [`SOURCES.md`](SOURCES.md) |
@@ -69,6 +70,7 @@ blue-life-commons
 ├── agent/                # role briefs for coding agents working the commons
 ├── scripts/              # catalog, artifact, content, and media validation/build tools
 ├── docs/                 # contributor onboarding, researcher guides
+│   ├── product/          # PRD, metrics, user flows, benchmark, team, scale plan
 │   └── visual-system/    # brand assets, species media pipeline, and visual explorer specs
 └── .github/              # issue templates, PR template, CI validation
 ```
