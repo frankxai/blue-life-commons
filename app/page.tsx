@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { HomeHero } from "@/components/home/hero"
 import { ModelSection } from "@/components/home/model-section"
 import { Featured } from "@/components/home/featured"
@@ -5,6 +6,11 @@ import { Principles } from "@/components/home/principles"
 import { GuardianPreview, ClosingCta } from "@/components/home/closing"
 import { getAllArtifacts, getCommonsStats } from "@/lib/content"
 import { getApprovedSpeciesMedia } from "@/lib/media"
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  openGraph: { url: "/" },
+}
 
 export default function HomePage() {
   const stats = getCommonsStats()
@@ -20,6 +26,7 @@ export default function HomePage() {
           href: whaleShark.href,
           githubPath: whaleShark.githubPath,
           status: whaleShark.status ?? "needs-expert-review",
+          review: whaleShark.review,
           sourceCount: whaleShark.sources.length,
           imageUrl: whaleSharkMedia.imageUrl,
           sourceUrl: whaleSharkMedia.sourceUrl,

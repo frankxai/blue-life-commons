@@ -9,7 +9,7 @@ The most cinematic thing the commons can show is not an ocean mood; it is a livi
 - Left plane: commons proposition, actions, repository-derived counts.
 - Right plane: approved whale shark image with truthful status badges.
 - Evidence plane: record path, source count, media rights/checks, and reuse license.
-- Links: public record, source image, and Git history.
+- Links: public record, source image, and the record's Git commit history.
 
 ## Motion
 
@@ -22,3 +22,5 @@ Tier A product/science proof. The record, approved image, rights metadata, and r
 ## Stop conditions
 
 Stop if the image loses its credit/license, the record appears scientifically approved, the contribution path becomes commercial, or a preview exposes an unapproved candidate image.
+
+The public impact ledger must remain empty while every registered claim is still draft or needs expert review. A truthful zero is stronger than provisional impact marketing.

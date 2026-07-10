@@ -4,7 +4,17 @@ const nextConfig = {
     viewTransition: true,
   },
   images: {
-    remotePatterns: [{ protocol: "https", hostname: "**" }],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "7xuojupgkl56rqhi.public.blob.vercel-storage.com",
+      },
+      {
+        protocol: "https",
+        hostname: "commons.wikimedia.org",
+        pathname: "/wiki/Special:FilePath/**",
+      },
+    ],
   },
   async headers() {
     return [

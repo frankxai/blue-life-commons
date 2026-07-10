@@ -63,7 +63,7 @@
       "path_or_url": "components/home/hero.tsx",
       "kind": "web",
       "inspected": false,
-      "notes": "Implementation complete; desktop/mobile export inspection pending."
+      "notes": "Implementation and generated static HTML inspected; direct desktop/mobile export inspection remains pending."
     },
     {
       "path_or_url": "content/species/sharks-rays/whale-shark.md",
@@ -81,12 +81,27 @@
     {
       "name": "review-honesty",
       "status": "pass",
-      "evidence": "The surface labels scientific review as pending and media as approved."
+      "evidence": "The surface derives science, ethics, editor, and artifact status from metadata; blanket ethics-reviewed and peer-reviewed claims were removed."
+    },
+    {
+      "name": "public-outcomes",
+      "status": "pass",
+      "evidence": "The impact ledger publishes only approved or published claims and displays the current zero plus the number of claims still in review."
+    },
+    {
+      "name": "security-and-build",
+      "status": "pass",
+      "evidence": "Frozen install, typecheck, 78-route production build, source/ethics/catalog/media validators, scoped image hosts, and zero-vulnerability npm audit passed."
+    },
+    {
+      "name": "canonical-and-og",
+      "status": "pass",
+      "evidence": "Generated HTML has exact production canonicals and Open Graph URLs for home, contribution, impact, and whale-shark record routes; the approved CC0 whale-shark image is the Open Graph proof asset."
     },
     {
       "name": "export-inspection",
       "status": "blocked",
-      "evidence": "The single bounded Edge capture attempt detached before page load and produced a connection-refused artifact. The invalid artifact was removed and the capture was not retried."
+      "evidence": "The earlier bounded Edge capture detached before page load. Static HTML is inspected, but a new browser surface is not available in this task runtime."
     },
     {
       "name": "visual-qa",
@@ -97,12 +112,13 @@
   "score": {
     "total": 24,
     "max": 30,
-    "notes": "Specific, honest Tier A proof is implemented. Export and preview inspection are required before ship."
+    "notes": "Tier A proof, provenance, public-language, outcome, security, and static HTML gates pass. Score remains capped until actual responsive/reduced-motion exports are inspected."
   },
   "decision": "iterate",
   "known_risks": [
-    "The remote Wikimedia image depends on source availability unless the approved Vercel Blob mirror is present.",
+    "The approved Vercel Blob mirror is preferred; Wikimedia remains the reviewed fallback and OG source.",
     "The underlying species record still requires expert review; the UI must never imply otherwise.",
+    "Funding providers, grants, partner outreach, sponsorship, and Hypercert issuance remain separate human-governed actions.",
     "Custom domain and production state remain out of scope.",
     "Desktop and mobile visual inspection remain blocked after the capped capture attempt."
   ]

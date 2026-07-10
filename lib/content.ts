@@ -340,7 +340,7 @@ export function getCommonsStats(): CommonsStats {
     for (const s of a.sources) sourceUrls.add(s.url)
     for (const c of a.contributors) if (c.github) contributors.add(c.github)
     if (a.impact?.eligible_for_hypercert) hypercertEligible++
-    if (a.status === "reviewed" || a.status === "published") reviewed++
+    if (a.status === "approved" || a.status === "published") reviewed++
   }
 
   const count = (t: ArtifactType) => all.filter((a) => a.type === t).length

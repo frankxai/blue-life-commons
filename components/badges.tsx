@@ -127,7 +127,7 @@ export function StatusPill({ status }: { status?: string }) {
   const map: Record<string, { label: string; dot: string }> = {
     draft: { label: "Draft", dot: "var(--color-muted-foreground)" },
     "needs-expert-review": { label: "In expert review", dot: "var(--color-amber)" },
-    reviewed: { label: "Reviewed", dot: "var(--color-kelp)" },
+    approved: { label: "Approved", dot: "var(--color-kelp)" },
     published: { label: "Published", dot: "var(--color-kelp)" },
   }
   const meta = map[status] ?? { label: status, dot: "var(--color-muted-foreground)" }

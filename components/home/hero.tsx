@@ -8,6 +8,11 @@ interface CommonsProof {
   href: string
   githubPath: string
   status: string
+  review?: {
+    science?: string
+    ethics?: string
+    editor?: string
+  }
   sourceCount: number
   imageUrl: string
   sourceUrl?: string
@@ -26,6 +31,17 @@ export function HomeHero({
   stats: CommonsStats
   proof?: CommonsProof
 }) {
+  const recordStatus = proof?.status.replaceAll("-", " ")
+  const reviewSummary = proof
+    ? [
+        proof.review?.science && `Science ${proof.review.science}`,
+        proof.review?.ethics && `Ethics ${proof.review.ethics}`,
+        proof.review?.editor && `Editor ${proof.review.editor}`,
+      ]
+        .filter(Boolean)
+        .join(" · ")
+    : undefined
+
   return (
     <section className="relative isolate overflow-hidden bg-abyss-deep text-abyss-foreground">
       <div className="absolute inset-0 abyss-grid opacity-25" aria-hidden />
@@ -94,7 +110,7 @@ export function HomeHero({
                       Approved media
                     </span>
                     <span className="rounded-full border border-white/25 bg-black/25 px-2.5 py-1 text-white backdrop-blur-sm">
-                      Science review pending
+                      Record · {recordStatus}
                     </span>
                   </div>
                   <h2 className="mt-3 font-serif text-2xl font-semibold text-white sm:text-3xl">
@@ -106,6 +122,9 @@ export function HomeHero({
               <div className="p-5 sm:p-6">
                 <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-glow">
                   One public record, end to end
+                </p>
+                <p className="mt-2 text-xs leading-relaxed text-abyss-muted">
+                  {reviewSummary}
                 </p>
                 <ol className="mt-4 grid gap-px overflow-hidden rounded-xl border border-abyss-border bg-abyss-border sm:grid-cols-2">
                   {[
@@ -159,7 +178,7 @@ export function HomeHero({
                       </a>
                     )}
                     <a
-                      href={`${GITHUB_REPO_URL}/blob/main/${proof.githubPath}`}
+                      href={`${GITHUB_REPO_URL}/commits/main/${proof.githubPath}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:underline"

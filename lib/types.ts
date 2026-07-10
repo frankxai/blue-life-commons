@@ -11,7 +11,7 @@ export type ReviewState = "required" | "pending" | "approved" | "not-applicable"
 export type ArtifactStatus =
   | "draft"
   | "needs-expert-review"
-  | "reviewed"
+  | "approved"
   | "published"
 
 export type IucnCategory =

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: "%s — Blue Life Commons",
   },
   description:
-    "An open, source-led commons of ocean intelligence. Every species page, region briefing, field mission and dataset is cited, ethics-reviewed, and versioned on GitHub. Free for everyone, forever.",
+    "An open, source-led commons of ocean intelligence. Records publish with citations, explicit review state, rights metadata, and Git history under a CC BY 4.0 license.",
   keywords: [
     "ocean intelligence",
     "marine conservation",
@@ -44,10 +44,8 @@ export const metadata: Metadata = {
     "ocean data",
   ],
   authors: [{ name: "Starlight Intelligence Systems" }],
-  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    url: SITE_URL,
     title: "Blue Life Commons",
     description:
       "The open intelligence commons for ocean life — source-linked, review-gated, and licensed for reuse.",

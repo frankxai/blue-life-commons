@@ -32,8 +32,11 @@ export async function generateMetadata({
   return {
     title: artifact.title,
     description: artifact.excerpt,
-    openGraph: media
-      ? {
+    alternates: { canonical: artifact.href },
+    openGraph: {
+      url: artifact.href,
+      ...(media
+        ? {
           images: [
             {
               url: media.imageUrl,
@@ -41,7 +44,8 @@ export async function generateMetadata({
             },
           ],
         }
-      : undefined,
+        : {}),
+    },
   }
 }
 

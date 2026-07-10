@@ -9,7 +9,7 @@ Blue Life Commons is public-good infrastructure, not SaaS. Its model is an open 
 1. A contribution enters GitHub with sources and schema metadata.
 2. Science, ethics, editor, rights, and sensitivity states remain explicit.
 3. Approved public media flows through the media guard and render contract.
-4. The website renders the reviewed record, provenance, license, and contribution history.
+4. The website renders the record, its current review state, provenance, license, and contribution history.
 5. Reusers attribute the artifact and can contribute improvements upstream.
 
 ## Deployment contract

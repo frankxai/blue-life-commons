@@ -6,16 +6,18 @@ export const metadata: Metadata = {
   title: "Contribute",
   description:
     "Turn ocean curiosity into sourced, review-gated knowledge. Pathways for citizens, researchers, educators and engineers to contribute to the Blue Life Commons.",
+  alternates: { canonical: "/contribute" },
+  openGraph: { url: "/contribute" },
 }
 
 const PATHWAYS = [
   {
     audience: "Citizens & divers",
     title: "Log what you see",
-    body: "Submit field observations, photos and encounter notes. Your sightings become georeferenced signals that strengthen species and region pages.",
+    body: "Submit field observations, licensed photos, and encounter notes. Sensitivity-aware records can strengthen species and region pages after review.",
     steps: [
       "Open a Field Observation issue on GitHub",
-      "Add location, date, species and evidence",
+      "Add a region-level location, date, species and evidence",
       "A reviewer links it to the right artifacts",
     ],
   },

@@ -12,7 +12,7 @@ const LAYERS = [
   {
     name: "Blue Life Commons",
     tag: "Trust layer — this site",
-    body: "Human-reviewed, cited, CC-BY intelligence artifacts: species pages, region briefings, missions, dataset cards and welfare assessments. Slow, careful, permanent.",
+    body: "Source-linked, review-gated, CC BY intelligence artifacts: species pages, region briefings, missions, dataset cards, and welfare assessments. Review state remains visible.",
     href: GITHUB_REPO_URL,
     linkLabel: "blue-life-commons",
   },
@@ -35,10 +35,10 @@ const LAYERS = [
 const FLOW = [
   "A sensor, researcher or citizen produces a signal",
   "The intelligence system (or a human) drafts an artifact",
-  "Experts review the PR — sources, welfare, schema",
-  "CI validates; the merge is the publication",
+  "Required reviewers inspect sources, welfare, rights, and schema",
+  "CI validates; approved merges become publication candidates",
   "This site renders it; Guardian keeps it living",
-  "Evidenced work becomes a fundable impact record",
+  "Approved outcomes can enter the public impact ledger",
 ]
 
 export default function EcosystemPage() {

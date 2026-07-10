@@ -17,6 +17,15 @@
 - Media: approved CC0 Wikimedia image by cotterillmike.
 - Media review: 9/9 checks; promotion allowed.
 - Content reuse: CC BY 4.0 with attribution.
+- Review detail: science required, ethics required, editor pending.
+- Git history: link to the record's commit history, not only the current file.
+
+## Public-good outcome contract
+
+- Repository counts are outputs, not claimed ecological outcomes.
+- `/impact` publishes a claim only when its artifact status is `approved` or `published`.
+- Pending claims remain measurable as review-queue work and are not promoted as verified impact.
+- Hypercert eligibility metadata is not proof of issuance, funding, or real-world impact.
 
 ## Responsive contract
 
@@ -25,3 +34,5 @@ Desktop uses an editorial proposition beside the record. Mobile reads propositio
 ## Performance contract
 
 One approved remote responsive image through `next/image`; no new font, client runtime, motion package, video, canvas, WebGL, or generated asset.
+
+Only the approved Vercel Blob host and Wikimedia `Special:FilePath` fallback are permitted through `next/image`.
