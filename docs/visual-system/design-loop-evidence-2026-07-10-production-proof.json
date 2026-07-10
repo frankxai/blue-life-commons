@@ -56,14 +56,14 @@
     "provenance": "source-cited",
     "why_premium": "The first viewport uses a real governed species record and its approved licensed media rather than decorative imagery.",
     "shortcut_risk": "low",
-    "context_tested": false
+    "context_tested": true
   },
   "artifacts": [
     {
       "path_or_url": "components/home/hero.tsx",
       "kind": "web",
-      "inspected": false,
-      "notes": "Implementation and generated static HTML inspected; direct desktop/mobile export inspection remains pending."
+      "inspected": true,
+      "notes": "Direct Chrome exports inspected at 1440 desktop, 390 mobile, reduced motion, and 320 CSS pixels at DPR 2 (640 physical pixels). The Tier A proof remains legible, credited, review-visible, and free of clipping or horizontal overflow."
     },
     {
       "path_or_url": "content/species/sharks-rays/whale-shark.md",
@@ -99,27 +99,46 @@
       "evidence": "Generated HTML has exact production canonicals and Open Graph URLs for home, contribution, impact, and whale-shark record routes; the approved CC0 whale-shark image is the Open Graph proof asset."
     },
     {
+      "name": "asset-tier",
+      "status": "pass",
+      "evidence": "Tier A: the primary proof is the repository's real whale-shark record and approved CC0 media with source, creator, rights state, review state, and Git history. The added favicon is a direct Tier C application of the existing owned vector mark."
+    },
+    {
       "name": "export-inspection",
-      "status": "blocked",
-      "evidence": "The earlier bounded Edge capture detached before page load. Static HTML is inspected, but a new browser surface is not available in this task runtime."
+      "status": "pass",
+      "evidence": "System Chrome 1440 desktop, 390 mobile, reduced-motion, 320 CSS/640 physical reflow, Impact, Contribute, encyclopedia, and whale-shark exports were directly inspected; no clipping, incoherent overlap, broken proof media, or horizontal overflow was found."
     },
     {
       "name": "visual-qa",
-      "status": "blocked",
-      "evidence": "Live preview and responsive inspection remain."
+      "status": "pass",
+      "evidence": "The first viewport has one dominant proof object and clear actions; mobile preserves proposition, actions, counts, proof image, rights, review state, and history in the intended order. The reduced-motion source trace rests at opacity 1 with no transform."
+    },
+    {
+      "name": "accessibility-and-reflow",
+      "status": "pass",
+      "evidence": "Skip link is first in focus order with a 2px visible outline and moves focus to #main. Desktop focus order follows navigation, actions, license, record, source, and history. The mobile menu button exposes aria-expanded/aria-controls and opens from the keyboard. No horizontal overflow at 390 CSS pixels or 320 CSS pixels at DPR 2."
+    },
+    {
+      "name": "runtime-and-metadata",
+      "status": "pass",
+      "evidence": "Home, Contribute, Impact, Encyclopedia, and whale-shark routes returned 200 with exact bluelifecommons.org canonical and Open Graph URLs, zero image failures, and zero console/page/request errors. The added brand icon returns 200 image/svg+xml."
+    },
+    {
+      "name": "provisional-impact-language",
+      "status": "pass",
+      "evidence": "Unapproved records now label their metadata as a proposed impact claim and explicitly state that Hypercert eligibility metadata is neither issuance nor certification."
     }
   ],
   "score": {
-    "total": 24,
+    "total": 28,
     "max": 30,
-    "notes": "Tier A proof, provenance, public-language, outcome, security, and static HTML gates pass. Score remains capped until actual responsive/reduced-motion exports are inspected."
+    "notes": "5 first read/hierarchy, 4 brand distinctiveness, 4 craft, 5 accessibility/responsiveness/reduced motion, 5 factual accuracy/provenance, and 5 intended-surface usefulness. Direct responsive inspection closes the previous score cap."
   },
-  "decision": "iterate",
+  "decision": "ship",
   "known_risks": [
     "The approved Vercel Blob mirror is preferred; Wikimedia remains the reviewed fallback and OG source.",
     "The underlying species record still requires expert review; the UI must never imply otherwise.",
     "Funding providers, grants, partner outreach, sponsorship, and Hypercert issuance remain separate human-governed actions.",
-    "Custom domain and production state remain out of scope.",
-    "Desktop and mobile visual inspection remain blocked after the capped capture attempt."
+    "Custom domain and production state remain out of scope."
   ]
 }

@@ -94,7 +94,7 @@ export default function RootLayout({
           exit={{ "nav-forward": "nav-forward", "nav-back": "nav-back", default: "none" }}
           default="none"
         >
-          <main id="main" className="flex-1">
+          <main id="main" tabIndex={-1} className="flex-1">
             {children}
           </main>
         </ViewTransition>
