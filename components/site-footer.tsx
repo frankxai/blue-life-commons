@@ -48,8 +48,8 @@ export function SiteFooter() {
               <span>Blue Life Commons</span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-abyss-muted">
-              The open intelligence commons for ocean life. Sourced, ethics-reviewed,
-              versioned on GitHub, and free for everyone — forever.
+              The open intelligence commons for ocean life. Sources, rights,
+              and review state remain visible from GitHub to public record.
             </p>
             <p className="mt-4 text-xs text-abyss-muted">
               A public good stewarded by{" "}

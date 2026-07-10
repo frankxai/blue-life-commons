@@ -5,7 +5,7 @@ import { GITHUB_REPO_URL } from "@/lib/utils"
 export const metadata: Metadata = {
   title: "Contribute",
   description:
-    "Turn ocean curiosity into sourced, peer-reviewed knowledge. Pathways for citizens, researchers, educators and engineers to contribute to the Blue Life Commons.",
+    "Turn ocean curiosity into sourced, review-gated knowledge. Pathways for citizens, researchers, educators and engineers to contribute to the Blue Life Commons.",
 }
 
 const PATHWAYS = [
@@ -22,7 +22,7 @@ const PATHWAYS = [
   {
     audience: "Researchers",
     title: "Publish an intelligence artifact",
-    body: "Contribute a species page, region briefing, dataset card or research summary. Every claim is cited; you keep authorship and get a Hypercert-eligible impact record.",
+    body: "Contribute a species page, region briefing, dataset card or research summary. Every claim is cited, review state stays visible, and authorship remains in Git history.",
     steps: [
       "Fork the repo and copy a template",
       "Write with sources and a welfare note",

@@ -22,7 +22,9 @@ const newsreader = Newsreader({
   style: ["normal", "italic"],
 })
 
-const SITE_URL = "https://bluelifecommons.org"
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://bluelifecommons.org"
+const WHALE_SHARK_IMAGE =
+  "https://commons.wikimedia.org/wiki/Special:FilePath/OLYMPUS_DIGITAL_CAMERA_%2827591269541%29.jpg?width=1200"
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -42,19 +44,27 @@ export const metadata: Metadata = {
     "ocean data",
   ],
   authors: [{ name: "Starlight Intelligence Systems" }],
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: SITE_URL,
     title: "Blue Life Commons",
     description:
-      "The open intelligence commons for ocean life — sourced, ethics-reviewed, and free for everyone.",
+      "The open intelligence commons for ocean life — source-linked, review-gated, and licensed for reuse.",
     siteName: "Blue Life Commons",
+    images: [
+      {
+        url: WHALE_SHARK_IMAGE,
+        alt: "Whale shark from the Blue Life Commons approved CC0 species media record.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Blue Life Commons",
     description:
-      "The open intelligence commons for ocean life — sourced, ethics-reviewed, and free for everyone.",
+      "The open intelligence commons for ocean life — source-linked, review-gated, and licensed for reuse.",
+    images: [WHALE_SHARK_IMAGE],
   },
 }
 

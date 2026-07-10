@@ -1,0 +1,109 @@
+{
+  "version": "2026-07-10",
+  "task": "Harden the Blue Life Commons production first viewport with one real licensed, review-visible species record.",
+  "surface": "Responsive public home page first viewport",
+  "audience": "Public learners, citizen scientists, researchers, conservation organizations, educators, and open-data reusers",
+  "first_read": "Blue Life Commons publishes source-linked, review-gated ocean-life records with visible rights and Git history.",
+  "standards": [
+    "AGENTS.md",
+    "ETHICS.md",
+    "SOURCES.md",
+    "STYLE.md",
+    "DESIGN_TASTE.md",
+    "WEB_EXPERIENCE_STANDARD.md",
+    "design-agent-standards/PREMIUM_ASSET_STANDARD.md",
+    "_intelligence/quality-gates.md"
+  ],
+  "references": [
+    {
+      "label": "Whale shark artifact",
+      "source": "content/species/sharks-rays/whale-shark.md",
+      "reason": "Real record, sources, review state, rights, approved media, and reuse license"
+    },
+    {
+      "label": "Public media guard",
+      "source": "content/media/species-media-public-explorer-manifest.yaml",
+      "reason": "Confirms approved public image and blocks candidate media"
+    },
+    {
+      "label": "Blue Life brand pack",
+      "source": "docs/visual-system/brand-pack.md",
+      "reason": "Existing oceanic editorial tokens and brand posture"
+    }
+  ],
+  "direction": {
+    "keep": [
+      "Open-commons and public-good posture",
+      "Abyss and paper editorial system",
+      "Welfare-first and source-led language"
+    ],
+    "avoid": [
+      "SaaS conversion framing",
+      "Generated wildlife as evidence",
+      "Implied scientific approval or hidden review state"
+    ],
+    "signature": "One whale shark record exposes its source, rights, review, reuse, and Git history in the first viewport.",
+    "system": [
+      "Tier A approved record and CC0 media",
+      "Existing abyss/paper/glow tokens",
+      "One source-trace motion with static reduced route",
+      "Visible media credit and artifact license"
+    ]
+  },
+  "asset_quality": {
+    "tier": "A",
+    "source_method": "product-capture",
+    "provenance": "source-cited",
+    "why_premium": "The first viewport uses a real governed species record and its approved licensed media rather than decorative imagery.",
+    "shortcut_risk": "low",
+    "context_tested": false
+  },
+  "artifacts": [
+    {
+      "path_or_url": "components/home/hero.tsx",
+      "kind": "web",
+      "inspected": false,
+      "notes": "Implementation complete; desktop/mobile export inspection pending."
+    },
+    {
+      "path_or_url": "content/species/sharks-rays/whale-shark.md",
+      "kind": "image",
+      "inspected": true,
+      "notes": "Existing record inspected: status, sources, media rights, review checks, and reuse license are explicit."
+    }
+  ],
+  "checks": [
+    {
+      "name": "source-and-rights",
+      "status": "pass",
+      "evidence": "Whale shark record declares three sources; media is approved CC0 with 9/9 checks."
+    },
+    {
+      "name": "review-honesty",
+      "status": "pass",
+      "evidence": "The surface labels scientific review as pending and media as approved."
+    },
+    {
+      "name": "export-inspection",
+      "status": "blocked",
+      "evidence": "The single bounded Edge capture attempt detached before page load and produced a connection-refused artifact. The invalid artifact was removed and the capture was not retried."
+    },
+    {
+      "name": "visual-qa",
+      "status": "blocked",
+      "evidence": "Live preview and responsive inspection remain."
+    }
+  ],
+  "score": {
+    "total": 24,
+    "max": 30,
+    "notes": "Specific, honest Tier A proof is implemented. Export and preview inspection are required before ship."
+  },
+  "decision": "iterate",
+  "known_risks": [
+    "The remote Wikimedia image depends on source availability unless the approved Vercel Blob mirror is present.",
+    "The underlying species record still requires expert review; the UI must never imply otherwise.",
+    "Custom domain and production state remain out of scope.",
+    "Desktop and mobile visual inspection remain blocked after the capped capture attempt."
+  ]
+}
