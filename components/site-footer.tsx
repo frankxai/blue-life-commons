@@ -22,6 +22,7 @@ const COLUMNS = [
     links: [
       { href: "/impact", label: "Impact ledger" },
       { href: "/governance", label: "Governance & ethics" },
+      { href: "/privacy", label: "Privacy & transparency" },
       { href: "/partners", label: "Partners" },
       { href: "/ecosystem", label: "Ecosystem" },
       { href: "/contribute", label: "Contribute" },

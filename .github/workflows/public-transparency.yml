@@ -1,0 +1,42 @@
+name: Public transparency
+
+on:
+  pull_request:
+    paths:
+      - "app/privacy/**"
+      - "app/sitemap.ts"
+      - "components/site-header.tsx"
+      - "components/site-footer.tsx"
+      - "tests/public-transparency.test.mjs"
+      - "package.json"
+      - ".github/workflows/public-transparency.yml"
+  push:
+    branches: [main]
+    paths:
+      - "app/privacy/**"
+      - "app/sitemap.ts"
+      - "components/site-header.tsx"
+      - "components/site-footer.tsx"
+      - "tests/public-transparency.test.mjs"
+      - "package.json"
+      - ".github/workflows/public-transparency.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  truth-regression:
+    name: Privacy, contribution, and review truth
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Verify public transparency boundaries
+        run: npm run test:public-transparency

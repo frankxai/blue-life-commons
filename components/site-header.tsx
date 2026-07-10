@@ -15,6 +15,7 @@ const NAV = [
   { href: "/catalog", label: "Catalog" },
   { href: "/impact", label: "Impact" },
   { href: "/governance", label: "Governance" },
+  { href: "/privacy", label: "Privacy" },
 ]
 
 export function SiteHeader() {
