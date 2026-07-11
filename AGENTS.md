@@ -51,3 +51,12 @@ Add sources.
 Do not make unsupported claims.
 Open a PR.
 ```
+
+## Public production surfaces
+
+- Read `DESIGN.md`, `TASTE.md`, `SYSTEM.md`, `SKILL.md`, and the active page/scene brief before changing the website.
+- The first viewport must expose a real approved artifact, source, rights, review state, or contribution path.
+- Generated animal media is supporting concept art, never identification or conservation evidence.
+- Use “review-gated” when approval states differ; do not flatten pending/required/approved into one marketing claim.
+- Motion needs a named explanatory job and a complete reduced-motion route.
+- Preview first. Production promotion, domains, DNS, external publishing, and new commercial claims remain human-gated.

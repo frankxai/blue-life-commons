@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Blue Life Commons</title>
+  <desc id="desc">A review card, living current, and open commons frame.</desc>
+  <defs>
+    <linearGradient id="card" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#06202A"/>
+      <stop offset="1" stop-color="#041014"/>
+    </linearGradient>
+    <linearGradient id="current" x1="12" y1="21" x2="55" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4FD1C5"/>
+      <stop offset="0.58" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#F5B84B"/>
+    </linearGradient>
+  </defs>
+  <rect x="9" y="8" width="46" height="48" rx="14" fill="url(#card)" stroke="#4FD1C5" stroke-width="2.25"/>
+  <path d="M20 20h19" stroke="#F2FBFF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M20 27h14" stroke="#A9D7E2" stroke-width="3" stroke-linecap="round"/>
+  <path d="M15 41c7.7-7.1 15.4-7.1 23.1 0 4.4 4.1 8.3 4.8 11.9 2.1v6.4c-4.7 2.1-9.9.8-15.6-4.1-6.4-5.6-12.8-5.6-19.4.1V41z" fill="url(#current)"/>
+  <circle cx="44" cy="23" r="4.5" fill="#F5B84B"/>
+</svg>

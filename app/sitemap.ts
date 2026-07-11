@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/impact",
     "/partners",
     "/governance",
+    "/privacy",
     "/contribute",
     "/support",
     "/services",

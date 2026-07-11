@@ -5,7 +5,7 @@ const LAYERS = [
     n: "01",
     name: "The Commons",
     tag: "This site · open & free",
-    body: "A public library of ocean intelligence — species pages, region briefings, missions, datasets. Peer-reviewed, cited, CC-BY licensed. The trust layer everything else builds on.",
+    body: "A public library of ocean intelligence — species pages, region briefings, missions, and datasets. Source-linked, review-gated, and CC BY 4.0 licensed.",
   },
   {
     n: "02",

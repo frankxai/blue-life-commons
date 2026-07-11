@@ -60,6 +60,7 @@ export function ArtifactDetail({
   const a = artifact
   const editUrl = `${GITHUB_REPO_URL}/blob/main/${a.githubPath}`
   const approvedMedia = getApprovedSpeciesMedia(a)
+  const impactIsPublished = a.status === "approved" || a.status === "published"
 
   return (
     <article>
@@ -167,14 +168,16 @@ export function ArtifactDetail({
               {a.impact?.claim && (
                 <div className="mt-5 rounded-xl bg-primary/8 p-4">
                   <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                    Impact claim
+                    {impactIsPublished ? "Published impact claim" : "Proposed impact claim"}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-foreground">
                     {a.impact.claim}
                   </p>
                   {a.impact.eligible_for_hypercert && (
                     <p className="mt-2 text-xs font-medium text-primary">
-                      Eligible for a hypercert
+                      {impactIsPublished
+                        ? "Hypercert eligibility metadata · not proof of issuance"
+                        : "Eligibility metadata only · not issued or certified"}
                     </p>
                   )}
                 </div>

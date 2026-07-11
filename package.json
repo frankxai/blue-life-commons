@@ -10,6 +10,7 @@
     "start": "next start",
     "lint": "next typegen && tsc --noEmit",
     "typecheck": "next typegen && tsc --noEmit",
+    "test:public-transparency": "node --test tests/public-transparency.test.mjs",
     "media:storage": "python scripts/build_species_media_storage_manifest.py",
     "media:storage:check": "python scripts/build_species_media_storage_manifest.py --check",
     "media:blob:plan": "node scripts/upload_species_media_to_vercel_blob.mjs",
@@ -36,8 +37,11 @@
     "@types/node": "^26.1.0",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
-    "postcss": "^8.5.16",
+    "postcss": "8.5.16",
     "tailwindcss": "^4.3.2",
     "typescript": "^6.0.3"
+  },
+  "overrides": {
+    "postcss": "8.5.16"
   }
 }

@@ -216,20 +216,28 @@
   }
 }
 
-/* Live-signal pulse */
-@keyframes signal-pulse {
-  0%,
-  100% {
-    opacity: 1;
-    transform: scale(1);
+/* Source-trace: reveals the provenance sequence once, then rests. */
+@keyframes source-trace-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
   }
-  50% {
-    opacity: 0.45;
-    transform: scale(0.82);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-.signal-dot {
-  animation: signal-pulse 2.4s ease-in-out infinite;
+.source-trace {
+  animation: source-trace-in 0.48s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.source-trace:nth-child(2) {
+  animation-delay: 80ms;
+}
+.source-trace:nth-child(3) {
+  animation-delay: 160ms;
+}
+.source-trace:nth-child(4) {
+  animation-delay: 240ms;
 }
 
 /* Scroll reveal */
@@ -321,7 +329,9 @@
   ::view-transition-new(*) {
     animation: none !important;
   }
-  .signal-dot {
+  .source-trace {
     animation: none !important;
+    opacity: 1;
+    transform: none;
   }
 }

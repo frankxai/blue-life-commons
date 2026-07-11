@@ -6,16 +6,16 @@ import { TransitionLink } from "@/components/transition-link"
 export const metadata: Metadata = {
   title: "Support the Commons",
   description:
-    "Fund specific, evidenced ocean intelligence work — not vague donation asks. Open Collective, GitHub Sponsors, and Hypercert impact records. The commons stays free, forever.",
+    "Support source gathering, expert review, ethical field methods, and public infrastructure while commons artifacts remain reusable under CC BY 4.0.",
 }
 
 const CHANNELS = [
   {
     name: "Open Collective",
-    role: "Fiat donations & transparent budget",
-    body: "One-time or recurring contributions with a public ledger. Every expense the commons makes is visible to everyone.",
+    role: "Transparent-budget model",
+    body: "Open Collective is one option for a future public budget and expense ledger. A Blue Life Commons collective is not represented as active here.",
     href: "https://opencollective.com",
-    cta: "Contribute via Open Collective",
+    cta: "Learn about Open Collective",
   },
   {
     name: "GitHub Sponsors",
@@ -26,8 +26,8 @@ const CHANNELS = [
   },
   {
     name: "Hypercerts",
-    role: "Own a record of real impact",
-    body: "Completed, evidenced work — a reviewed species guild, a shipped mission protocol — is minted as a Hypercert impact record. Fund outcomes, not promises.",
+    role: "Explore outcome records",
+    body: "A review-complete artifact may become eligible for an outcome record after separate governance review. Eligibility metadata is not proof of impact or issuance.",
     href: "https://hypercerts.org",
     cta: "Learn about Hypercerts",
   },
@@ -35,7 +35,13 @@ const CHANNELS = [
 
 export default function SupportPage() {
   const all = getAllArtifacts()
-  const fundable = all.filter((a) => a.impact?.eligible_for_hypercert).slice(0, 6)
+  const fundable = all
+    .filter(
+      (artifact) =>
+        artifact.impact?.eligible_for_hypercert &&
+        (artifact.status === "approved" || artifact.status === "published"),
+    )
+    .slice(0, 6)
 
   return (
     <main>
@@ -44,7 +50,7 @@ export default function SupportPage() {
           <SectionHeading
             eyebrow="Support"
             title="Fund evidenced work, not vague promises"
-            description="The commons stays free and CC-BY forever. What needs funding is the work: expert review, field missions, data infrastructure. Every fundable object below is specific, evidenced, and recorded in public."
+            description="Public artifacts carry a CC BY 4.0 reuse license. Support can sustain source gathering, expert review, ethical field methods, and data infrastructure without buying influence over scientific conclusions."
           />
         </Container>
       </div>
@@ -76,8 +82,8 @@ export default function SupportPage() {
           <section className="mt-16" aria-labelledby="fundable-heading">
             <SectionHeading
               eyebrow="Fundable impact objects"
-              title="Work that is ready to be backed"
-              description="These artifacts are flagged Hypercert-eligible in the commons itself — real, reviewable units of impact with named contributors and cited evidence."
+              title="Review-complete work eligible for further governance"
+              description="These artifacts are both approved or published and flagged as potentially eligible in repository metadata. Issuance or funding still requires a separate human decision."
             />
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {fundable.map((a) => (

@@ -1,5 +1,5 @@
-version: '2026-07-05'
-generated_at: '2026-07-05'
+version: '2026-07-10'
+generated_at: '2026-07-10'
 policy:
   source: content/media/species-media-storage-policy.yaml
   no_download_performed: true
