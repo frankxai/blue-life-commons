@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "app/privacy/**"
+      - "app/globals.css"
       - "app/sitemap.ts"
       - "components/site-header.tsx"
       - "components/site-footer.tsx"
@@ -14,6 +15,7 @@ on:
     branches: [main]
     paths:
       - "app/privacy/**"
+      - "app/globals.css"
       - "app/sitemap.ts"
       - "components/site-header.tsx"
       - "components/site-footer.tsx"

@@ -81,3 +81,16 @@ test("scientific dataset boundaries preserve upstream authority", async () => {
   assert.match(page, /does not make every destination a Blue Life Commons processor or partner/)
   assert.doesNotMatch(page, /Blue Life Commons is the data controller for (?:OBIS|GBIF)/i)
 })
+
+test("reduced motion shows source-trace proof rows immediately", async () => {
+  const styles = await read("app/globals.css")
+  const reducedMotionStart = styles.indexOf("@media (prefers-reduced-motion: reduce)")
+
+  assert.notEqual(reducedMotionStart, -1)
+
+  const reducedMotionStyles = styles.slice(reducedMotionStart)
+  assert.match(
+    reducedMotionStyles,
+    /\.source-trace\s*\{[^}]*animation:\s*none\s*!important;[^}]*opacity:\s*1;[^}]*transform:\s*none;[^}]*\}/,
+  )
+})

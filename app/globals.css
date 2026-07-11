@@ -330,6 +330,7 @@
     animation: none !important;
   }
   .source-trace {
+    animation: none !important;
     opacity: 1;
     transform: none;
   }
