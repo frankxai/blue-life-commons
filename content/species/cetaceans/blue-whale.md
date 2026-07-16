@@ -110,6 +110,134 @@ media:
     role: generated_key_art
     status: concept_only
     use_limitations: Supporting visual only; not biological evidence, official identification media, or proof of conservation status.
+  - asset_id: blc-concept-blue-whale-scale-01
+    path: public/media/species/gallery/blue-whale-scale-concept.png
+    public_media_url: /media/species/gallery/blue-whale-scale-concept.png
+    role: educational_scale_concept
+    status: concept_only
+    alt_text: Concept educational panel comparing an adult blue whale silhouette to a city bus for scale.
+    use_limitations: Generated educational concept only; not a measured field diagram or official size evidence.
+  - asset_id: blc-concept-blue-whale-mother-calf-01
+    path: public/media/species/gallery/blue-whale-mother-calf-concept.png
+    public_media_url: /media/species/gallery/blue-whale-mother-calf-concept.png
+    role: educational_life_stage_concept
+    status: concept_only
+    alt_text: Concept reconstruction of an adult blue whale swimming near a calf in open ocean.
+    use_limitations: Generated educational reconstruction only; not identification media or soft-tissue proof.
+  gallery:
+  - asset_id: species-blue-whale-wikimedia-bluewhale877
+    role: adult_identity
+    life_stage: adult
+    angle: lateral-surface
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Bluewhale877.jpg?width=1200
+    source_url: https://commons.wikimedia.org/wiki/File:Bluewhale877.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/d/d8/Bluewhale877.jpg
+    creator: NMFS Northeast Fisheries Science Center (NOAA)
+    credit: http://www.nmfs.noaa.gov/pr/species/mammals/cetaceans/bluewhale.htm
+    license: Public domain
+    rights_status: public-domain
+    alt_text: Adult blue whale (Balaenoptera musculus) from the eastern Pacific Ocean.
+    caption: Adult blue whale at the surface — approved identity still (NOAA / Wikimedia public domain).
+    qa_status: approved
+  - asset_id: species-blue-whale-wikimedia-body-bw
+    role: body_plan
+    life_stage: adult
+    angle: dorsal-body-plan
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Whale_001_body_bw.jpg?width=1200
+    source_url: https://commons.wikimedia.org/wiki/File:Blue_Whale_001_body_bw.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/0/06/Blue_Whale_001_body_bw.jpg
+    creator: NOAA Fisheries (Protected Resources Division, Southwest Fisheries Science Center)
+    credit: Protected Resources Division, Southwest Fisheries Science Center, La Jolla, California
+    license: Public domain
+    rights_status: public-domain
+    alt_text: Black-and-white aerial or elevated view of a blue whale body plan.
+    caption: Body plan and proportion — useful for reading length, fluke, and dorsal-fin placement.
+    qa_status: approved
+  - asset_id: species-blue-whale-wikimedia-fluke
+    role: diagnostic_feature
+    life_stage: adult
+    angle: fluke
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Blue_whale_tail_fluke.JPG?width=1200
+    source_url: https://commons.wikimedia.org/wiki/File:Blue_whale_tail_fluke.JPG
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/d/db/Blue_whale_tail_fluke.JPG
+    creator: Shulman at English Wikipedia
+    credit: Transferred from en.wikipedia to Commons.
+    license: Public domain
+    rights_status: public-domain
+    alt_text: Blue whale tail fluke raised above the water with Channel Islands backdrop.
+    caption: Tail fluke dive sequence — a common field identification angle (not a precise site map).
+    qa_status: approved
+  - asset_id: species-blue-whale-wikimedia-noaa-anim1754
+    role: adult_surface
+    life_stage: adult
+    angle: surface-profile
+    public_media_url: https://commons.wikimedia.org/wiki/Special:FilePath/Anim1754_-_Flickr_-_NOAA_Photo_Library.jpg?width=1200
+    source_url: https://commons.wikimedia.org/wiki/File:Anim1754_-_Flickr_-_NOAA_Photo_Library.jpg
+    original_media_url: https://upload.wikimedia.org/wikipedia/commons/1/1c/Anim1754_-_Flickr_-_NOAA_Photo_Library.jpg
+    creator: NOAA Photo Library
+    credit: anim1754
+    license: Public domain
+    rights_status: public-domain
+    alt_text: Blue whale (Balaenoptera musculus) photographed by NOAA Photo Library.
+    caption: Second NOAA surface angle — mottled blue-grey skin and elongated body.
+    qa_status: approved
+  - asset_id: blc-concept-blue-whale-scale-01
+    role: educational_scale
+    life_stage: adult
+    angle: scale-diagram
+    public_media_url: /media/species/gallery/blue-whale-scale-concept.png
+    source_url: null
+    creator: Blue Life Commons / generated educational concept
+    license: CC-BY-4.0
+    rights_status: concept-reconstruction
+    concept_only: true
+    alt_text: Concept educational panel comparing an adult blue whale silhouette to a city bus for scale.
+    caption: Scale concept — largest living animal; use NOAA/IUCN prose for measured claims, not this illustration.
+    qa_status: approved
+    use_limitations: Generated educational concept only; not a measured field diagram or official size evidence.
+  - asset_id: blc-concept-blue-whale-mother-calf-01
+    role: educational_life_stage
+    life_stage: mother-and-calf
+    angle: open-ocean
+    public_media_url: /media/species/gallery/blue-whale-mother-calf-concept.png
+    source_url: null
+    creator: Blue Life Commons / generated educational concept
+    license: CC-BY-4.0
+    rights_status: concept-reconstruction
+    concept_only: true
+    alt_text: Concept reconstruction of an adult blue whale swimming near a calf in open ocean.
+    caption: Life-stage concept (mother & calf) — educational reconstruction, not a wild ID photo.
+    qa_status: approved
+    use_limitations: Generated educational reconstruction only; not identification media or soft-tissue proof.
+  video_links:
+  - id: noaa-fisheries-blue-whale
+    title: NOAA Fisheries — Blue Whale species profile
+    url: https://www.fisheries.noaa.gov/species/blue-whale
+    provider: NOAA Fisheries
+    topic: status-and-biology
+    educational_use: Official US overview of status, threats, and species facts. Primary text source for this page.
+    rights_note: Link-out only; do not rehost NOAA site media without checking image/video terms.
+  - id: noaa-sanctuaries-whale-videos
+    title: NOAA National Marine Sanctuaries — whale education videos
+    url: https://sanctuaries.noaa.gov/education/teachers/whales/videos.html
+    provider: NOAA Sanctuaries
+    topic: education-video-hub
+    educational_use: Institutional video hub for whale education, ship-strike context, and sanctuary stories.
+    rights_note: Link-out to NOAA educational host; reuse of individual clips still needs per-clip rights checks.
+  - id: noaa-broll-pacific-whales
+    title: NOAA Fisheries B-roll — Whales on the Pacific Coast
+    url: https://videos.fisheries.noaa.gov/detail/video/1105831255001/b-roll:-whales-on-the-pacific-coast
+    provider: NOAA Fisheries Video Gallery
+    topic: field-behavior
+    educational_use: Government B-roll of gray, humpback, and blue whales along the Pacific coast for classroom/context use.
+    rights_note: NOAA video gallery host; confirm download/embed terms per clip before rehosting.
+  - id: noaa-channel-islands-ship-strike
+    title: Channel Islands — preventing ship strikes (sanctuary education)
+    url: https://sanctuaries.noaa.gov/education/teachers/whales/videos.html
+    provider: NOAA Sanctuaries
+    topic: conservation-threats
+    educational_use: Education path into vessel-strike risk near productive blue whale habitat (regional, not a pin-drop map).
+    rights_note: Link-out; keep location language regional per ETHICS.md.
 ---
 
 # Blue Whale (Balaenoptera musculus)
@@ -134,6 +262,18 @@ A very large, slender baleen whale that NOAA Fisheries reports can reach roughly
 ## Ecology and behavior
 
 Blue whales feed primarily on krill, taking large quantities through lunge-feeding, and NOAA Fisheries notes occasional fish and copepods in the diet. They undertake seasonal movements between feeding and breeding areas. NOAA Fisheries estimates a lifespan of around 80 to 90 years. Behavioral specifics should be cited to published research and confirmed in review.
+
+## Life stages (education notes)
+
+Use the **Life gallery** above for multi-angle adults, fluke views, and clearly labeled concept panels (scale; mother-and-calf). Prefer real NOAA / Wikimedia public-domain stills for recognition practice. Treat generated mother-calf art as **concept only** — not a substitute for field photographs or population evidence.
+
+High-level biology for learners (confirm details in science review; cite NOAA Fisheries / IUCN for any numeric claim you publish):
+
+- **Adults** are the largest known animals; look for a long mottled blue-grey body, small far-back dorsal fin, and a tall columnar blow.
+- **Calves** accompany nursing mothers for an extended period after birth; exact growth curves and weaning ages should be taken from peer-reviewed or agency sources before promotion.
+- **Migration** links productive feeding regions with lower-latitude breeding areas; keep maps regional (ETHICS.md) and avoid precise aggregation pins.
+
+For motion and behavior, open the **Watch & learn** cards (NOAA Fisheries + Sanctuaries video hubs) rather than rehosting third-party documentaries without rights.
 
 ## Conservation status and threats
 

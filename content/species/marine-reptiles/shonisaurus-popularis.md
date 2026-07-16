@@ -82,6 +82,11 @@ media:
     rights_status: concept-reconstruction
     alt_text: Photoreal concept reconstruction of Shonisaurus popularis, a large Late Triassic ichthyosaur with a streamlined body and long snout in blue open ocean.
     qa_status: approved
+  video:
+    path: public/media/species/shonisaurus-popularis.mp4
+    public_media_url: /media/species/shonisaurus-popularis.mp4
+    rights_status: concept-reconstruction
+    notes: Highest-quality 6s cinematic loop from concept still; educational motion only.
   embeds:
     - provider: paleobiology_database
       url: https://paleobiodb.org/

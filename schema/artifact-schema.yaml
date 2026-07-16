@@ -321,6 +321,68 @@ properties:
               type: [string, "null"]
             use_limitations:
               type: [string, "null"]
+            public_media_url:
+              type: [string, "null"]
+            alt_text:
+              type: [string, "null"]
+      gallery:
+        description: "Curated multi-angle / life-stage educational stills. Real photos need qa_status approved; concept art must be labeled concept-reconstruction."
+        type: array
+        items:
+          type: object
+          properties:
+            asset_id:
+              type: [string, "null"]
+            role:
+              type: [string, "null"]
+            life_stage:
+              type: [string, "null"]
+            angle:
+              type: [string, "null"]
+            public_media_url:
+              type: [string, "null"]
+            source_url:
+              type: [string, "null"]
+            original_media_url:
+              type: [string, "null"]
+            creator:
+              type: [string, "null"]
+            credit:
+              type: [string, "null"]
+            license:
+              type: [string, "null"]
+            rights_status:
+              type: [string, "null"]
+            alt_text:
+              type: [string, "null"]
+            qa_status:
+              type: [string, "null"]
+            concept_only:
+              type: boolean
+            caption:
+              type: [string, "null"]
+            use_limitations:
+              type: [string, "null"]
+      video_links:
+        description: "External educational video cards (link-out). Do not rehost without explicit rights."
+        type: array
+        items:
+          type: object
+          properties:
+            id:
+              type: [string, "null"]
+            title:
+              type: [string, "null"]
+            url:
+              type: [string, "null"]
+            provider:
+              type: [string, "null"]
+            topic:
+              type: [string, "null"]
+            rights_note:
+              type: [string, "null"]
+            educational_use:
+              type: [string, "null"]
   impact:
     type: object
     properties:

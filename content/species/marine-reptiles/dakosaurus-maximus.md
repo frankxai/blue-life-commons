@@ -83,6 +83,11 @@ media:
     rights_status: concept-reconstruction
     alt_text: Photoreal concept reconstruction of Dakosaurus maximus. Marine crocodylomorph — not a dinosaur, not a mosasaur; short snout, ziphodont teeth. Cinematic open-ocean lighting.
     qa_status: approved
+  video:
+    path: public/media/species/dakosaurus-maximus.mp4
+    public_media_url: /media/species/dakosaurus-maximus.mp4
+    rights_status: concept-reconstruction
+    notes: Highest-quality 6s cinematic loop from concept still; educational motion only.
   embeds:
     - provider: paleobiology_database
       url: https://paleobiodb.org/

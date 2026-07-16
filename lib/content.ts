@@ -141,6 +141,65 @@ function normalizeMedia(raw: unknown): ArtifactMedia | undefined {
         }))
     : undefined
 
+  const gallery = Array.isArray(media.gallery)
+    ? media.gallery
+        .map(asRecord)
+        .filter((item): item is Record<string, unknown> => Boolean(item))
+        .map((item) => ({
+          asset_id: optionalString(item.asset_id),
+          role: optionalString(item.role),
+          life_stage: optionalString(item.life_stage),
+          angle: optionalString(item.angle),
+          public_media_url: optionalString(item.public_media_url),
+          source_url: optionalString(item.source_url),
+          original_media_url: optionalString(item.original_media_url),
+          creator: optionalString(item.creator),
+          credit: optionalString(item.credit),
+          license: optionalString(item.license),
+          rights_status: optionalString(item.rights_status),
+          alt_text: optionalString(item.alt_text),
+          qa_status: optionalString(item.qa_status),
+          concept_only:
+            item.concept_only === true ||
+            optionalString(item.rights_status) === "concept-reconstruction" ||
+            optionalString(item.rights_status) === "generated-owned",
+          caption: optionalString(item.caption),
+          use_limitations: optionalString(item.use_limitations),
+        }))
+        .filter((item) => Boolean(item.public_media_url) && item.qa_status !== "blocked")
+    : undefined
+
+  const video_links = Array.isArray(media.video_links)
+    ? media.video_links
+        .map(asRecord)
+        .filter((item): item is Record<string, unknown> => Boolean(item))
+        .map((item) => ({
+          id: optionalString(item.id),
+          title: optionalString(item.title),
+          url: optionalString(item.url),
+          provider: optionalString(item.provider),
+          topic: optionalString(item.topic),
+          rights_note: optionalString(item.rights_note),
+          educational_use: optionalString(item.educational_use),
+        }))
+        .filter((item) => Boolean(item.url) && Boolean(item.title))
+    : undefined
+
+  const supporting_assets = Array.isArray(media.supporting_assets)
+    ? media.supporting_assets
+        .map(asRecord)
+        .filter((item): item is Record<string, unknown> => Boolean(item))
+        .map((item) => ({
+          asset_id: optionalString(item.asset_id),
+          path: optionalString(item.path),
+          role: optionalString(item.role),
+          status: optionalString(item.status),
+          use_limitations: optionalString(item.use_limitations),
+          public_media_url: optionalString(item.public_media_url),
+          alt_text: optionalString(item.alt_text),
+        }))
+    : undefined
+
   return {
     registry_record: optionalString(media.registry_record),
     render_contract: optionalString(media.render_contract),
@@ -170,13 +229,18 @@ function normalizeMedia(raw: unknown): ArtifactMedia | undefined {
         }
       : undefined,
     embeds,
+    gallery,
+    video_links,
+    supporting_assets,
     render: render
       ? {
           strategy: optionalString(render.strategy),
           public_visual_kind: optionalString(render.public_visual_kind),
           public_visual_public_use: optionalBoolean(render.public_visual_public_use),
           species_page_visual_slot: optionalBoolean(render.species_page_visual_slot),
-          species_page_hero_image_allowed: optionalBoolean(render.species_page_hero_image_allowed),
+          species_page_hero_image_allowed: optionalBoolean(
+            render.species_page_hero_image_allowed,
+          ),
           candidate_thumbnail_allowed: optionalBoolean(render.candidate_thumbnail_allowed),
           candidate_public_use: optionalBoolean(render.candidate_public_use),
         }

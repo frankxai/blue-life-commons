@@ -1,80 +1,155 @@
 {
-  "batch_id": "marine-reptiles-deep-time-2026-07-16",
+  "batch_id": "deep-time-hq-media-wave-2026-07-16",
   "brand": "Blue Life Commons",
-  "tool": "grok-imagine image_gen + image_to_video via Grok CLI",
+  "tool": "grok-imagine image_gen + image_to_video (720p highest)",
   "date": "2026-07-16",
-  "repo": "C:/Users/frank/starlight/repos/blue-life-commons",
-  "origin": "https://github.com/frankxai/blue-life-commons.git",
-  "branch": "feat/deep-time-marine-reptiles",
-  "surface": "public/media/species",
-  "aspect_ratio": "16:9",
-  "resolution": "1280x720",
-  "anatomy_gate": "All stills PASS: marine reptiles only; horizontal swim; paddles/flippers; no bipedal theropod/T.rex",
-  "rights_note": "AI-generated concept reconstructions for education — not fossil evidence, identification media, or proof of soft-tissue color/behavior.",
+  "count_stills": 13,
+  "count_videos": 13,
+  "total_bytes": 80608821,
   "outputs": [
     {
-      "id": "mosasaurus-hoffmannii",
-      "image_path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/mosasaurus-hoffmannii.png",
-      "video_path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/mosasaurus-hoffmannii.mp4",
-      "public_image_url": "/media/species/mosasaurus-hoffmannii.png",
-      "public_video_url": "/media/species/mosasaurus-hoffmannii.mp4",
-      "tools": ["image_gen", "image_to_video"]
+      "id": "dakosaurus-maximus",
+      "public_image_url": "/media/species/dakosaurus-maximus.png",
+      "public_video_url": "/media/species/dakosaurus-maximus.mp4",
+      "image_bytes": 1156819,
+      "video_bytes": 4371256,
+      "tools": [
+        "image_gen",
+        "image_to_video"
+      ]
     },
     {
       "id": "elasmosaurus-platyurus",
-      "image_path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/elasmosaurus-platyurus.png",
       "public_image_url": "/media/species/elasmosaurus-platyurus.png",
-      "tools": ["image_gen"]
+      "public_video_url": "/media/species/elasmosaurus-platyurus.mp4",
+      "image_bytes": 1335577,
+      "video_bytes": 5258236,
+      "tools": [
+        "image_gen",
+        "image_to_video"
+      ]
+    },
+    {
+      "id": "ichthyosaurus-communis",
+      "public_image_url": "/media/species/ichthyosaurus-communis.png",
+      "public_video_url": "/media/species/ichthyosaurus-communis.mp4",
+      "image_bytes": 1328913,
+      "video_bytes": 5856892,
+      "tools": [
+        "image_gen",
+        "image_to_video"
+      ]
     },
     {
       "id": "kronosaurus-queenslandicus",
-      "image_path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/kronosaurus-queenslandicus.png",
       "public_image_url": "/media/species/kronosaurus-queenslandicus.png",
-      "tools": ["image_gen"]
-    },
-    {
-      "id": "ophthalmosaurus-icenicus",
-      "image_path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/ophthalmosaurus-icenicus.png",
-      "public_image_url": "/media/species/ophthalmosaurus-icenicus.png",
-      "tools": ["image_gen"]
-    },
-    {
-      "id": "tylosaurus-proriger",
-      "image_path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/tylosaurus-proriger.png",
-      "video_path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/tylosaurus-proriger.mp4",
-      "public_image_url": "/media/species/tylosaurus-proriger.png",
-      "public_video_url": "/media/species/tylosaurus-proriger.mp4",
-      "tools": ["image_gen", "image_to_video"]
+      "public_video_url": "/media/species/kronosaurus-queenslandicus.mp4",
+      "image_bytes": 1170353,
+      "video_bytes": 4188097,
+      "tools": [
+        "image_gen",
+        "image_to_video"
+      ]
     },
     {
       "id": "liopleurodon-ferox",
-      "image_path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/liopleurodon-ferox.png",
       "public_image_url": "/media/species/liopleurodon-ferox.png",
-      "tools": ["image_gen"],
-      "aspect_ratio": "16:9",
-      "resolution": "1280x720",
-      "date": "2026-07-16",
-      "image_prompt": "Photorealistic National Geographic documentary still of Liopleurodon ferox, short-necked Jurassic pliosaur marine reptile; massive head, powerful jaws, four flippers, deep blue ocean.",
-      "qa_note": "PASS anatomy gate: short-neck pliosaur, four paddles, horizontal marine swim; no bipedal theropod/T.rex.",
-      "rights_note": "AI-generated concept reconstruction for education — not fossil evidence, identification media, or proof of soft-tissue color/behavior."
+      "public_video_url": "/media/species/liopleurodon-ferox.mp4",
+      "image_bytes": 1077785,
+      "video_bytes": 6785120,
+      "tools": [
+        "image_gen",
+        "image_to_video"
+      ]
+    },
+    {
+      "id": "metriorhynchus-superciliosus",
+      "public_image_url": "/media/species/metriorhynchus-superciliosus.png",
+      "public_video_url": "/media/species/metriorhynchus-superciliosus.mp4",
+      "image_bytes": 1302741,
+      "video_bytes": 5699902,
+      "tools": [
+        "image_gen",
+        "image_to_video"
+      ]
+    },
+    {
+      "id": "mosasaurus-hoffmannii",
+      "public_image_url": "/media/species/mosasaurus-hoffmannii.png",
+      "public_video_url": "/media/species/mosasaurus-hoffmannii.mp4",
+      "image_bytes": 1229503,
+      "video_bytes": 5451818,
+      "tools": [
+        "image_gen",
+        "image_to_video"
+      ]
+    },
+    {
+      "id": "ophthalmosaurus-icenicus",
+      "public_image_url": "/media/species/ophthalmosaurus-icenicus.png",
+      "public_video_url": "/media/species/ophthalmosaurus-icenicus.mp4",
+      "image_bytes": 1566478,
+      "video_bytes": 3213684,
+      "tools": [
+        "image_gen",
+        "image_to_video"
+      ]
+    },
+    {
+      "id": "platecarpus-tympaniticus",
+      "public_image_url": "/media/species/platecarpus-tympaniticus.png",
+      "public_video_url": "/media/species/platecarpus-tympaniticus.mp4",
+      "image_bytes": 1282721,
+      "video_bytes": 4151725,
+      "tools": [
+        "image_gen",
+        "image_to_video"
+      ]
+    },
+    {
+      "id": "plesiosaurus-dolichodeirus",
+      "public_image_url": "/media/species/plesiosaurus-dolichodeirus.png",
+      "public_video_url": "/media/species/plesiosaurus-dolichodeirus.mp4",
+      "image_bytes": 1451469,
+      "video_bytes": 5026808,
+      "tools": [
+        "image_gen",
+        "image_to_video"
+      ]
     },
     {
       "id": "shonisaurus-popularis",
-      "image_path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/shonisaurus-popularis.png",
       "public_image_url": "/media/species/shonisaurus-popularis.png",
-      "tools": ["image_gen"],
-      "aspect_ratio": "16:9",
-      "resolution": "1280x720",
-      "date": "2026-07-16",
-      "image_prompt": "Photorealistic National Geographic documentary still of Shonisaurus popularis, large Late Triassic ichthyosaur; dolphin-like body, long snout, crescent tail, open ocean god rays.",
-      "qa_note": "PASS anatomy gate: ichthyosaur body plan, long snout, crescent fluke, flippers; no bipedal theropod/T.rex.",
-      "rights_note": "AI-generated concept reconstruction for education — not fossil evidence, identification media, or proof of soft-tissue color/behavior."
+      "public_video_url": "/media/species/shonisaurus-popularis.mp4",
+      "image_bytes": 1285245,
+      "video_bytes": 5456727,
+      "tools": [
+        "image_gen",
+        "image_to_video"
+      ]
+    },
+    {
+      "id": "temnodontosaurus-platyodon",
+      "public_image_url": "/media/species/temnodontosaurus-platyodon.png",
+      "public_video_url": "/media/species/temnodontosaurus-platyodon.mp4",
+      "image_bytes": 1184718,
+      "video_bytes": 3237163,
+      "tools": [
+        "image_gen",
+        "image_to_video"
+      ]
+    },
+    {
+      "id": "tylosaurus-proriger",
+      "public_image_url": "/media/species/tylosaurus-proriger.png",
+      "public_video_url": "/media/species/tylosaurus-proriger.mp4",
+      "image_bytes": 1657002,
+      "video_bytes": 4877558,
+      "tools": [
+        "image_gen",
+        "image_to_video"
+      ]
     }
   ],
-  "provenance": {
-    "generator": "grok-imagine",
-    "harness": "grok-cli",
-    "session_date": "2026-07-16",
-    "batch_note": "2026-07-16 append: liopleurodon-ferox.png + shonisaurus-popularis.png via native Imagine image_gen (Grok), converted JPG→PNG 1280x720 into public/media/species only."
-  }
+  "rights_note": "AI concept reconstructions \u2014 not fossil evidence"
 }
