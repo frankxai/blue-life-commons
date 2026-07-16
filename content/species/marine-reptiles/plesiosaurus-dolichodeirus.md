@@ -83,6 +83,11 @@ media:
     rights_status: concept-reconstruction
     alt_text: Photoreal concept reconstruction of Plesiosaurus dolichodeirus. Type plesiosaur — relatively long neck, four flippers, compact body. Cinematic open-ocean lighting.
     qa_status: approved
+  video:
+    path: public/media/species/plesiosaurus-dolichodeirus.mp4
+    public_media_url: /media/species/plesiosaurus-dolichodeirus.mp4
+    rights_status: concept-reconstruction
+    notes: Highest-quality 6s cinematic loop from concept still; educational motion only.
   embeds:
     - provider: paleobiology_database
       url: https://paleobiodb.org/

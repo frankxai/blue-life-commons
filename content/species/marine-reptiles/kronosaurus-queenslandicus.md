@@ -79,6 +79,11 @@ media:
     rights_status: concept-reconstruction
     alt_text: Photoreal concept reconstruction of Kronosaurus queenslandicus, a short-necked pliosaur with a massive head and four powerful flippers in deep blue Early Cretaceous seas.
     qa_status: approved
+  video:
+    path: public/media/species/kronosaurus-queenslandicus.mp4
+    public_media_url: /media/species/kronosaurus-queenslandicus.mp4
+    rights_status: concept-reconstruction
+    notes: Highest-quality 6s cinematic loop from concept still; educational motion only.
   embeds:
     - provider: paleobiology_database
       url: https://paleobiodb.org/

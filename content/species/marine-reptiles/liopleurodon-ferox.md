@@ -82,6 +82,11 @@ media:
     rights_status: concept-reconstruction
     alt_text: Photoreal concept reconstruction of Liopleurodon ferox, a short-necked Jurassic pliosaur with a massive head and four flippers in deep blue sea.
     qa_status: approved
+  video:
+    path: public/media/species/liopleurodon-ferox.mp4
+    public_media_url: /media/species/liopleurodon-ferox.mp4
+    rights_status: concept-reconstruction
+    notes: Highest-quality 6s cinematic loop from concept still; educational motion only.
   embeds:
     - provider: paleobiology_database
       url: https://paleobiodb.org/

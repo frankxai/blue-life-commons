@@ -82,6 +82,11 @@ media:
     rights_status: concept-reconstruction
     alt_text: Photoreal concept reconstruction of Ophthalmosaurus icenicus, a dolphin-shaped ichthyosaur with large eyes and a crescent tail fluke, swimming through Jurassic blue water.
     qa_status: approved
+  video:
+    path: public/media/species/ophthalmosaurus-icenicus.mp4
+    public_media_url: /media/species/ophthalmosaurus-icenicus.mp4
+    rights_status: concept-reconstruction
+    notes: Highest-quality 6s cinematic loop from concept still; educational motion only.
   embeds:
     - provider: paleobiology_database
       url: https://paleobiodb.org/
