@@ -115,6 +115,47 @@ export interface ArtifactMediaEmbed {
   license?: string
 }
 
+/** Curated educational still for species life galleries (not silent hotlink of candidates). */
+export interface ArtifactMediaGalleryItem {
+  asset_id?: string
+  role?: string
+  life_stage?: string
+  angle?: string
+  public_media_url?: string
+  source_url?: string
+  original_media_url?: string
+  creator?: string
+  credit?: string
+  license?: string
+  rights_status?: string
+  alt_text?: string
+  qa_status?: string
+  concept_only?: boolean
+  caption?: string
+  use_limitations?: string
+}
+
+/** External educational video card (link-out; not rehosted without rights). */
+export interface ArtifactMediaVideoLink {
+  id?: string
+  title?: string
+  url?: string
+  provider?: string
+  topic?: string
+  rights_note?: string
+  educational_use?: string
+}
+
+export interface ArtifactMediaSupportingAsset {
+  asset_id?: string
+  path?: string
+  role?: string
+  status?: string
+  use_limitations?: string
+  public_media_url?: string
+  alt_text?: string
+}
+
 export interface ArtifactMediaRender {
   strategy?: string
   public_visual_kind?: string
@@ -140,6 +181,11 @@ export interface ArtifactMedia {
   primary?: ArtifactMediaPrimary
   video?: ArtifactMediaVideo
   embeds?: ArtifactMediaEmbed[]
+  /** Multi-angle / life-stage educational stills (approved or concept-labeled). */
+  gallery?: ArtifactMediaGalleryItem[]
+  /** External educational videos (NOAA, sanctuaries, open education). */
+  video_links?: ArtifactMediaVideoLink[]
+  supporting_assets?: ArtifactMediaSupportingAsset[]
   render?: ArtifactMediaRender
   review?: ArtifactMediaReview
 }

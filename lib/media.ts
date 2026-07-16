@@ -1,4 +1,8 @@
-import type { Artifact } from "@/lib/types"
+import type {
+  Artifact,
+  ArtifactMediaGalleryItem,
+  ArtifactMediaVideoLink,
+} from "@/lib/types"
 import blobManifest from "@/content/media/species-media-blob-manifest.json"
 
 export interface ApprovedSpeciesMedia {
@@ -17,6 +21,11 @@ export interface ApprovedSpeciesMedia {
   altText: string
   videoUrl?: string
   conceptReconstruction?: boolean
+}
+
+export interface SpeciesGalleryItem extends ArtifactMediaGalleryItem {
+  imageUrl: string
+  isConcept: boolean
 }
 
 interface SpeciesBlobRecord {
@@ -107,4 +116,40 @@ export function getUrlHost(url?: string): string | undefined {
 
 export function getMediaCreditText(media: ApprovedSpeciesMedia): string {
   return [media.creator, media.license].filter(Boolean).join(" / ")
+}
+
+/**
+ * Educational multi-angle gallery. Only items with public URLs and non-blocked QA.
+ * Concept/generated assets must remain labeled in the UI — never as ID evidence.
+ */
+export function getSpeciesGallery(artifact: Artifact): SpeciesGalleryItem[] {
+  const items = artifact.media?.gallery ?? []
+  return items
+    .map((item) => {
+      const imageUrl = cleanText(item.public_media_url)
+      if (!imageUrl) return undefined
+      if (item.qa_status === "blocked") return undefined
+      const isConcept =
+        item.concept_only === true ||
+        item.rights_status === "concept-reconstruction" ||
+        item.rights_status === "generated-owned"
+      // Real-photo gallery items should be curated approved (or explicit concept).
+      if (!isConcept && item.qa_status && item.qa_status !== "approved") {
+        return undefined
+      }
+      return {
+        ...item,
+        imageUrl,
+        isConcept,
+      }
+    })
+    .filter((item): item is SpeciesGalleryItem => Boolean(item))
+}
+
+export function getSpeciesVideoLinks(
+  artifact: Artifact,
+): ArtifactMediaVideoLink[] {
+  return (artifact.media?.video_links ?? []).filter(
+    (item) => Boolean(item.url) && Boolean(item.title),
+  )
 }

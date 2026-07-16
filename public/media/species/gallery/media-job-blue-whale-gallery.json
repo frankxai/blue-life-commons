@@ -1,0 +1,35 @@
+{
+  "job_id": "blue-whale-gallery-concept-2026-07-16",
+  "project": "blue-life-commons",
+  "species": "blue-whale",
+  "rights_status": "concept-reconstruction",
+  "model": "grok-imagine",
+  "tool": "image_gen",
+  "aspect_ratio": "16:9",
+  "created_at": "2026-07-16",
+  "assets": [
+    {
+      "id": "blue-whale-scale-concept",
+      "path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/gallery/blue-whale-scale-concept.png",
+      "relative_path": "public/media/species/gallery/blue-whale-scale-concept.png",
+      "filename": "blue-whale-scale-concept.png",
+      "type": "educational-concept-illustration",
+      "aspect_ratio": "16:9",
+      "rights_status": "concept-reconstruction",
+      "model": "grok-imagine",
+      "prompt": "Educational concept illustration, landscape cinematic composition: a massive adult blue whale swimming horizontally through deep ocean water, mottled blue-grey skin with subtle light patches, streamlined body, tiny far-back dorsal fin, broad flukes. For scale comparison in the same frame, a yellow city bus and several tiny human silhouettes positioned near the whale midsection so relative size is clear. Dark ocean cinematic educational infographic aesthetic, soft volumetric underwater light rays, clean scientific illustration feel, high detail, photorealistic cetacean anatomy. No text, no labels, no watermarks, no logos, no brands."
+    },
+    {
+      "id": "blue-whale-mother-calf-concept",
+      "path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/gallery/blue-whale-mother-calf-concept.png",
+      "relative_path": "public/media/species/gallery/blue-whale-mother-calf-concept.png",
+      "filename": "blue-whale-mother-calf-concept.png",
+      "type": "educational-concept-reconstruction",
+      "aspect_ratio": "16:9",
+      "rights_status": "concept-reconstruction",
+      "model": "grok-imagine",
+      "prompt": "Educational concept reconstruction, landscape cinematic composition: adult blue whale mother swimming calmly through open deep-blue ocean with a smaller blue whale calf swimming close beside her, peaceful documentary wildlife style, realistic cetacean anatomy, mottled blue-grey skin, soft shafts of light filtering from the surface, gentle bubbles, serene open water with no human presence. Soft natural underwater lighting, photorealistic educational nature documentary aesthetic, high detail. No humans, no boats, no nets, no text, no watermarks, no logos."
+    }
+  ],
+  "notes": "Native Imagine image_gen only. Concept-reconstruction educational assets for Blue Life Commons species gallery. Local paths only; no third-party stock."
+}

@@ -18,6 +18,7 @@ import {
   SpeciesCompareMode,
   SpeciesStatsChips,
 } from "@/components/species-stats-compare"
+import { SpeciesLifeGallery } from "@/components/species-life-gallery"
 import { getApprovedSpeciesMedia } from "@/lib/media"
 import { GITHUB_REPO_URL, cn, formatRegion } from "@/lib/utils"
 import Link from "next/link"
@@ -455,10 +456,17 @@ export function ArtifactDetail({
 
         {isSpecies && <SpeciesCompareMode artifact={a} />}
 
+        {isSpecies && <SpeciesLifeGallery artifact={a} />}
+
         <div
           className={cn(
             "grid gap-12",
-            guild === "marine-reptiles" || a.compare?.length ? "mt-10" : "",
+            guild === "marine-reptiles" ||
+              a.compare?.length ||
+              (a.media?.gallery?.length ?? 0) > 0 ||
+              (a.media?.video_links?.length ?? 0) > 0
+              ? "mt-10"
+              : "",
             "lg:grid-cols-[minmax(0,1fr)_minmax(280px,340px)]",
           )}
         >
