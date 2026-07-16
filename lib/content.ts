@@ -98,6 +98,7 @@ function normalizeMedia(raw: unknown): ArtifactMedia | undefined {
   if (!media) return undefined
 
   const primary = asRecord(media.primary)
+  const video = asRecord(media.video)
   const render = asRecord(media.render)
   const review = asRecord(media.review)
 
@@ -133,6 +134,14 @@ function normalizeMedia(raw: unknown): ArtifactMedia | undefined {
           rights_status: optionalString(primary.rights_status),
           alt_text: optionalString(primary.alt_text),
           qa_status: optionalString(primary.qa_status),
+        }
+      : undefined,
+    video: video
+      ? {
+          path: optionalString(video.path),
+          public_media_url: optionalString(video.public_media_url),
+          rights_status: optionalString(video.rights_status),
+          notes: optionalString(video.notes),
         }
       : undefined,
     embeds,

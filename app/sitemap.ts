@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
     "/species",
+    "/species/deep-time",
     "/encyclopedia",
     "/regions",
     "/missions",
@@ -25,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ].map((route) => ({
     url: `${SITE_URL}${route}`,
     changeFrequency: "weekly" as const,
-    priority: route === "" ? 1 : 0.7,
+    priority: route === "" ? 1 : route === "/species/deep-time" ? 0.85 : 0.7,
   }))
 
   const artifactRoutes = getAllArtifacts().map((a) => ({

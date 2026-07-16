@@ -12,7 +12,7 @@ The machine-readable definition lives in [`artifact-schema.yaml`](artifact-schem
 | `type` | yes | enum | Artifact class — see allowed values below |
 | `title` | yes | string | Human-readable title; matches the document H1 |
 | `region` | no | list | Region slugs, e.g. `netherlands`, `north-sea` |
-| `species_group` | no | list | Guild slugs: `cetaceans`, `pinnipeds`, `turtles`, `sharks-rays`, `reefs` |
+| `species_group` | no | list | Guild slugs: `cetaceans`, `pinnipeds`, `turtles`, `sharks-rays`, `reefs`, `sirenians`, `marine-reptiles` |
 | `species` | no | list | Species slugs, e.g. `harbor-seal` |
 | `difficulty` | no | enum | `beginner` \| `intermediate` \| `advanced` |
 | `audience` | no | list | e.g. `traveler`, `student`, `citizen-scientist`, `researcher`, `developer`, `educator` |

@@ -1,0 +1,55 @@
+{
+  "batch_id": "marine-reptiles-deep-time-2026-07-16",
+  "brand": "Blue Life Commons",
+  "tool": "grok-imagine image_gen + image_to_video via Grok CLI",
+  "date": "2026-07-16",
+  "repo": "C:/Users/frank/starlight/repos/blue-life-commons",
+  "origin": "https://github.com/frankxai/blue-life-commons.git",
+  "branch": "feat/deep-time-marine-reptiles",
+  "surface": "public/media/species",
+  "aspect_ratio": "16:9",
+  "resolution": "1280x720",
+  "anatomy_gate": "All stills PASS: marine reptiles only; horizontal swim; paddles/flippers; no bipedal theropod/T.rex",
+  "rights_note": "AI-generated concept reconstructions for education — not fossil evidence, identification media, or proof of soft-tissue color/behavior.",
+  "outputs": [
+    {
+      "id": "mosasaurus-hoffmannii",
+      "image_path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/mosasaurus-hoffmannii.png",
+      "video_path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/mosasaurus-hoffmannii.mp4",
+      "public_image_url": "/media/species/mosasaurus-hoffmannii.png",
+      "public_video_url": "/media/species/mosasaurus-hoffmannii.mp4",
+      "tools": ["image_gen", "image_to_video"]
+    },
+    {
+      "id": "elasmosaurus-platyurus",
+      "image_path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/elasmosaurus-platyurus.png",
+      "public_image_url": "/media/species/elasmosaurus-platyurus.png",
+      "tools": ["image_gen"]
+    },
+    {
+      "id": "kronosaurus-queenslandicus",
+      "image_path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/kronosaurus-queenslandicus.png",
+      "public_image_url": "/media/species/kronosaurus-queenslandicus.png",
+      "tools": ["image_gen"]
+    },
+    {
+      "id": "ophthalmosaurus-icenicus",
+      "image_path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/ophthalmosaurus-icenicus.png",
+      "public_image_url": "/media/species/ophthalmosaurus-icenicus.png",
+      "tools": ["image_gen"]
+    },
+    {
+      "id": "tylosaurus-proriger",
+      "image_path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/tylosaurus-proriger.png",
+      "video_path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/tylosaurus-proriger.mp4",
+      "public_image_url": "/media/species/tylosaurus-proriger.png",
+      "public_video_url": "/media/species/tylosaurus-proriger.mp4",
+      "tools": ["image_gen", "image_to_video"]
+    }
+  ],
+  "provenance": {
+    "generator": "grok-imagine",
+    "harness": "grok-cli",
+    "session_date": "2026-07-16"
+  }
+}

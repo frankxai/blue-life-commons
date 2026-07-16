@@ -44,13 +44,18 @@ export const WELFARE_META: Record<string, { label: string; color: string }> = {
   critical: { label: "Critical", color: "var(--color-coral)" },
 }
 
-export const GUILD_META: Record<string, { label: string }> = {
+export const GUILD_META: Record<string, { label: string; special?: string }> = {
   cetaceans: { label: "Cetaceans" },
   "sharks-rays": { label: "Sharks & Rays" },
   turtles: { label: "Sea Turtles" },
   pinnipeds: { label: "Pinnipeds" },
   reefs: { label: "Reefs & Habitat" },
   sirenians: { label: "Sirenians" },
+  "marine-reptiles": {
+    label: "Deep Time Marine Reptiles",
+    special:
+      "Not dinosaurs — mosasaurs, plesiosaurs, pliosaurs, and ichthyosaurs of Mesozoic seas.",
+  },
   other: { label: "Other" },
 }
 

@@ -71,6 +71,9 @@ export function HomeHero({
                 Explore species records
                 <ArrowRight />
               </ButtonLink>
+              <ButtonLink href="/species/deep-time" variant="onDarkGhost">
+                Deep Time ocean giants
+              </ButtonLink>
               <ButtonLink href="/contribute" variant="onDarkGhost">
                 Contribute with sources
               </ButtonLink>

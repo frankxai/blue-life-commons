@@ -1,10 +1,15 @@
 import type { Metadata } from "next"
 import { HomeHero } from "@/components/home/hero"
 import { ModelSection } from "@/components/home/model-section"
+import { DeepTimeHomeStrip } from "@/components/home/deep-time-strip"
 import { Featured } from "@/components/home/featured"
 import { Principles } from "@/components/home/principles"
 import { GuardianPreview, ClosingCta } from "@/components/home/closing"
-import { getAllArtifacts, getCommonsStats } from "@/lib/content"
+import {
+  getAllArtifacts,
+  getCommonsStats,
+  getGuildForArtifact,
+} from "@/lib/content"
 import { getApprovedSpeciesMedia } from "@/lib/media"
 
 export const metadata: Metadata = {
@@ -39,17 +44,28 @@ export default function HomePage() {
         }
       : undefined
 
-  // Featured: prefer species with an IUCN status, then a mix of types.
-  const species = all.filter((a) => a.type === "species-page" && a.iucn?.category)
+  // Featured: mix living species with one deep-time bridge entry.
+  const livingSpecies = all.filter(
+    (a) =>
+      a.type === "species-page" &&
+      a.iucn?.category &&
+      getGuildForArtifact(a) !== "marine-reptiles",
+  )
+  const deepTime = all.find((a) => a.id === "species-mosasaurus-hoffmannii")
   const others = all.filter(
     (a) => a.type === "region-briefing" || a.type === "field-mission",
   )
-  const featured = [...species.slice(0, 4), ...others.slice(0, 2)].slice(0, 6)
+  const featured = [
+    ...livingSpecies.slice(0, 3),
+    ...(deepTime ? [deepTime] : []),
+    ...others.slice(0, 2),
+  ].slice(0, 6)
 
   return (
     <>
       <HomeHero stats={stats} proof={proof} />
       <ModelSection />
+      <DeepTimeHomeStrip />
       <Featured artifacts={featured} />
       <Principles />
       <GuardianPreview />
