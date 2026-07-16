@@ -59,7 +59,7 @@ properties:
     type: array
     items:
       type: string
-      enum: [cetaceans, pinnipeds, turtles, sharks-rays, reefs]
+      enum: [cetaceans, pinnipeds, turtles, sharks-rays, reefs, sirenians, marine-reptiles]
   species:
     type: array
     items:
@@ -126,7 +126,7 @@ properties:
         type: string
       population_trend:
         type: string
-        enum: [increasing, stable, decreasing, unknown]
+        enum: [increasing, stable, decreasing, unknown, extinct]
       scope:
         type: string
         enum: [global, regional]
@@ -231,7 +231,7 @@ properties:
             type: [string, "null"]
           rights_status:
             type: string
-            enum: [owned, generated-owned, licensed, public-domain, cc0, cc-by, cc-by-sa, partner-grant, open-access-review, needs-review, blocked]
+            enum: [owned, generated-owned, concept-reconstruction, licensed, public-domain, cc0, cc-by, cc-by-sa, partner-grant, open-access-review, needs-review, blocked]
           alt_text:
             type: [string, "null"]
           qa_status:

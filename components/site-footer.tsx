@@ -8,6 +8,7 @@ const COLUMNS = [
     title: "Explore",
     links: [
       { href: "/species", label: "Ocean life encyclopedia" },
+      { href: "/species/deep-time", label: "Deep Time marine reptiles" },
       { href: "/encyclopedia", label: "All animal entries" },
       { href: "/media-intelligence", label: "Media intelligence" },
       { href: "/regions", label: "Region briefings" },

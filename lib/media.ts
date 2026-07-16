@@ -4,7 +4,7 @@ import blobManifest from "@/content/media/species-media-blob-manifest.json"
 export interface ApprovedSpeciesMedia {
   assetId?: string
   imageUrl: string
-  imageUrlSource?: "vercel_blob" | "approved_source"
+  imageUrlSource?: "vercel_blob" | "approved_source" | "local_concept"
   sourceUrl?: string
   originalMediaUrl?: string
   ownedStorageUrl?: string
@@ -15,6 +15,8 @@ export interface ApprovedSpeciesMedia {
   licenseUrl?: string
   rightsStatus?: string
   altText: string
+  videoUrl?: string
+  conceptReconstruction?: boolean
 }
 
 interface SpeciesBlobRecord {
@@ -48,6 +50,7 @@ export function getApprovedSpeciesMedia(
   const primary = artifact.media?.primary
   const render = artifact.media?.render
   const review = artifact.media?.review
+  const video = artifact.media?.video
 
   if (!primary?.public_media_url) return undefined
   if (artifact.type !== "species-page") return undefined
@@ -60,11 +63,20 @@ export function getApprovedSpeciesMedia(
 
   const ownedBlob = primary.asset_id ? blobByAssetId.get(primary.asset_id) : undefined
   const ownedStorageUrl = cleanText(ownedBlob?.storage?.blob_url)
+  const conceptReconstruction =
+    primary.rights_status === "concept-reconstruction" ||
+    review?.curation_decision === "approve_concept_reconstruction_deep_time"
+  const imageUrl = ownedStorageUrl ?? primary.public_media_url
+  const imageUrlSource: ApprovedSpeciesMedia["imageUrlSource"] = ownedStorageUrl
+    ? "vercel_blob"
+    : conceptReconstruction || imageUrl.startsWith("/")
+      ? "local_concept"
+      : "approved_source"
 
   return {
     assetId: cleanText(primary.asset_id),
-    imageUrl: ownedStorageUrl ?? primary.public_media_url,
-    imageUrlSource: ownedStorageUrl ? "vercel_blob" : "approved_source",
+    imageUrl,
+    imageUrlSource,
     sourceUrl: cleanText(primary.source_url),
     originalMediaUrl: cleanText(primary.original_media_url),
     ownedStorageUrl,
@@ -79,6 +91,8 @@ export function getApprovedSpeciesMedia(
     altText:
       cleanText(primary.alt_text) ??
       `Approved primary species image for ${artifact.title}.`,
+    videoUrl: cleanText(video?.public_media_url),
+    conceptReconstruction,
   }
 }
 

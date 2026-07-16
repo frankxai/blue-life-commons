@@ -34,17 +34,38 @@ export function ArtifactHeroMedia({ artifact }: { artifact: Artifact }) {
 
   const sourceHost = getUrlHost(media.sourceUrl)
   const originalHost = getUrlHost(media.originalMediaUrl)
+  const isConcept = Boolean(media.conceptReconstruction)
 
   return (
     <figure className="overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-elevated)]">
       <div className="aspect-[4/3] bg-muted">
-        <MediaImage media={media} loading="eager" />
+        {media.videoUrl ? (
+          <video
+            className="h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster={media.imageUrl}
+            aria-label={media.altText}
+          >
+            <source src={media.videoUrl} type="video/mp4" />
+            <MediaImage media={media} loading="eager" />
+          </video>
+        ) : (
+          <MediaImage media={media} loading="eager" />
+        )}
       </div>
       <figcaption className="border-t border-border p-4">
         <div className="flex flex-wrap items-center gap-2">
           <span className="rounded-full bg-primary/10 px-2.5 py-1 text-xs font-semibold text-primary">
-            Approved primary image
+            {isConcept ? "Concept reconstruction" : "Approved primary image"}
           </span>
+          {media.videoUrl && (
+            <span className="rounded-full bg-accent/15 px-2.5 py-1 text-xs font-semibold text-foreground">
+              Cinematic loop
+            </span>
+          )}
           {media.rightsStatus && (
             <span className="rounded-full bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground">
               {media.rightsStatus.replace(/-/g, " ")}
@@ -59,6 +80,12 @@ export function ArtifactHeroMedia({ artifact }: { artifact: Artifact }) {
         <p className="mt-3 text-sm leading-relaxed text-foreground">
           {media.altText}
         </p>
+        {isConcept && (
+          <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+            Generated educational art. Not fossil evidence, identification media,
+            or proof of soft-tissue color or behavior.
+          </p>
+        )}
         <dl className="mt-3 grid gap-2 text-xs text-muted-foreground sm:grid-cols-2">
           {media.creator && (
             <div>
@@ -97,7 +124,7 @@ export function ArtifactHeroMedia({ artifact }: { artifact: Artifact }) {
               Source{sourceHost ? `: ${sourceHost}` : ""}
             </a>
           )}
-          {media.originalMediaUrl && (
+          {media.originalMediaUrl && !media.originalMediaUrl.startsWith("/") && (
             <a
               href={media.originalMediaUrl}
               target="_blank"

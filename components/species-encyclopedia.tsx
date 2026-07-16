@@ -215,7 +215,13 @@ export function SpeciesEncyclopedia() {
     if (entry.media?.imageUrlSource === "vercel_blob") ownedImages += 1
   }
 
-  const guilds = [...byGuild.entries()].sort((a, b) => b[1].length - a[1].length)
+  const guilds = [...byGuild.entries()].sort((a, b) => {
+    // Pin Deep Time marine reptiles as a featured special section near the top.
+    if (a[0] === "marine-reptiles") return -1
+    if (b[0] === "marine-reptiles") return 1
+    return b[1].length - a[1].length
+  })
+  const deepTimeCount = byGuild.get("marine-reptiles")?.length ?? 0
 
   return (
     <main>
@@ -231,7 +237,9 @@ export function SpeciesEncyclopedia() {
             <p className="mt-5 max-w-[34ch] break-words text-base leading-relaxed text-abyss-muted sm:max-w-2xl sm:text-pretty sm:text-lg">
               Blue Life Commons now has an image-first species encyclopedia:
               approved media hosted in Vercel Blob, source pages preserved, and
-              every animal connected back to its cited public record.
+              every animal connected back to its cited public record — plus a new
+              Deep Time guild for Mesozoic marine reptiles (often misnamed
+              &ldquo;ocean dinosaurs&rdquo;).
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
@@ -240,6 +248,12 @@ export function SpeciesEncyclopedia() {
               >
                 Explore animals
                 <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                href="#marine-reptiles"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-abyss-border bg-white/5 px-5 py-2.5 text-sm font-semibold text-abyss-foreground backdrop-blur-sm transition-colors hover:border-glow hover:text-glow"
+              >
+                Deep Time ocean giants
               </Link>
               <Link
                 href="/media-intelligence"
@@ -276,6 +290,64 @@ export function SpeciesEncyclopedia() {
         </Container>
       </section>
 
+      {deepTimeCount > 0 && (
+        <section className="border-b border-border bg-card">
+          <Container className="py-10">
+            <div className="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:items-center">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">
+                  Special section · Deep Time
+                </p>
+                <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground">
+                  Ocean “dinosaurs” — actually marine reptiles
+                </h2>
+                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                  Mosasaurs, plesiosaurs, pliosaurs, and ichthyosaurs ruled Mesozoic
+                  seas. They are <strong className="text-foreground">not dinosaurs</strong>.
+                  This educational guild pairs sourced paleontology notes with
+                  clearly labeled AI concept reconstructions — never fossil evidence.
+                </p>
+                <div className="mt-5 flex flex-wrap gap-3">
+                  <Link
+                    href="/species/deep-time"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
+                  >
+                    Open Deep Time hub
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <Link
+                    href="#marine-reptiles"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:border-primary/40 hover:text-primary"
+                  >
+                    Guild on this page
+                  </Link>
+                  <Link
+                    href="/species/marine-reptiles/mosasaurus-hoffmannii"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:border-primary/40 hover:text-primary"
+                  >
+                    Start with Mosasaurus
+                  </Link>
+                </div>
+              </div>
+              <div className="rounded-2xl border border-border bg-secondary p-5 text-sm leading-relaxed text-muted-foreground">
+                <p className="font-semibold text-foreground">
+                  {deepTimeCount} deep-time entries
+                </p>
+                <ul className="mt-3 list-disc space-y-1 pl-5">
+                  <li>Mosasaurs — giant marine lizards</li>
+                  <li>Plesiosaurs &amp; pliosaurs — four-flipper body plans</li>
+                  <li>Ichthyosaurs — dolphin-shaped marine reptiles</li>
+                </ul>
+                <p className="mt-3 text-xs">
+                  Living ocean wildlife remains the core of Blue Life Commons.
+                  Deep Time is the bridge that makes “sea monster” curiosity accurate.
+                </p>
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
+
       <section className="border-b border-border bg-secondary">
         <Container className="py-8">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
@@ -286,6 +358,7 @@ export function SpeciesEncyclopedia() {
               </p>
               <p className="mt-1 text-sm text-muted-foreground">
                 Candidate media remains out of public rendering until approval.
+                Deep-time heroes use labeled concept reconstructions.
               </p>
             </div>
             <nav aria-label="Animal guilds" className="flex flex-wrap gap-2">
@@ -317,6 +390,7 @@ export function SpeciesEncyclopedia() {
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">
                     {list.length} {list.length === 1 ? "entry" : "entries"}
+                    {guild === "marine-reptiles" ? " · special section" : ""}
                   </p>
                   <h2
                     id={`${guild}-heading`}
@@ -324,6 +398,11 @@ export function SpeciesEncyclopedia() {
                   >
                     {GUILD_META[guild]?.label ?? guild}
                   </h2>
+                  {GUILD_META[guild]?.special && (
+                    <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+                      {GUILD_META[guild]?.special}
+                    </p>
+                  )}
                 </div>
                 <Link
                   href={`/catalog?type=species-page`}

@@ -48,6 +48,66 @@ function MetaRow({ label, value }: { label: string; value?: React.ReactNode }) {
   )
 }
 
+function BridgeRail({ artifact }: { artifact: Artifact }) {
+  // folder-based guild from path
+  const parts = artifact.path.split(/[/\\]/)
+  const idx = parts.indexOf("species")
+  const guild = idx >= 0 && parts[idx + 1] ? parts[idx + 1] : "other"
+
+  if (guild === "marine-reptiles") {
+    return (
+      <div className="mt-5 rounded-xl border border-primary/20 bg-primary/8 p-4">
+        <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+          Deep Time bridge
+        </h3>
+        <p className="mt-2 text-sm leading-relaxed text-foreground">
+          This entry is a Mesozoic marine reptile — not a dinosaur. Compare body
+          plans with living ocean apex predators and sea turtles.
+        </p>
+        <div className="mt-3 flex flex-col gap-2 text-sm font-semibold">
+          <Link href="/species/deep-time" className="text-primary hover:underline">
+            Deep Time hub
+          </Link>
+          <Link
+            href="/species/sharks-rays/great-white-shark"
+            className="text-primary hover:underline"
+          >
+            Living: great white shark
+          </Link>
+          <Link
+            href="/species/turtles/leatherback-turtle"
+            className="text-primary hover:underline"
+          >
+            Living: leatherback turtle
+          </Link>
+        </div>
+      </div>
+    )
+  }
+
+  if (guild === "sharks-rays" || guild === "cetaceans" || guild === "turtles") {
+    return (
+      <div className="mt-5 rounded-xl border border-border bg-secondary p-4">
+        <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+          Through deep time
+        </h3>
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+          Curious about “ocean dinosaurs”? Start with Mesozoic marine reptiles —
+          mosasaurs, plesiosaurs, and ichthyosaurs — in the Deep Time section.
+        </p>
+        <Link
+          href="/species/deep-time"
+          className="mt-3 inline-flex text-sm font-semibold text-primary hover:underline"
+        >
+          Open Deep Time hub
+        </Link>
+      </div>
+    )
+  }
+
+  return null
+}
+
 export function ArtifactDetail({
   artifact,
   trail,
@@ -61,10 +121,12 @@ export function ArtifactDetail({
   const editUrl = `${GITHUB_REPO_URL}/blob/main/${a.githubPath}`
   const approvedMedia = getApprovedSpeciesMedia(a)
   const impactIsPublished = a.status === "approved" || a.status === "published"
+  const parts = a.path.split(/[/\\]/)
+  const spIdx = parts.indexOf("species")
+  const guildFolder = spIdx >= 0 && parts[spIdx + 1] ? parts[spIdx + 1] : ""
 
   return (
     <article>
-      {/* Header band */}
       <header className="border-b border-border bg-secondary">
         <Container className="py-10 sm:py-14">
           <Breadcrumb trail={trail} />
@@ -79,6 +141,9 @@ export function ArtifactDetail({
               <div className="flex flex-wrap items-center gap-2">
                 <TypeChip type={a.type} />
                 <StatusPill status={a.status} />
+                {guildFolder === "marine-reptiles" && (
+                  <Chip tone="primary">Deep Time</Chip>
+                )}
                 {a.sensitivity?.tier === "sensitive" && (
                   <Chip tone="accent">Location generalized</Chip>
                 )}
@@ -103,16 +168,13 @@ export function ArtifactDetail({
 
       <Container className="py-10 sm:py-14">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_320px]">
-          {/* Body */}
           <div>
             <div
               className="prose-ocean"
-              // Markdown is authored in this repository and review-gated via PRs.
               dangerouslySetInnerHTML={{ __html: a.bodyHtml }}
             />
           </div>
 
-          {/* Provenance rail */}
           <aside className="lg:sticky lg:top-24 lg:self-start" aria-label="Provenance">
             <div className="rounded-2xl border border-border bg-card p-6">
               <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
@@ -124,28 +186,36 @@ export function ArtifactDetail({
                 <MetaRow label="License" value={a.license ?? "CC-BY-4.0"} />
                 <MetaRow
                   label="Media"
-                  value={approvedMedia ? "Approved primary image" : undefined}
+                  value={
+                    approvedMedia
+                      ? approvedMedia.conceptReconstruction
+                        ? "Concept reconstruction"
+                        : "Approved primary image"
+                      : undefined
+                  }
                 />
                 <MetaRow
                   label="Consensus"
-                  value={a.consensus_state ? a.consensus_state.replace(/-/g, " ") : undefined}
+                  value={
+                    a.consensus_state
+                      ? a.consensus_state.replace(/-/g, " ")
+                      : undefined
+                  }
                 />
                 <MetaRow label="Difficulty" value={a.difficulty} />
               </dl>
 
               {a.review && (
-                <>
-                  <div className="mt-5 border-t border-border pt-5">
-                    <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                      Review gates
-                    </h3>
-                    <div className="mt-3 flex flex-col gap-2">
-                      <ReviewDot state={a.review.science} label="Science" />
-                      <ReviewDot state={a.review.ethics} label="Ethics" />
-                      <ReviewDot state={a.review.editor} label="Editorial" />
-                    </div>
+                <div className="mt-5 border-t border-border pt-5">
+                  <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+                    Review gates
+                  </h3>
+                  <div className="mt-3 flex flex-col gap-2">
+                    <ReviewDot state={a.review.science} label="Science" />
+                    <ReviewDot state={a.review.ethics} label="Ethics" />
+                    <ReviewDot state={a.review.editor} label="Editorial" />
                   </div>
-                </>
+                </div>
               )}
 
               {a.welfare?.five_domains && (
@@ -157,7 +227,9 @@ export function ArtifactDetail({
                     {Object.entries(a.welfare.five_domains).map(([k, v]) => (
                       <MetaRow
                         key={k}
-                        label={k.replace(/_/g, " ").replace(/^./, (c) => c.toUpperCase())}
+                        label={k
+                          .replace(/_/g, " ")
+                          .replace(/^./, (c) => c.toUpperCase())}
                         value={String(v).replace(/-/g, " ")}
                       />
                     ))}
@@ -165,10 +237,14 @@ export function ArtifactDetail({
                 </div>
               )}
 
+              <BridgeRail artifact={a} />
+
               {a.impact?.claim && (
                 <div className="mt-5 rounded-xl bg-primary/8 p-4">
                   <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                    {impactIsPublished ? "Published impact claim" : "Proposed impact claim"}
+                    {impactIsPublished
+                      ? "Published impact claim"
+                      : "Proposed impact claim"}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-foreground">
                     {a.impact.claim}
@@ -195,9 +271,11 @@ export function ArtifactDetail({
           </aside>
         </div>
 
-        {/* Sources */}
         {a.sources.length > 0 && (
-          <section aria-labelledby="sources-heading" className="mt-14 border-t border-border pt-10">
+          <section
+            aria-labelledby="sources-heading"
+            className="mt-14 border-t border-border pt-10"
+          >
             <h2
               id="sources-heading"
               className="font-serif text-2xl font-semibold text-foreground"
@@ -238,9 +316,11 @@ export function ArtifactDetail({
           </section>
         )}
 
-        {/* Related */}
         {related.length > 0 && (
-          <section aria-labelledby="related-heading" className="mt-14 border-t border-border pt-10">
+          <section
+            aria-labelledby="related-heading"
+            className="mt-14 border-t border-border pt-10"
+          >
             <h2
               id="related-heading"
               className="font-serif text-2xl font-semibold text-foreground"

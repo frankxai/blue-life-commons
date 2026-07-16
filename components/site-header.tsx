@@ -8,6 +8,7 @@ import { WaveMark } from "@/components/wave-mark"
 
 const NAV = [
   { href: "/species", label: "Encyclopedia" },
+  { href: "/species/deep-time", label: "Deep Time" },
   { href: "/media-intelligence", label: "Media" },
   { href: "/regions", label: "Regions" },
   { href: "/missions", label: "Missions" },

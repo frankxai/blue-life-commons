@@ -99,6 +99,13 @@ export interface ArtifactMediaPrimary {
   qa_status?: string
 }
 
+export interface ArtifactMediaVideo {
+  path?: string
+  public_media_url?: string
+  rights_status?: string
+  notes?: string
+}
+
 export interface ArtifactMediaEmbed {
   provider?: string
   url?: string
@@ -131,6 +138,7 @@ export interface ArtifactMedia {
   render_contract?: string
   public_explorer_record?: string
   primary?: ArtifactMediaPrimary
+  video?: ArtifactMediaVideo
   embeds?: ArtifactMediaEmbed[]
   render?: ArtifactMediaRender
   review?: ArtifactMediaReview
