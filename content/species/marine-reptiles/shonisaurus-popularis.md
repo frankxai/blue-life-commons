@@ -1,11 +1,11 @@
 ---
-id: species-ophthalmosaurus-icenicus
+id: species-shonisaurus-popularis
 type: species-page
-title: Ophthalmosaurus icenicus
+title: Shonisaurus popularis
 species_group:
   - marine-reptiles
 species:
-  - ophthalmosaurus-icenicus
+  - shonisaurus-popularis
 difficulty: beginner
 audience:
   - traveler
@@ -46,41 +46,41 @@ sensitivity:
 consensus_state: settled
 last_verified: "2026-07-16"
 stats:
-  period: "Middle–Late Jurassic"
+  period: "Late Triassic"
   clade: "Ichthyosauria"
-  length: "~4–6 m (typical)"
-  diet: "Fish & cephalopods"
-  locomotion: "Thunniform / crescent tail"
-  habitat: "Open Jurassic seas"
+  length: "Very large ichthyosaur (multi-meter class)"
+  diet: "Marine vertebrates / cephalopods (model-dependent)"
+  locomotion: "Dolphin-like swimming"
+  habitat: "Late Triassic seas"
 compare:
+  - target_id: species-ophthalmosaurus-icenicus
+    label: "Ophthalmosaurus"
+    note: "Another ichthyosaur body plan"
   - target_id: species-blue-whale
     label: "Blue whale"
-    note: "Convergent streamlining vs true whales"
-  - target_id: leatherback-turtle
-    label: "Leatherback turtle"
-    note: "Living marine reptile"
+    note: "Scale analogy only — not related"
 outputs:
-  website_path: /species/marine-reptiles/ophthalmosaurus-icenicus
-  github_path: content/species/marine-reptiles/ophthalmosaurus-icenicus.md
+  website_path: /species/marine-reptiles/shonisaurus-popularis
+  github_path: content/species/marine-reptiles/shonisaurus-popularis.md
   map_layer: false
 impact:
-  claim: Published a sourced deep-time encyclopedia entry for Ophthalmosaurus icenicus with concept reconstruction media.
+  claim: Published a sourced deep-time encyclopedia entry for Shonisaurus popularis with concept reconstruction media.
   eligible_for_hypercert: false
 contributors:
   - github: frankxai
 license: CC-BY-4.0
 media:
   primary:
-    asset_id: blc-concept-ophthalmosaurus-icenicus-01
-    path: public/media/species/ophthalmosaurus-icenicus.png
-    public_media_url: /media/species/ophthalmosaurus-icenicus.png
+    asset_id: blc-concept-shonisaurus-popularis-01
+    path: public/media/species/shonisaurus-popularis.png
+    public_media_url: /media/species/shonisaurus-popularis.png
     source_url: https://github.com/frankxai/blue-life-commons
-    original_media_url: /media/species/ophthalmosaurus-icenicus.png
+    original_media_url: /media/species/shonisaurus-popularis.png
     creator: Blue Life Commons / Grok Imagine concept reconstruction
     credit: Concept reconstruction — not fossil evidence
     license: CC-BY-4.0
     rights_status: concept-reconstruction
-    alt_text: Photoreal concept reconstruction of Ophthalmosaurus icenicus, a dolphin-shaped ichthyosaur with large eyes and a crescent tail fluke, swimming through Jurassic blue water.
+    alt_text: Photoreal concept reconstruction of Shonisaurus popularis, a large Late Triassic ichthyosaur with a streamlined body and long snout in blue open ocean.
     qa_status: approved
   embeds:
     - provider: paleobiology_database
@@ -105,40 +105,40 @@ media:
   supporting_assets: []
 ---
 
-# Ophthalmosaurus icenicus
+# Shonisaurus popularis
 
-> **Not a dinosaur.** *Ophthalmosaurus* is an **ichthyosaur** — a fully marine reptile with a dolphin-like body plan and famously large eyes. Convergence with living cetaceans is ecological analogy, not kinship.
+> **Not a dinosaur.** *Shonisaurus* is a large **ichthyosaur** from the Late Triassic — a fully marine reptile with a dolphin-like body plan. Famous from Nevada fossil deposits in popular science storytelling.
 
 ## At a glance
 
 | Field | Value | Source |
 |---|---|---|
-| Scientific name | *Ophthalmosaurus icenicus* | Paleobiology Database / literature |
+| Scientific name | *Shonisaurus popularis* | Paleobiology Database / literature |
 | Guild | Marine reptiles (Ichthyosauria) | — |
 | “Ocean dinosaur?” | **No** | Britannica / UCMP |
 | IUCN | **Extinct** | Deep-time convention |
-| Age | Middle–Late Jurassic (typical ranges) | Paleobiology literature |
-| Body plan | Streamlined, large eyes, crescent tail fluke | UCMP / Britannica |
+| Age | Late Triassic | Paleobiology literature ranges |
+| Body plan | Streamlined, long snout, crescent tail | UCMP / Britannica |
 
 ## Identification
 
-Ichthyosaurs evolved a fish-like silhouette: elongated snout, large orbit, dorsal fin in many reconstructions, and a vertical tail fluke. *Ophthalmosaurus* is named for its enormous eyes — among the largest relative proportions in vertebrate history in popular and scientific discussion of the genus.
+Ichthyosaurs evolved fish-like silhouettes independently of living whales and dolphins. Look for elongated snouts, large eyes in many taxa, and vertical tail flukes in advanced forms — never bipedal dinosaur posture.
 
 ## Ecology and behavior
 
-Open-water pursuit predator of fish and cephalopods is the standard ecological framing. Large eyes are widely interpreted in the context of low-light or deep-water visual hunting, though absolute depth ecology remains model-dependent.
+Open-water marine predator/forager reconstructions are common for large ichthyosaurs. Exact diet and diving ecology remain model-dependent; use specimen literature for scientific claims.
 
 ## Conservation status and threats
 
-Extinct long before the end-Cretaceous (ichthyosaurs declined earlier than mosasaurs). No living members of Ichthyosauria.
+Extinct. Ichthyosaurs as a whole disappeared long before the end-Cretaceous.
 
 ## How to observe responsibly
 
-Museum mounts and peer-reviewed skeletal diagrams. Compare thoughtfully to living dolphins to teach **convergent evolution**, not “underwater dinosaurs.”
+Museum mounts and curated fossil exhibits. Use living dolphins only as a **convergent evolution** teaching tool — not as close relatives.
 
 ## How you can help
 
-Support museum collections, open fossil databases, and ocean literacy that connects deep time to living seas.
+Support open fossil databases, museum science, and accurate deep-time ocean literacy.
 
 ## Media note
 

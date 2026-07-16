@@ -93,6 +93,31 @@ function optionalNumber(value: unknown): number | undefined {
   return Number.isFinite(n) ? n : undefined
 }
 
+function normalizeStats(raw: unknown): Artifact["stats"] | undefined {
+  const rec = asRecord(raw)
+  if (!rec) return undefined
+  const stats: Record<string, string> = {}
+  for (const [k, v] of Object.entries(rec)) {
+    if (v === undefined || v === null || v === "") continue
+    stats[k] = String(v)
+  }
+  return Object.keys(stats).length ? stats : undefined
+}
+
+function normalizeCompare(raw: unknown): Artifact["compare"] | undefined {
+  if (!Array.isArray(raw)) return undefined
+  const items = raw
+    .map(asRecord)
+    .filter((r): r is Record<string, unknown> => Boolean(r))
+    .map((r) => ({
+      target_id: String(r.target_id ?? r.id ?? ""),
+      label: String(r.label ?? r.title ?? "Compare"),
+      note: r.note ? String(r.note) : undefined,
+    }))
+    .filter((r) => r.target_id)
+  return items.length ? items : undefined
+}
+
 function normalizeMedia(raw: unknown): ArtifactMedia | undefined {
   const media = asRecord(raw)
   if (!media) return undefined
@@ -259,6 +284,8 @@ export function getAllArtifacts(): Artifact[] {
       license: data.license ? String(data.license) : undefined,
       media: normalizeMedia(data.media),
       mapLayer: Boolean(outputs.map_layer),
+      stats: normalizeStats(data.stats),
+      compare: normalizeCompare(data.compare),
     })
   }
 

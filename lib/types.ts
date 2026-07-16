@@ -144,6 +144,26 @@ export interface ArtifactMedia {
   review?: ArtifactMediaReview
 }
 
+/** Structured at-a-glance metrics (ocean living + deep-time paleo). */
+export interface SpeciesStats {
+  period?: string
+  length?: string
+  mass?: string
+  diet?: string
+  habitat?: string
+  locomotion?: string
+  range?: string
+  clade?: string
+  discovery?: string
+  [key: string]: string | undefined
+}
+
+export interface CompareLink {
+  target_id: string
+  label: string
+  note?: string
+}
+
 export interface Artifact {
   id: string
   type: ArtifactType
@@ -175,6 +195,8 @@ export interface Artifact {
   license?: string
   media?: ArtifactMedia
   mapLayer?: boolean
+  stats?: SpeciesStats
+  compare?: CompareLink[]
 }
 
 export interface CommonsStats {

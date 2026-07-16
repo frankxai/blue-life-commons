@@ -49,6 +49,13 @@ welfare:
     behaviour: Disturbance of nesting females and hatchlings interrupts reproduction; artificial light disorients hatchlings (ETHICS.md / NOAA Fisheries).
 consensus_state: settled
 last_verified: '2026-06-16'
+stats:
+  period: Living
+  clade: Dermochelyidae
+  length: "Largest living sea turtle"
+  diet: Mostly gelatinous prey (jellyfish)
+  locomotion: Flipper-powered swimming
+  habitat: Tropical to temperate oceans; nesting beaches
 outputs:
   website_path: /species/turtles/leatherback-turtle
   github_path: content/species/turtles/leatherback-turtle.md

@@ -48,6 +48,14 @@ sensitivity:
   generalized_to: regional
 consensus_state: settled
 last_verified: '2026-06-16'
+stats:
+  period: Living
+  clade: Balaenopteridae
+  length: "Up to ~24–30 m"
+  mass: "Largest known animal"
+  diet: Filter feeder (krill)
+  locomotion: Fluke-powered swimming
+  habitat: All major ocean basins
 outputs:
   website_path: /species/cetaceans/blue-whale
   github_path: content/species/cetaceans/blue-whale.md

@@ -45,11 +45,36 @@
       "public_image_url": "/media/species/tylosaurus-proriger.png",
       "public_video_url": "/media/species/tylosaurus-proriger.mp4",
       "tools": ["image_gen", "image_to_video"]
+    },
+    {
+      "id": "liopleurodon-ferox",
+      "image_path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/liopleurodon-ferox.png",
+      "public_image_url": "/media/species/liopleurodon-ferox.png",
+      "tools": ["image_gen"],
+      "aspect_ratio": "16:9",
+      "resolution": "1280x720",
+      "date": "2026-07-16",
+      "image_prompt": "Photorealistic National Geographic documentary still of Liopleurodon ferox, short-necked Jurassic pliosaur marine reptile; massive head, powerful jaws, four flippers, deep blue ocean.",
+      "qa_note": "PASS anatomy gate: short-neck pliosaur, four paddles, horizontal marine swim; no bipedal theropod/T.rex.",
+      "rights_note": "AI-generated concept reconstruction for education — not fossil evidence, identification media, or proof of soft-tissue color/behavior."
+    },
+    {
+      "id": "shonisaurus-popularis",
+      "image_path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/shonisaurus-popularis.png",
+      "public_image_url": "/media/species/shonisaurus-popularis.png",
+      "tools": ["image_gen"],
+      "aspect_ratio": "16:9",
+      "resolution": "1280x720",
+      "date": "2026-07-16",
+      "image_prompt": "Photorealistic National Geographic documentary still of Shonisaurus popularis, large Late Triassic ichthyosaur; dolphin-like body, long snout, crescent tail, open ocean god rays.",
+      "qa_note": "PASS anatomy gate: ichthyosaur body plan, long snout, crescent fluke, flippers; no bipedal theropod/T.rex.",
+      "rights_note": "AI-generated concept reconstruction for education — not fossil evidence, identification media, or proof of soft-tissue color/behavior."
     }
   ],
   "provenance": {
     "generator": "grok-imagine",
     "harness": "grok-cli",
-    "session_date": "2026-07-16"
+    "session_date": "2026-07-16",
+    "batch_note": "2026-07-16 append: liopleurodon-ferox.png + shonisaurus-popularis.png via native Imagine image_gen (Grok), converted JPG→PNG 1280x720 into public/media/species only."
   }
 }

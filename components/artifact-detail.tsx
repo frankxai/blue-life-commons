@@ -14,6 +14,10 @@ import {
   ArtifactCinematicHero,
   ArtifactHeroMedia,
 } from "@/components/artifact-media"
+import {
+  SpeciesCompareMode,
+  SpeciesStatsChips,
+} from "@/components/species-stats-compare"
 import { getApprovedSpeciesMedia } from "@/lib/media"
 import { GITHUB_REPO_URL, cn, formatRegion } from "@/lib/utils"
 import Link from "next/link"
@@ -152,6 +156,10 @@ function QuickFacts({
   guild: string
   tone?: "light" | "dark"
 }) {
+  if (artifact.stats && Object.keys(artifact.stats).length > 0) {
+    return <SpeciesStatsChips stats={artifact.stats} tone={tone} />
+  }
+
   const facts: { label: string; value: string }[] = []
   if (artifact.iucn?.category) {
     facts.push({
@@ -180,7 +188,7 @@ function QuickFacts({
   if (facts.length === 0) return null
 
   return (
-    <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+    <dl className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
       {facts.map((f) => (
         <div
           key={f.label}
@@ -445,10 +453,12 @@ export function ArtifactDetail({
       <Container className="py-10 sm:py-14">
         {guild === "marine-reptiles" && <DeepTimeDepthPanel />}
 
+        {isSpecies && <SpeciesCompareMode artifact={a} />}
+
         <div
           className={cn(
             "grid gap-12",
-            guild === "marine-reptiles" ? "mt-10" : "",
+            guild === "marine-reptiles" || a.compare?.length ? "mt-10" : "",
             "lg:grid-cols-[minmax(0,1fr)_minmax(280px,340px)]",
           )}
         >
@@ -460,7 +470,7 @@ export function ArtifactDetail({
           </div>
 
           <aside
-            className="lg:sticky lg:top-24 lg:self-start"
+            className="lg:sticky lg:top-24 lg:self-start lg:max-h-[calc(100dvh-7rem)] lg:overflow-y-auto"
             aria-label="Provenance"
           >
             <div className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-elevated)]">
