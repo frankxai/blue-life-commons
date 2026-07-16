@@ -1,87 +1,92 @@
 # Scale And Cost Plan
 
-Last updated: 2026-07-05
+Last updated: 2026-07-16
 
 ## Decision
 
-Start and stay with Vercel first. Blue Life Commons already uses Vercel for the Next app and Vercel Blob for approved species images. Adding Cloudflare now would add operational surface before the current catalog or traffic requires it.
+Start and stay with **Vercel first** (app + Blob). Adding Cloudflare R2 is a **later** decision after delivery optimization and measured transfer cost—not before.
 
-The near-term work is image optimization, derivative generation, analytics, and monitoring. Provider migration is a later decision with clear triggers.
+**Full economics, ROI, nonprofit/commercial model, and budget ladders:**  
+[`media-economics-and-roi.md`](media-economics-and-roi.md)
 
-## Current Storage Baseline
+Deep Time media doctrine: [`../deep-time-media-scale-strategy.md`](../deep-time-media-scale-strategy.md)
+
+## Current Storage Baseline (2026-07-16)
 
 | Metric | Current value |
 |---|---:|
-| Approved image records | 31 |
-| Total approved original image bytes | 56,772,199 bytes |
-| Total approved original image storage | 54.142 MB |
-| Average original image size | 1.747 MB |
-| Largest approved original | 5.977 MB |
+| Species pages (approx) | ~44 |
+| Living approved image records on Blob | 31 |
+| Living approved original image storage | ~54.1 MB |
+| Deep Time concept stills | 13 |
+| Deep Time videos (6s 720p) | 13 |
+| Deep Time mirrored on Blob | ~81 MB (26 files) |
+| Combined media order of magnitude | **≪ 1 GB** |
 
-Source: calculated from `records[].storage.source_content_length` in [`species-media-blob-manifest.json`](../../content/media/species-media-blob-manifest.json).
+Sources: `species-media-blob-manifest.json`, `deep-time-blob-manifest.json`, `public/media/species`.
 
 ## Cost Model
 
-The important cost driver is not storing the first 31 images. It is transfer volume, hot image transformation, and larger media types.
+The important cost driver is **not** storing the first ~100 MB. It is:
 
-Vercel Blob pricing should be checked against the live Vercel dashboard before a provider change. As of this plan, the Vercel Blob pricing docs list resource-based pricing for storage and data transfer. The product should track both monthly storage and monthly Blob transfer.
+1. **Blob / CDN transfer** of hot heroes and especially **autoplay video**
+2. **AI generation** (stills + video credits)
+3. **Expert review** time
+4. App Fast Data Transfer and builds
 
-| Scenario | Storage estimate at current average size | Product decision |
+| Scenario | Storage estimate | Product decision |
 |---|---:|---|
-| 31 images | 54.142 MB | Vercel Blob is appropriate |
-| 100 images | About 174.7 MB | Vercel Blob plus generated derivatives |
-| 1,000 images | About 1.747 GB | Vercel Blob remains plausible; monitor transfer and optimize delivery |
-| 10,000 images | About 17.47 GB | Compare Vercel Blob against dedicated object storage and CDN options |
-
-These are storage estimates only. Real monthly cost depends on plan allowances, transfer, cache behavior, image optimization, derivative sizes, and traffic.
+| Current (~130 MB combined) | Trivial | Vercel Blob appropriate |
+| 200 stills + 20 videos | ~0.3–0.5 GB | Blob + WebP derivatives; video click-to-play |
+| 1,000 stills + 50 videos | ~1.5–2.5 GB | Blob still fine; monitor transfer weekly |
+| 10,000 stills + heavy video traffic | 10–90 GB class | R2 + custom media domain after optimization |
 
 ## Vercel-First Optimization Path
 
-1. Store approved originals once in Vercel Blob.
+1. Store approved originals once in Vercel Blob (living + deep-time masters).
 2. Generate deterministic derivatives:
    - `thumb-320.webp`
    - `card-640.webp`
    - `hero-1280.webp`
    - `og-1200x630.jpg`
-   - `full-1920.webp`
-3. Strip EXIF and log checksums before publishing derivatives.
-4. Serve card/hero/OG sizes by surface instead of original files.
-5. Track monthly Blob storage, Blob transfer, image optimization usage, and route traffic.
-6. Keep GitHub limited to metadata, manifests, review records, and scripts.
+3. **Cards never load MP4.** Heroes: poster first; video on intent / muted flagship only.
+4. Strip EXIF; checksum; immutable keys with long cache.
+5. Track monthly Blob storage, Blob transfer, image optimization, route traffic.
+6. Keep GitHub limited to metadata, manifests, review records, scripts.
 
-## Migration Triggers
+## Migration Triggers (Blob → R2 or dual-write)
 
-Re-evaluate Cloudflare R2, S3 plus CDN, or another object-store/CDN architecture when one or more are true:
+- Monthly Blob **transfer** cost material for **two consecutive months** after derivative optimization.
+- Video library multi-GB **and** high play volume.
+- Partner archives, custom media domain, regional controls, or lifecycle policies Blob fits poorly.
+- Review inventory needs a real media DB beyond YAML.
 
-- Monthly Blob transfer cost is material for two consecutive months after derivative optimization.
-- The catalog exceeds 10,000 approved images.
-- Video, audio, 3D, or bulk partner archives become a core public product surface.
-- Partner contracts require custom media domains, signed access, regional controls, or asset lifecycle policies Vercel Blob does not cover well.
-- Review and publication state needs an operational database beyond committed manifests.
-
-Do not migrate because the first image batch feels "big." The current approved originals are about 54.142 MB total.
+Do **not** migrate because the first Deep Time video batch “feels big” (~80 MB).
 
 ## Monitoring
 
 | Signal | Why it matters |
 |---|---|
-| Blob storage GB | Storage cost and catalog scale |
-| Blob transfer GB | Primary operating cost risk |
-| Image optimization usage | Avoid accidental request-time transformation costs |
-| Average delivered image KB | Detect oversized originals reaching cards |
-| p95 species page weight | User experience and bandwidth |
-| 404/blocked image count | Broken manifest or permission issue |
-| Public candidate URL count | Must remain 0 |
+| Blob storage GB | Catalog scale |
+| **Blob transfer GB** | Primary operating cost risk |
+| Image optimization usage | Avoid accidental transform spend |
+| Average delivered image KB | Oversized cards |
+| p95 species page weight | Mobile UX |
+| Video play rate | Whether video earns its cost |
+| Cost per 1k sessions | Unit economics |
 
-## Domain Readiness
+Monthly template: [`metrics/monthly-cost-ledger.TEMPLATE.md`](metrics/monthly-cost-ledger.TEMPLATE.md)
 
-The official domain should be connected only after ownership, DNS records, Vercel domain verification, and certificate issuance are complete. Do not claim `bluelifecommons.org` is live until DNS resolves and the Vercel project lists the domain.
+## Domain
+
+Production domain: **https://bluelifecommons.org** (connected). Keep DNS/Vercel project as SSOT.
 
 ## Sources
 
-- Media storage architecture: [`media-storage-architecture.md`](../visual-system/media-storage-architecture.md)
-- Species Blob manifest: [`species-media-blob-manifest.json`](../../content/media/species-media-blob-manifest.json)
+- Media economics & ROI: [`media-economics-and-roi.md`](media-economics-and-roi.md)
+- Media storage architecture: [`../visual-system/media-storage-architecture.md`](../visual-system/media-storage-architecture.md)
+- Species Blob manifest: [`../../content/media/species-media-blob-manifest.json`](../../content/media/species-media-blob-manifest.json)
+- Deep Time Blob manifest: [`../../content/media/deep-time-blob-manifest.json`](../../content/media/deep-time-blob-manifest.json)
 - Vercel Blob pricing: <https://vercel.com/docs/vercel-blob/usage-and-pricing>
 - Vercel pricing: <https://vercel.com/docs/pricing>
-- Vercel custom domain guide: <https://vercel.com/docs/domains/set-up-custom-domain>
 - Cloudflare R2 pricing: <https://developers.cloudflare.com/r2/pricing/>
