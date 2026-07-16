@@ -21,9 +21,11 @@ const COLUMNS = [
   {
     title: "The commons",
     links: [
+      { href: "/about", label: "About" },
       { href: "/impact", label: "Impact ledger" },
       { href: "/governance", label: "Governance & ethics" },
       { href: "/privacy", label: "Privacy & transparency" },
+      { href: "/terms", label: "Terms of use" },
       { href: "/partners", label: "Partners" },
       { href: "/ecosystem", label: "Ecosystem" },
       { href: "/contribute", label: "Contribute" },
