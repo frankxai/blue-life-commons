@@ -11,10 +11,12 @@ function MediaImage({
   media,
   loading,
   className,
+  fit = "cover",
 }: {
   media: ApprovedSpeciesMedia
   loading: "eager" | "lazy"
   className?: string
+  fit?: "cover" | "contain"
 }) {
   return (
     <img
@@ -23,11 +25,97 @@ function MediaImage({
       loading={loading}
       decoding="async"
       referrerPolicy="no-referrer"
-      className={cn("h-full w-full object-contain", className)}
+      className={cn(
+        "h-full w-full",
+        fit === "cover" ? "object-cover" : "object-contain",
+        className,
+      )}
     />
   )
 }
 
+/** Full-bleed cinematic hero for species pages — large stage, 16:9 video/image. */
+export function ArtifactCinematicHero({
+  artifact,
+  titleNode,
+  metaNode,
+}: {
+  artifact: Artifact
+  titleNode?: React.ReactNode
+  metaNode?: React.ReactNode
+}) {
+  const media = getApprovedSpeciesMedia(artifact)
+  if (!media) return null
+
+  const isConcept = Boolean(media.conceptReconstruction)
+
+  return (
+    <figure className="relative overflow-hidden rounded-none border-b border-abyss-border bg-abyss-deep sm:rounded-3xl sm:border sm:shadow-[var(--shadow-elevated)]">
+      <div className="relative aspect-[16/10] min-h-[280px] w-full sm:aspect-[16/9] sm:min-h-[360px] lg:min-h-[440px] xl:min-h-[520px]">
+        {media.videoUrl ? (
+          <video
+            className="absolute inset-0 h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster={media.imageUrl}
+            aria-label={media.altText}
+          >
+            <source src={media.videoUrl} type="video/mp4" />
+            <MediaImage media={media} loading="eager" fit="cover" />
+          </video>
+        ) : (
+          <MediaImage
+            media={media}
+            loading="eager"
+            fit="cover"
+            className="absolute inset-0"
+          />
+        )}
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-abyss-deep via-abyss-deep/35 to-transparent"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-abyss-deep/50 via-transparent to-transparent"
+          aria-hidden
+        />
+
+        <figcaption className="absolute inset-x-0 bottom-0 p-5 sm:p-8 lg:p-10">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="rounded-full bg-glow px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-abyss-deep">
+              {isConcept ? "Concept reconstruction" : "Approved primary image"}
+            </span>
+            {media.videoUrl && (
+              <span className="rounded-full border border-white/20 bg-black/30 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-sm">
+                Cinematic loop
+              </span>
+            )}
+            {media.rightsStatus && (
+              <span className="rounded-full border border-white/15 bg-black/25 px-2.5 py-1 text-[11px] font-medium capitalize text-white/85 backdrop-blur-sm">
+                {media.rightsStatus.replace(/-/g, " ")}
+              </span>
+            )}
+          </div>
+          {titleNode}
+          {metaNode}
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/80 sm:text-[15px]">
+            {media.altText}
+          </p>
+          {isConcept && (
+            <p className="mt-2 max-w-2xl text-xs leading-relaxed text-white/55">
+              Generated educational art — not fossil evidence, identification
+              media, or proof of soft-tissue color or behavior.
+            </p>
+          )}
+        </figcaption>
+      </div>
+    </figure>
+  )
+}
+
+/** Compact side card (legacy/supporting surfaces). */
 export function ArtifactHeroMedia({ artifact }: { artifact: Artifact }) {
   const media = getApprovedSpeciesMedia(artifact)
   if (!media) return null
@@ -38,7 +126,7 @@ export function ArtifactHeroMedia({ artifact }: { artifact: Artifact }) {
 
   return (
     <figure className="overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-elevated)]">
-      <div className="aspect-[4/3] bg-muted">
+      <div className="aspect-[16/10] bg-abyss-deep">
         {media.videoUrl ? (
           <video
             className="h-full w-full object-cover"
@@ -50,10 +138,10 @@ export function ArtifactHeroMedia({ artifact }: { artifact: Artifact }) {
             aria-label={media.altText}
           >
             <source src={media.videoUrl} type="video/mp4" />
-            <MediaImage media={media} loading="eager" />
+            <MediaImage media={media} loading="eager" fit="cover" />
           </video>
         ) : (
-          <MediaImage media={media} loading="eager" />
+          <MediaImage media={media} loading="eager" fit="cover" />
         )}
       </div>
       <figcaption className="border-t border-border p-4">
@@ -66,53 +154,15 @@ export function ArtifactHeroMedia({ artifact }: { artifact: Artifact }) {
               Cinematic loop
             </span>
           )}
-          {media.rightsStatus && (
-            <span className="rounded-full bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground">
-              {media.rightsStatus.replace(/-/g, " ")}
-            </span>
-          )}
-          {media.imageUrlSource === "vercel_blob" && (
-            <span className="rounded-full bg-kelp/15 px-2.5 py-1 text-xs font-semibold text-foreground">
-              Hosted on Vercel Blob
-            </span>
-          )}
         </div>
         <p className="mt-3 text-sm leading-relaxed text-foreground">
           {media.altText}
         </p>
         {isConcept && (
           <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-            Generated educational art. Not fossil evidence, identification media,
-            or proof of soft-tissue color or behavior.
+            Generated educational art. Not fossil evidence or soft-tissue proof.
           </p>
         )}
-        <dl className="mt-3 grid gap-2 text-xs text-muted-foreground sm:grid-cols-2">
-          {media.creator && (
-            <div>
-              <dt className="font-semibold text-foreground">Creator</dt>
-              <dd className="mt-0.5 line-clamp-2">{media.creator}</dd>
-            </div>
-          )}
-          {media.license && (
-            <div>
-              <dt className="font-semibold text-foreground">License</dt>
-              <dd className="mt-0.5">
-                {media.licenseUrl ? (
-                  <a
-                    href={media.licenseUrl}
-                    target="_blank"
-                    rel="license noopener noreferrer"
-                    className="underline decoration-primary/40 underline-offset-2 transition-colors hover:text-primary hover:decoration-primary"
-                  >
-                    {media.license}
-                  </a>
-                ) : (
-                  media.license
-                )}
-              </dd>
-            </div>
-          )}
-        </dl>
         <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs font-medium">
           {media.sourceUrl && (
             <a
@@ -173,10 +223,11 @@ export function MediaCardPreview({
         className,
       )}
     >
-      <div className="aspect-[4/3] bg-muted">
+      <div className="aspect-[16/10] bg-muted">
         <MediaImage
           media={media}
           loading="lazy"
+          fit="cover"
           className="transition-transform duration-300 group-hover:scale-[1.015]"
         />
       </div>
