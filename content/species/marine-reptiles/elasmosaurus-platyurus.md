@@ -80,6 +80,11 @@ media:
     rights_status: concept-reconstruction
     alt_text: Photoreal concept reconstruction of Elasmosaurus platyurus, a long-necked plesiosaur gliding through sunlit Cretaceous seas with four flippers.
     qa_status: approved
+  video:
+    path: public/media/species/elasmosaurus-platyurus.mp4
+    public_media_url: /media/species/elasmosaurus-platyurus.mp4
+    rights_status: concept-reconstruction
+    notes: Short cinematic loop from concept still; educational motion only.
   embeds:
     - provider: paleobiology_database
       url: https://paleobiodb.org/
