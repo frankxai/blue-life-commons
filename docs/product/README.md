@@ -54,4 +54,5 @@ The rule is simple: grow the catalog without weakening trust. A species page is 
 - Species media pipeline: [`species-media-pipeline.md`](../visual-system/species-media-pipeline.md)
 - Media intelligence strategy: [`media-intelligence-platform-strategy.md`](../visual-system/media-intelligence-platform-strategy.md)
 - Media storage architecture: [`media-storage-architecture.md`](../visual-system/media-storage-architecture.md)
+- Deep Time + living media scale strategy: [`deep-time-media-scale-strategy.md`](../deep-time-media-scale-strategy.md)
 - Species Blob manifest: [`species-media-blob-manifest.json`](../../content/media/species-media-blob-manifest.json)

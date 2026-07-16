@@ -2,12 +2,10 @@
 
 Popular culture often calls these animals “ocean dinosaurs.” **They are not dinosaurs.**
 
-They are **marine reptiles** (and in related deep-time ocean storytelling, other extinct ocean vertebrates) that thrived in Mesozoic seas: mosasaurs, plesiosaurs, pliosaurs, and ichthyosaurs. True dinosaurs were overwhelmingly terrestrial; the ocean apex of the age of dinosaurs was dominated by these swimming reptiles.
+They are **marine reptiles** (and related fully marine reptiles such as thalattosuchian crocodylomorphs) that thrived in Mesozoic seas: mosasaurs, plesiosaurs, pliosaurs, ichthyosaurs, and marine crocs.
 
-This guild is a **special educational section** of Blue Life Commons:
+**True dinosaurs** were overwhelmingly terrestrial. A few dinosaurs (e.g. *Spinosaurus*) show aquatic foraging adaptations, but they are still **dinosaurs**, not the classic “sea monster” marine reptiles. Birds are avian dinosaurs; *Hesperornis* is a diving bird — still not a mosasaur/plesiosaur.
 
-- Sourced claims with review status visible
-- AI hero media labeled as **concept reconstruction** (never fossil evidence)
-- Bridge from living ocean life to deep time
+This guild is a **special educational section** of Blue Life Commons with concept-reconstruction media.
 
-See also sibling project [dino-life-commons](https://github.com/frankxai/dino-life-commons) for terrestrial dinosaurs.
+See `docs/deep-time-media-scale-strategy.md` for roster scale, storage, and living-species media plan.
