@@ -1,11 +1,11 @@
 ---
-id: species-kronosaurus-queenslandicus
+id: species-liopleurodon-ferox
 type: species-page
-title: Kronosaurus queenslandicus
+title: Liopleurodon ferox
 species_group:
   - marine-reptiles
 species:
-  - kronosaurus-queenslandicus
+  - liopleurodon-ferox
 difficulty: intermediate
 audience:
   - student
@@ -46,38 +46,41 @@ sensitivity:
 consensus_state: contested
 last_verified: "2026-07-16"
 stats:
-  period: "Early Cretaceous"
+  period: "Middle–Late Jurassic"
   clade: "Pliosauroidea"
-  length: "Large; exact max length contested"
-  diet: "Apex marine predator"
+  length: "Large; popular media often exaggerates size"
+  diet: "Apex marine predator (model-dependent)"
   locomotion: "Four-flipper swimming"
-  habitat: "Early Cretaceous seas (incl. Australia)"
+  habitat: "Jurassic epicontinental seas"
 compare:
   - target_id: great-white-shark
     label: "Great white shark"
     note: "Living apex predator analogy"
+  - target_id: species-kronosaurus-queenslandicus
+    label: "Kronosaurus"
+    note: "Another short-neck pliosaur body plan"
 outputs:
-  website_path: /species/marine-reptiles/kronosaurus-queenslandicus
-  github_path: content/species/marine-reptiles/kronosaurus-queenslandicus.md
+  website_path: /species/marine-reptiles/liopleurodon-ferox
+  github_path: content/species/marine-reptiles/liopleurodon-ferox.md
   map_layer: false
 impact:
-  claim: Published a sourced deep-time encyclopedia entry for Kronosaurus queenslandicus with concept reconstruction media.
+  claim: Published a sourced deep-time encyclopedia entry for Liopleurodon ferox with concept reconstruction media.
   eligible_for_hypercert: false
 contributors:
   - github: frankxai
 license: CC-BY-4.0
 media:
   primary:
-    asset_id: blc-concept-kronosaurus-queenslandicus-01
-    path: public/media/species/kronosaurus-queenslandicus.png
-    public_media_url: /media/species/kronosaurus-queenslandicus.png
+    asset_id: blc-concept-liopleurodon-ferox-01
+    path: public/media/species/liopleurodon-ferox.png
+    public_media_url: /media/species/liopleurodon-ferox.png
     source_url: https://github.com/frankxai/blue-life-commons
-    original_media_url: /media/species/kronosaurus-queenslandicus.png
+    original_media_url: /media/species/liopleurodon-ferox.png
     creator: Blue Life Commons / Grok Imagine concept reconstruction
     credit: Concept reconstruction — not fossil evidence
     license: CC-BY-4.0
     rights_status: concept-reconstruction
-    alt_text: Photoreal concept reconstruction of Kronosaurus queenslandicus, a short-necked pliosaur with a massive head and four powerful flippers in deep blue Early Cretaceous seas.
+    alt_text: Photoreal concept reconstruction of Liopleurodon ferox, a short-necked Jurassic pliosaur with a massive head and four flippers in deep blue sea.
     qa_status: approved
   embeds:
     - provider: paleobiology_database
@@ -102,44 +105,44 @@ media:
   supporting_assets: []
 ---
 
-# Kronosaurus queenslandicus
+# Liopleurodon ferox
 
-> **Not a dinosaur.** *Kronosaurus* is a short-necked **pliosaur** (within Plesiosauria): big head, robust jaws, four flippers. Some size claims in popular media are inflated — treat extreme lengths as contested.
+> **Not a dinosaur.** *Liopleurodon* is a short-necked **pliosaur**. Documentaries have sometimes inflated its size; this page treats maximum length as **contested** and prefers sourced ranges over hype.
 
 ## At a glance
 
 | Field | Value | Source |
 |---|---|---|
-| Scientific name | *Kronosaurus queenslandicus* | Paleobiology Database / literature |
+| Scientific name | *Liopleurodon ferox* | Paleobiology Database / literature |
 | Guild | Marine reptiles (Plesiosauria · Pliosauroidea) | — |
 | “Ocean dinosaur?” | **No** | Britannica / UCMP |
 | IUCN | **Extinct** | Deep-time convention |
-| Age | Early Cretaceous | Paleobiology literature ranges |
-| Body plan | Short neck, massive skull, four flippers | UCMP / Britannica |
+| Age | Middle–Late Jurassic | Paleobiology literature ranges |
+| Body plan | Short neck, large head, four flippers | UCMP / Britannica |
 
 ## Identification
 
-Pliosaurs are the “big-headed” branch of the plesiosaur body plan, opposite the long-neck elasmosaurids. Expect a deep skull, large conical teeth, and powerful flipper propulsion — not a mosasaur tail-driven lizard silhouette and not a theropod dinosaur.
+Pliosaurs reverse the long-neck elasmosaur silhouette: massive skulls, robust teeth, and four powerful flippers. Do not reconstruct as a mosasaur (tail-driven lizard) or theropod dinosaur.
 
 ## Ecology and behavior
 
-Reconstructed as an apex marine predator capable of taking large vertebrate prey. Exact mass, maximum length, and bite performance remain literature-dependent and partly contested; this page avoids unverified “largest ever” claims.
+Standard ecological framing is apex marine predation on large vertebrate prey. Exact mass, maximum length, and hunting style remain model-dependent — especially where popular media diverges from specimen-based estimates.
 
 ## Conservation status and threats
 
-Extinct. Known from Cretaceous marine deposits, famously associated with Australian material for the type species.
+Extinct. Known from Jurassic marine deposits; always prefer specimen-level citations for scientific work.
 
 ## How to observe responsibly
 
-Prefer specimen-based museum interpretation and peer-reviewed size estimates over documentary hype.
+Museum mounts and peer-reviewed size estimates. Treat entertainment “largest ever” claims as red flags until tied to primary literature.
 
 ## How you can help
 
-Support transparent paleontology communication that distinguishes evidence, inference, and speculation.
+Support transparent paleontology communication that separates evidence, inference, and speculation.
 
 ## Media note
 
-AI reconstruction is educational concept art only.
+Generated hero media is concept reconstruction only.
 
 ## Sources
 

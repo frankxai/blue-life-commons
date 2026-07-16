@@ -9,6 +9,14 @@ species_group:
 species:
 - Carcharodon carcharias
 status: needs-expert-review
+stats:
+  period: Living
+  clade: Lamnidae
+  length: "~3.5–6+ m (adults)"
+  diet: Marine vertebrates (fish, marine mammals)
+  locomotion: Sustained swimming predator
+  habitat: Global temperate oceans
+  range: Temperate coastal & offshore waters
 iucn:
   category: VU
   assessment_date: '2019'

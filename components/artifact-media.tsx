@@ -6,6 +6,7 @@ import {
   getUrlHost,
 } from "@/lib/media"
 import { cn } from "@/lib/utils"
+import { HeroVideoPlayer } from "@/components/hero-video-player"
 
 function MediaImage({
   media,
@@ -51,20 +52,14 @@ export function ArtifactCinematicHero({
 
   return (
     <figure className="relative overflow-hidden rounded-none border-b border-abyss-border bg-abyss-deep sm:rounded-3xl sm:border sm:shadow-[var(--shadow-elevated)]">
-      <div className="relative aspect-[16/10] min-h-[280px] w-full sm:aspect-[16/9] sm:min-h-[360px] lg:min-h-[440px] xl:min-h-[520px]">
+      {/* Mobile-first stage: shorter on phones, tall cinematic on desktop */}
+      <div className="relative aspect-[16/11] min-h-[240px] max-h-[70dvh] w-full sm:aspect-[16/9] sm:min-h-[340px] sm:max-h-none lg:min-h-[420px] xl:min-h-[500px]">
         {media.videoUrl ? (
-          <video
-            className="absolute inset-0 h-full w-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
+          <HeroVideoPlayer
+            src={media.videoUrl}
             poster={media.imageUrl}
-            aria-label={media.altText}
-          >
-            <source src={media.videoUrl} type="video/mp4" />
-            <MediaImage media={media} loading="eager" fit="cover" />
-          </video>
+            ariaLabel={media.altText}
+          />
         ) : (
           <MediaImage
             media={media}
@@ -74,15 +69,15 @@ export function ArtifactCinematicHero({
           />
         )}
         <div
-          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-abyss-deep via-abyss-deep/35 to-transparent"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-abyss-deep via-abyss-deep/40 to-transparent"
           aria-hidden
         />
         <div
-          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-abyss-deep/50 via-transparent to-transparent"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-abyss-deep/55 via-transparent to-transparent"
           aria-hidden
         />
 
-        <figcaption className="absolute inset-x-0 bottom-0 p-5 sm:p-8 lg:p-10">
+        <figcaption className="absolute inset-x-0 bottom-0 p-4 sm:p-7 lg:p-9">
           <div className="flex flex-wrap items-center gap-2">
             <span className="rounded-full bg-glow px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-abyss-deep">
               {isConcept ? "Concept reconstruction" : "Approved primary image"}
@@ -100,7 +95,7 @@ export function ArtifactCinematicHero({
           </div>
           {titleNode}
           {metaNode}
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/80 sm:text-[15px]">
+          <p className="mt-2.5 max-w-3xl text-sm leading-relaxed text-white/80 sm:mt-3 sm:text-[15px]">
             {media.altText}
           </p>
           {isConcept && (
@@ -126,20 +121,13 @@ export function ArtifactHeroMedia({ artifact }: { artifact: Artifact }) {
 
   return (
     <figure className="overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-elevated)]">
-      <div className="aspect-[16/10] bg-abyss-deep">
+      <div className="relative aspect-[16/10] bg-abyss-deep">
         {media.videoUrl ? (
-          <video
-            className="h-full w-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
+          <HeroVideoPlayer
+            src={media.videoUrl}
             poster={media.imageUrl}
-            aria-label={media.altText}
-          >
-            <source src={media.videoUrl} type="video/mp4" />
-            <MediaImage media={media} loading="eager" fit="cover" />
-          </video>
+            ariaLabel={media.altText}
+          />
         ) : (
           <MediaImage media={media} loading="eager" fit="cover" />
         )}

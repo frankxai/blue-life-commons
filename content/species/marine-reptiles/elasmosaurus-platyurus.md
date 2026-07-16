@@ -46,6 +46,17 @@ sensitivity:
   generalized_to: global
 consensus_state: settled
 last_verified: "2026-07-16"
+stats:
+  period: "Late Cretaceous"
+  clade: "Elasmosauridae (Plesiosauria)"
+  length: "~10–14 m incl. neck (ranges)"
+  diet: "Fish & cephalopods (model-dependent)"
+  locomotion: "Four-flipper underwater flight"
+  habitat: "Cretaceous seaway seas"
+compare:
+  - target_id: leatherback-turtle
+    label: "Leatherback turtle"
+    note: "Living marine reptile lineage"
 outputs:
   website_path: /species/marine-reptiles/elasmosaurus-platyurus
   github_path: content/species/marine-reptiles/elasmosaurus-platyurus.md

@@ -45,6 +45,17 @@ sensitivity:
   generalized_to: global
 consensus_state: settled
 last_verified: "2026-07-16"
+stats:
+  period: "Late Cretaceous"
+  clade: "Mosasauridae"
+  length: "~8–14 m (typical reconstructions)"
+  diet: "Marine vertebrate predator"
+  locomotion: "Tail-powered swimming"
+  habitat: "Western Interior Seaway & warm seas"
+compare:
+  - target_id: great-white-shark
+    label: "Great white shark"
+    note: "Living apex predator analogy"
 outputs:
   website_path: /species/marine-reptiles/tylosaurus-proriger
   github_path: content/species/marine-reptiles/tylosaurus-proriger.md

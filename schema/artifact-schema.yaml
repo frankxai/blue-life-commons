@@ -173,6 +173,24 @@ properties:
   last_verified:
     description: "ISO date the artifact's factual claims were last checked against current sources. 'approved' is not 'still true'; this surfaces staleness."
     type: string
+  stats:
+    description: "Structured at-a-glance metrics for species pages (period, length, diet, habitat, etc.). Rendered as chips — not a substitute for cited body text."
+    type: object
+    additionalProperties:
+      type: string
+  compare:
+    description: "Optional comparison links to other commons artifacts (e.g. deep-time vs living apex predators)."
+    type: array
+    items:
+      type: object
+      required: [target_id, label]
+      properties:
+        target_id:
+          type: string
+        label:
+          type: string
+        note:
+          type: string
   consent:
     description: "For local-knowledge artifacts: provenance + consent record for community/Indigenous knowledge (who shared it, permission to publish, attribution preference)."
     type: object

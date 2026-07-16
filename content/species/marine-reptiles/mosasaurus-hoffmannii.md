@@ -46,6 +46,20 @@ sensitivity:
   generalized_to: global
 consensus_state: settled
 last_verified: "2026-07-16"
+stats:
+  period: "Late Cretaceous (~70–66 Ma)"
+  clade: "Mosasauridae"
+  length: "~10–17 m (literature ranges)"
+  diet: "Apex marine predator"
+  locomotion: "Tail-powered swimming"
+  habitat: "Open / epicontinental seas"
+compare:
+  - target_id: great-white-shark
+    label: "Great white shark"
+    note: "Living apex predator analogy"
+  - target_id: species-blue-whale
+    label: "Blue whale"
+    note: "Scale of ocean giants"
 outputs:
   website_path: /species/marine-reptiles/mosasaurus-hoffmannii
   github_path: content/species/marine-reptiles/mosasaurus-hoffmannii.md
