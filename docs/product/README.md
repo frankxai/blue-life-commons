@@ -27,6 +27,8 @@ The rule is simple: grow the catalog without weakening trust. A species page is 
 | [`operating-team.md`](operating-team.md) | Role design, handoffs, RACI, and agent execution model |
 | [`validation-and-excellence-loop.md`](validation-and-excellence-loop.md) | Weekly operating cadence, gates, QA, and release discipline |
 | [`scale-and-cost-plan.md`](scale-and-cost-plan.md) | Vercel-first scale plan, cost model, optimization path, and migration triggers |
+| [`media-economics-and-roi.md`](media-economics-and-roi.md) | Full media economics, budgets, ROI, nonprofit/commercial model, tech ladder |
+| [`metrics/monthly-cost-ledger.TEMPLATE.md`](metrics/monthly-cost-ledger.TEMPLATE.md) | Monthly spend + inventory ledger template |
 
 ## Decision Rules
 
