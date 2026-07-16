@@ -52,7 +52,7 @@ Blue Life Commons already forbids publishing unapproved candidate image URLs as 
 2. **Rehost MP4:** only with clear PD/CC + ethics QA + Blob storage path.  
 3. **AI image→video:** marketing/flagship only; label concept; tight disk budgets.
 
-## Blue Whale pilot inventory
+## Blue Whale production inventory (2026-07-16)
 
 ### Real stills (gallery)
 
@@ -60,11 +60,19 @@ Blue Life Commons already forbids publishing unapproved candidate image URLs as 
 2. `Blue_Whale_001_body_bw.jpg` — body plan  
 3. `Blue_whale_tail_fluke.JPG` — fluke  
 4. `Anim1754_-_Flickr_-_NOAA_Photo_Library.jpg` — second NOAA surface  
+5. Rotated Anim1754 crop — horizontal teaching composition  
 
 ### Concept stills (gallery)
 
-5. Scale concept panel (generated)  
-6. Mother–calf educational concept (generated)
+6. Underwater side profile  
+7. Scale concept panel (bus metaphor)  
+8. Mother–calf educational concept  
+9. Lunge-feeding / krill concept  
+10. Surface columnar blow concept  
+
+### Generated motion
+
+- `blue-whale-underwater-side-concept.mp4` — muted ~6s hero loop (concept reconstruction; poster = NOAA primary)
 
 ### Video link-outs
 

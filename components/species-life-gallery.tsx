@@ -46,6 +46,7 @@ export function SpeciesLifeGallery({ artifact }: { artifact: Artifact }) {
           {gallery.map((item) => {
             const stage = formatTag(item.life_stage)
             const angle = formatTag(item.angle)
+            const role = formatTag(item.role)
             const sourceHost = getUrlHost(item.source_url)
             return (
               <figure
@@ -82,6 +83,11 @@ export function SpeciesLifeGallery({ artifact }: { artifact: Artifact }) {
                     {angle && (
                       <span className="rounded-full border border-white/20 bg-black/35 px-2 py-0.5 text-[10px] font-medium capitalize text-white backdrop-blur-sm">
                         {angle}
+                      </span>
+                    )}
+                    {role && (
+                      <span className="rounded-full border border-white/15 bg-black/30 px-2 py-0.5 text-[10px] font-medium capitalize text-white/90 backdrop-blur-sm">
+                        {role}
                       </span>
                     )}
                   </div>

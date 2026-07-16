@@ -7,6 +7,7 @@
   "tool": "image_gen",
   "aspect_ratio": "16:9",
   "created_at": "2026-07-16",
+  "updated_at": "2026-07-16",
   "assets": [
     {
       "id": "blue-whale-scale-concept",
@@ -29,7 +30,40 @@
       "rights_status": "concept-reconstruction",
       "model": "grok-imagine",
       "prompt": "Educational concept reconstruction, landscape cinematic composition: adult blue whale mother swimming calmly through open deep-blue ocean with a smaller blue whale calf swimming close beside her, peaceful documentary wildlife style, realistic cetacean anatomy, mottled blue-grey skin, soft shafts of light filtering from the surface, gentle bubbles, serene open water with no human presence. Soft natural underwater lighting, photorealistic educational nature documentary aesthetic, high detail. No humans, no boats, no nets, no text, no watermarks, no logos."
+    },
+    {
+      "id": "blue-whale-lunge-feed-concept",
+      "path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/gallery/blue-whale-lunge-feed-concept.png",
+      "relative_path": "public/media/species/gallery/blue-whale-lunge-feed-concept.png",
+      "filename": "blue-whale-lunge-feed-concept.png",
+      "type": "educational-concept-reconstruction",
+      "aspect_ratio": "16:9",
+      "rights_status": "concept-reconstruction",
+      "model": "grok-imagine",
+      "prompt": "Photoreal cinematic nature-documentary still of an adult blue whale lunge-feeding near the ocean surface through a dense reddish-orange krill swarm. Mouth wide open with pale baleen plates clearly visible, mottled blue-grey elongated body, small dorsal fin set far back on the long body, accurate rorqual anatomy. Sunlit turquoise surface water, clouds of krill and bubbles, educational wildlife-film aesthetic, 16:9 landscape. No boats, no humans, no text, no watermarks, no logos."
+    },
+    {
+      "id": "blue-whale-blow-surface-concept",
+      "path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/gallery/blue-whale-blow-surface-concept.png",
+      "relative_path": "public/media/species/gallery/blue-whale-blow-surface-concept.png",
+      "filename": "blue-whale-blow-surface-concept.png",
+      "type": "educational-concept-reconstruction",
+      "aspect_ratio": "16:9",
+      "rights_status": "concept-reconstruction",
+      "model": "grok-imagine",
+      "prompt": "Photoreal cinematic nature-documentary still of an adult blue whale at the open ocean surface exhaling a tall columnar blow of misty spray against a clear sea sky. Broad flat U-shaped rostrum, mottled blue-grey skin, long streamlined body, small far-back dorsal fin partially visible. Educational wildlife-film style, vast open ocean horizon, soft natural daylight, 16:9 landscape. No boats, no people, no text, no watermarks, no logos."
+    },
+    {
+      "id": "blue-whale-underwater-side-concept",
+      "path": "C:/Users/frank/starlight/repos/blue-life-commons/public/media/species/gallery/blue-whale-underwater-side-concept.png",
+      "relative_path": "public/media/species/gallery/blue-whale-underwater-side-concept.png",
+      "filename": "blue-whale-underwater-side-concept.png",
+      "type": "educational-concept-reconstruction",
+      "aspect_ratio": "16:9",
+      "rights_status": "concept-reconstruction",
+      "model": "grok-imagine",
+      "prompt": "Photoreal cinematic underwater side-profile of a solitary adult blue whale swimming left to right through open blue ocean. Accurate rorqual anatomy: long slender elongated body, mottled blue-grey skin, small dorsal fin set far back, broad flukes, no humpback knobs or tubercles. Soft volumetric light rays filtering from above, clean clear blue water, educational nature-documentary aesthetic, 16:9 landscape. No other animals, no boats, no humans, no text, no watermarks, no logos."
     }
   ],
-  "notes": "Native Imagine image_gen only. Concept-reconstruction educational assets for Blue Life Commons species gallery. Local paths only; no third-party stock."
+  "notes": "Native Imagine image_gen only. Concept-reconstruction educational assets for Blue Life Commons species gallery. Local paths only; no third-party stock. Existing scale + mother-calf retained; lunge-feed, blow-surface, and underwater-side added 2026-07-16."
 }

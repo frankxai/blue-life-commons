@@ -74,7 +74,9 @@ export function getApprovedSpeciesMedia(
   const ownedStorageUrl = cleanText(ownedBlob?.storage?.blob_url)
   const conceptReconstruction =
     primary.rights_status === "concept-reconstruction" ||
-    review?.curation_decision === "approve_concept_reconstruction_deep_time"
+    review?.curation_decision === "approve_concept_reconstruction_deep_time" ||
+    video?.rights_status === "concept-reconstruction" ||
+    video?.rights_status === "generated-owned"
   const imageUrl = ownedStorageUrl ?? primary.public_media_url
   const imageUrlSource: ApprovedSpeciesMedia["imageUrlSource"] = ownedStorageUrl
     ? "vercel_blob"
