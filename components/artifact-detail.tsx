@@ -10,7 +10,10 @@ import {
   WelfareBadge,
 } from "@/components/badges"
 import { ArtifactCard } from "@/components/artifact-card"
-import { ArtifactHeroMedia } from "@/components/artifact-media"
+import {
+  ArtifactCinematicHero,
+  ArtifactHeroMedia,
+} from "@/components/artifact-media"
 import { getApprovedSpeciesMedia } from "@/lib/media"
 import { GITHUB_REPO_URL, cn, formatRegion } from "@/lib/utils"
 import Link from "next/link"
@@ -21,7 +24,7 @@ function Breadcrumb({ trail }: { trail: { label: string; href?: string }[] }) {
       <ol className="flex flex-wrap items-center gap-1.5">
         {trail.map((item, i) => (
           <li key={item.label} className="flex items-center gap-1.5">
-            {i > 0 && <span aria-hidden>/</span>}
+            {i > 0 && <span aria-hidden className="text-border">/</span>}
             {item.href ? (
               <Link href={item.href} className="transition-colors hover:text-primary">
                 {item.label}
@@ -48,12 +51,237 @@ function MetaRow({ label, value }: { label: string; value?: React.ReactNode }) {
   )
 }
 
-function BridgeRail({ artifact }: { artifact: Artifact }) {
-  // folder-based guild from path
-  const parts = artifact.path.split(/[/\\]/)
-  const idx = parts.indexOf("species")
-  const guild = idx >= 0 && parts[idx + 1] ? parts[idx + 1] : "other"
+/** Parse "Common Name (Genus species)" or bare binomial into display parts. */
+function splitSpeciesTitle(title: string): {
+  display: string
+  scientific?: string
+  isBinomial: boolean
+} {
+  const paren = title.match(/^(.*?)\s*\(([^)]+)\)\s*$/)
+  if (paren) {
+    return {
+      display: paren[1].trim(),
+      scientific: paren[2].trim(),
+      isBinomial: true,
+    }
+  }
+  // Bare scientific binomial: Genus species [optional subsp]
+  const binomial = title.match(/^([A-Z][a-z]+(?:\s+[a-z]+(?:\s+[a-z]+)?)?)$/)
+  if (binomial) {
+    return {
+      display: binomial[1],
+      scientific: binomial[1],
+      isBinomial: true,
+    }
+  }
+  return { display: title, isBinomial: false }
+}
 
+function SpeciesTitle({
+  title,
+  onDark = false,
+}: {
+  title: string
+  onDark?: boolean
+}) {
+  const parts = splitSpeciesTitle(title)
+  const text = onDark ? "text-white" : "text-foreground"
+  const muted = onDark ? "text-white/70" : "text-muted-foreground"
+
+  if (parts.scientific && parts.display !== parts.scientific) {
+    return (
+      <div className="mt-4 max-w-3xl">
+        <h1
+          className={cn(
+            "text-balance font-serif text-3xl font-semibold leading-[1.08] tracking-[-0.02em] sm:text-4xl lg:text-[2.75rem]",
+            text,
+          )}
+        >
+          {parts.display}
+        </h1>
+        <p
+          className={cn(
+            "mt-2 font-sans text-lg font-medium italic leading-snug tracking-tight sm:text-xl",
+            muted,
+          )}
+        >
+          {parts.scientific}
+        </p>
+      </div>
+    )
+  }
+
+  if (parts.isBinomial) {
+    // Scientific-only titles: italic sans, not heavy serif (reads cleaner).
+    return (
+      <h1
+        className={cn(
+          "mt-4 max-w-3xl text-balance font-sans text-3xl font-semibold italic leading-[1.12] tracking-[-0.025em] sm:text-4xl lg:text-[2.65rem]",
+          text,
+        )}
+      >
+        {parts.display}
+      </h1>
+    )
+  }
+
+  return (
+    <h1
+      className={cn(
+        "mt-4 max-w-3xl text-balance font-serif text-3xl font-semibold leading-[1.08] tracking-[-0.02em] sm:text-4xl lg:text-[2.75rem]",
+        text,
+      )}
+    >
+      {parts.display}
+    </h1>
+  )
+}
+
+function guildFromPath(path: string): string {
+  const parts = path.split(/[/\\]/)
+  const idx = parts.indexOf("species")
+  return idx >= 0 && parts[idx + 1] ? parts[idx + 1] : "other"
+}
+
+function QuickFacts({
+  artifact,
+  guild,
+  tone = "light",
+}: {
+  artifact: Artifact
+  guild: string
+  tone?: "light" | "dark"
+}) {
+  const facts: { label: string; value: string }[] = []
+  if (artifact.iucn?.category) {
+    facts.push({
+      label: "Status",
+      value:
+        artifact.iucn.category === "EX"
+          ? "Extinct (fossil)"
+          : artifact.iucn.category,
+    })
+  }
+  if (guild === "marine-reptiles") {
+    facts.push({ label: "Guild", value: "Marine reptile · Deep Time" })
+    facts.push({ label: "Not a dinosaur", value: "Mesozoic ocean vertebrate" })
+  } else if (artifact.species_group?.[0]) {
+    facts.push({
+      label: "Guild",
+      value: artifact.species_group[0].replace(/-/g, " "),
+    })
+  }
+  if (artifact.difficulty) {
+    facts.push({ label: "Reading level", value: artifact.difficulty })
+  }
+  if (artifact.sources.length) {
+    facts.push({ label: "Sources", value: String(artifact.sources.length) })
+  }
+  if (facts.length === 0) return null
+
+  return (
+    <dl className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+      {facts.map((f) => (
+        <div
+          key={f.label}
+          className={cn(
+            "rounded-xl border px-3.5 py-3",
+            tone === "dark"
+              ? "border-abyss-border bg-white/5"
+              : "border-border bg-card/80",
+          )}
+        >
+          <dt
+            className={cn(
+              "text-[11px] font-semibold uppercase tracking-[0.12em]",
+              tone === "dark" ? "text-abyss-muted" : "text-muted-foreground",
+            )}
+          >
+            {f.label}
+          </dt>
+          <dd
+            className={cn(
+              "mt-1 text-sm font-semibold capitalize leading-snug",
+              tone === "dark" ? "text-abyss-foreground" : "text-foreground",
+            )}
+          >
+            {f.value}
+          </dd>
+        </div>
+      ))}
+    </dl>
+  )
+}
+
+function DeepTimeDepthPanel() {
+  return (
+    <section
+      aria-labelledby="depth-heading"
+      className="mt-10 rounded-2xl border border-border bg-secondary/70 p-6 sm:p-8"
+    >
+      <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">
+        How to use this page
+      </p>
+      <h2
+        id="depth-heading"
+        className="mt-2 font-serif text-2xl font-semibold tracking-tight text-foreground"
+      >
+        Read deep time with living-ocean tools
+      </h2>
+      <div className="mt-5 grid gap-4 sm:grid-cols-3">
+        {[
+          {
+            t: "Correct the myth",
+            d: "“Ocean dinosaur” is pop culture. These animals are marine reptiles (and related deep-time ocean vertebrates), not Dinosauria.",
+          },
+          {
+            t: "Compare body plans",
+            d: "Mosasaurs ≈ marine lizards with tails; plesiosaurs ≈ four flippers; ichthyosaurs ≈ dolphin-like. Use the living bridges for ecological analogy only.",
+          },
+          {
+            t: "Trust the labels",
+            d: "Hero media is concept reconstruction. Claims stay sourced; review gates stay visible until experts approve.",
+          },
+        ].map((item) => (
+          <div
+            key={item.t}
+            className="rounded-xl border border-border bg-card p-4"
+          >
+            <h3 className="text-sm font-semibold text-foreground">{item.t}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              {item.d}
+            </p>
+          </div>
+        ))}
+      </div>
+      <div className="mt-5 flex flex-wrap gap-3 text-sm font-semibold">
+        <Link href="/species/deep-time" className="text-primary hover:underline">
+          Deep Time hub
+        </Link>
+        <Link
+          href="/species/sharks-rays/great-white-shark"
+          className="text-primary hover:underline"
+        >
+          Compare: great white
+        </Link>
+        <Link
+          href="/species/cetaceans/blue-whale"
+          className="text-primary hover:underline"
+        >
+          Compare: blue whale
+        </Link>
+        <Link
+          href="/species/turtles/leatherback-turtle"
+          className="text-primary hover:underline"
+        >
+          Compare: leatherback
+        </Link>
+      </div>
+    </section>
+  )
+}
+
+function BridgeRail({ guild }: { guild: string }) {
   if (guild === "marine-reptiles") {
     return (
       <div className="mt-5 rounded-xl border border-primary/20 bg-primary/8 p-4">
@@ -61,8 +289,8 @@ function BridgeRail({ artifact }: { artifact: Artifact }) {
           Deep Time bridge
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-foreground">
-          This entry is a Mesozoic marine reptile — not a dinosaur. Compare body
-          plans with living ocean apex predators and sea turtles.
+          Mesozoic marine reptile — not a dinosaur. Compare body plans with
+          living ocean apex predators and sea turtles.
         </p>
         <div className="mt-3 flex flex-col gap-2 text-sm font-semibold">
           <Link href="/species/deep-time" className="text-primary hover:underline">
@@ -92,8 +320,8 @@ function BridgeRail({ artifact }: { artifact: Artifact }) {
           Through deep time
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-          Curious about “ocean dinosaurs”? Start with Mesozoic marine reptiles —
-          mosasaurs, plesiosaurs, and ichthyosaurs — in the Deep Time section.
+          Curious about “ocean dinosaurs”? Start with Mesozoic marine reptiles
+          in the Deep Time section.
         </p>
         <Link
           href="/species/deep-time"
@@ -121,53 +349,109 @@ export function ArtifactDetail({
   const editUrl = `${GITHUB_REPO_URL}/blob/main/${a.githubPath}`
   const approvedMedia = getApprovedSpeciesMedia(a)
   const impactIsPublished = a.status === "approved" || a.status === "published"
-  const parts = a.path.split(/[/\\]/)
-  const spIdx = parts.indexOf("species")
-  const guildFolder = spIdx >= 0 && parts[spIdx + 1] ? parts[spIdx + 1] : ""
+  const guild = guildFromPath(a.path)
+  const isSpecies = a.type === "species-page"
+  const cinematic = Boolean(isSpecies && approvedMedia)
 
   return (
     <article>
-      <header className="border-b border-border bg-secondary">
-        <Container className="py-10 sm:py-14">
-          <Breadcrumb trail={trail} />
-          <div
-            className={cn(
-              "mt-6 grid gap-8",
-              approvedMedia &&
-                "lg:grid-cols-[minmax(0,1fr)_minmax(320px,460px)] lg:items-end",
-            )}
-          >
-            <div>
-              <div className="flex flex-wrap items-center gap-2">
-                <TypeChip type={a.type} />
-                <StatusPill status={a.status} />
-                {guildFolder === "marine-reptiles" && (
-                  <Chip tone="primary">Deep Time</Chip>
-                )}
-                {a.sensitivity?.tier === "sensitive" && (
-                  <Chip tone="accent">Location generalized</Chip>
-                )}
-              </div>
-              <h1 className="mt-4 max-w-3xl text-balance font-serif text-3xl font-semibold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-                {a.title}
-              </h1>
-              <div className="mt-5 flex flex-wrap items-center gap-3">
-                <IucnBadge category={a.iucn?.category} />
-                <WelfareBadge state={a.welfare?.state} />
-                {a.region?.map((r) => (
-                  <Chip key={r} tone="primary">
-                    {formatRegion(r)}
-                  </Chip>
-                ))}
-              </div>
+      {/* Cinematic species hero — large media stage first */}
+      {cinematic ? (
+        <header className="border-b border-border bg-abyss text-abyss-foreground">
+          <Container className="py-6 sm:py-8 lg:py-10">
+            <div className="text-abyss-muted [&_a]:text-abyss-muted [&_a:hover]:text-glow">
+              <Breadcrumb trail={trail} />
             </div>
-            <ArtifactHeroMedia artifact={a} />
-          </div>
-        </Container>
-      </header>
+
+            <div className="mt-5 flex flex-wrap items-center gap-2">
+              <TypeChip type={a.type} />
+              <StatusPill status={a.status} />
+              {guild === "marine-reptiles" && (
+                <Chip tone="primary">Deep Time</Chip>
+              )}
+            </div>
+
+            <div className="mt-5 sm:mt-6">
+              <ArtifactCinematicHero
+                artifact={a}
+                titleNode={
+                  <div className="mt-4">
+                    <SpeciesTitle title={a.title} onDark />
+                  </div>
+                }
+                metaNode={
+                  <div className="mt-4 flex flex-wrap items-center gap-2">
+                    <IucnBadge category={a.iucn?.category} />
+                    <WelfareBadge state={a.welfare?.state} />
+                    {a.region?.map((r) => (
+                      <Chip key={r} tone="primary">
+                        {formatRegion(r)}
+                      </Chip>
+                    ))}
+                  </div>
+                }
+              />
+            </div>
+
+            <div className="mt-6">
+              <QuickFacts artifact={a} guild={guild} tone="dark" />
+            </div>
+          </Container>
+        </header>
+      ) : (
+        <header className="border-b border-border bg-secondary">
+          <Container className="py-10 sm:py-14">
+            <Breadcrumb trail={trail} />
+            <div
+              className={cn(
+                "mt-6 grid gap-8",
+                approvedMedia &&
+                  "lg:grid-cols-[minmax(0,1fr)_minmax(320px,520px)] lg:items-end",
+              )}
+            >
+              <div>
+                <div className="flex flex-wrap items-center gap-2">
+                  <TypeChip type={a.type} />
+                  <StatusPill status={a.status} />
+                  {guild === "marine-reptiles" && (
+                    <Chip tone="primary">Deep Time</Chip>
+                  )}
+                  {a.sensitivity?.tier === "sensitive" && (
+                    <Chip tone="accent">Location generalized</Chip>
+                  )}
+                </div>
+                <SpeciesTitle title={a.title} />
+                <div className="mt-5 flex flex-wrap items-center gap-3">
+                  <IucnBadge category={a.iucn?.category} />
+                  <WelfareBadge state={a.welfare?.state} />
+                  {a.region?.map((r) => (
+                    <Chip key={r} tone="primary">
+                      {formatRegion(r)}
+                    </Chip>
+                  ))}
+                </div>
+                {isSpecies && (
+                  <div className="mt-6">
+                    <QuickFacts artifact={a} guild={guild} />
+                  </div>
+                )}
+              </div>
+              {approvedMedia && <ArtifactHeroMedia artifact={a} />}
+            </div>
+          </Container>
+        </header>
+      )}
 
       <Container className="py-10 sm:py-14">
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_320px]">
+        {guild === "marine-reptiles" && <DeepTimeDepthPanel />}
+
+        <div
+          className={cn(
+            "grid gap-12",
+            guild === "marine-reptiles" ? "mt-10" : "",
+            "lg:grid-cols-[minmax(0,1fr)_minmax(280px,340px)]",
+          )}
+        >
           <div>
             <div
               className="prose-ocean"
@@ -175,8 +459,11 @@ export function ArtifactDetail({
             />
           </div>
 
-          <aside className="lg:sticky lg:top-24 lg:self-start" aria-label="Provenance">
-            <div className="rounded-2xl border border-border bg-card p-6">
+          <aside
+            className="lg:sticky lg:top-24 lg:self-start"
+            aria-label="Provenance"
+          >
+            <div className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-elevated)]">
               <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
                 Provenance
               </h2>
@@ -237,7 +524,7 @@ export function ArtifactDetail({
                 </div>
               )}
 
-              <BridgeRail artifact={a} />
+              <BridgeRail guild={guild} />
 
               {a.impact?.claim && (
                 <div className="mt-5 rounded-xl bg-primary/8 p-4">
@@ -249,13 +536,6 @@ export function ArtifactDetail({
                   <p className="mt-2 text-sm leading-relaxed text-foreground">
                     {a.impact.claim}
                   </p>
-                  {a.impact.eligible_for_hypercert && (
-                    <p className="mt-2 text-xs font-medium text-primary">
-                      {impactIsPublished
-                        ? "Hypercert eligibility metadata · not proof of issuance"
-                        : "Eligibility metadata only · not issued or certified"}
-                    </p>
-                  )}
                 </div>
               )}
 
@@ -278,13 +558,13 @@ export function ArtifactDetail({
           >
             <h2
               id="sources-heading"
-              className="font-serif text-2xl font-semibold text-foreground"
+              className="font-serif text-2xl font-semibold tracking-tight text-foreground"
             >
               Sources ({a.sources.length})
             </h2>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              Every claim in this artifact traces to one of the citations below.
-              Anything that could not be sourced was left out.
+              Every claim traces to one of the citations below. Anything that
+              could not be sourced was left out.
             </p>
             <ol className="mt-6 grid gap-3 sm:grid-cols-2">
               {a.sources.map((s, i) => (
@@ -323,7 +603,7 @@ export function ArtifactDetail({
           >
             <h2
               id="related-heading"
-              className="font-serif text-2xl font-semibold text-foreground"
+              className="font-serif text-2xl font-semibold tracking-tight text-foreground"
             >
               Related in the commons
             </h2>

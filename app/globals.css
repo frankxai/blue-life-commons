@@ -103,32 +103,37 @@
   /* Editorial prose rendered from markdown */
   .prose-ocean {
     color: var(--color-foreground);
+    font-family: var(--font-sans);
     font-size: 1.0625rem;
-    line-height: 1.75;
+    line-height: 1.78;
+    letter-spacing: -0.005em;
   }
   .prose-ocean > * + * {
     margin-top: 1.15em;
   }
   .prose-ocean h2 {
     font-family: var(--font-serif);
-    font-size: 1.6rem;
-    line-height: 1.2;
+    font-size: clamp(1.35rem, 1.2rem + 0.6vw, 1.65rem);
+    line-height: 1.22;
     font-weight: 600;
-    margin-top: 2.4rem;
-    letter-spacing: -0.01em;
+    margin-top: 2.5rem;
+    letter-spacing: -0.02em;
     color: var(--color-foreground);
   }
   .prose-ocean h3 {
     font-family: var(--font-serif);
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    margin-top: 1.8rem;
+    margin-top: 1.85rem;
+    letter-spacing: -0.015em;
     color: var(--color-foreground);
   }
   .prose-ocean h4 {
+    font-family: var(--font-sans);
     font-weight: 650;
-    font-size: 1.02rem;
+    font-size: 1rem;
     margin-top: 1.4rem;
+    letter-spacing: -0.01em;
   }
   .prose-ocean p,
   .prose-ocean li {
@@ -159,7 +164,10 @@
   .prose-ocean blockquote {
     border-left: 3px solid var(--color-accent);
     padding-left: 1rem;
+    font-family: var(--font-serif);
     font-style: italic;
+    font-size: 1.05em;
+    line-height: 1.55;
     color: var(--color-muted-foreground);
   }
   .prose-ocean code {
@@ -184,25 +192,46 @@
   .prose-ocean table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.92rem;
+    font-size: 0.9rem;
+    font-family: var(--font-sans);
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .prose-ocean thead,
+  .prose-ocean tbody,
+  .prose-ocean tr {
+    width: 100%;
   }
   .prose-ocean th,
   .prose-ocean td {
     border: 1px solid var(--color-border);
-    padding: 0.5rem 0.7rem;
+    padding: 0.55rem 0.75rem;
     text-align: left;
+    vertical-align: top;
   }
   .prose-ocean th {
     background: var(--color-muted);
     font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .prose-ocean td {
+    background: var(--color-card);
+  }
+  .prose-ocean em {
+    font-style: italic;
+    font-family: var(--font-sans);
+  }
+  .prose-ocean strong {
+    font-weight: 650;
+    color: var(--color-foreground);
   }
   .prose-ocean hr {
     border: none;
     border-top: 1px solid var(--color-border);
     margin: 2rem 0;
-  }
-  .prose-ocean em {
-    font-style: italic;
   }
 
   /* subtle grid / texture for abyss surfaces */

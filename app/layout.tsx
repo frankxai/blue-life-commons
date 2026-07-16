@@ -20,6 +20,7 @@ const newsreader = Newsreader({
   variable: "--font-newsreader",
   display: "swap",
   style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700"],
 })
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://bluelifecommons.org"
