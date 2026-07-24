@@ -42,16 +42,78 @@ const UNAVAILABLE_GITHUB_OWNER = "frankxai"
 const UNAVAILABLE_GITHUB_REPOSITORY = "ocean-intelligence-system"
 const UNICODE_HOST_DOTS = /[\u3002\uFF0E\uFF61]/gu
 const VALID_PERCENT_RUN = /(?:%[0-9A-Fa-f]{2})+/gu
-// These expressions only isolate reference-shaped text. The blocking decision
-// is made after WHATWG URL parsing and exact canonical owner/repository comparison.
-const REFERENCE_FRAGMENT =
-  /[^\s<>"'`()\[\]{}~!,;=|&\u00AB\u00BB\u2013\u2014\u2018\u2019\u201C\u201D\u2026]+/gu
+const WHATWG_IGNORED = String.raw`[\t\n\r]*`
+const WHATWG_IGNORED_CHARACTERS = new Set(["\t", "\n", "\r"])
+const HTML_NAMED_REFERENCES = new Map([
+  ["Tab", "\t"],
+  ["NewLine", "\n"],
+  ["amp", "&"],
+  ["apos", "'"],
+  ["bsol", "\\"],
+  ["colon", ":"],
+  ["comma", ","],
+  ["equals", "="],
+  ["gt", ">"],
+  ["lpar", "("],
+  ["lt", "<"],
+  ["nbsp", "\u00A0"],
+  ["num", "#"],
+  ["percnt", "%"],
+  ["period", "."],
+  ["quest", "?"],
+  ["quot", "\""],
+  ["rpar", ")"],
+  ["sol", "/"],
+])
+
+const tolerantSequence = (value) =>
+  [...value].map((character) => `${character}${WHATWG_IGNORED}`).join("")
+const TOLERANT_GITHUB_HOST = String.raw`(?:${tolerantSequence("www")}\.${WHATWG_IGNORED})?${tolerantSequence("github")}\.${WHATWG_IGNORED}${tolerantSequence("com")}`
+const URL_REFERENCE_START = new RegExp(
+  [
+    `${tolerantSequence("http")}s?${WHATWG_IGNORED}:${WHATWG_IGNORED}/${WHATWG_IGNORED}/`,
+    `/${WHATWG_IGNORED}/`,
+    String.raw`(?<![A-Za-z0-9.@/?#_-])${TOLERANT_GITHUB_HOST}(?:\.${WHATWG_IGNORED})?(?=[:/]|$)`,
+  ].join("|"),
+  "giu",
+)
+const HARD_URL_BOUNDARY =
+  /[<>"'`\[\]{}|=;&~*! \f\v\u00A0\u00AB\u00BB\u2013\u2014\u2018\u2019\u201C\u201D\u2026]/u
 
 function normalizeUnicodeAndSeparators(value) {
   return value
     .normalize("NFKC")
     .replace(UNICODE_HOST_DOTS, ".")
     .replaceAll("\\", "/")
+}
+
+function decodeHtmlCodePoint(value, radix, original) {
+  const codePoint = Number.parseInt(value, radix)
+  if (
+    !Number.isInteger(codePoint) ||
+    codePoint < 1 ||
+    codePoint > 0x10ffff ||
+    (codePoint >= 0xd800 && codePoint <= 0xdfff)
+  ) {
+    return original
+  }
+
+  try {
+    return String.fromCodePoint(codePoint)
+  } catch {
+    return original
+  }
+}
+
+export function decodeHtmlCharacterReferences(value) {
+  return value.replace(
+    /&(?:#[xX]([0-9A-Fa-f]+);?|#([0-9]+);?|([A-Za-z][A-Za-z0-9]+);)/gu,
+    (reference, hexadecimal, decimal, named) => {
+      if (hexadecimal) return decodeHtmlCodePoint(hexadecimal, 16, reference)
+      if (decimal) return decodeHtmlCodePoint(decimal, 10, reference)
+      return HTML_NAMED_REFERENCES.get(named) ?? reference
+    },
+  )
 }
 
 export function safelyDecodePercentEscapes(value) {
@@ -72,8 +134,30 @@ export function safelyDecodePercentEscapes(value) {
   return decoded
 }
 
+function removeUnbalancedTrailingDelimiter(value, opening, closing) {
+  let result = value
+  while (result.endsWith(closing)) {
+    const openings = [...result].filter((character) => character === opening).length
+    const closings = [...result].filter((character) => character === closing).length
+    if (closings <= openings) break
+    result = result.slice(0, -closing.length)
+  }
+  return result
+}
+
 function trimTerminalReferencePunctuation(value) {
-  return value.replace(/[.:]+$/u, "")
+  let result = value
+  let previous
+
+  do {
+    previous = result
+    result = result.replace(/[.,:!?;~*\u2013\u2014\u2026]+$/u, "")
+    result = removeUnbalancedTrailingDelimiter(result, "(", ")")
+    result = removeUnbalancedTrailingDelimiter(result, "[", "]")
+    result = removeUnbalancedTrailingDelimiter(result, "{", "}")
+  } while (result !== previous)
+
+  return result
 }
 
 function normalizePathSegment(value) {
@@ -82,9 +166,9 @@ function normalizePathSegment(value) {
   ).toLowerCase()
 }
 
-export function canonicalizeGitHubReference(reference) {
+function canonicalizeNormalizedGitHubReference(reference) {
   const normalized = trimTerminalReferencePunctuation(
-    normalizeUnicodeAndSeparators(safelyDecodePercentEscapes(reference)),
+    normalizeUnicodeAndSeparators(reference),
   )
   if (!normalized) return null
 
@@ -127,44 +211,42 @@ export function canonicalizeGitHubReference(reference) {
   return { hostname, owner, repository }
 }
 
-function extractReferenceCandidates(fragment) {
-  const normalized = normalizeUnicodeAndSeparators(
-    safelyDecodePercentEscapes(fragment),
+export function canonicalizeGitHubReference(reference) {
+  return canonicalizeNormalizedGitHubReference(
+    normalizeSourceForIsolation(reference),
   )
-  const networkReferences = [
-    ...normalized.matchAll(/https?:\/\/|\/\//giu),
-  ].map((match) => normalized.slice(match.index ?? 0))
-  if (networkReferences.length > 0) return [...new Set(networkReferences)]
+}
 
-  const bareReferences = []
-  const bareGitHub =
-    /(?:^|[=:])(?:www\.)?github\.com(?:\.(?=[:/]|$))?(?=[:/]|$)/giu
-  for (const match of normalized.matchAll(bareGitHub)) {
-    const value = match[0]
-    const prefixLength = value.startsWith(":") || value.startsWith("=") ? 1 : 0
-    bareReferences.push(normalized.slice((match.index ?? 0) + prefixLength))
-  }
+function isHardUrlBoundary(character) {
+  if (WHATWG_IGNORED_CHARACTERS.has(character)) return false
+  return HARD_URL_BOUNDARY.test(character) || /\s/u.test(character)
+}
 
-  return [...new Set(bareReferences)]
+function extractCompleteReference(source, start) {
+  let end = start
+  while (end < source.length && !isHardUrlBoundary(source[end])) end += 1
+  return trimTerminalReferencePunctuation(source.slice(start, end))
+}
+
+function normalizeSourceForIsolation(source) {
+  return normalizeUnicodeAndSeparators(
+    safelyDecodePercentEscapes(decodeHtmlCharacterReferences(source)),
+  )
 }
 
 export function findUnavailableRepositoryReferences(source) {
-  const normalizedSource = normalizeUnicodeAndSeparators(source)
+  const normalizedSource = normalizeSourceForIsolation(source)
   const findings = []
 
-  for (const fragment of normalizedSource.matchAll(REFERENCE_FRAGMENT)) {
-    for (const candidate of extractReferenceCandidates(fragment[0])) {
-      const canonical = canonicalizeGitHubReference(candidate)
-      if (
-        canonical?.owner === UNAVAILABLE_GITHUB_OWNER &&
-        canonical.repository === UNAVAILABLE_GITHUB_REPOSITORY
-      ) {
-        findings.push({
-          index: fragment.index ?? 0,
-          value: candidate,
-        })
-        break
-      }
+  for (const start of normalizedSource.matchAll(URL_REFERENCE_START)) {
+    const index = start.index ?? 0
+    const candidate = extractCompleteReference(normalizedSource, index)
+    const canonical = canonicalizeNormalizedGitHubReference(candidate)
+    if (
+      canonical?.owner === UNAVAILABLE_GITHUB_OWNER &&
+      canonical.repository === UNAVAILABLE_GITHUB_REPOSITORY
+    ) {
+      findings.push({ index, value: candidate })
     }
   }
 
