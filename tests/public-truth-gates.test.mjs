@@ -16,6 +16,7 @@ import {
   isMissionOperationallyPublishable,
   isReviewComplete,
 } from "../lib/review-gates.ts"
+import { auditBuiltPublicLinks } from "../scripts/verify_built_public_links.mjs"
 import {
   auditPublishableLinks,
   canonicalizeGitHubReference,
@@ -169,6 +170,42 @@ test("public conversion links resolve only to represented public surfaces", asyn
       repository: fixture.repository,
     })
   }
+})
+
+test("emitted output applies the same canonical adversarial guard", async (context) => {
+  const fixtureSource = await read("tests/fixtures/public-link-guard.json")
+  const fixtures = JSON.parse(fixtureSource)
+  const temporaryRoot = await mkdtemp(
+    path.join(os.tmpdir(), "blue-life-emitted-public-links-"),
+  )
+  context.after(() => rm(temporaryRoot, { recursive: true, force: true }))
+
+  for (const [index, source] of fixtures.emitted_blocked.entries()) {
+    await writeFile(
+      path.join(temporaryRoot, `blocked-${index}.html`),
+      `<a href="${source}">reference</a>`,
+      "utf8",
+    )
+  }
+  for (const [index, source] of fixtures.emitted_allowed.entries()) {
+    await writeFile(
+      path.join(temporaryRoot, `allowed-${index}.html`),
+      `<p>${source}</p>`,
+      "utf8",
+    )
+  }
+
+  const audit = await auditBuiltPublicLinks(temporaryRoot, temporaryRoot)
+  assert.equal(
+    audit.htmlFiles.length,
+    fixtures.emitted_blocked.length + fixtures.emitted_allowed.length,
+  )
+  assert.deepEqual(
+    audit.findings.map((finding) => finding.path).sort(),
+    fixtures.emitted_blocked
+      .map((_, index) => `blocked-${index}.html`)
+      .sort(),
+  )
 })
 
 test("nested excluded-name routes remain auditable", async (context) => {
