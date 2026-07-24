@@ -1,10 +1,10 @@
 # For Coastal Residents & Community Groups
 
-You live with the sea. You notice when the seals stop hauling out, when the water warms early, when a species shows up that wasn't here before. The Ocean Intelligence System gives you a guardian for *your* part of the ocean — and a way to record what your community knows before it's lost to turnover.
+You live with the sea. You notice when the seals stop hauling out, when the water warms early, when a species shows up that wasn't here before. Blue Life Commons gives you a way to record what your community knows before it is lost to turnover. A guardian for your water is a possible implementation path, not a ready public service linked from this guide.
 
 ## What the system gives you
 
-- **A guardian for your place** — an Ocean Guardian scoped to your bay, your reef, your season, that watches the signals you can't watch full-time and tells you what changed and what to do about it. The `coastal-community-guardian` and `bay-guardian` archetypes live in [`ocean-intelligence-system`](https://github.com/frankxai/ocean-intelligence-system) `guardians/archetypes/`.
+- **A contract for a guardian for your place** — the proposed guardian is scoped to your bay, reef, and season. Before anyone relies on it, its data sources, code, tests, welfare limits, and responsible operator need to be named and inspectable.
 - **Plain-language, place-scoped knowledge** — region briefings and species pages written to be read, not decoded, every claim sourced.
 - **A `local-knowledge` artifact type** — a way to record what your community knows (a seasonal pattern, a place name, a stewardship practice) with consent and attribution preserved.
 - **A no-Git path** — you do not need to be technical. Contribution is a *conversation*: a voice note, an interview, a photo, or a form. A **commons steward** does the GitHub step; your name and permission are recorded in the artifact's `consent` field.
@@ -12,10 +12,10 @@ You live with the sea. You notice when the seals stop hauling out, when the wate
 ## How to use it today
 
 1. **Find your place in the commons** — open [`CATALOG.md`](../../CATALOG.md) and look for a region briefing near you (Monterey Bay, Ningaloo, Wadden Sea today; more as the commons grows). Read it the way you'd read a letter about your own coast.
-2. **Ask for a guardian for your bay** — if none exists yet, the `coastal-community-guardian` archetype is the starting point. A local developer or a steward can spawn one that watches occurrence and heat-stress signals for your specific grid.
+2. **Define the guardian need for your bay** — name the place, decisions, allowed data precision, responsible operator, and review path. A local developer may then propose an implementation; do not treat it as operational until its public evidence clears review.
 3. **Record what your community knows** — pick one piece of local knowledge that would be lost if the person who holds it moved away: a seasonal pattern, a stewardship rule, a place-based observation. Say it into a voice note or write it on the `local-knowledge` form.
 4. **Hand it to a steward** — they draft the artifact, record your `consent` (who shared it, permission, how you want to be credited), and open the PR. You never touch Git.
-5. **Watch it come back** — once reviewed and merged, your knowledge flows to the website and the guardian, credited to you or your group as you chose.
+5. **Watch it come back** — once reviewed and merged, your knowledge can appear on the website and inform a future approved guardian implementation, credited to you or your group as you chose.
 
 ## The rules that apply to you
 
