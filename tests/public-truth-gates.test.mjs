@@ -21,7 +21,7 @@ async function markdownFiles(directory) {
     .map((entry) => path.join(entry.parentPath, entry.name))
 }
 
-test("field missions require publication and ethics approval", async () => {
+test("field missions require publication, science, and ethics approval", async () => {
   const [indexPage, detailComponent] = await Promise.all([
     read("app/missions/page.tsx"),
     read("components/artifact-detail.tsx"),
@@ -29,7 +29,7 @@ test("field missions require publication and ethics approval", async () => {
 
   assert.match(
     indexPage,
-    /withholds operational wildlife guidance until publication and ethics approval/,
+    /withholds operational wildlife guidance until publication, science, and ethics approval/,
   )
   assert.match(indexPage, /does not route or credit observations/)
   assert.doesNotMatch(indexPage, /Every mission carries an ethics review/)
@@ -47,6 +47,15 @@ test("field missions require publication and ethics approval", async () => {
     }),
     false,
     "ethics approval must not release a mission that remains in review",
+  )
+  assert.equal(
+    isMissionOperationallyPublishable({
+      type: "field-mission",
+      status: "published",
+      review: { science: "required", ethics: "approved" },
+    }),
+    false,
+    "publication and ethics approval must not bypass the science gate",
   )
   assert.equal(
     isMissionOperationallyPublishable({

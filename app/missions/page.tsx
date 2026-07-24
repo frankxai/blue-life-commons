@@ -19,7 +19,7 @@ export default function MissionsIndexPage() {
           <SectionHeading
             eyebrow="Field missions"
             title="Mission protocols, held until ethics review clears"
-            description="Draft missions remain visible for source and review inspection. The public site withholds operational wildlife guidance until publication and ethics approval. When a reviewed mission names a citizen-science platform, submit directly under that platform's terms; Blue Life Commons does not route or credit observations."
+            description="Draft missions remain visible for source and review inspection. The public site withholds operational wildlife guidance until publication, science, and ethics approval. When a reviewed mission names a citizen-science platform, submit directly under that platform's terms; Blue Life Commons does not route or credit observations."
           />
         </Container>
       </div>

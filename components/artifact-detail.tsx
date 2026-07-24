@@ -490,10 +490,10 @@ export function ArtifactDetail({
                 </h2>
                 <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
                   The mission body stays off the public site until the artifact
-                  is approved or published and its ethics review is approved.
-                  Reviewers can inspect the sourced draft in GitHub; visitors
-                  should follow current local regulations and guidance from the
-                  responsible authority.
+                  is approved or published and both its science and ethics
+                  reviews are approved. Reviewers can inspect the sourced draft
+                  in GitHub; visitors should follow current local regulations
+                  and guidance from the responsible authority.
                 </p>
                 <a
                   href={editUrl}

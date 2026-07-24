@@ -12,6 +12,7 @@ export function isMissionOperationallyPublishable(
   return (
     artifact.type === "field-mission" &&
     isReviewComplete(artifact) &&
+    artifact.review?.science === "approved" &&
     artifact.review?.ethics === "approved"
   )
 }
