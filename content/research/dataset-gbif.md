@@ -67,7 +67,7 @@ Records follow Darwin Core: accepted scientific name (matched to the GBIF backbo
 
 ## How it's used in the commons
 
-Secondary `occurrence` source and `taxonomy` cross-check for species pages and guardians, complementing OBIS. Connector spec: `integrations/gbif.md` in the [Ocean Intelligence System](https://github.com/frankxai/ocean-intelligence-system).
+This card records GBIF as a candidate source for occurrence and taxonomy work in the commons. Blue Life Commons does not currently publish a GBIF connector here. Treat an implementation as unavailable until its code, tests, provenance, license handling, and coordinate safeguards are publicly inspectable.
 
 ## Sources
 
