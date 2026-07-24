@@ -18,7 +18,20 @@
     "«https://github.com/frankxai/ocean-intelligence-system»",
     "https://github.com/frankxai/ocean-intelligence-system…",
     "https://github.com/frankxai/ocean-intelligence-system—private",
-    "~~https://github.com/frankxai/ocean-intelligence-system~~"
+    "~~https://github.com/frankxai/ocean-intelligence-system~~",
+    "https://github．com/frankxai/ocean-intelligence-system",
+    "https://github。com/frankxai/ocean-intelligence-system",
+    "https://github%2Ecom/frankxai/ocean-intelligence-system",
+    "https://ｇｉｔｈｕｂ．ｃｏｍ/frankxai/ocean-intelligence-system",
+    "https://github.com/frankxai/temporary/../ocean-intelligence-system",
+    "github.com\\frankxai\\ocean-intelligence-system",
+    "https%3A%2F%2Fgithub%2Ecom%2Ffrankxai%2Focean-intelligence-system",
+    "https://github.com/frankxai/%6fcean-intelligence-system",
+    "https://github.com/temporary/%2e%2e/frankxai/ocean-intelligence-system",
+    "https://github.com.:443/frankxai/ocean-intelligence-system",
+    "repo:https://github.com/frankxai/ocean-intelligence-system",
+    "repo:github.com/frankxai/ocean-intelligence-system",
+    "https://%67%69%74%68%75%62%2E%63%6F%6D/frankxai/ocean-intelligence-system"
   ],
   "allowed": [
     "https://github.com/frankxai/blue-life-commons",
@@ -27,8 +40,44 @@
     "https://github.com/frankxai/ocean-intelligence",
     "https://github.com/frankxai/ocean-intelligence-system-public",
     "https://github.com/frankxai/ocean-intelligence-system_fork",
+    "https://github.com/frankxai/ocean-intelligence-system.docs",
+    "https://github.com/frankxai/ocean-intelligence-system.github",
+    "https://github.com/frankxai/ocean-intelligence-system.git-tools",
     "https://github.com/another-owner/ocean-intelligence-system",
+    "https://github.com.evil.example/frankxai/ocean-intelligence-system",
+    "https://evil.example/github.com/frankxai/ocean-intelligence-system",
+    "https://github.com@evil.example/frankxai/ocean-intelligence-system",
     "Ocean Intelligence System is a private runtime layer."
+  ],
+  "canonical_exact": [
+    "https://github．com/frankxai/ocean-intelligence-system",
+    "https://github。com/frankxai/ocean-intelligence-system",
+    "https://github%2Ecom/frankxai/ocean-intelligence-system",
+    "https://ｇｉｔｈｕｂ．ｃｏｍ/frankxai/ocean-intelligence-system",
+    "https://github.com/frankxai/temporary/../ocean-intelligence-system",
+    "github.com\\frankxai\\ocean-intelligence-system"
+  ],
+  "canonical_siblings": [
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system.docs",
+      "repository": "ocean-intelligence-system.docs"
+    },
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system.github",
+      "repository": "ocean-intelligence-system.github"
+    },
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system.git-tools",
+      "repository": "ocean-intelligence-system.git-tools"
+    },
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system-public",
+      "repository": "ocean-intelligence-system-public"
+    },
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system_fork",
+      "repository": "ocean-intelligence-system_fork"
+    }
   ],
   "nested_excluded_name_routes": [
     "content/tests/deep/private-link.md",
