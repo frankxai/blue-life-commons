@@ -38,27 +38,137 @@ export const PUBLISHABLE_TEXT_EXTENSIONS = new Set([
   ".yml",
 ])
 
-const unavailableRepositoryPath = [
-  "github.com",
-  "frankxai",
-  "ocean-intelligence-system",
-].join("/")
+const UNAVAILABLE_GITHUB_OWNER = "frankxai"
+const UNAVAILABLE_GITHUB_REPOSITORY = "ocean-intelligence-system"
+const UNICODE_HOST_DOTS = /[\u3002\uFF0E\uFF61]/gu
+const VALID_PERCENT_RUN = /(?:%[0-9A-Fa-f]{2})+/gu
+// These expressions only isolate reference-shaped text. The blocking decision
+// is made after WHATWG URL parsing and exact canonical owner/repository comparison.
+const REFERENCE_FRAGMENT =
+  /[^\s<>"'`()\[\]{}~!,;=|&\u00AB\u00BB\u2013\u2014\u2018\u2019\u201C\u201D\u2026]+/gu
 
-const escapedUnavailableRepositoryPath = unavailableRepositoryPath.replace(
-  /[.*+?^${}()|[\]\\]/g,
-  String.raw`\$&`,
-)
+function normalizeUnicodeAndSeparators(value) {
+  return value
+    .normalize("NFKC")
+    .replace(UNICODE_HOST_DOTS, ".")
+    .replaceAll("\\", "/")
+}
 
-const unavailableRepositoryPattern = new RegExp(
-  String.raw`(?<![A-Za-z0-9.-])(?:https?://|//)?(?:www\.)?${escapedUnavailableRepositoryPath}(?:\.git)?(?![A-Za-z0-9_-])`,
-  "giu",
-)
+export function safelyDecodePercentEscapes(value) {
+  let decoded = value
+
+  for (let pass = 0; pass < 3; pass += 1) {
+    const next = decoded.replace(VALID_PERCENT_RUN, (run) => {
+      try {
+        return decodeURIComponent(run)
+      } catch {
+        return run
+      }
+    })
+    if (next === decoded) break
+    decoded = next
+  }
+
+  return decoded
+}
+
+function trimTerminalReferencePunctuation(value) {
+  return value.replace(/[.:]+$/u, "")
+}
+
+function normalizePathSegment(value) {
+  return normalizeUnicodeAndSeparators(
+    safelyDecodePercentEscapes(value),
+  ).toLowerCase()
+}
+
+export function canonicalizeGitHubReference(reference) {
+  const normalized = trimTerminalReferencePunctuation(
+    normalizeUnicodeAndSeparators(safelyDecodePercentEscapes(reference)),
+  )
+  if (!normalized) return null
+
+  let candidate
+  if (normalized.startsWith("//")) {
+    candidate = `https:${normalized}`
+  } else if (/^https?:\/\//iu.test(normalized)) {
+    candidate = normalized
+  } else {
+    candidate = `https://${normalized}`
+  }
+
+  let url
+  try {
+    url = new URL(candidate)
+  } catch {
+    return null
+  }
+
+  if (url.protocol !== "http:" && url.protocol !== "https:") return null
+
+  const hostname = normalizeUnicodeAndSeparators(url.hostname)
+    .toLowerCase()
+    .replace(/\.+$/u, "")
+    .replace(/^www\./u, "")
+  if (hostname !== "github.com") return null
+
+  const segments = url.pathname
+    .split("/")
+    .filter(Boolean)
+    .map(normalizePathSegment)
+  if (segments.length < 2) return null
+
+  const owner = segments[0]
+  const rawRepository = segments[1]
+  const repository = rawRepository.endsWith(".git")
+    ? rawRepository.slice(0, -4)
+    : rawRepository
+
+  return { hostname, owner, repository }
+}
+
+function extractReferenceCandidates(fragment) {
+  const normalized = normalizeUnicodeAndSeparators(
+    safelyDecodePercentEscapes(fragment),
+  )
+  const networkReferences = [
+    ...normalized.matchAll(/https?:\/\/|\/\//giu),
+  ].map((match) => normalized.slice(match.index ?? 0))
+  if (networkReferences.length > 0) return [...new Set(networkReferences)]
+
+  const bareReferences = []
+  const bareGitHub =
+    /(?:^|[=:])(?:www\.)?github\.com(?:\.(?=[:/]|$))?(?=[:/]|$)/giu
+  for (const match of normalized.matchAll(bareGitHub)) {
+    const value = match[0]
+    const prefixLength = value.startsWith(":") || value.startsWith("=") ? 1 : 0
+    bareReferences.push(normalized.slice((match.index ?? 0) + prefixLength))
+  }
+
+  return [...new Set(bareReferences)]
+}
 
 export function findUnavailableRepositoryReferences(source) {
-  return [...source.matchAll(unavailableRepositoryPattern)].map((match) => ({
-    index: match.index ?? 0,
-    value: match[0],
-  }))
+  const normalizedSource = normalizeUnicodeAndSeparators(source)
+  const findings = []
+
+  for (const fragment of normalizedSource.matchAll(REFERENCE_FRAGMENT)) {
+    for (const candidate of extractReferenceCandidates(fragment[0])) {
+      const canonical = canonicalizeGitHubReference(candidate)
+      if (
+        canonical?.owner === UNAVAILABLE_GITHUB_OWNER &&
+        canonical.repository === UNAVAILABLE_GITHUB_REPOSITORY
+      ) {
+        findings.push({
+          index: fragment.index ?? 0,
+          value: candidate,
+        })
+        break
+      }
+    }
+  }
+
+  return findings
 }
 
 export function hasUnavailableRepositoryReference(source) {
