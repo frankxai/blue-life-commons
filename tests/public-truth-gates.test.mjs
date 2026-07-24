@@ -1,5 +1,14 @@
 import assert from "node:assert/strict"
-import { readdir, readFile } from "node:fs/promises"
+import {
+  mkdir,
+  mkdtemp,
+  readdir,
+  readFile,
+  rm,
+  symlink,
+  writeFile,
+} from "node:fs/promises"
+import os from "node:os"
 import path from "node:path"
 import test from "node:test"
 import { fileURLToPath } from "node:url"
@@ -7,6 +16,11 @@ import {
   isMissionOperationallyPublishable,
   isReviewComplete,
 } from "../lib/review-gates.ts"
+import {
+  auditPublishableLinks,
+  collectPublishableTextFiles,
+  hasUnavailableRepositoryReference,
+} from "../scripts/verify_public_links.mjs"
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..")
 const read = (relativePath) => readFile(path.join(ROOT, relativePath), "utf8")
@@ -95,31 +109,99 @@ test("organization profiles never imply an undocumented relationship", async () 
 })
 
 test("public conversion links resolve only to represented public surfaces", async () => {
-  const [support, appFiles, libFiles, readme, strategy] = await Promise.all([
+  const [support, fixtureSource, publishableFiles, audit] = await Promise.all([
     read("app/support/page.tsx"),
-    readdir(path.join(ROOT, "app"), { recursive: true, withFileTypes: true }),
-    readdir(path.join(ROOT, "lib"), { recursive: true, withFileTypes: true }),
-    read("README.md"),
-    read("STRATEGY.md"),
+    read("tests/fixtures/public-link-guard.json"),
+    collectPublishableTextFiles(ROOT),
+    auditPublishableLinks(ROOT),
   ])
 
   assert.doesNotMatch(support, /github\.com\/sponsors\/frankxai/)
   assert.match(support, /No verified GitHub Sponsors checkout/)
 
-  const publicSourceFiles = [...appFiles, ...libFiles].filter(
-    (entry) =>
-      entry.isFile() &&
-      /\.(?:ts|tsx|js|mjs)$/.test(entry.name),
+  const relativePublishableFiles = publishableFiles.map((file) =>
+    path.relative(ROOT, file),
   )
-  for (const entry of publicSourceFiles) {
-    const source = await readFile(path.join(entry.parentPath, entry.name), "utf8")
-    assert.doesNotMatch(source, /github\.com\/frankxai\/ocean-intelligence-system/)
+  for (const requiredSurface of [
+    "app/support/page.tsx",
+    "components/artifact-detail.tsx",
+    "content/research/dataset-gbif.md",
+    "content/research/dataset-obis.md",
+    "docs/guides/for-developers.md",
+    "lib/content.ts",
+  ]) {
+    assert.ok(
+      relativePublishableFiles.includes(requiredSurface),
+      `${requiredSurface} must remain inside the recursive public-link audit`,
+    )
   }
 
-  for (const source of [readme, strategy]) {
-    assert.doesNotMatch(source, /github\.com\/frankxai\/ocean-intelligence-system/)
-    assert.match(source, /github\.com\/frankxai\/marine-mcp/)
+  assert.deepEqual(audit.findings, [])
+
+  const fixtures = JSON.parse(fixtureSource)
+  for (const source of fixtures.blocked) {
+    assert.equal(
+      hasUnavailableRepositoryReference(source),
+      true,
+      `expected blocked fixture to match: ${source}`,
+    )
   }
+  for (const source of fixtures.allowed) {
+    assert.equal(
+      hasUnavailableRepositoryReference(source),
+      false,
+      `expected allowed fixture not to match: ${source}`,
+    )
+  }
+})
+
+test("nested excluded-name routes remain auditable", async (context) => {
+  const fixtureSource = await read("tests/fixtures/public-link-guard.json")
+  const fixtures = JSON.parse(fixtureSource)
+  const temporaryRoot = await mkdtemp(
+    path.join(os.tmpdir(), "blue-life-public-links-nested-"),
+  )
+  context.after(() => rm(temporaryRoot, { recursive: true, force: true }))
+
+  for (const relativePath of fixtures.nested_excluded_name_routes) {
+    const absolutePath = path.join(temporaryRoot, relativePath)
+    await mkdir(path.dirname(absolutePath), { recursive: true })
+    await writeFile(absolutePath, `${fixtures.blocked[0]}\n`, "utf8")
+  }
+
+  const audit = await auditPublishableLinks(temporaryRoot)
+  assert.deepEqual(
+    audit.findings.map((finding) => finding.path).sort(),
+    [...fixtures.nested_excluded_name_routes].sort(),
+  )
+})
+
+test("symbolic links fail closed, including links outside the audit root", async (context) => {
+  const temporaryParent = await mkdtemp(
+    path.join(os.tmpdir(), "blue-life-public-links-symlink-"),
+  )
+  context.after(() => rm(temporaryParent, { recursive: true, force: true }))
+
+  const auditRoot = path.join(temporaryParent, "repository")
+  const contentRoot = path.join(auditRoot, "content")
+  await mkdir(contentRoot, { recursive: true })
+
+  const inRootTarget = path.join(contentRoot, "target.md")
+  await writeFile(inRootTarget, "Inspectable source.\n", "utf8")
+  await symlink(inRootTarget, path.join(contentRoot, "in-root-link.md"))
+  await assert.rejects(
+    auditPublishableLinks(auditRoot),
+    /refuses symbolic link: content\/in-root-link\.md/,
+  )
+
+  await rm(path.join(contentRoot, "in-root-link.md"))
+  const outsideTarget = path.join(temporaryParent, "outside.md")
+  await writeFile(outsideTarget, "Outside source.\n", "utf8")
+  await symlink(outsideTarget, path.join(contentRoot, "escape-link.md"))
+  await assert.rejects(
+    auditPublishableLinks(auditRoot),
+    /refuses symbolic link: content\/escape-link\.md/,
+  )
 })
 
 test("in-review artifacts stay out of search indexes and published claims", async () => {
