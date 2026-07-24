@@ -16,17 +16,17 @@ const EMITTED_TEXT_EXTENSIONS = new Set([
   ".txt",
 ])
 
-async function walkEmittedText(directory, files) {
+async function walkEmittedText(root, directory, files) {
   const entries = await readdir(directory, { withFileTypes: true })
   for (const entry of entries) {
     const absolutePath = path.join(directory, entry.name)
     if (entry.isSymbolicLink()) {
       throw new Error(
-        `Built-output audit refuses symbolic link: ${path.relative(BUILD_APP_ROOT, absolutePath)}`,
+        `Built-output audit refuses symbolic link: ${path.relative(root, absolutePath)}`,
       )
     }
     if (entry.isDirectory()) {
-      await walkEmittedText(absolutePath, files)
+      await walkEmittedText(root, absolutePath, files)
       continue
     }
     if (
@@ -38,35 +38,52 @@ async function walkEmittedText(directory, files) {
   }
 }
 
-const files = []
-await walkEmittedText(BUILD_APP_ROOT, files)
+export async function auditBuiltPublicLinks(
+  buildRoot = BUILD_APP_ROOT,
+  displayRoot = REPOSITORY_ROOT,
+) {
+  const files = []
+  await walkEmittedText(buildRoot, buildRoot, files)
 
-const htmlFiles = files.filter((file) => path.extname(file) === ".html")
-if (htmlFiles.length === 0) {
-  throw new Error("Built-output audit found no emitted HTML; refusing to pass")
-}
-
-const findings = []
-for (const file of files.sort()) {
-  const source = await readFile(file, "utf8")
-  const references = findUnavailableRepositoryReferences(source)
-  for (const reference of references) {
-    findings.push({
-      path: path.relative(REPOSITORY_ROOT, file),
-      value: reference.value,
-    })
+  const htmlFiles = files.filter((file) => path.extname(file) === ".html")
+  const findings = []
+  for (const file of files.sort()) {
+    const source = await readFile(file, "utf8")
+    const references = findUnavailableRepositoryReferences(source)
+    for (const reference of references) {
+      findings.push({
+        path: path.relative(displayRoot, file),
+        value: reference.value,
+      })
+    }
   }
+
+  return { files, htmlFiles, findings }
 }
 
-if (findings.length > 0) {
+async function main() {
+  const { files, htmlFiles, findings } = await auditBuiltPublicLinks()
+  if (htmlFiles.length === 0) {
+    throw new Error("Built-output audit found no emitted HTML; refusing to pass")
+  }
+  if (findings.length === 0) {
+    console.log(
+      `Built-output guard checked ${htmlFiles.length} HTML files and ${files.length} emitted text files: 0 unavailable private repository references.`,
+    )
+    return
+  }
+
   for (const finding of findings) {
     console.error(
       `${finding.path}: emitted unavailable private repository reference: ${finding.value}`,
     )
   }
   process.exitCode = 1
-} else {
-  console.log(
-    `Built-output guard checked ${htmlFiles.length} HTML files and ${files.length} emitted text files: 0 unavailable private repository references.`,
-  )
+}
+
+if (
+  process.argv[1] &&
+  path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)
+) {
+  await main()
 }
