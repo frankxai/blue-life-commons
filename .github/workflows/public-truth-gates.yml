@@ -2,30 +2,8 @@ name: Public truth gates
 
 on:
   pull_request:
-    paths:
-      - "app/**"
-      - "components/**"
-      - "content/partners/**"
-      - "missions/**"
-      - "lib/**"
-      - "tests/public-truth-gates.test.mjs"
-      - "package.json"
-      - "README.md"
-      - "STRATEGY.md"
-      - ".github/workflows/public-truth-gates.yml"
   push:
     branches: [main]
-    paths:
-      - "app/**"
-      - "components/**"
-      - "content/partners/**"
-      - "missions/**"
-      - "lib/**"
-      - "tests/public-truth-gates.test.mjs"
-      - "package.json"
-      - "README.md"
-      - "STRATEGY.md"
-      - ".github/workflows/public-truth-gates.yml"
 
 permissions:
   contents: read
