@@ -3,6 +3,9 @@ import path from "node:path"
 import matter from "gray-matter"
 import { marked } from "marked"
 import type { Artifact, ArtifactMedia, ArtifactType, CommonsStats, Source } from "./types"
+import { isReviewComplete } from "./review-gates"
+
+export { isReviewComplete } from "./review-gates"
 
 const ROOT = process.cwd()
 
@@ -360,12 +363,6 @@ export function getAllArtifacts(): Artifact[] {
 
 export function getArtifactsByType(type: ArtifactType): Artifact[] {
   return getAllArtifacts().filter((a) => a.type === type)
-}
-
-export function isReviewComplete(
-  artifact: Pick<Artifact, "status">,
-): boolean {
-  return artifact.status === "approved" || artifact.status === "published"
 }
 
 export function getArtifactRobots(

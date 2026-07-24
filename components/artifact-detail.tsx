@@ -20,6 +20,7 @@ import {
 } from "@/components/species-stats-compare"
 import { SpeciesLifeGallery } from "@/components/species-life-gallery"
 import { getApprovedSpeciesMedia } from "@/lib/media"
+import { isMissionOperationallyPublishable } from "@/lib/review-gates"
 import { GITHUB_REPO_URL, cn, formatRegion } from "@/lib/utils"
 import Link from "next/link"
 
@@ -358,8 +359,8 @@ export function ArtifactDetail({
   const editUrl = `${GITHUB_REPO_URL}/blob/main/${a.githubPath}`
   const approvedMedia = getApprovedSpeciesMedia(a)
   const impactIsPublished = a.status === "approved" || a.status === "published"
-  const missionEthicsReviewOpen =
-    a.type === "field-mission" && a.review?.ethics !== "approved"
+  const missionBodyWithheld =
+    a.type === "field-mission" && !isMissionOperationallyPublishable(a)
   const guild = guildFromPath(a.path)
   const isSpecies = a.type === "species-page"
   const cinematic = Boolean(isSpecies && approvedMedia)
@@ -473,13 +474,13 @@ export function ArtifactDetail({
           )}
         >
           <div>
-            {missionEthicsReviewOpen ? (
+            {missionBodyWithheld ? (
               <section
                 aria-labelledby="mission-review-hold"
                 className="rounded-2xl border border-coral/35 bg-coral/8 p-6 sm:p-8"
               >
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-coral">
-                  Ethics review open
+                  Publication gate closed
                 </p>
                 <h2
                   id="mission-review-hold"
@@ -488,10 +489,11 @@ export function ArtifactDetail({
                   This is not operational wildlife guidance.
                 </h2>
                 <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-                  The mission body stays off the public site until its ethics
-                  review is approved. Reviewers can inspect the sourced draft
-                  in GitHub; visitors should follow current local regulations
-                  and guidance from the responsible authority.
+                  The mission body stays off the public site until the artifact
+                  is approved or published and its ethics review is approved.
+                  Reviewers can inspect the sourced draft in GitHub; visitors
+                  should follow current local regulations and guidance from the
+                  responsible authority.
                 </p>
                 <a
                   href={editUrl}
