@@ -362,6 +362,19 @@ export function getArtifactsByType(type: ArtifactType): Artifact[] {
   return getAllArtifacts().filter((a) => a.type === type)
 }
 
+export function isReviewComplete(
+  artifact: Pick<Artifact, "status">,
+): boolean {
+  return artifact.status === "approved" || artifact.status === "published"
+}
+
+export function getArtifactRobots(
+  artifact: Pick<Artifact, "status">,
+): { index: boolean; follow: boolean } {
+  const reviewComplete = isReviewComplete(artifact)
+  return { index: reviewComplete, follow: reviewComplete }
+}
+
 export function getArtifactByHref(href: string): Artifact | undefined {
   const normalized = "/" + href.split("/").filter(Boolean).join("/")
   return getAllArtifacts().find((a) => a.href === normalized)
@@ -440,7 +453,7 @@ export function getCommonsStats(): CommonsStats {
     for (const s of a.sources) sourceUrls.add(s.url)
     for (const c of a.contributors) if (c.github) contributors.add(c.github)
     if (a.impact?.eligible_for_hypercert) hypercertEligible++
-    if (a.status === "approved" || a.status === "published") reviewed++
+    if (isReviewComplete(a)) reviewed++
   }
 
   const count = (t: ArtifactType) => all.filter((a) => a.type === t).length

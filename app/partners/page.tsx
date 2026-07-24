@@ -4,9 +4,9 @@ import { Container, SectionHeading } from "@/components/primitives"
 import { ArtifactCard } from "@/components/artifact-card"
 
 export const metadata: Metadata = {
-  title: "Partners",
+  title: "Ocean Organization Profiles",
   description:
-    "The NGOs, research programs and community organizations whose work the commons documents, links and supports.",
+    "Independent, source-linked profiles of ocean organizations. Inclusion does not imply partnership, endorsement, or affiliation.",
 }
 
 export default function PartnersPage() {
@@ -17,9 +17,9 @@ export default function PartnersPage() {
       <div className="border-b border-border bg-secondary">
         <Container className="py-14 sm:py-20">
           <SectionHeading
-            eyebrow="Partners"
+            eyebrow="Organization directory"
             title="Organizations doing the work on the water"
-            description="Partner profiles document real conservation organizations — what they do, where they operate, and how the commons' knowledge and missions connect to their programs."
+            description="These independent profiles summarize public information about conservation organizations and their programs. Inclusion does not imply partnership, endorsement, affiliation, or a data-sharing relationship."
           />
         </Container>
       </div>
@@ -31,12 +31,12 @@ export default function PartnersPage() {
         </div>
         <div className="mt-12 rounded-2xl border border-border bg-card p-8">
           <h2 className="font-serif text-xl font-semibold text-foreground">
-            Partner with the commons
+            Add or correct an organization profile
           </h2>
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-            If your organization protects ocean life and wants its work
-            represented accurately — or wants an intelligence system of its own —
-            open a profile PR or reach out through the ecosystem page.
+            If your organization protects ocean life and wants its public work
+            represented accurately, open a sourced profile PR or correction.
+            Formal relationships are described only after they are documented.
           </p>
         </div>
       </Container>

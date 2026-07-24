@@ -95,11 +95,11 @@
 
 | Title | Status | Scope | Path |
 |---|---|---|---|
-| Partner Profile: Mission Blue (Sylvia Earle Alliance) | draft | — | `content/partners/mission-blue.md` |
-| Partner Profile: Olive Ridley Project | draft | turtles | `content/partners/olive-ridley-project.md` |
+| Organization Profile: Mission Blue (Sylvia Earle Alliance) | draft | — | `content/partners/mission-blue.md` |
+| Organization Profile: Olive Ridley Project | draft | turtles | `content/partners/olive-ridley-project.md` |
 | Point Reyes National Seashore Association | needs-expert-review | California | `content/partners/point-reyes-association.md` |
-| Partner Profile: Reef Check Foundation | draft | reefs | `content/partners/reef-check.md` |
-| Partner Profile: Whale and Dolphin Conservation (WDC) | draft | cetaceans | `content/partners/whale-dolphin-conservation.md` |
+| Organization Profile: Reef Check Foundation | draft | reefs | `content/partners/reef-check.md` |
+| Organization Profile: Whale and Dolphin Conservation (WDC) | draft | cetaceans | `content/partners/whale-dolphin-conservation.md` |
 
 ## welfare-assessment (4)
 

@@ -11,6 +11,7 @@
     "lint": "next typegen && tsc --noEmit",
     "typecheck": "next typegen && tsc --noEmit",
     "test:public-transparency": "node --test tests/public-transparency.test.mjs",
+    "test:public-truth": "node --test tests/public-truth-gates.test.mjs",
     "media:storage": "python scripts/build_species_media_storage_manifest.py",
     "media:storage:check": "python scripts/build_species_media_storage_manifest.py --check",
     "media:blob:plan": "node scripts/upload_species_media_to_vercel_blob.mjs",

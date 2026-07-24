@@ -1,0 +1,48 @@
+name: Public truth gates
+
+on:
+  pull_request:
+    paths:
+      - "app/**"
+      - "components/**"
+      - "content/partners/**"
+      - "missions/**"
+      - "lib/**"
+      - "tests/public-truth-gates.test.mjs"
+      - "package.json"
+      - "README.md"
+      - "STRATEGY.md"
+      - ".github/workflows/public-truth-gates.yml"
+  push:
+    branches: [main]
+    paths:
+      - "app/**"
+      - "components/**"
+      - "content/partners/**"
+      - "missions/**"
+      - "lib/**"
+      - "tests/public-truth-gates.test.mjs"
+      - "package.json"
+      - "README.md"
+      - "STRATEGY.md"
+      - ".github/workflows/public-truth-gates.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  truth-regression:
+    name: Relationships, safety, indexing, and public links
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Verify public truth boundaries
+        run: npm run test:public-truth

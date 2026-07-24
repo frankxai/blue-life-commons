@@ -1,7 +1,7 @@
 ---
 id: partner-reef-check
 type: partner-profile
-title: "Partner Profile: Reef Check Foundation"
+title: "Organization Profile: Reef Check Foundation"
 species_group:
   - reefs
 audience:
@@ -28,14 +28,14 @@ outputs:
   github_path: content/partners/reef-check.md
   map_layer: false
 impact:
-  claim: "Documented Reef Check Foundation (volunteer reef + kelp monitoring) as a commons partner."
+  claim: "Documented Reef Check Foundation's volunteer reef and kelp monitoring for the public organization directory."
   eligible_for_hypercert: false
 contributors:
   - github: frankxai
 license: CC-BY-4.0
 ---
 
-# Partner Profile: Reef Check Foundation
+# Organization Profile: Reef Check Foundation
 
 > Status: draft, awaiting review. Facts sourced to Reef Check's own site and an ICRI member listing (accessed 2026-06-11).
 

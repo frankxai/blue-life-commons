@@ -31,9 +31,12 @@ The Point Reyes National Seashore Association (PRNSA) is the cooperating partner
 - **Youth Education:** Running residential environmental science programs for Bay Area students.
 - **Habitat Restoration:** Supporting invasive species removal and beach cleanup initiatives.
 
-## Shared telemetry and citizen science
+## Relationship to Blue Life Commons
 
-PRNSA coordinates with Starlight Marine Systems to validate harbor seal and elephant seal haul-out data logged by citizen-scientists. This information directly guides seasonal beach closure dates to ensure breeding colonies remain undisturbed.
+This independent profile documents PRNSA from its public materials. The current
+record does not establish a formal partnership, endorsement, affiliation, or
+operational data-sharing relationship with Blue Life Commons or Starlight
+Intelligence Systems.
 
 ## Sources
 

@@ -1,7 +1,7 @@
 ---
 id: partner-whale-dolphin-conservation
 type: partner-profile
-title: "Partner Profile: Whale and Dolphin Conservation (WDC)"
+title: "Organization Profile: Whale and Dolphin Conservation (WDC)"
 species_group:
   - cetaceans
 audience:
@@ -28,14 +28,14 @@ outputs:
   github_path: content/partners/whale-dolphin-conservation.md
   map_layer: false
 impact:
-  claim: "Documented Whale and Dolphin Conservation (WDC) as a commons partner."
+  claim: "Documented Whale and Dolphin Conservation's public work for the organization directory."
   eligible_for_hypercert: false
 contributors:
   - github: frankxai
 license: CC-BY-4.0
 ---
 
-# Partner Profile: Whale and Dolphin Conservation (WDC)
+# Organization Profile: Whale and Dolphin Conservation (WDC)
 
 > Status: draft, awaiting review. Facts sourced to WDC's own site and an encyclopedic overview (accessed 2026-06-11).
 

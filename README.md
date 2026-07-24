@@ -116,7 +116,14 @@ A guardian, a guide, or a mission is `grounded or silent`: it states a fact only
 
 ## Why it exists (and how it stays free)
 
-Blue Life Commons is the **trust layer** of a three-layer system: the free, reviewed knowledge base; the open-source software that acts on it ([`ocean-intelligence-system`](https://github.com/frankxai/ocean-intelligence-system)); and the commercial layer that implements and distributes it. The commons stays free forever — sustainability comes from the work *around* the knowledge, never from gating it.
+Blue Life Commons is the **trust layer** of a three-layer system: the free,
+review-gated knowledge base; the public agent interfaces
+([`marine-mcp`](https://github.com/frankxai/marine-mcp) and
+[`marine-agent-skills`](https://github.com/frankxai/marine-agent-skills)); and
+the operational and commercial systems that implement and distribute it. The
+broader runtime is not represented as public source. The commons stays free
+forever — sustainability comes from the work *around* the knowledge, never
+from gating it.
 
 The full picture — the three layers, the operating model, the commercial boundary, and how impact compounds — is in **[`STRATEGY.md`](STRATEGY.md)**. How this repo fits the wider FrankX ecosystem is in [`ECOSYSTEM.md`](ECOSYSTEM.md).
 
