@@ -69,7 +69,7 @@ Treat WDPA as reference-for-analysis with attribution, not as open data to mirro
 
 ## How it's used in the commons
 
-The `protected-area` signal for Ocean Intelligence guardians (e.g. the Ningaloo Reef Guardian's protected-area context) and for region briefings' "Protections and regulations" sections. Connector spec: `integrations/protected-planet.md` in the [Ocean Intelligence System](https://github.com/frankxai/ocean-intelligence-system).
+This card records Protected Planet as a candidate source for protected-area context in region briefings and future guardian work. Blue Life Commons does not currently publish a Protected Planet connector here. Treat an implementation as unavailable until its code, tests, provenance, license handling, and redistribution controls are publicly inspectable.
 
 ## Sources
 
