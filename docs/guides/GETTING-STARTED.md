@@ -25,7 +25,7 @@ Ocean intelligence is built in three deliberately separate layers. Keep them dis
 | Layer | Repo | What it is | What it creates |
 |---|---|---|---|
 | **Blue Life Commons** | [`blue-life-commons`](https://github.com/frankxai/blue-life-commons) | The reviewed knowledge corpus — species pages, region briefings, field missions, welfare assessments, dataset cards, sanctuary/rehab/stranding artifacts, templates. Schema-validated and integrity-linted in CI. | **Trust** |
-| **Ocean Intelligence System** | [`marine-mcp`](https://github.com/frankxai/marine-mcp) + [`marine-agent-skills`](https://github.com/frankxai/marine-agent-skills) + [`ocean-intelligence-system`](https://github.com/frankxai/ocean-intelligence-system) | The working software — an MCP server that serves the corpus to AI agents, a Claude Code skill pack for authoring compliant artifacts, and the Ocean Guardian framework (place-scoped agents + a Python connector layer to OBIS, GBIF, WoRMS, Coral Reef Watch, Protected Planet). | **Continuity** |
+| **Ocean Intelligence System** | [`marine-mcp`](https://github.com/frankxai/marine-mcp) + [`marine-agent-skills`](https://github.com/frankxai/marine-agent-skills) | The currently inspectable software: an MCP server that serves the corpus to AI agents and a skill pack for authoring compliant artifacts. Place-scoped guardians and live-source connectors remain an architecture direction, not a public implementation linked by this guide. | **Continuity** |
 | **Starlight Marine Intelligence Systems** | (commercial) | Implementation, design, institutional adoption, media. Sells speed and reliability — never access to ocean knowledge. | **Reach** |
 
 The commons stays free. The business sells implementation, never access. The hard boundary: every software layer **reads** the commons and can never override its science, sourcing, or ethics standards.
@@ -124,7 +124,7 @@ These are standards, not popularity contests. They are never subject to communit
 ## Where to go next
 
 - Find your role in [`docs/guides/README.md`](README.md) and read your guide.
-- See a guardian run end-to-end: [`ocean-intelligence-system/docs/case-study-ningaloo.md`](https://github.com/frankxai/ocean-intelligence-system/blob/main/docs/case-study-ningaloo.md).
+- Read [`from-artifact-to-guardian.md`](../from-artifact-to-guardian.md) for the guardian delivery contract and the evidence required before an implementation can be called available.
 - Read the welfare orientation in [`WELFARE.md`](../../WELFARE.md) — it's the soul of the project.
 
 > Built on SIP · Blue Life Commons (CC-BY-4.0).

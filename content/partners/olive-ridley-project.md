@@ -1,7 +1,7 @@
 ---
 id: partner-olive-ridley-project
 type: partner-profile
-title: "Partner Profile: Olive Ridley Project"
+title: "Organization Profile: Olive Ridley Project"
 species_group:
   - turtles
 audience:
@@ -28,14 +28,14 @@ outputs:
   github_path: content/partners/olive-ridley-project.md
   map_layer: false
 impact:
-  claim: "Documented the Olive Ridley Project (sea turtle rescue + ghost-net research) as a commons partner."
+  claim: "Documented the Olive Ridley Project's sea turtle rescue and ghost-net research for the public organization directory."
   eligible_for_hypercert: false
 contributors:
   - github: frankxai
 license: CC-BY-4.0
 ---
 
-# Partner Profile: Olive Ridley Project
+# Organization Profile: Olive Ridley Project
 
 > Status: draft, awaiting review. Facts sourced to the organization's own site (accessed 2026-06-11).
 

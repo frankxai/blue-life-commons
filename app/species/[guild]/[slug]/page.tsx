@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import {
   getArtifactByHref,
+  getArtifactRobots,
   getArtifactsByType,
   getRelatedArtifacts,
 } from "@/lib/content"
@@ -32,6 +33,7 @@ export async function generateMetadata({
   return {
     title: artifact.title,
     description: artifact.excerpt,
+    robots: getArtifactRobots(artifact),
     alternates: { canonical: artifact.href },
     openGraph: {
       url: artifact.href,

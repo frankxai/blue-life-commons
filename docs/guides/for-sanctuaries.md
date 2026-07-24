@@ -5,7 +5,7 @@ You answer the stranding call, run the triage, manage the transport, make the re
 ## What the system gives you
 
 - **Artifact types for your exact workflow** — `stranding-protocol`, `rehab-case-card`, `release-criteria`, `sanctuary-profile`, `husbandry-guide`, and `necropsy-summary`. Ready-to-fill templates exist (e.g. `welfare-assessment`, `sanctuary-profile`, `stranding-protocol`, `local-knowledge`).
-- **Two guardians scoped to your work** — `sanctuary-guardian` and `stranding-network-guardian` (in [`ocean-intelligence-system`](https://github.com/frankxai/ocean-intelligence-system) `guardians/archetypes/`). Both operate on one non-negotiable principle: **they assemble evidence; they never adjudicate.**
+- **Two guardian design patterns scoped to your work** — `sanctuary-guardian` and `stranding-network-guardian`. They are requirements briefs, not public implementations linked by this guide. Any implementation must follow one non-negotiable principle: **it assembles evidence; it never adjudicates.**
 - **The welfare frame, applied to individuals** — the Five Domains adapted to a patient in your care: feeding response and body condition (Nutrition), the disturbance footprint of handling (Behaviour), entanglement/disease load (Health) — all in [`WELFARE.md`](../../WELFARE.md).
 - **UME alarm integration** — a stranding-rate anomaly maps to NOAA's seven Unusual Mortality Event criteria and can escalate a guild, prompting a `necropsy-summary` or region review.
 

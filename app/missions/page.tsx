@@ -6,7 +6,7 @@ import { ArtifactCard } from "@/components/artifact-card"
 export const metadata: Metadata = {
   title: "Field Missions",
   description:
-    "Structured citizen-science missions with ethics review built in — observe ocean life, follow welfare-first protocols, feed real datasets.",
+    "Review-gated citizen-science mission drafts with visible science and ethics state.",
 }
 
 export default function MissionsIndexPage() {
@@ -18,8 +18,8 @@ export default function MissionsIndexPage() {
         <Container className="py-14 sm:py-20">
           <SectionHeading
             eyebrow="Field missions"
-            title="Citizen science with ethics built in"
-            description="Every mission carries an ethics review, welfare-first observation protocols, and a defined data destination. Your observations feed OBIS, iNaturalist and partner datasets — credited to you."
+            title="Mission protocols, held until ethics review clears"
+            description="Draft missions remain visible for source and review inspection. The public site withholds operational wildlife guidance until publication, science, and ethics approval. When a reviewed mission names a citizen-science platform, submit directly under that platform's terms; Blue Life Commons does not route or credit observations."
           />
         </Container>
       </div>
@@ -34,9 +34,9 @@ export default function MissionsIndexPage() {
             Want a mission near you?
           </h2>
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-            Missions are proposed and reviewed in the open on GitHub. If your
-            coast, reef or bay needs a structured observation protocol, propose
-            one — the community and ethics reviewers will help you shape it.
+            Missions begin as public GitHub proposals. If a coast, reef, or bay
+            lacks a protocol, open an issue with the place, intended observation,
+            and source material. Reviewers decide whether it can proceed.
           </p>
           <a
             href="https://github.com/frankxai/blue-life-commons/blob/main/CONTRIBUTING.md"

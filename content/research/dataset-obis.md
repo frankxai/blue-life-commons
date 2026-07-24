@@ -70,7 +70,7 @@ OBIS records follow the Darwin Core standard and add 68 fields from the OBIS QC 
 
 ## How it's used in the commons
 
-Primary `occurrence`-signal source for species pages, region briefings, and Ocean Intelligence System bay/species/reef guardians. Connector spec: `integrations/obis.md` in the [Ocean Intelligence System](https://github.com/frankxai/ocean-intelligence-system).
+This card records OBIS as a candidate occurrence source for species pages, region briefings, and future guardian work. Blue Life Commons does not currently publish an OBIS connector here. Treat an implementation as unavailable until its code, tests, provenance, license handling, and coordinate safeguards are publicly inspectable.
 
 ## Sources
 

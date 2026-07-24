@@ -1,7 +1,7 @@
 ---
 id: partner-profile-template
 type: partner-profile
-title: Partner Profile Template
+title: Organization Profile Template
 audience:
   - researcher
   - citizen-scientist
@@ -20,16 +20,16 @@ outputs:
   github_path: content/partners/_templates/partner-profile-template.md
   map_layer: false
 impact:
-  claim: "Template — replace with the partner profile's impact claim."
+  claim: "Template — replace with the organization profile's documentation claim."
   eligible_for_hypercert: false
 contributors:
   - github: frankxai
 license: CC-BY-4.0
 ---
 
-# Partner Profile Template
+# Organization Profile Template
 
-> Copy this file to `content/partners/<org-slug>.md`, replace every section, and update the frontmatter. A partner profile is a factual, respectful description of a real organization — sourced to the organization's own materials and reputable coverage. Do not overstate a relationship that does not exist; describe what the org does and how a commons contributor might engage with it.
+> Copy this file to `content/partners/<org-slug>.md`, replace every section, and update the frontmatter. The `partner-profile` type is a stable schema name; the public artifact is an independent organization profile, not evidence of partnership. Source the organization's work to its own materials and reputable coverage. Do not overstate a relationship that does not exist.
 
 ## Who they are
 

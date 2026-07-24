@@ -26,7 +26,7 @@ const COLUMNS = [
       { href: "/governance", label: "Governance & ethics" },
       { href: "/privacy", label: "Privacy & transparency" },
       { href: "/terms", label: "Terms of use" },
-      { href: "/partners", label: "Partners" },
+      { href: "/partners", label: "Ocean organizations" },
       { href: "/ecosystem", label: "Ecosystem" },
       { href: "/contribute", label: "Contribute" },
     ],

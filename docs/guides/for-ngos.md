@@ -1,11 +1,11 @@
 # For Conservation NGOs
 
-You run volunteer programs, advocacy campaigns, and grant-and-impact reporting — often with a paper-to-spreadsheet bottleneck, oral knowledge lost to staff turnover, and impact reports that feel like output-theater. The Ocean Intelligence System gives your team a grounded operating spine and a way to make contribution feel like a conversation, not a Git lesson.
+You run volunteer programs, advocacy campaigns, and grant-and-impact reporting — often with a paper-to-spreadsheet bottleneck, oral knowledge lost to staff turnover, and impact reports that feel like output-theater. Blue Life Commons offers a grounded knowledge spine and a way to make contribution feel like a conversation, not a Git lesson.
 
 ## What the system gives you
 
-- **A Research-OS starting point** — the [`ocean-intelligence-system`](https://github.com/frankxai/ocean-intelligence-system) ships connectors to occurrence, protected-area, and fishing-effort data (OBIS, GBIF, WoRMS, NOAA Coral Reef Watch, Protected Planet), each normalized with provenance carried through.
-- **An Ocean Guardian for your work** — a place- or population-scoped agent that turns raw feeds into briefings your team and supporters can actually read. A `coastal-community-guardian` or `species-guardian` watches the signals you can't watch full-time and explains what changed.
+- **A Research-OS starting point** — the public [`marine-mcp`](https://github.com/frankxai/marine-mcp) repository serves reviewed commons records to compatible agents. Dataset cards describe candidate external sources, but this guide does not claim public live-source connectors.
+- **A contract for an Ocean Guardian** — a place- or population-scoped agent can be commissioned around named decisions and review boundaries. Its operator, data sources, code, tests, and welfare safeguards must be inspectable before the result is treated as operational.
 - **A no-Git on-ramp** — the contribution invariant: most of your field staff, fishers, divers, and volunteers will *never* touch GitHub. They contribute knowledge by voice note, interview, or form; a **commons steward** does the Git step, with attribution and consent recorded.
 - **Artifact types built for your ops** — `volunteer-program`, `local-knowledge`, plus region briefings and welfare assessments that ground your advocacy in cited evidence.
 - **An impact ledger** — every merged artifact carries an `impact.claim` and may be `eligible_for_hypercert`, giving you a credible, contributor-credited record for grant and sponsor reporting.
@@ -13,9 +13,9 @@ You run volunteer programs, advocacy campaigns, and grant-and-impact reporting �
 ## How to use it today
 
 1. **Browse the commons** — open [`CATALOG.md`](../../CATALOG.md). See the partner profiles already published (Mission Blue, Olive Ridley Project, Reef Check, WDC, Point Reyes) for the shape of a credible org artifact.
-2. **Stand up a guardian for your place** — fork the Ocean Guardian framework, pick the closest archetype in `ocean-intelligence-system/guardians/archetypes/` (`coastal-community-guardian`, `bay-guardian`, `reef-guardian`, `species-guardian`), and run the Ningaloo demo (`guardians/demo_ningaloo.py`) to see the full pipeline execute offline before you wire your own.
+2. **Write the guardian brief for your place** — name its scope, decisions, allowed data precision, source contracts, review owners, and stopping conditions. Commission an implementation only when its evidence can be reviewed.
 3. **Capture local knowledge without a steward bottleneck** — collect a sighting, a seasonal pattern, or a community-managed-bay protocol as a voice note or interview, then hand it to a commons steward who drafts a `local-knowledge` artifact with your contributor's `consent` recorded.
-4. **Author a partner profile** for your org so agents and researchers surface your work with correct, cited framing.
+4. **Author an independent organization profile** for your org so agents and researchers can find its work with correct, cited framing. Inclusion does not imply a Blue Life Commons partnership.
 5. **Generate impact records** from merged artifacts for your next grant report — the `impact.claim` field is designed to be lifted directly.
 
 ## The rules that apply to you

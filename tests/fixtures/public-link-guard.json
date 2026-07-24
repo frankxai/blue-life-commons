@@ -1,0 +1,214 @@
+{
+  "blocked": [
+    "https://github.com/frankxai/ocean-intelligence-system",
+    "http://github.com/frankxai/ocean-intelligence-system",
+    "//github.com/frankxai/ocean-intelligence-system",
+    "https://www.github.com/frankxai/ocean-intelligence-system",
+    "github.com/frankxai/ocean-intelligence-system",
+    "HTTPS://GITHUB.COM/FRANKXAI/OCEAN-INTELLIGENCE-SYSTEM",
+    "[runtime](https://github.com/frankxai/ocean-intelligence-system)",
+    "https://github.com/frankxai/ocean-intelligence-system.git",
+    "https://github.com/frankxai/ocean-intelligence-system/tree/main",
+    "https://github.com/frankxai/ocean-intelligence-system?tab=readme",
+    "https://github.com/frankxai/ocean-intelligence-system#readme",
+    "See https://github.com/frankxai/ocean-intelligence-system.",
+    "See https://github.com/frankxai/ocean-intelligence-system!",
+    "See https://github.com/frankxai/ocean-intelligence-system&tab=readme",
+    "“https://github.com/frankxai/ocean-intelligence-system”",
+    "«https://github.com/frankxai/ocean-intelligence-system»",
+    "https://github.com/frankxai/ocean-intelligence-system…",
+    "https://github.com/frankxai/ocean-intelligence-system—private",
+    "~~https://github.com/frankxai/ocean-intelligence-system~~",
+    "https://github．com/frankxai/ocean-intelligence-system",
+    "https://github。com/frankxai/ocean-intelligence-system",
+    "https://github%2Ecom/frankxai/ocean-intelligence-system",
+    "https://ｇｉｔｈｕｂ．ｃｏｍ/frankxai/ocean-intelligence-system",
+    "https://github.com/frankxai/temporary/../ocean-intelligence-system",
+    "github.com\\frankxai\\ocean-intelligence-system",
+    "https%3A%2F%2Fgithub%2Ecom%2Ffrankxai%2Focean-intelligence-system",
+    "https://github.com/frankxai/%6fcean-intelligence-system",
+    "https://github.com/temporary/%2e%2e/frankxai/ocean-intelligence-system",
+    "https://github.com.:443/frankxai/ocean-intelligence-system",
+    "repo:https://github.com/frankxai/ocean-intelligence-system",
+    "repo:github.com/frankxai/ocean-intelligence-system",
+    "https://%67%69%74%68%75%62%2E%63%6F%6D/frankxai/ocean-intelligence-system",
+    "https://git\thub.com/frankxai/ocean-intelligence-system",
+    "https://github.com/frankxai/ocean-\nintelligence-system",
+    "https://github.com/frankxai/ocean-\rintelligence-system",
+    "https://github.com/x(y)/../frankxai/ocean-intelligence-system",
+    "https://github.com/x,y/../frankxai/ocean-intelligence-system",
+    "&#104;&#116;&#116;&#112;&#115;&#58;&#47;&#47;&#103;&#105;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;&#47;&#102;&#114;&#97;&#110;&#107;&#120;&#97;&#105;&#47;&#111;&#99;&#101;&#97;&#110;&#45;&#105;&#110;&#116;&#101;&#108;&#108;&#105;&#103;&#101;&#110;&#99;&#101;&#45;&#115;&#121;&#115;&#116;&#101;&#109;",
+    "&#x68;&#x74;&#x74;&#x70;&#x73;&#x3a;&#x2f;&#x2f;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;&#x2f;frankxai/ocean-intelligence-system",
+    "https&colon;&sol;&sol;github&period;com&sol;frankxai&sol;ocean-intelligence-system",
+    "https&colon;&sol;&sol;git&Tab;hub&period;com&sol;frankxai&sol;ocean-intelligence-system",
+    "https://github.com/frankxai/ocean-&#13;intelligence-system",
+    "https://git&#9;hub.com/frankxai/ocean-intelligence-system",
+    "&quot;https://github.com/frankxai/ocean-intelligence-system&quot;",
+    "https://github.com/frankxai/ocean-intelligence-system?x=1&amp;y=2"
+  ],
+  "allowed": [
+    "https://github.com/frankxai/blue-life-commons",
+    "https://github.com/frankxai/marine-mcp",
+    "https://github.com/frankxai/marine-agent-skills",
+    "https://github.com/frankxai/ocean-intelligence",
+    "https://github.com/frankxai/ocean-intelligence-system-public",
+    "https://github.com/frankxai/ocean-intelligence-system_fork",
+    "https://github.com/frankxai/ocean-intelligence-system.docs",
+    "https://github.com/frankxai/ocean-intelligence-system.github",
+    "https://github.com/frankxai/ocean-intelligence-system.git-tools",
+    "https://github.com/frankxai/ocean-intelligence-system.gitignore",
+    "https://github.com/frankxai/ocean-intelligence-system.gitattributes",
+    "https://github.com/frankxai/ocean-intelligence-system.gitlab",
+    "https://github.com/frankxai/ocean-intelligence-system.documentation",
+    "https://github.com/frankxai/ocean-intelligence-system.wiki",
+    "https://github.com/frankxai/ocean-intelligence-system-archive",
+    "https://github.com/frankxai/ocean-intelligence-system-skills",
+    "https://github.com/frankxai/ocean-intelligence-system_tools",
+    "https://github.com/frankxai/ocean-intelligence-system_v2",
+    "https://github.com/frankxai/ocean-intelligence-system.git-tools-extra",
+    "https://github.com/frankxai/ocean-intelligence-system-config",
+    "https://github.com/another-owner/ocean-intelligence-system",
+    "https://github.com.evil.example/frankxai/ocean-intelligence-system",
+    "https://evil.example/github.com/frankxai/ocean-intelligence-system",
+    "https://github.com@evil.example/frankxai/ocean-intelligence-system",
+    "https&colon&sol&sol;github&period;com&sol;frankxai&sol;ocean-intelligence-system",
+    "https&colon;&sol;&sol;github&bogus;com&sol;frankxai&sol;ocean-intelligence-system",
+    "https&#xZZ;&#47;&#47;github&#xZZ;com&#47;frankxai&#47;ocean-intelligence-system",
+    "https&amp;colon;&amp;sol;&amp;sol;github&amp;period;com&amp;sol;frankxai&amp;sol;ocean-intelligence-system",
+    "The prose says github.com, then later ocean-intelligence-system without a path.",
+    "The strings github.com/frankxai and ocean-intelligence-system are separate.",
+    "Ordinary prose can place &#xZZ; near github.com/frankxai without naming a repository.",
+    "https://example.com/x(y)/../frankxai/ocean-intelligence-system",
+    "https://example.com/x,y/../frankxai/ocean-intelligence-system",
+    "https://git &Tab; hub.com/frankxai/ocean-intelligence-system",
+    "Ocean Intelligence System is a private runtime layer."
+  ],
+  "canonical_exact": [
+    "https://github．com/frankxai/ocean-intelligence-system",
+    "https://github。com/frankxai/ocean-intelligence-system",
+    "https://github%2Ecom/frankxai/ocean-intelligence-system",
+    "https://ｇｉｔｈｕｂ．ｃｏｍ/frankxai/ocean-intelligence-system",
+    "https://github.com/frankxai/temporary/../ocean-intelligence-system",
+    "github.com\\frankxai\\ocean-intelligence-system",
+    "https://git\thub.com/frankxai/ocean-intelligence-system",
+    "https://github.com/frankxai/ocean-\nintelligence-system",
+    "https://github.com/frankxai/ocean-\rintelligence-system",
+    "https://github.com/x(y)/../frankxai/ocean-intelligence-system",
+    "https://github.com/x,y/../frankxai/ocean-intelligence-system",
+    "&#104;&#116;&#116;&#112;&#115;&#58;&#47;&#47;&#103;&#105;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;&#47;&#102;&#114;&#97;&#110;&#107;&#120;&#97;&#105;&#47;&#111;&#99;&#101;&#97;&#110;&#45;&#105;&#110;&#116;&#101;&#108;&#108;&#105;&#103;&#101;&#110;&#99;&#101;&#45;&#115;&#121;&#115;&#116;&#101;&#109;",
+    "&#x68;&#x74;&#x74;&#x70;&#x73;&#x3a;&#x2f;&#x2f;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;&#x2f;frankxai/ocean-intelligence-system",
+    "https&colon;&sol;&sol;github&period;com&sol;frankxai&sol;ocean-intelligence-system",
+    "https&colon;&sol;&sol;git&Tab;hub&period;com&sol;frankxai&sol;ocean-intelligence-system",
+    "https://git&#9;hub.com/frankxai/ocean-intelligence-system"
+  ],
+  "canonical_siblings": [
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system.docs",
+      "repository": "ocean-intelligence-system.docs"
+    },
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system.github",
+      "repository": "ocean-intelligence-system.github"
+    },
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system.git-tools",
+      "repository": "ocean-intelligence-system.git-tools"
+    },
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system-public",
+      "repository": "ocean-intelligence-system-public"
+    },
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system_fork",
+      "repository": "ocean-intelligence-system_fork"
+    },
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system.gitignore",
+      "repository": "ocean-intelligence-system.gitignore"
+    },
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system.gitattributes",
+      "repository": "ocean-intelligence-system.gitattributes"
+    },
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system.gitlab",
+      "repository": "ocean-intelligence-system.gitlab"
+    },
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system.documentation",
+      "repository": "ocean-intelligence-system.documentation"
+    },
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system.wiki",
+      "repository": "ocean-intelligence-system.wiki"
+    },
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system-archive",
+      "repository": "ocean-intelligence-system-archive"
+    },
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system-skills",
+      "repository": "ocean-intelligence-system-skills"
+    },
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system_tools",
+      "repository": "ocean-intelligence-system_tools"
+    },
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system_v2",
+      "repository": "ocean-intelligence-system_v2"
+    },
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system.git-tools-extra",
+      "repository": "ocean-intelligence-system.git-tools-extra"
+    },
+    {
+      "reference": "https://github.com/frankxai/ocean-intelligence-system-config",
+      "repository": "ocean-intelligence-system-config"
+    }
+  ],
+  "emitted_blocked": [
+    "https://git\thub.com/frankxai/ocean-intelligence-system",
+    "https://github.com/frankxai/ocean-\nintelligence-system",
+    "https://github.com/frankxai/ocean-\rintelligence-system",
+    "https://github.com/x(y)/../frankxai/ocean-intelligence-system",
+    "https://github.com/x,y/../frankxai/ocean-intelligence-system",
+    "&#104;&#116;&#116;&#112;&#115;&#58;&#47;&#47;&#103;&#105;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;&#47;&#102;&#114;&#97;&#110;&#107;&#120;&#97;&#105;&#47;&#111;&#99;&#101;&#97;&#110;&#45;&#105;&#110;&#116;&#101;&#108;&#108;&#105;&#103;&#101;&#110;&#99;&#101;&#45;&#115;&#121;&#115;&#116;&#101;&#109;",
+    "&#x68;&#x74;&#x74;&#x70;&#x73;&#x3a;&#x2f;&#x2f;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;&#x2f;frankxai/ocean-intelligence-system",
+    "https&colon;&sol;&sol;github&period;com&sol;frankxai&sol;ocean-intelligence-system",
+    "https&colon;&sol;&sol;git&Tab;hub&period;com&sol;frankxai&sol;ocean-intelligence-system",
+    "https://git&#9;hub.com/frankxai/ocean-intelligence-system",
+    "&quot;https://github.com/frankxai/ocean-intelligence-system&quot;",
+    "https://github.com/frankxai/ocean-intelligence-system?x=1&amp;y=2"
+  ],
+  "emitted_allowed": [
+    "https://github.com/frankxai/ocean-intelligence-system.docs",
+    "https://github.com/frankxai/ocean-intelligence-system.github",
+    "https://github.com/frankxai/ocean-intelligence-system.git-tools",
+    "https://github.com/frankxai/ocean-intelligence-system-public",
+    "https://github.com/frankxai/ocean-intelligence-system_fork",
+    "https://github.com/frankxai/ocean-intelligence-system.gitignore",
+    "https://github.com/frankxai/ocean-intelligence-system.gitattributes",
+    "https://github.com/frankxai/ocean-intelligence-system.gitlab",
+    "https://github.com/frankxai/ocean-intelligence-system.documentation",
+    "https://github.com/frankxai/ocean-intelligence-system.wiki",
+    "https://github.com/frankxai/ocean-intelligence-system-archive",
+    "https://github.com/frankxai/ocean-intelligence-system-skills",
+    "https://github.com/frankxai/ocean-intelligence-system_tools",
+    "https://github.com/frankxai/ocean-intelligence-system_v2",
+    "https://github.com/frankxai/ocean-intelligence-system.git-tools-extra",
+    "https://github.com/frankxai/ocean-intelligence-system-config",
+    "https&colon&sol&sol;github&period;com&sol;frankxai&sol;ocean-intelligence-system",
+    "https&#xZZ;&#47;&#47;github&#xZZ;com&#47;frankxai&#47;ocean-intelligence-system",
+    "https&amp;colon;&amp;sol;&amp;sol;github&amp;period;com&amp;sol;frankxai&amp;sol;ocean-intelligence-system",
+    "The prose says github.com, then later ocean-intelligence-system without a path.",
+    "Ordinary prose can place &#xZZ; near github.com/frankxai without naming a repository."
+  ],
+  "nested_excluded_name_routes": [
+    "content/tests/deep/private-link.md",
+    "content/.next/deep/private-link.md",
+    "content/.vercel/deep/private-link.md",
+    "content/coverage/deep/private-link.md",
+    "content/node_modules/deep/private-link.md"
+  ]
+}

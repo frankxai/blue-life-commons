@@ -43,8 +43,8 @@ const PATHWAYS = [
   },
   {
     audience: "Engineers",
-    title: "Build the intelligence layer",
-    body: "Improve the schema, the validators, the connectors, or this very website. The commons and its tooling are open source end to end.",
+    title: "Strengthen the public tools",
+    body: "Improve the public schema, validators, marine-mcp interface, agent skills, or this website. Institution-specific deployment code is not represented here as open source.",
     steps: [
       "Browse good-first-issue labels",
       "Extend a connector or the schema",

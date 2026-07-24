@@ -20,6 +20,7 @@ import {
 } from "@/components/species-stats-compare"
 import { SpeciesLifeGallery } from "@/components/species-life-gallery"
 import { getApprovedSpeciesMedia } from "@/lib/media"
+import { isMissionOperationallyPublishable } from "@/lib/review-gates"
 import { GITHUB_REPO_URL, cn, formatRegion } from "@/lib/utils"
 import Link from "next/link"
 
@@ -358,6 +359,8 @@ export function ArtifactDetail({
   const editUrl = `${GITHUB_REPO_URL}/blob/main/${a.githubPath}`
   const approvedMedia = getApprovedSpeciesMedia(a)
   const impactIsPublished = a.status === "approved" || a.status === "published"
+  const missionBodyWithheld =
+    a.type === "field-mission" && !isMissionOperationallyPublishable(a)
   const guild = guildFromPath(a.path)
   const isSpecies = a.type === "species-page"
   const cinematic = Boolean(isSpecies && approvedMedia)
@@ -471,10 +474,42 @@ export function ArtifactDetail({
           )}
         >
           <div>
-            <div
-              className="prose-ocean"
-              dangerouslySetInnerHTML={{ __html: a.bodyHtml }}
-            />
+            {missionBodyWithheld ? (
+              <section
+                aria-labelledby="mission-review-hold"
+                className="rounded-2xl border border-coral/35 bg-coral/8 p-6 sm:p-8"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-coral">
+                  Publication gate closed
+                </p>
+                <h2
+                  id="mission-review-hold"
+                  className="mt-3 font-serif text-2xl font-semibold text-foreground"
+                >
+                  This is not operational wildlife guidance.
+                </h2>
+                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+                  The mission body stays off the public site until the artifact
+                  is approved or published and both its science and ethics
+                  reviews are approved. Reviewers can inspect the sourced draft
+                  in GitHub; visitors should follow current local regulations
+                  and guidance from the responsible authority.
+                </p>
+                <a
+                  href={editUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-flex items-center text-sm font-semibold text-primary hover:underline"
+                >
+                  Inspect the review draft on GitHub
+                </a>
+              </section>
+            ) : (
+              <div
+                className="prose-ocean"
+                dangerouslySetInnerHTML={{ __html: a.bodyHtml }}
+              />
+            )}
           </div>
 
           <aside
@@ -549,10 +584,12 @@ export function ArtifactDetail({
                   <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
                     {impactIsPublished
                       ? "Published impact claim"
-                      : "Proposed impact claim"}
+                      : "Impact claim in review"}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-foreground">
-                    {a.impact.claim}
+                    {impactIsPublished
+                      ? a.impact.claim
+                      : "A proposed claim exists in repository metadata, but it is not presented as an outcome until review is complete."}
                   </p>
                 </div>
               )}

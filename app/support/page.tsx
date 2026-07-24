@@ -18,11 +18,11 @@ const CHANNELS = [
     cta: "Learn about Open Collective",
   },
   {
-    name: "GitHub Sponsors",
-    role: "Sustain the maintainers",
-    body: "Directly fund the people who review artifacts, maintain the schema, and keep the intelligence layer running.",
-    href: "https://github.com/sponsors/frankxai",
-    cta: "Sponsor on GitHub",
+    name: "GitHub",
+    role: "Inspect the work",
+    body: "No verified GitHub Sponsors checkout is represented as active here. Use the public repository to inspect the maintainers, review history, and current work before any future funding channel is introduced.",
+    href: "https://github.com/frankxai/blue-life-commons",
+    cta: "Inspect the public repository",
   },
   {
     name: "Hypercerts",

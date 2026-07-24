@@ -50,11 +50,11 @@ WoRMS is the authoritative register of marine species names, maintained by a glo
 
 ## License and reuse
 
-WoRMS content is generally made available under **CC-BY 4.0**, with a required citation format. Confirm the current terms and cite WoRMS per their requested format on any reuse. Record the exact license string when the connector is promoted to verified.
+WoRMS content is generally made available under **CC-BY 4.0**, with a required citation format. Confirm the current terms and cite WoRMS per their requested format on any reuse. Any future connector must record the exact license string before it can be marked verified.
 
 ## Fields
 
-`AphiaID` (the stable WoRMS taxon id), `scientificname`, `authority`, `status` (accepted/unaccepted), `rank`, `valid_name` (the accepted name if the queried name is a synonym), and a kingdom→genus classification. The connector returns WoRMS `null` as an empty result (no match), which callers must handle.
+`AphiaID` (the stable WoRMS taxon id), `scientificname`, `authority`, `status` (accepted/unaccepted), `rank`, `valid_name` (the accepted name if the queried name is a synonym), and a kingdom→genus classification. The WoRMS API may return `null` for no match; a future connector must preserve that as an explicit empty result.
 
 ## Limitations and ethics
 
@@ -63,7 +63,7 @@ WoRMS content is generally made available under **CC-BY 4.0**, with a required c
 
 ## How it's used in the commons
 
-The accepted-name authority for species pages and the `taxonomy` signal for Ocean Intelligence guardians: resolve the accepted name in WoRMS, then query OBIS/GBIF, avoiding synonym mismatches. Connector spec: `integrations/worms.md` in the [Ocean Intelligence System](https://github.com/frankxai/ocean-intelligence-system).
+This card records WoRMS as a candidate authority for accepted-name checks in species pages and future guardian work. Blue Life Commons does not currently publish a WoRMS connector here. Treat an implementation as unavailable until its code, tests, provenance, license handling, and empty-result behavior are publicly inspectable.
 
 ## Sources
 

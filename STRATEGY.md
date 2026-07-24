@@ -19,7 +19,7 @@ Ocean intelligence is built in three distinct layers. They are kept separate on 
 | Layer | Repository / surface | What it is | What it creates |
 |---|---|---|---|
 | **Blue Life Commons** (this repo) | Reviewed knowledge + open workflows + impact ledger | Species pages, region briefings, field missions, dataset cards, sources, ethics rules | **Trust** |
-| **Ocean Intelligence System** | [`ocean-intelligence-system`](https://github.com/frankxai/ocean-intelligence-system) | The open-source machinery that *acts on* the commons — data connectors, Guardian agents, MCP servers, dashboards | **Continuity** |
+| **Public agent interfaces** | [`marine-mcp`](https://github.com/frankxai/marine-mcp) + [`marine-agent-skills`](https://github.com/frankxai/marine-agent-skills) | Public tools that serve the review-gated corpus to agents and help contributors author compliant artifacts. The broader operational runtime is not represented as public source. | **Continuity** |
 | **Starlight Marine Intelligence Systems** | Commercial | Implementation, design, institutional adoption, media | **Reach** |
 
 **The hard boundary.** Each layer reads from the one above it and never overrides it. The commons defines scientific truth, citation standards, and wildlife-interaction ethics; the software layer *applies* those standards and never interprets around them; the business *implements and distributes* and never sells access to the knowledge itself. Knowledge flows down; money never flows up into gating the knowledge.

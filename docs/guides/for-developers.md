@@ -1,14 +1,14 @@
 # For Developers & Agentic Builders
 
-You want a clean, normalized surface over fragmented marine APIs and a reference implementation of an ethics-bounded agent system you can fork. The Ocean Intelligence System is exactly that: a review-gated MCP corpus server, a skill pack, and a place-scoped guardian framework with a tested Python connector layer.
+You want a clean, normalized surface for reviewed ocean knowledge and a credible path toward ethics-bounded marine agents. Two public repositories are currently inspectable here. Place-scoped guardians and live-source connectors remain an implementation brief until their code and tests are published.
 
 ## What the system gives you
 
 - **[`marine-mcp`](https://github.com/frankxai/marine-mcp)** — a review-gated MCP server (TypeScript) that serves the reviewed Blue Life Commons corpus to any MCP client. It wraps every result in `{ data, sources, status, attribution }` and returns a curated body *as fact only when review-approved* — otherwise a typed refusal (`servable: false`). It never launders an unsourced claim.
 - **[`marine-agent-skills`](https://github.com/frankxai/marine-agent-skills)** — a Claude Code skill pack: `/species-page`, `/field-mission`, `/ethics-check`, `/source-verify`, `/validate-artifact`, `/open-artifact-pr`.
-- **[`ocean-intelligence-system`](https://github.com/frankxai/ocean-intelligence-system)** — the Ocean Guardian framework (place-scoped agents) plus a Python connector layer with **five runnable, unit-tested connectors** sharing one normalized-signal + ethics substrate in `mcp/lib/`: OBIS, GBIF, NOAA Coral Reef Watch, WoRMS, Protected Planet. Coordinate coarsening is enforced *in code*, and provenance + license ride on every record.
+- **Guardian and live-source contract** — dataset cards in this commons document candidate sources and the required provenance, licensing, sensitivity, and welfare boundaries. This guide does not link to or claim a public guardian or live-source connector implementation.
 
-**Keep the two MCP surfaces distinct:** `marine-mcp` (TypeScript) serves the *reviewed corpus*; `ocean-intelligence-system/mcp/` (Python) wraps *live external data sources*, always labelled as external. A guardian composes both — grounded narrative from the corpus, live signals from the connectors.
+**Keep reviewed corpus and live signals distinct:** `marine-mcp` serves the reviewed corpus. Any future connector must label live external data as external, preserve its provenance and license, and enforce sensitivity controls. A guardian may compose both only after those boundaries are inspectable and tested.
 
 ## How to use it today
 
@@ -32,9 +32,9 @@ You want a clean, normalized surface over fragmented marine APIs and a reference
    ```
 
 2. **Call a tool.** Ask your agent to `search_species` (metadata only — id, title, status, servable flag), then `get_species_details` (gated). Inspect the `{ data, sources, status, attribution }` envelope and confirm you get a typed refusal on a `needs-expert-review` page. That refusal contract is what you build on.
-3. **Add a connector.** In `ocean-intelligence-system/mcp/servers/`, follow an existing folder (e.g. `obis/`) — reuse the normalized-signal + ethics substrate in `mcp/lib/`, return provenance + license per record, and enforce coordinate coarsening. Add unit tests like the existing connectors do.
-4. **Run a guardian offline.** Execute `guardians/demo_ningaloo.py` to see the full pipeline — corpus grounding + live connector signals → grounded briefing — run without outbound calls. Then fork a `guardians/archetypes/` brief for your own coastline.
-5. **Verify before you ship.** `npm test` and `npm run typecheck` in `marine-mcp`; the Python connectors carry their own unit tests. Run `validate_artifact` / `/validate-artifact` on any content you generate.
+3. **Specify a connector before implementing it.** Author an `mcp-connector` dataset card that names the source, license, provenance envelope, coordinate policy, failure behavior, and test cases.
+4. **Publish the implementation evidence.** Put runnable code, fixtures, tests, and a bounded example in a repository reviewers can inspect. Do not describe the connector or guardian as available while that evidence remains private or absent.
+5. **Verify before you ship.** Run `npm test` and `npm run typecheck` in `marine-mcp`, then run `validate_artifact` / `/validate-artifact` on any content you generate.
 
 ## The rules that apply to you
 
@@ -47,6 +47,6 @@ You want a clean, normalized surface over fragmented marine APIs and a reference
 
 ## Your first contribution
 
-**Add or harden one connector** in `ocean-intelligence-system/mcp/servers/`, or **author an `mcp-connector` dataset card** in the commons describing a source the system doesn't yet wrap. Either way: reuse the `mcp/lib/` substrate, carry provenance + license, enforce coarsening, and write the tests. See the `mcp-builder-agent.md` brief in `agent/` for the role spec, and open an `artifact-request` issue in [`.github/ISSUE_TEMPLATE/`](../../.github/ISSUE_TEMPLATE/).
+**Author an `mcp-connector` dataset card** in the commons for a source the public system does not yet wrap. If you also build the connector, publish its code and tests where reviewers can inspect them; carry provenance and license, enforce coarsening, and make failure states explicit. See the `mcp-builder-agent.md` brief in `agent/` for the role spec, and open an `artifact-request` issue in [`.github/ISSUE_TEMPLATE/`](../../.github/ISSUE_TEMPLATE/).
 
 > Built on SIP · Blue Life Commons (CC-BY-4.0).

@@ -65,7 +65,7 @@ Observation id, taxon (with community ID), observed-on date, geoprivacy/coordina
 
 ## How it's used in the commons
 
-`occurrence` source for bay and reef guardians and citizen-science prompts in field missions. The platform to which observation guides direct contributors. Connector spec: `integrations/inaturalist.md` in the [Ocean Intelligence System](https://github.com/frankxai/ocean-intelligence-system).
+This card records iNaturalist as a candidate source for future occurrence work and carefully reviewed citizen-science guidance. Blue Life Commons does not currently publish an iNaturalist connector here. Treat an implementation as unavailable until its code, tests, provenance, license handling, and sensitivity safeguards are publicly inspectable.
 
 ## Sources
 

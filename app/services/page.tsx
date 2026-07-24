@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { Container, SectionHeading, ButtonLink, ArrowRight } from "@/components/primitives"
-import { OCEAN_INTEL_URL } from "@/lib/utils"
+import { PUBLIC_MARINE_MCP_URL } from "@/lib/utils"
 
 export const metadata: Metadata = {
   title: "Services — Starlight Intelligence Systems",
@@ -23,7 +23,7 @@ const OFFERINGS = [
   },
   {
     title: "Advisory & enablement",
-    body: "We help your organization adopt open marine data practices, stand up contribution workflows, and publish credibly into the commons.",
+    body: "Design open marine-data practices, source and review workflows, and publication controls that your team can inspect and operate.",
   },
 ]
 
@@ -43,8 +43,8 @@ export default function ServicesPage() {
               Start a conversation
               <ArrowRight />
             </ButtonLink>
-            <ButtonLink href={OCEAN_INTEL_URL} variant="onDarkGhost" external>
-              Explore the open system
+            <ButtonLink href={PUBLIC_MARINE_MCP_URL} variant="onDarkGhost" external>
+              Inspect the public MCP
             </ButtonLink>
           </div>
         </Container>
@@ -66,10 +66,11 @@ export default function ServicesPage() {
 
         <div className="mt-14 grid gap-6 rounded-2xl border border-border bg-secondary p-6 sm:grid-cols-3 sm:p-8">
           <div>
-            <h3 className="font-serif text-lg font-semibold text-foreground">Open core</h3>
+            <h3 className="font-serif text-lg font-semibold text-foreground">Public foundation</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Everything we build on is public. You can read the schema, the
-              connectors and the commons before you ever talk to us.
+              The commons and marine-mcp are public. Institution-specific
+              deployments may remain private and are not represented as open
+              source.
             </p>
           </div>
           <div>

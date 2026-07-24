@@ -1,7 +1,7 @@
 ---
 id: partner-mission-blue
 type: partner-profile
-title: "Partner Profile: Mission Blue (Sylvia Earle Alliance)"
+title: "Organization Profile: Mission Blue (Sylvia Earle Alliance)"
 audience:
   - researcher
   - citizen-scientist
@@ -26,14 +26,14 @@ outputs:
   github_path: content/partners/mission-blue.md
   map_layer: false
 impact:
-  claim: "Documented Mission Blue and its Hope Spots network as a commons partner."
+  claim: "Documented Mission Blue and its Hope Spots network for the public organization directory."
   eligible_for_hypercert: false
 contributors:
   - github: frankxai
 license: CC-BY-4.0
 ---
 
-# Partner Profile: Mission Blue (Sylvia Earle Alliance)
+# Organization Profile: Mission Blue (Sylvia Earle Alliance)
 
 > Status: draft, awaiting review. Facts sourced to Mission Blue's own materials and a UN partnership listing (accessed 2026-06-11).
 

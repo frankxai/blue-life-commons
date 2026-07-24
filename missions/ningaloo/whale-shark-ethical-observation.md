@@ -33,7 +33,7 @@ outputs:
   github_path: missions/ningaloo/whale-shark-ethical-observation.md
   map_layer: false
 impact:
-  claim: "Published an ethics-reviewed field mission for responsible, licensed whale shark observation at Ningaloo."
+  claim: "Proposed a sourced field mission for responsible, licensed whale shark observation at Ningaloo; publication remains blocked on science and ethics review."
   eligible_for_hypercert: true
 contributors:
   - github: frankxai

@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { Container, SectionHeading, ButtonLink, ArrowRight } from "@/components/primitives"
-import { GITHUB_REPO_URL, OCEAN_INTEL_URL } from "@/lib/utils"
+import { GITHUB_REPO_URL, PUBLIC_MARINE_MCP_URL } from "@/lib/utils"
 
 export const metadata: Metadata = {
   title: "Ecosystem",
@@ -17,11 +17,11 @@ const LAYERS = [
     linkLabel: "blue-life-commons",
   },
   {
-    name: "Ocean Intelligence System",
-    tag: "Sensing layer",
-    body: "Open connectors and agents that watch OBIS, GBIF, NOAA and other live sources — detecting signals, drafting updates, and proposing changes to the commons as pull requests.",
-    href: OCEAN_INTEL_URL,
-    linkLabel: "ocean-intelligence-system",
+    name: "Public agent interface",
+    tag: "Open MCP layer",
+    body: "The public marine-mcp repository serves the reviewed corpus to agents with sources and review state attached. The broader operational runtime is not represented here as public source.",
+    href: PUBLIC_MARINE_MCP_URL,
+    linkLabel: "marine-mcp",
   },
   {
     name: "GitHub",
@@ -105,17 +105,17 @@ export default function EcosystemPage() {
             Build on it
           </h2>
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-            Both layers are open source. Fork the commons, run the intelligence
-            system against your own waters, or contribute connectors back
-            upstream.
+            The commons and its public MCP interface are open source. Fork the
+            knowledge layer, inspect how reviewed records are served to agents,
+            or contribute improvements upstream.
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
             <ButtonLink href={GITHUB_REPO_URL} variant="primary" external>
               Commons repository
               <ArrowRight />
             </ButtonLink>
-            <ButtonLink href={OCEAN_INTEL_URL} variant="secondary" external>
-              Intelligence system
+            <ButtonLink href={PUBLIC_MARINE_MCP_URL} variant="secondary" external>
+              Public marine MCP
             </ButtonLink>
           </div>
         </div>
