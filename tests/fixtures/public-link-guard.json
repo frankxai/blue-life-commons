@@ -1,0 +1,40 @@
+{
+  "blocked": [
+    "https://github.com/frankxai/ocean-intelligence-system",
+    "http://github.com/frankxai/ocean-intelligence-system",
+    "//github.com/frankxai/ocean-intelligence-system",
+    "https://www.github.com/frankxai/ocean-intelligence-system",
+    "github.com/frankxai/ocean-intelligence-system",
+    "HTTPS://GITHUB.COM/FRANKXAI/OCEAN-INTELLIGENCE-SYSTEM",
+    "[runtime](https://github.com/frankxai/ocean-intelligence-system)",
+    "https://github.com/frankxai/ocean-intelligence-system.git",
+    "https://github.com/frankxai/ocean-intelligence-system/tree/main",
+    "https://github.com/frankxai/ocean-intelligence-system?tab=readme",
+    "https://github.com/frankxai/ocean-intelligence-system#readme",
+    "See https://github.com/frankxai/ocean-intelligence-system.",
+    "See https://github.com/frankxai/ocean-intelligence-system!",
+    "See https://github.com/frankxai/ocean-intelligence-system&tab=readme",
+    "“https://github.com/frankxai/ocean-intelligence-system”",
+    "«https://github.com/frankxai/ocean-intelligence-system»",
+    "https://github.com/frankxai/ocean-intelligence-system…",
+    "https://github.com/frankxai/ocean-intelligence-system—private",
+    "~~https://github.com/frankxai/ocean-intelligence-system~~"
+  ],
+  "allowed": [
+    "https://github.com/frankxai/blue-life-commons",
+    "https://github.com/frankxai/marine-mcp",
+    "https://github.com/frankxai/marine-agent-skills",
+    "https://github.com/frankxai/ocean-intelligence",
+    "https://github.com/frankxai/ocean-intelligence-system-public",
+    "https://github.com/frankxai/ocean-intelligence-system_fork",
+    "https://github.com/another-owner/ocean-intelligence-system",
+    "Ocean Intelligence System is a private runtime layer."
+  ],
+  "nested_excluded_name_routes": [
+    "content/tests/deep/private-link.md",
+    "content/.next/deep/private-link.md",
+    "content/.vercel/deep/private-link.md",
+    "content/coverage/deep/private-link.md",
+    "content/node_modules/deep/private-link.md"
+  ]
+}
