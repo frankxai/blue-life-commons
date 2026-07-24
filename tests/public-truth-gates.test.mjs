@@ -18,6 +18,7 @@ import {
 } from "../lib/review-gates.ts"
 import {
   auditPublishableLinks,
+  canonicalizeGitHubReference,
   collectPublishableTextFiles,
   hasUnavailableRepositoryReference,
 } from "../scripts/verify_public_links.mjs"
@@ -152,6 +153,21 @@ test("public conversion links resolve only to represented public surfaces", asyn
       false,
       `expected allowed fixture not to match: ${source}`,
     )
+  }
+
+  for (const reference of fixtures.canonical_exact) {
+    assert.deepEqual(canonicalizeGitHubReference(reference), {
+      hostname: "github.com",
+      owner: "frankxai",
+      repository: "ocean-intelligence-system",
+    })
+  }
+  for (const fixture of fixtures.canonical_siblings) {
+    assert.deepEqual(canonicalizeGitHubReference(fixture.reference), {
+      hostname: "github.com",
+      owner: "frankxai",
+      repository: fixture.repository,
+    })
   }
 })
 
