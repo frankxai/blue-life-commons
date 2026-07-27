@@ -20,3 +20,9 @@ content/media/blob-upload-output/
 # local secrets
 .env.local
 .env*.local
+
+# web-excellence pack — local evidence, not repo artifacts
+.visual-proof/
+.lighthouse.json
+.extract-design-system/
+.claude/skills/.replaced/
