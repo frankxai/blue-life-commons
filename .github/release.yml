@@ -1,0 +1,35 @@
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+      - internal-only
+  categories:
+    - title: Commons and encyclopedia
+      labels:
+        - feature
+        - enhancement
+        - content
+        - product
+    - title: Evidence, ethics, and public trust
+      labels:
+        - governance
+        - trust
+        - privacy
+        - security
+    - title: Media and experience
+      labels:
+        - media
+        - design
+        - accessibility
+    - title: Documentation and community
+      labels:
+        - documentation
+        - community
+    - title: Maintenance
+      labels:
+        - dependencies
+        - chore
+        - ci
+    - title: Other changes
+      labels:
+        - '*'
