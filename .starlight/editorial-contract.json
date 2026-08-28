@@ -1,0 +1,30 @@
+{
+  "schema_version": "starlight.editorial_contract.v1",
+  "brand_id": "blue-life-commons",
+  "source": {
+    "repository": "frankxai/starlight-design-intelligence",
+    "ref": "50ae34c7ac06e6c083f277ca96c3bde8f0a39b43",
+    "profile": "brand-packs/blue-life-commons/COPY.md",
+    "profile_sha256": "7005fae977d735e3ea96784df46d4d9f717be76d6076d08bbf8b13ab3f441091"
+  },
+  "content_roots": [
+    "app",
+    "components",
+    "content",
+    "data",
+    "lib",
+    "pages",
+    "src"
+  ],
+  "generated_files": [
+    "CREATOR.md",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "GEMINI.md",
+    ".github/copilot-instructions.md",
+    ".cursor/rules/editorial.mdc",
+    ".agents/skills/frank-brand-editor/SKILL.md",
+    ".github/workflows/starlight-editorial-contract.yml",
+    ".starlight/editorial-contract.json"
+  ]
+}
