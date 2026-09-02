@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bluelifecommons.org/schema/commons-graph.v1.schema.json",
+  "title": "CommonsGraph.v1",
+  "description": "The claim/provenance graph of Blue Life Commons. A reviewed knowledge record, not a monitoring feed. Claim status is derived at read time and must never appear in a submitted document.",
+  "type": "object",
+  "required": ["schema", "generatedAt", "nodes"],
+  "properties": {
+    "schema": { "const": "CommonsGraph.v1" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "nodes": { "type": "array", "items": { "$ref": "#/$defs/node" } },
+    "edges": { "type": "array", "items": { "$ref": "#/$defs/edge" } }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "nodeKind": {
+      "enum": [
+        "Taxon",
+        "Species",
+        "Region",
+        "Habitat",
+        "Observation",
+        "Claim",
+        "Source",
+        "Dataset",
+        "MediaAsset",
+        "Rights",
+        "EthicsRule",
+        "Review",
+        "Artifact",
+        "Contributor",
+        "Contradiction",
+        "Supersession"
+      ]
+    },
+    "edgeKind": {
+      "enum": [
+        "cites",
+        "about",
+        "reviews",
+        "contradicts",
+        "supersedes",
+        "observed",
+        "drawnFrom",
+        "licensedUnder",
+        "constrains",
+        "composes",
+        "contributed",
+        "partOf"
+      ]
+    },
+    "visibility": { "enum": ["public", "restricted", "embargoed"] },
+    "licenseId": {
+      "enum": [
+        "CC0-1.0",
+        "CC-BY-4.0",
+        "CC-BY-SA-4.0",
+        "CC-BY-NC-4.0",
+        "public-domain",
+        "all-rights-reserved"
+      ]
+    },
+    "locationSensitivity": { "enum": ["public", "low", "medium", "high", "extreme"] },
+    "claimClass": {
+      "enum": [
+        "taxonomy",
+        "morphology",
+        "behavior",
+        "distribution",
+        "population-estimate",
+        "conservation-status",
+        "regulation",
+        "threat",
+        "other"
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["method", "by", "at"],
+      "properties": {
+        "method": { "enum": ["authored", "imported", "derived", "inferred"] },
+        "by": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "at": { "type": "string" },
+        "importedFrom": {
+          "type": "object",
+          "required": ["system", "recordId"],
+          "properties": {
+            "system": { "type": "string" },
+            "recordId": { "type": "string" },
+            "url": { "type": "string" }
+          }
+        },
+        "rule": { "type": "string" },
+        "inputs": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "evaluation": {
+      "type": "object",
+      "required": ["rule"],
+      "properties": {
+        "rule": {
+          "enum": [
+            "review-required",
+            "citation-required",
+            "rights-required",
+            "ethics-gated",
+            "derived-only"
+          ]
+        },
+        "lastEvaluated": { "type": "string" }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "required": ["owner", "provenance", "version", "visibility", "evaluation"],
+      "properties": {
+        "owner": { "type": "string" },
+        "provenance": { "$ref": "#/$defs/provenance" },
+        "version": { "type": "integer", "minimum": 1 },
+        "visibility": { "$ref": "#/$defs/visibility" },
+        "evaluation": { "$ref": "#/$defs/evaluation" }
+      }
+    },
+    "node": {
+      "allOf": [{ "$ref": "#/$defs/meta" }],
+      "type": "object",
+      "required": ["id", "kind", "label"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+        "kind": { "$ref": "#/$defs/nodeKind" },
+        "label": { "type": "string", "minLength": 1 }
+      },
+      "allOf_notes": "Per-kind fields are enumerated in lib/commons-graph/types.ts, which is the normative contract for consumers. This document constrains the universal envelope every node must satisfy.",
+      "not": {
+        "type": "object",
+        "properties": { "derivedStatus": {} },
+        "required": ["derivedStatus"]
+      }
+    },
+    "edge": {
+      "allOf": [{ "$ref": "#/$defs/meta" }],
+      "type": "object",
+      "required": ["id", "kind", "from", "to"],
+      "properties": {
+        "id": { "type": "string" },
+        "kind": { "$ref": "#/$defs/edgeKind" },
+        "from": { "type": "string" },
+        "to": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    },
+    "claimStatus": {
+      "description": "Derived at read time from Review, Contradiction and source-freshness records. Never accepted as input.",
+      "enum": ["reviewed", "disputed", "stale", "inferred"]
+    }
+  }
+}

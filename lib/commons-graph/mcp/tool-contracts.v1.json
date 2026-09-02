@@ -1,0 +1,257 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bluelifecommons.org/schema/mcp-tool-contracts.v1.json",
+  "contract": "BlueLifeCommons.MCP.v1",
+  "graphSchema": "CommonsGraph.v1",
+  "description": "Query contracts for agents reading the Blue Life Commons claim graph. Definitions only — this file declares no server, no endpoint and no transport. An implementation that answers these tools must return graph-derived values or nothing; it must never summarise, paraphrase or infer beyond what a Claim node carries, and it must never present the commons as live monitoring.",
+  "invariants": [
+    "Every returned claim carries its derived status and the reason the status was derived.",
+    "A disputed claim is returned with both sides, never with one side selected.",
+    "Coordinates are returned only when the species' location sensitivity is 'public' or 'low' and the caller is a steward.",
+    "An empty result is a valid answer. Silence is preferred over an unsourced answer.",
+    "Freshness is reported, not hidden: every claim states how long ago its freshest source was checked."
+  ],
+  "tools": [
+    {
+      "name": "query_species",
+      "title": "Query species",
+      "description": "Resolve a species by scientific or common name and return its taxon placement, protection posture, and the claims attached to it.",
+      "readOnly": true,
+      "inputSchema": {
+        "type": "object",
+        "required": ["query"],
+        "additionalProperties": false,
+        "properties": {
+          "query": {
+            "type": "string",
+            "minLength": 2,
+            "description": "Scientific name, common name, or commons species id."
+          },
+          "includeClaims": { "type": "boolean", "default": true },
+          "claimStatuses": {
+            "type": "array",
+            "description": "Filter claims to these derived statuses. Omit to receive all four.",
+            "items": { "enum": ["reviewed", "disputed", "stale", "inferred"] }
+          },
+          "limit": { "type": "integer", "minimum": 1, "maximum": 50, "default": 10 }
+        }
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": ["schema", "matches"],
+        "additionalProperties": false,
+        "properties": {
+          "schema": { "const": "CommonsGraph.v1" },
+          "matches": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "scientificName", "protection", "claimSummary"],
+              "properties": {
+                "id": { "type": "string" },
+                "scientificName": { "type": "string" },
+                "commonName": { "type": "string" },
+                "taxonId": { "type": "string" },
+                "iucnCategory": {
+                  "enum": ["EX", "EW", "CR", "EN", "VU", "NT", "LC", "DD", "NE"]
+                },
+                "protection": {
+                  "type": "object",
+                  "required": ["locationSensitivity"],
+                  "properties": {
+                    "locationSensitivity": {
+                      "enum": ["public", "low", "medium", "high", "extreme"]
+                    },
+                    "rationale": { "type": "string" }
+                  }
+                },
+                "claimSummary": {
+                  "type": "object",
+                  "description": "Counts by derived status, so a caller can see the shape of the evidence before reading it.",
+                  "required": ["reviewed", "disputed", "stale", "inferred"],
+                  "properties": {
+                    "reviewed": { "type": "integer" },
+                    "disputed": { "type": "integer" },
+                    "stale": { "type": "integer" },
+                    "inferred": { "type": "integer" }
+                  }
+                },
+                "claims": { "type": "array", "items": { "$ref": "#/$defs/claimResult" } }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "query_claims",
+      "title": "Query claims",
+      "description": "Return claims about a subject, each with its derived status, citations, freshness and any open contradiction. This is the tool an agent should call before stating an ocean fact.",
+      "readOnly": true,
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "subjectId": { "type": "string", "description": "Species, Region, Habitat or Taxon node id." },
+          "claimClass": {
+            "enum": [
+              "taxonomy",
+              "morphology",
+              "behavior",
+              "distribution",
+              "population-estimate",
+              "conservation-status",
+              "regulation",
+              "threat",
+              "other"
+            ]
+          },
+          "status": {
+            "type": "array",
+            "items": { "enum": ["reviewed", "disputed", "stale", "inferred"] }
+          },
+          "includeSuperseded": {
+            "type": "boolean",
+            "default": false,
+            "description": "Retired claim versions are kept forever; set true to read the history."
+          },
+          "limit": { "type": "integer", "minimum": 1, "maximum": 100, "default": 25 }
+        },
+        "anyOf": [{ "required": ["subjectId"] }, { "required": ["claimClass"] }]
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": ["schema", "claims"],
+        "additionalProperties": false,
+        "properties": {
+          "schema": { "const": "CommonsGraph.v1" },
+          "claims": { "type": "array", "items": { "$ref": "#/$defs/claimResult" } },
+          "truncated": { "type": "boolean" }
+        }
+      }
+    },
+    {
+      "name": "export_packet",
+      "title": "Export contribution packet",
+      "description": "Return a validated, machine-readable CommonsGraph.v1 fragment for a set of subjects, already passed through the public projection. Refuses to export while any validation error stands.",
+      "readOnly": true,
+      "inputSchema": {
+        "type": "object",
+        "required": ["subjectIds"],
+        "additionalProperties": false,
+        "properties": {
+          "subjectIds": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 25,
+            "items": { "type": "string" }
+          },
+          "audience": {
+            "enum": ["public", "steward"],
+            "default": "public",
+            "description": "'steward' requires an authenticated reviewer and may include coordinates for protected species."
+          },
+          "includeMedia": { "type": "boolean", "default": false }
+        }
+      },
+      "outputSchema": {
+        "type": "object",
+        "required": ["schema", "ok"],
+        "additionalProperties": false,
+        "properties": {
+          "schema": { "const": "CommonsGraph.v1" },
+          "ok": { "type": "boolean" },
+          "graph": {
+            "type": "object",
+            "description": "Present only when ok is true.",
+            "required": ["schema", "generatedAt", "nodes"],
+            "properties": {
+              "schema": { "const": "CommonsGraph.v1" },
+              "generatedAt": { "type": "string" },
+              "nodes": { "type": "array" },
+              "edges": { "type": "array" }
+            }
+          },
+          "blockedBy": {
+            "type": "array",
+            "description": "Validation errors that prevented the export.",
+            "items": {
+              "type": "object",
+              "required": ["check", "message"],
+              "properties": {
+                "check": { "type": "string" },
+                "nodeId": { "type": "string" },
+                "message": { "type": "string" }
+              }
+            }
+          },
+          "attribution": {
+            "type": "object",
+            "description": "The credit line a reuser must carry.",
+            "required": ["license", "creditLine"],
+            "properties": {
+              "license": { "type": "string" },
+              "creditLine": { "type": "string" },
+              "contributors": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "claimResult": {
+      "type": "object",
+      "required": ["id", "statement", "claimClass", "status", "statusReason", "sources"],
+      "properties": {
+        "id": { "type": "string" },
+        "statement": { "type": "string" },
+        "claimClass": { "type": "string" },
+        "version": { "type": "integer" },
+        "status": { "enum": ["reviewed", "disputed", "stale", "inferred"] },
+        "statusReason": {
+          "type": "string",
+          "description": "Why the status is what it is, in one sentence. Always present."
+        },
+        "sourceAgeDays": { "type": ["integer", "null"] },
+        "freshnessBudgetDays": { "type": "integer" },
+        "scope": {
+          "type": "object",
+          "properties": {
+            "regionId": { "type": "string" },
+            "subpopulation": { "type": "string" },
+            "period": { "type": "string" }
+          }
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["url", "title", "tier"],
+            "properties": {
+              "url": { "type": "string" },
+              "title": { "type": "string" },
+              "tier": { "enum": [1, 2, 3] },
+              "doi": { "type": "string" },
+              "accessedAt": { "type": "string" }
+            }
+          }
+        },
+        "contradicts": {
+          "type": "array",
+          "description": "The other side of every open contradiction. Both sides are always returned.",
+          "items": {
+            "type": "object",
+            "required": ["contradictionId", "otherClaimId", "rationale"],
+            "properties": {
+              "contradictionId": { "type": "string" },
+              "otherClaimId": { "type": "string" },
+              "rationale": { "type": "string" }
+            }
+          }
+        },
+        "supersededBy": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

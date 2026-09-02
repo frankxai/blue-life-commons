@@ -10,6 +10,8 @@
     "start": "next start",
     "lint": "next typegen && tsc --noEmit",
     "typecheck": "next typegen && tsc --noEmit",
+    "graph:validate": "node bin/blc-validate.mjs",
+    "test:commons-graph": "node --test tests/commons-graph.test.mjs",
     "test:public-transparency": "node --test tests/public-transparency.test.mjs",
     "test:public-truth": "node scripts/verify_public_links.mjs && node --test tests/public-truth-gates.test.mjs",
     "audit:release": "node scripts/validate-release-ledger.mjs",
