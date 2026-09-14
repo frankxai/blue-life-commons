@@ -1,3 +1,4 @@
+import { baseOpenGraph } from "@/lib/open-graph"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { getAllArtifacts, getCommonsStats } from "@/lib/content"
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "A transparent ledger of review-complete public-good claims, with repository-derived output counts and visible artifact status.",
   alternates: { canonical: "/impact" },
-  openGraph: { url: "/impact" },
+  openGraph: { ...baseOpenGraph, url: "/impact" },
 }
 
 export default function ImpactPage() {

@@ -1,3 +1,4 @@
+import { baseOpenGraph } from "@/lib/open-graph"
 import type { Metadata } from "next"
 import { Container, SectionHeading, ButtonLink, ArrowRight } from "@/components/primitives"
 import { GITHUB_REPO_URL } from "@/lib/utils"
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Turn ocean curiosity into sourced, review-gated knowledge. Pathways for citizens, researchers, educators and engineers to contribute to the Blue Life Commons.",
   alternates: { canonical: "/contribute" },
-  openGraph: { url: "/contribute" },
+  openGraph: { ...baseOpenGraph, url: "/contribute" },
 }
 
 const PATHWAYS = [

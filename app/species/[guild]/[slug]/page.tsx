@@ -1,3 +1,4 @@
+import { baseOpenGraph } from "@/lib/open-graph"
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import {
@@ -36,6 +37,7 @@ export async function generateMetadata({
     robots: getArtifactRobots(artifact),
     alternates: { canonical: artifact.href },
     openGraph: {
+      ...baseOpenGraph,
       url: artifact.href,
       ...(media
         ? {

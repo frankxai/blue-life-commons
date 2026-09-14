@@ -1,3 +1,4 @@
+import { baseOpenGraph } from "@/lib/open-graph"
 import type { Metadata } from "next"
 import { DeepTimeHub } from "@/components/deep-time-hub"
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Ocean “dinosaurs” explained: mosasaurs, plesiosaurs, pliosaurs, and ichthyosaurs — sourced deep-time entries with concept reconstruction media inside Blue Life Commons.",
   alternates: { canonical: "/species/deep-time" },
-  openGraph: { url: "/species/deep-time" },
+  openGraph: { ...baseOpenGraph, url: "/species/deep-time" },
 }
 
 export default function DeepTimePage() {
