@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next"
+import { WHALE_SHARK_IMAGE } from "@/lib/open-graph"
 import { ViewTransition } from "react"
 import { Geist, Geist_Mono, Newsreader } from "next/font/google"
 import { SiteHeader } from "@/components/site-header"
@@ -24,8 +25,6 @@ const newsreader = Newsreader({
 })
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://bluelifecommons.org"
-const WHALE_SHARK_IMAGE =
-  "https://commons.wikimedia.org/wiki/Special:FilePath/OLYMPUS_DIGITAL_CAMERA_%2827591269541%29.jpg?width=1200"
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

@@ -1,3 +1,4 @@
+import { baseOpenGraph } from "@/lib/open-graph"
 import type { Metadata } from "next"
 import { HomeHero } from "@/components/home/hero"
 import { ModelSection } from "@/components/home/model-section"
@@ -14,7 +15,7 @@ import { getApprovedSpeciesMedia } from "@/lib/media"
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
-  openGraph: { url: "/" },
+  openGraph: { ...baseOpenGraph, url: "/" },
 }
 
 export default function HomePage() {

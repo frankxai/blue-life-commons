@@ -1,3 +1,4 @@
+import { baseOpenGraph } from "@/lib/open-graph"
 import type { Metadata } from "next"
 import { ArrowRight, ButtonLink, Container, SectionHeading } from "@/components/primitives"
 import { GITHUB_REPO_URL } from "@/lib/utils"
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "How Blue Life Commons serves public pages, handles contributions, reads scientific datasets, and exposes item-level citation and review state.",
   alternates: { canonical: "/privacy" },
-  openGraph: { url: "/privacy" },
+  openGraph: { ...baseOpenGraph, url: "/privacy" },
 }
 
 const BASELINE = [

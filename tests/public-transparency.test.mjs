@@ -14,7 +14,7 @@ test("privacy route publishes canonical metadata and is discoverable", async () 
 
   assert.match(page, /title: "Privacy & Transparency"/)
   assert.match(page, /alternates: \{ canonical: "\/privacy" \}/)
-  assert.match(page, /openGraph: \{ url: "\/privacy" \}/)
+  assert.match(page, /openGraph: \{ \.\.\.baseOpenGraph, url: "\/privacy" \}/)
   assert.match(header, /href: "\/privacy", label: "Privacy"/)
   assert.match(footer, /href: "\/privacy", label: "Privacy & transparency"/)
   assert.match(sitemap, /"\/privacy"/)
