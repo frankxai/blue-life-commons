@@ -27,7 +27,7 @@
     "@vercel/blob": "^2.5.0",
     "gray-matter": "^4.0.3",
     "marked": "^18.0.5",
-    "next": "^16.2.10",
+    "next": "^16.3.5",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "server-only": "^0.0.1",
