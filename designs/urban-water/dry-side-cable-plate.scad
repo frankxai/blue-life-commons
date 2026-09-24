@@ -38,8 +38,10 @@ difference() {
                    rail_tie_spacing/2-slot_length/2])
             through_slot(x, y);
     // Inner slots hold a cable in the lower part of the plate; the upper
-    // centre remains flat for a small printed adhesive ID/QR label.
+    // centre has a shallow label recess for a printed adhesive ID/QR code.
     for (x = [-cable_tie_x-slot_width/2,
                cable_tie_x-slot_width/2])
         through_slot(x, -17);
+    translate([-label_width/2, 4, plate_thickness-0.35])
+        cube([label_width, label_height, 0.5]);
 }
