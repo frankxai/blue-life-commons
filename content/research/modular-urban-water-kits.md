@@ -95,6 +95,8 @@ license: CC-BY-4.0
 
 Run a small contained experiment, record honest measurements, and make a beautiful serviceable terrace interface. Do not place any float, cleaner, turbine or mooring in shared water until the owner and water manager have cleared the specific activity. This is a **proposed design**, not an installed or certified water treatment system. The location is deliberately coarse. AGV describes both water movement/ecological effects of jetties and the importance of non-leaching water-edge materials. [AGV jetties](https://www.agv.nl/zelf-regelen/vergunning/steigers-ligplaatsen/) · [AGV materials](https://www.agv.nl/zelf-regelen/vergunning/beschoeiing-aanleggen-of-vervangen/).
 
+The machine-readable [K0 kit manifest](../../kits/k0-sampling/manifest.json) and [kit contract](../../kits/README.md) show how a build moves from proposal to recorded bench result and, after review and permission, a field trial. The bill of materials and cost basis are explicit. Automated checks enforce contract coherence; people still verify the science, actual materials, site rights and claims.
+
 | Module | Job, boundary and acceptance test | Indicative parts allowance* |
 | --- | --- | ---: |
 | K0, sample caddy | Take dated, labeled, duplicate manual samples; no persistent immersion. Ten complete records before claiming a trend. | €90–220 |
