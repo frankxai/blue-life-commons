@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "id": "k0-sampling-caddy",
+  "version": "0.1.0",
+  "title": "K0 manual water sampling caddy",
+  "maturity": "proposed",
+  "site_precision": "district",
+  "environment": "dry-side",
+  "summary": "Record repeatable manual water observations before purchasing permanent sensors.",
+  "limitations": [
+    "A sample caddy cannot certify swimming safety or water treatment.",
+    "Laboratory analysis must use its own method-approved bottles and handling rules.",
+    "All parts and EUR ranges are planning estimates, not supplier offers.",
+    "No precise residential address or sensor coordinate is published."
+  ],
+  "budget_eur": {"min": 90, "max": 220},
+  "parts": [
+    {
+      "id": "hdpe-sample-bottles",
+      "quantity": 2,
+      "unit": "bottles",
+      "description": "One-litre sealed HDPE screening bottles; not lab-certified containers",
+      "material": "HDPE",
+      "contact": "contained-sample",
+      "cost_eur": {"min": 8, "max": 20},
+      "price_basis": "planning-estimate",
+      "substitution_test": "Confirm target method accepts vessel and that caps do not leak."
+    },
+    {
+      "id": "reference-thermometer",
+      "quantity": 1,
+      "unit": "instrument",
+      "description": "Handheld thermometer with stated calibration or cross-check method",
+      "material": "Manufacturer-specified instrument",
+      "contact": "contained-sample",
+      "cost_eur": {"min": 18, "max": 65},
+      "price_basis": "planning-estimate",
+      "substitution_test": "Compare duplicate readings and retain calibration provenance."
+    },
+    {
+      "id": "spill-tray",
+      "quantity": 1,
+      "unit": "tray",
+      "description": "Clean, removable carrying tray for sealed sample vessels",
+      "material": "HDPE or PP",
+      "contact": "dry",
+      "cost_eur": {"min": 15, "max": 40},
+      "price_basis": "planning-estimate",
+      "substitution_test": "Verify both sealed bottles fit and tray can be cleaned."
+    },
+    {
+      "id": "labels-and-log",
+      "quantity": 1,
+      "unit": "set",
+      "description": "Water-resistant labels, waterproof pen and dated paper log",
+      "material": "Paper and commercial labels",
+      "contact": "dry",
+      "cost_eur": {"min": 7, "max": 22},
+      "price_basis": "planning-estimate",
+      "substitution_test": "Verify label remains readable after wet handling and links to the log."
+    },
+    {
+      "id": "sample-handling",
+      "quantity": 1,
+      "unit": "set",
+      "description": "Disposable gloves and replacement containment supplies",
+      "material": "Commercial disposable supplies",
+      "contact": "dry",
+      "cost_eur": {"min": 5, "max": 15},
+      "price_basis": "planning-estimate",
+      "substitution_test": "Verify clean handling and record single-use material disposal."
+    }
+  ],
+  "acceptance": [
+    {
+      "metric": "Record completeness",
+      "target": "10 consecutive samples with required metadata",
+      "method": "Check UTC, depth, weather, sampler, instrument, reference and missing-data flags.",
+      "owner": "Field-data steward"
+    },
+    {
+      "metric": "Bottle integrity",
+      "target": "No leakage during transport",
+      "method": "Fill with clean water, invert in the tray and inspect cap and labels before use.",
+      "owner": "Human field lead"
+    }
+  ],
+  "review": {
+    "science": "required",
+    "ethics": "required",
+    "engineering": "required"
+  },
+  "protocol_path": "content/research/modular-urban-water-kits.md",
+  "source_designs": [],
+  "claims": []
+}
