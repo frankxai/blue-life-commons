@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://blue-life-commons.org/schema/kit-schema.json",
+  "title": "Blue Life Commons build kit manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "version", "title", "maturity", "site_precision", "environment", "summary", "limitations", "budget_eur", "parts", "acceptance", "review", "protocol_path", "source_designs", "claims"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "id": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "title": {"type": "string", "minLength": 3},
+    "maturity": {"enum": ["proposed", "bench-tested", "authorized-field-trial", "replicated"]},
+    "site_precision": {"const": "district"},
+    "environment": {"enum": ["dry-side", "contained-bench", "approved-open-water"]},
+    "summary": {"type": "string", "minLength": 12},
+    "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 8}},
+    "budget_eur": {"$ref": "#/$defs/range"},
+    "parts": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/part"}},
+    "acceptance": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["metric", "target", "method", "owner"],
+        "properties": {
+          "metric": {"type": "string", "minLength": 3},
+          "target": {"type": "string", "minLength": 3},
+          "method": {"type": "string", "minLength": 10},
+          "owner": {"type": "string", "minLength": 3}
+        }
+      }
+    },
+    "review": {
+      "type": "object", "additionalProperties": false,
+      "required": ["science", "ethics", "engineering"],
+      "properties": {
+        "science": {"enum": ["required", "approved", "not-applicable"]},
+        "ethics": {"enum": ["required", "approved", "not-applicable"]},
+        "engineering": {"enum": ["required", "approved", "not-applicable"]}
+      }
+    },
+    "protocol_path": {"type": "string", "minLength": 3},
+    "source_designs": {"type": "array", "items": {"type": "string", "minLength": 3}},
+    "test_report_path": {"type": "string", "minLength": 3},
+    "approval_reference": {"type": "string", "minLength": 3},
+    "replication_report_path": {"type": "string", "minLength": 3},
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["text", "kind", "evidence_urls"],
+        "properties": {
+          "text": {"type": "string", "minLength": 8},
+          "kind": {"enum": ["hypothesis", "measured"]},
+          "evidence_urls": {"type": "array", "minItems": 1, "items": {"type": "string", "format": "uri"}}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "range": {
+      "type": "object", "additionalProperties": false,
+      "required": ["min", "max"],
+      "properties": {"min": {"type": "integer", "minimum": 0}, "max": {"type": "integer", "minimum": 0}}
+    },
+    "part": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "quantity", "unit", "description", "material", "contact", "cost_eur", "price_basis"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+        "quantity": {"type": "integer", "minimum": 1},
+        "unit": {"type": "string", "minLength": 1},
+        "description": {"type": "string", "minLength": 3},
+        "material": {"type": "string", "minLength": 2},
+        "contact": {"enum": ["dry", "contained-sample", "permitted-water"]},
+        "cost_eur": {"$ref": "#/$defs/range"},
+        "price_basis": {"enum": ["planning-estimate", "vendor-listing"]},
+        "vendor_url": {"type": "string", "format": "uri"},
+        "checked_on": {"type": "string", "format": "date"},
+        "substitution_test": {"type": "string", "minLength": 10}
+      }
+    }
+  }
+}
