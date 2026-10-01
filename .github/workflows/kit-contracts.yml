@@ -1,0 +1,27 @@
+name: Urban-water kit contracts
+
+on:
+  pull_request:
+    paths:
+      - "kits/**"
+      - "schema/kit-schema.json"
+      - "scripts/validate_kits.py"
+      - "tests/test_kit_contract.py"
+      - ".github/workflows/kit-contracts.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Read proposed source
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+      - name: Validate kit manifests
+        run: python3 scripts/validate_kits.py
+      - name: Test critical release gates
+        run: python3 -m unittest discover -s tests -p 'test_kit_contract.py'
