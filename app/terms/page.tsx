@@ -1,3 +1,4 @@
+import { baseOpenGraph } from "@/lib/open-graph"
 import type { Metadata } from "next"
 import { ArrowRight, ButtonLink, Container, SectionHeading } from "@/components/primitives"
 import { GITHUB_REPO_URL } from "@/lib/utils"
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Terms for using Blue Life Commons: open content licensing, no warranties, external links, and contribution norms.",
   alternates: { canonical: "/terms" },
-  openGraph: { url: "/terms" },
+  openGraph: { ...baseOpenGraph, url: "/terms" },
 }
 
 const SECTIONS = [
