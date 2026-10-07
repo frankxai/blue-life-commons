@@ -1,0 +1,132 @@
+{
+  "schema": "CommonsGraph.v1",
+  "packetId": "packet-protected-location-leak",
+  "submittedBy": "contributor-mreyes",
+  "submittedAt": "2026-08-20",
+  "_fixture": "MUST FAIL the location-sensitivity check. A well-meaning, fully sourced sighting record that would publish precise coordinates for a critically endangered species.",
+  "nodes": [
+    {
+      "id": "contributor-mreyes",
+      "kind": "Contributor",
+      "label": "M. Reyes",
+      "handle": "mreyes",
+      "attributionName": "M. Reyes",
+      "owner": "contributor-mreyes",
+      "provenance": { "method": "authored", "by": ["contributor-mreyes"], "at": "2026-08-20" },
+      "version": 1,
+      "visibility": "public",
+      "evaluation": { "rule": "derived-only" }
+    },
+    {
+      "id": "taxon-eubalaena-glacialis",
+      "kind": "Taxon",
+      "label": "Eubalaena glacialis",
+      "rank": "species",
+      "scientificName": "Eubalaena glacialis",
+      "owner": "contributor-mreyes",
+      "provenance": { "method": "imported", "by": ["contributor-mreyes"], "at": "2026-08-20" },
+      "version": 1,
+      "visibility": "public",
+      "evaluation": { "rule": "citation-required" }
+    },
+    {
+      "id": "species-north-atlantic-right-whale",
+      "kind": "Species",
+      "label": "North Atlantic right whale",
+      "scientificName": "Eubalaena glacialis",
+      "commonName": "North Atlantic right whale",
+      "taxonId": "taxon-eubalaena-glacialis",
+      "iucnCategory": "CR",
+      "protection": {
+        "locationSensitivity": "high",
+        "rationale": "Critically endangered and vulnerable to vessel strike and entanglement; precise positions must not be published."
+      },
+      "owner": "contributor-mreyes",
+      "provenance": { "method": "authored", "by": ["contributor-mreyes"], "at": "2026-08-20" },
+      "version": 1,
+      "visibility": "public",
+      "evaluation": { "rule": "ethics-gated" }
+    },
+    {
+      "id": "region-bay-of-fundy",
+      "kind": "Region",
+      "label": "Bay of Fundy",
+      "slug": "bay-of-fundy",
+      "countries": ["CA"],
+      "owner": "contributor-mreyes",
+      "provenance": { "method": "authored", "by": ["contributor-mreyes"], "at": "2026-08-20" },
+      "version": 1,
+      "visibility": "public",
+      "evaluation": { "rule": "citation-required" }
+    },
+    {
+      "id": "source-iucn-right-whale-2020",
+      "kind": "Source",
+      "label": "IUCN Red List assessment, Eubalaena glacialis",
+      "url": "https://www.iucnredlist.org/species/41712/178589687",
+      "title": "Eubalaena glacialis, IUCN Red List of Threatened Species",
+      "tier": 1,
+      "publishedAt": "2020-10-01",
+      "accessedAt": "2026-08-18",
+      "owner": "contributor-mreyes",
+      "provenance": { "method": "imported", "by": ["contributor-mreyes"], "at": "2026-08-18" },
+      "version": 1,
+      "visibility": "public",
+      "evaluation": { "rule": "citation-required" }
+    },
+    {
+      "id": "claim-right-whale-status",
+      "kind": "Claim",
+      "label": "North Atlantic right whale conservation status",
+      "claimClass": "conservation-status",
+      "statement": "Eubalaena glacialis is assessed as Critically Endangered by the IUCN Red List.",
+      "subjectIds": ["species-north-atlantic-right-whale"],
+      "sourceIds": ["source-iucn-right-whale-2020"],
+      "scope": { "period": "2020 assessment" },
+      "owner": "contributor-mreyes",
+      "provenance": { "method": "authored", "by": ["contributor-mreyes"], "at": "2026-08-20" },
+      "version": 1,
+      "visibility": "public",
+      "evaluation": { "rule": "review-required" }
+    },
+    {
+      "id": "observation-right-whale-fundy-2026",
+      "kind": "Observation",
+      "label": "Right whale sighting, Bay of Fundy",
+      "speciesId": "species-north-atlantic-right-whale",
+      "observedAt": "2026-08-02",
+      "coordinates": { "lat": 44.8412, "lon": -66.4183, "uncertaintyMeters": 200 },
+      "regionId": "region-bay-of-fundy",
+      "individualCount": 2,
+      "owner": "contributor-mreyes",
+      "provenance": { "method": "authored", "by": ["contributor-mreyes"], "at": "2026-08-20" },
+      "version": 1,
+      "visibility": "public",
+      "evaluation": { "rule": "ethics-gated" }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-claim-cites-iucn",
+      "kind": "cites",
+      "from": "claim-right-whale-status",
+      "to": "source-iucn-right-whale-2020",
+      "owner": "contributor-mreyes",
+      "provenance": { "method": "authored", "by": ["contributor-mreyes"], "at": "2026-08-20" },
+      "version": 1,
+      "visibility": "public",
+      "evaluation": { "rule": "citation-required" }
+    },
+    {
+      "id": "edge-observation-observed-species",
+      "kind": "observed",
+      "from": "observation-right-whale-fundy-2026",
+      "to": "species-north-atlantic-right-whale",
+      "owner": "contributor-mreyes",
+      "provenance": { "method": "authored", "by": ["contributor-mreyes"], "at": "2026-08-20" },
+      "version": 1,
+      "visibility": "public",
+      "evaluation": { "rule": "ethics-gated" }
+    }
+  ]
+}

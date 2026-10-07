@@ -1,0 +1,103 @@
+name: Draft GitHub release
+
+run-name: Draft v${{ inputs.version }} at ${{ inputs.target_sha }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'SemVer from the release ledger, without the v prefix'
+        required: true
+        type: string
+        default: '0.2.0'
+      target_sha:
+        description: 'Exact audited product boundary on main'
+        required: true
+        type: string
+
+concurrency:
+  group: github-release-draft-${{ inputs.version }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  draft:
+    name: Create annotated tag and draft release
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: github-release-draft
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Require a main-branch dispatch
+        shell: bash
+        run: test "$GITHUB_REF" = 'refs/heads/main'
+      - name: Validate approved release candidate
+        env:
+          RELEASE_MODE: github-release-draft
+          RELEASE_VERSION: ${{ inputs.version }}
+          RELEASE_TARGET_SHA: ${{ inputs.target_sha }}
+        run: npm run audit:release
+      - name: Verify boundary and tag availability
+        env:
+          VERSION: ${{ inputs.version }}
+          TARGET_SHA: ${{ inputs.target_sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main --tags
+          git cat-file -e "${TARGET_SHA}^{commit}"
+          git merge-base --is-ancestor "$TARGET_SHA" origin/main
+          if git rev-parse --verify "refs/tags/v${VERSION}^{commit}" >/dev/null 2>&1; then
+            test "$(git cat-file -t "refs/tags/v${VERSION}")" = 'tag'
+            test "$(git rev-parse "refs/tags/v${VERSION}^{commit}")" = "$TARGET_SHA"
+          fi
+      - name: Create annotated tag
+        env:
+          VERSION: ${{ inputs.version }}
+          TARGET_SHA: ${{ inputs.target_sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git rev-parse --verify "refs/tags/v${VERSION}^{commit}" >/dev/null 2>&1; then
+            echo "Reusing annotated tag v${VERSION}; it already points to the audited boundary."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git tag -a "v${VERSION}" "$TARGET_SHA" -m "Blue Life Commons v${VERSION}"
+          git push origin "v${VERSION}"
+      - name: Create draft GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ inputs.version }}
+          TARGET_SHA: ${{ inputs.target_sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          existing="$(gh release view "v${VERSION}" --json isDraft --jq .isDraft 2>/dev/null || true)"
+          if [ "$existing" = 'true' ]; then
+            echo "Draft release v${VERSION} already exists."
+            exit 0
+          fi
+          if [ -n "$existing" ]; then
+            echo "Release v${VERSION} already exists and is not a draft." >&2
+            exit 1
+          fi
+          gh release create "v${VERSION}" \
+            --draft \
+            --verify-tag \
+            --generate-notes \
+            --notes-file "docs/releases/v${VERSION}.md" \
+            --target "$TARGET_SHA" \
+            --title "Blue Life Commons v${VERSION}"
