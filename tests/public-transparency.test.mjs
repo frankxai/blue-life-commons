@@ -1,5 +1,5 @@
 import assert from "node:assert/strict"
-import { readFile } from "node:fs/promises"
+import { readFile, readdir } from "node:fs/promises"
 import test from "node:test"
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8")
@@ -18,6 +18,18 @@ test("privacy route publishes canonical metadata and is discoverable", async () 
   assert.match(header, /href: "\/privacy", label: "Privacy"/)
   assert.match(footer, /href: "\/privacy", label: "Privacy & transparency"/)
   assert.match(sitemap, /"\/privacy"/)
+})
+
+test("every page that sets openGraph keeps the shared preview image", async () => {
+  const entries = await readdir(new URL("../app", import.meta.url), { recursive: true })
+  const pages = entries.filter((entry) => /(^|[\\/])page\.tsx$/.test(entry))
+  assert.ok(pages.length > 0)
+
+  for (const page of pages) {
+    const source = await read(`app/${page}`)
+    if (!/\bopenGraph:\s*\{/.test(source)) continue
+    assert.match(source, /\.\.\.baseOpenGraph/, `app/${page} sets openGraph without baseOpenGraph`)
+  }
 })
 
 test("transparency route has no hidden intake, browser identity, or PII telemetry", async () => {
