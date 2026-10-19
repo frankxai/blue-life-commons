@@ -35,7 +35,7 @@ export default function ErrorPage({
         <h1
           ref={headingRef}
           tabIndex={-1}
-          className="max-w-xl text-balance font-serif text-4xl font-semibold leading-tight text-abyss-foreground sm:text-5xl outline-none"
+          className="max-w-xl text-balance font-serif text-4xl font-semibold leading-tight text-abyss-foreground sm:text-5xl outline-none focus-visible:outline-glow focus-visible:outline-2 focus-visible:outline-offset-4"
         >
           We encountered an issue
         </h1>
@@ -45,7 +45,7 @@ export default function ErrorPage({
         <div className="flex flex-wrap items-center justify-center gap-3">
           <button
             onClick={() => reset()}
-            className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-200 bg-glow text-abyss-deep hover:-translate-y-0.5"
+            className="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-[color,transform] duration-200 bg-glow text-abyss-deep hover:-translate-y-0.5"
           >
             Try again
           </button>
