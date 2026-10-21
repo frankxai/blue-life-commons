@@ -1,0 +1,114 @@
+{
+  "schema": "CommonsGraph.v1",
+  "packetId": "packet-unsourced-claim",
+  "submittedBy": "contributor-mreyes",
+  "submittedAt": "2026-08-20",
+  "_fixture": "MUST FAIL the citation check. A confident, plausible, entirely uncited sentence — the exact shape of the contribution the commons exists to refuse.",
+  "nodes": [
+    {
+      "id": "contributor-mreyes",
+      "kind": "Contributor",
+      "label": "M. Reyes",
+      "handle": "mreyes",
+      "attributionName": "M. Reyes",
+      "owner": "contributor-mreyes",
+      "provenance": { "method": "authored", "by": ["contributor-mreyes"], "at": "2026-08-20" },
+      "version": 1,
+      "visibility": "public",
+      "evaluation": { "rule": "derived-only" }
+    },
+    {
+      "id": "taxon-megaptera-novaeangliae",
+      "kind": "Taxon",
+      "label": "Megaptera novaeangliae",
+      "rank": "species",
+      "scientificName": "Megaptera novaeangliae",
+      "owner": "contributor-mreyes",
+      "provenance": { "method": "imported", "by": ["contributor-mreyes"], "at": "2026-08-20" },
+      "version": 1,
+      "visibility": "public",
+      "evaluation": { "rule": "citation-required" }
+    },
+    {
+      "id": "species-humpback-whale",
+      "kind": "Species",
+      "label": "Humpback whale",
+      "scientificName": "Megaptera novaeangliae",
+      "taxonId": "taxon-megaptera-novaeangliae",
+      "protection": { "locationSensitivity": "public" },
+      "owner": "contributor-mreyes",
+      "provenance": { "method": "authored", "by": ["contributor-mreyes"], "at": "2026-08-20" },
+      "version": 1,
+      "visibility": "public",
+      "evaluation": { "rule": "review-required" }
+    },
+    {
+      "id": "claim-humpback-population-guess",
+      "kind": "Claim",
+      "label": "Humpback population trend",
+      "claimClass": "population-estimate",
+      "statement": "The global humpback whale population has roughly doubled over the past two decades.",
+      "subjectIds": ["species-humpback-whale"],
+      "sourceIds": [],
+      "owner": "contributor-mreyes",
+      "provenance": {
+        "method": "inferred",
+        "by": ["contributor-mreyes"],
+        "at": "2026-08-20",
+        "rule": "drafting assistant summary, not traced to an assessment"
+      },
+      "version": 1,
+      "visibility": "public",
+      "evaluation": { "rule": "citation-required" }
+    },
+    {
+      "id": "artifact-species-humpback-whale",
+      "kind": "Artifact",
+      "label": "Species page: humpback whale",
+      "artifactKind": "species-page",
+      "slug": "humpback-whale",
+      "claimIds": ["claim-humpback-population-guess"],
+      "licenseId": "CC-BY-4.0",
+      "owner": "contributor-mreyes",
+      "provenance": { "method": "authored", "by": ["contributor-mreyes"], "at": "2026-08-20" },
+      "version": 1,
+      "visibility": "public",
+      "evaluation": { "rule": "review-required" }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-claim-about-species",
+      "kind": "about",
+      "from": "claim-humpback-population-guess",
+      "to": "species-humpback-whale",
+      "owner": "contributor-mreyes",
+      "provenance": { "method": "authored", "by": ["contributor-mreyes"], "at": "2026-08-20" },
+      "version": 1,
+      "visibility": "public",
+      "evaluation": { "rule": "citation-required" }
+    },
+    {
+      "id": "edge-artifact-composes-claim",
+      "kind": "composes",
+      "from": "artifact-species-humpback-whale",
+      "to": "claim-humpback-population-guess",
+      "owner": "contributor-mreyes",
+      "provenance": { "method": "authored", "by": ["contributor-mreyes"], "at": "2026-08-20" },
+      "version": 1,
+      "visibility": "public",
+      "evaluation": { "rule": "review-required" }
+    },
+    {
+      "id": "edge-contributor-contributed-artifact",
+      "kind": "contributed",
+      "from": "contributor-mreyes",
+      "to": "artifact-species-humpback-whale",
+      "owner": "contributor-mreyes",
+      "provenance": { "method": "authored", "by": ["contributor-mreyes"], "at": "2026-08-20" },
+      "version": 1,
+      "visibility": "public",
+      "evaluation": { "rule": "derived-only" }
+    }
+  ]
+}

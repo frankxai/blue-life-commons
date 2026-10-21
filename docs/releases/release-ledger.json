@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "repository": "frankxai/blue-life-commons",
+  "defaultBranch": "main",
+  "source": {
+    "auditedAt": "2026-08-10",
+    "auditedHead": "8c78ce83b83696e565900c71289f9c7e31e85767",
+    "previousReleaseTag": "v0.1.0",
+    "previousReleasePublishedAt": "2026-06-16T02:09:26Z",
+    "historyStart": "2026-06-16",
+    "historyEnd": "2026-08-10",
+    "commitCount": 27
+  },
+  "release": {
+    "version": "0.2.0",
+    "tag": "v0.2.0",
+    "status": "draft",
+    "published": false,
+    "targetSha": "8c78ce83b83696e565900c71289f9c7e31e85767",
+    "changelogSection": "Unreleased",
+    "notesPath": "docs/releases/v0.2.0.md",
+    "boundaryPolicy": "The target is an immutable audited product boundary and must remain an ancestor of main."
+  },
+  "approvals": {
+    "changelogComplete": true,
+    "validationComplete": false,
+    "humanReleaseApproval": false
+  },
+  "receipts": {
+    "pullRequests": [
+      { "number": 4, "url": "https://github.com/frankxai/blue-life-commons/pull/4", "mergeCommit": "1782feca72a480db6147e260c37786319cb2a321" },
+      { "number": 5, "url": "https://github.com/frankxai/blue-life-commons/pull/5", "mergeCommit": "366336a80a7f536885279703437ac03563bad900" },
+      { "number": 6, "url": "https://github.com/frankxai/blue-life-commons/pull/6", "mergeCommit": "4b01b3f9f8824f224963ecfc718b39bb6915f149" },
+      { "number": 7, "url": "https://github.com/frankxai/blue-life-commons/pull/7", "mergeCommit": "b2a48c429d8b23e0257d11876ba801daf6c164ef" },
+      { "number": 8, "url": "https://github.com/frankxai/blue-life-commons/pull/8", "mergeCommit": "63de93cce2a93e0a60b696954cf2c73b11496bf3" },
+      { "number": 9, "url": "https://github.com/frankxai/blue-life-commons/pull/9", "mergeCommit": "8aee44e0d28e40567a493980b49ea647116ccaef" },
+      { "number": 10, "url": "https://github.com/frankxai/blue-life-commons/pull/10", "mergeCommit": "526143e0108a60fcd0b90a5f39573b76c6f3f460" },
+      { "number": 11, "url": "https://github.com/frankxai/blue-life-commons/pull/11", "mergeCommit": "926b89be0d390564b5d4c309d0b49a865fcc6ca8" },
+      { "number": 12, "url": "https://github.com/frankxai/blue-life-commons/pull/12", "mergeCommit": "089a17480e565b35ce285a088d696eba02e75466" },
+      { "number": 14, "url": "https://github.com/frankxai/blue-life-commons/pull/14", "mergeCommit": "dfb1a4ba0dc00fce262041d90b3666eb5ab290d7" },
+      { "number": 15, "url": "https://github.com/frankxai/blue-life-commons/pull/15", "mergeCommit": "17311d466979422c1058a05ef035b55d2011633a" },
+      { "number": 16, "url": "https://github.com/frankxai/blue-life-commons/pull/16", "mergeCommit": "b38cdff380e90e343e30e9bff45fd228175f9c6c" },
+      { "number": 17, "url": "https://github.com/frankxai/blue-life-commons/pull/17", "mergeCommit": "199a5f7514f4552c1da3781ba1e12abef8352f56" },
+      { "number": 18, "url": "https://github.com/frankxai/blue-life-commons/pull/18", "mergeCommit": "9079726a4255b21c2e40edced5d05c8da958ae0f" },
+      { "number": 20, "url": "https://github.com/frankxai/blue-life-commons/pull/20", "mergeCommit": "eb06d8e9f676cc6151a7191316d97dba40a6a216" },
+      { "number": 21, "url": "https://github.com/frankxai/blue-life-commons/pull/21", "mergeCommit": "1cf89d0da8a4738e7e892226b5eb11e7754c7286" },
+      { "number": 22, "url": "https://github.com/frankxai/blue-life-commons/pull/22", "mergeCommit": "8ee1c61ff24c7d9deb104c84359e4e3b0128f2f2" },
+      { "number": 23, "url": "https://github.com/frankxai/blue-life-commons/pull/23", "mergeCommit": "77de0ed3a8eb37e06619b93f340a991daa473686" },
+      { "number": 24, "url": "https://github.com/frankxai/blue-life-commons/pull/24", "mergeCommit": "c52dc2490b1dd2ca92e2c8d06f91eb3f3c141449" },
+      { "number": 25, "url": "https://github.com/frankxai/blue-life-commons/pull/25", "mergeCommit": "5532686703d3e5bf3a0edcb20889cee8ae531146" },
+      { "number": 26, "url": "https://github.com/frankxai/blue-life-commons/pull/26", "mergeCommit": "8f916afab6bf6d16aba02b857fbf62259fa3c22a" },
+      { "number": 28, "url": "https://github.com/frankxai/blue-life-commons/pull/28", "mergeCommit": "8c78ce83b83696e565900c71289f9c7e31e85767" }
+    ]
+  },
+  "production": {
+    "canonicalUrl": "https://bluelifecommons.org",
+    "vercelProject": "blue-life-commons",
+    "deploymentId": "dpl_6FPex1nwQjXRx4StZrXQXKCDniiX",
+    "deploymentStatus": "ready",
+    "deploymentSha": "8c78ce83b83696e565900c71289f9c7e31e85767",
+    "verifiedAt": "2026-08-10",
+    "robots": {
+      "url": "https://bluelifecommons.org/robots.txt",
+      "status": "ok-200"
+    },
+    "sitemap": {
+      "url": "https://bluelifecommons.org/sitemap.xml",
+      "status": "ok-200"
+    },
+    "changelogRoute": {
+      "url": "https://bluelifecommons.org/changelog",
+      "status": "missing-404",
+      "indexing": "noindex",
+      "nextAction": "Add only through the Premium Intelligence Web OS and visual QA gate."
+    }
+  },
+  "validation": {
+    "releaseContract": "passed",
+    "publicationGateNegativeTest": "passed",
+    "yamlParse": "passed",
+    "publicTransparency": "passed-6-of-6",
+    "artifactSchema": "passed-84-of-84",
+    "integrityLint": "passed-0-errors-0-warnings",
+    "catalog": "current",
+    "diffCheck": "passed",
+    "localBuild": "held-by-machine-preflight",
+    "cloudCiRequired": true,
+    "windowsOnlyLimitations": [
+      "Public-truth contract uses POSIX path and symlink cases not available in this Windows session.",
+      "Media-guard contract uses newline filename and symlink cases not available in this Windows session."
+    ]
+  },
+  "packagePublishing": {
+    "status": "not-applicable",
+    "manifestVersion": "1.0.0",
+    "private": true,
+    "reason": "This is a private web application; package.json version is metadata and no npm publication is authorized."
+  }
+}
