@@ -1,3 +1,4 @@
+import { baseOpenGraph } from "@/lib/open-graph"
 import type { Metadata } from "next"
 import { getArtifactsByType } from "@/lib/content"
 import { Container, SectionHeading } from "@/components/primitives"
@@ -7,6 +8,8 @@ export const metadata: Metadata = {
   title: "Field Missions",
   description:
     "Review-gated citizen-science mission drafts with visible science and ethics state.",
+  alternates: { canonical: "/missions" },
+  openGraph: { ...baseOpenGraph, url: "/missions" },
 }
 
 export default function MissionsIndexPage() {

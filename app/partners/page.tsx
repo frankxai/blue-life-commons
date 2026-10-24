@@ -1,3 +1,4 @@
+import { baseOpenGraph } from "@/lib/open-graph"
 import type { Metadata } from "next"
 import { getArtifactsByType } from "@/lib/content"
 import { Container, SectionHeading } from "@/components/primitives"
@@ -7,6 +8,8 @@ export const metadata: Metadata = {
   title: "Ocean Organization Profiles",
   description:
     "Independent, source-linked profiles of ocean organizations. Inclusion does not imply partnership, endorsement, or affiliation.",
+  alternates: { canonical: "/partners" },
+  openGraph: { ...baseOpenGraph, url: "/partners" },
 }
 
 export default function PartnersPage() {

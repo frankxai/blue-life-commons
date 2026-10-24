@@ -1,3 +1,4 @@
+import { baseOpenGraph } from "@/lib/open-graph"
 import type { Metadata } from "next"
 import { getArtifactsByType } from "@/lib/content"
 import { Container, SectionHeading } from "@/components/primitives"
@@ -7,6 +8,8 @@ export const metadata: Metadata = {
   title: "Research & Datasets",
   description:
     "Plain-language research summaries and dataset cards for the open ocean data the commons builds on — OBIS, GBIF, Coral Reef Watch and more.",
+  alternates: { canonical: "/research" },
+  openGraph: { ...baseOpenGraph, url: "/research" },
 }
 
 export default function ResearchIndexPage() {

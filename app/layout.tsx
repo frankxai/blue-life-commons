@@ -82,6 +82,10 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${newsreader.variable} bg-background`}
     >
       <body className="min-h-dvh flex flex-col antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"Organization","name":"Blue Life Commons","url":"https://bluelifecommons.org","description":"An open, source-led commons of ocean intelligence. Records publish with citations, explicit review state, rights metadata, and Git history under a CC BY 4.0 license.","parentOrganization":{"@type":"Organization","name":"Starlight Intelligence Systems"}}) }}
+        />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground"

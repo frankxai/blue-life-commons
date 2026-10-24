@@ -1,3 +1,4 @@
+import { baseOpenGraph } from "@/lib/open-graph"
 import type { Metadata } from "next"
 import { Suspense } from "react"
 import { getAllArtifacts } from "@/lib/content"
@@ -9,6 +10,8 @@ export const metadata: Metadata = {
   title: "Catalog",
   description:
     "The full catalog of the Blue Life Commons — every species page, region briefing, field mission, dataset card and welfare assessment, searchable and filterable.",
+  alternates: { canonical: "/catalog" },
+  openGraph: { ...baseOpenGraph, url: "/catalog" },
 }
 
 export default function CatalogPage() {

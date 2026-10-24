@@ -1,3 +1,4 @@
+import { baseOpenGraph } from "@/lib/open-graph"
 import type { Metadata } from "next"
 import { getDocHtml } from "@/lib/content"
 import { Container, SectionHeading } from "@/components/primitives"
@@ -7,6 +8,8 @@ export const metadata: Metadata = {
   title: "Governance & Ethics",
   description:
     "How the Blue Life Commons is governed: staged governance, welfare-first ethics, transparent funding architecture, and decisions recorded in public on GitHub.",
+  alternates: { canonical: "/governance" },
+  openGraph: { ...baseOpenGraph, url: "/governance" },
 }
 
 const PRINCIPLES = [
