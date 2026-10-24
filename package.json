@@ -15,12 +15,13 @@
     "test:utils": "node --test tests/utils.test.mjs",
     "test:review-gates": "node --test tests/review-gates.test.mjs",
     "test:media-storage": "node --test tests/media-storage.test.mjs",
-    "test": "npm run test:public-transparency && npm run test:public-truth && npm run test:utils && npm run test:review-gates && npm run test:media-storage",
+    "test": "npm run test:public-transparency && npm run test:public-truth && npm run test:utils && npm run test:review-gates && npm run test:media-storage && npm run test:verify-links",
     "media:storage": "python scripts/build_species_media_storage_manifest.py",
     "media:storage:check": "python scripts/build_species_media_storage_manifest.py --check",
     "media:blob:plan": "node scripts/upload_species_media_to_vercel_blob.mjs",
     "media:blob:upload": "node scripts/upload_species_media_to_vercel_blob.mjs --write",
-    "media:blob:check": "node scripts/upload_species_media_to_vercel_blob.mjs --check"
+    "media:blob:check": "node scripts/upload_species_media_to_vercel_blob.mjs --check",
+    "test:verify-links": "node --test tests/verify-public-links.test.mjs"
   },
   "repository": {
     "type": "git",
