@@ -16,6 +16,14 @@ function findPageFiles(dir, fileList = []) {
   return fileList;
 }
 
+const PAGE_EXTS = ['tsx', 'ts', 'jsx', 'js', 'mdx'];
+// A route exists only if its app/ directory holds a page file (the root route uses app/page.*).
+function routeExists(route) {
+  const clean = route.replace(/^\/+/, '').replace(/\/+$/, '');
+  const base = clean ? 'app/' + clean : 'app';
+  return PAGE_EXTS.some(ext => fs.existsSync(`${base}/page.${ext}`));
+}
+
 test('SEO and discoverability files', async (t) => {
   await t.test('All pages have metadata and openGraph', () => {
     const pageFiles = findPageFiles('app');
@@ -45,9 +53,7 @@ test('SEO and discoverability files', async (t) => {
     const links = Array.from(llmsContent.matchAll(/- \/(.*)/g)).map(m => m[1].trim());
     for (const link of links) {
         if (link === '') continue;
-        let possibleDirs = ['app/' + link, 'app/' + link.split('/')[0]];
-        const exists = possibleDirs.some(dir => fs.existsSync(dir));
-        assert.ok(exists, `llms.txt links to non-existent route: /${link}`);
+        assert.ok(routeExists(link), `llms.txt links to non-existent route: /${link}`);
     }
   });
 
@@ -59,9 +65,7 @@ test('SEO and discoverability files', async (t) => {
           const routes = Array.from(routesText.matchAll(/"(.*?)"/g)).map(m => m[1]);
           for (const route of routes) {
               if (route === '') continue;
-              let possibleDirs = ['app' + route, 'app' + route.split('/')[0]];
-              const exists = possibleDirs.some(dir => fs.existsSync(dir));
-              assert.ok(exists, `sitemap.ts staticRoutes links to non-existent route: ${route}`);
+              assert.ok(routeExists(route), `sitemap.ts staticRoutes links to non-existent route: ${route}`);
           }
       }
   });
@@ -69,5 +73,7 @@ test('SEO and discoverability files', async (t) => {
   await t.test('JSON-LD is present in layout and parses as valid JSON', () => {
       const layoutContent = fs.readFileSync('app/layout.tsx', 'utf8');
       assert.ok(layoutContent.includes('application/ld+json'), 'Missing JSON-LD');
+      // Static check only: the payload must be serialised with JSON.stringify, never hand-built.
+      assert.ok(layoutContent.includes('JSON.stringify'), 'JSON-LD must be serialised with JSON.stringify');
   });
 });
