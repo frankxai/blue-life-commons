@@ -1,3 +1,4 @@
+import { baseOpenGraph } from "@/lib/open-graph"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Container, SectionHeading, ButtonLink, ArrowRight } from "@/components/primitives"
@@ -21,6 +22,8 @@ export const metadata: Metadata = {
   title: "Media Intelligence",
   description:
     "The Blue Life Commons operating layer for approved animal images, source provenance, partner media, and scalable species visual coverage.",
+  alternates: { canonical: "/media-intelligence" },
+  openGraph: { ...baseOpenGraph, url: "/media-intelligence" },
 }
 
 function pct(part: number, whole: number): number {

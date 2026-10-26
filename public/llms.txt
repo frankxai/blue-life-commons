@@ -1,0 +1,25 @@
+# Blue Life Commons
+
+Blue Life Commons is an open, reviewed, CC-BY commons of ocean intelligence.
+This site provides source-led artifacts about ocean species, regions, field missions, and datasets.
+
+Available pages:
+- /about
+- /catalog
+- /contribute
+- /ecosystem
+- /encyclopedia
+- /governance
+- /guardian
+- /impact
+- /media-intelligence
+- /missions
+- /partners
+- /privacy
+- /regions
+- /research
+- /services
+- /species
+- /species/deep-time
+- /support
+- /terms

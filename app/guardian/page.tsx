@@ -1,3 +1,4 @@
+import { baseOpenGraph } from "@/lib/open-graph"
 import { Suspense } from "react"
 import type { Metadata } from "next"
 import { getGuardianData } from "@/lib/guardian"
@@ -9,6 +10,8 @@ export const metadata: Metadata = {
   title: "Guardian — Live Ocean Signals",
   description:
     "Live biodiversity signals for flagship ocean species, drawn from the open OBIS and GBIF data sources that power the Ocean Intelligence System. Cached, sourced, never fabricated.",
+  alternates: { canonical: "/guardian" },
+  openGraph: { ...baseOpenGraph, url: "/guardian" },
 }
 
 // Revalidate the rendered page every 6 hours to match the data cache.

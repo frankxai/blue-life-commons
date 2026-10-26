@@ -1,3 +1,4 @@
+import { baseOpenGraph } from "@/lib/open-graph"
 import type { Metadata } from "next"
 import { Container, SectionHeading, ButtonLink, ArrowRight } from "@/components/primitives"
 import { PUBLIC_MARINE_MCP_URL } from "@/lib/utils"
@@ -6,6 +7,8 @@ export const metadata: Metadata = {
   title: "Services — Starlight Intelligence Systems",
   description:
     "The commons is free. Starlight Intelligence Systems builds the private, production-grade marine intelligence systems that fund it — for research institutions, marine parks, NGOs and governments.",
+  alternates: { canonical: "/services" },
+  openGraph: { ...baseOpenGraph, url: "/services" },
 }
 
 const OFFERINGS = [

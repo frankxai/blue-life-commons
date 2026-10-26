@@ -1,3 +1,4 @@
+import { baseOpenGraph } from "@/lib/open-graph"
 import type { Metadata } from "next"
 import { Container, SectionHeading, ButtonLink, ArrowRight } from "@/components/primitives"
 import { GITHUB_REPO_URL, PUBLIC_MARINE_MCP_URL } from "@/lib/utils"
@@ -6,6 +7,8 @@ export const metadata: Metadata = {
   title: "Ecosystem",
   description:
     "How Blue Life Commons and the Ocean Intelligence System fit together: the commons is the trust layer, the intelligence system is the sensing layer, and GitHub is the ledger between them.",
+  alternates: { canonical: "/ecosystem" },
+  openGraph: { ...baseOpenGraph, url: "/ecosystem" },
 }
 
 const LAYERS = [

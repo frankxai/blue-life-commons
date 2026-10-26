@@ -1,3 +1,4 @@
+import { baseOpenGraph } from "@/lib/open-graph"
 import type { Metadata } from "next"
 import { getArtifactsByType } from "@/lib/content"
 import { Container, SectionHeading } from "@/components/primitives"
@@ -7,6 +8,8 @@ export const metadata: Metadata = {
   title: "Region Briefings",
   description:
     "Deep briefings on the ocean regions where life concentrates — ecology, threats, protections and the species that depend on them.",
+  alternates: { canonical: "/regions" },
+  openGraph: { ...baseOpenGraph, url: "/regions" },
 }
 
 export default function RegionsIndexPage() {

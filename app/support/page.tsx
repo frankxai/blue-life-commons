@@ -1,3 +1,4 @@
+import { baseOpenGraph } from "@/lib/open-graph"
 import type { Metadata } from "next"
 import { getAllArtifacts } from "@/lib/content"
 import { Container, SectionHeading, ButtonLink, ArrowRight } from "@/components/primitives"
@@ -7,6 +8,8 @@ export const metadata: Metadata = {
   title: "Support the Commons",
   description:
     "Support source gathering, expert review, ethical field methods, and public infrastructure while commons artifacts remain reusable under CC BY 4.0.",
+  alternates: { canonical: "/support" },
+  openGraph: { ...baseOpenGraph, url: "/support" },
 }
 
 const CHANNELS = [
