@@ -51,8 +51,15 @@ export function HomeHero({
         .filter(Boolean)
         .join(" · ")
     : undefined
+  const checksDone = (value?: string) =>
+    value === "approved" || value === "not-applicable"
   const awaitingReview =
-    proof?.review?.editor !== "approved" || proof?.status !== "approved"
+    !!proof &&
+    !(
+      checksDone(proof.review?.science) &&
+      checksDone(proof.review?.ethics) &&
+      checksDone(proof.review?.editor)
+    )
 
   return (
     <section className="relative isolate overflow-hidden bg-abyss-deep text-abyss-foreground">
@@ -72,9 +79,9 @@ export function HomeHero({
             </h1>
 
             <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-abyss-muted">
-              A free, public library about life in the ocean. Every page lists
-              its sources, says who may reuse its images, and shows whether
-              experts have checked it yet. The knowledge is versioned on GitHub
+              A free, public library about life in the ocean. Records list their
+              sources and image rights, and show whether experts have checked
+              them yet. The knowledge is versioned on GitHub
               and licensed for reuse.
             </p>
             <p className="mt-3 max-w-2xl text-pretty text-sm leading-relaxed text-abyss-muted">
@@ -147,10 +154,9 @@ export function HomeHero({
                 </p>
                 {awaitingReview && (
                   <p className="mt-2 text-xs leading-relaxed text-abyss-muted">
-                    This page is still a draft: it has not yet been through all
-                    of its expert checks, so treat it as unconfirmed. It is
-                    shown here because it has a cited source list and an
-                    approved, rights-checked image.
+                    Some of this page’s expert checks are still open, so treat
+                    it as unconfirmed. It is shown as an example of how
+                    sources, image rights and review state appear on a page.
                   </p>
                 )}
                 <ol className="mt-4 grid gap-px overflow-hidden rounded-xl border border-abyss-border bg-abyss-border sm:grid-cols-2">
