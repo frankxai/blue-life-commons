@@ -32,15 +32,27 @@ export function HomeHero({
   proof?: CommonsProof
 }) {
   const recordStatus = proof?.status.replaceAll("-", " ")
+  const reviewLabels: Record<string, string> = {
+    approved: "approved",
+    pending: "not yet done",
+    required: "still to be done",
+    "not-applicable": "not needed",
+  }
+  const describe = (value?: string) =>
+    value ? (reviewLabels[value] ?? value.replaceAll("-", " ")) : undefined
   const reviewSummary = proof
     ? [
-        proof.review?.science && `Science ${proof.review.science}`,
-        proof.review?.ethics && `Ethics ${proof.review.ethics}`,
-        proof.review?.editor && `Editor ${proof.review.editor}`,
+        proof.review?.science &&
+          `Science check: ${describe(proof.review.science)}`,
+        proof.review?.ethics &&
+          `Ethics check: ${describe(proof.review.ethics)}`,
+        proof.review?.editor && `Editor read: ${describe(proof.review.editor)}`,
       ]
         .filter(Boolean)
         .join(" · ")
     : undefined
+  const awaitingReview =
+    proof?.review?.editor !== "approved" || proof?.status !== "approved"
 
   return (
     <section className="relative isolate overflow-hidden bg-abyss-deep text-abyss-foreground">
@@ -60,10 +72,14 @@ export function HomeHero({
             </h1>
 
             <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-abyss-muted">
-              Species records, region briefings, field missions, and datasets
-              publish with citations, rights, welfare safeguards, and visible
-              review state. The knowledge is versioned on GitHub and licensed
-              for reuse.
+              A free, public library about life in the ocean. Every page lists
+              its sources, says who may reuse its images, and shows whether
+              experts have checked it yet. The knowledge is versioned on GitHub
+              and licensed for reuse.
+            </p>
+            <p className="mt-3 max-w-2xl text-pretty text-sm leading-relaxed text-abyss-muted">
+              Pages are marked “review-gated” while expert checks are still
+              open, so you can always tell what is confirmed and what is not.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-3">
@@ -124,11 +140,19 @@ export function HomeHero({
 
               <div className="p-5 sm:p-6">
                 <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.15em] text-glow">
-                  One public record, end to end
+                  Example record: how a page is built
                 </p>
                 <p className="mt-2 text-xs leading-relaxed text-abyss-muted">
                   {reviewSummary}
                 </p>
+                {awaitingReview && (
+                  <p className="mt-2 text-xs leading-relaxed text-abyss-muted">
+                    This page is still a draft: it has not yet been through all
+                    of its expert checks, so treat it as unconfirmed. It is
+                    shown here because it has a cited source list and an
+                    approved, rights-checked image.
+                  </p>
+                )}
                 <ol className="mt-4 grid gap-px overflow-hidden rounded-xl border border-abyss-border bg-abyss-border sm:grid-cols-2">
                   {[
                     ["01 · Record", proof.githubPath],
